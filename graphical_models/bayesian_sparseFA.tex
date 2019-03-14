@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+
+% Define nodes
+\node[obs]   (Y) {$y_{n,d}$};
+\node[latent, above=of Y, xshift=-1.5cm] (Z) {$z_{n,k}$};
+\node[latent, above=of W, xshift=-0.75cm] (Theta) {$\theta_{k}$};
+\node[latent, above=of W, xshift=0.75cm] (Alpha) {$\alpha_{k}$};
+\node[latent, above=of Y, xshift=1.5cm] (W) {$w_{d,k}$};
+\node[latent, xshift=1.5cm] (Tau) {$\tau_{d}$};
+
+% Connect the nodes
+\edge {Theta, Alpha} {W};
+\edge {Z, W, Tau} {Y};
+
+% Plates
+\plate[] {plateK} {(Z)(W)(Theta)(Alpha)} {$K$};
+% \plate[] {plateN} {(Y)(Z)(plateK.north west)} {$N$};
+\plate[] {plateN} {(Y)(Z)} {$N$};
+\plate[] {plateD} {(Y)(W)(Tau)(plateK.south east) (plateN.south east) (plateN.north east)} {$D$};
+
+\end{tikzpicture}

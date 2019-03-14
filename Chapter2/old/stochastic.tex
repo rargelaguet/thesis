@@ -1,0 +1,109 @@
+
+
+	
+
+
+####################################################################
+###### Reformulation of variational bayes as gradient descent problem #####
+####################################################################
+
+Variational inference turns the inference problem into an optimisation problem, and hence amenable to standard optimisation approaches such as gradient descent.
+
+As shown in [[SECTION XXX]], the function to be optimised is the ELBO with respect to the parameters of the variational distributions:
+\[
+\Lagr(\bfX|\theta) = E_{q(\bfX|\theta)}[\log p(\bfY|\bfX)] - \KL(q(\bfX|\theta)||p(\bfX))	
+\]
+The selection of the variational distributions determines the complexity of the optimization problem. If the variational distribution is chosen in a parametric form \cite{}, a gradient descent algorithm can be used to optimise the ELBO:
+\[
+\theta^{(t+1)} = \theta^{t} + \rho^{t} \nabla (\Lagr(\bfX|\theta)^{t})
+\]
+As shown in [[SECTION X]], when the the variational distribution of the hidden variables is in the same family as the prior, given the markov blanket (i.e. conditional conjugacy), then the gradient can be calculated in closed form. Algorithms where no conjugacy assumptions are used have also been derived, leading to the black-box or automatic variational frameworks \cite{}
+
+Note that we make no assumptions about conjugacy, either full2 or conditional.3
+	[[CITE]] Stein Variational Gradient Descent: A General Purpose Bayesian Inference Algorithm
+	[[CITE]] A. Kucukelbir, R. Ranganath, A. Gelman, and D. Blei. Automatic variational inference in STAN
+	[[CITE]] Bishop et al., 2003
+
+However, The ELBO is generally a non-convex objective function and the gradient descent approach is only guaranteed to converge to a local optimum, which can be sensitive to initialization.
+
+
+
+
+
+
+
+
+(COPIED) SVI focuses on optimizing the global variational parameters λ of a conditionally conjugate model. The flow of computation is simple. The algorithm maintains a current estimate of the global variational parameters. It repeatedly (a) subsamples a data point from the full data set; (b) uses the current global parameters to compute the optimal local parameters for the subsampled data point; and (c) adjusts the current global parameters in an appropriate way. SVI is detailed in Algorithm 3. We now show why it is a valid algorithm for optimizing the ELBO.
+
+
+
+(COPIED) Variational inference is amenable to stochastic optimization because the variational objective decomposes into a sum of terms, one for each data point in the analysis.
+
+
+
+In [[sectio XX]] we show for the MOFA model how the gradient descent updates are equivalent to the updates found via calculus of variations
+
+
+DISTINGUISH BETWEEN LOCAL VARIABLES AND GLOBAL VARIABLES
+
+
+
+-------------------
+
+
+
+----------
+----------
+
+(Damien) Hoffman et al. (2013) show that the natural gradient of the ELBO with respect to the parameters λi of qi(θi) is:
+
+Amari (1998) showed that we can compute the natural gradient by premultiplying the gradient by the inverse of the Riemannian metric G(λ)−1,
+where G is the Fisher information matrix of q(λ) (Amari, 1982; Kullback and Leibler, 1951),
+
+
+
+(COPIED)It turns out, Fisher Information Matrix defines the local curvature in distribution space for which KL-divergence is the metric:
+
+https://wiseodd.github.io/techblog/2018/03/14/natural-gradient/
+
+
+
+
+
+
+
+
+
+
+
+
+
+%In most gradient ascent methods, such as lbfgs (Bonnans et al., 2006), the size of the step dx is measured using a euclidean distance ||dx||, meaning that the gradient is proportional to the solution of Equation 4.15.
+
+
+
+
+
+
+
+------------------
+	TO-DO: READ BLEI REVIEW
+
+
+	(COPIED) One advantage of on-line methods compared to batch methods is that the former handle redundancy in the data much more efficiently. To see, this consider an ex- treme example in which we take a data set and double its size by duplicating every data point.
+
+	MENTION FIXED FORM VARIATIONAL INFERENCE
+
+
+(COPIED ROM STOCHASTIC PAPER)
+The mean-field family has several computational advantages. For one, the entropy term decom- poses,
+NJ
+−Eq [log q(z, β)] = −Eλ [log q(β)] − ∑ ∑ Eφn j [log q(zn j )],
+n=1 j=1
+where Eφn j [·] denotes an expectation with respect to q(zn j | φn j ) and Eλ [·] denotes an expectation with respect to q(β|λ). Its other computational advantages will emerge as we derive the gradients of the variational objective and the coordinate ascent algorithm.
+
+
+
+
+Symmetrized KL depends on the distributions themselves, rather than on how they are parameter- ized; it is invariant to parameter transformations.
+

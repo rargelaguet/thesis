@@ -1,0 +1,61 @@
+% model-binomial-probit.tex
+%
+
+% Augmented Binomial Probit regression model
+
+%\beginpgfgraphicnamed{model-binomial-probit}
+
+\input{graphical_models/colours}
+
+\begin{tikzpicture}
+  % Define nodes:
+  % matrix factorisation level
+  \node[obs, very thick]   (Y) {$\mathbf{y_{n,d}^{{\color{shadecolor}m,g}}}$};
+  \node[latent, above=of Y, xshift=-1.5cm, very thick] (Z) {$\mathbf{z_{n,k}^{{\color{shadecolor}g}}}$};
+  \node[latent, above=of Y, xshift=1.5cm, very thick] (W) {$\mathbf{w_{k,d}^{{\color{shadecolor}m}}}$};
+  \node[latent, xshift=1.5cm, very thick] (Tau) {$\mathbf{\tau_{d}^{{\color{shadecolor}m}}}$};
+  \node[latent, yshift=-1.5cm, opacity=\op] (TauN) {$\tau_{n}^{m,g}$};
+
+  % \node[opacity=0.4,latent, xshift=-1.5cm] (Tau2) {$\tau_{n}$};
+
+  % parents of Z
+  \node[det, above=of Z, very thick] (crossZ) {$\times$};
+  \node[latent, above=of crossZ, very thick] (Zhat) {$\mathbf{\hat{z}^{{\color{shadecolor}g}}_{n,k}}$};
+  \node[latent, above=of Zhat, opacity=\op] (SigmaZ) {$\alpha^g_k$};
+  \node[latent, above=of crossZ, xshift=-1.5cm, opacity=\op] (SZ) {$s^g_{n,k}$};
+  \node[latent, above=of SZ, opacity=\op] (ThetaZ) {$\theta^g_{k}$};
+
+  % parents of W
+  \node[det, above=of W, very thick] (crossW) {$\times$};
+  \node[latent, above=of crossW, very thick] (What) {$\mathbf{\hat{w}_{k,d}^{{\color{shadecolor}m}}}$};
+  \node[latent, above=of What, opacity=\op] (SigmaW) {$\alpha_k^m$};
+  \node[latent, above=of crossW, xshift=1.5cm, opacity=\op] (SW) {$s_{k,d}^m$};
+  \node[latent, above=of SW, opacity=\op] (ThetaW) {$\theta_{k}^m$};
+
+  % Connect the nodes
+  \edge[very thick] {Z,W} {Y}; %
+  \edge[very thick] {Tau} {Y};
+  \edge[opacity=\op] {ThetaZ} {SZ};
+  \edge[opacity=\op] {SigmaZ} {Zhat};
+  \edge[opacity=\op] {ThetaW} {SW};
+  \edge[opacity=\op] {SigmaW} {What};
+  \edge[opacity=\op] {TauN} {Y}
+
+  \factoredge[opacity=\op] {SZ} {crossZ} {Z};
+  \factoredge[very thick] {Zhat} {crossZ} {Z};
+  \factoredge[opacity=\op] {SW} {crossW} {W};
+  \factoredge[very thick] {What} {crossW} {W};
+
+
+  % Plates
+  %factors
+  \plate[very thick] {plateK} {(Z)(W)(SZ)(Zhat)(SW)(What)(ThetaZ)(ThetaW)} {$\mathbf{K}$};
+
+  % feature side
+  \plate[very thick] {plateD} {(Y)(W)(Tau)(crossW)(What)(SW)(plateK.south east)} {$\mathbf{D_m}$};
+  \plate[opacity=\op] {plateM} {(TauN)(plateD)(ThetaW)(plateK.north east)} {${\color{shadecolor}M}$};
+
+  % sample side
+  \plate[very thick] {plateN} {(TauN)(Y)(Z)(crossZ)(Zhat)(SZ)(plateK.south west)(plateD.south west)} {$\mathbf{N_g}$};
+  \plate[opacity=\op] {plateG} {(plateN)(plateK.north west)(plateM.north west)(plateM.north west)} {${\color{shadecolor}G}$};
+\end{tikzpicture}

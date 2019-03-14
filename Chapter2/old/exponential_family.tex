@@ -1,0 +1,134 @@
+\section{Exponential family distributions}
+
+The exponential family is a set of probability distributions with a common parametric form that lead to convenient mathematical properties when doing Bayesian inference\cite{??}. \\
+The exponential family distributions include many of the most common distributions, including the normal, exponential, gamma, beta, Dirichlet, Bernoulli and Poisson \cite{???}.\\ 
+
+The parametrisations of the (multivariate) exponential family which we use in this thesis is:
+\[
+p(\bfx|\btheta) = h(\bfx) \exp \{ \eta(\btheta) T(\bfx) - A(\btheta) \}
+\]
+where the functions that parametrise the distribution are:
+\begin{itemize}
+	\item T(\bfx): the sufficient statistics of the distribution.
+	\item $\eta(\btheta)$: the natural parameters.
+	\item $h(\bfx)$: the base mesure.
+	\item $A(\eta)$: the log-partition function.
+\end{itemize}
+
+The standard probability density (top) and the exponential family form (bottom) for the probability distributions frequently used in this thesis are the following:\\
+
+\textbf{Univariate normal distribution}:
+\beq 
+	p(x|\mu,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp{-\frac{(x-\mu)^2}{2\sigma^2}}
+\eeq
+\begin{equation}
+\begin{split}
+	& \eta(\mu,\sigma^2) = \bmat \frac{\mu}{\sigma^2} & -\frac{1}{2\sigma^2} \emat \\
+	& h(x) = \frac{1}{\sqrt{2\pi}}
+\end{split}
+\qquad \qquad
+\begin{split}
+	& T(x) = \bmat x & x^2 \emat \\
+	&  A(\eta) = -0.25\frac{\eta_1^2}{\eta_2} - 0.5\log(\frac{1}{2\eta_2}) % A(\mu,\sigma) = \frac{\mu^2}{2\sigma^2} + \log \sigma
+\end{split}
+\end{equation}
+
+\textbf{Multivariate normal distribution}:
+\beq
+	p(\bfx|\bmu,\bSigma) = \frac{1}{(2\pi)^{D/2}} \frac{1}{|\bSigma|^{1/2}} \exp{-\frac{1}{2} (\bfx - \bmu)^T \bSigma{-1} (\bfx - \bmu)} \\
+\eeq
+\begin{equation}
+\begin{split}
+	& \eta(\bmu,\bSigma)  = \bmat \Sigma^{-1} \mu & -0.5\Sigma^{-1} \emat \\
+	& h(x) = (2\pi)^{-\frac{k}{2}}
+\end{split}
+\qquad \qquad
+\begin{split}
+	& T(x) = \bmat x & xx^T \emat \\
+	& A(\eta) = -0.25\eta_1^T \eta_2^{-1} \eta_1 - 0.5\log(|-2\eta_2|)
+\end{split}
+\end{equation}
+
+\textbf{Gamma distribution}:
+\beq
+p(x|\alpha,\beta) = \frac{1}{\Gamma(\alpha)} \beta^\alpha x^{\alpha-1} e^{-\beta x}
+\eeq
+\begin{equation}
+\begin{split}
+	& \eta(\alpha,\beta) = \bmat \alpha - 1 & -\beta \emat \\
+	& h(x) = 1
+\end{split}
+\qquad \qquad
+\begin{split}
+	& T(x) = \bmat \log x & x \emat \\
+	& A(\eta) = \log(\Gamma(\eta_1 + 1)) - (\eta_1 + 1) \log(-\eta_2)
+\end{split}
+\end{equation}
+
+\textbf{Beta distribution}:
+\beq
+p(x|a,b) = \frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)} x^{a-1} (1-x)^{b-1} 
+\eeq
+\begin{equation}
+\begin{split}
+	& \eta(a,b) = \bmat a & b\emat \\
+	& h(x) = \frac{1}{x(1-x)}
+\end{split}
+\qquad \qquad
+\begin{split}
+	& T(x) = \bmat \log x & \log (1-x) \emat \\
+	& A(\eta) = \log(\Gamma(\eta_1)) +\log(\Gamma(\eta_2)) - \log(\Gamma(\eta_1+\eta_2))
+\end{split}
+\end{equation}
+
+\textbf{Bernoulli distribution}:
+\beq
+	p(x|\theta) = \theta^x (1-\theta)^{1-x}
+\eeq
+\begin{equation}
+\begin{split}
+& \eta(\theta) = \frac{\theta}{1-\theta} \\
+& h(x) = 1
+\end{split}
+\qquad \qquad
+\begin{split}
+& T(x) = x \\
+& A(\eta) = \log(1+\exp^\eta)
+\end{split}
+\end{equation}
+
+\textbf{Poisson distribution}:
+\beq
+p(x|\theta) = \theta^x (1-\theta)^{1-x}
+\eeq
+\begin{equation}
+\begin{split}
+& \eta(\theta) = \frac{\theta}{1-\theta} \\
+& h(x) = 1
+\end{split}
+\qquad \qquad
+\begin{split}
+& T(x) = x \\
+& A(\eta) = \log(1+\exp^\eta)
+\end{split}
+\end{equation}
+
+The properties that all exponential family distributions share, and make it valuable for statistical modelling, are, among others: (1) The sufficient statistics can summarize arbitrary amounts of independent identically distributed data, and (2) The existence of conjugate priors within the same exponential family that guarantee a closed-form posterior distribution. 
+
+• Products of exponential family distributions are exponential family distributions, but unnormalized.
+
+https://arxiv.org/pdf/0911.4863.pdf
+
+Let $\bfx | \btheta_x$ and $\bfy | \btheta_y$ be random variables with exponential family distributions:
+\begin{align}
+	\bfx \times \bfy &= 
+	h_x(\bfx) \exp \{ \eta_x(\btheta_x) T_x(\bfx) - A_x(\btheta_x) \} \times h_y(\bfy) \exp \{ \eta_y(\btheta_y) T_y(\bfy) - A_y(\btheta_y) \} \\
+	&= h_x(\bfx) h_y(\bfy) \exp \{ \eta_x(\btheta_x) T_x(\bfx) + \eta_y(\theta_y) T_y(\bfy) - A_x(\btheta_x) A_y(\btheta_y) \} \\
+	&= \hat{h}(\bfx,\bfy) \exp \{ \hat{\eta}(\btheta_x,\btheta_y) \hat{T}(\bfx,\bfy) - \hat{A}(\btheta_x, \btheta_y) \}
+\end{align}
+% To exemplify the second property, consider the normally-distributed random variable with unknown mean and unknown variance:
+% \baln
+% 	x \sim \mathcal{N}(\mu, \tau^{-1})
+% \ealn
+
+

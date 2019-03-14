@@ -1,0 +1,19 @@
+% \input{graphical_models/colours}
+
+\begin{tikzpicture}
+
+% Define nodes
+\node[obs]   (Y) {$y_{n,d}$};
+\node[latent, xshift=-1.5cm, above=of Y, yshift=-0.4cm] (Z) {$z_{n,k}$};
+\node[latent, double, double distance=1pt, above=of Y, yshift=0.6cm] (W) {$w_{d,k}$};
+\node[latent, double, double distance=1pt, xshift=1.5cm] (Tau) {$\tau$};
+
+% Connect the nodes
+\edge {Z,W, Tau} {Y};
+
+% Plates
+\plate[] {plateK} {(Z)(W)} {$K$};
+\plate[] {plateN} {(Y)(Z)(plateK.south east)(plateK.south west)} {$N$};
+\plate[] {plateD} {(Y)(W)(plateK.north east)(plateN.south east)} {$D$};
+
+\end{tikzpicture}

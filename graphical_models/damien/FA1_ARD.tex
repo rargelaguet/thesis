@@ -1,0 +1,27 @@
+% model-binomial-probit.tex
+%
+
+% Augmented Binomial Probit regression model
+
+%\beginpgfgraphicnamed{model-binomial-probit}
+
+\input{graphical_models/colours}
+% [scale=#1, every node/.style={scale=#1}]
+\begin{tikzpicture}
+  % Define nodes:
+  % matrix factorisation level
+  \node[obs]   (Y) {$y_{n,d}$};
+  \node[latent, above=of Y, xshift=-1.5cm] (Z) {$z_{n,k}$};
+  \node[latent, above=of Y, xshift=1.5cm] (W) {$w_{k,d}$};
+  \node[latent, xshift=1.5cm] (Tau) {$\tau_{d}$};
+  \node[latent, above=of W] (alpha) {$\alpha_{k}$};
+
+  % Connect the nodes
+  \edge {Z,W, Tau} {Y}; %
+  \edge {alpha} {W};
+
+  % Plates
+  \plate[] {plateK} {(Z)(W)(alpha)} {$K$};
+  \plate[] {plateN} {(Y)(Z)(plateK.south west)} {$N$};
+  \plate[] {plateD} {(Y)(W)(Tau)(plateK.south east) (plateN.south east) (plateN.north east)} {$D$};
+\end{tikzpicture}

@@ -1,0 +1,31 @@
+\section{Computational analysis of single-cell multi-modal data}
+THIS SHOULD BE PART OF THE MOFA CHAPTER
+
+The rapid development of single-cell multi-modal technologies needs to be accompanied with statistical methods for interrogating the data generated. Integrative analyses that simultaneously pool information across multiple data modalities (-omics) and across multiple studies promise to deliver a more comprehensive insights into the complex variation that underly cellular populations.\\
+The development of statistical frameworks to jointly analyse the multiple data sets face numerous challenges. First, data collected using different techniques generally exhibit heterogeneous properties and have to be modelled under different statistical assumptions [9]. For example, combining count (i.e. gene expression) and binary traits (i.e.somatic mutations) under the same statis- tical framework is a non-trivial task. Second, as the number of cells and features increase, modelling strategies need to scale accordingly and deal with the risk of overfitting.\\
+
+% (COPIED) A basic strategy for the integration of omics data is testing for marginal associations between different data modalities. A prominent example is molecular quantitative trait locus mapping, where large numbers of association tests are performed between individual genetic variants and gene expression levels (GTEx Consor- tium, 2015) or epigenetic marks (Chen et al, 2016). While em- inently useful for variant annotation, such association studies are inherently local and do not provide a coherent global map of the molecular differences between samples. A second strategy is the use of kernel- or graph-based methods to combine differen
+
+Fourth, traditional approaches such as association analysis tend to fail due to the amounts of noise in single features as well as the massive multiple testing problem. 
+
+Fifth, multi-omics data sets typically contain multiple undesired sources of heterogeneity, both technical (i.e. batch) and biological (i.e. cell cycle), which can hidden the signal of interest. Therefore, disentangling the variability is a mandatory step before other computational pipelines are applied [2, 5, 6].
+
+%Statistical approaches for multimodal single-cell integration are likely to be inspired by bulk approaches (reviewed elsewhere76) that are used to perform joint dimensionality reduction on multiple omics data sets to identify conserved or divergent patterns and can be read- ily extended to single-cell multimodal data. For example, Argelaguet et al.77 developed a multi-omics factor analy- sis (MOFA) method capable of identifying a set of factors that explain variance across multiple data modalities and used their method to jointly analyse bulk genomic, DNA methylation and RNA expression data from patients with chronic lymphocytic leukaemia. This integrated analysis
+
+%From the computational perspective, a key challenge is 
+
+(COPIED) Analysis approaches to single cell multi-omics data have the goal to infer regulatory relationships between the multiple -omics layers, and to describe the unique cellular states in more detail.
+
+Explain challenges, why do bulk methods do not work.
+- Mean/variance noise
+- Missing values
+- Zero-inflation
+- Technical variability versus biological variability
+- Scalability
+- Dimensionality reudction: UMAP, t-sne
+
+%Analysis of multimodal data. The rapid development of multimodal profiling strategies has created a subse- quent need for innovative analytical approaches for these data types. Although these techniques are largely under development, we anticipate that multimodal data sets are likely to reveal subtle differences in cell state that cannot be captured by a single modality alone (Fig. 3a). This is particularly true for scRNA-seq data, for which incom- plete detection (‘drop-out’) of lowly expressed genes can blur fine-scale distinctions, but complementary data from the same cells can ameliorate this problem. For example, distinct T cell groups (including memory and regulatory subsets) can be challenging to distinguish on the basis of sparse scRNA-seq information but are read- ily classified according to the expression of cell surface protein markers. This suggests that future methods that perform joint clustering on both immunophenotype and mRNA levels collected from the same cells may achieve dramatically higher resolution in characterizing immune cell states20 (Fig. 3b). Similarly, co-assays of the transcrip- tome and chromatin48 or methylation46 state may reveal heterogeneity in the regulatory landscape of individual cells, which can bias fate decisions even in advance of transcriptional changes.
+
+In particular, a major problem is that protocols vary on how missing data is defined. For bisulfite sequenc- ing methods, the missing values are clearly distinguishable from the observed values. However, for other methods such as single-cell RNA-seq or single-cell ATAC-seq [4], the absence of sequence reads do not distinguish between the event that the genomic feature was not measured from that the readout was actu- ally zero [23].
+
+

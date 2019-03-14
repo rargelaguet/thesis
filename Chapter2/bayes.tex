@@ -1,0 +1,128 @@
+\section{Graphical models}
+TO-DO...
+
+\section{Probabilistic modelling}
+A scientific model is a simple theoretical representation of a complex natural phenomenon to allow the systematic study of its behaviour. The general idea is that if a model is able to explain some observations, it might be capturing its true underlying laws and can therefore be used to make future predictions.\\ 
+In particular, statistical models are a powerful abstraction of nature. They consist on a set of observed variables and a set of (hidden) parameters. The procedure of fitting the parameters using a set of observations is called inference or learning.\\
+On of the major challenges of inference when dealing with real data sets is the distinction between signal and noise. An ideal model should learn only the information relevant to gain explanatory power while disregarding the noise. However, this is a non-trivial task in most practical situations. Very complex models will tend to overfit the training data, capturing large amounts of noise and consequently leading to a bad generalisation performance to independent data sets. On the other hand, simplistic models will fit the data poorly, leading to poor explanatory power.\\
+
+The ideas above can be formalised using the framework of probability and statistics.
+
+\subsection{Maximum likelihood inference}
+A common approach is to define a statistical model of the data $\bfY$ with a set of parameters $\bTheta$ that define a probability distribution $p(\bfY|\bTheta)$, called the likelihood function. A simple approach to fit a model is to estimate the parameters $\hat{\bTheta}$ that maximise the likelihood:
+\[
+	\hat{\bTheta} = \argmax_{\bTheta} p(\bfY|\bTheta)
+\]
+This process is called maximum likelihood learning\cite{Stigler2008,Bishop,Murphy}. However, in this setting there is no penalisation for model complexity, making maximum likelihood solutions prone to overfit in cases where the data is relatively sparse. Generalisations that account for model complexity have been proposed and include regularising terms that shrink parameters to small values. However, these are often particular cases of the more general framework of Bayesian statistics \cite{Hastie,Bishop,Murphy}.
+
+\subsection{Bayesian inference}
+In the Bayesian framework, the parameters themselves are treated as random variables and we aim to obtain probably distributions for $\bTheta$, rather than a single point estimate. To do so, prior beliefs are introduced into the model by specifying a prior probability distribution $p(\bTheta)$. Then, using Bayes' theorem \cite{Bayes1763}, the prior hypothesis is updated based on the observed data $\bfY$ by means of the likelihood $p(\bfY|\bTheta)$ function, which yields a posterior distribution over the parameters:
+\[
+	p(\bTheta|\bfY) = \frac{p(\bfY|\bTheta) p(\bTheta)}{p(\bfY)}
+\]
+where $p(\bfY)$ is a constant term called the marginal likelihood, or model evidence \cite{Bishop,Murphy}.\\
+The choice of the prior distribution is a key part of Bayesian inference and captures beliefs about the distribution of a variable before the data is taken into account. With asymptotically large sample sizes, the choice of prior has negligible effects on the posterior estimates, but it becomes critical with sparse data \cite{Bishop,Murphy,Gelman2013}.\\
+There are two common considerations when defining the prior distributions. The first relates to the incorporation of subjective information, or predefined assumptions, into the model. For example, one could adapt the prior distribution to match the results from previous experiments (i.e. an informative prior). Alternatively, if no information is available one could set set uninformative priors by following maximum entropy principles \cite{Jaynes1968}.\\
+The second strategy is based on convenient mathematical properties to make inference tractable. If the likelihood and the prior distributions do not belong to the same family of probability distributions (they are not conjugate) then inference becomes more problematic \cite{Raiffa1961,Bishop,Murphy,Gelman2013}. The existence of conjugate priors is one of the major reasons that justify the widespread use of exponential family distributions in Bayesian models \cite{XX}. An example is the Automatic Relevance Determination prior discussed in [[SECTION X]]. \\
+
+Again, the milestone of Bayesian inference is that an entire posterior probability distribution is obtained for each unobserved variable. This has the clear advantage of naturally handling uncertainity in the estimation of parameters. For instance, when making predictions, a fully Bayesian approach attempts to integrate over all the possible values of all unobserved varaibles, effectively propagating uncertainity across multiple layers of the model. Nevertheless, this calculation is sometimes intractable and one has to resort to point estimates \cite{Bishop,Murphy,Gelman2013}. The simplest approximation to the posterior distribution is to use its mode, which leads to the maximum a posteriori (MAP) estimate:
+\[
+	\hat{\bTheta} = \argmax_\bTheta p(\bTheta)  p(\bfY|\bTheta) 
+\]
+This is similar to the maximum likelihood objective function, but with the addition of a term $p(\bTheta)$. When the prior dsitribution is chosen smartly, this term penalises for model complexity. Therefore, in contrast to standard (non-penalised) maximum likelihood inference, Bayesian approaches naturally handle the problem of model complexity and overfitting\cite{Bishop,Murphy,Gelman2013}. At the limit of infinite observations, the influence of the prior to the posterior is negligible and the MAP estimate converges towards the Maximum likelihood estimate, hence providing a rational link between the two inference frameworks.\\
+
+\subsection{Deterministic approaches for Bayesian inference}
+The central task in Bayesian inference is the direct evaluation of the posterior distributions and/or the computation of expectations with respect to the posterior distributions. In sufficiently complex models, closed-form solutions are not available and one has to resort to approximation schemes, which broadly fall into two classes: stochastic or deterministic \cite{}. 
+
+Stochastic approaches hinge on the generation of samples from the posterior distribution via a Markov Chain Monte Carlo (MCMC) framework. Such techniques have the appealing property of exact results at the asymptotic limit of infinite computational resources. However, in practice, sampling approaches are computationally demanding and suffer from limited scalability to large data sets \cite{Blei_ReviewVB_2017}.\\
+
+In contrast
+(TO CHECK) Deterministic approaches are based on analytical simplified approximations to the posterior distribution. As a result, deterministic approaches are usually much faster and scale to large applications, at the expense of biased results \cite{bishop,murphy}. 
+
+\subsubsection{Laplace approximation}
+The Laplace approximation is probably the simplest of the deterministic tecniques, where the aim is to construct a Gaussian approximation around the mode of the true posterior distribution using a second-order Taylor expansion \cite{Bishop,Murphy}.\\
+Suppose $\bTheta$ contains all unobserved variables. The true posterior distribution can be written as:
+\[
+p(\bTheta) = \frac{f(\bTheta)}{Z}
+\]
+where $f(\bTheta)$ is a function that depends on the unobserved variables and $Z$ is an unknown normalisation constant to ensure that $\int p(\bTheta) d\bTheta = 1$\\.\\
+
+The second-order Taylor expansion of $\log f(\bTheta)$ centered around its (known) mode $\hat{\bTheta}$ is: 
+\[
+	\log f(\bTheta) \approx \log f(\hat{\bTheta}) - \frac{1}{2} (\bTheta-\hat{\bTheta})^T \bfA (\bTheta-\hat{\bTheta})
+\]
+where $\bfA = \nabla^2 \log f(\hat{\bTheta})$ is the Hessian matrix of $\log f(\bTheta)$ evaluated at $\hat{\bTheta}$.\\
+Notice three things. First, the first-order term of the Taylor expansion is zero because $\hat{\bTheta} is a stationary point. Second, the $\log$ function is monotonically increasing and therefore a maximum of $\log f(\bTheta)$ is also a maximum of $f(\bTheta)$. Third, the mode of the posterior $p(\bTheta)$ must be known, which requires the use of (complex) optimisation algorithms.\\
+Taking the exponential in both sides:
+\[
+	f(\bTheta) \approx f(\hat{\bTheta}) \exp\{ -\frac{1}{2} (\bTheta-\hat{\bTheta})^T \bfA (\bTheta-\hat{\bTheta}) \}
+\]
+which leads to the following multivariate Gaussian distribution approximation $q(\bTheta) = \Ndist{\bTheta}{\hat{\bTheta}$:
+\[
+	q(\bTheta) = \frac{\mid A \mid^{1/2}}{(2\pi^{d/2})} \exp\{ -\frac{1}{2} (\bTheta-\hat{\bTheta})^T \bfA (\bTheta-\hat{\bTheta}) \}
+\]
+where $d$ is the number of unobserved variables. \\
+Despite its simplicity, the Laplace approximation is a useful strategy that has been successfuly applied in practice. More sophisticated generalisations of the Laplace approximation have also been proposed \cite{Rue2009}.
+
+
+\subsection{Variational approximation}
+Variational inference is a deterministic family of methods that have been receiving widespread attention due to a positive balance between accuracy, speed, and ease of use \cite{Blei_ReviewVB_2017, Zhang2018Arxiv}. The core framework is derived below.\\
+
+In variational inference the true (but intractable) posterior distribution $p(\bfX|\bfY)$ is approximated by a simpler (variational) distribution $q(\bfX|\bTheta)$ where $\bTheta$ are the corresponding parameters. The parameters, which we will omit from the notation, need to be tuned to obtain the closest approximation to the true posterior.\\
+The distance between the true distribution and the variational distribution is calculated using the KL divergence:
+\[
+\KL(q(\bfX)||p(\bfX|\bfY)) = - \int_z q(\bfX) \log \frac{p(\bfX|\bfY)}{q(\bfX)}
+\]
+Note that the KL divergence is not a proper distance metric, as it is not symmetric. In fact, using the reverse KL divergence $\KL(q(\bfX)||p(\bfX|\bfY))$ defines a different inference framework called expectation propagation \cite{Minka2001}.\\
+
+If we allow any possible choice of $q(\bfX)$, then the minimum of this function occurs when $q(\bfX)$ equals the true posterior distribution $p(\bfX|\bfY)$. Nevertheless, since the true posterior is intractable to compute, this does not lead to any simplification of the problem. Instead, it is necessary to consider a restricted family of distributions $q(\bfX)$ that are tractable to compute and subsequently seek the member of this family for which the KL divergence is minimised.\\
+
+Doing some calculus it can be shown (see \cite{Bishop2006,Murphy}) that the KL divergence $\KL(q(\bfX)||p(\bfX|\bfY))$ is the difference between the log of the marginal probability of the observations $\log(\bfY)$ and a term $\Lagr(\bfX)$ that is typically called the Evidence Lower Bound (ELBO):
+\[
+	\KL(q(\bfX)||p(\bfX|\bfY)) = \log(\bfX) - \Lagr(\bfX)
+\]
+Hence, minimising the KL divergence is equivalent to maximising $\Lagr(\bfX)$ \Cref{fig:ELBO}:
+\begin{align} \label{eq_elbo1} \begin{split}
+	\Lagr(\bfX) &= \int q(\bfX) \Big( \log \frac{p(\bfX|\bfY)}{q(\bfX)} + \log p(\bfY) \Big) d\bfX \\
+	%&= \int \Big( q(\bfX) \log \frac{p(\bfX|\bfY)}{q(\bfX)} + q(\bfX)\log p(\bfY) \Big) d\bfX\\
+	%&= \E_q [\log p(\bfX|\bfY)] - \E_q [\log q(\bfX)] + \E_q [\log p(\bfY)] \\
+	&= \E_q [\log p(\bfX,\bfY)] - \E_q [\log q(\bfX)]
+\end{split} \end{align}
+The first term is the expectation of the log joint probability distribution with respect to the variational distribution. The second term is the entropy of the variational distribution.
+Importantly, given a simple parametric form of $q(\bfX)$, each of the terms in \Cref{eq_elbo1} can be computed in closed form.\\
+In some occasions (see section X), we will use the following form for the ELBO:
+\begin{equation} \label{eq_elbo2}
+	\Lagr(\bfX) = \E_q [\log p(\bfY|\bfX)] + (\E_q [\log p(\bfX)] - \E_q [\log q(\bfX)])
+\end{equation}
+where the first term is the expectation of the log likelihood and the second term is the difference in the expectations of the $p$ and $q$ distributions of each hidden variable.\\
+
+In conclusion, variational learning involves minimising the KL divergence between $q(\bfX)$ and $p(\bfX|\bfY)$ by instead maximising $\Lagr(\bfX)$ with respect to the distribution $q(\bfX)$. The following image summarises the general picture of variational learning:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.35\linewidth]{figures/lower_bound}
+	\caption{The quantity $\Lagr(\bfX)$ provides a lower bound on the true log marginal likelihood $\log p(\bfY)$, with the difference being given by the Kullback-Leibler divergence $\KL(q||p)$ between the variational distribution $q(\bfX)$ and the true posterior $p(\bfX|\bfY)$}
+	\label{fig:ELBO}
+\end{figure}
+ Yet, there are several approaches to define $q(\bfX)$. The two most commonly used are called (unparametric) mean-field and (parametric) fixed-form \cite{Zhang2017,Blei2016}.
+
+\subsubsection{Mean-field variational inference}
+It assumes that the variational distribution factorises over $M$ disjoint groups of variables\cite{Saul1996}:
+\begin{equation} \label{eq:mean_field}
+	q(\bfX) = \prod_{i=1}^{M} q(\bfx_i)
+\end{equation}
+Notice that no parametric assumptions were made. \\
+Using calculus of variations (see \cite{Bishop2006,Murphy}), it follows that the optimal distribution $q(\bfX)$ that maximises the lower bound $\Lagr(\bfX)$ is
+\begin{equation} \label{eq:optimal}
+	\log \hat{q}_i(\bfx_i) = \E_{-i} [\log p(\bfY,\bfX)] + \mathrm{const}
+\end{equation}
+where $\E_{-i}$ denotes an expectation with respect to the $q$ distributions over all variables $\bfx_j$ except for $\bfx_i$.\\
+The additive constant is set by normalising the distribution $\hat{q}_i(\bfz_i)$:
+\[
+	\hat{q}(\bfx_i) = \frac{\exp(\E_{-i}[\log p(\bfY,\bfX)])}{\int \exp(\E_{-i}[\log p(\bfY,\bfX)]) d\bfX}
+\]
+While the form of $\hat{q}(\bfx_i)$ is general, it can be shown that when using conjugate priors from the exponential family, the distributions $\hat{q}_i(\bfx_i)$ have the same functional form as the priors $\hat{p}(\bfx_i)$. For mathematical details see \cite{Bishop2006,Murphy,Zhao2009}.
+
+\subsubsection{Fixed-form variational inference}
+An alternative and straightforward choice is to directly define the distribution $q(\bfX)$ to be of the same form as the prior distribution $p(\bfX)$, with (variational) parameters $\bTheta$. \\
+Importantly, this approach introduces parametric assumptions which only match the mean-field derivation when using conjugate priors. However, for generic models with arbitrary families of distributions, no closed-form variational distributions exist via the mean-field approximation \cite{Zhang2017,Blei2016}. \\
+Once the (parametric) choice of $q(\bfX)$ is made, the ELBO can be maximised by optimising the parameters $\bTheta$ via conventional numeric optimisation methods. Hence, while the parametric assumption certainly limits the flexibility of variational distributions, the advantage of this formulation is that it opens up the possibility to use (potentially fast) gradient-based methods for the inference procedure \cite{Hoffman2012,Ranganath2014,Platt2008}.

@@ -1,0 +1,24 @@
+\section{Gradient descent}
+Gradient descent is a first-order optimization algorithm for finding the minimum of a function \cite{??}. It works iteratively by taking steps proportional to the gradient of the function evaluated at each iteration.\\
+
+For a differentiable function $F(x)$, the iterative scheme of gradient ascent is:
+\begin{equation}
+\bfx^{(t+1)} = \bfx^{(t)} + \rho^{(t)} \nabla F(\bfx^{(t)})
+\end{equation}
+At each iteration, the gradient is re-evaluated and a step is performed in the direction of the gradient $\nabla F$. The step size is controlled by $\rho^{(t)}$, a parameter called the learning rate, which can be adjusted at each iteration $t$. \\
+With certain assumptions on the function $F$ and particular choices of $\rho$ \cite{??}, gradient descent is guaranteed to converge to a local minimum. Hence, if $f$ is not convex, the algorithm is sensible to the initialisation $\bfx^0$.  \\
+
+Gradient descent is appealing because of its simplicity, but in practice other methods are more efficient, including conjugate gradients and quasi-Newton methods \cite{Gill et al., 1981; Fletcher, 1987; Nocedal and Wright, 1999}. Additionally, Standard gradient ascent becomes prohibitive slow with large data sets \cite{}, because of the computational cost (both in terms of time and memory) associated with the calculation of gradients at each iteration ~\citep{Robbins-Monro1951, Bottou2011-by, Spall2003-fl} .
+
+
+\section{Stochastic gradient descent}
+Assuming  there is redundancy in the data set, an approximated yet fast gradient can be calculated using a random subset of the data (i.e. a minibatch). Under large N conditions, the stochastic version can converge faster than traditional gradient descent \cite{??}. If the cost function is convex, stochastic gradient descent is also guaranteed to find a global minimum. \\
+
+As in standard, gradient descent, the iterative training schedule proceeds by taking small steps of size $\rho$ in the direction of the approximate gradient $\hat{\nabla}F$:
+\begin{equation}
+\bfx^{(t+1)} = \bfx^{(t)} + \rho^{(t)} \hat{\nabla} F(\bfx^{(t)})
+\end{equation}
+The step size $\rho^{(t)}$ can also be adjusted at each iteration $t$. When this series satisfies the Robbins-Monro conditions: $\sum_t \rho^{(t)} = \infty \text{ and } \sum_t (\rho^{(t)})^2 < \infty$, $f$ is guaranteed to converge to a local minimum ~\citep{Robbins-Monro1951}. 
+
+The computation of $\hat{\nabla}F$ requires an additional hyperparameter that establishes the size of the minibatch. A trade off exists between getting closer to the true gradient by increasing the size of the minibatch at the cost of speed and smoother convergence.
+

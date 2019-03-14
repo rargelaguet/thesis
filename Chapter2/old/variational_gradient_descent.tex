@@ -1,0 +1,80 @@
+\section{Variational updates derived from gradient descent optimisation}
+
+In this section we will show how the variational updates that were found via calculus of variations in section XX are equivalent to the updates derived from gradient descent optimisation. 
+%This is part of the derivation of the variational updates for stochastic variational inference in section XX. \\
+
+The original derivation can be found in \cite{hoffmann}. Here we present simplified version for completeness. For consistency and with the notation presented in \cite{hoffmann}, we will generalise all probability distributions to the exponential family form. See section X for details and nomenclature.\\
+
+As a starting point, we classify the variables of the model into four different types:
+\begin{itemize}
+	\itemsep-1.5em 
+	\item observations: $N$ different vectors $\bfy_{n}$ which contain the observed variables. \\
+	\item local variables: $N$ different vectors $\bfz_{n}$ which contain all $K$ hidden variables associated with each sample $n$. \\
+	\item global variables: a vector $\bbeta$ which contains all $B$ hidden variables not indexed by $n$. \\
+	\item parameters: a vector $\balpha$ which contains all fixed parameters for the global variables.
+\end{itemize}
+The distinction between local and global variables lies on the conditional dependencies. Given the global variables $\beta$, the $n$th local variable $z_n$ is conditionally independent from any other observation $y_{j}$ or local variable $z_{j}$ (where $j \neq n$):
+\[
+p(\bfy_n,\bfz_n| \bfy_j,\bfz_j,\bbeta,\balpha) = p(\bfy_n,\bfz_n|\bbeta,\balpha)
+\]
+%As an example, in the MOFA model the factors belong to the local variables whereas the weights belong to the global variables.
+
+As in Equation XXX, the observations are assumed to be independent, which leads to a factorised likelihood:
+\[
+p(\bfY,\bfZ,\beta,\alpha) = p(\beta|\alpha) \prod_{n=1}^{N} p(\bfy_n,\bfz_n|\beta)
+\]
+
+Additionally, to obtain closed-form variational updates, we need to assume that the complete conditionals of the hidden variables are members of the exponential family:
+\baln
+p(\beta_b|\bfY,\bfZ,\alpha) = h(\beta_b) \exp\{ \eta_g(\bfY,\bfZ,\balpha)^T t(\beta_b) - a_g(\eta_g(\bfY,\bfZ,\alpha)) \} \\
+p(z_{nk}|y_{nj},z_{nj},\bbeta) = h(\beta) \exp\{ \eta_l(y_{nj}, z_{nj},\bbeta)^T t(z_{nk}) - a_g(\eta_l(y_{nj},z_{nj},\bbeta)) \} \\
+\ealn
+where $\lambda_b$ are the parameters governing the global variable $\beta_b$. Similarly, $\phi_{nk}$ are the parameters governing the local variable $z_{nk}$. In some cases, this assumpion results naturally from the choice of conjugated likelihood and prior distributions (section XXX). Yet, even in the case of non-conjugated distributions, some approaches introduce local approximations to the likelihood to achieve conjugacy. See section XXX.\\
+
+To set the inference framework, variational distributions are introduced for both the local variables and the global variables. As in XX, following the mean-field assumption, the variational distributions factorise:
+\[
+q(\bfZ,\bbeta) = \prod_{b=1}^{B} q(\beta_b,\lambda_b) \prod_{n=1}^{N}\prod_{k=1}^{K} p(z_{nk}|\phi_{nk})
+\]
+
+So far no assumptions were made regarding the nature of the probability distributions. To derive the gradient descent coordinate update, we need to assume exponential family distributions for the variational distributions:
+\baln
+q(\beta_b|\lambda_b) &= h(\beta_b) \exp\{ \lambda_b^T t(\beta_b) - a_g(\lambda_b) \} \\
+q(z_{nk}|\phi_{nk}) &= h(z_{nk}) \exp \{ \phi_{nk}^T t(z_{nk}) - a_l(z_{nk}) \}
+\ealn
+
+From the assumptions above, the ELBO factorises as:
+\baln
+\Lagr &= \E_q[\log p(\bfY,\bfZ,\bbeta)] - \E_q[\log q(\bfZ,\bbeta)]  \\
+&= \E_q[\log p(\bfY,\bfZ,\bbeta)] - \sum_{b=1}^{B}\E_{q(\beta_b)}[\log q(\beta_b)] - \sum_{n=1}^{N}\sum_{k=1}^{K}  \E_{q(z_{nk})}[\log q(z_{nk})] \\
+\ealn
+
+\subsubsection{Computing the gradients}
+Equation X  contains the objective function. First we derive the updates for the global parameters. As a function of $\lambda$, the ELBO becomes:
+\baln
+	\Lagr(\lambda) &= \E_{q(Z,\beta)}[\log p(\beta|\bfY,\bfZ)] - \E_{q(\beta)}[\log q(\beta)] + \const \\
+	&= \E_{q(Z,\beta)}[\eta_g(\bfY,\bfZ,\alpha)^T t(\beta)] - \E_{q(\beta)}[\lambda^T t(\beta) - a_g(\lambda) ] + \const \\
+	&= \E_{q(Z)}[\eta_g(\bfY,\bfZ,\alpha)^T] \nabla a_g(\lambda) - \lambda^T \nabla a_g(\lambda) - a_g(\lambda) + \const
+\ealn
+where we have used the exponential family identity $\E_{q(\beta)}[t(\beta)] = \nabla a_g(\lambda)$. Taking the gradient with respect to $\lambda$ leads to the solution:
+\[
+	\lambda = \E_{q(Z)}[\eta_g(\bfY,\bfZ,\alpha)]
+\]
+
+Turning to the local parameters, as a function of $\phi_{nk}$ the ELBO becomes:
+THIS IS WRONG, CHECK EXPECTATIONS
+\baln
+\Lagr(\phi_{nk}) &= \E_{q(\beta,z_{nk})}[\log p(z_{nk}|\bfy_{n},\bfz_{nj}, \beta)] - \E_{q(z_{nk})}[\log q(z_{nk})] + \const \\
+&= \E_{q(\beta,z_{nk})}[\eta_l(\bfy_n,\bfz_{nj},\beta)^T t(\bfz_{nj})] - \E_{q(z_{nk})}[\phi_{nk}^T t(z_{nk}) - a_l(\phi_{nk}) ] + \const \\
+%&= \E_{q(\beta,z_{nk})}[\eta_l(\bfy_n,\bfz_{nj},\beta)^T t(\bfz_{nj})] - \E_{q(z_{nk})}[\phi_{nk}^T t(z_{nk}) - a_l(\phi_{nk}) ] + \const
+\ealn
+where $j$ denotes all except the $k$-th local variable associated with sample $n$.
+
+Taking the gradient with respect to $\phi_{nk}$ leads to the following solution:
+\[
+\phi_{nk} = \E_{q(\beta,\bfz_{n,j})}[\eta_l(\bfy_{n},\bfz_{n,j},\beta)]
+\]
+Equation XX and XX define the variational updates for the gradient ascent algorithm.
+
+\subsubsection{Equivalency with calculus of variations}
+TO-DO
+

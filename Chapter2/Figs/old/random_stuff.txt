@@ -1,0 +1,49 @@
+The accuracy of the two types of methods is not easy to compare and is model as well as data-set dependent, but given  \cite{}. Yet, variational inference generally underestimates the variance of the posterior distributions, as will be discussed in [[Section X]]. While this is can be a limitation in some scenarios \cite{vallejosBasics}, it is a price that can be paid when aiming at approximate solutions and working with point estimates \cite{???}
+
+TO CITE:\tabularnewline
+https://arxiv.org/abs/1711.05597
+
+
+
+###############
+
+
+
+
+Under these (general) assumptions, the ELBO as a function of \lambda becomes:
+\[
+
+\]
+Using the exponential family identity that the expectation of the sufficient statistics is the gradient of the log normalizer $ \E_q[t(\beta)] = \nabla_\lambda a_g(\lambda)$:
+\[
+\Lagr(\lambda) = \E_q[log h(\beta) + \eta_g(x,z,\alpha)^T \nabla_\lambda a_g(\lambda)] - \E_q[\log(h(\beta)) + \lambda^T \nabla_\lambda a_g(\lambda) - a_g(\lambda) ] + const
+\]
+
+Then we take the gradient with respect to $\lambda$:
+\[
+\nabla \Lagr(\lambda) = \nabla^2_\lambda a_g(\lambda) (\E_q[\eta_g(x,z,\alpha)] - \lambda)
+\]
+
+
+
+###############
+
+
+
+
+
+
+Single-cell genome sequencing was the first molecular layer to be profiled in a high-throughput manner at the single-cell level \cite{???} 
+	
+	
+	Lichter, P., Ledbetter, S. A., Ledbetter, D. H. & Ward, D. C. Fluorescence in situ hybridization with Alu and L1 polymerase chain reaction probes for rapid characterization of human chromosomes in hybrid cell lines. Proc. Natl Acad. Sci. USA 87, 6634–6638 (1990).
+	Troutt, A. B., McHeyzer-Williams, M. G., Pulendran, B. & Nossal, G. J. Ligation-anchored PCR: a simple amplification technique with single-sided specificity. Proc. Natl Acad. Sci. USA 89, 9823–9825 (1992).
+	Telenius, H. et al. Degenerate oligonucleotide-primed PCR: general amplification of target DNA by a single degenerate primer. Genomics 13, 718–725 (1992).
+	Zhang, L. et al. Whole genome amplification from a single cell: implications for genetic analysis. Proc. Natl Acad. Sci. USA 89, 5847–5851 (1992).
+
+
+
+
+
+
+(COPIEd ) or example, it is now possible to use single-cell genomics to identify and assemble the genomes of unculturable microorganisms5, evaluate the roles of genetic mosaicism in normal physiology and disease6, and determine the contributions of intra-tumour genetic heterogeneity in cancer development or treatment response7. 

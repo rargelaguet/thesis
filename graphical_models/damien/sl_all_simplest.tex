@@ -1,0 +1,58 @@
+% model-binomial-probit.tex
+%
+
+% Augmented Binomial Probit regression model
+
+%\beginpgfgraphicnamed{model-binomial-probit}
+
+\input{graphical_models/colours}
+
+\begin{tikzpicture}
+  % Define nodes:
+  % matrix factorisation level
+  \node[obs]   (Y) {$y_{n,d}$};
+  \node[latent, above=of Y, xshift=-1.5cm] (Z) {$z_{n,k}$};
+  \node[latent, above=of Y, xshift=1.5cm] (W) {$w_{k,d}$};
+  \node[latent, xshift=1.5cm] (Tau) {$\tau_{d}$};
+
+  % \node[opacity=0.4,latent, xshift=-1.5cm] (Tau2) {$\tau_{n}$};
+
+  % parents of Z
+  \node[det, above=of Z] (crossZ) {$\times$};
+  \node[latent, above=of crossZ] (Zhat) {$\hat{z}_{n,k}$};
+  \node[latent,  above=of Zhat] (SigmaZ) {$\alpha_k$};
+  \node[latent,  above=of crossZ, xshift=-1.5cm] (SZ) {$s_{n,k}$};
+  \node[latent, above=of SZ] (ThetaZ) {$\theta_{k}$};
+
+  % parents of W
+  \node[det, above=of W] (crossW) {$\times$};
+  \node[latent, above=of crossW] (What) {$\hat{w}_{k,d}$};
+  \node[latent, above=of What] (SigmaW) {$\alpha_k$};
+  \node[latent, above=of crossW, xshift=1.5cm] (SW) {$s_{k,d}$};
+  \node[latent, above=of SW] (ThetaW) {$\theta_{k}$};
+
+  % Connect the nodes
+  \edge {Z,W} {Y}; %
+  \edge {Tau} {Y};
+  \edge {ThetaZ} {SZ};
+  \edge {SigmaZ} {Zhat};
+  \edge {ThetaW} {SW};
+  \edge {SigmaW} {What};
+  % \edge {TauN} {Y}
+
+  \factoredge {SZ} {crossZ} {Z};
+  \factoredge {Zhat} {crossZ} {Z};
+  \factoredge {SW} {crossW} {W};
+  \factoredge {What} {crossW} {W};
+
+
+  % Plates
+  %factors
+  \plate[] {plateK} {(Z)(W)(SW)(What)(ThetaW)(ThetaZ)} {$K$};
+
+  % sample side
+  \plate[] {plateN} {(Y)(Z)(Z)(plateK.south west)(SZ)} {$N$};
+
+  % feature side
+  \plate[] {plateD} {(Y)(W)(Tau)(crossW)(What)(SW)(plateK.south east) (plateN.south east)} {$D$}
+\end{tikzpicture}
