@@ -2093,79 +2093,26 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
+    <bcf:datasource type="file" datatype="bibtex">Chapter1/references.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex">Chapter2/references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Dietz2010-technical-report-graphs</bcf:citekey>
-    <bcf:citekey order="2">Komili2008</bcf:citekey>
-    <bcf:citekey order="2">Stegle2012</bcf:citekey>
-    <bcf:citekey order="2">Leek2007</bcf:citekey>
-    <bcf:citekey order="2">Pournara2007</bcf:citekey>
-    <bcf:citekey order="2">Dai2017</bcf:citekey>
-    <bcf:citekey order="2">Genevieve2018</bcf:citekey>
-    <bcf:citekey order="2">Meng2016</bcf:citekey>
-    <bcf:citekey order="4">Hotelling1933</bcf:citekey>
-    <bcf:citekey order="4">Ringner2008</bcf:citekey>
-    <bcf:citekey order="5">Bishop</bcf:citekey>
-    <bcf:citekey order="6">Bishop</bcf:citekey>
+    <bcf:citekey order="1">Argelaguet2018</bcf:citekey>
+    <bcf:citekey order="2">XX</bcf:citekey>
+    <bcf:citekey order="3">Mackay1996</bcf:citekey>
+    <bcf:citekey order="4">Mitchell1988</bcf:citekey>
+    <bcf:citekey order="5">Titsias2011</bcf:citekey>
+    <bcf:citekey order="6">XX</bcf:citekey>
     <bcf:citekey order="7">XX</bcf:citekey>
-    <bcf:citekey order="8">TippingBishop</bcf:citekey>
-    <bcf:citekey order="9">Rubin1982</bcf:citekey>
-    <bcf:citekey order="9">Bishop</bcf:citekey>
-    <bcf:citekey order="10">Rubin1983</bcf:citekey>
-    <bcf:citekey order="11">TippinBishop</bcf:citekey>
-    <bcf:citekey order="12">ppca</bcf:citekey>
-    <bcf:citekey order="13">Klami2008</bcf:citekey>
-    <bcf:citekey order="13">Virtanen2012</bcf:citekey>
-    <bcf:citekey order="13">Klami2015</bcf:citekey>
-    <bcf:citekey order="13">Bunte2016</bcf:citekey>
-    <bcf:citekey order="13">Khan2014</bcf:citekey>
-    <bcf:citekey order="13">Zhao2016</bcf:citekey>
-    <bcf:citekey order="14">(David J. C. MacKay</bcf:citekey>
-    <bcf:citekey order="14">1994; Neal</bcf:citekey>
-    <bcf:citekey order="14">1995; Wipf and Nagarajan</bcf:citekey>
-    <bcf:citekey order="14">2008</bcf:citekey>
-    <bcf:citekey order="14">BayesianPCA)</bcf:citekey>
-    <bcf:citekey order="15">West2003</bcf:citekey>
-    <bcf:citekey order="15">Stegle2012</bcf:citekey>
-    <bcf:citekey order="15">Gao2013</bcf:citekey>
-    <bcf:citekey order="16">Gao2013</bcf:citekey>
-    <bcf:citekey order="17">Mitchell1988</bcf:citekey>
-    <bcf:citekey order="17">Titsias2011</bcf:citekey>
-    <bcf:citekey order="18">XXX</bcf:citekey>
-    <bcf:citekey order="19">XX</bcf:citekey>
-    <bcf:citekey order="20">xx</bcf:citekey>
-    <bcf:citekey order="21">XX</bcf:citekey>
-    <bcf:citekey order="22">XX</bcf:citekey>
-    <bcf:citekey order="23">X</bcf:citekey>
-    <bcf:citekey order="24">XX</bcf:citekey>
-    <bcf:citekey order="25">Hotteling1936</bcf:citekey>
-    <bcf:citekey order="25">Hardle2007</bcf:citekey>
-    <bcf:citekey order="26">Hotteling1936</bcf:citekey>
-    <bcf:citekey order="26">Hardle2007</bcf:citekey>
-    <bcf:citekey order="27">X</bcf:citekey>
-    <bcf:citekey order="28">McCabe2018</bcf:citekey>
-    <bcf:citekey order="28">Guo2016</bcf:citekey>
-    <bcf:citekey order="29">Tipping1999</bcf:citekey>
-    <bcf:citekey order="30">Bach2005</bcf:citekey>
-    <bcf:citekey order="31">Tipping1999</bcf:citekey>
-    <bcf:citekey order="32">Bach2005</bcf:citekey>
-ekey order="27">Ritchie2015</bcf:citekey>
-    <bcf:citekey order="28">Pilling2018</bcf:citekey>
-    <bcf:citekey order="29">XX</bcf:citekey>
-    <bcf:citekey order="30">Virtanen2012</bcf:citekey>
-    <bcf:citekey order="30">Klami2015</bcf:citekey>
-    <bcf:citekey order="31">Xu2013</bcf:citekey>
-    <bcf:citekey order="32">Hotteling1936</bcf:citekey>
-    <bcf:citekey order="32">Hardle2007</bcf:citekey>
-    <bcf:citekey order="33">Hotteling1936</bcf:citekey>
-    <bcf:citekey order="33">Hardle2007</bcf:citekey>
-    <bcf:citekey order="34">X</bcf:citekey>
-    <bcf:citekey order="35">McCabe2018</bcf:citekey>
-    <bcf:citekey order="35">Guo2016</bcf:citekey>
-    <bcf:citekey order="36">Tipping1999</bcf:citekey>
-    <bcf:citekey order="37">Bach2005</bcf:citekey>
-    <bcf:citekey order="38">Tipping1999</bcf:citekey>
-    <bcf:citekey order="39">Bach2005</bcf:citekey>
+    <bcf:citekey order="8">Hore2016</bcf:citekey>
+    <bcf:citekey order="9">XX</bcf:citekey>
+    <bcf:citekey order="10">Angermuelller2016</bcf:citekey>
+    <bcf:citekey order="11">XX</bcf:citekey>
+    <bcf:citekey order="12">XX</bcf:citekey>
+    <bcf:citekey order="13">Lun2016</bcf:citekey>
+    <bcf:citekey order="14">XX</bcf:citekey>
+    <bcf:citekey order="15">XX</bcf:citekey>
+    <bcf:citekey order="16">XX</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nty/global/" type="entry" sortscheme="nty" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  16 MAR 2019 15:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  16 MAR 2019 20:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**thesis.tex
-(./thesis.tex
+**/Users/ricard/thesis/ricard_thesis/thesis.tex
+(/Users/ricard/thesis/ricard_thesis/thesis.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (./Classes/PhDThesisPSnPDF.cls
@@ -1552,8 +1552,6 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
-File: pgfcorearrows.code.tex 2015/05/14  (rcs-fcorearrows.co
-de.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfarrowsep=\dimen286
 )
@@ -2080,33 +2078,34 @@ File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 \@quotelevel=\count427
 \@quotereset=\count428
 
-(./thesis.aux)
+(./thesis.aux (./Abstract/abstract.aux) (./Chapter2/mofa.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 143.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 143.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 137.
 
- (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 143.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 137.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -2125,7 +2124,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 \makeMPintoPDFobject=\count434
 \everyMPtoPDFconversion=\toks47
 )
-LaTeX Info: Redefining \microtypecontext on input line 143.
+LaTeX Info: Redefining \microtypecontext on input line 137.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2139,7 +2138,7 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 \AtBeginShipoutBox=\box114
-Package hyperref Info: Link coloring ON on input line 143.
+Package hyperref Info: Link coloring ON on input line 137.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -2149,9 +2148,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count435
 )
-LaTeX Info: Redefining \ref on input line 143.
-LaTeX Info: Redefining \pageref on input line 143.
-LaTeX Info: Redefining \nameref on input line 143.
+LaTeX Info: Redefining \ref on input line 137.
+LaTeX Info: Redefining \pageref on input line 137.
+LaTeX Info: Redefining \nameref on input line 137.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write8
@@ -2209,52 +2208,79 @@ Package biblatex Info: Automatic encoding selection.
 \openout7 = `thesis.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'thesis.bbl' not found.
+Package biblatex Info: ... file 'thesis.bbl' found.
+ (./thesis.bbl
 
-No file thesis.bbl.
-Package biblatex Info: Reference section=0 on input line 143.
-Package biblatex Info: Reference segment=0 on input line 143.
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Ritchie2015':
+(biblatex)                - Range field 'pages' in entry 'Ritchie2015' is malfo
+rmed, skipping.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                MacKay1996
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                XX
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                X
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
+Package biblatex Info: Reference section=0 on input line 137.
+Package biblatex Info: Reference segment=0 on input line 137.
 \c@lstlisting=\count436
 \c__siunitx_mathsf_int=\count437
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 14
-3.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 13
+7.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 Package microtype Info: Loading generic settings for font family
 (microtype)             `ztmcm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 14
-3.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 13
+7.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 14
-3.
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 13
+7.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 14
-3.
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 13
+7.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 143.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 137.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 143.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 143.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 143.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -2262,7 +2288,7 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 143.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 137.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
@@ -2277,19 +2303,19 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 \PHD@Title=\box115
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 147.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 141.
 \PHD@crest=\box116
 
-<Figs/University_Crest.pdf, id=7, 59.22125pt x 69.25874pt>
+<Figs/University_Crest.pdf, id=35, 59.22125pt x 69.25874pt>
 File: Figs/University_Crest.pdf Graphic file (type pdf)
 
 <use Figs/University_Crest.pdf>
-Package pdftex.def Info: Figs/University_Crest.pdf used on input line 147.
+Package pdftex.def Info: Figs/University_Crest.pdf used on input line 141.
 (pdftex.def)             Requested size: 93.32361pt x 109.14542pt.
 \PHD@collegecrest=\box117
 \PHD@author=\box118
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 147.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 141.
 \PHD@supervisor=\box119
 \PHD@advisor=\box120
 \PHD@dept=\box121
@@ -2317,111 +2343,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
 
 ]
-\openout2 = `Chapter2/factor_analysis.aux'.
+\openout2 = `Chapter2/mofa.aux'.
 
- (./Chapter2/factor_analysis.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--8
+ (./Chapter2/mofa.tex
 
- []
-
-
-LaTeX Warning: Citation 'Dietz2010-technical-report-graphs' on page 1 undefined
- on input line 9.
+LaTeX Warning: Citation 'Argelaguet2018' on page 1 undefined on input line 6.
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 9.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
 
-Overfull \hbox (6.17361pt too wide) in paragraph at lines 20--21
-[]|[]| 
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
  []
-
-
-LaTeX Warning: Citation 'Komili2008' on page 1 undefined on input line 26.
-
-
-LaTeX Warning: Citation 'Stegle2012' on page 1 undefined on input line 26.
-
-
-LaTeX Warning: Citation 'Leek2007' on page 1 undefined on input line 26.
-
-
-LaTeX Warning: Citation 'Pournara2007' on page 1 undefined on input line 26.
-
-
-LaTeX Warning: Citation 'Dai2017' on page 1 undefined on input line 26.
-
-
-LaTeX Warning: Citation 'Genevieve2018' on page 1 undefined on input line 26.
-
-
-LaTeX Warning: Citation 'Meng2016' on page 1 undefined on input line 26.
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 29.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
 
-Package mathptmx Warning: There are no bold math fonts on input line 30.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
-
- []
+Package mathptmx Warning: There are no bold math fonts on input line 18.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.38 \end{equation}
-                    [1
+l.34 \subsubsection
+                   {Interpretation of the loadings} [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 38--41
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
 
  []
 
 
-LaTeX Warning: Citation 'Hotelling1933' on page 2 undefined on input line 45.
+LaTeX Warning: Citation 'Mackay1996' on page 2 undefined on input line 63.
 
 
-LaTeX Warning: Citation 'Ringner2008' on page 2 undefined on input line 45.
-
-
-LaTeX Warning: Reference `eq:linear_model' on page 1 undefined on input line 46
-.
-
-
-LaTeX Warning: Citation 'Bishop' on page 2 undefined on input line 46.
-
-
-Overfull \hbox (15.21527pt too wide) in paragraph at lines 45--47
-\T1/ptm/m/n/10.95 (-20) Principal Com-po-nent Anal-y-sis (PCA) is the most pop-
-u-lar tech-nique for di-men-sion-al-ity re-duc-tion [[],
- []
-
-<Chapter2/Figs/pca1.pdf, id=43, 1002.74625pt x 267.08885pt>
-File: Chapter2/Figs/pca1.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/pca1.pdf>
-Package pdftex.def Info: Chapter2/Figs/pca1.pdf used on input line 50.
-(pdftex.def)             Requested size: 419.95984pt x 111.85866pt.
-
-
-LaTeX Warning: Reference `eq:pca' on page 1 undefined on input line 66.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--67
+Underfull \hbox (badness 10000) in paragraph at lines 61--72
 
  []
 
@@ -2429,341 +2385,215 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.68 I
-      n its minimum error formulation, the aim is to find an equivalent proj...
-[2 <./Chapter2/Figs/pca1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+l.72 
+      [2]
+Underfull \hbox (badness 10000) in paragraph at lines 77--80
 
  []
 
-
-LaTeX Warning: Citation 'Bishop' on page 3 undefined on input line 74.
-
-
-LaTeX Warning: Citation 'XX' on page 3 undefined on input line 78.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--79
-
- []
-
-
-LaTeX Warning: Reference `fig:pca2' on page 1 undefined on input line 80.
-
-<Chapter2/Figs/pca2.pdf, id=81, 803.0pt x 564.1075pt>
-File: Chapter2/Figs/pca2.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/pca2.pdf>
-Package pdftex.def Info: Chapter2/Figs/pca2.pdf used on input line 85.
-(pdftex.def)             Requested size: 419.95984pt x 295.02466pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
-been already used, duplicate ignored
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 99.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.94 
-      [3 <./Chapter2/Figs/pca2.pdf>]
+l.102 	\item \textbf
+                    {Imputation}: MOFA generates a condensed and denoised lo...
+[3] <Chapter2/Figs/MOFA.pdf, id=96, 1471.4975pt x 748.7975pt>
+File: Chapter2/Figs/MOFA.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `eq:linear_model' on page 1 undefined on input line 96
+<use Chapter2/Figs/MOFA.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA.pdf used on input line 110.
+(pdftex.def)             Requested size: 466.62521pt x 237.4492pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 111.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 111.
+ (./graphical_models/mofa.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+)pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.122 
+       [4 <./Chapter2/Figs/MOFA.pdf>]
+<Chapter2/Figs/elbo_convergence.pdf, id=351, 243.83195pt x 224.32709pt>
+File: Chapter2/Figs/elbo_convergence.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/elbo_convergence.pdf>
+Package pdftex.def Info: Chapter2/Figs/elbo_convergence.pdf used on input line 
+133.
+(pdftex.def)             Requested size: 233.3126pt x 214.64983pt.
+ [5]
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+
+ []
+
+
+LaTeX Warning: Citation 'Hore2016' on page 6 undefined on input line 143.
+
+<Chapter2/Figs/MOFA_robustness.pdf, id=359, 846.16125pt x 323.2075pt>
+File: Chapter2/Figs/MOFA_robustness.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_robustness.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_robustness.pdf used on input line 1
+48.
+(pdftex.def)             Requested size: 466.62521pt x 178.23318pt.
+
+
+LaTeX Warning: Reference `fig:mofa_nfactors' on page 1 undefined on input line 
+164.
+
+[6 <./Chapter2/Figs/elbo_convergence.pdf> <./Chapter2/Figs/MOFA_robustness.pdf>
+] <Chapter2/Figs/MOFA_nfactors.pdf, id=422, 375.4025pt x 311.1625pt>
+File: Chapter2/Figs/MOFA_nfactors.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_nfactors.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_nfactors.pdf used on input line 168
 .
+(pdftex.def)             Requested size: 233.3126pt x 193.3888pt.
 
 
-LaTeX Warning: Citation 'TippingBishop' on page 4 undefined on input line 96.
-
-
-LaTeX Warning: Reference `fig:pPCA' on page 1 undefined on input line 100.
-
-(./graphical_models/pPCA.tex
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-)
-
-LaTeX Warning: Citation 'Rubin1982' on page 4 undefined on input line 119.
-
-
-LaTeX Warning: Citation 'Bishop' on page 4 undefined on input line 119.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-
- []
-
-
-LaTeX Warning: Citation 'Rubin1983' on page 4 undefined on input line 121.
-
-
-LaTeX Warning: Citation 'TippinBishop' on page 4 undefined on input line 121.
-
-
-LaTeX Warning: Citation 'ppca' on page 4 undefined on input line 122.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.123 
-       [4]
-
-LaTeX Warning: Reference `eq:ppca_lik' on page 1 undefined on input line 139.
-
-(./graphical_models/bayesianFA.tex
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-) [5]
-
-LaTeX Warning: Citation 'Klami2008' on page 6 undefined on input line 151.
-
-
-LaTeX Warning: Citation 'Virtanen2012' on page 6 undefined on input line 151.
-
-
-LaTeX Warning: Citation 'Klami2015' on page 6 undefined on input line 151.
-
-
-LaTeX Warning: Citation 'Bunte2016' on page 6 undefined on input line 151.
-
-
-LaTeX Warning: Citation 'Khan2014' on page 6 undefined on input line 151.
-
-
-LaTeX Warning: Citation 'Zhao2016' on page 6 undefined on input line 151.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-
- []
-
-
-LaTeX Warning: Citation '(David J. C. MacKay' on page 6 undefined on input line
- 154.
-
-
-LaTeX Warning: Citation '1994; Neal' on page 6 undefined on input line 154.
-
-
-LaTeX Warning: Citation '1995; Wipf and Nagarajan' on page 6 undefined on input
- line 154.
-
-
-LaTeX Warning: Citation '2008' on page 6 undefined on input line 154.
-
-
-LaTeX Warning: Citation 'BayesianPCA)' on page 6 undefined on input line 154.
-
-
-LaTeX Warning: Reference `fig:ard' on page 1 undefined on input line 160.
-
-
-LaTeX Warning: Reference `fig:hinton' on page 1 undefined on input line 161.
-
-<Chapter2/Figs/ard.pdf, id=132, 630.355pt x 399.4925pt>
-File: Chapter2/Figs/ard.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/ard.pdf>
-Package pdftex.def Info: Chapter2/Figs/ard.pdf used on input line 164.
-(pdftex.def)             Requested size: 373.30159pt x 236.58241pt.
- [6]
-<Chapter2/Figs/hinton.pdf, id=139, 505.89pt x 216.81pt>
-File: Chapter2/Figs/hinton.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/hinton.pdf>
-Package pdftex.def Info: Chapter2/Figs/hinton.pdf used on input line 170.
-(pdftex.def)             Requested size: 373.30159pt x 159.99026pt.
-
-
-LaTeX Warning: Citation 'West2003' on page 7 undefined on input line 177.
-
-
-LaTeX Warning: Citation 'Stegle2012' on page 7 undefined on input line 177.
-
-
-LaTeX Warning: Citation 'Gao2013' on page 7 undefined on input line 177.
-
-
-LaTeX Warning: Citation 'Gao2013' on page 7 undefined on input line 178.
-
-
-LaTeX Warning: Reference `eq:ard' on page 1 undefined on input line 179.
+LaTeX Warning: Citation 'Angermuelller2016' on page 7 undefined on input line 1
+77.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 177--180
 
  []
 
-[7 <./Chapter2/Figs/ard.pdf> <./Chapter2/Figs/hinton.pdf>]
 
-LaTeX Warning: Citation 'Mitchell1988' on page 8 undefined on input line 181.
+LaTeX Warning: Citation 'Lun2016' on page 7 undefined on input line 181.
 
 
-LaTeX Warning: Citation 'Titsias2011' on page 8 undefined on input line 181.
+Underfull \hbox (badness 10000) in paragraph at lines 181--184
 
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 183.
+ []
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+[7 <./Chapter2/Figs/MOFA_nfactors.pdf>]
+<Chapter2/Figs/MOFA_scMT.pdf, id=450, 697.60625pt x 569.12625pt>
+File: Chapter2/Figs/MOFA_scMT.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_scMT.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_scMT.pdf used on input line 198.
+(pdftex.def)             Requested size: 466.62521pt x 380.68735pt.
+) [8 <./Chapter2/Figs/MOFA_scMT.pdf>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 209.
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-(./graphical_models/bayesian_sparseFA.tex
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-)
-
-LaTeX Warning: Reference `eq:ard' on page 1 undefined on input line 192.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [9
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
- []
+] [10]
 
-
-LaTeX Warning: Citation 'XXX' on page 8 undefined on input line 202.
-
-
-LaTeX Warning: Citation 'XX' on page 8 undefined on input line 202.
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'Zeng2018' on input line 209.
 
 
-LaTeX Warning: Citation 'xx' on page 8 undefined on input line 202.
+Package caption Warning: Unused \captionsetup[sub] on input line 108.
+See the caption package documentation for explanation.
+
+[11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
+ (./thesis.aux (./Abstract/abstract.aux) (./Chapter2/mofa.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
 
 
-LaTeX Warning: Citation 'XX' on page 8 undefined on input line 203.
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: 65A370DF4E8588C94A9AFCDAF6038B8B;2106
+(rerunfilecheck)             After:  B43C2B696740B3D9AEE367BDE1356931;2287.
+
+LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Citation 'XX' on page 8 undefined on input line 203.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
-LaTeX Warning: Citation 'X' on page 8 undefined on input line 203.
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                thesis
+(biblatex)                and rerun LaTeX afterwards.
 
+Package logreq Info: Writing requests to 'thesis.run.xml'.
+\openout1 = `thesis.run.xml'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--204
-
- []
-
-[8]
-
-LaTeX Warning: Citation 'XX' on page 9 undefined on input line 205.
-
-
-LaTeX Warning: Citation 'Hotteling1936' on page 9 undefined on input line 210.
-
-
-LaTeX Warning: Citation 'Hardle2007' on page 9 undefined on input line 210.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--212
-
- []
-
-
-LaTeX Warning: Citation 'Hotteling1936' on page 9 undefined on input line 216.
-
-
-LaTeX Warning: Citation 'Hardle2007' on page 9 undefined on input line 216.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--217
-
- []
-
-
-LaTeX Warning: Citation 'X' on page 9 undefined on input line 218.
-
-
-LaTeX Warning: Citation 'McCabe2018' on page 9 undefined on input line 218.
-
-
-LaTeX Warning: Citation 'Guo2016' on page 9 undefined on input line 218.
-
-
-LaTeX Warning: Citation 'Tipping1999' on page 9 undefined on input line 223.
-
-
-LaTeX Warning: Citation 'Bach2005' on page 9 undefined on input line 223.
-
-
-LaTeX Warning: Citation 'Tipping1999' on page 9 undefined on input line 230.
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
-
- []
-
-
-LaTeX Warning: Citation 'Bach2005' on page 10 undefined on input line 237.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 242--243
-
- []
-
-(./graphical_models/bayesianCCA.tex
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-)) [10]
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.207 \bibliography
-                   {Chapter1/references}
-? 
-! Emergency stop.
- ...                                              
-                                                  
-l.207 \bibliography
-                   {Chapter1/references}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
- 
+ ) 
 Here is how much of TeX's memory you used:
- 46750 strings out of 493014
- 896595 string characters out of 6133351
- 1304472 words of memory out of 5000000
- 49321 multiletter control sequences out of 15000+600000
- 89091 words of font info for 269 fonts, out of 8000000 for 9000
+ 47070 strings out of 493014
+ 903429 string characters out of 6133351
+ 1318712 words of memory out of 5000000
+ 49518 multiletter control sequences out of 15000+600000
+ 104064 words of font info for 321 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,15n,92p,10477b,852s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
- occurred, no output PDF file produced!
+ 57i,16n,92p,10477b,1630s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.caption.9} has been referenced but does no
+t exist, replaced by a fixed one
+
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
+usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/ur
+w/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/ut
+mr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (15 pages, 6266530 bytes).
+PDF statistics:
+ 753 PDF objects out of 1000 (max. 8388607)
+ 461 compressed objects within 5 object streams
+ 83 named destinations out of 1000 (max. 500000)
+ 60515 words of extra memory for PDF output out of 61914 (max. 10000000)
+

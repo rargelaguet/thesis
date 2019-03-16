@@ -1,0 +1,184 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {0.1}Multi-Omics Factor Analysis: a framework for unsupervised integration of multi-omics data sets}{1}{section.0.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.1}Model description}{1}{subsection.0.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{Interpretation of the factors}{1}{section*.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Interpretation of the loadings}{2}{section*.3}}
+\@writefile{toc}{\contentsline {subsubsection}{Interpretation of the noise}{2}{section*.4}}
+\@writefile{toc}{\contentsline {subsubsection}{Missing values}{2}{section*.5}}
+\@writefile{toc}{\contentsline {subsubsection}{Prior distributions for the factors and the loadings}{2}{section*.6}}
+\newlabel{likelihood}{{7}{3}{Prior distributions for the factors and the loadings}{equation.0.1.7}{}}
+\newlabel{likelihood@cref}{{[equation][7][0]7}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.2}Downstream analysis}{3}{subsection.0.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces MOFA overview. The model takes $M$ data matrices as input (${\bf  Y}^1, \cdots  , {\bf  Y}^M$), one or more from each data modality, with co-occurrent samples but features that are not necessarily related and can differ in numbers. MOFA decomposes these matrices into a matrix of factors (${\bf  Z}$) and $M$ weight matrices, one for each data modality (${\bf  W}^1, \cdots  , {\bf  W}^M$). White cells in the weight matrices correspond to zeros, i.e. inactive features, whereas the cross symbol in the data matrices denotes missing values. The fitted MOFA model can be queried for different downstream analyses, including a variance decomposition to assess the proportion of variance explained by each factor in each data modality.\relax }}{4}{figure.caption.7}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:MOFA}{{1}{4}{MOFA overview. The model takes $M$ data matrices as input ($\bfY ^1, \cdots , \bfY ^M$), one or more from each data modality, with co-occurrent samples but features that are not necessarily related and can differ in numbers. MOFA decomposes these matrices into a matrix of factors ($\bfZ $) and $M$ weight matrices, one for each data modality ($\bfW ^1, \cdots , \bfW ^M$). White cells in the weight matrices correspond to zeros, i.e. inactive features, whereas the cross symbol in the data matrices denotes missing values. The fitted MOFA model can be queried for different downstream analyses, including a variance decomposition to assess the proportion of variance explained by each factor in each data modality.\relax }{figure.caption.7}{}}
+\newlabel{fig:MOFA@cref}{{[figure][1][0]1}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Graphical model for MOFA. The white circles represent hidden variables that are infered by the model, whereasa the grey circles represent the observed variables. There are a total of four plates, each one representing a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in view $m$\relax }}{5}{figure.caption.8}}
+\newlabel{fig:MOFA_graphical_model}{{2}{5}{Graphical model for MOFA. The white circles represent hidden variables that are infered by the model, whereasa the grey circles represent the observed variables. There are a total of four plates, each one representing a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in view $m$\relax }{figure.caption.8}{}}
+\newlabel{fig:MOFA_graphical_model@cref}{{[figure][2][0]2}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{Inference}{5}{section*.9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.3}Monitoring convergence}{5}{subsection.0.1.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces XX\relax }}{6}{figure.caption.10}}
+\newlabel{fig:elbo_convergence}{{3}{6}{XX\relax }{figure.caption.10}{}}
+\newlabel{fig:elbo_convergence@cref}{{[figure][3][0]3}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.4}Model selection and consistency across random initilizations}{6}{subsection.0.1.4}}
+\newlabel{section:robustness}{{0.1.4}{6}{Model selection and consistency across random initilizations}{subsection.0.1.4}{}}
+\newlabel{section:robustness@cref}{{[subsection][4][0,1]0.1.4}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces XX... A block-diagonal matrix ensures good consistency across random initialisations\relax }}{6}{figure.caption.11}}
+\newlabel{fig:MOFA_robustness}{{4}{6}{XX... A block-diagonal matrix ensures good consistency across random initialisations\relax }{figure.caption.11}{}}
+\newlabel{fig:MOFA_robustness@cref}{{[figure][4][0]4}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.5}Learning the number of factors}{7}{subsection.0.1.5}}
+\newlabel{section:number_factors}{{0.1.5}{7}{Learning the number of factors}{subsection.0.1.5}{}}
+\newlabel{section:number_factors@cref}{{[subsection][5][0,1]0.1.5}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces XX\relax }}{7}{figure.caption.12}}
+\newlabel{fig:MOFA_nfactors}{{5}{7}{XX\relax }{figure.caption.12}{}}
+\newlabel{fig:MOFA_nfactors@cref}{{[figure][5][0]5}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.6}Application to single-cell multi-omics}{7}{subsection.0.1.6}}
+\newlabel{section:mofa_scmt}{{0.1.6}{7}{Application to single-cell multi-omics}{subsection.0.1.6}{}}
+\newlabel{section:mofa_scmt@cref}{{[subsection][6][0,1]0.1.6}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces XX\relax }}{8}{figure.caption.13}}
+\newlabel{fig:MOFA_scMT}{{6}{8}{XX\relax }{figure.caption.13}{}}
+\newlabel{fig:MOFA_scMT@cref}{{[figure][6][0]6}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.7}Open perspectives}{8}{subsection.0.1.7}}
+\@setckpt{Chapter2/mofa}{
+\setcounter{page}{9}
+\setcounter{equation}{7}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{0}
+\setcounter{section}{1}
+\setcounter{subsection}{7}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{6}
+\setcounter{table}{0}
+\setcounter{@pps}{0}
+\setcounter{@ppsavesec}{0}
+\setcounter{@ppsaveapp}{0}
+\setcounter{parentequation}{0}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{8}
+\setcounter{float@type}{16}
+\setcounter{algorithm}{0}
+\setcounter{ContinuedFloat}{0}
+\setcounter{subfigure}{0}
+\setcounter{subtable}{0}
+\setcounter{tabx@nest}{0}
+\setcounter{listtotal}{0}
+\setcounter{listcount}{0}
+\setcounter{liststart}{0}
+\setcounter{liststop}{0}
+\setcounter{citecount}{0}
+\setcounter{citetotal}{0}
+\setcounter{multicitecount}{0}
+\setcounter{multicitetotal}{0}
+\setcounter{instcount}{2}
+\setcounter{maxnames}{3}
+\setcounter{minnames}{1}
+\setcounter{maxitems}{3}
+\setcounter{minitems}{1}
+\setcounter{citecounter}{0}
+\setcounter{savedcitecounter}{0}
+\setcounter{uniquelist}{0}
+\setcounter{uniquename}{0}
+\setcounter{refsection}{0}
+\setcounter{refsegment}{0}
+\setcounter{maxextratitle}{0}
+\setcounter{maxextratitleyear}{0}
+\setcounter{maxextrayear}{0}
+\setcounter{maxextraalpha}{0}
+\setcounter{abbrvpenalty}{50}
+\setcounter{highnamepenalty}{50}
+\setcounter{lownamepenalty}{25}
+\setcounter{maxparens}{3}
+\setcounter{parenlevel}{0}
+\setcounter{mincomprange}{10}
+\setcounter{maxcomprange}{100000}
+\setcounter{mincompwidth}{1}
+\setcounter{afterword}{0}
+\setcounter{savedafterword}{0}
+\setcounter{annotator}{0}
+\setcounter{savedannotator}{0}
+\setcounter{author}{0}
+\setcounter{savedauthor}{0}
+\setcounter{bookauthor}{0}
+\setcounter{savedbookauthor}{0}
+\setcounter{commentator}{0}
+\setcounter{savedcommentator}{0}
+\setcounter{editor}{0}
+\setcounter{savededitor}{0}
+\setcounter{editora}{0}
+\setcounter{savededitora}{0}
+\setcounter{editorb}{0}
+\setcounter{savededitorb}{0}
+\setcounter{editorc}{0}
+\setcounter{savededitorc}{0}
+\setcounter{foreword}{0}
+\setcounter{savedforeword}{0}
+\setcounter{holder}{0}
+\setcounter{savedholder}{0}
+\setcounter{introduction}{0}
+\setcounter{savedintroduction}{0}
+\setcounter{namea}{0}
+\setcounter{savednamea}{0}
+\setcounter{nameb}{0}
+\setcounter{savednameb}{0}
+\setcounter{namec}{0}
+\setcounter{savednamec}{0}
+\setcounter{translator}{0}
+\setcounter{savedtranslator}{0}
+\setcounter{shortauthor}{0}
+\setcounter{savedshortauthor}{0}
+\setcounter{shorteditor}{0}
+\setcounter{savedshorteditor}{0}
+\setcounter{labelname}{0}
+\setcounter{savedlabelname}{0}
+\setcounter{institution}{0}
+\setcounter{savedinstitution}{0}
+\setcounter{lista}{0}
+\setcounter{savedlista}{0}
+\setcounter{listb}{0}
+\setcounter{savedlistb}{0}
+\setcounter{listc}{0}
+\setcounter{savedlistc}{0}
+\setcounter{listd}{0}
+\setcounter{savedlistd}{0}
+\setcounter{liste}{0}
+\setcounter{savedliste}{0}
+\setcounter{listf}{0}
+\setcounter{savedlistf}{0}
+\setcounter{location}{0}
+\setcounter{savedlocation}{0}
+\setcounter{organization}{0}
+\setcounter{savedorganization}{0}
+\setcounter{origlocation}{0}
+\setcounter{savedoriglocation}{0}
+\setcounter{origpublisher}{0}
+\setcounter{savedorigpublisher}{0}
+\setcounter{publisher}{0}
+\setcounter{savedpublisher}{0}
+\setcounter{language}{0}
+\setcounter{savedlanguage}{0}
+\setcounter{pageref}{0}
+\setcounter{savedpageref}{0}
+\setcounter{textcitecount}{0}
+\setcounter{textcitetotal}{0}
+\setcounter{textcitemaxnames}{0}
+\setcounter{biburlnumpenalty}{0}
+\setcounter{biburlucpenalty}{0}
+\setcounter{biburllcpenalty}{0}
+\setcounter{smartand}{1}
+\setcounter{bbx:relatedcount}{0}
+\setcounter{bbx:relatedtotal}{0}
+\setcounter{lstnumber}{1}
+\setcounter{section@level}{2}
+\setcounter{lstlisting}{0}
+}
