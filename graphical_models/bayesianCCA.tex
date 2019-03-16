@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+
+% Define nodes
+\node[obs, xshift=-1.5cm] (Y1) {$y^{1}_{n,d}$};
+\node[obs, xshift=+1.5cm] (Y2) {$y^{2}_{n,d}$};
+
+\node[latent, below=of Y1, xshift=+1.5cm] (Z) {$z_{n,k}$};
+
+\node[latent, below=of Y1] (W1) {$w^{1}_{d,k}$};
+\node[latent, below=of Y2] (W2) {$w^{2}_{d,k}$};
+
+\node[latent, below=of Y1, xshift=-1cm, yshift=0.75cm] (Tau1) {$\tau^{1}$};
+\node[latent, below=of Y2, xshift=+1cm, yshift=0.75cm] (Tau2) {$\tau^{2}$};
+
+% Connect the nodes
+\edge {Z} {Y1};
+\edge {Z} {Y2};
+\edge {W1} {Y1};
+\edge {W2} {Y2};
+\edge {Tau1} {Y1};
+\edge {Tau2} {Y2};
+% \edge {Z,W, Tau} {Y};
+
+% Plates
+\plate[] {plateK} {(Z)(W1)(W2)} {$K$};
+\plate[] {plateN} {(Y1)(Y2)(Z)(plateK.south)} {$N$};
+
+% \plate[] {plateD} {(Y)(W)(plateK.north east)(plateN.south east)} {$D$};
+
+\end{tikzpicture}

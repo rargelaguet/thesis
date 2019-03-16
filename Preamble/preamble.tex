@@ -12,42 +12,21 @@
 
 % Add spaces between paragraphs
 %\setlength{\parskip}{0.5em}
+
 % Ragged bottom avoids extra whitespaces between paragraphs
 \raggedbottom
+
 % To remove the excess top spacing for enumeration, list and description
 %\usepackage{enumitem}
 %\setlist[enumerate,itemize,description]{topsep=0em}
 
-% *****************************************************************************
-% ******************* Fonts (like different typewriter fonts etc.)*************
 
-% Add `customfont' in the document class option to use this section
-
-\ifsetCustomFont
-  % Set your custom font here and use `customfont' in options. Leave empty to
-  % load computer modern font (default LaTeX font).
-  %\RequirePackage{helvet}
-
-  % For use with XeLaTeX
-  %  \setmainfont[
-  %    Path              = ./libertine/opentype/,
-  %    Extension         = .otf,
-  %    UprightFont = LinLibertine_R,
-  %    BoldFont = LinLibertine_RZ, % Linux Libertine O Regular Semibold
-  %    ItalicFont = LinLibertine_RI,
-  %    BoldItalicFont = LinLibertine_RZI, % Linux Libertine O Regular Semibold Italic
-  %  ]
-  %  {libertine}
-  %  % load font from system font
-  %  \newfontfamily\libertinesystemfont{Linux Libertine O}
-\fi
-
-% *****************************************************************************
 % **************************** Custom Packages ********************************
 
 % ************************* Algorithms and Pseudocode **************************
-
+\usepackage{algorithm}
 %\usepackage{algpseudocode}
+%\usepackage[noend]{algpseudocode}
 
 
 % ********************Captions and Hyperreferencing / URL **********************
@@ -108,24 +87,26 @@
 %\usepackage[perpage]{footmisc} %Range of footnote options
 
 
-% *****************************************************************************
+% *************************** Graphical models ********************
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{bayesnet}
+
 % *************************** Bibliography  and References ********************
 
-%\usepackage{cleveref} %Referencing without need to explicitly state fig /table
+% References
+\usepackage{hyperref}  % Hyperlink in references
+\usepackage[nameinlink]{cleveref}  % Clever references
 
-% Add `custombib' in the document class option to use this section
-\ifuseCustomBib
-   \RequirePackage[]{natbib} % CustomBib
+% Bibliography
+% \RequirePackage[backend=biber, style=numeric-comp, citestyle=numeric, sorting=nty, natbib=true]{biblatex}
+\RequirePackage[hyperref=true, url=false, backref=false, backend=biber, style=numeric,firstinits=true]{biblatex}
 
-% If you would like to use biblatex for your reference management, as opposed to the default `natbibpackage` pass the option `custombib` in the document class. Comment out the previous line to make sure you don't load the natbib package. Uncomment the following lines and specify the location of references.bib file
-
-%\RequirePackage[backend=biber, style=numeric-comp, citestyle=numeric, sorting=nty, natbib=true]{biblatex}
-%\bibliography{References/references} %Location of references.bib only for biblatex
-
-\fi
+\bibliography{Chapter1/references,Chapter2/references}
 
 % changes the default name `Bibliography` -> `References'
-\renewcommand{\bibname}{References}
+% \renewcommand{\bibname}{References}
 
 
 % ******************************************************************************
@@ -192,6 +173,5 @@
 
 % Example todo: \mynote{Hey! I have a note}
 
-% *****************************************************************************
-% ******************* Better enumeration my MB*************
+% ******************* Better enumeration *************
 \usepackage{enumitem}

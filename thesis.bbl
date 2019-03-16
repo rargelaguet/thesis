@@ -1,0 +1,1493 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{Bach2005}{report}{}
+      \name{author}{2}{}{%
+        {{hash=f45864dae4ae3bd0fc7c2ff3e2ea76b3}{%
+           family={Bach},
+           family_i={B\bibinitperiod},
+           given={Francis\bibnamedelima R.},
+           given_i={F\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=f70df67fe1d13567b704ad143006af68}{%
+           family={Jordan},
+           family_i={J\bibinitperiod},
+           given={Michael\bibnamedelima I.},
+           given_i={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{b8db4036a180a2a9fe87bca06c274edd}
+      \strng{fullhash}{b8db4036a180a2a9fe87bca06c274edd}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A probabilistic interpretation of canonical correlation analysis}
+      \field{type}{techreport}
+      \field{year}{2005}
+    \endentry
+    \entry{Bishop1999b}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=f092f589860326a712a3322c4b6cc6b7}{%
+           family={Bishop},
+           family_i={B\bibinitperiod},
+           given={Christopher},
+           given_i={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEE}%
+      }
+      \strng{namehash}{f092f589860326a712a3322c4b6cc6b7}
+      \strng{fullhash}{f092f589860326a712a3322c4b6cc6b7}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{One of the central issues in the use of principal component analysis (PCA) for data modelling is that of choosing the appropriate number of retained components. This problem was recently addressed through the formulation of a Bayesian treatment of PCA (Bishop, 1998) in terms of a probabilistic latent variable model. A central feature of this approach is that the effective dimensionality of the latent space (equivalent to the number of retained principal components) is determined automatically as part of the Bayesian inference procedure. In common with most non-trivial Bayesian models, however, the required marginalizations are analytically intractable, and so an approximation scheme based on a local Gaussian representation of the posterior distribution was employed. In this paper we develop an alternative, variational formulation of Bayesian PCA, based on a factorial representation of the posterior distribution. This approach is computationally efficient, and unlike other approximation schemes, it maximizes a rigourous lower bound on the marginal log probability of the observed data.}
+      \field{booktitle}{Proceedings Ninth International Conference on Artificial Neural Networks, ICANN'99}
+      \field{edition}{Proceedings Ninth International Conference on Artificial Neural Networks, ICANN'99}
+      \field{month}{01}
+      \field{title}{Variational Principal Components}
+      \field{volume}{1}
+      \field{year}{1999}
+      \field{pages}{509\bibrangedash 514}
+      \range{pages}{6}
+      \verb{url}
+      \verb https://www.microsoft.com/en-us/research/publication/variational-principal-components/
+      \endverb
+    \endentry
+    \entry{Bishop1999a}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=53e2ec6cc7f2b8080b7b3a758d5607fe}{%
+           family={Bishop},
+           family_i={B\bibinitperiod},
+           given={Christopher\bibnamedelima M.},
+           given_i={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{53e2ec6cc7f2b8080b7b3a758d5607fe}
+      \strng{fullhash}{53e2ec6cc7f2b8080b7b3a758d5607fe}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 1998 Conference on Advances in Neural Information Processing Systems II}
+      \field{isbn}{0-262-11245-0}
+      \field{title}{Bayesian PCA}
+      \field{year}{1999}
+      \field{pages}{382\bibrangedash 388}
+      \range{pages}{7}
+      \verb{url}
+      \verb http://dl.acm.org/citation.cfm?id=340534.340674
+      \endverb
+    \endentry
+    \entry{Bishop}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7952b575a987ace852cfb8965a4da182}{%
+           family={Bishop},
+           family_i={B\bibinitperiod},
+           given={Christopher\bibnamedelima M},
+           given_i={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{7952b575a987ace852cfb8965a4da182}
+      \strng{fullhash}{7952b575a987ace852cfb8965a4da182}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Machine Learning}
+      \field{title}{Pattern recognition}
+      \field{volume}{128}
+      \field{year}{2006}
+      \field{pages}{1\bibrangedash 58}
+      \range{pages}{58}
+    \endentry
+    \entry{Bunte2016}{article}{}
+      \name{author}{4}{}{%
+        {{hash=9e9914fbf887e4c6fa1808a042da78a8}{%
+           family={Bunte},
+           family_i={B\bibinitperiod},
+           given={Kerstin},
+           given_i={K\bibinitperiod}}}%
+        {{hash=977acb353a0cbb6c8497dc3e82b879f5}{%
+           family={Leppäaho},
+           family_i={L\bibinitperiod},
+           given={Eemeli},
+           given_i={E\bibinitperiod}}}%
+        {{hash=3c604279cdb9acc99077821872f0e796}{%
+           family={Saarinen},
+           family_i={S\bibinitperiod},
+           given={Inka},
+           given_i={I\bibinitperiod}}}%
+        {{hash=a4e041fb1be6fc5ec0f43802c95087d2}{%
+           family={Kaski},
+           family_i={K\bibinitperiod},
+           given={Samuel},
+           given_i={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford Univ Press}%
+      }
+      \strng{namehash}{71d353a27e5b4a006d9d9b96262106f3}
+      \strng{fullhash}{5bb5a24d8d4c6b248058c41fffb4ec70}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioinformatics}
+      \field{number}{16}
+      \field{title}{Sparse group factor analysis for biclustering of multiple data sources}
+      \field{volume}{32}
+      \field{year}{2016}
+      \field{pages}{2457\bibrangedash 2463}
+      \range{pages}{7}
+    \endentry
+    \entry{Dietz2010-technical-report-graphs}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=db179beaf4f961c32a3d25b809a8209d}{%
+           family={Dietz},
+           family_i={D\bibinitperiod},
+           given={Laura},
+           given_i={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{db179beaf4f961c32a3d25b809a8209d}
+      \strng{fullhash}{db179beaf4f961c32a3d25b809a8209d}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Technical Report}
+      \field{title}{Directed Factor Graph Notation for Generative Models}
+      \field{year}{2010}
+    \endentry
+    \entry{Gao2013}{article}{}
+      \name{author}{3}{}{%
+        {{hash=73b4a0255c7165aa3b25a3359ada9481}{%
+           family={{Gao}},
+           family_i={G\bibinitperiod},
+           given={Chuan},
+           given_i={C\bibinitperiod}}}%
+        {{hash=76b4ca18a0a06bd69ec61ff26f4ba655}{%
+           family={{Brown}},
+           family_i={B\bibinitperiod},
+           given={Christopher\bibnamedelima D},
+           given_i={C\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=e9fecf8e88aa803b805ad8f3eaa68271}{%
+           family={{Engelhardt}},
+           family_i={E\bibinitperiod},
+           given={Barbara\bibnamedelima E},
+           given_i={B\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{7a49f63b97114c54f76dee777c202b9b}
+      \strng{fullhash}{7a49f63b97114c54f76dee777c202b9b}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{arXiv:1310.4792}
+      \field{eprintclass}{stat.AP}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv e-prints}
+      \field{title}{{A latent factor model with a mixture of sparse and dense factors to model gene expression data with confounding effects}}
+      \field{year}{2013}
+      \field{pages}{arXiv:1310.4792}
+      \range{pages}{-1}
+      \verb{eprint}
+      \verb 1310.4792
+      \endverb
+      \keyw{Statistics - Applications,Quantitative Biology - Genomics}
+    \endentry
+    \entry{Guo2016}{article}{}
+      \name{author}{4}{}{%
+        {{hash=51a895e094749a419e3a18059886bded}{%
+           family={Guo},
+           family_i={G\bibinitperiod},
+           given={Yiwen},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=a2ccf02e2bb1382e89cf7a869520d060}{%
+           family={Ding},
+           family_i={D\bibinitperiod},
+           given={Xiaoqing},
+           given_i={X\bibinitperiod}}}%
+        {{hash=d18a71e5e893bd777cc9bcc038093788}{%
+           family={Liu},
+           family_i={L\bibinitperiod},
+           given={Changsong},
+           given_i={C\bibinitperiod}}}%
+        {{hash=830431602b0a4c2620a94600c6655b07}{%
+           family={Xue},
+           family_i={X\bibinitperiod},
+           given={Jing-Hao},
+           given_i={J\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Piscataway, NJ, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Press}%
+      }
+      \strng{namehash}{c3d2c5eb4a04dd26d9e95e53e4ce9cb4}
+      \strng{fullhash}{572cfc0edc67a79ee741cc5244433109}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1057-7149}
+      \field{journaltitle}{Trans. Img. Proc.}
+      \field{month}{06}
+      \field{number}{6}
+      \field{title}{Sufficient Canonical Correlation Analysis}
+      \field{volume}{25}
+      \field{year}{2016}
+      \field{pages}{2610\bibrangedash 2619}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/TIP.2016.2551374
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1109/TIP.2016.2551374
+      \endverb
+    \endentry
+    \entry{Hardle2007}{book}{}
+      \name{author}{2}{}{%
+        {{hash=b2600d6d8d1d3f91c5311cf2a06eedcb}{%
+           family={Hardle},
+           family_i={H\bibinitperiod},
+           given={W},
+           given_i={W\bibinitperiod}}}%
+        {{hash=364b5320ace89fd1c72e35ed87f249bb}{%
+           family={Simar},
+           family_i={S\bibinitperiod},
+           given={L},
+           given_i={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{e413c7c41ebab9b22b42b73b71db7999}
+      \strng{fullhash}{e413c7c41ebab9b22b42b73b71db7999}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-540-72243-4}
+      \field{title}{Applied Multivariate Statistical Analysis}
+      \field{year}{2007}
+      \field{pages}{321\bibrangedash 30}
+      \range{pages}{11}
+    \endentry
+    \entry{Hasin2017}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f686602d7dfd6a7f7e3b699722883219}{%
+           family={Hasin},
+           family_i={H\bibinitperiod},
+           given={Yehudit},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=36df7c5a7a1215939cfb32d7bf56845c}{%
+           family={Seldin},
+           family_i={S\bibinitperiod},
+           given={Marcus},
+           given_i={M\bibinitperiod}}}%
+        {{hash=1bb901dec57c88389105d8deb4ea5823}{%
+           family={Lusis},
+           family_i={L\bibinitperiod},
+           given={Aldons},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{335e04a802a4531a83899e36970fd79d}
+      \strng{fullhash}{335e04a802a4531a83899e36970fd79d}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{High-throughput technologies have revolutionized medical research. The advent of genotyping arrays enabled large-scale genome-wide association studies and methods for examining global transcript levels, which gave rise to the field of ``integrative genetics''. Other omics technologies, such as proteomics and metabolomics, are now often incorporated into the everyday methodology of biological researchers. In this review, we provide an overview of such omics technologies and focus on methods for their integration across multiple omics layers. As compared to studies of a single omics type, multi-omics offers the opportunity to understand the flow of information that underlies disease.}
+      \field{isbn}{1474-760X}
+      \field{journaltitle}{Genome Biology}
+      \field{number}{1}
+      \field{title}{Multi-omics approaches to disease}
+      \field{volume}{18}
+      \field{year}{2017}
+      \field{pages}{83}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/s13059-017-1215-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/s13059-017-1215-1
+      \endverb
+    \endentry
+    \entry{Hotelling1933}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1046d3b388fdd272498b8f5e114e0fd1}{%
+           family={Hotelling},
+           family_i={H\bibinitperiod},
+           given={H.},
+           given_i={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{1046d3b388fdd272498b8f5e114e0fd1}
+      \strng{fullhash}{1046d3b388fdd272498b8f5e114e0fd1}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Educational Psychology}
+      \field{number}{6}
+      \field{title}{Analysis of a complex of statistical variables into principal components}
+      \field{volume}{24}
+      \field{year}{1933}
+      \field{pages}{417\bibrangedash 441}
+      \range{pages}{25}
+    \endentry
+    \entry{Hotteling1936}{article}{}
+      \name{author}{1}{}{%
+        {{hash=628a6bd9bb208bfcbeb8394b69088107}{%
+           family={Hotelling},
+           family_i={H\bibinitperiod},
+           given={Harold},
+           given_i={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{fullhash}{628a6bd9bb208bfcbeb8394b69088107}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0006-3444}
+      \field{journaltitle}{Biometrika}
+      \field{month}{12}
+      \field{number}{3-4}
+      \field{title}{{Relations between two sets of variates}}
+      \field{volume}{28}
+      \field{year}{1936}
+      \field{pages}{321\bibrangedash 377}
+      \range{pages}{57}
+      \verb{doi}
+      \verb 10.1093/biomet/28.3-4.321
+      \endverb
+      \verb{eprint}
+      \verb http://oup.prod.sis.lan/biomet/article-pdf/28/3-4/321/586830/28-3-4-321.pdf
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1093/biomet/28.3-4.321
+      \endverb
+    \endentry
+    \entry{Huang2017}{article}{}
+      \name{author}{3}{}{%
+        {{hash=71dd90e092596c7969a0f1b10bc42801}{%
+           family={Huang},
+           family_i={H\bibinitperiod},
+           given={Sijia},
+           given_i={S\bibinitperiod}}}%
+        {{hash=d97c95c7157066ad48718926842febd2}{%
+           family={Chaudhary},
+           family_i={C\bibinitperiod},
+           given={Kumardeep},
+           given_i={K\bibinitperiod}}}%
+        {{hash=af0efb866dd9bb539b1cd2aa5464de3a}{%
+           family={Garmire},
+           family_i={G\bibinitperiod},
+           given={Lana\bibnamedelima X.},
+           given_i={L\bibinitperiod\bibinitdelim X\bibinitperiod}}}%
+      }
+      \strng{namehash}{e100a1700f75a23c2b9224004b9409d1}
+      \strng{fullhash}{e100a1700f75a23c2b9224004b9409d1}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Multi-omics data integration is one of the major challenges in the era of precision medicine. Considerable work has been done with the advent of high-throughput studies, which have enabled the data access for downstream analyses. To improve the clinical outcome prediction, a gamut of software tools has been developed. This review outlines the progress done in the field of multi-omics integration and comprehensive tools developed so far in this field. Further, we discuss the integration methods to predict patient survival at the end of the review.}
+      \field{issn}{1664-8021}
+      \field{journaltitle}{Frontiers in Genetics}
+      \field{title}{More Is Better: Recent Progress in Multi-Omics Data Integration Methods}
+      \field{volume}{8}
+      \field{year}{2017}
+      \field{pages}{84}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/fgene.2017.00084
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/article/10.3389/fgene.2017.00084
+      \endverb
+    \endentry
+    \entry{Ilin2010}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3a7a4b8dfea591cea8478b80be2aff79}{%
+           family={Ilin},
+           family_i={I\bibinitperiod},
+           given={Alexander},
+           given_i={A\bibinitperiod}}}%
+        {{hash=5af5a797b13201c2e7abe51ac4d7f758}{%
+           family={Raiko},
+           family_i={R\bibinitperiod},
+           given={Tapani},
+           given_i={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JMLR.org}%
+      }
+      \strng{namehash}{a0afe7837847c479c18dc4e6647d0c2e}
+      \strng{fullhash}{a0afe7837847c479c18dc4e6647d0c2e}
+      \field{sortinit}{I}
+      \field{sortinithash}{25e99d37ba90f7c4fb20baf4e310faf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1532-4435}
+      \field{journaltitle}{J. Mach. Learn. Res.}
+      \field{month}{08}
+      \field{title}{Practical Approaches to Principal Component Analysis in the Presence of Missing Values}
+      \field{volume}{11}
+      \field{year}{2010}
+      \field{pages}{1957\bibrangedash 2000}
+      \range{pages}{44}
+      \verb{url}
+      \verb http://dl.acm.org/citation.cfm?id=1756006.1859917
+      \endverb
+    \endentry
+    \entry{Khan2014}{article}{}
+      \name{author}{6}{}{%
+        {{hash=47b1e4c378ff277ed1cb65ddc443b720}{%
+           family={Khan},
+           family_i={K\bibinitperiod},
+           given={Suleiman\bibnamedelima A},
+           given_i={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=bb591dbff831750ec92a780161870c0e}{%
+           family={Virtanen},
+           family_i={V\bibinitperiod},
+           given={Seppo},
+           given_i={S\bibinitperiod}}}%
+        {{hash=6e5802937f9e2edc3f8c157eccbc7722}{%
+           family={Kallioniemi},
+           family_i={K\bibinitperiod},
+           given={Olli\bibnamedelima P},
+           given_i={O\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=9651c5ccc7d94ab8c8b1b365eb4c40b4}{%
+           family={Wennerberg},
+           family_i={W\bibinitperiod},
+           given={Krister},
+           given_i={K\bibinitperiod}}}%
+        {{hash=397a07750f41c919c0f2b851c95bdfb8}{%
+           family={Poso},
+           family_i={P\bibinitperiod},
+           given={Antti},
+           given_i={A\bibinitperiod}}}%
+        {{hash=a4e041fb1be6fc5ec0f43802c95087d2}{%
+           family={Kaski},
+           family_i={K\bibinitperiod},
+           given={Samuel},
+           given_i={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford Univ Press}%
+      }
+      \strng{namehash}{35f9e12f0b69eba662b1b9e1564f2fee}
+      \strng{fullhash}{5635f552561e4f69907489e3b5fb1471}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioinformatics}
+      \field{number}{17}
+      \field{title}{Identification of structural features in chemicals associated with cancer drug response: a systematic data-driven analysis}
+      \field{volume}{30}
+      \field{year}{2014}
+      \field{pages}{i497\bibrangedash i504}
+      \range{pages}{-1}
+    \endentry
+    \entry{Klami2008}{article}{}
+      \name{author}{2}{}{%
+        {{hash=abbe9620d430f9ad75afd07fa26aa535}{%
+           family={Klami},
+           family_i={K\bibinitperiod},
+           given={Arto},
+           given_i={A\bibinitperiod}}}%
+        {{hash=a4e041fb1be6fc5ec0f43802c95087d2}{%
+           family={Kaski},
+           family_i={K\bibinitperiod},
+           given={Samuel},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{4eb5cbac32fece68414aa3dafea75867}
+      \strng{fullhash}{4eb5cbac32fece68414aa3dafea75867}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neurocomputing}
+      \field{number}{1}
+      \field{title}{Probabilistic approach to detecting dependencies between data sets}
+      \field{volume}{72}
+      \field{year}{2008}
+      \field{pages}{39\bibrangedash 46}
+      \range{pages}{8}
+    \endentry
+    \entry{Klami2015}{article}{}
+      \name{author}{4}{}{%
+        {{hash=abbe9620d430f9ad75afd07fa26aa535}{%
+           family={Klami},
+           family_i={K\bibinitperiod},
+           given={Arto},
+           given_i={A\bibinitperiod}}}%
+        {{hash=bb591dbff831750ec92a780161870c0e}{%
+           family={Virtanen},
+           family_i={V\bibinitperiod},
+           given={Seppo},
+           given_i={S\bibinitperiod}}}%
+        {{hash=977acb353a0cbb6c8497dc3e82b879f5}{%
+           family={Leppäaho},
+           family_i={L\bibinitperiod},
+           given={Eemeli},
+           given_i={E\bibinitperiod}}}%
+        {{hash=a4e041fb1be6fc5ec0f43802c95087d2}{%
+           family={Kaski},
+           family_i={K\bibinitperiod},
+           given={Samuel},
+           given_i={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{09786ae81931f4269e923d50433c02ca}
+      \strng{fullhash}{21e5f35968e1326f7c9ce7bcc21903fb}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on neural networks and learning systems}
+      \field{number}{9}
+      \field{title}{Group factor analysis}
+      \field{volume}{26}
+      \field{year}{2015}
+      \field{pages}{2136\bibrangedash 2147}
+      \range{pages}{12}
+    \endentry
+    \entry{Komili2008}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c217d93be3e76c331fc47c3bede1486e}{%
+           family={Komili},
+           family_i={K\bibinitperiod},
+           given={Suzanne},
+           given_i={S\bibinitperiod}}}%
+        {{hash=471cc3a91cff5cb32bd28a3ad1d7bd90}{%
+           family={Silver},
+           family_i={S\bibinitperiod},
+           given={Pamela\bibnamedelima A},
+           given_i={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{f4ec91c7e7d770da9f336f8e4adb2452}
+      \strng{fullhash}{f4ec91c7e7d770da9f336f8e4adb2452}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Genome-scale analyses have allowed us to progress beyond studying gene expression at the level of individual components of a given process by providing global information about functional connections between genes, mRNAs and their regulatory proteins. Such analyses have greatly increased our understanding of the interplay between different events in gene regulation and have highlighted previously unappreciated functional connections, including coupling between nuclear and cytoplasmic processes. Genome-wide approaches have also revealed extensive coordination within regulatory levels, such as the organization of transcription factors into regulatory motifs. Overall, these studies enhance our understanding of how the many components of the eukaryotic cell function as a system to allow both coordination and versatility in gene expression.}
+      \field{journaltitle}{Nat. Rev. Genet.}
+      \field{month}{01}
+      \field{title}{Coupling and coordination in gene expression processes: a systems biology view}
+      \field{volume}{9}
+      \field{year}{2008}
+      \field{pages}{38}
+      \range{pages}{1}
+    \endentry
+    \entry{Dai2017}{article}{}
+      \name{author}{4}{}{%
+        {{hash=53435e401818534c60b1cbdc1c28bcb5}{%
+           family={Lawrence},
+           family_i={L\bibinitperiod},
+           given={Neil\bibnamedelima D},
+           given_i={N\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=cdcbd98ff354f529ca23599ea13eca63}{%
+           family={Dai},
+           family_i={D\bibinitperiod},
+           given={Zhenwen},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=162341584fae45ceff0becefd663874a}{%
+           family={Rattray},
+           family_i={R\bibinitperiod},
+           given={Magnus},
+           given_i={M\bibinitperiod}}}%
+        {{hash=36cd4fac0224d26cf5c989e6eed2d125}{%
+           family={Iqbal},
+           family_i={I\bibinitperiod},
+           given={Mudassar},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a493e5e53701772598ae16c4ee679b5}
+      \strng{fullhash}{4be4f2514a79c72f28f65482a322e037}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Regulation of gene expression in prokaryotes involves complex co-regulatory mechanisms involving large numbers of transcriptional regulatory proteins and their target genes. Uncovering these genome-scale interactions constitutes a major bottleneck in systems biology. Sparse latent factor models, assuming activity of transcription factors (TFs) as unobserved, provide a biologically interpretable modelling framework, integrating gene expression and genome-wide binding data, but at the same time pose a hard computational inference problem. Existing probabilistic inference methods for such models rely on subjective filtering and suffer from scalability issues, thus are not well-suited for realistic genome-scale applications.We present a fast Bayesian sparse factor model, which takes input gene expression and binding sites data, either from ChIP-seq experiments or motif predictions, and outputs active TF-gene links as well as latent TF activities. Our method employs an efficient variational Bayes scheme for model inference enabling its application to large datasets which was not feasible with existing MCMC-based inference methods for such models. We validate our method on synthetic data against a similar model in the literature, employing MCMC for inference, and obtain comparable results with a small fraction of the computational time. We also apply our method to large-scale data from Mycobacterium tuberculosis involving ChIP-seq data on 113 TFs and matched gene expression data for 3863 putative target genes. We evaluate our predictions using an independent transcriptomics experiment involving over-expression of TFs.An easy-to-use Jupyter notebook demo of our method with data is available at https://github.com/zhenwendai/SITAR.Supplementary data are available at Bioinformatics online.}}
+      \field{issn}{1367-4803}
+      \field{journaltitle}{Bioinformatics}
+      \field{month}{08}
+      \field{number}{23}
+      \field{title}{{Efficient inference for sparse latent variable models of transcriptional regulation}}
+      \field{volume}{33}
+      \field{year}{2017}
+      \field{pages}{3776\bibrangedash 3783}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btx508
+      \endverb
+      \verb{eprint}
+      \verb http://oup.prod.sis.lan/bioinformatics/article-pdf/33/23/3776/25168082/btx508.pdf
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1093/bioinformatics/btx508
+      \endverb
+    \endentry
+    \entry{Leek2007}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3a276591c537983e6b7e5fc816d4d26b}{%
+           family={Leek},
+           family_i={L\bibinitperiod},
+           given={Jeffrey\bibnamedelima T},
+           given_i={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=dc2295464725594bf768277b510f809e}{%
+           family={Storey},
+           family_i={S\bibinitperiod},
+           given={John\bibnamedelima D},
+           given_i={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science}%
+      }
+      \strng{namehash}{1a9dea483e4c48079d0b3e35f981af47}
+      \strng{fullhash}{1a9dea483e4c48079d0b3e35f981af47}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Author SummaryIn scientific and medical studies, great care must be taken when collecting data to understand the relationship between two variables, such as a drug and its effect on a disease. In any given study there will be many other variables at play, such as the effects of age and sex on the disease. We show that in studies where the expression levels of thousands of genes are measured at once, these issues become surprisingly critical. Due to the complexity of our genomes, environment, and demographic features, there are many sources of variation when analyzing gene expression levels. In any given study, it is impossible to measure every single variable that may be influencing how our genes are expressed. Despite this, we show that by considering all expression levels simultaneously, one can actually recover the effects of these important missed variables and essentially produce an analysis as if all relevant variables were included. As opposed to traditional studies, the massive amount of data available in this setting is what makes the method, called surrogate variable analysis, possible. We hypothesize that surrogate variable analysis will be useful in many large-scale gene expression studies.}
+      \field{journaltitle}{PLoS Genet.}
+      \field{month}{09}
+      \field{number}{9}
+      \field{title}{Capturing Heterogeneity in Gene Expression Studies by Surrogate Variable Analysis}
+      \field{volume}{3}
+      \field{year}{2007}
+      \field{pages}{e161}
+      \range{pages}{-1}
+    \endentry
+    \entry{Li2017}{article}{}
+      \name{author}{3}{}{%
+        {{hash=09e1a64c667557dd7866bc4e66d193ce}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Xiang},
+           given_i={X\bibinitperiod}}}%
+        {{hash=0c09e5b15105e26cdeb5b2b8b33985a9}{%
+           family={Xiao},
+           family_i={X\bibinitperiod},
+           given={Bing},
+           given_i={B\bibinitperiod}}}%
+        {{hash=1b7d8fe77154e0b170780155a82e2849}{%
+           family={Chen},
+           family_i={C\bibinitperiod},
+           given={Xing-Shu},
+           given_i={X\bibinithyphendelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0415e48d5e89d957b87fd5e2ca356d51}
+      \strng{fullhash}{0415e48d5e89d957b87fd5e2ca356d51}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Multiple sclerosis (MS) is a neurological and chronic inflammatory disease that is mediated by demyelination and axonal degeneration in the central nervous system (CNS). Studies have shown that immune system components such as CD4+, CD8+, CD44+ T cells, B lymphatic cells, and inflammatory cytokines play a critical role in inflammatory processes and myelin damage associated with MS. Nevertheless, the pathogenesis of MS remains poorly defined. DNA methylation, a significant epigenetic modification, is reported to be extensively involved in MS pathogenesis through the regulation of gene expression. This review focuses on DNA methylation involved in MS pathogenesis. Evidence showed the hypermethylation of human leukocyte antigen-DRB1 (HLA-DRB1) in CD4+ T cells, the genome-wide DNA methylation in CD8+ T cells, the hypermethylation of interleukin-4 (IL-4)/forkhead winged helix transcription factor 3 (Foxp3), and the demethylation of interferon-$\gamma$ (IFN-$\gamma$)/IL-17a in CD44+ encephalitogenic T cells. Studies also showed the hypermethylation of SH2-containing protein tyrosine phosphatase-1 (SHP-1) in peripheral blood mononuclear cells (PBMCs) and methylated changes of genes regulating oligodendrocyte and neuronal function in normal-appearing white matter. Clarifying the mechanism of aberrant methylation on MS may explain part of the pathology and will lead to the development of a new therapeutic target for the treatment of MS in the future.}
+      \field{issn}{1559-1182}
+      \field{journaltitle}{Molecular Neurobiology}
+      \field{month}{08}
+      \field{number}{6}
+      \field{title}{DNA Methylation: a New Player in Multiple Sclerosis}
+      \field{volume}{54}
+      \field{year}{2017}
+      \field{pages}{4049\bibrangedash 4059}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1007/s12035-016-9966-3
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s12035-016-9966-3
+      \endverb
+    \endentry
+    \entry{Li2016}{article}{}
+      \name{author}{3}{}{%
+        {{hash=0e6037d5ade0043f9ffe54116d1b49aa}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Yifeng},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=dcd65426e188141d5c408fc2631d59bc}{%
+           family={Wu},
+           family_i={W\bibinitperiod},
+           given={Fang-Xiang},
+           given_i={F\bibinithyphendelim X\bibinitperiod}}}%
+        {{hash=3576056944c7ef170fa6428f9f127a64}{%
+           family={Ngom},
+           family_i={N\bibinitperiod},
+           given={Alioune},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{47fb5bf74a5050ee798fc19a92231e13}
+      \strng{fullhash}{47fb5bf74a5050ee798fc19a92231e13}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Driven by high-throughput sequencing techniques, modern genomic and clinical studies are in a strong need of integrative machine learning models for better use of vast volumes of heterogeneous information in the deep understanding of biological systems and the development of predictive models. How data from multiple sources (called multi-view data) are incorporated in a learning system is a key step for successful analysis. In this article, we provide a comprehensive review on omics and clinical data integration techniques, from a machine learning perspective, for various analyses such as prediction, clustering, dimension reduction and association. We shall show that Bayesian models are able to use prior information and model measurements with various distributions; tree-based methods can either build a tree with all features or collectively make a final decision based on trees learned from each view; kernel methods fuse the similarity matrices learned from individual views together for a final similarity matrix or learning model; network-based fusion methods are capable of inferring direct and indirect associations in a heterogeneous network; matrix factorization models have potential to learn interactions among features from different views; and a range of deep neural networks can be integrated in multi-modal learning for capturing the complex mechanism of biological systems.}}
+      \field{issn}{1477-4054}
+      \field{journaltitle}{Briefings in Bioinformatics}
+      \field{month}{12}
+      \field{number}{2}
+      \field{title}{{A review on machine learning principles for multi-view biological data integration}}
+      \field{volume}{19}
+      \field{year}{2016}
+      \field{pages}{325\bibrangedash 340}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1093/bib/bbw113
+      \endverb
+      \verb{eprint}
+      \verb http://oup.prod.sis.lan/bib/article-pdf/19/2/325/25524236/bbw113.pdf
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1093/bib/bbw113
+      \endverb
+    \endentry
+    \entry{McCabe2018}{article}{}
+      \name{author}{3}{}{%
+        {{hash=230d4d28ede4b8345edc99bd11f736b3}{%
+           family={McCabe},
+           family_i={M\bibinitperiod},
+           given={Sean\bibnamedelima D.},
+           given_i={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=1fe2f20025be44093b4b7c972ecff48b}{%
+           family={Lin},
+           family_i={L\bibinitperiod},
+           given={Dan-Yu},
+           given_i={D\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=44866f722899d1160da672593be18fc0}{%
+           family={Love},
+           family_i={L\bibinitperiod},
+           given={Michael\bibnamedelima I},
+           given_i={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cold Spring Harbor Laboratory}%
+      }
+      \strng{namehash}{8ab165a527c62f8e47a418e772abf1bb}
+      \strng{fullhash}{8ab165a527c62f8e47a418e772abf1bb}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The growth of multi-omics datasets has given rise to many methods for identifying sources of common variation across data types. The unsupervised nature of these methods makes it difficult to evaluate their performance. We present MOVIE, Multi-Omics VIsualization of Estimated contributions, as a framework for evaluating the degree of overfitting and the stability of unsupervised multi-omics methods. MOVIE plots the contributions of one data type against another to produce contribution plots, where contributions are calculated for each subject and each data type from the results of each multi-omics method. The usefulness of MOVIE is demonstrated by applying existing multi-omics methods to permuted null data and breast cancer data from The Cancer Genome Atlas. Contribution plots indicated that principal components-based Canonical Correlation Analysis overt null data, while Sparse multiple Canonical Correlation Analysis and Multi-Omics Factor Analysis provided stable results with high specificity for both the real and permuted null datasets.}
+      \field{journaltitle}{bioRxiv}
+      \field{title}{MOVIE: Multi-Omics VIsualization of Estimated contributions}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1101/379115
+      \endverb
+      \verb{eprint}
+      \verb https://www.biorxiv.org/content/early/2018/07/29/379115.full.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.biorxiv.org/content/early/2018/07/29/379115
+      \endverb
+    \endentry
+    \entry{Meng2016}{article}{}
+      \name{author}{6}{}{%
+        {{hash=38b8467f3f16a41fb4e0b33f6ee9dfaa}{%
+           family={Meng},
+           family_i={M\bibinitperiod},
+           given={Chen},
+           given_i={C\bibinitperiod}}}%
+        {{hash=9f4dd4042b59d5baabad3f9022c26ace}{%
+           family={Zeleznik},
+           family_i={Z\bibinitperiod},
+           given={Oana\bibnamedelima A},
+           given_i={O\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=2fa42c777051eb2b1906c0b20de6d7f9}{%
+           family={Thallinger},
+           family_i={T\bibinitperiod},
+           given={Gerhard\bibnamedelima G},
+           given_i={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=266d2ee393dcece20f6e033b93d52d03}{%
+           family={Kuster},
+           family_i={K\bibinitperiod},
+           given={Bernhard},
+           given_i={B\bibinitperiod}}}%
+        {{hash=70cb55ff619cc9587301502640df6ff3}{%
+           family={Gholami},
+           family_i={G\bibinitperiod},
+           given={Amin\bibnamedelima M},
+           given_i={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=5969fd499997f2929ceb2b62b83529a2}{%
+           family={Culhane},
+           family_i={C\bibinitperiod},
+           given={Aedı́n\bibnamedelima C},
+           given_i={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{e7eddfdbae2de9ff422a2785154ac674}
+      \strng{fullhash}{b00193be7ec6cf086c231f46f3e0bde7}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{State-of-the-art next-generation sequencing, transcriptomics, proteomics and other high-throughput `omics' technologies enable the efficient generation of large experimental data sets. These data may yield unprecedented knowledge about molecular pathways in cells and their role in disease. Dimension reduction approaches have been widely used in exploratory analysis of single omics data sets. This review will focus on dimension reduction approaches for simultaneous exploratory analyses of multiple data sets. These methods extract the linear relationships that best explain the correlated structure across data sets, the variability both within and between variables (or observations) and may highlight data issues such as batch effects or outliers. We explore dimension reduction techniques as one of the emerging approaches for data integration, and how these can be applied to increase our understanding of biological systems in normal physiological function and disease.}
+      \field{journaltitle}{Brief. Bioinform.}
+      \field{month}{07}
+      \field{number}{4}
+      \field{title}{Dimension reduction techniques for the integrative analysis of multi-omics data}
+      \field{volume}{17}
+      \field{year}{2016}
+      \field{pages}{628\bibrangedash 641}
+      \range{pages}{14}
+    \endentry
+    \entry{Mitchell1988}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bc6f1717b3819c402f0b047fb298d51b}{%
+           family={Mitchell},
+           family_i={M\bibinitperiod},
+           given={Toby\bibnamedelima J},
+           given_i={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=bb165110c8c9ec2da0b3e6c52b8ffdf6}{%
+           family={Beauchamp},
+           family_i={B\bibinitperiod},
+           given={John\bibnamedelima J},
+           given_i={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{09183d847a0db097d19a2dbb472b8e86}
+      \strng{fullhash}{09183d847a0db097d19a2dbb472b8e86}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{404}
+      \field{title}{Bayesian variable selection in linear regression}
+      \field{volume}{83}
+      \field{year}{1988}
+      \field{pages}{1023\bibrangedash 1032}
+      \range{pages}{10}
+    \endentry
+    \entry{Neal1995}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=65d7fa5657a0bb6a58702171f1d98cf0}{%
+           family={Neal},
+           family_i={N\bibinitperiod},
+           given={Radford\bibnamedelima M.},
+           given_i={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Toronto}%
+      }
+      \strng{namehash}{65d7fa5657a0bb6a58702171f1d98cf0}
+      \strng{fullhash}{65d7fa5657a0bb6a58702171f1d98cf0}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Bayesian learning for neural networks}
+      \field{year}{1995}
+    \endentry
+    \entry{Pilling2018}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c016e730b2eaa9c9d6a75a788014708a}{%
+           family={Pilling},
+           family_i={P\bibinitperiod},
+           given={Mark},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c016e730b2eaa9c9d6a75a788014708a}
+      \strng{fullhash}{c016e730b2eaa9c9d6a75a788014708a}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Royal Statistical Society: Series A (Statistics in Society)}
+      \field{number}{4}
+      \field{title}{Handbook of Applied Modelling: Non-Gaussian and Correlated Data}
+      \field{volume}{181}
+      \field{year}{2018}
+      \field{pages}{1264\bibrangedash 1265}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1111/rssa.12402
+      \endverb
+      \verb{eprint}
+      \verb https://rss.onlinelibrary.wiley.com/doi/pdf/10.1111/rssa.12402
+      \endverb
+      \verb{url}
+      \verb https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/rssa.12402
+      \endverb
+    \endentry
+    \entry{Pournara2007}{article}{}
+      \name{author}{2}{}{%
+        {{hash=159d3c1e5384787a00e227ae1d997b7e}{%
+           family={Pournara},
+           family_i={P\bibinitperiod},
+           given={Iosifina},
+           given_i={I\bibinitperiod}}}%
+        {{hash=dece783b99b584296411c0eec70e9a21}{%
+           family={Wernisch},
+           family_i={W\bibinitperiod},
+           given={Lorenz},
+           given_i={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{340b982329b56a1777ef1c3329e82347}
+      \strng{fullhash}{340b982329b56a1777ef1c3329e82347}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMC Bioinformatics}
+      \field{number}{1}
+      \field{title}{Factor analysis for gene regulatory networks and transcription factor activity profiles}
+      \field{volume}{8}
+      \field{year}{2007}
+      \field{pages}{61}
+      \range{pages}{1}
+    \endentry
+    \entry{Rattray2009}{article}{}
+      \name{author}{4}{}{%
+        {{hash=162341584fae45ceff0becefd663874a}{%
+           family={Rattray},
+           family_i={R\bibinitperiod},
+           given={Magnus},
+           given_i={M\bibinitperiod}}}%
+        {{hash=7a5535f1d9d7b08a2b684b894c37319d}{%
+           family={Stegle},
+           family_i={S\bibinitperiod},
+           given={Oliver},
+           given_i={O\bibinitperiod}}}%
+        {{hash=4573f99424cd688b6fda301ee2089f9b}{%
+           family={Sharp},
+           family_i={S\bibinitperiod},
+           given={Kevin},
+           given_i={K\bibinitperiod}}}%
+        {{hash=19dcf449a33f27289a006b0acf819975}{%
+           family={Winn},
+           family_i={W\bibinitperiod},
+           given={John},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{IOP} Publishing}%
+      }
+      \strng{namehash}{454737f0a9f1ff72d72855f17ec5b6fc}
+      \strng{fullhash}{56dd970fbc7c740bb95cc6a347552a08}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Bayesian sparse factor analysis has many applications; for example, it has been applied to the problem of inferring a sparse regulatory network from gene expression data. We describe a number of inference algorithms for Bayesian sparse factor analysis using a slab and spike mixture prior. These include well-established Markov chain Monte Carlo (MCMC) and variational Bayes (VB) algorithms as well as a novel hybrid of VB and Expectation Propagation (EP). For the case of a single latent factor we derive a theory for learning performance using the replica method. We compare the MCMC and VB/EP algorithm results with simulated data to the theoretical prediction. The results for MCMC agree closely with the theory as expected. Results for VB/EP are slightly sub-optimal but show that the new algorithm is effective for sparse inference. In large-scale problems MCMC is infeasible due to computational limitations and the VB/EP algorithm then provides a very useful computationally efficient alternative.}
+      \field{journaltitle}{Journal of Physics: Conference Series}
+      \field{month}{12}
+      \field{title}{Inference algorithms and learning theory for Bayesian sparse factor analysis}
+      \field{volume}{197}
+      \field{year}{2009}
+      \field{pages}{012002}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1742-6596/197/1/012002
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1088%2F1742-6596%2F197%2F1%2F012002
+      \endverb
+    \endentry
+    \entry{Ringner2008}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8cf474662ff6e1b54556f754c9d82e5d}{%
+           family={Ringnér},
+           family_i={R\bibinitperiod},
+           given={Markus},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{8cf474662ff6e1b54556f754c9d82e5d}
+      \strng{fullhash}{8cf474662ff6e1b54556f754c9d82e5d}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Principal component analysis is often incorporated into genome-wide expression studies, but what is it and how can it be used to explore high-dimensional data?}
+      \field{journaltitle}{Nat. Biotechnol.}
+      \field{month}{03}
+      \field{title}{What is principal component analysis?}
+      \field{volume}{26}
+      \field{year}{2008}
+      \field{pages}{303}
+      \range{pages}{1}
+    \endentry
+    \entry{Ritchie2015}{article}{}
+      \name{author}{5}{}{%
+        {{hash=abaa813c2b51bee9497c6bff414538dd}{%
+           family={Ritchie},
+           family_i={R\bibinitperiod},
+           given={Marylyn\bibnamedelima D.},
+           given_i={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=17a5f967c7021d0774ff1bb677144165}{%
+           family={Holzinger},
+           family_i={H\bibinitperiod},
+           given={Emily\bibnamedelima R.},
+           given_i={E\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=df9df5f8942d390f28d455c9e1df9cd4}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Ruowang},
+           given_i={R\bibinitperiod}}}%
+        {{hash=9be349ef4385cbfcfaf9f9f4af9103fb}{%
+           family={Pendergrass},
+           family_i={P\bibinitperiod},
+           given={Sarah\bibnamedelima A.},
+           given_i={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=4ae9f79e1e269b81e2cb5732f74cea35}{%
+           family={Kim},
+           family_i={K\bibinitperiod},
+           given={Dokyoon},
+           given_i={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f4e3885318585a18adaf04f5a70e648}
+      \strng{fullhash}{cb0a62340b85086bcfb81784a35680ba}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Reviews Genetics}
+      \field{month}{01}
+      \field{title}{Methods of integrating data to uncover genotype--phenotype interactions}
+      \field{volume}{16}
+      \field{year}{2015}
+      \field{pages}{}
+      \range{pages}{-1}
+      \warn{\item Range field 'pages' in entry 'Ritchie2015' is malformed, skipping}
+    \endentry
+    \entry{Rubin1982}{article}{}
+      \name{author}{2}{}{%
+        {{hash=37fe180f849ae0085cba2b45692be375}{%
+           family={Rubin},
+           family_i={R\bibinitperiod},
+           given={Donald\bibnamedelima B.},
+           given_i={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=a693dcfe16298d39be7a18a585a66178}{%
+           family={Thayer},
+           family_i={T\bibinitperiod},
+           given={Dorothy\bibnamedelima T.},
+           given_i={D\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7d8d80b749e27ad93a669945aa1a7bd}
+      \strng{fullhash}{c7d8d80b749e27ad93a669945aa1a7bd}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychometrika}
+      \field{number}{1}
+      \field{title}{EM algorithms for ML factor analysis}
+      \field{volume}{47}
+      \field{year}{1982}
+      \field{pages}{69\bibrangedash 76}
+      \range{pages}{8}
+    \endentry
+    \entry{Stegle2012}{article}{}
+      \name{author}{5}{}{%
+        {{hash=7a5535f1d9d7b08a2b684b894c37319d}{%
+           family={Stegle},
+           family_i={S\bibinitperiod},
+           given={Oliver},
+           given_i={O\bibinitperiod}}}%
+        {{hash=b3f99feeb471740ed41fbbf2ac3ea026}{%
+           family={Parts},
+           family_i={P\bibinitperiod},
+           given={Leopold},
+           given_i={L\bibinitperiod}}}%
+        {{hash=5fcaf13740df193db79b12d9428b3b72}{%
+           family={Piipari},
+           family_i={P\bibinitperiod},
+           given={Matias},
+           given_i={M\bibinitperiod}}}%
+        {{hash=19dcf449a33f27289a006b0acf819975}{%
+           family={Winn},
+           family_i={W\bibinitperiod},
+           given={John},
+           given_i={J\bibinitperiod}}}%
+        {{hash=517afe729b2eb59735ba80628d943bb0}{%
+           family={Durbin},
+           family_i={D\bibinitperiod},
+           given={Richard},
+           given_i={R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{b6ababf648630526be4b46a464405551}
+      \strng{fullhash}{787c8089f1d3bf6ae9950cea28355cc6}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present PEER (probabilistic estimation of expression residuals), a software package implementing statistical models that improve the sensitivity and interpretability of genetic associations in population-scale expression data. This approach builds on factor analysis methods that infer broad variance components in the measurements. PEER takes as input transcript profiles and covariates from a set of individuals, and then outputs hidden factors that explain much of the expression variability. Optionally, these factors can be interpreted as pathway or transcription factor activations by providing prior information about which genes are involved in the pathway or targeted by the factor. The inferred factors are used in genetic association analyses. First, they are treated as additional covariates, and are included in the model to increase detection power for mapping expression traits. Second, they are analyzed as phenotypes themselves to understand the causes of global expression variability. PEER extends previous related surrogate variable models and can be implemented within hours on a desktop computer.}
+      \field{journaltitle}{Nat. Protoc.}
+      \field{month}{02}
+      \field{number}{3}
+      \field{title}{Using probabilistic estimation of expression residuals ({PEER}) to obtain increased power and interpretability of gene expression analyses}
+      \field{volume}{7}
+      \field{year}{2012}
+      \field{pages}{500\bibrangedash 507}
+      \range{pages}{8}
+    \endentry
+    \entry{Genevieve2018}{article}{}
+      \name{author}{12}{}{%
+        {{hash=539e9bc19a68e39a6b6e676d97c67e85}{%
+           family={Stein-O'Brien},
+           family_i={S\bibinithyphendelim O\bibinitperiod},
+           given={Genevieve\bibnamedelima L.},
+           given_i={G\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=4bee638b9f161fadf198744b6b7629e5}{%
+           family={Arora},
+           family_i={A\bibinitperiod},
+           given={Raman},
+           given_i={R\bibinitperiod}}}%
+        {{hash=d6eaf5661f88e46600257b4102844012}{%
+           family={Culhane},
+           family_i={C\bibinitperiod},
+           given={Aedin\bibnamedelima C.},
+           given_i={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=aec09839dee2ce95575f24490cec203b}{%
+           family={Favorov},
+           family_i={F\bibinitperiod},
+           given={Alexander\bibnamedelima V.},
+           given_i={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=af0efb866dd9bb539b1cd2aa5464de3a}{%
+           family={Garmire},
+           family_i={G\bibinitperiod},
+           given={Lana\bibnamedelima X.},
+           given_i={L\bibinitperiod\bibinitdelim X\bibinitperiod}}}%
+        {{hash=dc940bc0d8f5628eb41dc9735d26dc83}{%
+           family={Greene},
+           family_i={G\bibinitperiod},
+           given={Casey\bibnamedelima S.},
+           given_i={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=355028d82ebaf39c05bce2077e0287c9}{%
+           family={Goff},
+           family_i={G\bibinitperiod},
+           given={Loyal\bibnamedelima A.},
+           given_i={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=0e6037d5ade0043f9ffe54116d1b49aa}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Yifeng},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=68b8c789e3152e455ee2f978768591c9}{%
+           family={Ngom},
+           family_i={N\bibinitperiod},
+           given={Aloune},
+           given_i={A\bibinitperiod}}}%
+        {{hash=624eb2f5a82dc01885a789d63afcb581}{%
+           family={Ochs},
+           family_i={O\bibinitperiod},
+           given={Michael\bibnamedelima F.},
+           given_i={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=ab7674b9310cb5bd22c9764013df14bc}{%
+           family={Xu},
+           family_i={X\bibinitperiod},
+           given={Yanxun},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=376bf3f11523fafc1894084964b7f47a}{%
+           family={Fertig},
+           family_i={F\bibinitperiod},
+           given={Elana\bibnamedelima J.},
+           given_i={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f379735a470c85b506f911b1a7a777f8}
+      \strng{fullhash}{85ab5ae9f81559b99aad793ee6ab4b12}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Trends in Genetics}
+      \field{number}{10}
+      \field{title}{Enter the Matrix: Factorization Uncovers Knowledge from Omics}
+      \field{volume}{34}
+      \field{year}{2018}
+      \field{pages}{790\bibrangedash 805}
+      \range{pages}{16}
+    \endentry
+    \entry{Tipping1999}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4deafa9b1f8af7dde80eeefa2f60ea78}{%
+           family={Tipping},
+           family_i={T\bibinitperiod},
+           given={ME},
+           given_i={M\bibinitperiod}}}%
+        {{hash=1926457ebcacd352693574a2d8d484ce}{%
+           family={Bishop},
+           family_i={B\bibinitperiod},
+           given={CM},
+           given_i={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{76f12db0bdef4f4d94c991ad94be0d43}
+      \strng{fullhash}{76f12db0bdef4f4d94c991ad94be0d43}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Royal Statistical Society}
+      \field{title}{Probabilistic Principal Component Analysis}
+      \field{volume}{61(3)}
+      \field{year}{1999}
+      \field{pages}{611\bibrangedash 22}
+      \range{pages}{12}
+    \endentry
+    \entry{Titsias2011}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=6a5df0f6aef2cd529cdd786ac214d3c0}{%
+           family={Titsias},
+           family_i={T\bibinitperiod},
+           given={Michalis\bibnamedelima K},
+           given_i={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=34fae508738ddf88f27b1f291952389e}{%
+           family={Lázaro-Gredilla},
+           family_i={L\bibinithyphendelim G\bibinitperiod},
+           given={Miguel},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{49ec5526691d243ace54608b7792fddb}
+      \strng{fullhash}{49ec5526691d243ace54608b7792fddb}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in neural information processing systems}
+      \field{title}{Spike and slab variational inference for multi-task and multiple kernel learning}
+      \field{year}{2011}
+      \field{pages}{2339\bibrangedash 2347}
+      \range{pages}{9}
+    \endentry
+    \entry{Virtanen2012}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=bb591dbff831750ec92a780161870c0e}{%
+           family={Virtanen},
+           family_i={V\bibinitperiod},
+           given={Seppo},
+           given_i={S\bibinitperiod}}}%
+        {{hash=abbe9620d430f9ad75afd07fa26aa535}{%
+           family={Klami},
+           family_i={K\bibinitperiod},
+           given={Arto},
+           given_i={A\bibinitperiod}}}%
+        {{hash=862253107c1d476a60d8efa85b48eb97}{%
+           family={Khan},
+           family_i={K\bibinitperiod},
+           given={Suleiman},
+           given_i={S\bibinitperiod}}}%
+        {{hash=a4e041fb1be6fc5ec0f43802c95087d2}{%
+           family={Kaski},
+           family_i={K\bibinitperiod},
+           given={Samuel},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{91da48b2d9b749e937f7f168cf6fe78c}
+      \strng{fullhash}{bf8e6660b61bd34482343aaf00e40e16}
+      \field{sortinit}{V}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Artificial Intelligence and Statistics}
+      \field{title}{Bayesian group factor analysis}
+      \field{year}{2012}
+      \field{pages}{1269\bibrangedash 1277}
+      \range{pages}{9}
+    \endentry
+    \entry{Xu2013}{article}{}
+      \name{author}{3}{}{%
+        {{hash=0fd89a7fb20b3d99368ee682085e4436}{%
+           family={{Xu}},
+           family_i={X\bibinitperiod},
+           given={Chang},
+           given_i={C\bibinitperiod}}}%
+        {{hash=f15b34a2bc944a9f055fd6e2e3a7c460}{%
+           family={{Tao}},
+           family_i={T\bibinitperiod},
+           given={Dacheng},
+           given_i={D\bibinitperiod}}}%
+        {{hash=e51bd353d330d0203232b51fcbc2b64a}{%
+           family={{Xu}},
+           family_i={X\bibinitperiod},
+           given={Chao},
+           given_i={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{618324adcfa17ba5696a7da35fb1f363}
+      \strng{fullhash}{618324adcfa17ba5696a7da35fb1f363}
+      \field{sortinit}{X}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{arXiv:1304.5634}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv e-prints}
+      \field{month}{04}
+      \field{title}{{A Survey on Multi-view Learning}}
+      \field{year}{2013}
+      \field{pages}{arXiv:1304.5634}
+      \range{pages}{-1}
+      \verb{eprint}
+      \verb 1304.5634
+      \endverb
+      \keyw{Computer Science - Machine Learning}
+    \endentry
+    \entry{Zeng2018}{article}{}
+      \name{author}{2}{}{%
+        {{hash=14f2a26b327f5de924bc50c3789b7649}{%
+           family={Zeng},
+           family_i={Z\bibinitperiod},
+           given={Irene\bibnamedelimb Sui\bibnamedelima Lan},
+           given_i={I\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=39da11a80e8c1b93bfa2c743dff2893e}{%
+           family={Lumley},
+           family_i={L\bibinitperiod},
+           given={Thomas},
+           given_i={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{e52ba897de9c5c4a4a7cc9646711e432}
+      \strng{fullhash}{e52ba897de9c5c4a4a7cc9646711e432}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioinformatics and Biology Insights}
+      \field{month}{2019/03/16}
+      \field{title}{Review of Statistical Learning Methods in Integrated Omics Studies (An Integrated Information Science)}
+      \field{volume}{12}
+      \field{year}{2018}
+      \field{pages}{1177932218759292}
+      \range{pages}{1}
+    \endentry
+    \entry{Zhang2018_NN}{article}{}
+      \name{author}{6}{}{%
+        {{hash=2063c983a464ccacb561a99c48899267}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Zhongheng},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=6cf34bfba5efd1474fa4a473f6e6195f}{%
+           family={Beck},
+           family_i={B\bibinitperiod},
+           given={Marcus\bibnamedelima W.},
+           given_i={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=63296c12cc7324bed253e4f870b0ead0}{%
+           family={Winkler},
+           family_i={W\bibinitperiod},
+           given={David\bibnamedelima A.},
+           given_i={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=bc23574ea6a5bb04122e2163e19f8fb8}{%
+           family={Huang},
+           family_i={H\bibinitperiod},
+           given={Bin},
+           given_i={B\bibinitperiod}}}%
+        {{hash=4c736053649befbc0409fe5428a197d5}{%
+           family={Sibanda},
+           family_i={S\bibinitperiod},
+           given={Wilbert},
+           given_i={W\bibinitperiod}}}%
+        {{hash=73301f934ee1667b76dbf08650ddc12a}{%
+           family={Goyal},
+           family_i={G\bibinitperiod},
+           given={Hemant},
+           given_i={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73132436d4001a2e8e26aec36ecebe0b}
+      \strng{fullhash}{e327dc7effa4d6a80683064e5f0969b2}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of translational medicine}
+      \field{title}{Opening the black box of neural networks: methods for interpreting neural network models in clinical applications.}
+      \field{volume}{6 11}
+      \field{year}{2018}
+      \field{pages}{216}
+      \range{pages}{1}
+    \endentry
+    \entry{Zhao2016}{article}{}
+      \name{author}{4}{}{%
+        {{hash=1ce691c8ae5bcfd1ee3679211520a1c7}{%
+           family={Zhao},
+           family_i={Z\bibinitperiod},
+           given={Shiwen},
+           given_i={S\bibinitperiod}}}%
+        {{hash=73b4a0255c7165aa3b25a3359ada9481}{%
+           family={Gao},
+           family_i={G\bibinitperiod},
+           given={Chuan},
+           given_i={C\bibinitperiod}}}%
+        {{hash=49a355d0c2a2e9b223f90f3e0088cb29}{%
+           family={Mukherjee},
+           family_i={M\bibinitperiod},
+           given={Sayan},
+           given_i={S\bibinitperiod}}}%
+        {{hash=e9fecf8e88aa803b805ad8f3eaa68271}{%
+           family={Engelhardt},
+           family_i={E\bibinitperiod},
+           given={Barbara\bibnamedelima E},
+           given_i={B\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c5c9c3b294bb6cebbfa35300feca202}
+      \strng{fullhash}{24bcfb7e22e4adcb23786cfd47f0a373}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{196}
+      \field{title}{Bayesian group factor analysis with structured sparsity}
+      \field{volume}{17}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 47}
+      \range{pages}{47}
+    \endentry
+  \endsortlist
+  \missing{MacKay1996}
+  \missing{XX}
+  \missing{X}
+\endrefsection
+\endinput
+
