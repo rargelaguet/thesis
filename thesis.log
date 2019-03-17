@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  16 MAR 2019 20:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  17 MAR 2019 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2078,7 +2078,14 @@ File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 \@quotelevel=\count427
 \@quotereset=\count428
 
-(./thesis.aux (./Abstract/abstract.aux) (./Chapter2/mofa.aux))
+(./thesis.aux (./Abstract/abstract.aux) (./Chapter2/mofa.aux
+
+LaTeX Warning: Label `fig:MOFA_nongaussian' multiply defined.
+
+
+LaTeX Warning: Label `fig:MOFA_nongaussian@cref' multiply defined.
+
+))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
@@ -2096,8 +2103,7 @@ LaTeX Font Info:    ... okay on input line 137.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 137.
 
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 137.
@@ -2306,7 +2312,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 141.
 \PHD@crest=\box116
 
-<Figs/University_Crest.pdf, id=35, 59.22125pt x 69.25874pt>
+<Figs/University_Crest.pdf, id=47, 59.22125pt x 69.25874pt>
 File: Figs/University_Crest.pdf Graphic file (type pdf)
 
 <use Figs/University_Crest.pdf>
@@ -2400,7 +2406,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
                    \relax 
 l.102 	\item \textbf
                     {Imputation}: MOFA generates a condensed and denoised lo...
-[3] <Chapter2/Figs/MOFA.pdf, id=96, 1471.4975pt x 748.7975pt>
+[3] <Chapter2/Figs/MOFA.pdf, id=108, 1471.4975pt x 748.7975pt>
 File: Chapter2/Figs/MOFA.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA.pdf>
@@ -2452,7 +2458,7 @@ Missing character: There is no ; in font nullfont!
                    \relax 
 l.122 
        [4 <./Chapter2/Figs/MOFA.pdf>]
-<Chapter2/Figs/elbo_convergence.pdf, id=351, 243.83195pt x 224.32709pt>
+<Chapter2/Figs/elbo_convergence.pdf, id=363, 243.83195pt x 224.32709pt>
 File: Chapter2/Figs/elbo_convergence.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/elbo_convergence.pdf>
@@ -2460,74 +2466,414 @@ Package pdftex.def Info: Chapter2/Figs/elbo_convergence.pdf used on input line
 133.
 (pdftex.def)             Requested size: 233.3126pt x 214.64983pt.
  [5]
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
- []
+LaTeX Warning: Citation 'Hore2016' on page 6 undefined on input line 141.
 
 
-LaTeX Warning: Citation 'Hore2016' on page 6 undefined on input line 143.
+LaTeX Warning: Citation 'Hore2015-thesis' on page 6 undefined on input line 141
+.
 
-<Chapter2/Figs/MOFA_robustness.pdf, id=359, 846.16125pt x 323.2075pt>
+<Chapter2/Figs/MOFA_robustness.pdf, id=373, 846.16125pt x 323.2075pt>
 File: Chapter2/Figs/MOFA_robustness.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_robustness.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_robustness.pdf used on input line 1
-48.
+46.
 (pdftex.def)             Requested size: 466.62521pt x 178.23318pt.
 
 
 LaTeX Warning: Reference `fig:mofa_nfactors' on page 1 undefined on input line 
-164.
+163.
 
 [6 <./Chapter2/Figs/elbo_convergence.pdf> <./Chapter2/Figs/MOFA_robustness.pdf>
-] <Chapter2/Figs/MOFA_nfactors.pdf, id=422, 375.4025pt x 311.1625pt>
+] <Chapter2/Figs/MOFA_nfactors.pdf, id=434, 375.4025pt x 311.1625pt>
 File: Chapter2/Figs/MOFA_nfactors.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_nfactors.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_nfactors.pdf used on input line 168
+Package pdftex.def Info: Chapter2/Figs/MOFA_nfactors.pdf used on input line 167
 .
 (pdftex.def)             Requested size: 233.3126pt x 193.3888pt.
 
 
-LaTeX Warning: Citation 'Angermuelller2016' on page 7 undefined on input line 1
-77.
+LaTeX Warning: Citation 'seeger' on page 7 undefined on input line 174.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--180
-
- []
+LaTeX Warning: Reference `VBintro' on page 1 undefined on input line 175.
 
 
-LaTeX Warning: Citation 'Lun2016' on page 7 undefined on input line 181.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--184
-
- []
+LaTeX Warning: Citation 'seeger' on page 7 undefined on input line 187.
 
 [7 <./Chapter2/Figs/MOFA_nfactors.pdf>]
-<Chapter2/Figs/MOFA_scMT.pdf, id=450, 697.60625pt x 569.12625pt>
+
+LaTeX Warning: Citation 'seeger' on page 8 undefined on input line 195.
+
+
+LaTeX Warning: Citation 'seeger' on page 8 undefined on input line 230.
+
+
+LaTeX Warning: Citation 'seeger' on page 8 undefined on input line 230.
+
+
+LaTeX Warning: Citation 'Jaakkola' on page 8 undefined on input line 230.
+
+
+LaTeX Warning: Citation 'Jaakkola' on page 8 undefined on input line 231.
+
+[8]
+
+LaTeX Warning: Citation 'Jaakkola' on page 9 undefined on input line 242.
+
+
+LaTeX Warning: Citation 'Jaakkola' on page 9 undefined on input line 252.
+
+
+LaTeX Warning: Citation 'bishop2006pattern' on page 9 undefined on input line 2
+52.
+
+
+LaTeX Warning: Citation 'seeger' on page 9 undefined on input line 270.
+
+[9] <Chapter2/Figs/MOFA_learnK.pdf, id=475, 1213.53375pt x 746.79pt>
+File: Chapter2/Figs/MOFA_learnK.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_learnK.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_learnK.pdf used on input line 297.
+(pdftex.def)             Requested size: 466.62521pt x 287.15608pt.
+ [10]
+
+LaTeX Warning: Citation 'Mo2013' on page 11 undefined on input line 304.
+
+
+LaTeX Warning: Citation 'Leppaaho2017' on page 11 undefined on input line 304.
+
+<Chapter2/Figs/MOFA_group_sparsity.pdf, id=482, 646.415pt x 242.9075pt>
+File: Chapter2/Figs/MOFA_group_sparsity.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_group_sparsity.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_group_sparsity.pdf used on input li
+ne 310.
+(pdftex.def)             Requested size: 466.62521pt x 175.34544pt.
+ [11 <./Chapter2/Figs/MOFA_learnK.pdf>] <Chapter2/Figs/MOFA_sparsity.pdf, id=69
+1, 505.89pt x 361.35pt>
+File: Chapter2/Figs/MOFA_sparsity.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_sparsity.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_sparsity.pdf used on input line 322
+.
+(pdftex.def)             Requested size: 326.63622pt x 233.31433pt.
+
+
+LaTeX Warning: Reference `fig:MOFA_nongaussian_poisson' on page 1 undefined on 
+input line 332.
+
+
+LaTeX Warning: Reference `fig:MOFA_nongaussian_binary' on page 1 undefined on i
+nput line 332.
+
+[12 <./Chapter2/Figs/MOFA_group_sparsity.pdf> <./Chapter2/Figs/MOFA_sparsity.pd
+f>] <Chapter2/Figs/MOFA_nongaussian.pdf, id=721, 2093.8225pt x 821.0675pt>
+File: Chapter2/Figs/MOFA_nongaussian.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_nongaussian.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_nongaussian.pdf used on input line 
+336.
+(pdftex.def)             Requested size: 466.62521pt x 182.97823pt.
+
+
+LaTeX Warning: Reference `fig:MOFA_scalability' on page 1 undefined on input li
+ne 343.
+
+
+LaTeX Warning: Citation 'Leppaaho2017' on page 13 undefined on input line 343.
+
+
+LaTeX Warning: Citation 'Mo2013' on page 13 undefined on input line 343.
+
+<Chapter2/Figs/MOFA_scalability.pdf, id=723, 505.89pt x 361.35pt>
+File: Chapter2/Figs/MOFA_scalability.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_scalability.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_scalability.pdf used on input line 
+349.
+(pdftex.def)             Requested size: 419.95984pt x 299.97556pt.
+ [13 <./Chapter2/Figs/MOFA_nongaussian.pdf>]
+
+LaTeX Warning: Citation 'Chen2013' on page 14 undefined on input line 358.
+
+
+LaTeX Warning: Citation 'Costello2014' on page 14 undefined on input line 358.
+
+
+LaTeX Warning: Citation 'Alyass2015' on page 14 undefined on input line 358.
+
+
+LaTeX Warning: Citation 'Dietrich2018' on page 14 undefined on input line 361.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+
+ []
+
+[14 <./Chapter2/Figs/MOFA_scalability.pdf>]
+
+LaTeX Warning: Reference `fig:XX' on page 1 undefined on input line 367.
+
+
+LaTeX Warning: Citation 'Fabbri2016' on page 15 undefined on input line 377.
+
+
+LaTeX Warning: Citation 'Zenz2010' on page 15 undefined on input line 377.
+
+<Chapter2/Figs/MOFA_CLL_Figure1.pdf, id=1142, 525.965pt x 388.53558pt>
+File: Chapter2/Figs/MOFA_CLL_Figure1.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_CLL_Figure1.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Figure1.pdf used on input line 
+382.
+(pdftex.def)             Requested size: 466.62521pt x 344.71657pt.
+ [15]
+
+LaTeX Warning: Citation 'Fabbri2016' on page 16 undefined on input line 389.
+
+
+LaTeX Warning: Citation 'Bulian2017' on page 16 undefined on input line 389.
+
+
+LaTeX Warning: Citation 'Crombie2017' on page 16 undefined on input line 389.
+
+
+LaTeX Warning: Citation 'Damle1999' on page 16 undefined on input line 389.
+
+
+LaTeX Warning: Citation 'Fabbri2016' on page 16 undefined on input line 390.
+
+
+LaTeX Warning: Citation 'Bulian2017' on page 16 undefined on input line 390.
+
+
+LaTeX Warning: Citation 'Crombie2017' on page 16 undefined on input line 390.
+
+
+LaTeX Warning: Citation 'Damle1999' on page 16 undefined on input line 390.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
+
+ []
+
+
+LaTeX Warning: Citation 'Oakes2015' on page 16 undefined on input line 392.
+
+
+LaTeX Warning: Citation 'Queiros2014' on page 16 undefined on input line 392.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--396
+
+ []
+
+<Chapter2/Figs/MOFA_IGHV_outlier.pdf, id=1150, 920.92659pt x 735.32817pt>
+File: Chapter2/Figs/MOFA_IGHV_outlier.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_IGHV_outlier.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_IGHV_outlier.pdf used on input line
+ 399.
+(pdftex.def)             Requested size: 466.62521pt x 372.58884pt.
+ [16 <./Chapter2/Figs/MOFA_CLL_Figure1.pdf>]
+
+LaTeX Warning: Citation 'Vasconcelos2005' on page 17 undefined on input line 40
+6.
+
+
+LaTeX Warning: Citation 'Maloum\GenericError {(inputenc)                }{Packa
+ge inputenc Error: Unicode char ‎ (U+200E)\MessageBreak not set up for use wi
+th LaTeX}{See the inputenc package documentation for explanation.}{Your command
+ was ignored.\MessageBreak Type  I <command> <return>  to replace it with anoth
+er command' on page 17 undefined on input line 406.
+
+
+LaTeX Warning: Citation '\MessageBreak or  <return>  to continue without it.}20
+09' on page 17 undefined on input line 406.
+
+
+LaTeX Warning: Citation 'Trojani2011' on page 17 undefined on input line 406.
+
+
+LaTeX Warning: Citation 'Morabito2015' on page 17 undefined on input line 406.
+
+
+LaTeX Warning: Citation 'Plesingerova2017' on page 17 undefined on input line 4
+06.
+
+
+Overfull \hbox (1017.76299pt too wide) in paragraph at lines 405--408
+[]\T1/ptm/m/n/10.95 (-20) ,
+ []
+
+
+Overfull \hbox (22.81734pt too wide) in paragraph at lines 405--408
+[]\T1/ptm/m/n/10.95 (-20) , [], [], []].
+ []
+
+<Chapter2/Figs/MOFA_CLL_Factor1.pdf, id=1197, 1061.41539pt x 812.92809pt>
+File: Chapter2/Figs/MOFA_CLL_Factor1.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_CLL_Factor1.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Factor1.pdf used on input line 
+411.
+(pdftex.def)             Requested size: 466.62521pt x 357.37935pt.
+ [17 <./Chapter2/Figs/MOFA_IGHV_outlier.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 443--445
+
+ []
+
+
+LaTeX Warning: Citation 'Mazumder2010' on page 18 undefined on input line 447.
+
+
+LaTeX Warning: Citation 'Troyanskaya2001' on page 18 undefined on input line 44
+7.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--448
+
+ []
+
+[18 <./Chapter2/Figs/MOFA_CLL_Factor1.pdf>]
+<Chapter2/Figs/MOFA_imputation.pdf, id=1352, 712.6625pt x 345.29pt>
+File: Chapter2/Figs/MOFA_imputation.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_imputation.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_imputation.pdf used on input line 4
+53.
+(pdftex.def)             Requested size: 466.62521pt x 226.07965pt.
+
+
+LaTeX Warning: Citation 'Stuart2019' on page 19 undefined on input line 462.
+
+
+LaTeX Warning: Citation 'Colome-Tatche2018' on page 19 undefined on input line 
+462.
+
+
+LaTeX Warning: Citation 'Chappell2018' on page 19 undefined on input line 462.
+
+
+LaTeX Warning: Citation 'Angermueller2016' on page 19 undefined on input line 4
+62.
+
+
+LaTeX Warning: Citation 'Ficz2013' on page 19 undefined on input line 463.
+
+
+LaTeX Warning: Citation 'Tosolini2016' on page 19 undefined on input line 463.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 462--464
+
+ []
+
+
+LaTeX Warning: Citation 'Lun2016' on page 19 undefined on input line 465.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 465--468
+
+ []
+
+[19 <./Chapter2/Figs/MOFA_imputation.pdf>]
+
+LaTeX Warning: Citation 'Mohammed2017' on page 20 undefined on input line 471.
+
+
+LaTeX Warning: Citation 'Angermueller2016' on page 20 undefined on input line 4
+71.
+
+
+LaTeX Warning: Citation 'Auclair2014' on page 20 undefined on input line 471.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 471--473
+
+ []
+
+
+LaTeX Warning: Reference `fig:XX' on page 1 undefined on input line 474.
+
+
+LaTeX Warning: Citation 'Wang2014' on page 20 undefined on input line 474.
+
+
+LaTeX Warning: Citation 'Shen2009' on page 20 undefined on input line 474.
+
+
+LaTeX Warning: Citation 'Moi2013' on page 20 undefined on input line 474.
+
+
+LaTeX Warning: Reference `fig:XX' on page 1 undefined on input line 474.
+
+<Chapter2/Figs/MOFA_scMT.pdf, id=1380, 697.60625pt x 569.12625pt>
 File: Chapter2/Figs/MOFA_scMT.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_scMT.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_scMT.pdf used on input line 198.
+Package pdftex.def Info: Chapter2/Figs/MOFA_scMT.pdf used on input line 478.
 (pdftex.def)             Requested size: 466.62521pt x 380.68735pt.
-) [8 <./Chapter2/Figs/MOFA_scMT.pdf>]
+ [20]
+<Chapter2/Figs/MOFA_scMT2.pdf, id=1385, 606.9345pt x 527.9725pt>
+File: Chapter2/Figs/MOFA_scMT2.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_scMT2.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_scMT2.pdf used on input line 485.
+(pdftex.def)             Requested size: 466.62521pt x 405.92781pt.
+ [21 <./Chapter2/Figs/MOFA_scMT.pdf>]
+<Chapter2/Figs/MOFA_scMT_clustering.pdf, id=1536, 639.05449pt x 278.373pt>
+File: Chapter2/Figs/MOFA_scMT_clustering.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_scMT_clustering.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_scMT_clustering.pdf used on input l
+ine 492.
+(pdftex.def)             Requested size: 466.62521pt x 203.26581pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--504
+
+ []
+
+[22 <./Chapter2/Figs/MOFA_scMT2.pdf> <./Chapter2/Figs/MOFA_scMT_clustering.pdf>
+]
+
+LaTeX Warning: Citation 'Damianou2016' on page 23 undefined on input line 505.
+
+
+LaTeX Warning: Citation 'Svensson2018' on page 23 undefined on input line 507.
+
+
+LaTeX Warning: Citation 'Cao2019' on page 23 undefined on input line 507.
+
+
+LaTeX Warning: Reference `fig:MOFA1' on page 1 undefined on input line 510.
+
+
+LaTeX Warning: Citation 'Risso2018' on page 23 undefined on input line 512.
+
+
+LaTeX Warning: Citation 'Buettner2017' on page 23 undefined on input line 516.
+
+[23]) [24]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 209.
 
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [9
+
+[25
 
 
 
-] [10]
+] [26]
 
 Package biblatex Warning: Month out of range
 (biblatex)                at entry 'Zeng2018' on input line 209.
@@ -2536,7 +2882,7 @@ Package biblatex Warning: Month out of range
 Package caption Warning: Unused \captionsetup[sub] on input line 108.
 See the caption package documentation for explanation.
 
-[11]
+[27]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
  (./thesis.aux (./Abstract/abstract.aux) (./Chapter2/mofa.aux))
@@ -2549,13 +2895,13 @@ Package rerunfilecheck Warning: File `thesis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 65A370DF4E8588C94A9AFCDAF6038B8B;2106
-(rerunfilecheck)             After:  B43C2B696740B3D9AEE367BDE1356931;2287.
+(rerunfilecheck)             Before: E4A5A776F6C03ECABD900D17B582B44A;2898
+(rerunfilecheck)             After:  29D9EE6771F090620B2719DEF688649D;3243.
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -2567,33 +2913,34 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47070 strings out of 493014
- 903429 string characters out of 6133351
- 1318712 words of memory out of 5000000
- 49518 multiletter control sequences out of 15000+600000
- 104064 words of font info for 321 fonts, out of 8000000 for 9000
+ 47255 strings out of 493014
+ 907050 string characters out of 6133351
+ 1323874 words of memory out of 5000000
+ 49598 multiletter control sequences out of 15000+600000
+ 108959 words of font info for 357 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,16n,92p,10477b,1630s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{figure.caption.9} has been referenced but does no
-t exist, replaced by a fixed one
+pdfTeX warning (dest): name{figure.caption.14} has been referenced but does n
+ot exist, replaced by a fixed one
 
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
 usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texli
 ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texliv
 e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive
 /2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fon
-ts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/ur
-w/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/ut
-mr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (15 pages, 6266530 bytes).
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw
+/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utm
+r8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (31 pages, 12958601 bytes).
 PDF statistics:
- 753 PDF objects out of 1000 (max. 8388607)
- 461 compressed objects within 5 object streams
- 83 named destinations out of 1000 (max. 500000)
- 60515 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1771 PDF objects out of 2073 (max. 8388607)
+ 992 compressed objects within 10 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 60594 words of extra memory for PDF output out of 61914 (max. 10000000)
 
