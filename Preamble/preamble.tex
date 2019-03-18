@@ -103,7 +103,9 @@
 % \RequirePackage[backend=biber, style=numeric-comp, citestyle=numeric, sorting=nty, natbib=true]{biblatex}
 \RequirePackage[hyperref=true, url=false, backref=false, backend=biber, style=numeric,firstinits=true]{biblatex}
 
-\bibliography{Chapter1/references,Chapter2/references}
+% \bibliography{Chapter1/references,Chapter2/references} % Depreciated
+\addbibresource{Chapter1/references.bib}
+\addbibresource{Chapter2/references.bib}
 
 % changes the default name `Bibliography` -> `References'
 % \renewcommand{\bibname}{References}

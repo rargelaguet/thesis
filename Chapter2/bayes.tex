@@ -71,7 +71,7 @@ Despite its simplicity, the Laplace approximation is a useful strategy that has 
 
 
 \subsection{Variational approximation}
-Variational inference is a deterministic family of methods that have been receiving widespread attention due to a positive balance between accuracy, speed, and ease of use \cite{Blei_ReviewVB_2017, Zhang2018Arxiv}. The core framework is derived below.\\
+Variational inference is a deterministic family of methods that have been receiving widespread attention due to a positive balance between accuracy, speed, and ease of use \cite{Blei2016, Zhang2017}. The core framework is derived below.\\
 
 In variational inference the true (but intractable) posterior distribution $p(\bfX|\bfY)$ is approximated by a simpler (variational) distribution $q(\bfX|\bTheta)$ where $\bTheta$ are the corresponding parameters. The parameters, which we will omit from the notation, need to be tuned to obtain the closest approximation to the true posterior.\\
 The distance between the true distribution and the variational distribution is calculated using the KL divergence:
@@ -167,7 +167,7 @@ A detailed mathematical treatment of EP, including derivations for specific exam
 	\label{}
 \end{figure}
 
-Following the rationale above, it is easy to predict that variational inference tends to be underestimate the variance of the posterior density. Yet, empirical research have shown that this is acceptable, provided that a good model selection is performed \cite{Blei2017, Blei2006}.\\
+Following the rationale above, it is easy to predict that variational inference tends to be underestimate the variance of the posterior density. Yet, empirical research have shown that this is acceptable, provided that a good model selection is performed \cite{Blei2006}.\\
 
 
 \subsubsection{Open perspectives}

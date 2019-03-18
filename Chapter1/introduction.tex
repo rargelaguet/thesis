@@ -1,11 +1,12 @@
-\chapter{Single-cell (multi-) omics sequencing}
-
 \graphicspath{{Chapter1/Figs/}}
 
+\chapter{Single-cell (multi-) omics sequencing}
+
+\section{Introduction}
 Next-generation sequencing technologies have revolutionised the study of biological systems at multiple molecular levels, ranging from the genome\cite{Fleischmann1995} and the epigenome\cite{Frommer1992} to the transcriptome\cite{Lister2008,Bainbridge2006,Nagalakshmi2008,Mortazavi2008}. However, bulk sequencing approaches require the pooling of large number of cells to report an average readout, and are hence limited for the study of complex heterogeneous processes, including the immune system, embryonic development or cancer \cite{Griffiths2018,Papalexi2018,Patel2014}.\\
 The progressive development of low-input sequencing techniques resulted in an explosion of single-cell sequencing technologies, mostly for the transcriptome (scRNA-seq). In contrast to bulk protocols, single-cell profiling techniques provide an unprecented opportunity to study the transcriptomic variation associated with cellular heterogeneity, lineage diversification and cell fate commitment \cite{Kolodziejczyk2015}.
 
-\section{Single-cell RNA sequencing}
+\subsection{Single-cell RNA sequencing}
 scRNA-seq protocols differ extensively in terms of scalability, costs and sensitivity \cite{Svensson2018, Lafzy2018}. Broadly, there are two groups of methods, plate-based and dropled-based.\\
 In plate-based methods, cells are sorted using micropipettes or FACS into individual wells of a plate, where the library preparation is performed. These class of methods include single-cell tagged reverse transcription sequencing (STRT-seq\cite{Islam2011}) and SMART-seq\cite{Ramskold2012, Picelli2014}. The main advantage of plate-based methods is the higher quality of libraries and the full length transcript information, which enables the quantification of splice variants\cite{Huang2017}, allele-specific fractions\cite{Deng2014} and even RNA velocity information \cite{LaManno2018}. In contrast, the main drawback lies on the low throughput, which limits the scalability of the experiment. Yet, multiplexing techniques, the addition of molecular barcodes to cDNA fragments, allow the parallel processing of multiple experiments, thereby increasing the scale of each experiment \cite{Hashimshony2012}. \\
 	
@@ -17,11 +18,11 @@ More recently, a third type of scRNA-seq emerged based on a combinatorial cellul
 [[ ADD FIGURE OF NUMBER OF CELLS AND SENSITIVITY ]]
 
 
-\section{Single-cell sequencing of the epigenome}
+\subsection{Single-cell sequencing of the epigenome}
 
 While the large majority of single-cell studies are focused on the interrogation of the RNA, transcriptomic measurements capture a single dimension of cellular heterogeneity and hence contain limited information to characterise the molecular determinants of phenotypic variation \cite{??}. Consequently, gene expression markers have been identified for a myriad of biological systems, but the accompanying epigenetic changes and the role of other molecular layers in driving cell fate decisions remains poorly understood.
 
-\subsection{DNA methylation}
+\subsubsection{DNA methylation}
 DNA methylation is a stable epigenetic modification that is strongly associated with transcriptional regulation and lineage diversification in both developmental and adult tissues \cite{Jin2018, Harrison2011, Lee2014, Smith2013, Jones2012}. Its classical roles include the silencing of repeating elements, inactivation of the X chromosome, gene imprinting, and repression of gene expression \cite{??}. Consistently, the disruption of the DNA methylation machinery is associated with multiple dysfunctions, including cancer \cite{Baylin2011}, autoimmune diseases \cite{Liu2013} and neurological disorders \cite{Amir1999}.\\
 In mammalian genomes, DNA methylation predominantly occurs at CpG dinucleotides (mCG). The presence of DNA methylation in non-CpG cntexts (mCH) has been confirmed, albeit its functional role remains controverisal \cite{He2015, Ramsahoye2000, Lister2009}.\\
 % The establishment of DNA methylation signatures begin during development by the interplay of \textit{de novo} methylation and demethylation events. In mammals, methylation events are orchestrated by three different DNA methyltransferase enzymes with similar structure but different activity patterns: Dnmt1, Dnmt3a, Dnmt3b.
@@ -53,7 +54,7 @@ Alongside scBS, other bulk sequencing methods were also adapted to single cells,
 
 %add citation: \cite{Yong2016},
 
-\subsection{Chromatin accessibility}
+\subsubsection{Chromatin accessibility}
 In eukaryotes, the genome is packed into a compact complex of DNA, RNA and proteins called chromatin. Several layers of chromatin condensation have been identified, the fundamental unit being the nucleosome, which consists on a string of \~150bp of DNA wrapped around histone proteins, with linker DNA of \~80bp connecting them \cite{Klemm2019,Tsompana2014}. The N-terminal tails of the histones emerge from the nucleosome and are a strong hotspot for chemical modifications, including methylation, acetylation, phosphorylation and others \cite{Bannister2011}. The complex interaction between a histone modification and the corresponding position, often called the histone code, is an important driver of epigenetic regulation and an active area of research \cite{Zhao2015}. \\
 In addition to the histone modifications, the positioning of the nucleosomes provide another layer of gene expression regulation, mostly by exposing or sheltering transcription factors binding sites \cite{Jiang2009}. In general, active regulatory regions tend to have low occupancy of nucleosomes, whereas inactive regions show a high density of nucleosomes \cite{Struhl2013}. Thus, the profiling of DNA accessibility and transcription factor footprints represents an important dimension to understand the regulation of gene expression.\\
 
@@ -76,7 +77,6 @@ The downsides of the approach are the high sequencing depth requirements and the
 	\label{fig:ChromatinAcc_protocols}
 \end{figure}
 
-\subsubsection{Single-cell extensions}
 As with DNA methylation, single-cell profiling methods for chromatin accessibility also emerged from its bulk counterparts, including ATAC-seq\cite{Buenrostro2015a}, NOME-seq \cite{Pott2016} and DNase-seq \cite{Jin2015}.
 \\
 
@@ -95,7 +95,7 @@ Yet, the sparse nature of scATAC-seq makes it impractical for the study of cellu
 - No comparison of prtocols has been done?
 
 
-\section{Multi-modal single-cell sequencing}
+\subsection{Multi-modal single-cell sequencing}
 
 Cellular phenotypes have been historically characterised using exploratory methods in single molecular layers, most commonly the transcriptome. However, phenotypes result from the combination of multiple sources of biological information, including the genetic background, epigenetic marks, protein levels or lipid composition. Undoubtedly, no single "-omics" technology can capture the intricacy of complex molecular mechanisms, but the collective information has the potential to draw a more comprehensive picture of biological processses as well as clinically relevant traits \cite{Hasin2017,Ritchie2015}.\\
 Motivated by this assumption, multi-omics profiling is being increasingly applied across a wide range of biological domains, including cancer biology \cite{Akavia2010,Gerstung2015}, regulatory genomics \cite{Chen2016}, microbiology \cite{Kim2016} or host-pathogen interactions \cite{TO-DO soderholm2016}.\\ 

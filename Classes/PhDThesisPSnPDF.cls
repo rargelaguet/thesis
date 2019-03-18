@@ -516,10 +516,10 @@ supported!}
 \RequirePackage{textcomp}
 % Font Selection
 \ifPHD@times
-  \ifxetex
-  \else
-    \RequirePackage{mathptmx}  % times roman, including math (where possible)
-  \fi
+  % \ifxetex
+  % \else
+  %   \RequirePackage{mathptmx}  % times roman, including math (where possible)
+  % \fi
   \setFonttrue
   \message{PhDThesisPSnPDF: Using Times Roman font}
 \else

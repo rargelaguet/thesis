@@ -99,8 +99,8 @@
 % \usepackage[hidelinks]{hyperref}
 
 % Math
-\usepackage{amsmath} % symbols
 \usepackage{dsfont} % Dirac Delta
+\usepackage{amsmath}
 
 % Captions for figures and subfigures
 \usepackage[font={small}, margin=20pt]{caption}
@@ -143,11 +143,11 @@
 % \include{Dedication/dedication}
 % \include{Declaration/declaration}
 % \include{Acknowledgement/acknowledgement}
-\include{Abstract/abstract}
+%\include{Abstract/abstract}
 
 % *********************** Adding TOC and List of Figures ***********************
 
-%\tableofcontents
+\tableofcontents
 
 %\listoffigures
 
@@ -161,11 +161,12 @@
 % ******************************** Main Matter *********************************
 \mainmatter
 
-%\include{Chapter1/introduction}
+
+\include{Chapter1/introduction}
 %\include{Chapter1/scnmt-seq}
-%\include{Chapter2/bayes}
-%\include{Chapter2/factor_analysis}
-\include{Chapter2/mofa}
+% \include{Chapter2/bayes}
+% \include{Chapter2/factor_analysis}
+% \include{Chapter2/mofa}
 % \include{Chapter2/exponential_family}
 % \include{Chapter2/}
 % \include{Chapter3/chapter3}
@@ -204,15 +205,6 @@
 % an option in the document class. The location of 'reference.bib' should be
 % specified in the preamble.tex file in the custombib section.
 % Comment out the lines related to natbib above and uncomment the following line.
-
-% \printbibliography[heading=bibintoc, title={References}]
-\printbibliography
-
-
-% \end{spacing}
-
-
-% *************************************** Index ********************************
-% \printthesisindex % If index is present
+%\printbibliography
 
 \end{document}

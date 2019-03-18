@@ -1,31 +1,37 @@
 [0] Config.pm:343> INFO - This is Biber 2.5
-[1] Config.pm:346> INFO - Logfile is 'thesis.blg'
-[72] biber-darwin:290> INFO - === Sat Mar 16, 2019, 15:30:57
-[108] Biber.pm:351> INFO - Reading 'thesis.bcf'
-[310] Biber.pm:776> INFO - Found 44 citekeys in bib section 0
-[332] Biber.pm:3493> INFO - Processing section 0
-[361] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter1/references.bib' for section 0
-[379] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[394] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter1/references.bib'
-[444] Utils.pm:149> WARN - ISBN '1474-760X' in entry 'Hasin2017' is invalid - run biber with '--validate_datamodel' for details.
-[449] Utils.pm:149> WARN - Range field 'pages' in entry 'Ritchie2015' is malformed, skipping
-[450] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter2/references.bib' for section 0
-[460] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[468] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter2/references.bib'
-[470] Utils.pm:149> WARN - Duplicate entry key: 'Svensson2018' in file 'Chapter2/references.bib', skipping ...
-[478] Utils.pm:149> WARN - Duplicate entry key: 'Li2017' in file 'Chapter2/references.bib', skipping ...
-[479] Utils.pm:149> WARN - Duplicate entry key: 'Huang2017' in file 'Chapter2/references.bib', skipping ...
-[479] Utils.pm:149> WARN - Duplicate entry key: 'Hasin2017' in file 'Chapter2/references.bib', skipping ...
-[526] Utils.pm:149> WARN - Possible typo (case mismatch) between citation and datasource keys: 'MacKay1996' and 'Mackay1996' in file 'Chapter2/references.bib'
-[540] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/yl/sc7b3yv53z1_hx81w56mrxd9tg5hxc/T/Smf1EM2YeP/references.bib_91803.utf8, line 590, warning: 10 characters of junk seen at toplevel
-[541] Utils.pm:149> WARN - I didn't find a database entry for 'XX' (section 0)
-[541] Utils.pm:149> WARN - I didn't find a database entry for 'MacKay1996' (section 0)
-[541] Utils.pm:149> WARN - I didn't find a database entry for 'X' (section 0)
-[543] Utils.pm:149> WARN - The field 'institution' in entry 'Bach2005' cannot be null, deleting it
-[628] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[629] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[629] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[629] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
-[760] bbl.pm:526> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[772] bbl.pm:619> INFO - Output to thesis.bbl
-[772] Biber.pm:108> INFO - WARNINGS: 12
+[0] Config.pm:346> INFO - Logfile is 'thesis.blg'
+[45] biber-darwin:290> INFO - === Mon Mar 18, 2019, 20:49:46
+[65] Biber.pm:351> INFO - Reading 'thesis.bcf'
+[170] Biber.pm:776> INFO - Found 91 citekeys in bib section 0
+[182] Biber.pm:3493> INFO - Processing section 0
+[196] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter1/references.bib' for section 0
+[210] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[225] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter1/references.bib'
+[433] Utils.pm:149> WARN - ISBN '1474-760X' in entry 'Hasin2017' is invalid - run biber with '--validate_datamodel' for details.
+[459] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter2/references.bib' for section 0
+[473] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[487] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter2/references.bib'
+[504] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/yl/sc7b3yv53z1_hx81w56mrxd9tg5hxc/T/OYWpR_jnOB/references.bib_23336.utf8, line 582, warning: 10 characters of junk seen at toplevel
+[504] Utils.pm:149> WARN - I didn't find a database entry for 'Lister2008' (section 0)
+[504] Utils.pm:149> WARN - I didn't find a database entry for 'Papalexi2018' (section 0)
+[504] Utils.pm:149> WARN - I didn't find a database entry for 'Lafzy2018' (section 0)
+[505] Utils.pm:149> WARN - I didn't find a database entry for 'Zhang2018' (section 0)
+[505] Utils.pm:149> WARN - I didn't find a database entry for 'Klein2015' (section 0)
+[505] Utils.pm:149> WARN - I didn't find a database entry for 'Zilionis2017' (section 0)
+[505] Utils.pm:149> WARN - I didn't find a database entry for 'Zheng2017' (section 0)
+[505] Utils.pm:149> WARN - I didn't find a database entry for '??' (section 0)
+[505] Utils.pm:149> WARN - I didn't find a database entry for 'Gravina2016' (section 0)
+[505] Utils.pm:149> WARN - I didn't find a database entry for 'Yong et al' (section 0)
+[505] Utils.pm:149> WARN - I didn't find a database entry for 'XX' (section 0)
+[505] Utils.pm:149> WARN - I didn't find a database entry for 'Cusanovic2015' (section 0)
+[505] Utils.pm:149> WARN - I didn't find a database entry for 'OTHERS' (section 0)
+[505] Utils.pm:149> WARN - I didn't find a database entry for 'Cusanovich2018' (section 0)
+[506] Utils.pm:149> WARN - I didn't find a database entry for 'Cusanovich2015a' (section 0)
+[506] Utils.pm:149> WARN - I didn't find a database entry for 'TO-DO soderholm2016' (section 0)
+[610] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[610] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[610] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[610] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
+[740] bbl.pm:526> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[769] bbl.pm:619> INFO - Output to thesis.bbl
+[769] Biber.pm:108> INFO - WARNINGS: 18
