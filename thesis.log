@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  18 MAR 2019 20:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  19 MAR 2019 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2042,7 +2042,7 @@ File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 \@quotelevel=\count427
 \@quotereset=\count428
 
-(./thesis.aux (./Chapter1/introduction.aux))
+(./thesis.aux (./Chapter1/scnmt-seq.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
@@ -2174,104 +2174,6 @@ Package biblatex Info: ... file 'thesis.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                TO-DO soderholm2016
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Yong et al
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Klein2015
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Lafzy2018
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Papalexi2018
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Zheng2017
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Zilionis2017
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Cusanovic2015
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Cusanovich2015a
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Cusanovich2018
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Lister2008
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Gravina2016
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                OTHERS
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Zhang2018
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                XX
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
@@ -2279,7 +2181,7 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                ??
+(biblatex)                XXX
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -2319,7 +2221,7 @@ Package microtype Info: Loading generic settings for font family
 \PHD@Title=\box115
 \PHD@crest=\box116
 
-<Figs/University_Crest.pdf, id=31, 59.22125pt x 69.25874pt>
+<Figs/University_Crest.pdf, id=51, 59.22125pt x 69.25874pt>
 File: Figs/University_Crest.pdf Graphic file (type pdf)
 
 <use Figs/University_Crest.pdf>
@@ -2348,23 +2250,22 @@ University_Crest.pdf>] [2
 ] [4
 
 ]
-\openout2 = `Chapter1/introduction.aux'.
+\openout2 = `Chapter1/scnmt-seq.aux'.
 
- (./Chapter1/introduction.tex
+ (./Chapter1/scnmt-seq.tex
 Chapter 1.
 
-Overfull \hbox (19.56355pt too wide) in paragraph at lines 6--8
-\T1/cmr/m/n/10.95 (-20) ple molec-u-lar lev-els, rang-ing from the genome[[][]2
-1[][]] and the epigenome[[][]22[][]] to the transcriptome[[],
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--12
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
 
  []
 
@@ -2372,364 +2273,316 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14 
+l.17 
       [1
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 26--30
+] <Chapter1/Figs/scNMT_protocol.pdf, id=114, 311.1625pt x 427.5975pt>
+File: Chapter1/Figs/scNMT_protocol.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_protocol.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_protocol.pdf used on input line 20
+.
+(pdftex.def)             Requested size: 279.97797pt x 384.74937pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-
- []
-
-<Chapter1/Figs/methylation_protocols.pdf, id=133, 722.7pt x 534.99875pt>
-File: Chapter1/Figs/methylation_protocols.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/methylation_protocols.pdf>
-Package pdftex.def Info: Chapter1/Figs/methylation_protocols.pdf used on input 
-line 35.
-(pdftex.def)             Requested size: 466.62521pt x 345.43481pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 
-      [2]
-Underfull \hbox (badness 10000) in paragraph at lines 40--42
+l.26 
+      [2 <./Chapter1/Figs/scNMT_protocol.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
 
-<Chapter1/Figs/scBS_protocol.pdf, id=167, 228.39249pt x 120.52167pt>
-File: Chapter1/Figs/scBS_protocol.pdf Graphic file (type pdf)
 
-<use Chapter1/Figs/scBS_protocol.pdf>
-Package pdftex.def Info: Chapter1/Figs/scBS_protocol.pdf used on input line 45.
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
-(pdftex.def)             Requested size: 466.62521pt x 246.25264pt.
+ []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.49 
-      [3 <./Chapter1/Figs/methylation_protocols.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 58--60
+l.42 F
+      irst, we compared the theoretical maximum coverage with the empirical ...
+[3] <Chapter1/Figs/scNMT_coverage.pdf, id=184, 435.6275pt x 226.8475pt>
+File: Chapter1/Figs/scNMT_coverage.pdf Graphic file (type pdf)
 
- []
+<use Chapter1/Figs/scNMT_coverage.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_coverage.pdf used on input line 47
+.
+(pdftex.def)             Requested size: 466.62521pt x 242.98749pt.
 
+<Chapter1/Figs/scNMT_coverage2.pdf, id=186, 205.76875pt x 152.06813pt>
+File: Chapter1/Figs/scNMT_coverage2.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_coverage2.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_coverage2.pdf used on input line 5
+6.
+(pdftex.def)             Requested size: 373.30159pt x 275.90123pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.60 
-      [4 <./Chapter1/Figs/scBS_protocol.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+      [4 <./Chapter1/Figs/scNMT_coverage.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+<Chapter1/Figs/scNMT_pseudobulk_profiles.pdf, id=210, 871.91046pt x 867.24pt>
+File: Chapter1/Figs/scNMT_pseudobulk_profiles.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_pseudobulk_profiles.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_pseudobulk_profiles.pdf used on in
+put line 72.
+(pdftex.def)             Requested size: 373.30159pt x 371.2915pt.
+ [5 <./Chapter1/Figs/scNMT_coverage2.pdf>]
+<Chapter1/Figs/scNMT_comparison.pdf, id=229, 700.41673pt x 328.22626pt>
+File: Chapter1/Figs/scNMT_comparison.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_comparison.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_comparison.pdf used on input line 
+91.
+(pdftex.def)             Requested size: 466.62521pt x 218.66838pt.
+ [6 <./Chapter1/Figs/scNMT_pseudobulk_profiles.pdf>]
+<Chapter1/Figs/scNMT_correlations_acrossgenes.pdf, id=272, 495.35063pt x 190.04
+298pt>
+File: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf Graphic file (type pdf)
+ <use Chapter1/Figs/scNMT_correlations_acrossgenes.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf used 
+on input line 100.
+(pdftex.def)             Requested size: 466.62521pt x 179.0232pt.
+
+<Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf, id=273, 803.0pt x 403.5075
+pt>
+File: Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf Graphic file (type pdf
+)
+ <use Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf use
+d on input line 109.
+(pdftex.def)             Requested size: 466.62521pt x 234.48398pt.
+ [7 <./Chapter1/Figs/scNMT_comparison.pdf> <./Chapter1/Figs/scNMT_correlations_
+acrossgenes.pdf>]
+<Chapter1/Figs/scNMT_EB_QC.pdf, id=525, 1441.385pt x 1031.855pt>
+File: Chapter1/Figs/scNMT_EB_QC.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_EB_QC.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_EB_QC.pdf used on input line 122.
+(pdftex.def)             Requested size: 373.30159pt x 267.23682pt.
+ [8 <./Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf> <./Chapter1/Figs/scN
+MT_EB_QC.pdf>]
+<Chapter1/Figs/scNMT_EB_RNA.pdf, id=601, 650.43pt x 505.89pt>
+File: Chapter1/Figs/scNMT_EB_RNA.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_EB_RNA.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_EB_RNA.pdf used on input line 131.
+
+(pdftex.def)             Requested size: 373.30159pt x 290.35185pt.
+ [9 <./Chapter1/Figs/scNMT_EB_RNA.pdf>]
+<Chapter1/Figs/scNMT_EB_correlations.pdf, id=1725, 430.66898pt x 280.95967pt>
+File: Chapter1/Figs/scNMT_EB_correlations.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_EB_correlations.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_EB_correlations.pdf used on input 
+line 142.
+(pdftex.def)             Requested size: 419.95984pt x 273.97957pt.
+
+<Chapter1/Figs/scNMT_profiles_examples.pdf, id=1727, 1161.97112pt x 407.10495pt
+>
+File: Chapter1/Figs/scNMT_profiles_examples.pdf Graphic file (type pdf)
+ <use Chapter1/Figs/scNMT_profiles_examples.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_examples.pdf used on inpu
+t line 155.
+(pdftex.def)             Requested size: 419.95984pt x 147.13538pt.
+ [10 <./Chapter1/Figs/scNMT_EB_correlations.pdf>]
+<Chapter1/Figs/scNMT_profiles_prediction.pdf, id=1824, 505.89pt x 505.89pt>
+File: Chapter1/Figs/scNMT_profiles_prediction.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_profiles_prediction.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_prediction.pdf used on in
+put line 165.
+(pdftex.def)             Requested size: 303.30353pt x 303.30475pt.
+
+<Chapter1/Figs/scNMT_profiles_expr.pdf, id=1825, 1773.80698pt x 1683.45943pt>
+File: Chapter1/Figs/scNMT_profiles_expr.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_profiles_expr.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_expr.pdf used on input li
+ne 175.
+(pdftex.def)             Requested size: 419.95984pt x 398.5671pt.
+ [11 <./Chapter1/Figs/scNMT_profiles_examples.pdf> <./Chapter1/Figs/scNMT_profi
+les_prediction.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter1/Figs/scNMT_profil
+es_prediction.pdf): PDF inclusion: multiple pdfs with page group included in a 
+single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 180--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+<Chapter1/Figs/scNMT_profiles_clusters.pdf, id=1916, 463.7325pt x 194.22563pt>
+File: Chapter1/Figs/scNMT_profiles_clusters.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_profiles_clusters.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_clusters.pdf used on inpu
+t line 186.
+(pdftex.def)             Requested size: 419.95984pt x 175.89502pt.
+ [12 <./Chapter1/Figs/scNMT_profiles_expr.pdf>]
+<Chapter1/Figs/scNMT_profiles_clusters2.pdf, id=2002, 472.76625pt x 189.70876pt
+>
+File: Chapter1/Figs/scNMT_profiles_clusters2.pdf Graphic file (type pdf)
+ <use Chapter1/Figs/scNMT_profiles_clusters2.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_clusters2.pdf used on inp
+ut line 196.
+(pdftex.def)             Requested size: 419.95984pt x 168.52184pt.
+ [13 <./Chapter1/Figs/scNMT_profiles_clusters.pdf> <./Chapter1/Figs/scNMT_profi
+les_clusters2.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter1/Figs/scNMT_profil
+es_clusters2.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
 
+<Chapter1/Figs/scNMT_pseudotime.pdf, id=2163, 503.8825pt x 138.5175pt>
+File: Chapter1/Figs/scNMT_pseudotime.pdf Graphic file (type pdf)
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+<use Chapter1/Figs/scNMT_pseudotime.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_pseudotime.pdf used on input line 
+221.
+(pdftex.def)             Requested size: 419.95984pt x 115.44716pt.
 
- []
+<Chapter1/Figs/scNMT_pseudotime_correlation.pdf, id=2164, 906.38625pt x 246.922
+5pt>
+File: Chapter1/Figs/scNMT_pseudotime_correlation.pdf Graphic file (type pdf)
+ <use Chapter1/Figs/scNMT_pseudotime_correlation.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_pseudotime_correlation.pdf used on
+ input line 231.
+(pdftex.def)             Requested size: 419.95984pt x 114.40707pt.
 
-[5]
-<Chapter1/Figs/ChromatinAcc_protocols.png, id=541, 981.6675pt x 735.74875pt>
-File: Chapter1/Figs/ChromatinAcc_protocols.png Graphic file (type png)
+<Chapter1/Figs/scNMT_pseudotime_coupling.pdf, id=2165, 403.17325pt x 144.20576p
+t>
+File: Chapter1/Figs/scNMT_pseudotime_coupling.pdf Graphic file (type pdf)
+ <use Chapter1/Figs/scNMT_pseudotime_coupling.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_pseudotime_coupling.pdf used on in
+put line 241.
+(pdftex.def)             Requested size: 419.95984pt x 150.21468pt.
+ [14 <./Chapter1/Figs/scNMT_pseudotime.pdf> <./Chapter1/Figs/scNMT_pseudotime_c
+orrelation.pdf>]) [15 <./Chapter1/Figs/scNMT_pseudotime_coupling.pdf>] [16
 
-<use Chapter1/Figs/ChromatinAcc_protocols.png>
-Package pdftex.def Info: Chapter1/Figs/ChromatinAcc_protocols.png used on input
- line 75.
-(pdftex.def)             Requested size: 466.62521pt x 349.73126pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
-
- []
-
-[6 <./Chapter1/Figs/ChromatinAcc_protocols.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
-
- []
-
-) [8]
+]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 108.
 See the caption package documentation for explanation.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 210.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
-(./thesis.aux (./Chapter1/introduction.aux))
+(./thesis.aux (./Chapter1/scnmt-seq.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 210.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B088B6AA1A78FBB80AA400BE941EB9A0;1323.
+(rerunfilecheck)             Checksum: 252AB10F5B4E4DB23705512A8E5A65D2;3484.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46373 strings out of 493014
- 891936 string characters out of 6133351
- 1388688 words of memory out of 5000000
- 49025 multiletter control sequences out of 15000+600000
- 24556 words of font info for 105 fonts, out of 8000000 for 9000
+ 46385 strings out of 493014
+ 893071 string characters out of 6133351
+ 1307642 words of memory out of 5000000
+ 49046 multiletter control sequences out of 15000+600000
+ 23754 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,92p,10442b,1223s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{cite.0@Angermueller2016} has been referenced but 
-does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Macaulay2015} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Chappell2018} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Stuart2019} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Kim2016} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Chen2016} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Gerstung2015} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Akavia2010} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Ritchie2015} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Hasin2017} has been referenced but does not 
+ 57i,12n,92p,10442b,906s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{cite.0@Lun2016} has been referenced but does not 
 exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.0@Chen2018} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Cao2018} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Jin2015} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Buenrostro2015a} has been referenced but doe
-s not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Pott2016} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Kilgore2007} has been referenced but does no
+pdfTeX warning (dest): name{cite.0@Saelens2018} has been referenced but does no
 t exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.0@Buenrostro2015b} has been referenced but doe
-s not exist, replaced by a fixed one
+pdfTeX warning (dest): name{cite.0@Haghverdi2016} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Trapnell2014} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kapourani2018b} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bernstein2006} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Vastenhouw2012} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@She2009} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kapourani2018} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Papp2012} has been referenced but does not e
+xist, replaced by a fixed one
 
 pdfTeX warning (dest): name{cite.0@Thurman2012} has been referenced but does no
 t exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.0@ENCODE2012} has been referenced but does not
- exist, replaced by a fixed one
+pdfTeX warning (dest): name{cite.0@Ficz2013} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Krueger2011} has been referenced but does no
+t exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{cite.0@Nordstrom2019} has been referenced but does 
 not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.0@Kelly2012} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Buenrostro2013} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Song2010} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Kaplan2008} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Struhl2013} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Jiang2009} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Zhao2015} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Bannister2011} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Tsompana2014} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Klemm2019} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Luo2018} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Martin-Herranz2017} has been referenced but 
-does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Meissner2005} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Guo2015} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Clark2017} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Clark2016} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Farlik2015} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Guo2013} has been referenced but does not ex
-ist, replaced by a fixed one
+pdfTeX warning (dest): name{cite.0@Picelli2014} has been referenced but does no
+t exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{cite.0@Smallwood2014} has been referenced but does 
 not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.0@Lister2009} has been referenced but does not
- exist, replaced by a fixed one
+pdfTeX warning (dest): name{cite.0@Kilgore2007} has been referenced but does no
+t exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.0@Ramsahoye2000} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@He2015} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Amir1999} has been referenced but does not e
+pdfTeX warning (dest): name{cite.0@Pott2016} has been referenced but does not e
 xist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.0@Liu2013} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Baylin2011} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Jones2012} has been referenced but does not 
+pdfTeX warning (dest): name{cite.0@Kelly2012} has been referenced but does not 
 exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.0@Smith2013} has been referenced but does not 
+pdfTeX warning (dest): name{cite.0@Angermueller2016} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Clark2018} has been referenced but does not 
 exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.0@Lee2014} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Harrison2011} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Jin2018} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Mulqueen2018} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Ramani2017} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Vitak2017} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Cao2019} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Cao2017} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Ziegenhain2017} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Zhang2019} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Kivioja2011} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Macosko2015} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Hashimshony2012} has been referenced but doe
-s not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@LaManno2018} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Deng2014} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Huang2017} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Picelli2014} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Ramskold2012} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Islam2011} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Svensson2018} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Kolodziejczyk2015} has been referenced but d
-oes not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Patel2014} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Griffiths2018} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Mortazavi2008} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Nagalakshmi2008} has been referenced but doe
-s not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Bainbridge2006} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Frommer1992} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.0@Fleischmann1995} has been referenced but doe
-s not exist, replaced by a fixed one
-
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{
-/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on thesis.pdf (12 pages, 2027066 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on thesis.pdf (20 pages, 10616198 bytes).
 PDF statistics:
- 666 PDF objects out of 1000 (max. 8388607)
- 535 compressed objects within 6 object streams
- 96 named destinations out of 1000 (max. 500000)
- 23121 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 3026 PDF objects out of 3580 (max. 8388607)
+ 1634 compressed objects within 17 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 22212 words of extra memory for PDF output out of 24883 (max. 10000000)
 

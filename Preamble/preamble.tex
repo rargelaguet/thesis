@@ -124,8 +124,18 @@
 
 % ********************** TOC depth and numbering depth *************************
 
-\setcounter{secnumdepth}{2}
-\setcounter{tocdepth}{2}
+%\setcounter{secnumdepth}{2}
+%\setcounter{tocdepth}{2}
+
+% The tocdepth value determines to which level the sectioning commands are printed in the ToC
+\setcounter{tocdepth}{3}
+% The secnumdepth value determines up to what level the sectioning titles are numbered
+\setcounter{secnumdepth}{3}
+
+% The sectioning levels have the following numbers:
+% -1 part     1 section     3 subsubsection  5 subparagraph
+%  0 chapter  2 subsection  4 paragraph
+
 
 
 % ******************************* Nomenclature *********************************
