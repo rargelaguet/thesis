@@ -1,119 +1,113 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\contentsline {section}{\numberline {0.1}Multi-Omics Factor Analysis: a framework for unsupervised integration of multi-omics data sets}{1}{section.0.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.1}Model description}{1}{subsection.0.1.1}}
-\@writefile{toc}{\contentsline {subsubsection}{Interpretation of the factors}{1}{section*.2}}
-\@writefile{toc}{\contentsline {subsubsection}{Interpretation of the loadings}{2}{section*.3}}
-\@writefile{toc}{\contentsline {subsubsection}{Interpretation of the noise}{2}{section*.4}}
-\@writefile{toc}{\contentsline {subsubsection}{Missing values}{2}{section*.5}}
-\@writefile{toc}{\contentsline {subsubsection}{Prior distributions for the factors and the loadings}{2}{section*.6}}
-\newlabel{likelihood}{{7}{3}{Prior distributions for the factors and the loadings}{equation.0.1.7}{}}
-\newlabel{likelihood@cref}{{[equation][7][0]7}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.2}Downstream analysis}{3}{subsection.0.1.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces MOFA overview. The model takes $M$ data matrices as input (${\bf  Y}^1, \cdots  , {\bf  Y}^M$), one or more from each data modality, with co-occurrent samples but features that are not necessarily related and can differ in numbers. MOFA decomposes these matrices into a matrix of factors (${\bf  Z}$) and $M$ weight matrices, one for each data modality (${\bf  W}^1, \cdots  , {\bf  W}^M$). White cells in the weight matrices correspond to zeros, i.e. inactive features, whereas the cross symbol in the data matrices denotes missing values. The fitted MOFA model can be queried for different downstream analyses, including a variance decomposition to assess the proportion of variance explained by each factor in each data modality.\relax }}{4}{figure.caption.7}}
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:MOFA}{{1}{4}{MOFA overview. The model takes $M$ data matrices as input ($\bfY ^1, \cdots , \bfY ^M$), one or more from each data modality, with co-occurrent samples but features that are not necessarily related and can differ in numbers. MOFA decomposes these matrices into a matrix of factors ($\bfZ $) and $M$ weight matrices, one for each data modality ($\bfW ^1, \cdots , \bfW ^M$). White cells in the weight matrices correspond to zeros, i.e. inactive features, whereas the cross symbol in the data matrices denotes missing values. The fitted MOFA model can be queried for different downstream analyses, including a variance decomposition to assess the proportion of variance explained by each factor in each data modality.\relax }{figure.caption.7}{}}
-\newlabel{fig:MOFA@cref}{{[figure][1][0]1}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Graphical model for MOFA. The white circles represent hidden variables that are infered by the model, whereasa the grey circles represent the observed variables. There are a total of four plates, each one representing a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in view $m$\relax }}{5}{figure.caption.8}}
-\newlabel{fig:MOFA_graphical_model}{{2}{5}{Graphical model for MOFA. The white circles represent hidden variables that are infered by the model, whereasa the grey circles represent the observed variables. There are a total of four plates, each one representing a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in view $m$\relax }{figure.caption.8}{}}
-\newlabel{fig:MOFA_graphical_model@cref}{{[figure][2][0]2}{5}}
-\@writefile{toc}{\contentsline {subsubsection}{Inference}{5}{section*.9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.3}Monitoring convergence}{5}{subsection.0.1.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces XX\relax }}{6}{figure.caption.10}}
-\newlabel{fig:elbo_convergence}{{3}{6}{XX\relax }{figure.caption.10}{}}
-\newlabel{fig:elbo_convergence@cref}{{[figure][3][0]3}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.4}Model selection and consistency across random initilizations}{6}{subsection.0.1.4}}
-\newlabel{section:robustness}{{0.1.4}{6}{Model selection and consistency across random initilizations}{subsection.0.1.4}{}}
-\newlabel{section:robustness@cref}{{[subsection][4][0,1]0.1.4}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces XX... A block-diagonal matrix ensures good consistency across random initialisations\relax }}{6}{figure.caption.11}}
-\newlabel{fig:MOFA_robustness}{{4}{6}{XX... A block-diagonal matrix ensures good consistency across random initialisations\relax }{figure.caption.11}{}}
-\newlabel{fig:MOFA_robustness@cref}{{[figure][4][0]4}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.5}Learning the number of factors}{7}{subsection.0.1.5}}
-\newlabel{section:number_factors}{{0.1.5}{7}{Learning the number of factors}{subsection.0.1.5}{}}
-\newlabel{section:number_factors@cref}{{[subsection][5][0,1]0.1.5}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces XX\relax }}{7}{figure.caption.12}}
-\newlabel{fig:MOFA_nfactors}{{5}{7}{XX\relax }{figure.caption.12}{}}
-\newlabel{fig:MOFA_nfactors@cref}{{[figure][5][0]5}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.6}Model validation with simulated data}{7}{subsection.0.1.6}}
-\newlabel{section:mofa_simulated}{{0.1.6}{7}{Model validation with simulated data}{subsection.0.1.6}{}}
-\newlabel{section:mofa_simulated@cref}{{[subsection][6][0,1]0.1.6}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{Recovery of the latent space}{7}{section*.13}}
-be selected for downstream analysis. The right plot displays the absolute value of the Pearson correlation coefficient between pairwise combinations of all factors across the 25 model instances. A block-diagonal matrix indicates that factors are robustly estimated regardless of the initialisation.\relax }{figure.caption.11}{}}
-\newlabel{fig:MOFA_robustness@cref}{{[figure][4][0]4}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.5}Learning the number of factors}{7}{subsection.0.1.5}}
-\newlabel{section:number_factors}{{0.1.5}{7}{Learning the number of factors}{subsection.0.1.5}{}}
-\newlabel{section:number_factors@cref}{{[subsection][5][0,1]0.1.5}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Training curve for the number of active factors across 25 different model instances. The y-axis displays the number of active factors. The x-axis displays the iteration number. Different lines denote different model instances.\relax }}{7}{figure.caption.12}}
-\newlabel{fig:MOFA_nfactors}{{5}{7}{Training curve for the number of active factors across 25 different model instances. The y-axis displays the number of active factors. The x-axis displays the iteration number. Different lines denote different model instances.\relax }{figure.caption.12}{}}
-\newlabel{fig:MOFA_nfactors@cref}{{[figure][5][0]5}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.6}Model validation with simulated data}{7}{subsection.0.1.6}}
-\newlabel{section:mofa_simulated}{{0.1.6}{7}{Model validation with simulated data}{subsection.0.1.6}{}}
-\newlabel{section:mofa_simulated@cref}{{[subsection][6][0,1]0.1.6}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{Recovery of the latent space}{7}{section*.13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Assessing the ability of MOFA to recover simulated latent spaces. In all plots the y-axis displays the number of infered factors. (a) x-axis displays the number of true factors, and boxplots summarise the distribution across 10 model instances. For (c-d) the true number of factors was set to $K=10$ and each bar corresponds to a different model instance. (b) x-axis displays the number of features, (c) x-axis displays the number of views, (d) x-axis displays fraction of missing values. \relax }}{8}{figure.caption.14}}
-\newlabel{fig:MOFA_learnK}{{6}{8}{Assessing the ability of MOFA to recover simulated latent spaces. In all plots the y-axis displays the number of infered factors. (a) x-axis displays the number of true factors, and boxplots summarise the distribution across 10 model instances. For (c-d) the true number of factors was set to $K=10$ and each bar corresponds to a different model instance. (b) x-axis displays the number of features, (c) x-axis displays the number of views, (d) x-axis displays fraction of missing values. \relax }{figure.caption.14}{}}
-\newlabel{fig:MOFA_learnK@cref}{{[figure][6][0]6}{8}}
-\@writefile{toc}{\contentsline {subsubsection}{Group-wise sparsity on the loadings}{8}{section*.15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Evaluating the ability of MOFA, iCluster and GFA to recover sparse factor activity patterns across views. The leftmost plot displays the true activity pattern, with factors being (strongly) active in different subsets of views. The remaining three plots show, for each model, the fraction of variance explained ($R^2$) by each factor in each view.\relax }}{9}{figure.caption.16}}
-\newlabel{fig:MOFA_group_sparsity}{{7}{9}{Evaluating the ability of MOFA, iCluster and GFA to recover sparse factor activity patterns across views. The leftmost plot displays the true activity pattern, with factors being (strongly) active in different subsets of views. The remaining three plots show, for each model, the fraction of variance explained ($R^2$) by each factor in each view.\relax }{figure.caption.16}{}}
-\newlabel{fig:MOFA_group_sparsity@cref}{{[figure][7][0]7}{9}}
-\@writefile{toc}{\contentsline {subsubsection}{Feature-wise sparsity on the loadings}{9}{section*.17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Assessing sparsity on the loadings in MOFA. The plot shows the empirical cumulative density function of the loadings for an arbitrary factor in a single view. The loadings were simulated with a sparsity level of $\theta _k^m=0.5$ (50\% of active features.) \relax }}{9}{figure.caption.18}}
-\newlabel{fig:MOFA_sparsity}{{8}{9}{Assessing sparsity on the loadings in MOFA. The plot shows the empirical cumulative density function of the loadings for an arbitrary factor in a single view. The loadings were simulated with a sparsity level of $\theta _k^m=0.5$ (50\% of active features.) \relax }{figure.caption.18}{}}
-\newlabel{fig:MOFA_sparsity@cref}{{[figure][8][0]8}{9}}
-\@writefile{toc}{\contentsline {subsubsection}{Non-gaussian likelihoods}{10}{section*.19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Validation of the non-gaussian likelihood models implemented in MOFA on simulated data. The four plots on the left assess the Poisson and the Gaussian likelihoods applied to count data. The four plots on the right assess the Bernoulli and the Gaussian likelihoods applied to binary data. (a) The y-axis displays the ELBO for each model instance (x-axis). (b) The y-axis displays the mean reconstruction error for each model instance (x-axis). (c) The y-axis displays the number of estimated factrors for each model instance (x-axis). The horizontal dashed line marks the true number of factors $K=10$. (d) Distribution of reconstructed data.\relax }}{10}{figure.caption.20}}
-\newlabel{fig:MOFA_nongaussian}{{9}{10}{Validation of the non-gaussian likelihood models implemented in MOFA on simulated data. The four plots on the left assess the Poisson and the Gaussian likelihoods applied to count data. The four plots on the right assess the Bernoulli and the Gaussian likelihoods applied to binary data. (a) The y-axis displays the ELBO for each model instance (x-axis). (b) The y-axis displays the mean reconstruction error for each model instance (x-axis). (c) The y-axis displays the number of estimated factrors for each model instance (x-axis). The horizontal dashed line marks the true number of factors $K=10$. (d) Distribution of reconstructed data.\relax }{figure.caption.20}{}}
-\newlabel{fig:MOFA_nongaussian@cref}{{[figure][9][0]9}{10}}
-\@writefile{toc}{\contentsline {subsubsection}{Scalability}{10}{section*.21}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Evaluation of speed and scalability in MOFA. The y-axis displays the time required for convergence. The x-axis displays the value of the dimension that was tested, either number of factors ($K$), number of features ($D$), number of samples ($N$) and number of views ($M$). Baseline parameters were $M=3, K=10, D=1000, N=100$. Each line represents a different model, GFA (red), MOFA (blue) and iCluster (green). Default convergence criteria where used for all methods. Each dot displays the average time across 10 trials with error bars denoting the standard deviation. iCluster is only shown for one value as all other settings required more than 200min for convergence. \relax }}{11}{figure.caption.22}}
-\newlabel{fig:MOFA_nongaussian}{{10}{11}{Evaluation of speed and scalability in MOFA. The y-axis displays the time required for convergence. The x-axis displays the value of the dimension that was tested, either number of factors ($K$), number of features ($D$), number of samples ($N$) and number of views ($M$). Baseline parameters were $M=3, K=10, D=1000, N=100$. Each line represents a different model, GFA (red), MOFA (blue) and iCluster (green). Default convergence criteria where used for all methods. Each dot displays the average time across 10 trials with error bars denoting the standard deviation. iCluster is only shown for one value as all other settings required more than 200min for convergence. \relax }{figure.caption.22}{}}
-\newlabel{fig:MOFA_nongaussian@cref}{{[figure][10][0]10}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.7}Application to chronic lymphocytic leukaemia}{11}{subsection.0.1.7}}
-\newlabel{section:mofa_cll}{{0.1.7}{11}{Application to chronic lymphocytic leukaemia}{subsection.0.1.7}{}}
-\newlabel{section:mofa_cll@cref}{{[subsection][7][0,1]0.1.7}{11}}
-\@writefile{toc}{\contentsline {subsubsection}{Model overview}{12}{section*.23}}
-lays the time required for convergence. The x-axis displays the value of the dimension that was tested, either number of factors ($K$), number of features ($D$), number of samples ($N$) and number of views ($M$). Baseline parameters were $M=3, K=10, D=1000, N=100$. Each line represents a different model, GFA (red), MOFA (blue) and iCluster (green). Default convergence criteria where used for all methods. Each dot displays the average time across 10 trials with error bars denoting the standard deviation. iCluster is only shown for one value as all other settings required more than 200min for convergence. \relax }{figure.caption.67}{}}
-\newlabel{fig:MOFA_nongaussian@cref}{{[figure][41][2]2.41}{59}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.12.8}Application to chronic lymphocytic leukaemia}{59}{subsection.2.12.8}}
-\newlabel{section:mofa_cll}{{2.12.8}{59}{Application to chronic lymphocytic leukaemia}{subsection.2.12.8}{}}
-\newlabel{section:mofa_cll@cref}{{[subsection][8][2,12]2.12.8}{59}}
-\@writefile{toc}{\contentsline {subsubsection}{Model overview}{60}{section*.68}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.42}{\ignorespaces XX\relax }}{61}{figure.caption.69}}
-\newlabel{fig:MOFA_CLL_Figure1}{{2.42}{61}{XX\relax }{figure.caption.69}{}}
-\newlabel{fig:MOFA_CLL_Figure1@cref}{{[figure][42][2]2.42}{61}}
-\@writefile{toc}{\contentsline {subsubsection}{Characterisation of Factor 1}{61}{section*.70}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.43}{\ignorespaces XX\relax }}{62}{figure.caption.71}}
-\newlabel{fig:MOFA_IGHV_outlier}{{2.43}{62}{XX\relax }{figure.caption.71}{}}
-\newlabel{fig:MOFA_IGHV_outlier@cref}{{[figure][43][2]2.43}{62}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.44}{\ignorespaces XX\relax }}{63}{figure.caption.72}}
-\newlabel{fig:MOFA_CLL_Factor1}{{2.44}{63}{XX\relax }{figure.caption.72}{}}
-\newlabel{fig:MOFA_CLL_Factor1@cref}{{[figure][44][2]2.44}{63}}
-\@writefile{toc}{\contentsline {subsubsection}{Characterisation of other Factors}{63}{section*.73}}
-\@writefile{toc}{\contentsline {subsubsection}{Prediction of clinical outcomes}{63}{section*.74}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.45}{\ignorespaces XX\relax }}{64}{figure.caption.75}}
-\newlabel{fig:MOFA_CLL_Cox}{{2.45}{64}{XX\relax }{figure.caption.75}{}}
-\newlabel{fig:MOFA_CLL_Cox@cref}{{[figure][45][2]2.45}{64}}
-\@writefile{toc}{\contentsline {subsubsection}{Imputation of missing values}{64}{section*.76}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.46}{\ignorespaces Evaluation of imputation performance in the drug response assay of the CLL data. The y-axis shows averages of the mean-squared error across 15 trials for increasing fractions of missing data (x-axis). Two experiments were considered: (a) values missing at random and (b) entire assays missing at random. Error bars represent standard deviations.\relax }}{65}{figure.caption.77}}
-\newlabel{fig:MOFA_imputation}{{2.46}{65}{Evaluation of imputation performance in the drug response assay of the CLL data. The y-axis shows averages of the mean-squared error across 15 trials for increasing fractions of missing data (x-axis). Two experiments were considered: (a) values missing at random and (b) entire assays missing at random. Error bars represent standard deviations.\relax }{figure.caption.77}{}}
-\newlabel{fig:MOFA_imputation@cref}{{[figure][46][2]2.46}{65}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.12.9}Application to single-cell multi-omics}{65}{subsection.2.12.9}}
-\newlabel{section:mofa_scmt}{{2.12.9}{65}{Application to single-cell multi-omics}{subsection.2.12.9}{}}
-\newlabel{section:mofa_scmt@cref}{{[subsection][9][2,12]2.12.9}{65}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.47}{\ignorespaces XX\relax }}{67}{figure.caption.78}}
-\newlabel{fig:MOFA_scMT}{{2.47}{67}{XX\relax }{figure.caption.78}{}}
-\newlabel{fig:MOFA_scMT@cref}{{[figure][47][2]2.47}{67}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.48}{\ignorespaces XX\relax }}{68}{figure.caption.79}}
-\newlabel{fig:MOFA_scMT2}{{2.48}{68}{XX\relax }{figure.caption.79}{}}
-\newlabel{fig:MOFA_scMT2@cref}{{[figure][48][2]2.48}{68}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.49}{\ignorespaces XX\relax }}{68}{figure.caption.80}}
-\newlabel{fig:MOFA_scMT_clustering}{{2.49}{68}{XX\relax }{figure.caption.80}{}}
-\newlabel{fig:MOFA_scMT_clustering@cref}{{[figure][49][2]2.49}{68}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.12.10}Open perspectives}{69}{subsection.2.12.10}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Multi-Omics Factor Analysis: a framework for unsupervised integration of multi-omics data sets}{50}{section.2.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.1}Model description}{50}{subsection.2.6.1}}
+\newlabel{mofa:model_description}{{2.6.1}{50}{Model description}{subsection.2.6.1}{}}
+\newlabel{mofa:model_description@cref}{{[subsection][1][2,6]2.6.1}{50}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1.1}Interpretation of the factors}{50}{subsubsection.2.6.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1.2}Interpretation of the loadings}{51}{subsubsection.2.6.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1.3}Interpretation of the noise}{51}{subsubsection.2.6.1.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1.4}Missing values}{51}{subsubsection.2.6.1.4}}
+\newlabel{section:mofa_missing_values}{{2.6.1.4}{51}{Missing values}{subsubsection.2.6.1.4}{}}
+\newlabel{section:mofa_missing_values@cref}{{[subsubsection][4][2,6,1]2.6.1.4}{51}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1.5}Prior distributions for the factors and the loadings}{51}{subsubsection.2.6.1.5}}
+\newlabel{section:mofa_loadings}{{2.6.1.5}{51}{Prior distributions for the factors and the loadings}{subsubsection.2.6.1.5}{}}
+\newlabel{section:mofa_loadings@cref}{{[subsubsection][5][2,6,1]2.6.1.5}{51}}
+\newlabel{likelihood}{{2.26}{52}{Prior distributions for the factors and the loadings}{equation.2.6.26}{}}
+\newlabel{likelihood@cref}{{[equation][26][2]2.26}{52}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.2}Downstream analysis}{52}{subsection.2.6.2}}
+\newlabel{mofa:downstream}{{2.6.2}{52}{Downstream analysis}{subsection.2.6.2}{}}
+\newlabel{mofa:downstream@cref}{{[subsection][2][2,6]2.6.2}{52}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces MOFA overview. The model takes $M$ data matrices as input (${\bf  Y}^1, \cdots  , {\bf  Y}^M$), one or more from each data modality, with co-occurrent samples but features that are not necessarily related and can differ in numbers. MOFA decomposes these matrices into a matrix of factors (${\bf  Z}$) and $M$ weight matrices, one for each data modality (${\bf  W}^1, \cdots  , {\bf  W}^M$). White cells in the weight matrices correspond to zeros, i.e. inactive features, whereas the cross symbol in the data matrices denotes missing values. The fitted MOFA model can be queried for different downstream analyses, including a variance decomposition to assess the proportion of variance explained by each factor in each data modality.\relax }}{53}{figure.caption.41}}
+\newlabel{fig:MOFA}{{2.15}{53}{MOFA overview. The model takes $M$ data matrices as input ($\bfY ^1, \cdots , \bfY ^M$), one or more from each data modality, with co-occurrent samples but features that are not necessarily related and can differ in numbers. MOFA decomposes these matrices into a matrix of factors ($\bfZ $) and $M$ weight matrices, one for each data modality ($\bfW ^1, \cdots , \bfW ^M$). White cells in the weight matrices correspond to zeros, i.e. inactive features, whereas the cross symbol in the data matrices denotes missing values. The fitted MOFA model can be queried for different downstream analyses, including a variance decomposition to assess the proportion of variance explained by each factor in each data modality.\relax }{figure.caption.41}{}}
+\newlabel{fig:MOFA@cref}{{[figure][15][2]2.15}{53}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces Graphical model for MOFA. The white circles represent hidden variables that are infered by the model, whereas the grey circles represent the observed variables. There are a total of four plates, each one representing a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in the $m$-th view. The use of transparency in the top left nodes is intentional and becomes clear in Chapter 4 where we implement a spike-and-slab prior on the factors.\relax }}{54}{figure.caption.42}}
+\newlabel{fig:MOFA_graphical_model}{{2.16}{54}{Graphical model for MOFA. The white circles represent hidden variables that are infered by the model, whereas the grey circles represent the observed variables. There are a total of four plates, each one representing a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in the $m$-th view. The use of transparency in the top left nodes is intentional and becomes clear in Chapter 4 where we implement a spike-and-slab prior on the factors.\relax }{figure.caption.42}{}}
+\newlabel{fig:MOFA_graphical_model@cref}{{[figure][16][2]2.16}{54}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2.1}Inference}{54}{subsubsection.2.6.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.3}Monitoring convergence}{54}{subsection.2.6.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.17}{\ignorespaces Training curve for two diffent initialisations of MOFA. The y-axis displays the log of the ELBO, with higher values indicating a better fit. The x-axis displays the iteration number. The horizontal dash lines mark the value of the ELBO upon convergence. \relax }}{55}{figure.caption.43}}
+\newlabel{fig:elbo_convergence}{{2.17}{55}{Training curve for two diffent initialisations of MOFA. The y-axis displays the log of the ELBO, with higher values indicating a better fit. The x-axis displays the iteration number. The horizontal dash lines mark the value of the ELBO upon convergence. \relax }{figure.caption.43}{}}
+\newlabel{fig:elbo_convergence@cref}{{[figure][17][2]2.17}{55}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.4}Model selection and consistency across random initilizations}{55}{subsection.2.6.4}}
+\newlabel{section:mofa_robustness}{{2.6.4}{55}{Model selection and consistency across random initilizations}{subsection.2.6.4}{}}
+\newlabel{section:mofa_robustness@cref}{{[subsection][4][2,6]2.6.4}{55}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.18}{\ignorespaces  Model selection and robustness analysis in MOFA. The left plot the log ELBO (y-axis) for 25 model instances (x-axis). The arrow indicates the model with the highest ELBO that would be selected for downstream analysis. The right plot displays the absolute value of the Pearson correlation coefficient between pairwise combinations of all factors across the 25 model instances. A block-diagonal matrix indicates that factors are robustly estimated regardless of the initialisation.\relax }}{55}{figure.caption.44}}
+\newlabel{fig:MOFA_robustness}{{2.18}{55}{Model selection and robustness analysis in MOFA. The left plot the log ELBO (y-axis) for 25 model instances (x-axis). The arrow indicates the model with the highest ELBO that would be selected for downstream analysis. The right plot displays the absolute value of the Pearson correlation coefficient between pairwise combinations of all factors across the 25 model instances. A block-diagonal matrix indicates that factors are robustly estimated regardless of the initialisation.\relax }{figure.caption.44}{}}
+\newlabel{fig:MOFA_robustness@cref}{{[figure][18][2]2.18}{55}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.5}Learning the number of factors}{56}{subsection.2.6.5}}
+\newlabel{section:mofa_nfactors}{{2.6.5}{56}{Learning the number of factors}{subsection.2.6.5}{}}
+\newlabel{section:mofa_nfactors@cref}{{[subsection][5][2,6]2.6.5}{56}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.19}{\ignorespaces Training curve for the number of active factors across 25 different model instances. The y-axis displays the number of active factors. The x-axis displays the iteration number. Different lines denote different model instances.\relax }}{56}{figure.caption.45}}
+\newlabel{fig:MOFA_nfactors}{{2.19}{56}{Training curve for the number of active factors across 25 different model instances. The y-axis displays the number of active factors. The x-axis displays the iteration number. Different lines denote different model instances.\relax }{figure.caption.45}{}}
+\newlabel{fig:MOFA_nfactors@cref}{{[figure][19][2]2.19}{56}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.6}Modelling and inference with non-Gaussian data}{56}{subsection.2.6.6}}
+\newlabel{section:mofa_ngaussian}{{2.6.6}{56}{Modelling and inference with non-Gaussian data}{subsection.2.6.6}{}}
+\newlabel{section:mofa_ngaussian@cref}{{[subsection][6][2,6]2.6.6}{56}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.7}Model validation with simulated data}{59}{subsection.2.6.7}}
+\newlabel{section:mofa_simulated}{{2.6.7}{59}{Model validation with simulated data}{subsection.2.6.7}{}}
+\newlabel{section:mofa_simulated@cref}{{[subsection][7][2,6]2.6.7}{59}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.7.1}Recovery of the latent space}{59}{subsubsection.2.6.7.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.20}{\ignorespaces Assessing the ability of MOFA to recover simulated latent spaces. In all plots the y-axis displays the number of infered factors. (a) x-axis displays the number of true factors, and boxplots summarise the distribution across 10 model instances. For (c-d) the true number of factors was set to $K=10$ and each bar corresponds to a different model instance. (b) x-axis displays the number of features, (c) x-axis displays the number of views, (d) x-axis displays fraction of missing values. \relax }}{60}{figure.caption.48}}
+\newlabel{fig:MOFA_learnK}{{2.20}{60}{Assessing the ability of MOFA to recover simulated latent spaces. In all plots the y-axis displays the number of infered factors. (a) x-axis displays the number of true factors, and boxplots summarise the distribution across 10 model instances. For (c-d) the true number of factors was set to $K=10$ and each bar corresponds to a different model instance. (b) x-axis displays the number of features, (c) x-axis displays the number of views, (d) x-axis displays fraction of missing values. \relax }{figure.caption.48}{}}
+\newlabel{fig:MOFA_learnK@cref}{{[figure][20][2]2.20}{60}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.7.2}Group-wise sparsity on the loadings}{60}{subsubsection.2.6.7.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.21}{\ignorespaces Evaluating the ability of MOFA, iCluster and GFA to recover sparse factor activity patterns across views. The leftmost plot displays the true activity pattern, with factors being (strongly) active in different subsets of views. The remaining three plots show, for each model, the fraction of variance explained ($R^2$) by each factor in each view.\relax }}{61}{figure.caption.49}}
+\newlabel{fig:MOFA_group_sparsity}{{2.21}{61}{Evaluating the ability of MOFA, iCluster and GFA to recover sparse factor activity patterns across views. The leftmost plot displays the true activity pattern, with factors being (strongly) active in different subsets of views. The remaining three plots show, for each model, the fraction of variance explained ($R^2$) by each factor in each view.\relax }{figure.caption.49}{}}
+\newlabel{fig:MOFA_group_sparsity@cref}{{[figure][21][2]2.21}{61}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.7.3}Feature-wise sparsity on the loadings}{61}{subsubsection.2.6.7.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.22}{\ignorespaces Assessing sparsity on the loadings in MOFA. The plot shows the empirical cumulative density function of the loadings for an arbitrary factor in a single view. The loadings were simulated with a sparsity level of $\theta _k^m=0.5$ (50\% of active features.) \relax }}{62}{figure.caption.50}}
+\newlabel{fig:MOFA_sparsity}{{2.22}{62}{Assessing sparsity on the loadings in MOFA. The plot shows the empirical cumulative density function of the loadings for an arbitrary factor in a single view. The loadings were simulated with a sparsity level of $\theta _k^m=0.5$ (50\% of active features.) \relax }{figure.caption.50}{}}
+\newlabel{fig:MOFA_sparsity@cref}{{[figure][22][2]2.22}{62}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.7.4}Non-gaussian likelihoods}{62}{subsubsection.2.6.7.4}}
+\newlabel{section:mofa_nongaussian}{{2.6.7.4}{62}{Non-gaussian likelihoods}{subsubsection.2.6.7.4}{}}
+\newlabel{section:mofa_nongaussian@cref}{{[subsubsection][4][2,6,7]2.6.7.4}{62}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.23}{\ignorespaces Validation of the non-gaussian likelihood models implemented in MOFA on simulated data. The four plots on the left assess the Poisson and the Gaussian likelihoods applied to count data. The four plots on the right assess the Bernoulli and the Gaussian likelihoods applied to binary data. (a) The y-axis displays the ELBO for each model instance (x-axis). (b) The y-axis displays the mean reconstruction error for each model instance (x-axis). (c) The y-axis displays the number of estimated factrors for each model instance (x-axis). The horizontal dashed line marks the true number of factors $K=10$. (d) Distribution of reconstructed data.\relax }}{63}{figure.caption.51}}
+\newlabel{fig:MOFA_nongaussian}{{2.23}{63}{Validation of the non-gaussian likelihood models implemented in MOFA on simulated data. The four plots on the left assess the Poisson and the Gaussian likelihoods applied to count data. The four plots on the right assess the Bernoulli and the Gaussian likelihoods applied to binary data. (a) The y-axis displays the ELBO for each model instance (x-axis). (b) The y-axis displays the mean reconstruction error for each model instance (x-axis). (c) The y-axis displays the number of estimated factrors for each model instance (x-axis). The horizontal dashed line marks the true number of factors $K=10$. (d) Distribution of reconstructed data.\relax }{figure.caption.51}{}}
+\newlabel{fig:MOFA_nongaussian@cref}{{[figure][23][2]2.23}{63}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.7.5}Scalability}{63}{subsubsection.2.6.7.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.24}{\ignorespaces Evaluation of speed and scalability in MOFA. The y-axis displays the time required for convergence. The x-axis displays the value of the dimension that was tested, either number of factors ($K$), number of features ($D$), number of samples ($N$) and number of views ($M$). Baseline parameters were $M=3, K=10, D=1000, N=100$. Each line represents a different model, GFA (red), MOFA (blue) and iCluster (green). Default convergence criteria where used for all methods. Each dot displays the average time across 10 trials with error bars denoting the standard deviation. iCluster is only shown for one value as all other settings required more than 200min for convergence. \relax }}{64}{figure.caption.52}}
+\newlabel{fig:MOFA_nongaussian}{{2.24}{64}{Evaluation of speed and scalability in MOFA. The y-axis displays the time required for convergence. The x-axis displays the value of the dimension that was tested, either number of factors ($K$), number of features ($D$), number of samples ($N$) and number of views ($M$). Baseline parameters were $M=3, K=10, D=1000, N=100$. Each line represents a different model, GFA (red), MOFA (blue) and iCluster (green). Default convergence criteria where used for all methods. Each dot displays the average time across 10 trials with error bars denoting the standard deviation. iCluster is only shown for one value as all other settings required more than 200min for convergence. \relax }{figure.caption.52}{}}
+\newlabel{fig:MOFA_nongaussian@cref}{{[figure][24][2]2.24}{64}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.8}Application to chronic lymphocytic leukaemia}{64}{subsection.2.6.8}}
+\newlabel{section:mofa_cll}{{2.6.8}{64}{Application to chronic lymphocytic leukaemia}{subsection.2.6.8}{}}
+\newlabel{section:mofa_cll@cref}{{[subsection][8][2,6]2.6.8}{64}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.8.1}Model overview}{65}{subsubsection.2.6.8.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.25}{\ignorespaces XX\relax }}{66}{figure.caption.53}}
+\newlabel{fig:MOFA_CLL_Figure1}{{2.25}{66}{XX\relax }{figure.caption.53}{}}
+\newlabel{fig:MOFA_CLL_Figure1@cref}{{[figure][25][2]2.25}{66}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.8.2}Characterisation of Factor 1}{66}{subsubsection.2.6.8.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.26}{\ignorespaces XX\relax }}{67}{figure.caption.54}}
+\newlabel{fig:MOFA_IGHV_outlier}{{2.26}{67}{XX\relax }{figure.caption.54}{}}
+\newlabel{fig:MOFA_IGHV_outlier@cref}{{[figure][26][2]2.26}{67}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.27}{\ignorespaces XX\relax }}{68}{figure.caption.55}}
+\newlabel{fig:MOFA_CLL_Factor1}{{2.27}{68}{XX\relax }{figure.caption.55}{}}
+\newlabel{fig:MOFA_CLL_Factor1@cref}{{[figure][27][2]2.27}{68}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.8.3}Characterisation of other Factors}{68}{subsubsection.2.6.8.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.8.4}Prediction of clinical outcomes}{68}{subsubsection.2.6.8.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.28}{\ignorespaces XX\relax }}{69}{figure.caption.56}}
+\newlabel{fig:MOFA_CLL_Cox}{{2.28}{69}{XX\relax }{figure.caption.56}{}}
+\newlabel{fig:MOFA_CLL_Cox@cref}{{[figure][28][2]2.28}{69}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.8.5}Imputation of missing values}{69}{subsubsection.2.6.8.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.29}{\ignorespaces Evaluation of imputation performance in the drug response assay of the CLL data. The y-axis shows averages of the mean-squared error across 15 trials for increasing fractions of missing data (x-axis). Two experiments were considered: (a) values missing at random and (b) entire assays missing at random. Error bars represent standard deviations.\relax }}{70}{figure.caption.57}}
+\newlabel{fig:MOFA_imputation}{{2.29}{70}{Evaluation of imputation performance in the drug response assay of the CLL data. The y-axis shows averages of the mean-squared error across 15 trials for increasing fractions of missing data (x-axis). Two experiments were considered: (a) values missing at random and (b) entire assays missing at random. Error bars represent standard deviations.\relax }{figure.caption.57}{}}
+\newlabel{fig:MOFA_imputation@cref}{{[figure][29][2]2.29}{70}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.9}Application to single-cell multi-omics}{70}{subsection.2.6.9}}
+\newlabel{section:mofa_scmt}{{2.6.9}{70}{Application to single-cell multi-omics}{subsection.2.6.9}{}}
+\newlabel{section:mofa_scmt@cref}{{[subsection][9][2,6]2.6.9}{70}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.30}{\ignorespaces XX\relax }}{72}{figure.caption.58}}
+\newlabel{fig:MOFA_scMT}{{2.30}{72}{XX\relax }{figure.caption.58}{}}
+\newlabel{fig:MOFA_scMT@cref}{{[figure][30][2]2.30}{72}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.31}{\ignorespaces XX\relax }}{73}{figure.caption.59}}
+\newlabel{fig:MOFA_scMT2}{{2.31}{73}{XX\relax }{figure.caption.59}{}}
+\newlabel{fig:MOFA_scMT2@cref}{{[figure][31][2]2.31}{73}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.32}{\ignorespaces XX\relax }}{73}{figure.caption.60}}
+\newlabel{fig:MOFA_scMT_clustering}{{2.32}{73}{XX\relax }{figure.caption.60}{}}
+\newlabel{fig:MOFA_scMT_clustering@cref}{{[figure][32][2]2.32}{73}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.10}Open perspectives}{74}{subsection.2.6.10}}
 \@setckpt{Chapter2/mofa}{
-\setcounter{page}{71}
-\setcounter{equation}{23}
+\setcounter{page}{76}
+\setcounter{equation}{26}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -122,12 +116,12 @@ lays the time required for convergence. The x-axis displays the value of the dim
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{2}
-\setcounter{section}{12}
+\setcounter{section}{6}
 \setcounter{subsection}{10}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{49}
+\setcounter{figure}{32}
 \setcounter{table}{0}
 \setcounter{@pps}{0}
 \setcounter{@ppsavesec}{0}
@@ -135,7 +129,7 @@ lays the time required for convergence. The x-axis displays the value of the dim
 \setcounter{parentequation}{0}
 \setcounter{Item}{0}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{44}
+\setcounter{bookmark@seq@number}{72}
 \setcounter{float@type}{16}
 \setcounter{algorithm}{0}
 \setcounter{ContinuedFloat}{0}
@@ -150,7 +144,7 @@ lays the time required for convergence. The x-axis displays the value of the dim
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{122}
+\setcounter{instcount}{440}
 \setcounter{maxnames}{3}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}

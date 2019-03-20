@@ -1,12 +1,79 @@
 \thispagestyle {empty}
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \contentsline {chapter}{\numberline {1}Joint profiling of chromatin accessibility DNA methylation and transcription in single cells}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Description of the experimental protocol}{2}{section.1.1}
-\contentsline {section}{\numberline {1.2}Description of the data processing pipeline}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}Validation}{3}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Coverage}{3}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Consistency with previous studies}{5}{subsection.1.3.2}
-\contentsline {section}{\numberline {1.4}Identification of genomic elements with coordinated variability across molecular layers}{8}{section.1.4}
-\contentsline {section}{\numberline {1.5}Inference of non-linear chromatin accessibility profiles at the base pair resolution}{10}{section.1.5}
-\contentsline {section}{\numberline {1.6}Characterisation of epigenome dynamics along a developmental trajectory}{14}{section.1.6}
-\contentsline {section}{\numberline {1.7}Open perspectives}{15}{section.1.7}
+\contentsline {section}{\numberline {1.1}Introduction to single-cell (multi-) omics sequencing}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Single-cell RNA sequencing}{1}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Single-cell sequencing of the epigenome}{3}{subsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.2.1}DNA methylation}{3}{subsubsection.1.1.2.1}
+\contentsline {subsubsection}{\numberline {1.1.2.2}Chromatin accessibility}{5}{subsubsection.1.1.2.2}
+\contentsline {subsection}{\numberline {1.1.3}Multi-modal single-cell sequencing}{8}{subsection.1.1.3}
+\contentsline {section}{\numberline {1.2}scNMT-seq enables joint profiling of chromatin accessibility, DNA methylation and RNA expression in single cells}{10}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Description of the experimental protocol}{10}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Description of the data processing pipeline}{12}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Validation}{12}{subsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.3.1}Coverage}{12}{subsubsection.1.2.3.1}
+\contentsline {subsubsection}{\numberline {1.2.3.2}Consistency with previous studies}{14}{subsubsection.1.2.3.2}
+\contentsline {subsection}{\numberline {1.2.4}Identification of genomic elements with coordinated variability across molecular layers}{17}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.5}Inference of non-linear chromatin accessibility profiles at single nucleotide resolution}{20}{subsection.1.2.5}
+\contentsline {subsection}{\numberline {1.2.6}Characterisation of epigenome dynamics along a developmental trajectory}{24}{subsection.1.2.6}
+\contentsline {section}{\numberline {1.3}Open perspectives}{25}{section.1.3}
+\contentsline {chapter}{\numberline {2}Integrative analysis of single-cell multi-modal data}{27}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{27}{section.2.1}
+\contentsline {section}{\numberline {2.2}Probabilistic modelling}{28}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Maximum likelihood inference}{28}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Bayesian inference}{28}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Deterministic approaches for Bayesian inference}{29}{subsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3.1}Laplace approximation}{30}{subsubsection.2.2.3.1}
+\contentsline {subsection}{\numberline {2.2.4}Variational inference}{30}{subsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.4.1}Mean-field variational inference}{32}{subsubsection.2.2.4.1}
+\contentsline {subsubsection}{\numberline {2.2.4.2}Fixed-form variational inference}{33}{subsubsection.2.2.4.2}
+\contentsline {paragraph}{Black box variational inference}{33}{section*.27}
+\contentsline {paragraph}{Reparametrization gradients variational inference}{33}{section*.28}
+\contentsline {subsection}{\numberline {2.2.5}Expectation Propagation}{34}{subsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.5.1}Open perspectives}{35}{subsubsection.2.2.5.1}
+\contentsline {section}{\numberline {2.3}Graphical notations for probabilistic models}{36}{section.2.3}
+\contentsline {section}{\numberline {2.4}Latent variable models for genomics}{36}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}General mathematical formulation}{36}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Principal component Analysis}{37}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Probabilistic Principal Component Analysis and Factor Analysis}{39}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Bayesian Principal Component Analysis and Bayesian Factor Analysis}{40}{subsection.2.4.4}
+\contentsline {subsubsection}{\numberline {2.4.4.1}Hierarchical priors: Automatic relevance determination}{41}{subsubsection.2.4.4.1}
+\contentsline {subsubsection}{\numberline {2.4.4.2}Hierarchical priors: Spike-and-slab prior}{42}{subsubsection.2.4.4.2}
+\contentsline {section}{\numberline {2.5}Multi-view factor analysis models}{43}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Canonical Correlation Analysis}{44}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Probabilistic Canonical Correlation Analysis}{45}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Bayesian Canonical Correlation Analysis}{46}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Group Factor Analysis}{47}{subsection.2.5.4}
+\contentsline {subsubsection}{\numberline {2.5.4.1}Similar approaches}{48}{subsubsection.2.5.4.1}
+\contentsline {subsubsection}{\numberline {2.5.4.2}Extensions}{48}{subsubsection.2.5.4.2}
+\contentsline {section}{\numberline {2.6}Multi-Omics Factor Analysis: a framework for unsupervised integration of multi-omics data sets}{50}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Model description}{50}{subsection.2.6.1}
+\contentsline {subsubsection}{\numberline {2.6.1.1}Interpretation of the factors}{50}{subsubsection.2.6.1.1}
+\contentsline {subsubsection}{\numberline {2.6.1.2}Interpretation of the loadings}{51}{subsubsection.2.6.1.2}
+\contentsline {subsubsection}{\numberline {2.6.1.3}Interpretation of the noise}{51}{subsubsection.2.6.1.3}
+\contentsline {subsubsection}{\numberline {2.6.1.4}Missing values}{51}{subsubsection.2.6.1.4}
+\contentsline {subsubsection}{\numberline {2.6.1.5}Prior distributions for the factors and the loadings}{51}{subsubsection.2.6.1.5}
+\contentsline {subsection}{\numberline {2.6.2}Downstream analysis}{52}{subsection.2.6.2}
+\contentsline {subsubsection}{\numberline {2.6.2.1}Inference}{54}{subsubsection.2.6.2.1}
+\contentsline {subsection}{\numberline {2.6.3}Monitoring convergence}{54}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Model selection and consistency across random initilizations}{55}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6.5}Learning the number of factors}{56}{subsection.2.6.5}
+\contentsline {subsection}{\numberline {2.6.6}Modelling and inference with non-Gaussian data}{56}{subsection.2.6.6}
+\contentsline {subsection}{\numberline {2.6.7}Model validation with simulated data}{59}{subsection.2.6.7}
+\contentsline {subsubsection}{\numberline {2.6.7.1}Recovery of the latent space}{59}{subsubsection.2.6.7.1}
+\contentsline {subsubsection}{\numberline {2.6.7.2}Group-wise sparsity on the loadings}{60}{subsubsection.2.6.7.2}
+\contentsline {subsubsection}{\numberline {2.6.7.3}Feature-wise sparsity on the loadings}{61}{subsubsection.2.6.7.3}
+\contentsline {subsubsection}{\numberline {2.6.7.4}Non-gaussian likelihoods}{62}{subsubsection.2.6.7.4}
+\contentsline {subsubsection}{\numberline {2.6.7.5}Scalability}{63}{subsubsection.2.6.7.5}
+\contentsline {subsection}{\numberline {2.6.8}Application to chronic lymphocytic leukaemia}{64}{subsection.2.6.8}
+\contentsline {subsubsection}{\numberline {2.6.8.1}Model overview}{65}{subsubsection.2.6.8.1}
+\contentsline {subsubsection}{\numberline {2.6.8.2}Characterisation of Factor 1}{66}{subsubsection.2.6.8.2}
+\contentsline {subsubsection}{\numberline {2.6.8.3}Characterisation of other Factors}{68}{subsubsection.2.6.8.3}
+\contentsline {subsubsection}{\numberline {2.6.8.4}Prediction of clinical outcomes}{68}{subsubsection.2.6.8.4}
+\contentsline {subsubsection}{\numberline {2.6.8.5}Imputation of missing values}{69}{subsubsection.2.6.8.5}
+\contentsline {subsection}{\numberline {2.6.9}Application to single-cell multi-omics}{70}{subsection.2.6.9}
+\contentsline {subsection}{\numberline {2.6.10}Open perspectives}{74}{subsection.2.6.10}
+\contentsline {chapter}{\numberline {3}Single cell multi-omics profiling reveals a hierarchical epigenetic landscape during mammalian germ layer specification}{77}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{77}{section.3.1}
+\contentsline {chapter}{\numberline {4}A scalable statistical framework for the integrative analysis of single-cell -omics across experiments and data modalities}{79}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{79}{section.4.1}

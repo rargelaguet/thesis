@@ -49,11 +49,11 @@ Following the cell cycle example from above, we expect genes that are upregulate
 \subsubsection{Interpretation of the noise}
 The use of a probabilistic framework allows the model to explicitly disentangle the signal (i.e. the explained variance) from the noise (i.e. unexplained variance). Large values of $\tau_d^m$ indicate high certainity on the observations for the feature $d$ in view $m$, as predicted by the latent variables. In contrast, small values of $\tau_d^m$ are indicative of low predictive power by the latent variables.
 
-\subsubsection{Missing values} \label{mofa:missing_values}
+\subsubsection{Missing values} \label{section:mofa_missing_values}
 The probabilistic formalism naturally accounts for incomplete data matrices, as missing observations do not intervene in the likelihood.\\
 In practice, we implement this using memory-efficient binary masks $\mathcal{O}^m \in \mathbb{R}^{N\times D_m}$ for each view $m$, such that $\mathcal{O}_{n,d} = 1$ when feature $d$ is observed for sample $n$, 0 otherwise. 
 
-\subsubsection{Prior distributions for the factors and the loadings}  \label{mofa:loadings}
+\subsubsection{Prior distributions for the factors and the loadings}  \label{section:mofa_loadings}
 The key determinant of the model is the regularization used on the prior distributions of the factors and the weights.\\
 For the factors, we define an isotropic Gaussian prior:
 \begin{equation}
@@ -117,7 +117,7 @@ The downstream functionalities implemented in MOFA are highlighted in \Cref{fig:
 \begin{figure}[H]
 	\centering
 	\input{graphical_models/mofa}
-	\caption{Graphical model for MOFA. The white circles represent hidden variables that are infered by the model, whereasa the grey circles represent the observed variables. There are a total of four plates, each one representing a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in view $m$}
+	\caption{Graphical model for MOFA. The white circles represent hidden variables that are infered by the model, whereas the grey circles represent the observed variables. There are a total of four plates, each one representing a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in the $m$-th view. The use of transparency in the top left nodes is intentional and becomes clear in Chapter 4 where we implement a spike-and-slab prior on the factors.}
 	\label{fig:MOFA_graphical_model}
 \end{figure}
 
@@ -327,7 +327,7 @@ As expected, we observe that the spike-and-slab prior induces more zero-inflated
 \end{figure}
 
 
-\subsubsection{Non-gaussian likelihoods}
+\subsubsection{Non-gaussian likelihoods}  \label{section:mofa_nongaussian}
 A key improvement of MOFA with respect to previous methods is the use of non-Gaussian likelihoods to integrate multiple data modalities. As described in section XX, we implemented a Bernoulli likelihood to model binary data and a Poisson likelihood to model count data.\\
 To validate both likelihood models, we simulated binary and count data using the generative model and we fit two sets of models for each data type: a group of models with a Gaussian likelihood and a group of models with a Bernoulli or Poisson likelihood, respectively.\\
 We observe that although both likelihoods are able to recover the true number of factors, the models with the non-Gaussian likelihoods clearly result in a better fit to the data (\Cref{fig:MOFA_nongaussian_binary,fig:MOFA_nongaussian_poisson}).
@@ -421,14 +421,14 @@ On the drug response data the loadings highlight kinase inhibitors targeting the
 \subsubsection{Prediction of clinical outcomes}
 
 
-We conjectured that the integration of the multiple molecular layers could allow a better prediction of clinical response compared to using single omics or naïve data integration.\\
-To evaluate the utility of the MOFA factors as predictors of clinical outcomes we fit Cox regression models \cite{Cox1972} using the patients’ time to next treatment (TTT) as a response variable. Two types of analysis were performed: a univariate analysis where each Factor was independently associated with TTT, and a multivariate analysis where the combination of all Factors were used to predict TTT.\\
+We conjectured that the integration of the multiple molecular layers could allow a better prediction of clinical response compared to using single omics or naive data integration.\\
+To evaluate the utility of the MOFA factors as predictors of clinical outcomes we fit Cox regression models \cite{Cox1972} using the patients' time to next treatment (TTT) as a response variable. Two types of analysis were performed: a univariate analysis where each Factor was independently associated with TTT, and a multivariate analysis where the combination of all Factors were used to predict TTT.\\
 
 (CHECK) In the univariate Cox models, we observe  that Factor 1 (IGHV status), Factor 7 (associated with chemo-immunotherapy treatment prior to sample collection) and Factor 8 (Wnt signalling) were significant predictors of TTT. Accordingly, when splitting patients into binary groups based on the corresponding factor values, we observe clear differences in the survival curves.\\
 
-In the multivariate Cox model, MOFA (Harrell’s C-Index C=0.78) outperformed all other input settings, including single-omic data (C=0.68-0.72), individual genetic markers (C=0.66) as well the concatenated data matrix (C=0.74).
+In the multivariate Cox model, MOFA (Harrell's C-Index C=0.78) outperformed all other input settings, including single-omic data (C=0.68-0.72), individual genetic markers (C=0.66) as well the concatenated data matrix (C=0.74).
 
-%As predictors, we included the top 10 principal components calculated on the data for each single view, a concatenated data set (“all”) as well as the 10 MOFA factors. Missing values in a view were set to the feature-wise mean. In a second set of models, we used the complete set of all features in a view with a ridge penalty in the Cox model as imple- mented in the R package glmnet. For the Kaplan–Meier plots, an optimal cut-point on each factor was determined to define the two groups using the maximally selected rank statistics as implemented in the R package survminer with P-values based on a log-rank test between the resulting groups.
+%As predictors, we included the top 10 principal components calculated on the data for each single view, a concatenated data set ('all') as well as the 10 MOFA factors. Missing values in a view were set to the feature-wise mean. In a second set of models, we used the complete set of all features in a view with a ridge penalty in the Cox model as imple- mented in the R package glmnet. For the Kaplan-Meier plots, an optimal cut-point on each factor was determined to define the two groups using the maximally selected rank statistics as implemented in the R package survminer with P-values based on a log-rank test between the resulting groups.
 
 \begin{figure}[H]
 	\centering 	
@@ -499,21 +499,21 @@ Jointly, the combination of Factors 1 and 2 reconstruct the coordinated changes 
 
 \subsection{Open perspectives}
 
-MOFA addresses important challenges for the integrative analysis of multi-omics applications. Yet, MOFA is not free of limitations and there are multiple lines of improvement, some of which we followed in Chapter 4.\\
+MOFA addresses important challenges for the integrative analysis of multi-omics applications. Yet, the model is not free of limitations and there are open possibilities for future research, some of which we followed in Chapter 4.\\
 \begin{itemize}
 
-	\item Linearity: this is an assumption that is critical for obtaining interpretable feature loadings. Yet, there is often a trade-off between explanatory power and interpretability, particularly in computational biology where the drivers of variation result from the complex interaction between multiple components. As such, non-linear approaches, including deep neural networks or variational autoencoders have shown promising results when it comes to dimensionality reduction \cite{Lin2017,Ding2018,Lopez2018}, batch correction\cite{Lopez2018}, denoising \cite{Eraslan2019} or imputation \cite{Lin2016}. Notably, few non-linear multi-view factor analysis models exist \cite{Damianou2016}, and it could be an interesting line of research.
+	\item \textbf{Linearity}: this is an assumption that is critical for obtaining interpretable feature loadings. Yet, as in any machine learning technique, there is often a trade-off between explanatory power and interpretability\cite{XX}. Non-linear appproaches are particularly appealing in biology, where the drivers of variation often result from the complex (non-linear) interaction between potentially simple (and linear) processes. As such, non-linear approaches, including deep neural networks or variational autoencoders have shown promising results when it comes to dimensionality reduction \cite{Lin2017,Ding2018,Lopez2018}, batch correction\cite{Lopez2018}, denoising \cite{Eraslan2019} or imputation \cite{Lin2016}. Notably, few non-linear multi-view factor analysis models exist \cite{Damianou2016}, making it an interesting line of research.
 
-	\item Scalability: the size of biological datasets is rapidly increasing, particularly in the field of single cell sequencing, with some studies reporting more than a milion cells\cite{Svensson2018,Cao2019}. \\
-	When compared to previous methods that make use of maximum likelihood (with grid-search) or sampling-based Bayesian methods,  the variatonal framework implemented in MOFA has yield a notable improvement in scalability. Yet, in its vanilla form, variational inference becomes prohibitively slow with very large datasets \cite{Hoffman2013,Blei2016,Hoffman2014}, hence motivating the development of even more efficient inference frameworks that potentially scale to milions of samples. This line of research is followed in Chapter 4, with the development of a stochastic version of the variational inference algorithm.
+	\item \textbf{Scalability}: the size of biological datasets is rapidly increasing, particularly in the field of single cell sequencing, with some studies reporting more than a milion cells\cite{Svensson2018,Cao2019}. \\
+	When comparing to previous methods that make use of maximum likelihood or sampling-based Bayesian methods, the variatonal framework implemented in MOFA yields a notable improvement in scalability. Yet, in its vanilla form, variational inference becomes prohibitively slow with very large datasets \cite{Hoffman2013,Blei2016,Hoffman2014}, hence motivating the development of even more efficient inference schemes that potentially scale to milions of samples. This line of research is followed in Chapter 4, with the development of a stochastic version of the variational inference algorithm.
 
-	\item Sample independence assumption and generalisations to multi-group structures: the sparsity assumptions in MOFA are based on the principle that features are structured into well-defined views, and that some factors may explain variability in only subsets of views, resulting in a structured sparsity as illustrated in \Cref{fig:MOFA}. Following the same logic, many studies contain structured samples, either as multiple experiments, conditions or data sets. The integration of multiple conditions or studies requires breaking the assumption of independent samples and introducing a prior that captures the existence of different groups, such that some factors are allowed to be active in subsets of groups. This line of research is followed in Chapter 4, with the introduction of a symmetric multi-group and multi-view sparsity prior.
+	\item \textbf{Sample independence assumption and generalisations to multi-group structures}: the sparsity assumptions in MOFA are based on the principle that features are structured into well-defined views. As such, the activity of the infered factors is also expected to be structured, so that different factors explain variability in different subsets of views (\Cref{fig:MOFA}). Following the same logic, many studies contain structured samples, as either multiple experiments or conditions. The integration of multiple sample groups requires breaking the assumption of independent samples and introducing a prior that captures the structured sparsity at the sample level. This line of research is followed in Chapter 4, with the introduction of a symmetric multi-group and multi-view sparsity prior.
 
-	\item Tailored likelihoods for single-cell analysis: MOFA enables the modular extension to arbitrary non-gaussian likelihoods, provided that they can be locally bounded and integrated into the variational framework (see \Cref{section:mofa_ngaussian}). New likelihood models such as zero-inflated negative binomial distributions \cite{Risso2018} could make MOFA more suited to the analysis of single-cell data.
+	\item \textbf{Tailored likelihoods for single-cell analysis}: MOFA enables the modular extension to arbitrary non-gaussian likelihoods, provided that they can be locally bounded and integrated into the variational framework (see \Cref{section:mofa_ngaussian}). New likelihood models such as zero-inflated negative binomial distributions \cite{Risso2018} could make MOFA more suited to the analysis of single-cell data.
 
-	\item Bayesian treatment of predictions: in the current implementation, after inference we extract point estimates for each variable, namely expectations. While convienient for plotting, this ignores the uncertainity associated with the estimates, one of the main strength of Bayesian methods. Future extensions could attempt a more comprehensive Bayesian treatment that propagates uncertainity in the downstream analyses, mainly when it comes to making predictions and imputation \cite{Gelman2013}.
+	\item \textbf{Bayesian treatment of predictions}: in the current implementation, after inference we extract point estimates for each variable, namely expectations. While convienient for plotting, this ignores the uncertainity associated with the estimates, one of the main strength of Bayesian methods. Future extensions could attempt a more comprehensive Bayesian treatment that propagates uncertainity in the downstream analyses, mainly when it comes to making predictions and imputation \cite{Gelman2013}.
 
-	\item Incorporation of prior information: an unsupevised approach is appealing for discovering the principal axes of variation. however, sometimes this can yield challenges in the interpretation of factors. Future extensions could exploit the rich information encoded in pathway databases, similar to the approach proposed in \cite{Buettner2017}.
+	\item \textbf{Incorporation of prior information}: an unsupevised approach is appealing for discovering the principal axes of variation, but sometimes this can yield challenges in the interpretation of factors. Future extensions could exploit the rich information encoded in pathway databases, similar to the approach proposed in \cite{Buettner2017}.
 
 \end{itemize}
 

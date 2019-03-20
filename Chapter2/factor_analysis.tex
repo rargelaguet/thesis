@@ -109,7 +109,7 @@ All together, this leads to a normally-distributed likelihood:
 	p(\bfY|\bfW,\bfZ,\sigma) = \prod_{n=1}^{N} \prod_{d=1}^{D} \Ndist{y_{n,d}}{\bfw_{,:k}^T \bfz_{n,:},\sigma^2 \I}
 \end{equation}
 
-The corresponding graphical model is displayed in \Cref{fig:pPCA}.
+The corresponding graphical model is:
 
 \begin{figure}[H]
 	\centering
@@ -129,22 +129,23 @@ Interestingly, the EM solution of probabilistic PCA lies in the same subspace th
 
 The full Bayesian treatment of PCA requires the specification of prior probability distributions for all unobserved variables:
 \begin{align*}
-	p(z_{nk}) &= \Ndist{z_{nk}}{0,1} \\
-	p(w_{dk}) &= \Ndist{w_{dk}}{0,1} \\
+	p(\bfZ) &= \prod_{n=1}^{N} \prod_{k=1}^{K} \Ndist{z_{nk}}{0,1} \\
+	p(\bfW) &= \prod_{d=1}^{D} \prod_{k=1}^{K} \Ndist{w_{dk}}{0,1} \\
 	p(\epsilon) &= \Ndist {\epsilon}{0,\tau^{-1}} \\
 	p(\tau) &= \Gdist{\tau}{a_0,b_0}
 \end{align*}
 where $\tau$ is the precision (inverse of the variance) of the noise term. A generalisation to Bayesian Factor Analysis follows by allowing a separate noise term per feature:
 \begin{align*}
-	p(\tau_d) &= \Ndist {\epsilon_d}{0,\tau_d^{-1}} \\
-	p(\tau_d) &= \Gdist{\tau_d}{a_0,b_0}
+	p(\bepsilon) &= \prod_{d=1}^{D} \Ndist {\epsilon_d}{0,\tau_d^{-1}} \\
+	p(\btau) &= \prod_{d=1}^{D} \Gdist{\tau_d}{a_0,b_0}
 \end{align*}
 where $a_0$ and $b_0$ are fixed hyperparameters. As in \Cref{eq:ppca_lik}, this results in a Normal likelihood:
 \[
 	p(\bfY|\bfW,\bfZ,\btau) = \prod_{n=1}^{N} \prod_{d=1}^{D} \Ndist{y_{nd}}{\bfw_{d}^T \bfz_{n},\tau_d}
 \]
 
-The graphical model for Bayesian Factor Analysis is shown in \Cref{fig:bayesianFA}.
+The corresponding graphical model is:
+
 \begin{figure}[H] 
 	\centering
 	\input{graphical_models/bayesianFA}
@@ -163,7 +164,7 @@ In the context of Factor Analysis, one the first sparsity priors to be proposed 
 	p(\balpha) = \prod_{k=1}^{K} \Gdist{\alpha_k}{a_0^\alpha, b_0^\alpha}\\
 \end{equation*}
 The aim of this prior is two-fold. First, the zero-mean normal distribution specifies that, \textit{a priori}, no information is available and all features are \textit{inactive}. When exposed to some data, the posterior distribution for $\bfW$ will be estimated by weighting the contribution from the likelihood, potentially allowing features to escape from the zero-centered prior (\Cref{fig:ard}).\\
-Second, performing inference on the variable $\balpha = \{ \alpha_1, \cdots, \alpha_k \}$ enables the model to discard inactive factors. To understand this, let us assume that only $K=5$ true factors exist, but the model is initialised with $K=20$ factors. In such case, inactive factors can be prunned out by driving the corresponding $\alpha_k$ to infinity. In turn, this causes the posterior $p(\bfW_{:,k}|\bfY)$ to be sharply peaked at zero, resulting in the inactivation of all its weights \Cref{fig:hinton}.
+Second, performing inference on the variable $\balpha = \{ \alpha_1, \cdots, \alpha_k \}$ enables the model to discard inactive factors. To understand this, let us assume that only $K=5$ true factors exist, but the model is initialised with $K=20$ factors. In such case, inactive factors can be prunned out by driving the corresponding $\alpha_k$ to infinity. In turn, this causes the posterior $p(\bfw_{:,k}|\bfY)$ to be sharply peaked at zero, resulting in the inactivation of all its weights \Cref{fig:hinton}.
 
 \begin{figure}[H] \begin{center}
 	\includegraphics[width=0.7\textwidth]{Chapter2/Figs/ard}
@@ -190,6 +191,8 @@ A sparse generalisation of the Factor Analysis model proposed above can be achie
 	p(\alpha_k) &= \Gdist{\alpha_k}{a_0^\alpha, b_0^\alpha}
 \end{align}
 
+The corresponding graphical model is:
+
 \begin{figure}[H] \begin{center}
 	\input{graphical_models/bayesian_sparseFA}
 	\label{fig:bayesianFA}
@@ -211,7 +214,7 @@ A tempting approach to circumvent the multi-view learning problem is to simply c
 
 A comprehensive review of multi-view machine learning methods can be found in \cite{Xu2013} and a more genomics-based perspective can be found in \cite{Ritchie2015}. For the purpose of this thesis, we will describe multi-view methods based on latent variable models.
 
-\subsection{Canonical correlation analysis} \label{cca}
+\subsection{Canonical Correlation Analysis} \label{cca}
 Canonical Correlation Analysis (CCA) is a simple extension of PCA to find linear components that capture correlations between two datasets \cite{Hotteling1936,Hardle2007}.\\
 Given two data matrices $\bfY_1 \in \R^{N \times D_1}$ and $\bfY_2 \in \R^{N \times D_2}$ CCA finds a set of linear combinations $\bfU \in \R^{D_1 \times K}$ and $\bfV \in \R^{D_2 \times K}$ with maximal cross-correlation.
 For the first pair of canonical variables, the optimisation problem is:
@@ -225,7 +228,7 @@ Given the similarity with PCA, both methods share statistical properties, includ
 Because of its simplicity and efficient computation, CCA has widespread use as a dimensionality reduction technique \cite{Hardle2007}. Yet, as expected, CCA suffers from the same pitfalls as PCA: difficulties in selecting the number of components, lack of sparsity in the solutions and absence of probabilistic formulation. In addition, CCA have been shown to overfit for datasets where $D>>N$ \cite{McCabe2018,Guo2016}. Hence, probabilistic versions with sparsity assumptions that reduce overfitting and improve interpretability followed.
 
 
-\subsection{Probabilistic Canonical correlation analysis} \label{section_probabilisticCCA}
+\subsection{Probabilistic Canonical Correlation Analysis} \label{section_probabilisticCCA}
 
 Following the derivation of probabilistic PCA \cite{Tipping1999}, a similar effort enabled a probabilistic formulation of CCA as a generative model \cite{Bach2005}.\\
 In this model, the two matrix of observations $\bfY^{1}$ and $\bfY^{2}$ are decomposed in terms of two loading matrices $\bfW^{1}$ and $\bfW^{2}$ but a joint latent matrix $\bfZ$:
@@ -236,17 +239,16 @@ In this model, the two matrix of observations $\bfY^{1}$ and $\bfY^{2}$ are deco
 With the following prior probability distributions:
 \begin{align*}
 	p(z_{nk}) &= \Ndist{z_{nk}}{0,1} \\
-	p(\epsilon^{1}) &= \Ndist {\epsilon^{1}}{\sigma_{1}^{2}} \\
-	p(\epsilon^{2}) &= \Ndist {\epsilon^{2}}{\sigma_{2}^{2}} \\
+	p(\epsilon^{1}) &= \Ndist {\epsilon^{1}}{\tau_{1}^{-1}} \\
+	p(\epsilon^{2}) &= \Ndist {\epsilon^{2}}{\tau_{2}^{-1}}
 \end{align*}
-As in \cite{Tipping1999}, the loadings and the variance of the noise are assumed to be non-probabilistic parameters, whereas the factors are probabilistic unobserved variables (\Cref{fig:graphical_CCA}). This yields the following likelihood functions:
-\begin{align*} \label{eq:probabilistic_cca_likelihood}
-	p(\bfY^{1}|\bfW^{1},\bfZ,\sigma_{1}) &= \prod_{n=1}^{N} \prod_{d=1}^{D_1} \Ndist{y^{1}_{n,d}}{(\bfw_{:,k}^{1})^T \bfz_{n},\sigma_{1}^2} \\
-	p(\bfY^{2}|\bfW^{2},\bfZ,\sigma_{2}) &= \prod_{n=1}^{N} \prod_{d=1}^{D_2} \Ndist{y^{2}_{n,d}}{(\bfw_{:,k}^{2})^T \bfz_{n},\sigma_{2}^2}
-\end{align*}
-Notice that the observations for both data sets are generated from the same set of latent variables $\bfZ$. This ensures that the model is focused on capturing the variation associated with cross-correlated groups of features.\\
+As in \cite{Tipping1999}, the loadings and the variance of the noise are assumed to be non-probabilistic parameters, whereas the factors are probabilistic unobserved variables. This yields the following likelihood functions:
+\begin{align} \label{eq:probabilistic_cca_likelihood}
+	p(\bfY^{1}|\bfW^{1},\bfZ,\tau_{1}) &= \prod_{n=1}^{N} \prod_{d=1}^{D_1} \Ndist{y^{1}_{n,d}}{(\bfw_{:,k}^{1})^T \bfz_{n},\tau_{1}^{-1}} \\
+	p(\bfY^{2}|\bfW^{2},\bfZ,\tau_{2}) &= \prod_{n=1}^{N} \prod_{d=1}^{D_2} \Ndist{y^{2}_{n,d}}{(\bfw_{:,k}^{2})^T \bfz_{n},\tau_{2}^{-1}} \nonumber
+\end{align}
 
-Analogously to probabilistic PCA, the expected value of the posterior distributions $p(\bfZ|\bfY^{1},\bfY^{2})$ span the same subspace as standard CCA \cite{Bach2005}. Nonetheless, this formulation set off a broad range of principled extensions in larger probabilistic models.
+The corresponding graphical model is:
 
 \begin{figure}[H] \begin{center}
 	\input{graphical_models/CCA}
@@ -254,7 +256,12 @@ Analogously to probabilistic PCA, the expected value of the posterior distributi
 	\caption{Graphical model for probabilistic Canonical Correlation Analysis}
 \end{center} \end{figure}
 
-\subsection{Bayesian Canonical correlation analysis} \label{section:bayesian_cca}
+Notice that the observations for both data sets are generated from the same set of latent variables $\bfZ$. This ensures that the model is focused on capturing the variation associated with cross-correlated groups of features.\\
+
+Analogously to probabilistic PCA, the expected value of the posterior distribution $p(\bfZ|\bfY^{1},\bfY^{2})$ span the same subspace as standard CCA \cite{Bach2005}. Nonetheless, this formulation enables a broad range of principled extensions into larger probabilistic models.
+
+
+\subsection{Bayesian Canonical Correlation Analysis} \label{section:bayesian_cca}
 A fully Bayesian treatment of CCA followed based on exactly the same principle presented in \Cref{section:bayesian_pca} by introducing prior distributions to all unobserved variables \cite{Wang2007,Klami2013}:
 \begin{align*} 
 	p(\bfZ) &= \prod_{n=1}^{N} \prod_{k=1}^{K} \Ndist{z_{nk}}{0,1} \\
@@ -266,6 +273,8 @@ A fully Bayesian treatment of CCA followed based on exactly the same principle p
 \end{align*}
 Resulting in the same likelihood model as in \Cref{eq:probabilistic_cca_likelihood}. Yet, notice that an ARD is introduced per factor, allowing an automatic inference of the dimensionality in the latent subspace.
 Also, there is some flexibility in the definition of noise. An independent noise term can be defined per view or per per feature. One could also model correlated noise by generalising the distribution to a multivariate gaussian with full-rank covariance. \cite{Wang2007,Klami2013}.\\
+
+The corresponding graphical model is:
 
 \begin{figure}[H] \begin{center}
 	\input{graphical_models/bayesianCCA}
@@ -286,7 +295,7 @@ As expected, in practice this yields a more sparse solution than traditional CCA
 \subsection{Group Factor Analysis}
 
 Group Factor Analysis (GFA) is the natural generalisation of Bayesian Canonical Correlation Analysis to an arbitrary number of views.
-The original idea was originally presented in \cite{Virtanen2012} and a series of generalisations followed, tailored with specific assumptions for different applications \cite{XX}.\\
+The original idea was originally presented in \cite{Virtanen2012} and a series of generalisations followed, tailored with specific assumptions for different applications \cite{Klami2015,Leppaaho2017,Bunte2016,Khan2014,Zhao2016,Remes2015}.\\
 In this section we will outline the core principle of GFA and describe some of the applications that followed.\\
 
 Given a data set of $M$ views $\bfY_1, \cdots, \bfY_M$, the task of GFA is to find $K$ factors that capture the inter-variability between views as well as the intra-variability within views. In other words, some factors should explain variance across multiple views whereas some factors should explain variance within a single view.\\
@@ -298,29 +307,53 @@ The starting point from the model is Bayesian CCA \Cref{section:bayesian_cca}. G
 	& \cdots \\
 	\bfY^{M} &= \bfW^{3} \bfZ + \epsilon^{3}
 \end{align*}
-The key in learning the GFA solution lies on the sparsity structure of the loadings. If using the same ARD prior per factor as in Bayesian CCA, the factors would be exclusively restricted to be active (or inactive) across all views. In GFA, however, the aim is to find components that capture intra-specific variation (active in a single view) and components that capture inter-specific dependencies (active in multiple views). This can be achieved by generalising the ARD sparsity as follows:
+The key in learning the GFA solution lies on the sparsity structure of the loadings. If using the same ARD prior per factor as in Bayesian CCA, the factors would be exclusively restricted to have the same activity across all views. In GFA, however, the aim is to find components that capture intra-specific variation (active in a single view) and components that capture inter-specific dependencies (active in multiple views). This can be achieved by generalising the ARD sparsity as follows:
 \begin{align}
 	p(\bfW) &= \prod_{m=1}^{M} \prod_{k=1}^{K} \Ndist{\bfw_{:,k}^m}{0,\frac{1}{\alpha_k^m}} \\
 	p(\balpha) &= \prod_{m=1}^{M} \prod_{k=1}^{K} \Gdist{\alpha_k^m}{a_0^\alpha, b_0^\alpha}
 \end{align}
-Effectively, setting an ARD prior per factor and group defines a matrix $\balpha \in \R^{M \times K}$ with four types of factors: (1)Inactive factors that do not explain variance in any view, such that all values $\balpha_k$ are large. (2) Fully shared factors that explain variance across all views, such that all values $\balpha_k$ are small. (3) Unique factors that explain variance in a single view, such that all values $\balpha_k$ are very large, except one. (4) Partially shared factors that explain variance in a subsets views, such that some values in $\balpha_k$ are large whereas others are small.\\
+Effectively, setting an ARD prior per factor and group defines a matrix $\balpha \in \R^{M \times K}$ with four types of factors: (1) Inactive factors that do not explain variance in any view, such that all values $\balpha_k$ are large. (2) Fully shared factors that explain variance across all views, such that all values $\balpha_k$ are small. (3) Unique factors that explain variance in a single view, such that all values $\balpha_k$ are very large, except one. (4) Partially shared factors that explain variance in a subsets views, such that some values in $\balpha_k$ are large whereas others are small.\\
 
 The following figure illustrates a representative GFA solution for three views:
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1.0\linewidth]{GFA}
-	\caption{(RE-PHRASE) Illustration of the group factor analysis for three views. The feature-wise concatenation of the data sets $\bfY_i$ is factorised as a product of the latent variables $\bfZ$ and factor loadings $\bfW$. The factor loadings are group-wise sparse, so that each factor is active (gray shading) only in some subset of views, or all of them. Reprinted from \cite{bayesian_gfa}.}
+	\caption{(RE-DO FIGURE) Illustration of the GFA solution for $M=3$. The data sets are concatenated into a single matrix $\bfY$, which is factorised into a product of the latent variable matrix $\bfZ$ and a concatenated loading matrix $\bfW$. The shade in $\bfW$ depicts the factor and view-wise sparsity, where gray shading indicates high activity (small $\alpha_m^k$ value) and no shading indicates low activity (large $\alpha_m^k$ value). Note that some factors are active across all views (top), some factors are active in subsets of views (middle) and some factors are active in a single view (bottom).}
 	\label{fig:intro:gfa}
 \end{figure}
 
-Finally, notice that if $M=1$ the model reduces to Bayesian PCA (\Cref{section:bayesian_pca}). However, if $M=2$ the model does not reduce to Bayesian CCA, because in the GFA setting some factors are also allowed to capture the intra-specific variability.
+Finally, notice that if $M=1$ the model reduces to Bayesian PCA (\Cref{section:bayesian_pca}). However, if $M=2$ the model does not reduce to Bayesian CCA, because in the GFA setting some factors are also allowed to capture intra-specific variability.
 
 \subsubsection{Similar approaches}
-% Y. Jia, M. Salzmann, and T. Darrell. Factorized la- tent spaces with structured sparsity. In Advances in Neural Information Processing Systems 23, pages 982–990, 2010.
+% Y. Jia, M. Salzmann, and T. Darrell. Factorized la- tent spaces with structured sparsity. In Advances in Neural Information Processing Systems 23, pages 982-990, 2010.
+
+% GFA extends multi-battery factor analysis (MBFA), introduced by McDonald [4] and Browne [5] as a generalization of inter-battery fac- tor analysis (IBFA)
+
+% Archambeau et al. [19] and Deleus et al. [20] extend CCA for M > 2, but instead of GFA they solve the more limited problem of multiple-battery factor analysis
+
+% The MBFA models provide one set of factors that describe the rela- tionships between all groups, and then model the varia- tion specific to each group either with a free covariance matrix or a separate set of factors for that group. Besides the multi-set extensions of CCA, also the probabilistic interpretation of sparse matrix factorization [21], and the JIVE model for integrated analysis of multiple data types [22], [23] belong to the family of MBFA models
 
 \subsubsection{Extensions}
-% Klami et al, 2014
-% Zhao et al, 2015
-% Remes et al, 2016
-% Leppaaho et al., 2017
+Multiple extensions from the initial GFA framework have been proposed:
+
+\begin{itemize}
+	\item Klami et al, 2015 \cite{Klami2015}: in the GFA framework outlined above, $\balpha \in \R^{M,K}$ is drawn from a flat gamma prior where views and factors are assumed independent. To encourage the model to find correlations between views, they specify a low-rank decomposition for $\balpha$:
+	\[
+		\log \balpha = \bfU \bfV^T + \bmu_{u}^T + \bmu_{v}^t
+	\]
+	with corresponding priors for $\bfU$ and $\bfV$. This representation directly captures correlations between the view activation profiles and is particularly useful when dealing with large number of views \cite{Klami2014}.
+
+	\item Zhao et al, 2016 \cite{Zhao2016}: in the GFA framework outlined above, $\bfW^M$ have no element-wise sparsity. In this study, they implemented a more sophisticated structured sparsity prior called the three parameter beta prior \cite{Armagan2011}. The advantage of this prior distribution is three-fold: (1) it regularises the matrix, globally, removing factors that do not explain variation in any view. (2) Shrinks columns $\bfw_{:,k}^{m}$ to obtain the desired factor and group-wise sparsity. (3) Introduces feature-wise sparsity for each element $w_{d,k}^{m}$
+ 
+	% \item Remes et al, 2015 \cite{Remes2015}: 
+
+	% \item Bunte et al, 2016 \cite{Bunte2016}:
+
+	% 	Biclustering is tradition- ally defined as simultaneously clustering both rows and columns in a data matrix
+	% his is done simi- larly to how Khan et al. (2014) produced variable-wise sparsity, but now for both variables and samples to produce biclusters. Namely we use the following spike and slab priors (Suvitaival et al. (2014) included sparsity for samples 
+
+	% 	We present a Bayesian approach for joint biclustering of multiple data sources
+
+
+\end{itemize}
 
