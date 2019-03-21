@@ -122,8 +122,7 @@ The downstream functionalities implemented in MOFA are highlighted in \Cref{fig:
 \end{figure}
 
 \subsubsection{Inference}
-To make the model scalable to large data sets we adopt a Variational inference framework with a structured mean field approximation. 
-A detailed overview is given in section XX, and details on the variational updates for the MOFA model are given in Appendix XX.\\
+To make the model scalable to large data sets we adopt a Variational inference framework with a structured mean field approximation. A detailed overview is given in \Cref{section:variational_inference}, and details on the variational updates for the MOFA model are given in Appendix XX.\\
 To enable efficient inference for non-Gaussian likelihoods we employ local bounds \cite{Jaakkola2000,Seeger2012}. This is described in detail in \Cref{section:mofa_ngaussian}
 
 \subsection{Monitoring convergence}
@@ -327,8 +326,8 @@ As expected, we observe that the spike-and-slab prior induces more zero-inflated
 \end{figure}
 
 
-\subsubsection{Non-gaussian likelihoods}  \label{section:mofa_nongaussian}
-A key improvement of MOFA with respect to previous methods is the use of non-Gaussian likelihoods to integrate multiple data modalities. As described in section XX, we implemented a Bernoulli likelihood to model binary data and a Poisson likelihood to model count data.\\
+\subsubsection{Non-gaussian likelihoods}  \label{section:mofa_nongaussian_results}
+A key improvement of MOFA with respect to previous methods is the use of non-Gaussian likelihoods to integrate multiple data modalities. As described in \Cref{section:mofa_ngaussian}, we implemented a Bernoulli likelihood to model binary data and a Poisson likelihood to model count data.\\
 To validate both likelihood models, we simulated binary and count data using the generative model and we fit two sets of models for each data type: a group of models with a Gaussian likelihood and a group of models with a Bernoulli or Poisson likelihood, respectively.\\
 We observe that although both likelihoods are able to recover the true number of factors, the models with the non-Gaussian likelihoods clearly result in a better fit to the data (\Cref{fig:MOFA_nongaussian_binary,fig:MOFA_nongaussian_poisson}).
 
@@ -366,7 +365,7 @@ This data set was selected for five main reasons.
 	\item The large number of cases to benchmark the speed of MOFA against other common integrative methods.
 	\item The rich literature in this type of cancer which provides a good resource for the interpretation of the factors.
 	\item The complex missing data structure of the study, with nearly 40\% samples having incomplete assays \Cref{fig:MOFA_CLL_Figure1}, in addition to the missing values present within some assays. hence, this study is ideal to benchmark MOFA's capabilities to deal with missing entries. As described in Section X, the inference framework we implemented allows the model to cope with this setting by merely ignoring missing entries and, when possible, pooling information from other molecular layers in order to infer the factor values.
-	\item The different data modalities: after data processing, three assays had continuous observations whereas for the somatic mutations the observations were binary. As described in section XX, MOFA can combine different likelihood models to integrate multiple data types.
+	\item The different data modalities: after data processing, three assays had continuous observations whereas for the somatic mutations the observations were binary. As described in \Cref{section:mofa_ngaussian}, MOFA can combine different likelihood models to integrate multiple data types.
 	\item The existence of clinical covariates: after model fitting, the factors can be associated with additional covariates. This provides an excellent test to assess whether the MOFA factors can capture the clinical phenotypes better than other dimensionality reduction techniques.
 \end{itemize}
 
@@ -445,7 +444,7 @@ The principle of imputation in MOFA follows the same logic as simulating from th
 \[
 	\hat{\bfY} = \E[\bfZ] \E[\bfW]^T
 \]
-where $\E[\bfZ]$ and $\E[\bfW]$ denote the expected values of the variational distributions for the factors and the loadings, respectively. Instead of point estimates, more advanced and fully Bayesian posterior predictive distribution could be obtained by propagating the uncertainity \cite{Gelman2013}. Yet, given that the variance of the variational distributions tend to be heavily underestimated (see section XX), we did not attempt this approach.\\
+where $\E[\bfZ]$ and $\E[\bfW]$ denote the expected values of the variational distributions for the factors and the loadings, respectively. Instead of point estimates, more advanced and fully Bayesian posterior predictive distribution could be obtained by propagating the uncertainity \cite{Gelman2013}. Yet, given that the variance of the variational distributions tend to be heavily underestimated (see \Cref{section:expectation_propagation}), we did not attempt this approach.\\
 
 To assess the imputation performance, we trained MOFA models on patients with complete measurements after masking parts of the drug response data. In a first experiment, we masked values at random, and in a second experiment we masked the entire drug response data. 
 We compared the results to some established imputation strategies, including imputation by feature-wise mean, SoftImpute \cite{Mazumder2010}, a k-nearest neighbour method \cite{Troyanskaya2001}.\\
@@ -502,7 +501,7 @@ Jointly, the combination of Factors 1 and 2 reconstruct the coordinated changes 
 MOFA addresses important challenges for the integrative analysis of multi-omics applications. Yet, the model is not free of limitations and there are open possibilities for future research, some of which we followed in Chapter 4.\\
 \begin{itemize}
 
-	\item \textbf{Linearity}: this is an assumption that is critical for obtaining interpretable feature loadings. Yet, as in any machine learning technique, there is often a trade-off between explanatory power and interpretability\cite{XX}. Non-linear appproaches are particularly appealing in biology, where the drivers of variation often result from the complex (non-linear) interaction between potentially simple (and linear) processes. As such, non-linear approaches, including deep neural networks or variational autoencoders have shown promising results when it comes to dimensionality reduction \cite{Lin2017,Ding2018,Lopez2018}, batch correction\cite{Lopez2018}, denoising \cite{Eraslan2019} or imputation \cite{Lin2016}. Notably, few non-linear multi-view factor analysis models exist \cite{Damianou2016}, making it an interesting line of research.
+	\item \textbf{Linearity}: this is an assumption that is critical for obtaining interpretable feature loadings. Yet, as in any machine learning technique, there is often a trade-off between explanatory power and interpretability\cite{Kuhn}. Non-linear appproaches are particularly appealing in biology, where the drivers of variation often result from the complex (non-linear) interaction between potentially simple (and linear) processes. As such, non-linear approaches, including deep neural networks or variational autoencoders have shown promising results when it comes to dimensionality reduction \cite{Lin2017,Ding2018,Lopez2018}, batch correction\cite{Lopez2018}, denoising \cite{Eraslan2019} or imputation \cite{Lin2016}. Notably, few non-linear multi-view factor analysis models exist \cite{Damianou2016}, making it an interesting line of research.
 
 	\item \textbf{Scalability}: the size of biological datasets is rapidly increasing, particularly in the field of single cell sequencing, with some studies reporting more than a milion cells\cite{Svensson2018,Cao2019}. \\
 	When comparing to previous methods that make use of maximum likelihood or sampling-based Bayesian methods, the variatonal framework implemented in MOFA yields a notable improvement in scalability. Yet, in its vanilla form, variational inference becomes prohibitively slow with very large datasets \cite{Hoffman2013,Blei2016,Hoffman2014}, hence motivating the development of even more efficient inference schemes that potentially scale to milions of samples. This line of research is followed in Chapter 4, with the development of a stochastic version of the variational inference algorithm.
