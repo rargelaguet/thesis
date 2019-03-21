@@ -21,7 +21,7 @@ df <- rbind(df1,df2)
 
 p <- ggplot(df, aes(x=x, y=y, color=key)) +
   # geom_point(alpha=0.8, size=0.25) +
-  ggrastr::geom_point_rast(size=0.25, dodge.width=1)
+  ggrastr::geom_point_rast(size=0.25) +
   # scale_fill_manual(values=colors) +
   coord_cartesian(ylim=c(-4,4), xlim=c(-4,4)) +
   geom_vline(xintercept=0, linetype="dashed") +

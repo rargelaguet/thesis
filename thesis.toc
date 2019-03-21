@@ -13,10 +13,10 @@
 \contentsline {subsection}{\numberline {1.2.3}Validation}{12}{subsection.1.2.3}
 \contentsline {subsubsection}{\numberline {1.2.3.1}Coverage}{12}{subsubsection.1.2.3.1}
 \contentsline {subsubsection}{\numberline {1.2.3.2}Consistency with previous studies}{14}{subsubsection.1.2.3.2}
-\contentsline {subsection}{\numberline {1.2.4}Identification of genomic elements with coordinated variability across molecular layers}{17}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.4}Identification of genomic elements with coordinated variability across molecular layers}{18}{subsection.1.2.4}
 \contentsline {subsection}{\numberline {1.2.5}Inference of non-linear chromatin accessibility profiles at single nucleotide resolution}{20}{subsection.1.2.5}
-\contentsline {subsection}{\numberline {1.2.6}Characterisation of epigenome dynamics along a developmental trajectory}{24}{subsection.1.2.6}
-\contentsline {section}{\numberline {1.3}Open perspectives}{25}{section.1.3}
+\contentsline {subsection}{\numberline {1.2.6}Characterisation of epigenome dynamics along a developmental trajectory}{23}{subsection.1.2.6}
+\contentsline {section}{\numberline {1.3}Open perspectives}{24}{section.1.3}
 \contentsline {chapter}{\numberline {2}Integrative analysis of single-cell multi-modal data}{27}{chapter.2}
 \contentsline {section}{\numberline {2.1}Introduction}{27}{section.2.1}
 \contentsline {section}{\numberline {2.2}Probabilistic modelling}{28}{section.2.2}
@@ -27,8 +27,8 @@
 \contentsline {subsection}{\numberline {2.2.4}Variational inference}{30}{subsection.2.2.4}
 \contentsline {subsubsection}{\numberline {2.2.4.1}Mean-field variational inference}{32}{subsubsection.2.2.4.1}
 \contentsline {subsubsection}{\numberline {2.2.4.2}Fixed-form variational inference}{33}{subsubsection.2.2.4.2}
-\contentsline {paragraph}{Black box variational inference}{33}{section*.27}
-\contentsline {paragraph}{Reparametrization gradients variational inference}{33}{section*.28}
+\contentsline {paragraph}{Black box variational inference}{33}{section*.25}
+\contentsline {paragraph}{Reparametrization gradients variational inference}{33}{section*.26}
 \contentsline {subsection}{\numberline {2.2.5}Expectation Propagation}{34}{subsection.2.2.5}
 \contentsline {subsubsection}{\numberline {2.2.5.1}Open perspectives}{35}{subsubsection.2.2.5.1}
 \contentsline {section}{\numberline {2.3}Graphical notations for probabilistic models}{36}{section.2.3}

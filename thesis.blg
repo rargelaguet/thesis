@@ -1,24 +1,25 @@
 [0] Config.pm:343> INFO - This is Biber 2.5
 [0] Config.pm:346> INFO - Logfile is 'thesis.blg'
-[68] biber-darwin:290> INFO - === Wed Mar 20, 2019, 14:30:00
-[101] Biber.pm:351> INFO - Reading 'thesis.bcf'
-[261] Biber.pm:776> INFO - Found 237 citekeys in bib section 0
-[275] Biber.pm:3493> INFO - Processing section 0
-[300] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter1/references.bib' for section 0
-[319] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[338] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter1/references.bib'
-[763] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter2/references.bib' for section 0
-[778] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[795] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter2/references.bib'
-[1051] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/yl/sc7b3yv53z1_hx81w56mrxd9tg5hxc/T/WXna9w8y8H/references.bib_41964.utf8, line 561, warning: 10 characters of junk seen at toplevel
-[1052] Utils.pm:149> WARN - I didn't find a database entry for 'XX' (section 0)
-[1052] Utils.pm:149> WARN - I didn't find a database entry for 'droplet' (section 0)
-[1053] Utils.pm:149> WARN - I didn't find a database entry for 'sci-met' (section 0)
-[1053] Utils.pm:149> WARN - I didn't find a database entry for 'Klami2014' (section 0)
-[1437] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1437] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1437] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[1437] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
-[1957] bbl.pm:526> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[2030] bbl.pm:619> INFO - Output to thesis.bbl
-[2030] Biber.pm:108> INFO - WARNINGS: 5
+[53] biber-darwin:290> INFO - === Thu Mar 21, 2019, 08:32:20
+[80] Biber.pm:351> INFO - Reading 'thesis.bcf'
+[216] Biber.pm:776> INFO - Found 243 citekeys in bib section 0
+[229] Biber.pm:3493> INFO - Processing section 0
+[249] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter1/references.bib' for section 0
+[267] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[283] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter1/references.bib'
+[299] Utils.pm:149> WARN - Duplicate entry key: 'Hashimshony2012' in file 'Chapter1/references.bib', skipping ...
+[729] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter2/references.bib' for section 0
+[748] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[764] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter2/references.bib'
+[995] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/yl/sc7b3yv53z1_hx81w56mrxd9tg5hxc/T/cM2A9mom_V/references.bib_92521.utf8, line 549, warning: 10 characters of junk seen at toplevel
+[996] Utils.pm:149> WARN - I didn't find a database entry for 'XX' (section 0)
+[996] Utils.pm:149> WARN - I didn't find a database entry for 'droplet' (section 0)
+[996] Utils.pm:149> WARN - I didn't find a database entry for 'sci-met' (section 0)
+[996] Utils.pm:149> WARN - I didn't find a database entry for 'Klami2014' (section 0)
+[1309] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1309] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1309] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[1309] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
+[1829] bbl.pm:526> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[1896] bbl.pm:619> INFO - Output to thesis.bbl
+[1896] Biber.pm:108> INFO - WARNINGS: 6

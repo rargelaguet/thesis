@@ -16,15 +16,8 @@ Droplet-based methods are based on the use of droplet microfluidics technology \
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\linewidth]{scRNA_methods}
-	\caption[]{TO-DO}
-	\label{fig:scrna_methods}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
 	\includegraphics[width=0.85\linewidth]{scRNA_seq_comparison}
-	\caption[]{Comparison of quality metrics between different scRNA-seq technologies. (a) Fraction of reads mapped to exons (cyan), outside exons (orange) and unmapped (gray). -A and -B denote different replicates. For UMI methods, also shown is the fraction of reads mapping to unique UMIs (dark blue). (B) Median number of genes detected per cell (more than one count) as a function of the (downsampled) sequencing depth. Dashed lines represent extrapolated fits assuming a saturating model. Figure reprinted from \cite{Ziegenhain2017} }
+	\caption[]{Comparison of quality metrics between different scRNA-seq technologies. (a) Overview of the two types of scRNA-seq methods: plate-based and dropled-based. (b) Fraction of reads mapped to exons (cyan), outside exons (orange) and unmapped (gray). -A and -B denote different replicates. For UMI methods, also shown is the fraction of reads mapping to unique UMIs (dark blue). (c) Median number of genes detected per cell (more than one count) as a function of the (downsampled) sequencing depth. Dashed lines represent extrapolated fits assuming a saturating model. Figure reprinted from \cite{Ziegenhain2017} }
 	\label{fig:scRNA_seq_comparison}
 \end{figure}
 
@@ -90,8 +83,8 @@ Traditionally, four main experimental approaches have been used to map chromatin
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\linewidth]{ChromatinAcc_protocols}
-	\caption[]{High-level overview of the workflow for the three main chromatin accessibility assays: NOMe-seq, DNase-seq and ATAC-seq. Reprinted from \cite{Nordstrom2019}. }
+	\includegraphics[width=0.8\linewidth]{ChromatinAcc_protocols}
+	\caption[]{High-level overview of the workflows for the three main chromatin accessibility assays: NOMe-seq, DNase-seq and ATAC-seq. Reprinted from \cite{Nordstrom2019}. }
 	\label{fig:ChromatinAcc_protocols}
 \end{figure}
 
@@ -106,7 +99,7 @@ However, the sparse nature of scATAC-seq makes it impractical for the study of h
 
 \subsection{Multi-modal single-cell sequencing}
 Cellular phenotypes have been historically characterised using exploratory methods in single molecular layers, most commonly the transcriptome. However, phenotypes result from the combination of multiple sources of biological information, including the genetic background, epigenetic marks, protein levels or lipid composition. Undoubtedly, no single "-omics" technology can capture the intricacy of complex molecular mechanisms, but the collective information has the potential to draw a more comprehensive picture of biological processses as well as clinically relevant traits \cite{Hasin2017,Ritchie2015}.\\
-Motivated by this assumption, multiple omics are being increasingly applied across a wide range of biological domains, including cancer biology \cite{Akavia2010,Gerstung2015}, regulatory genomics \cite{Chen2016}, microbiology \cite{Kim2016} or host-pathogen interactions \cite{Soderholm2016}.\\ 
+Motivated by this assumption, multiple omics are being increasingly applied across a wide range of biological domains, including cancer biology \cite{Akavia2010,Gerstung2015}, regulatory genomics \cite{Chen2016}, microbiology \cite{Kim2016} or host-pathogen interactions \cite{Soderholm2016}.
 
 Recent technological advances have enabled the profiling of multiple omics in the same single cell, which has the potential to provide a more comprehensive understanding of biological processess, including mechanistic relationships between the (epi)genome and the transcriptome.\\
 Multi-modal sequencing technologies are becoming rapidly available and its explosion is likely to mirror the trend of scRNA-seq technologies. As reviewed in \cite{Stuart2019,Chappell2018}, multi-modal measurements can be obtained using four broad strategies:
@@ -121,12 +114,13 @@ Multi-modal sequencing technologies are becoming rapidly available and its explo
 	In practice, this principle is significantly more powerful than FACS, as the DNA barcodes can be resolved with very high sensitivity by sequencing and their complexity is limited by the number of nucleotides ($4^N$ where $N$ is the length of the barcode)\\
 	A second prominent example is NOMe-seq, described in \Cref{section:chromatin_accessibility}. By labelling accessibile GpC sites with DNA methylation marks, one can simultaneously measure endogenous DNA methylation and chromatin accessibility using a single bisulfite sequencing assay.
 \end{itemize}
-
-% TO-DO: CITE DR-SEQ
-	
+	% MENTION SI-CAR
+	% MENTION SPATIAL DATA
 Combinations of the three approaches above have also been achieved. One of them, single-cell nucleosome, methylome and transcriptome (scNMT-seq\cite{Clark2018}), which is presented in this thesis, combines the principle of physical isolation with the conversion to a common format to achieve a simultaneous measurement of three molecular layers.
 
-(IMPROVE) Although they have been proven successful, single-cell multi-modal approaches still face numerous difficulties, both from the experimental and the computational side, including low coverage, high levels of technical noise and limited scalability.
-	% Mention examples of how much the coverage is decreased, sci-car vs sc atac-seq
-	% Mention com`putationcl ahllenges, this will be explained in Chapter 4
+Although they have been proven successful, single-cell multi-modal approaches still face numerous difficulties, both from the experimental and the computational side, including limited scalability, low coverage and high levels of technical noise. These difficulties, also inherent to single-cell uni-modal techniques, generally get exacerbated when doing multi-modal profiling. A clear example is scNMT-seq, where an almost \%50 decrease of coverage is observed in DNA methylation with respect to scM\&T-seq. Similarly, chromatin accessible measurements in sci-CAR\cite{Cao2018a} showed \~10-fold less complexity than scATAC-seq.\\
+As cost and limited scalability will likely remain the main barrier for high-resolution multi-modal technologies, we expect novel strategies to be aimed at exploiting the rich amount of information by merging or mapping the multi-modal data sets to large uni-modal atlases \cite{Aviv2017,Cao2019,Cusanovich2018b,Pijuan-Sala2019}.\\
+Computational challenges and strategies in multi-modal data will be discussed in Chapters 2 and 4.
+	% Astonishing sentence to finish
+
 
