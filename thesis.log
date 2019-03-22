@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  21 MAR 2019 08:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  22 MAR 2019 10:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2042,8 +2042,8 @@ File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 \@quotelevel=\count427
 \@quotereset=\count428
 
-(./thesis.aux (./Chapter1/introduction.aux) (./Chapter1/scnmt-seq.aux)
-(./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
+(./thesis.aux (./Abstract/abstract.aux) (./Chapter1/introduction.aux)
+(./Chapter1/scnmt-seq.aux) (./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
 (./Chapter2/factor_analysis.aux
 
 LaTeX Warning: Label `fig:bayesianFA' multiply defined.
@@ -2061,30 +2061,30 @@ LaTeX Warning: Label `fig:MOFA_nongaussian@cref' multiply defined.
 ) (./Chapter3/introduction.aux) (./Chapter4/introduction.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 136.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 136.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 135.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -2100,7 +2100,7 @@ LaTeX Font Info:    ... okay on input line 136.
 \makeMPintoPDFobject=\count434
 \everyMPtoPDFconversion=\toks47
 )
-LaTeX Info: Redefining \microtypecontext on input line 136.
+LaTeX Info: Redefining \microtypecontext on input line 135.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2115,7 +2115,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 \AtBeginShipoutBox=\box114
-Package hyperref Info: Link coloring ON on input line 136.
+Package hyperref Info: Link coloring ON on input line 135.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -2125,9 +2125,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count435
 )
-LaTeX Info: Redefining \ref on input line 136.
-LaTeX Info: Redefining \pageref on input line 136.
-LaTeX Info: Redefining \nameref on input line 136.
+LaTeX Info: Redefining \ref on input line 135.
+LaTeX Info: Redefining \pageref on input line 135.
+LaTeX Info: Redefining \nameref on input line 135.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write8
@@ -2190,44 +2190,30 @@ Package biblatex Info: ... file 'thesis.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Klami2014
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                droplet
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                sci-met
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                XX
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                DR-seq
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
 )
-Package biblatex Info: Reference section=0 on input line 136.
-Package biblatex Info: Reference segment=0 on input line 136.
+Package biblatex Info: Reference section=0 on input line 135.
+Package biblatex Info: Reference segment=0 on input line 135.
 \c@lstlisting=\count436
 \c__siunitx_mathsf_int=\count437
-LaTeX Font Info:    Try loading font information for U+msa on input line 136.
+LaTeX Font Info:    Try loading font information for U+msa on input line 135.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 136.
+LaTeX Font Info:    Try loading font information for U+msb on input line 135.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2235,7 +2221,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 136.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 135.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
@@ -2251,11 +2237,11 @@ Package microtype Info: Loading generic settings for font family
 \PHD@Title=\box115
 \PHD@crest=\box116
 
-<Figs/University_Crest.pdf, id=312, 59.22125pt x 69.25874pt>
+<Figs/University_Crest.pdf, id=324, 59.22125pt x 69.25874pt>
 File: Figs/University_Crest.pdf Graphic file (type pdf)
 
 <use Figs/University_Crest.pdf>
-Package pdftex.def Info: Figs/University_Crest.pdf used on input line 140.
+Package pdftex.def Info: Figs/University_Crest.pdf used on input line 139.
 (pdftex.def)             Requested size: 93.32361pt x 109.14542pt.
 \PHD@collegecrest=\box117
 \PHD@author=\box118
@@ -2268,18 +2254,54 @@ Package pdftex.def Info: Figs/University_Crest.pdf used on input line 140.
  [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figs/
-University_Crest.pdf>] [2
+University_Crest.pdf>]
+\openout2 = `Abstract/abstract.aux'.
 
-] (./thesis.toc
+
+(./Abstract/abstract.tex [2
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 8--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--19
+
+ []
+
 [3
 
-] [4])
+]
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--25
+
+ []
+
+) [4] (./thesis.toc [5
+
+
+
+] [6] [7])
 \tf@toc=\write9
 \openout9 = `thesis.toc'.
 
- [5] [6
-
-]
+ [8]
 \openout2 = `Chapter1/introduction.aux'.
 
  (./Chapter1/introduction.tex
@@ -2292,12 +2314,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.16 
-      [1
+l.15 D
+      roplet-based methods are based on the use of droplet microfluidics tec...
+[1
 
 
-]
-<Chapter1/Figs/scRNA_seq_comparison.pdf, id=562, 3533.2pt x 3773.16658pt>
+
+] <Chapter1/Figs/scRNA_seq_comparison.pdf, id=589, 3533.2pt x 3773.16658pt>
 File: Chapter1/Figs/scRNA_seq_comparison.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scRNA_seq_comparison.pdf>
@@ -2314,7 +2337,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--35
 
  []
 
-<Chapter1/Figs/methylation_protocols.pdf, id=642, 722.7pt x 534.99875pt>
+<Chapter1/Figs/methylation_protocols.pdf, id=667, 722.7pt x 534.99875pt>
 File: Chapter1/Figs/methylation_protocols.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/methylation_protocols.pdf>
@@ -2326,7 +2349,7 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.44 
-      [3] <Chapter1/Figs/scBS_protocol.pdf, id=677, 228.39249pt x 120.52167pt>
+      [3] <Chapter1/Figs/scBS_protocol.pdf, id=704, 228.39249pt x 120.52167pt>
 File: Chapter1/Figs/scBS_protocol.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scBS_protocol.pdf>
@@ -2347,22 +2370,33 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.64 I
-      n addition to the histone modifications, the positioning of the nucleo...
-[5 <./Chapter1/Figs/scBS_protocol.pdf>]pdfTeX warning (ext4): destination with 
-the same identifier (name{page.6}) has been already used, duplicate ignored
+l.63 
+      [5 <./Chapter1/Figs/scBS_protocol.pdf>]pdfTeX warning (ext4): destination
+ with the same identifier (name{page.6}) has been already used, duplicate ignor
+ed
 <to be read again> 
                    \relax 
 l.79 
       [6]
-<Chapter1/Figs/ChromatinAcc_protocols.png, id=1054, 981.6675pt x 735.74875pt>
+<Chapter1/Figs/ChromatinAcc_protocols.png, id=1083, 981.6675pt x 735.74875pt>
 File: Chapter1/Figs/ChromatinAcc_protocols.png Graphic file (type png)
 
 <use Chapter1/Figs/ChromatinAcc_protocols.png>
 Package pdftex.def Info: Chapter1/Figs/ChromatinAcc_protocols.png used on input
  line 86.
 (pdftex.def)             Requested size: 373.30159pt x 279.77827pt.
- [7 <./Chapter1/Figs/ChromatinAcc_protocols.png>] [8]) [9]
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.96 
+      [7 <./Chapter1/Figs/ChromatinAcc_protocols.png>]pdfTeX warning (ext4): de
+stination with the same identifier (name{page.8}) has been already used, duplic
+ate ignored
+<to be read again> 
+                   \relax 
+l.116 \end{itemize}
+                    [8]) [9]
 \openout2 = `Chapter1/scnmt-seq.aux'.
 
  (./Chapter1/scnmt-seq.tex
@@ -2370,33 +2404,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-<Chapter1/Figs/scNMT_protocol.pdf, id=1153, 311.1625pt x 427.5975pt>
+[10
+
+
+] <Chapter1/Figs/scNMT_protocol.pdf, id=1183, 311.1625pt x 427.5975pt>
 File: Chapter1/Figs/scNMT_protocol.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_protocol.pdf>
 Package pdftex.def Info: Chapter1/Figs/scNMT_protocol.pdf used on input line 23
 .
 (pdftex.def)             Requested size: 279.97797pt x 384.74937pt.
- [10
 
-
-]
 
 Package Fancyhdr Warning: \headheight is too small (14.5pt): 
  Make it at least 25.22153pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <./Chapter1/Figs/scNMT_protocol.pdf>]
-<Chapter1/Figs/scNMT_coverage.pdf, id=1214, 435.6275pt x 226.8475pt>
+[11 <./Chapter1/Figs/scNMT_protocol.pdf>] [12]
+<Chapter1/Figs/scNMT_coverage.pdf, id=1248, 435.6275pt x 226.8475pt>
 File: Chapter1/Figs/scNMT_coverage.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_coverage.pdf>
 Package pdftex.def Info: Chapter1/Figs/scNMT_coverage.pdf used on input line 53
 .
 (pdftex.def)             Requested size: 466.62521pt x 242.98749pt.
- [12]
-<Chapter1/Figs/scNMT_coverage2.pdf, id=1224, 205.76875pt x 152.06813pt>
+
+<Chapter1/Figs/scNMT_coverage2.pdf, id=1251, 205.76875pt x 152.06813pt>
 File: Chapter1/Figs/scNMT_coverage2.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_coverage2.pdf>
@@ -2416,7 +2450,7 @@ LaTeX Warning: Reference `fig:scnmt_profiles_MT' on page 1 undefined on input l
 ine 73.
 
 
-<Chapter1/Figs/scNMT_pseudobulk_profiles.pdf, id=1251, 871.91046pt x 867.24pt>
+<Chapter1/Figs/scNMT_pseudobulk_profiles.pdf, id=1276, 871.91046pt x 867.24pt>
 File: Chapter1/Figs/scNMT_pseudobulk_profiles.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_pseudobulk_profiles.pdf>
@@ -2428,7 +2462,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-<Chapter1/Figs/scNMT_comparison.pdf, id=1279, 700.41673pt x 328.22626pt>
+<Chapter1/Figs/scNMT_comparison.pdf, id=1304, 700.41673pt x 328.22626pt>
 File: Chapter1/Figs/scNMT_comparison.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_comparison.pdf>
@@ -2443,7 +2477,7 @@ Package Fancyhdr Warning: \headheight is too small (14.5pt):
  This may cause the page layout to be inconsistent, however.
 
 [15 <./Chapter1/Figs/scNMT_pseudobulk_profiles.pdf>]
-<Chapter1/Figs/scNMT_correlations_acrossgenes.pdf, id=1324, 495.35063pt x 190.0
+<Chapter1/Figs/scNMT_correlations_acrossgenes.pdf, id=1349, 495.35063pt x 190.0
 4298pt>
 File: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf Graphic file (type pdf)
  <use Chapter1/Figs/scNMT_correlations_acrossgenes.pdf>
@@ -2451,7 +2485,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf used
 on input line 112.
 (pdftex.def)             Requested size: 466.62521pt x 179.0232pt.
  [16 <./Chapter1/Figs/scNMT_comparison.pdf>]
-<Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf, id=1365, 803.0pt x 403.507
+<Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf, id=1391, 803.0pt x 403.507
 5pt>
 File: Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf Graphic file (type pdf
 )
@@ -2472,14 +2506,14 @@ _pseudobulk_profiles_byexpr.pdf
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter1/Figs/scNMT_pseudo
 bulk_profiles_byexpr.pdf): PDF inclusion: multiple pdfs with page group include
 d in a single page
->] <Chapter1/Figs/scNMT_EB_QC.pdf, id=1645, 1441.385pt x 1031.855pt>
+>] <Chapter1/Figs/scNMT_EB_QC.pdf, id=1671, 1441.385pt x 1031.855pt>
 File: Chapter1/Figs/scNMT_EB_QC.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_EB_QC.pdf>
 Package pdftex.def Info: Chapter1/Figs/scNMT_EB_QC.pdf used on input line 132.
 (pdftex.def)             Requested size: 373.30159pt x 267.23682pt.
 
-<Chapter1/Figs/scNMT_EB_RNA.pdf, id=1646, 650.43pt x 505.89pt>
+<Chapter1/Figs/scNMT_EB_RNA.pdf, id=1672, 650.43pt x 505.89pt>
 File: Chapter1/Figs/scNMT_EB_RNA.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_EB_RNA.pdf>
@@ -2487,7 +2521,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_EB_RNA.pdf used on input line 141.
 
 (pdftex.def)             Requested size: 373.30159pt x 290.35185pt.
  [18 <./Chapter1/Figs/scNMT_EB_QC.pdf>]
-<Chapter1/Figs/scNMT_EB_correlations.pdf, id=1667, 430.66898pt x 280.95967pt>
+<Chapter1/Figs/scNMT_EB_correlations.pdf, id=1693, 430.66898pt x 280.95967pt>
 File: Chapter1/Figs/scNMT_EB_correlations.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_EB_correlations.pdf>
@@ -2502,7 +2536,7 @@ Package Fancyhdr Warning: \headheight is too small (14.5pt):
  This may cause the page layout to be inconsistent, however.
 
 [19 <./Chapter1/Figs/scNMT_EB_RNA.pdf>]
-<Chapter1/Figs/scNMT_profiles_examples.pdf, id=2790, 1161.97112pt x 407.10495pt
+<Chapter1/Figs/scNMT_profiles_examples.pdf, id=2815, 1161.97112pt x 407.10495pt
 >
 File: Chapter1/Figs/scNMT_profiles_examples.pdf Graphic file (type pdf)
  <use Chapter1/Figs/scNMT_profiles_examples.pdf>
@@ -2510,7 +2544,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_examples.pdf used on inpu
 t line 166.
 (pdftex.def)             Requested size: 419.95984pt x 147.13538pt.
  [20 <./Chapter1/Figs/scNMT_EB_correlations.pdf>]
-<Chapter1/Figs/scNMT_profiles_prediction.pdf, id=2890, 505.89pt x 505.89pt>
+<Chapter1/Figs/scNMT_profiles_prediction.pdf, id=2915, 505.89pt x 505.89pt>
 File: Chapter1/Figs/scNMT_profiles_prediction.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_profiles_prediction.pdf>
@@ -2518,7 +2552,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_prediction.pdf used on in
 put line 175.
 (pdftex.def)             Requested size: 303.30353pt x 303.30475pt.
 
-<Chapter1/Figs/scNMT_profiles_expr.pdf, id=2891, 1773.80698pt x 1683.45943pt>
+<Chapter1/Figs/scNMT_profiles_expr.pdf, id=2916, 1773.80698pt x 1683.45943pt>
 File: Chapter1/Figs/scNMT_profiles_expr.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_profiles_expr.pdf>
@@ -2544,7 +2578,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--192
  []
 
 
-<Chapter1/Figs/scNMT_profiles_clusters.pdf, id=2987, 463.7325pt x 194.22563pt>
+<Chapter1/Figs/scNMT_profiles_clusters.pdf, id=3012, 463.7325pt x 194.22563pt>
 File: Chapter1/Figs/scNMT_profiles_clusters.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_profiles_clusters.pdf>
@@ -2552,7 +2586,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_clusters.pdf used on inpu
 t line 195.
 (pdftex.def)             Requested size: 419.95984pt x 175.89502pt.
  [22 <./Chapter1/Figs/scNMT_profiles_expr.pdf>]
-<Chapter1/Figs/scNMT_profiles_clusters2.pdf, id=3072, 472.76625pt x 189.70876pt
+<Chapter1/Figs/scNMT_profiles_clusters2.pdf, id=3097, 472.76625pt x 189.70876pt
 >
 File: Chapter1/Figs/scNMT_profiles_clusters2.pdf Graphic file (type pdf)
  <use Chapter1/Figs/scNMT_profiles_clusters2.pdf>
@@ -2572,7 +2606,7 @@ es_clusters2.pdf
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter1/Figs/scNMT_profil
 es_clusters2.pdf): PDF inclusion: multiple pdfs with page group included in a s
 ingle page
->] <Chapter1/Figs/scNMT_pseudotime.pdf, id=3233, 503.8825pt x 138.5175pt>
+>] <Chapter1/Figs/scNMT_pseudotime.pdf, id=3257, 503.8825pt x 138.5175pt>
 File: Chapter1/Figs/scNMT_pseudotime.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_pseudotime.pdf>
@@ -2580,7 +2614,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_pseudotime.pdf used on input line
 230.
 (pdftex.def)             Requested size: 419.95984pt x 115.44716pt.
 
-<Chapter1/Figs/scNMT_pseudotime_coupling.pdf, id=3236, 403.17325pt x 144.20576p
+<Chapter1/Figs/scNMT_pseudotime_coupling.pdf, id=3260, 403.17325pt x 144.20576p
 t>
 File: Chapter1/Figs/scNMT_pseudotime_coupling.pdf Graphic file (type pdf)
  <use Chapter1/Figs/scNMT_pseudotime_coupling.pdf>
@@ -2594,11 +2628,24 @@ oupling.pdf>] [25])
 
  (./Chapter2/introduction.tex
 Chapter 2.
-) [27
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+[27
 
 
 
-]
+] [28]
+
+LaTeX Warning: Reference `XX' on page 1 undefined on input line 36.
+
+
+LaTeX Warning: Reference `section:icluster' on page 1 undefined on input line 3
+6.
+
+) [29]
 \openout2 = `Chapter2/bayes.aux'.
 
  (./Chapter2/bayes.tex
@@ -2606,96 +2653,70 @@ Chapter 2.
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 19.
 
-[28
+[30
 
 
 ]
 
 LaTeX Warning: Reference `section:ard' on page 1 undefined on input line 35.
 
-[29] [30] <Chapter2/Figs/lower_bound.pdf, id=4043, 490.72935pt x 368.86005pt>
+[31] [32] [33]
+<Chapter2/Figs/lower_bound.pdf, id=4140, 490.72935pt x 368.86005pt>
 File: Chapter2/Figs/lower_bound.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/lower_bound.pdf>
 Package pdftex.def Info: Chapter2/Figs/lower_bound.pdf used on input line 111.
 (pdftex.def)             Requested size: 163.32167pt x 122.7598pt.
- [31]
-<Chapter2/Figs/mean_field.pdf, id=4064, 578.16pt x 337.26pt>
+
+<Chapter2/Figs/mean_field.pdf, id=4151, 578.16pt x 337.26pt>
 File: Chapter2/Figs/mean_field.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/mean_field.pdf>
 Package pdftex.def Info: Chapter2/Figs/mean_field.pdf used on input line 129.
 (pdftex.def)             Requested size: 326.63622pt x 190.5368pt.
- [32 <./Chapter2/Figs/lower_bound.pdf> <./Chapter2/Figs/mean_field.pdf>] [33]
-<Chapter2/Figs/VB_vs_EP.pdf, id=4169, 1133.10326pt x 373.37592pt>
+ [34 <./Chapter2/Figs/lower_bound.pdf>]
+[35 <./Chapter2/Figs/mean_field.pdf>] [36]
+<Chapter2/Figs/VB_vs_EP.pdf, id=4266, 1133.10326pt x 373.37592pt>
 File: Chapter2/Figs/VB_vs_EP.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/VB_vs_EP.pdf>
 Package pdftex.def Info: Chapter2/Figs/VB_vs_EP.pdf used on input line 185.
 (pdftex.def)             Requested size: 466.62521pt x 153.75739pt.
- [34 <./Chapter2/Figs/VB_vs_EP.pdf>]) [35]
+ [37 <./Chapter2/Figs/VB_vs_EP.pdf>]) [38]
 \openout2 = `Chapter2/factor_analysis.aux'.
 
 
 (./Chapter2/factor_analysis.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--8
-
- []
-
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--17
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
 []|\T1/cmr/m/n/10.95 (+20) Conditional de-pen-dency be-tween nodes:
  []
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (6.17361pt too wide) in paragraph at lines 20--21
+Overfull \hbox (6.17361pt too wide) in paragraph at lines 18--19
 []|[]| 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
-
- []
-
-[36
+[39
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 38--41
-
- []
-
-<Chapter2/Figs/pca1.pdf, id=4322, 1002.74625pt x 267.08885pt>
+] <Chapter2/Figs/pca1.pdf, id=4416, 1002.74625pt x 267.08885pt>
 File: Chapter2/Figs/pca1.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/pca1.pdf>
-Package pdftex.def Info: Chapter2/Figs/pca1.pdf used on input line 50.
+Package pdftex.def Info: Chapter2/Figs/pca1.pdf used on input line 46.
 (pdftex.def)             Requested size: 466.62521pt x 124.28876pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--67
-
- []
-
-[37 <./Chapter2/Figs/pca1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--79
-
- []
-
-<Chapter2/Figs/pca2.pdf, id=4367, 803.0pt x 564.1075pt>
+ [40 <./Chapter2/Figs/pca1.pdf>]
+<Chapter2/Figs/pca2.pdf, id=4460, 803.0pt x 564.1075pt>
 File: Chapter2/Figs/pca2.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/pca2.pdf>
-Package pdftex.def Info: Chapter2/Figs/pca2.pdf used on input line 85.
+Package pdftex.def Info: Chapter2/Figs/pca2.pdf used on input line 81.
 (pdftex.def)             Requested size: 419.95984pt x 295.02466pt.
- [38 <./Chapter2/Figs/pca2.pdf>]
+ [41 <./Chapter2/Figs/pca2.pdf>]
 (./graphical_models/pPCA.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2705,17 +2726,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-)
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
-
- []
-
-[39]
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
-
- []
-
-[40] (./graphical_models/bayesianFA.tex
+) [42] (./graphical_models/bayesianFA.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2724,31 +2735,22 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-)
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
-
- []
-
-<Chapter2/Figs/ard.pdf, id=4443, 630.355pt x 399.4925pt>
+) [43]
+<Chapter2/Figs/ard.pdf, id=4536, 630.355pt x 399.4925pt>
 File: Chapter2/Figs/ard.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/ard.pdf>
-Package pdftex.def Info: Chapter2/Figs/ard.pdf used on input line 170.
+Package pdftex.def Info: Chapter2/Figs/ard.pdf used on input line 164.
 (pdftex.def)             Requested size: 326.63622pt x 207.0058pt.
- [41]
-<Chapter2/Figs/hinton.pdf, id=4461, 505.89pt x 216.81pt>
+ [44]
+<Chapter2/Figs/hinton.pdf, id=4555, 505.89pt x 216.81pt>
 File: Chapter2/Figs/hinton.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/hinton.pdf>
-Package pdftex.def Info: Chapter2/Figs/hinton.pdf used on input line 176.
+Package pdftex.def Info: Chapter2/Figs/hinton.pdf used on input line 170.
 (pdftex.def)             Requested size: 373.30159pt x 159.99026pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--186
-
- []
-
-[42 <./Chapter2/Figs/ard.pdf> <./Chapter2/Figs/hinton.pdf>]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 192.
+ [45 <./Chapter2/Figs/ard.pdf> <./Chapter2/Figs/hinton.pdf>]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 185.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/doublestroke/Udsrom.fd
@@ -2767,17 +2769,31 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-)
-Underfull \hbox (badness 10000) in paragraph at lines 212--214
-
- []
-
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 223--225
-
- []
-
-[44] (./graphical_models/CCA.tex
+) [46] [47]
+(./graphical_models/CCA.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+) [48] (./graphical_models/bayesianCCA.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2801,100 +2817,38 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 )
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
-
- []
-
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 273--276
-
- []
-
-(./graphical_models/bayesianCCA.tex
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-)
-<Chapter2/Figs/hinton_cca.pdf, id=4588, 556.65565pt x 193.6274pt>
+<Chapter2/Figs/hinton_cca.pdf, id=4679, 556.65565pt x 193.6274pt>
 File: Chapter2/Figs/hinton_cca.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/hinton_cca.pdf>
-Package pdftex.def Info: Chapter2/Figs/hinton_cca.pdf used on input line 289.
+Package pdftex.def Info: Chapter2/Figs/hinton_cca.pdf used on input line 280.
 (pdftex.def)             Requested size: 396.63428pt x 137.9698pt.
- [46]
-Underfull \hbox (badness 10000) in paragraph at lines 297--300
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
-
- []
-
-[47 <./Chapter2/Figs/hinton_cca.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 314--316
-
- []
-
-<Chapter2/Figs/GFA.png, id=4627, 695.59875pt x 151.56625pt>
+ [49] [50 <./Chapter2/Figs/hinton_cca.pdf>]
+<Chapter2/Figs/GFA.png, id=4721, 695.59875pt x 151.56625pt>
 File: Chapter2/Figs/GFA.png Graphic file (type png)
 
 <use Chapter2/Figs/GFA.png>
-Package pdftex.def Info: Chapter2/Figs/GFA.png used on input line 320.
+Package pdftex.def Info: Chapter2/Figs/GFA.png used on input line 309.
 (pdftex.def)             Requested size: 466.62521pt x 101.67374pt.
- [48 <./Chapter2/Figs/GFA.png>]) [49]
+ [51 <./Chapter2/Figs/GFA.png>]) [52]
 \openout2 = `Chapter2/mofa.aux'.
 
 
-(./Chapter2/mofa.tex
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
-
- []
-
-[50
+(./Chapter2/mofa.tex [53
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 35--37
+Underfull \hbox (badness 10000) in paragraph at lines 60--71
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--73
-
- []
-
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 78--81
-
- []
-
-[52] <Chapter2/Figs/MOFA.pdf, id=4676, 1471.4975pt x 748.7975pt>
+[54] [55] <Chapter2/Figs/MOFA.pdf, id=4766, 1471.4975pt x 748.7975pt>
 File: Chapter2/Figs/MOFA.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA.pdf used on input line 111.
+Package pdftex.def Info: Chapter2/Figs/MOFA.pdf used on input line 108.
 (pdftex.def)             Requested size: 466.62521pt x 237.4492pt.
- (./graphical_models/mofa.tex
+ [56] (./graphical_models/mofa.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2924,232 +2878,168 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [53 <./Chapter2/Figs/MOFA.pdf>]
-<Chapter2/Figs/elbo_convergence.pdf, id=4935, 243.83195pt x 224.32709pt>
+) [57 <./Chapter2/Figs/MOFA.pdf>]
+<Chapter2/Figs/elbo_convergence.pdf, id=5032, 243.83195pt x 224.32709pt>
 File: Chapter2/Figs/elbo_convergence.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/elbo_convergence.pdf>
 Package pdftex.def Info: Chapter2/Figs/elbo_convergence.pdf used on input line 
-134.
+129.
 (pdftex.def)             Requested size: 233.3126pt x 214.64983pt.
- [54]
-<Chapter2/Figs/MOFA_robustness.pdf, id=4946, 846.16125pt x 323.2075pt>
+ [58]
+<Chapter2/Figs/MOFA_robustness.pdf, id=5043, 846.16125pt x 323.2075pt>
 File: Chapter2/Figs/MOFA_robustness.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_robustness.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_robustness.pdf used on input line 1
-47.
+42.
 (pdftex.def)             Requested size: 466.62521pt x 178.23318pt.
-
-
-LaTeX Warning: Reference `fig:mofa_nfactors' on page 1 undefined on input line 
-164.
-
-
-LaTeX Warning: Reference `section:robustness' on page 1 undefined on input line
- 164.
-
-[55 <./Chapter2/Figs/elbo_convergence.pdf> <./Chapter2/Figs/MOFA_robustness.pdf
->] <Chapter2/Figs/MOFA_nfactors.pdf, id=5009, 375.4025pt x 311.1625pt>
+ [59 <./Chapter2/Figs/elbo_convergence.pdf>] <Chapter2/Figs/MOFA_nfactors.pdf, 
+id=5067, 375.4025pt x 311.1625pt>
 File: Chapter2/Figs/MOFA_nfactors.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_nfactors.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_nfactors.pdf used on input line 168
+Package pdftex.def Info: Chapter2/Figs/MOFA_nfactors.pdf used on input line 163
 .
 (pdftex.def)             Requested size: 233.3126pt x 193.3888pt.
- [56 <./Chapter2/Figs/MOFA_nfactors.pdf>]
-[57] [58] <Chapter2/Figs/MOFA_learnK.pdf, id=5061, 1213.53375pt x 746.79pt>
+ [60 <./Chapter2/Figs/MOFA_robustness.pdf> <./Chapter2/Figs/MOFA_nfactors.pdf>]
+ [61] [62] [63]
+<Chapter2/Figs/MOFA_learnK.pdf, id=5163, 1213.53375pt x 746.79pt>
 File: Chapter2/Figs/MOFA_learnK.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_learnK.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_learnK.pdf used on input line 298.
+Package pdftex.def Info: Chapter2/Figs/MOFA_learnK.pdf used on input line 293.
 (pdftex.def)             Requested size: 466.62521pt x 287.15608pt.
- [59]
-<Chapter2/Figs/MOFA_group_sparsity.pdf, id=5069, 646.415pt x 242.9075pt>
+
+<Chapter2/Figs/MOFA_group_sparsity.pdf, id=5166, 646.415pt x 242.9075pt>
 File: Chapter2/Figs/MOFA_group_sparsity.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_group_sparsity.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_group_sparsity.pdf used on input li
-ne 311.
+ne 306.
 (pdftex.def)             Requested size: 466.62521pt x 175.34544pt.
- [60 <./Chapter2/Figs/MOFA_learnK.pdf>]
+ [64 <./Chapter2/Figs/MOFA_learnK.pdf>]
 
 LaTeX Warning: Reference `section:mofa_priors' on page 1 undefined on input lin
-e 317.
+e 312.
 
-<Chapter2/Figs/MOFA_sparsity.pdf, id=5277, 505.89pt x 361.35pt>
+<Chapter2/Figs/MOFA_sparsity.pdf, id=5374, 505.89pt x 361.35pt>
 File: Chapter2/Figs/MOFA_sparsity.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_sparsity.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_sparsity.pdf used on input line 323
+Package pdftex.def Info: Chapter2/Figs/MOFA_sparsity.pdf used on input line 318
 .
 (pdftex.def)             Requested size: 326.63622pt x 233.31433pt.
- [61 <./Chapter2/Figs/MOFA_group_sparsity.pdf>]
+ [65 <./Chapter2/Figs/MOFA_group_sparsity.pdf>]
 
 LaTeX Warning: Reference `fig:MOFA_nongaussian_poisson' on page 1 undefined on 
-input line 333.
+input line 328.
 
 
 LaTeX Warning: Reference `fig:MOFA_nongaussian_binary' on page 1 undefined on i
-nput line 333.
+nput line 328.
 
-<Chapter2/Figs/MOFA_nongaussian.pdf, id=5302, 2093.8225pt x 821.0675pt>
+<Chapter2/Figs/MOFA_nongaussian.pdf, id=5401, 2093.8225pt x 821.0675pt>
 File: Chapter2/Figs/MOFA_nongaussian.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_nongaussian.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_nongaussian.pdf used on input line 
-337.
+332.
 (pdftex.def)             Requested size: 466.62521pt x 182.97823pt.
- [62 <./Chapter2/Figs/MOFA_sparsity.pdf>]
+ [66 <./Chapter2/Figs/MOFA_sparsity.pdf>]
 
 LaTeX Warning: Reference `fig:MOFA_scalability' on page 1 undefined on input li
-ne 344.
+ne 339.
 
-<Chapter2/Figs/MOFA_scalability.pdf, id=5315, 505.89pt x 361.35pt>
+<Chapter2/Figs/MOFA_scalability.pdf, id=5414, 505.89pt x 361.35pt>
 File: Chapter2/Figs/MOFA_scalability.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_scalability.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_scalability.pdf used on input line 
-350.
+345.
 (pdftex.def)             Requested size: 419.95984pt x 299.97556pt.
- [63 <./Chapter2/Figs/MOFA_nongaussian.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 362--363
-
- []
-
-[64 <./Chapter2/Figs/MOFA_scalability.pdf>]
-<Chapter2/Figs/MOFA_CLL_Figure1.pdf, id=5744, 525.965pt x 388.53558pt>
+ [67 <./Chapter2/Figs/MOFA_nongaussian.pdf>] [68 <./Chapter2/Figs/MOFA_scalabil
+ity.pdf>]
+<Chapter2/Figs/MOFA_CLL_Figure1.pdf, id=5844, 525.965pt x 388.53558pt>
 File: Chapter2/Figs/MOFA_CLL_Figure1.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_CLL_Figure1.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Figure1.pdf used on input line 
-383.
+377.
 (pdftex.def)             Requested size: 466.62521pt x 344.71657pt.
- [65]
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 392--396
-
- []
-
-<Chapter2/Figs/MOFA_IGHV_outlier.pdf, id=5757, 920.92659pt x 735.32817pt>
+ [69]
+<Chapter2/Figs/MOFA_IGHV_outlier.pdf, id=5857, 920.92659pt x 735.32817pt>
 File: Chapter2/Figs/MOFA_IGHV_outlier.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_IGHV_outlier.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_IGHV_outlier.pdf used on input line
- 399.
+ 392.
 (pdftex.def)             Requested size: 466.62521pt x 372.58884pt.
- [66 <./Chapter2/Figs/MOFA_CLL_Figure1.pdf>]
-<Chapter2/Figs/MOFA_CLL_Factor1.pdf, id=5813, 1061.41539pt x 812.92809pt>
+ [70 <./Chapter2/Figs/MOFA_CLL_Figure1.pdf>]
+<Chapter2/Figs/MOFA_CLL_Factor1.pdf, id=5912, 1061.41539pt x 812.92809pt>
 File: Chapter2/Figs/MOFA_CLL_Factor1.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_CLL_Factor1.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Factor1.pdf used on input line 
-411.
+404.
 (pdftex.def)             Requested size: 466.62521pt x 357.37935pt.
- [67 <./Chapter2/Figs/MOFA_IGHV_outlier.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 424--426
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
-
- []
-
-<Chapter2/Figs/MOFA_CLL_Cox.pdf, id=5880, 1040.03558pt x 883.52386pt>
+ [71 <./Chapter2/Figs/MOFA_IGHV_outlier.pdf>] <Chapter2/Figs/MOFA_CLL_Cox.pdf, 
+id=5980, 1040.03558pt x 883.52386pt>
 File: Chapter2/Figs/MOFA_CLL_Cox.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_CLL_Cox.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Cox.pdf used on input line 435.
+Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Cox.pdf used on input line 427.
 
 (pdftex.def)             Requested size: 419.95984pt x 356.76018pt.
- [68 <./Chapter2/Figs/MOFA_CLL_Factor1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 447--449
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 450--452
-
- []
-
-[69 <./Chapter2/Figs/MOFA_CLL_Cox.pdf>]
-<Chapter2/Figs/MOFA_imputation.pdf, id=6050, 712.6625pt x 345.29pt>
+ [72 <./Chapter2/Figs/MOFA_CLL_Factor1.pdf>] [73 <./Chapter2/Figs/MOFA_CLL_Cox.
+pdf>]
+<Chapter2/Figs/MOFA_imputation.pdf, id=6150, 712.6625pt x 345.29pt>
 File: Chapter2/Figs/MOFA_imputation.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_imputation.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_imputation.pdf used on input line 4
-57.
+47.
 (pdftex.def)             Requested size: 466.62521pt x 226.07965pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 466--468
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 469--472
-
- []
-
-[70 <./Chapter2/Figs/MOFA_imputation.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 473--475
-
- []
-
-<Chapter2/Figs/MOFA_scMT.pdf, id=6097, 697.60625pt x 569.12625pt>
+ [74 <./Chapter2/Figs/MOFA_imputation.pdf>] <Chapter2/Figs/MOFA_scMT.pdf, id=61
+92, 697.60625pt x 569.12625pt>
 File: Chapter2/Figs/MOFA_scMT.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_scMT.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_scMT.pdf used on input line 480.
-(pdftex.def)             Requested size: 466.62521pt x 380.68735pt.
- [71]
-<Chapter2/Figs/MOFA_scMT2.pdf, id=6110, 606.9345pt x 527.9725pt>
-File: Chapter2/Figs/MOFA_scMT2.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/MOFA_scMT2.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_scMT2.pdf used on input line 487.
-(pdftex.def)             Requested size: 466.62521pt x 405.92781pt.
- [72 <./Chapter2/Figs/MOFA_scMT.pdf>]
-<Chapter2/Figs/MOFA_scMT_clustering.pdf, id=6260, 639.05449pt x 278.373pt>
+Package pdftex.def Info: Chapter2/Figs/MOFA_scMT.pdf used on input line 467.
+(pdftex.def)             Requested size: 419.95984pt x 342.61601pt.
+ [75]
+<Chapter2/Figs/MOFA_scMT_clustering.pdf, id=6206, 639.05449pt x 278.373pt>
 File: Chapter2/Figs/MOFA_scMT_clustering.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_scMT_clustering.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_scMT_clustering.pdf used on input l
-ine 494.
+ine 483.
 (pdftex.def)             Requested size: 466.62521pt x 203.26581pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 502--504
-
- []
-
-[73 <./Chapter2/Figs/MOFA_scMT2.pdf> <./Chapter2/Figs/MOFA_scMT_clustering.pdf>
-] [74]) [75]
+ [76 <./Chapter2/Figs/MOFA_scMT.pdf>] [77 <./Chapter2/Figs/MOFA_scMT_clustering
+.pdf>] [78]) [79]
 \openout2 = `Chapter3/introduction.aux'.
 
- (./Chapter3/introduction.tex [76
+
+(./Chapter3/introduction.tex [80
 
 
 
 ]
 Chapter 3.
-) [77]
+) [81]
 \openout2 = `Chapter4/introduction.aux'.
 
- (./Chapter4/introduction.tex [78
+ (./Chapter4/introduction.tex [82
 
 
 
 ]
 Chapter 4.
-) [79] [80
+) [83] [84
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 202.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 201.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -3159,37 +3049,36 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-[81
+[85
 
-] [82] [83]
-Overfull \hbox (1.30855pt too wide) in paragraph at lines 203--203
+] [86] [87] [88]
+Overfull \hbox (1.30855pt too wide) in paragraph at lines 202--202
 []\T1/cmr/m/n/10.95 (-20) G. Fab-bri and R. Dalla-Favera. ``The molec-u-lar pat
 ho-gen-e-sis of chronic lym-pho-cytic leukaemia''.
  []
 
-[84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94]
-Overfull \hbox (12.48563pt too wide) in paragraph at lines 203--203
+[89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99]
+Overfull \hbox (12.48563pt too wide) in paragraph at lines 202--202
 []\T1/cmr/m/n/10.95 (-20) C. Xu, D. Tao, and C. Xu. ``A Sur-vey on Multi-view L
 earn-ing''. In: \T1/cmr/m/it/10.95 (-20) arXiv e-prints\T1/cmr/m/n/10.95 (-20) 
 , arXiv:1304.5634
  []
 
-[95]
 
-Package caption Warning: Unused \captionsetup[sub] on input line 108.
+Package caption Warning: Unused \captionsetup[sub] on input line 107.
 See the caption package documentation for explanation.
 
-[96]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
- (./thesis.aux (./Chapter1/introduction.aux) (./Chapter1/scnmt-seq.aux)
-(./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
+[100]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 203.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 203.
+ (./thesis.aux (./Abstract/abstract.aux) (./Chapter1/introduction.aux)
+(./Chapter1/scnmt-seq.aux) (./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
 (./Chapter2/factor_analysis.aux) (./Chapter2/mofa.aux)
 (./Chapter3/introduction.aux) (./Chapter4/introduction.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 203.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 203.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 063FD5CE97EC5E2454927DD074CF5491;22140.
+(rerunfilecheck)             Checksum: AF0C7671A357236C81CBFB24E8FF3B45;23183.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3205,13 +3094,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48560 strings out of 493014
- 941821 string characters out of 6133351
- 1741212 words of memory out of 5000000
- 50408 multiletter control sequences out of 15000+600000
- 48241 words of font info for 282 fonts, out of 8000000 for 9000
+ 48616 strings out of 493014
+ 943249 string characters out of 6133351
+ 1764093 words of memory out of 5000000
+ 50436 multiletter control sequences out of 15000+600000
+ 48248 words of font info for 282 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,18n,92p,10442b,1635s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,18n,92p,10442b,1633s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
@@ -3246,10 +3135,10 @@ pe1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 public/cm-super/sftt1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
 blic/stmaryrd/stmary10.pfb>
-Output written on thesis.pdf (102 pages, 30834330 bytes).
+Output written on thesis.pdf (108 pages, 30476417 bytes).
 PDF statistics:
- 6839 PDF objects out of 7423 (max. 8388607)
- 4336 compressed objects within 44 object streams
- 497 named destinations out of 1000 (max. 500000)
- 46941 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 6914 PDF objects out of 7423 (max. 8388607)
+ 4417 compressed objects within 45 object streams
+ 519 named destinations out of 1000 (max. 500000)
+ 46960 words of extra memory for PDF output out of 51595 (max. 10000000)
 

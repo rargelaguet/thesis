@@ -3,7 +3,7 @@
 \section{Multi-Omics Factor Analysis: a framework for unsupervised integration of multi-omics data sets}
 % In the first section of this chapter, we will describe XXX
 
-The work described in this chapter results from a collaboration with the Multi-omics and statistical computing group lead by Wolfgang Huber at the EMBL (Heidelberg, Germany). It has been peer-reviewed and published in \cite{Argelaguet2018}.\\
+The work described in this chapter results from a collaboration with the Multi-omics and statistical computing group lead by Wolfgang Huber at the EMBL (Heidelberg, Germany). It has been peer-reviewed and published in \cite{Argelaguet2018}.
 
 The method was conceived by Florian Buettner, Oliver Stegle and me. I performed most of the mathematical derivations and implementation, but with significant contributions from Damien Arnol and Britta Velten. The single-cell application was led by me whereas the CLL data application was led by Britta Velten, but with joint contributions in either cases. Florian Buettner, Wolfgang Huber and Oliver Stegle supervised the project.\\
 The article was jointly written by Britta Velten, Florian Buettner, Wolfgang Huber, Oliver Stegle and me.
@@ -33,7 +33,7 @@ Each factor ordinates cells along a one-dimensional axis centered at zero. Sampl
 
 \subsubsection{Interpretation of the loadings}
 The loadings provide a score for each gene on each factor, and are interpreted in a similar way as the factors. Genes with no association with the factor are expected to have values close to zero, as specified by the prior. In contrast, genes with strong association with the factor are expected to have large absolute values. The sign of the loading indicates the direction of the effect: a positive loading indicates that the feature is more active in the cells with positive factor values, and viceversa. \\
-Following the cell cycle example from above, we expect genes that are upregulated in the M phase to have large positive loadings, whereas genes that are downregulated in the M phase (or, equivalently, upregulated in the G1 phase) are expected to have large negative loadings.\\
+Following the cell cycle example from above, we expect genes that are upregulated in the M phase to have large positive loadings, whereas genes that are downregulated in the M phase (or, equivalently, upregulated in the G1 phase) are expected to have large negative loadings.
 
 % The following figure shows a real-case example of a Factor capturing the cell cycle effect, with the corresponding loadings:
 
@@ -54,13 +54,11 @@ The probabilistic formalism naturally accounts for incomplete data matrices, as 
 In practice, we implement this using memory-efficient binary masks $\mathcal{O}^m \in \mathbb{R}^{N\times D_m}$ for each view $m$, such that $\mathcal{O}_{n,d} = 1$ when feature $d$ is observed for sample $n$, 0 otherwise. 
 
 \subsubsection{Prior distributions for the factors and the loadings}  \label{section:mofa_loadings}
-The key determinant of the model is the regularization used on the prior distributions of the factors and the weights.\\
-For the factors, we define an isotropic Gaussian prior:
+The key determinant of the model is the regularization used on the prior distributions of the factors and the weights. For the factors, we define an isotropic Gaussian prior:
 \begin{equation}
 	p(z_{nk}) = \Ndist{z_{nk}}{0,1}
 \end{equation}
-which effectively assumes a continuous latent space and independent samples and factors.\\
-For the weights we encode two levels of sparsity, a (1) view- and factor-wise sparsity and (2) an individual feature-wise sparsity. The aim of the factor- and view-wise sparsity is to disentangle the activity of factors to the different views, such that the weight vector $\bfw_{:,k}^m$ is shrunk to zero if the factor $k$ does not explain any variation in view $m$. \\
+which effectively assumes a continuous latent space and independent samples and factors. For the weights we encode two levels of sparsity, a (1) view- and factor-wise sparsity and (2) an individual feature-wise sparsity. The aim of the factor- and view-wise sparsity is to disentangle the activity of factors to the different views, such that the weight vector $\bfw_{:,k}^m$ is shrunk to zero if the factor $k$ does not explain any variation in view $m$. \\
 In addition, we place a second layer of sparsity which encourages inactive weights on each individual feature. Mathematically, we express this as a combination of an Automatic Relevance Determination (ARD) prior \cite{Mackay1996} for the view- and factor-wise sparsity and a spike-and-slab prior \cite{Mitchell1988} for the feature-wise sparsity:
 % \begin{equation*}
 % 	p(w_{dk}^{m}) = (1-\theta_{k}^{m}) \mathds{1}_0(w_{dk}^{m}) + \theta_{k}^{m} \Ndist{w_{dk}^{m}}{0, 1 / \alpha_{k}^{m}}
@@ -76,8 +74,7 @@ Finally, we define conjugate priors for $\theta$ and $\alpha$:
 	p(\theta_k^m) &= \Bdist{\theta_k^m}{a_0^\theta,b_0^\theta}\\
 	p(\alpha_k^m) &= \Gdist{\alpha_k^m}{a_0^\alpha, b_0^\alpha}
 \end{align}
-with hyper-parameters $a_0^\theta,b_0^\theta =1$ and $a_0^\alpha, b_0^\alpha=1e^{-3}$ to get uninformative priors.\\
-Posterior values of $\theta_k^m$ close to $0$ implies that most of the weights of factor $k$ in view $m$ are shrinked to $0$ (sparse factor). In contrast, a value of $\theta_k^m$ close to $1$ implies that most of the weights are non-zero (non-sparse factor). A small value of $\alpha_k^m$ implies that factor $k$ is active in view $m$. In contrast, a large value of $\alpha_k^m$ implies that factor $k$ is inactive in view $m$.\\
+with hyper-parameters $a_0^\theta,b_0^\theta =1$ and $a_0^\alpha, b_0^\alpha=1e^{-3}$ to get uninformative priors. Posterior values of $\theta_k^m$ close to $0$ implies that most of the weights of factor $k$ in view $m$ are shrinked to $0$ (sparse factor). In contrast, a value of $\theta_k^m$ close to $1$ implies that most of the weights are non-zero (non-sparse factor). A small value of $\alpha_k^m$ implies that factor $k$ is active in view $m$. In contrast, a large value of $\alpha_k^m$ implies that factor $k$ is inactive in view $m$.
 
 All together, the joint probability density function of the model is given by
 \begin{align}
@@ -85,8 +82,8 @@ All together, the joint probability density function of the model is given by
 	p(\bfY,\hat{\bfW},\bfS,\bfZ,\btheta, \balpha, \btau)  = &\prod_{m=1}^{M} \prod_{n=1}^{N} \prod_{d=1}^{D_m} \Ndist{y_{nd}^m}{\sum_{k=1}^{K} s_{dk}^m \hat{w}_{dk}^m z_{nk},1/\tau_d} \\
 	& \prod_{m=1}^{M}\prod_{d=1}^{D_m} \prod_{k=1}^{K} \Ndist{\hat{w}_{dk}^m}{0,1/\alpha_k^m} \text{Ber}(s_{d,k}^m|\theta_k^m) \\
 	& \prod_{n=1}^{N} \prod_{k=1}^{K} \Ndist{z_{nk}}{0,1} \\
-	& \prod_{m=1}^{M} \prod_{k=1}^{K} \Bdist{\theta_k^m}{a_0^\theta,b_0^\theta}\\
-	& \prod_{m=1}^{M} \prod_{k=1}^{K} \Gdist{\alpha_k^m}{a_0^\alpha, b_0^\alpha}\\
+	& \prod_{m=1}^{M} \prod_{k=1}^{K} \Bdist{\theta_k^m}{a_0^\theta,b_0^\theta} \\
+	& \prod_{m=1}^{M} \prod_{k=1}^{K} \Gdist{\alpha_k^m}{a_0^\alpha, b_0^\alpha} \\
 	& \prod_{m=1}^{M} \prod_{d=1}^{D_m} \Gdist{\tau_d^m}{a_0^\tau,b_0^\tau}.
 	\label{likelihood}
 	\end{split}
@@ -122,8 +119,7 @@ The downstream functionalities implemented in MOFA are highlighted in \Cref{fig:
 \end{figure}
 
 \subsubsection{Inference}
-To make the model scalable to large data sets we adopt a Variational inference framework with a structured mean field approximation. A detailed overview is given in \Cref{section:variational_inference}, and details on the variational updates for the MOFA model are given in Appendix XX.\\
-To enable efficient inference for non-Gaussian likelihoods we employ local bounds \cite{Jaakkola2000,Seeger2012}. This is described in detail in \Cref{section:mofa_ngaussian}
+To make the model scalable to large data sets we adopt a Variational inference framework with a structured mean field approximation. A detailed overview is given in \Cref{section:variational_inference}, and details on the variational updates for the MOFA model are given in Appendix XX. To enable efficient inference for non-Gaussian likelihoods we employ local bounds \cite{Jaakkola2000,Seeger2012}. This is described in detail in \Cref{section:mofa_ngaussian}
 
 \subsection{Monitoring convergence}
 An attractive property of Variational inference is that the objective function, the Evidence Lower Bound (ELBO), increases monotonically at every iteration. This provides a simple way of monitoring convergence \Cref{fig:elbo_convergence}. This is indeed one of the reasons why we opted for this inference framework over Expectation Propagation or sampling-based approaches.
@@ -137,7 +133,7 @@ An attractive property of Variational inference is that the objective function, 
 
 \subsection{Model selection and consistency across random initilizations} \label{section:mofa_robustness}
 The variational optimisation problem in MOFA is not convex and the posterior distributions will vary depending on the initialisation of the model. Thus, it becomes mandatory to perform model selection and assess the consistency of the factors across different trials.\\
-The strategy we adopted in this work is to train several MOFA models (e.g. 10 trials) under different parameter initialisations, and after training we select the model with the highest ELBO for downstream analysis \Cref{fig:MOFA_robustness}. In addition, we evaluate the robustness of the factors by plotting the Pearson correlations between factors across all trials. \Cref{fig:MOFA_robustness}.\\
+The strategy we adopted in this work is to train several MOFA models (e.g. 10 trials) under different parameter initialisations, and after training we select the model with the highest ELBO for downstream analysis \Cref{fig:MOFA_robustness}. In addition, we evaluate the robustness of the factors by plotting the Pearson correlations between factors across all trials. \Cref{fig:MOFA_robustness}. 
 A similar strategy has also been proposed in \cite{Hore2016,Hore2015-thesis}.
 
 
@@ -160,13 +156,13 @@ A similar strategy has also been proposed in \cite{Hore2016,Hore2015-thesis}.
 
 \subsection{Learning the number of factors} \label{section:mofa_nfactors}
 As described in section X, the use of an ARD prior allows factors to be actively prunned by the model if their variance explained is negligible. In the implementation we control the prunning of factors by a hyperparameter that defines a threshold on the minimum fraction of variance explained by a factor (across all views).\\
-Additionally, because of the non-convexity of the optimisation problem, different model instances can potentially yield solutions with different number of active factors (\Cref{fig:mofa_nfactors}). Thus, the optimal number of factors can be selected by the model selection strategy outlined in \Cref{section:robustness}.
+Additionally, because of the non-convexity of the optimisation problem, different model instances can potentially yield solutions with different number of active factors (\Cref{fig:mofa_nfactors}). Thus, the optimal number of factors can be selected by the model selection strategy outlined in \Cref{section:mofa_robustness}.
 
 \begin{figure}[H]
 	\centering 	
 	\includegraphics[width=0.5\textwidth]{MOFA_nfactors}
 	\caption{Training curve for the number of active factors across 25 different model instances. The y-axis displays the number of active factors. The x-axis displays the iteration number. Different lines denote different model instances.}
-	\label{fig:MOFA_nfactors}
+	\label{fig:mofa_nfactors}
 \end{figure}
 
 
@@ -355,10 +351,9 @@ As a real application showcase, the training on the CLL data \Cref{fig:MOFA_CLL_
 
 
 \subsection{Application to chronic lymphocytic leukaemia} \label{section:mofa_cll}
-Personalised medicine is an attractive field for the use of multi-omics, as dissecting heterogeneity across patients is a major challenge in complex diseases, and requires integration of information from multiple biological layers \cite{Chen2013,Costello2014,Alyass2015}.\\
-In most cases, predicting patient survival and response to a treatment is still not reliable due to a lack of predictive biomarkers and our incomplete understanding of the mechanisms underlying response heterogeneity. Identification of the main drivers of inter-patient variation and their molecular basis is an important step towards personalized treatment decisions. 
+Personalised medicine is an attractive field for the use of multi-omics, as dissecting heterogeneity across patients is a major challenge in complex diseases, and requires integration of information from multiple biological layers \cite{Chen2013,Costello2014,Alyass2015}. In most cases, predicting patient survival and response to a treatment is still not reliable due to a lack of predictive biomarkers and our incomplete understanding of the mechanisms underlying response heterogeneity. Identification of the main drivers of inter-patient variation and their molecular basis is an important step towards personalized treatment decisions. 
 
-To demonstrate the potential of the method, we applied MOFA to a study of 200 patient samples of chronic lymphocytic leukaemia (CLL) profiled for somatic mutations, RNA expression, DNA methylation and ex-vivo drug responses\cite{Dietrich2018} \Cref{fig:MOFA_CLL_Figure1}.\\
+To demonstrate the potential of the method, we applied MOFA to a study of 200 patient samples of chronic lymphocytic leukaemia (CLL) profiled for somatic mutations, RNA expression, DNA methylation and ex-vivo drug responses\cite{Dietrich2018} \Cref{fig:MOFA_CLL_Figure1}.
 
 This data set was selected for five main reasons. 
 \begin{itemize}
@@ -372,7 +367,7 @@ This data set was selected for five main reasons.
 
 \subsubsection{Model overview}
 In this data set, MOFA recovered 10 factors explaining a minimum of 3\% of variance. Among these, the first two factors (sorted by variance explained) were active across most views, indicating a strong effect across multiple molecular layers. Other factors such as Factor 3 or Factor 5 explained variation in two data modalities, whereas Factor 4 was only in the RNA expression data.\\
-Overall, the then MOFA factors inferred explained 41\% of variance in the drug response data, 38\% in the mRNA expression, 24\% in the DNA methylation and 24\% in somatic mutations.
+All together, the ten MOFA factors inferred explained 41\% of variance in the drug response data, 38\% in the mRNA expression, 24\% in the DNA methylation and 24\% in somatic mutations.
 
 Inspection of the top weights in the somatic mutation view revealed that Factor 1 was strongly associated with the mutation status of the immunoglobulin heavy-chain variable (IGHV) region, while Factor 2 was aligned with a trisomy of chromosome 12 (Figure X). In a completely unsupervised fashion, MOFA identified the two major axes of molecular disease heterogeneity being indeed the two most important clinical markers in CLL \cite{Fabbri2016,Zenz2010}.\\
 A scatterplot based on these factors shows a clear separation of patients by their IGHV status on the first factor and presence or absence of trisomy 12 on the second factor. Remarkably, the IGHV status of a fraction of patients was missing (grey dots). Yet, as the two factors were shared across multiple views, MOFA was able to pool information from the other molecular layers to map those samples to the latent space.
@@ -386,11 +381,10 @@ A scatterplot based on these factors shows a clear separation of patients by the
 
 \subsubsection{Characterisation of Factor 1}
 
-IGHV status is probably the most important prognostic marker in CLL and has routinely been used to distinguish between two distinct subtypes of the disease. Molecularly, it is a surrogate of the level of activation of the B-cell receptor, which is in turn related to the differentiation state of the tumoral cells. Multiple studies have associated mutated IGHV with a better resposne to chemoimmunotherapy, whereas unmutated IGHV patients have a worse prognosis \cite{Fabbri2016,Bulian2017,Crombie2017,Damle1999}.\\
+IGHV status is probably the most important prognostic marker in CLL and has routinely been used to distinguish between two distinct subtypes of the disease. Molecularly, it is a surrogate of the level of activation of the B-cell receptor, which is in turn related to the differentiation state of the tumoral cells. Multiple studies have associated mutated IGHV with a better resposne to chemoimmunotherapy, whereas unmutated IGHV patients have a worse prognosis \cite{Fabbri2016,Bulian2017,Crombie2017,Damle1999}.
 
-In clinical practice, the IGHV status has been generally considered binary. However, our results suggest a more complex structure with at least three groups or a potential underlying continuum, as also suggested in \cite{Oakes2016,Queiros2015}.\\
-Interestingly, there is some discrepancy between the IGHV status predicted by MOFA and the IGHV status reported in the clinical data. Out the 200 patients, MOFA classifies 176 in accordance with the clinical label, it classifies 12 patients that lacked the clinical marker and it re-classifies 12 patients to the opposite group.\\
-To validate the MOFA-based classification, we inspected the molecular profiles. sample-to-sample correlation matrices for the individual layers suggest that for 3 of the cases where the inferred factor disagrees with the clinical label, the molecular data supports the predicted label. The other 9 cases showed intermediate molecular sgnatures now well captured by the binary classification.\\
+In clinical practice, the IGHV status has been generally considered binary. However, our results suggest a more complex structure with at least three groups or a potential underlying continuum, as also suggested in \cite{Oakes2016,Queiros2015}. Interestingly, there is some discrepancy between the IGHV status predicted by MOFA and the IGHV status reported in the clinical data. Out the 200 patients, MOFA classifies 176 in accordance with the clinical label, it classifies 12 patients that lacked the clinical marker and it re-classifies 12 patients to the opposite group.\\
+To validate the MOFA-based classification, we inspected the molecular profiles. sample-to-sample correlation matrices for the individual layers suggest that for 3 of the cases where the inferred factor disagrees with the clinical label, the molecular data supports the predicted label. The other 9 cases showed intermediate molecular sgnatures now well captured by the binary classification.
 %Based on these results, we hypothesize that a multi-omics approach based on several molecular signatures could be a more precise and robust approach to predict clinical phenotypes than the use of single features such as mutations or expression of marker genes.
 
 \begin{figure}[H]
@@ -421,10 +415,9 @@ On the drug response data the loadings highlight kinase inhibitors targeting the
 
 
 We conjectured that the integration of the multiple molecular layers could allow a better prediction of clinical response compared to using single omics or naive data integration.\\
-To evaluate the utility of the MOFA factors as predictors of clinical outcomes we fit Cox regression models \cite{Cox1972} using the patients' time to next treatment (TTT) as a response variable. Two types of analysis were performed: a univariate analysis where each Factor was independently associated with TTT, and a multivariate analysis where the combination of all Factors were used to predict TTT.\\
+To evaluate the utility of the MOFA factors as predictors of clinical outcomes we fit Cox regression models \cite{Cox1972} using the patients' time to next treatment (TTT) as a response variable. Two types of analysis were performed: a univariate analysis where each Factor was independently associated with TTT, and a multivariate analysis where the combination of all Factors were used to predict TTT.
 
 (CHECK) In the univariate Cox models, we observe  that Factor 1 (IGHV status), Factor 7 (associated with chemo-immunotherapy treatment prior to sample collection) and Factor 8 (Wnt signalling) were significant predictors of TTT. Accordingly, when splitting patients into binary groups based on the corresponding factor values, we observe clear differences in the survival curves.\\
-
 In the multivariate Cox model, MOFA (Harrell's C-Index C=0.78) outperformed all other input settings, including single-omic data (C=0.68-0.72), individual genetic markers (C=0.66) as well the concatenated data matrix (C=0.74).
 
 %As predictors, we included the top 10 principal components calculated on the data for each single view, a concatenated data set ('all') as well as the 10 MOFA factors. Missing values in a view were set to the feature-wise mean. In a second set of models, we used the complete set of all features in a view with a ridge penalty in the Cox model as imple- mented in the R package glmnet. For the Kaplan-Meier plots, an optimal cut-point on each factor was determined to define the two groups using the maximally selected rank statistics as implemented in the R package survminer with P-values based on a log-rank test between the resulting groups.
@@ -444,11 +437,9 @@ The principle of imputation in MOFA follows the same logic as simulating from th
 \[
 	\hat{\bfY} = \E[\bfZ] \E[\bfW]^T
 \]
-where $\E[\bfZ]$ and $\E[\bfW]$ denote the expected values of the variational distributions for the factors and the loadings, respectively. Instead of point estimates, more advanced and fully Bayesian posterior predictive distribution could be obtained by propagating the uncertainity \cite{Gelman2013}. Yet, given that the variance of the variational distributions tend to be heavily underestimated (see \Cref{section:expectation_propagation}), we did not attempt this approach.\\
+where $\E[\bfZ]$ and $\E[\bfW]$ denote the expected values of the variational distributions for the factors and the loadings, respectively. Instead of point estimates, more advanced and fully Bayesian posterior predictive distribution could be obtained by propagating the uncertainity \cite{Gelman2013}. Yet, given that the variance of the variational distributions tend to be heavily underestimated (see \Cref{section:expectation_propagation}), we did not attempt this approach.
 
-To assess the imputation performance, we trained MOFA models on patients with complete measurements after masking parts of the drug response data. In a first experiment, we masked values at random, and in a second experiment we masked the entire drug response data. 
-We compared the results to some established imputation strategies, including imputation by feature-wise mean, SoftImpute \cite{Mazumder2010}, a k-nearest neighbour method \cite{Troyanskaya2001}.\\
-
+To assess the imputation performance, we trained MOFA models on patients with complete measurements after masking parts of the drug response data. In a first experiment, we masked values at random, and in a second experiment we masked the entire drug response data. We compared the results to some established imputation strategies, including imputation by feature-wise mean, SoftImpute \cite{Mazumder2010}, a k-nearest neighbour method \cite{Troyanskaya2001}.\\
 For both imputation tasks, MOFA consistently yielded more accurate predictions, albeit the differences became less pronounced in the imputation of full assays, a more challenging task.
 
 \begin{figure}[H]
@@ -460,33 +451,32 @@ For both imputation tasks, MOFA consistently yielded more accurate predictions, 
 
 % TO-DO: ADD EXAMPLES
 
+\newpage
 
 \subsection{Application to single-cell multi-omics} \label{section:mofa_scmt}
-The emergence of single-cell multi-modal techniques has created open opportunities for the development of novel computational techniques that integrate data sets across multiple modalities \cite{Stuart2019,Colome-Tatche2018,Chappell2018}. Here, we investigated the potential of MOFA to unravel the heterogeneity in one of the earliest single-cell multi-omics experiments \cite{Angermueller2016}.\\
-The data set consists on 87 embryonic stem cells (ESCs) where RNA expression and DNA methylation were simultaneously measured using single-cell Methylation and Transcriptome sequencing (scM\&T-seq). Two populations of ESCs were profiled: the first one contains 16 cells grown in 2i media, which induces a native pluripotency state with genome-wide DNA hypomethylation \cite{Ficz2013}. the second population contains 71 cells grown in serum media, which triggers a primed pluripotency state poised for differentiation \cite{Tosolini2016}.\\
+The emergence of single-cell multi-modal techniques has created open opportunities for the development of novel computational techniques \cite{Stuart2019,Colome-Tatche2018,Chappell2018}. Here, we investigated the potential of MOFA to disentangle the heterogeneity in one of the earliest single-cell multi-omics experiments \cite{Angermueller2016}.\\
+The data set consists on 87 embryonic stem cells (ESCs) where RNA expression and DNA methylation were simultaneously measured using single-cell Methylation and Transcriptome sequencing (scM\&T-seq). Two populations of ESCs were profiled: the first one contains 16 cells grown in 2i media, which induces a native pluripotency state with genome-wide DNA hypomethylation \cite{Ficz2013}. the second population contains 71 cells grown in serum media, which triggers a primed pluripotency state poised for differentiation \cite{Tosolini2016}.
 
-The RNA expression data was processed using standard pipelines to obtain log normalised counts, followed by a selection of the top 5,000 most overdispersed genes \cite{Lun2016}.\\
-The DNA methylation data was processed as described in Chapter 1. Briefly, for each CpG site, we calculated a binary methylation rate from the ratio of methylated read counts to total read counts. Next, CpG sites were classified by overlapping with genomic contexts, namely promoters, CpG islands and enhancers (defined by the presence of distal H3K27ac marks). Finally, for each annotation we selected the top 5,000 most variable CpG sites with a minimum coverage of 10\% across cells.\\
-Each of the resulting matrices was defined as a separate view for MOFA. The methylation data was modelled with a Bernoulli likelihood and the RNA expression data was modelled with a Gaussian likelihood.\\
+The RNA expression data was processed using standard pipelines to obtain log normalised counts, followed by a selection of the top 5,000 most overdispersed genes \cite{Lun2016}. The DNA methylation data was processed as described in Chapter 1. Briefly, for each CpG site, we calculated a binary methylation rate from the ratio of methylated read counts to total read counts. Next, CpG sites were classified by overlapping with genomic contexts, namely promoters, CpG islands and enhancers (defined by the presence of distal H3K27ac marks). Finally, for each annotation we selected the top 5,000 most variable CpG sites with a minimum coverage of 10\% across cells. Each of the resulting matrices was defined as a separate view for MOFA \Cref{fig:mofa_scMT}. The methylation data was modelled with a Bernoulli likelihood and the RNA expression data was modelled with a Gaussian likelihood.
 
-In this data set, MOFA learnt 3 factors (minimum explained variance of 1\%). Factor 1 captured the transition from naive to primed pluripotent states, which MOFA links to widespread coordinated changes between DNA methylation and RNA expression (\Cref{fig:MOFA_scMT,fig:MOFA_scMT2}. Inspection of the gene loadings for Factor 1 pinpoints important pluripotency markers including  Rex1/Zpf42 or Essrb \cite{Mohammed2017}. As previously described both in vitro \cite{Angermueller2016}) and in vivo \cite{Auclair2014}, the dynamics of DNA methylation are driven by a genome-wide increase in DNA methylation levels.\\
-Factor 2 captured a second dimension of heterogeneity driven by the transition from a primed pluripotency state to a differentiated state, with RNA loadings enriched with canonical differentiation markers including keratins and annexins \cite{Fuchs1988}.\\
-
-Jointly, the combination of Factors 1 and 2 reconstruct the coordinated changes between the transcriptome and the epigenome along the differentiation trajectory from naive pluripotent cells to differentiated cells. When applying popular integrative clustering algorithms \cite{Wang2014,Shen2009,Mo2013}, the trajectory is not recovered \Cref{fig:MOFA_scMT_clustering}, illustrating the importance of learning continuous latent spaces before applying clustering methods.
+In this data set, MOFA learnt 3 factors (\Cref{fig:mofa_scMT}, minimum explained variance of 1\%). Factor 1 captured the transition from naive to primed pluripotent states, which MOFA links to widespread coordinated changes between DNA methylation and RNA expression. Inspection of the gene loadings for Factor 1 pinpoints important pluripotency markers including  Rex1/Zpf42 or Essrb \cite{Mohammed2017}. As previously described both \textit{in vitro} \cite{Angermueller2016} and \textit{in vivo} \cite{Auclair2014}, the dynamics of DNA methylation are driven by a genome-wide increase in DNA methylation levels. Factor 2 captured a second dimension of heterogeneity driven by the transition from a primed pluripotency state to a differentiated state, with RNA loadings enriched with canonical differentiation markers including keratins and annexins \cite{Fuchs1988}.\\
+Jointly, the combination of Factors 1 and 2 reconstruct the coordinated changes between the transcriptome and the epigenome along the differentiation trajectory from naive pluripotent cells to differentiated cells.
 
 \begin{figure}[H]
 	\centering 	
-	\includegraphics[width=1.0\textwidth]{MOFA_scMT}
-	\caption{XX}
-	\label{fig:MOFA_scMT}
+	\includegraphics[width=0.9\textwidth]{MOFA_scMT}
+	\caption{MOFA disentangles the main sources of heterogeneity in single-cell multi-omics data. (a) Overview of the data modalities. Rows indicate number of features ($D$) and columns indicate number of samples ($N$). Grey bars denote missing samples. (b) Fraction of variance explained per factor (column) and view (row). (c) Cumulative fraction of variance explained per view (across all factors). (c) mRNA loadings of Factor 1 (bottom) and Factor 2 (top). The genes that are labelled are known markers of pluripotency (for Factor 1) or differentiation (for Factor 2). (d) Scatter plot of Factor 1 (x-axis) against Factor 2 (y-axis). Cells are colored based on the culture condition. Grey arrow illustrates the differentiation trajectory from a naive pluripotency state to a differentiated state. }
+	\label{fig:mofa_scMT}
 \end{figure}
 
-\begin{figure}[H]
-	\centering 	
-	\includegraphics[width=1.0\textwidth]{MOFA_scMT2}
-	\caption{XX}
-	\label{fig:MOFA_scMT2}
-\end{figure}
+% \begin{figure}[H]
+% 	\centering 	
+% 	\includegraphics[width=0.8\textwidth]{MOFA_scMT2}
+% 	\caption{XX}
+% 	\label{fig:MOFA_scMT2}
+% \end{figure}
+
+When applying popular integrative clustering algorithms \cite{Wang2014,Shen2009,Mo2013}, the trajectory is not recovered \Cref{fig:MOFA_scMT_clustering}, illustrating the importance of learning continuous latent spaces before applying clustering methods.
 
 \begin{figure}[H]
 	\centering 	
@@ -496,9 +486,12 @@ Jointly, the combination of Factors 1 and 2 reconstruct the coordinated changes 
 \end{figure}
 
 
+\newpage
+
 \subsection{Open perspectives}
 
-MOFA addresses important challenges for the integrative analysis of multi-omics applications. Yet, the model is not free of limitations and there are open possibilities for future research, some of which we followed in Chapter 4.\\
+MOFA addresses important challenges for the integrative analysis of multi-omics applications. Yet, the model is not free of limitations and there are open possibilities for future research, some of which we followed in Chapter 4:
+
 \begin{itemize}
 
 	\item \textbf{Linearity}: this is an assumption that is critical for obtaining interpretable feature loadings. Yet, as in any machine learning technique, there is often a trade-off between explanatory power and interpretability\cite{Kuhn}. Non-linear appproaches are particularly appealing in biology, where the drivers of variation often result from the complex (non-linear) interaction between potentially simple (and linear) processes. As such, non-linear approaches, including deep neural networks or variational autoencoders have shown promising results when it comes to dimensionality reduction \cite{Lin2017,Ding2018,Lopez2018}, batch correction\cite{Lopez2018}, denoising \cite{Eraslan2019} or imputation \cite{Lin2016}. Notably, few non-linear multi-view factor analysis models exist \cite{Damianou2016}, making it an interesting line of research.

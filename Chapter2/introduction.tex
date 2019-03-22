@@ -1,68 +1,41 @@
 \chapter{Integrative analysis of single-cell multi-modal data}
 
 \section{Introduction}
-
-% EDA is widely used and well accepted in the analysis of single omics data sets
-
-The rapid development of single-cell multi-modal technologies needs to be accompanied with statistical methods for interrogating the data generated. Integrative analyses that simultaneously pool information across multiple data modalities (-omics) and across multiple studies promise to deliver a more comprehensive insights into the complex variation that underly cellular populations.\\
+Decades of statistical research have established a solid framework for the exploratory analysis of (single) omics data. However, the rapid development of single-cell technologies is introducing unprecedented challenges for the statistical community, and novel computational methods need to be developed (or adapted) for interrogating the data generated \cite{Stegle2015}. In particular, integrative analyses that simultaneously pool information across multiple data modalities (-omics) and across multiple studies promise to deliver a more comprehensive insights into the complex variation that underly cellular populations \cite{Stuart2019,Colome-Tatche2018}.\\
 
 \subsection{Challenges in data integration}
-The development of statistical frameworks to jointly analyse multiple data sources face numerous challenges, some of which are enumerated as follows:
+The joint analysis of multiple data sources must tackle numerous challenges, some of which are:
 
 \begin{itemize}
-	\textbf{Heterogeneous data modalities}: data collected using different techniques generally exhibit heterogeneous properties and have to be modelled under different statistical assumptions. For example, combining count (i.e. gene expression) and binary traits (i.e.somatic mutations) under the same statistical framework is not a trivial task. 
+	\item \textbf{Heterogeneous data modalities}: measurements collected using different techniques generally exhibit heterogeneous statistical properties and have to be modelled under different statistical assumptions. For example, combining count (i.e. gene expression) and binary traits (i.e.somatic mutations) under the same statistical framework is not a trivial task. In the statistics community, this is commonly refered to as the multi-view learning problem \cite{Xu2013,Li2016}.
 
-	\textbf{Overfitting}: as the number of molecular layers increase but the number of samples remain limited, modelling strategies need to account for the risk of overfitting. This is particularly important for complex non-linear methods, including deep learning.
+	\item \textbf{Overfitting}: as the number of molecular layers increase but the number of samples remain limited, modelling strategies need to account for the risk of overfitting, which can lead to poor generalisation performance. This is particularly important for complex (non-linear) methods that are receiving increasing interest in the machine learning community \cite{Zhang2018}.
 
-	\textbf{Undesired sources of heterogeneity}: multi-omics data sets typically contain multiple undesired sources of heterogeneity, both technical (i.e. batch effects) and biological (i.e. cell cycle in single-cell data). If not accounted for, such strong sources of variability can hidden the signal of interest. Therefore, the use of dimensionality reduction techniques that disentangle the variability in terms of its principal components  represent an important step before other computational pipelines are applied.
+	\item \textbf{Undesired sources of heterogeneity}: multi-omics data sets typically contain undesired sources of heterogeneity, both technical and biological \cite{Ritchie2015}. Prominent examples are batch effects or cell cycle variation, respectively. If not accounted for, such strong sources of variability can hidden the signal of interest \cite{Buettner2015}. Therefore, understanding and correcting for the underlying principal components of the data represent a critical step before other computational pipelines are applied \cite{Meng2016}.
 
-	\textbf{Missing data}: a major problem in some single-cell methodologies is the large amounts of missing information. For example, in a typical single-cell bisulfite experiment less than 10\% of all CpG sites in the genome are measured. This imposes important challenges to some of the conventional statistical methods that do not handle missing information. Furthermore, different assays vary on how missing data is defined. For bisulfite sequencing methods, the missing values are clearly distinguishable from the observed values. However, for other methods such as single-cell RNA-seq or single-cell ATAC-seq, the absence of sequence reads do not distinguish between the event that the genomic feature was not measured from that the readout was actually zero.
+	\item \textbf{Missing data}: a major problem in some single-cell methodologies is the large amounts of missing information. For example, in a typical single-cell bisulfite experiment less than 10\% of all CpG sites in the genome are measured \cite{Smallwood2014}. This imposes important challenges to some of the conventional statistical methods that do not handle missing information. Furthermore, different assays differ on how missing data is defined. For bisulfite sequencing methods, the missing values are clearly distinguishable from the observed values. However, for other methods such as scRNA-seq or scATAC-seq, the absence of sequence reads do not distinguish between the event that the genomic feature was not measured from that the readout was indeed zero \cite{Clark2018}.
 
-	\textbf{Scalability}: as sequencing costs decrease and single-cell technologies improve their scalability, we expect multi-modal data sets to follow a similar exponential trend as in uni-modal data sets, where in the span of less than ten years experiments ranged from the order of tens to milions of cells.
+	\item \textbf{Scalability}: as sequencing costs decrease and technologies improve, we anticipate that multi-modal data sets will follow a similar trend as scRNA-seq, where in the span of less than ten years the size of the experiments ranged from the order of tens to milions of cells \cite{Svensson2018}. The interrogation of exceptionally large data sets requires computational methods to scale accordingly.
 
-	\textbf{Noise}: because of the small amounts of starting material, single-cell technologies are inherently noisy and result in large amounts of technical noise. Hence, in most cases, inspection of individual genes or cells tends to be unreliable. To overcome this challenge, computational frameworks are required to leverage information on the similarities between cells and/or genes to deliante the signal from noise and obtain reliable estimates. Prominent examples are (empirical) Bayesian approaches that are able to borrow information across cells and/or genes and propagate uncertainity when doing inference and predictions.
+	\item \textbf{Noise}: because of the small amounts of starting material, single-cell technologies are inherently noisy and result in large amounts of technical noise \cite{Stegle2015}. Hence, in most cases, inspection of individual genes or cells tends to be unreliable. To overcome this challenge, computational frameworks are required to leverage information on the similarities between cells and/or genes to delinate the signal from noise in order to obtain reliable estimates \cite{Vallejos2015}. Prominent examples are (empirical) Bayesian approaches that are able to borrow information across cells and/or genes and propagate uncertainity when doing inference and predictions \cite{Kharchenko2014}.
 
-	% \textbf{Lack of hypothesis}:
-	% accumulation of dta
-	% guide the researcher to formulate specific hypothesis
+	\item \textbf{Data-driven hypothesis}: the exponential accumulation of biological data is empowering a new type of scientific method where the sheer data itself guides the researcher to formulate specific hypothesis. Importantly, rather than inverting the direction of the scientific method from data to hypothesis, the exploitation of the information hidden in big data sets has the potential to make this relationship bidirectional. Consequently, there is a growing interest in the use of unsupervised methods that, under some specific (hypothesis-driven) assumptions, are able to extract biological insights from the data.
 
-	% Finding meaningful relationships in complex datasets also requires starting with the appropriate data. A hypothesis usually takes the form of a mechanistic relationship between a specific cause and a consequent effect, and this will almost always depend on experimental context. There are some circumstances when data must be gathered in the absence of context or hypothesis to characterize a system, but it is unrealistic to expect such preliminary studies to lead to significant biological insights. For this, you need a hypothesis.
-		% sheer availability of data 
-
-	%\textbf{Continuous nature of the data}:
+	% \textbf{Continuous nature of the data}:
 
 \end{itemize}
 
-\subsection{Early strategies}
+\subsection{Overview of methods for data integration}
+Several approaches for multi-omics data integration have been pursuit over the last years in order to address the gap between the increasing availability of multi-omic data and the lack of computational methods. These approaches can be broadly classified into two classes: local analysis and global analysis \cite{Ritchie2015}.
+
+Local analysis refers to the study of hierarchical associations between individual features from different molecular layers. Prominent examples are genome-wide association studies (GWAS) in combination with expression quantitative trait loci (eQTL), methylation QTLs or protein QTLs \cite{VanDerWijst2018,Chen2016,Pierce2018,Bonder2016}. While eminently useful for characterising genetic variants, such association studies are inherently local and have a limited capacity to discover global maps of molecular heterogeneity that typically result from complex interactions between features. In addition, such approaches are challening in the multi-omics setting due to the massive multiple testing problem \cite{Sul2015}.
+
+Global analysis on the other hand try to extract patterns from the full data set. This can be done by direct concatenation of all data modalities followed by the use of traditional statistical methods. Nonetheless, as outlined above, this approach is generally not suitable to accomodate different data types (i.e. binary, count, continuous and binomial data). In addition, this approach further inflates the dimensionality of the feature space, increasing the risk of overfitting and lessen interpretability.\\
+Alternatives have been proposed that perform transformations on each data type before merging them into a common similarity network, e.g. using kernel or graph-based approaches \cite{Lanckriet2004, Wang2014}. However, in such approaches interpretability is lost on the feature level. Moreover, without an underlying generative model, they do not naturally handle incomplete data and are uncapable of doing predictions.
+
+Arguably, some of the most succcessful global approaches are based on dimensionality reduction. Conventional methods include generalised versions of Canonical Correlation Analysis, Multiple coinertia analysis\cite{Hanafi2011} or Joint Non-negative Matrix Factorisation \cite{Liu2012}. The transition from single-view latent variable models to multi-view scenarios is described in more detail in \Cref{XX}. One of the most used latent variable models for multi-omics data integration is iCluster \cite{Shen2009, Mo2013}, a clustering method that will be discussed in more detail in \Cref{section:icluster}. However, as a non-generative clustering approach that involves expensive grid-search in its inference procedure, this model is limited by its inability to handle missing values ad limited scalability. Also, it results in artifical clusters in the presence of undesired sources of heterogeneity and when dealing with continuous data \cite{Argelaguet2018}.
+
+Finally, while the previous methods are general statistical formulations that have been applied to a wide range of domains, some models have been designed to contain tailored \textit{a priori} assumptions given by the dogma of molecular biology \cite{Sass2013}. 
 
 
-% Dimension reduction most successful
-
-Several approaches for multi-omics data integration have been pursuit over the last years in order to address the gap between the increasing availability of multi-omic data and the lack of computational methods. These approaches can be classified into two broad classes: local analysis and global analysis.
-
-Local analysis refers to the study of hierarchical associations between individual features from different molecular layers. Prominent examples are genome-wide association studies (GWAS) in combination with expression quantitative trait loci (eQTL), methylation QTLs or protein QTLs. While eminently useful for characterising genetic variants, such association studies are inherently local and have a limited capacity to discover global maps of molecular heterogeneity that typically result from complex interactions between features. In addition, such approaches are challening in the multi-omics setting due to the massive multiple testing problem.\\
-
-% (COPIED MOFA PAPER) A second strategy is the use of kernel- or graph-based methods to combine different data types into a common similarity network between samples (Lanckriet et al, 2004; Wang et al, 2014); however, it is difficult to pinpoint the molecular determinants of the resulting graph structure. Related to this, there exist generalizations of other clustering methods to reconstruct discrete groups of samples based on multiple data modalities (Shen et al, 2009; Mo et al, 2013).
-
-% Global analysis on the other hand tries to combine all available data in a simultaneous manner to overcome this limitation. This can be done by direct concatenation of all data and use of traditional statistical methods but thereby the distinct nature of different data types is ignored and a suitable way to accommodate different scales of the data is unclear. In addition, this approach further inflates the dimensionality of the feature space with associated challenges. Therefore, alternatives have been proposed which either perform transformations on each data type before merging them, e.g. using kernel or graph-based approaches (Lankriet 2004, Wang 2014), or construct models that distinctly model each individual data type (Shen 2009, Akavia 2010). While the first approach has the drawback that interpretability is lost on the level of individual features and their interactions are missed, the model-based often do not scale to the number of measurements collected in multi-omic studies.
-
-% (COPIED) The simplest multi-omics data integration is when the data sets have the same variables and observations, that is, matched rows and matched columns. In genomics, these could be produced when variables from different multi-assay data sets are mapped to a common set of genomic coordinates or gene identifiers, thus generating data sets with matched variables and matched observations. 
-
-
-% In particular, a successful approach for multi-omics data integration is iCluster (Shen 2009) and its extensions (Mo 2012, Mo 2017), which is a latent variable model aiming at a joint clustering of samples and identification of cluster-relevant features across data sets. However, to gain a deeper understanding of the processes that lead to the variation in the data it is essential to disentangle the major sources of variation and identify whether they are unique to a single biological layer or shared across multiple data modalities. The model underlying iCluster is not suited for this task due to its focus on clustering and performs suboptimal. Further, iCluster can be limited because of computationally expensive inference procedures and the inability to handle missing values which are routinely encountered in multi-omic data sets.
-
-\subsection{single-cell strategies}
-As in the experimental front, strategies for the integrative analysis of single-cell multi-modal data are inspired from previous work on bulk data. Yet, such methods need to account for the statistical properties of single-cell data, including the large amounts of noise, the missing data and the potentially large number of cells.\\
-
-Unimodal techniques:
-- Linear and non-linear dimensionality reduction
-- Differential expression, differential methylation, differential accessibility
-
-Multimodal techniques:
-- (Copied) joint dimensionality reduction on multiple omics data sets to identify conserved or divergent patterns and can be read- ily extended to single-cell multimodal data. 
-- Correlations
-- MATCHER
-- COUPLED MATRIX FACTORISATION
-
-
-% cite: Accounting for technical noise in single-cell RNA sequencing analysis 
+\subsection{Strategies for the integrative analysis of single-cell multi-modal data }
