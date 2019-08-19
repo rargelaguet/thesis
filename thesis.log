@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  22 MAR 2019 10:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  16 MAY 2019 11:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2042,8 +2042,9 @@ File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 \@quotelevel=\count427
 \@quotereset=\count428
 
-(./thesis.aux (./Abstract/abstract.aux) (./Chapter1/introduction.aux)
-(./Chapter1/scnmt-seq.aux) (./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
+(./thesis.aux (./Dedication/dedication.aux) (./Abstract/abstract.aux)
+(./Chapter1/introduction.aux) (./Chapter1/scnmt-seq.aux)
+(./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
 (./Chapter2/factor_analysis.aux
 
 LaTeX Warning: Label `fig:bayesianFA' multiply defined.
@@ -2255,10 +2256,17 @@ Package pdftex.def Info: Figs/University_Crest.pdf used on input line 139.
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figs/
 University_Crest.pdf>]
+\openout2 = `Dedication/dedication.aux'.
+
+
+(./Dedication/dedication.tex [2
+
+
+]) [3]
 \openout2 = `Abstract/abstract.aux'.
 
+ (./Abstract/abstract.tex [4
 
-(./Abstract/abstract.tex [2
 
 
 ]
@@ -2281,7 +2289,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--19
 
  []
 
-[3
+[5
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
@@ -2293,15 +2301,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--25
 
  []
 
-) [4] (./thesis.toc [5
+) [6] (./thesis.toc [7
 
 
 
-] [6] [7])
+] [8] [9])
 \tf@toc=\write9
 \openout9 = `thesis.toc'.
 
- [8]
+ [10]
 \openout2 = `Chapter1/introduction.aux'.
 
  (./Chapter1/introduction.tex
@@ -2320,7 +2328,7 @@ l.15 D
 
 
 
-] <Chapter1/Figs/scRNA_seq_comparison.pdf, id=589, 3533.2pt x 3773.16658pt>
+] <Chapter1/Figs/scRNA_seq_comparison.pdf, id=598, 3533.2pt x 3773.16658pt>
 File: Chapter1/Figs/scRNA_seq_comparison.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scRNA_seq_comparison.pdf>
@@ -2337,7 +2345,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--35
 
  []
 
-<Chapter1/Figs/methylation_protocols.pdf, id=667, 722.7pt x 534.99875pt>
+<Chapter1/Figs/methylation_protocols.pdf, id=676, 722.7pt x 534.99875pt>
 File: Chapter1/Figs/methylation_protocols.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/methylation_protocols.pdf>
@@ -2349,7 +2357,7 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.44 
-      [3] <Chapter1/Figs/scBS_protocol.pdf, id=704, 228.39249pt x 120.52167pt>
+      [3] <Chapter1/Figs/scBS_protocol.pdf, id=714, 228.39249pt x 120.52167pt>
 File: Chapter1/Figs/scBS_protocol.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scBS_protocol.pdf>
@@ -2378,7 +2386,7 @@ ed
                    \relax 
 l.79 
       [6]
-<Chapter1/Figs/ChromatinAcc_protocols.png, id=1083, 981.6675pt x 735.74875pt>
+<Chapter1/Figs/ChromatinAcc_protocols.png, id=1091, 981.6675pt x 735.74875pt>
 File: Chapter1/Figs/ChromatinAcc_protocols.png Graphic file (type png)
 
 <use Chapter1/Figs/ChromatinAcc_protocols.png>
@@ -2396,7 +2404,12 @@ ate ignored
 <to be read again> 
                    \relax 
 l.116 \end{itemize}
-                    [8]) [9]
+                    [8])pdfTeX warning (ext4): destination with the same identi
+fier (name{page.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.163 \include{Chapter1/introduction}
+                                      [9]
 \openout2 = `Chapter1/scnmt-seq.aux'.
 
  (./Chapter1/scnmt-seq.tex
@@ -2404,10 +2417,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-[10
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 
+      [10
 
 
-] <Chapter1/Figs/scNMT_protocol.pdf, id=1183, 311.1625pt x 427.5975pt>
+]
+<Chapter1/Figs/scNMT_protocol.pdf, id=1190, 311.1625pt x 427.5975pt>
 File: Chapter1/Figs/scNMT_protocol.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_protocol.pdf>
@@ -2422,7 +2441,7 @@ Package Fancyhdr Warning: \headheight is too small (14.5pt):
  This may cause the page layout to be inconsistent, however.
 
 [11 <./Chapter1/Figs/scNMT_protocol.pdf>] [12]
-<Chapter1/Figs/scNMT_coverage.pdf, id=1248, 435.6275pt x 226.8475pt>
+<Chapter1/Figs/scNMT_coverage.pdf, id=1254, 435.6275pt x 226.8475pt>
 File: Chapter1/Figs/scNMT_coverage.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_coverage.pdf>
@@ -2430,7 +2449,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_coverage.pdf used on input line 53
 .
 (pdftex.def)             Requested size: 466.62521pt x 242.98749pt.
 
-<Chapter1/Figs/scNMT_coverage2.pdf, id=1251, 205.76875pt x 152.06813pt>
+<Chapter1/Figs/scNMT_coverage2.pdf, id=1257, 205.76875pt x 152.06813pt>
 File: Chapter1/Figs/scNMT_coverage2.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_coverage2.pdf>
@@ -2450,7 +2469,7 @@ LaTeX Warning: Reference `fig:scnmt_profiles_MT' on page 1 undefined on input l
 ine 73.
 
 
-<Chapter1/Figs/scNMT_pseudobulk_profiles.pdf, id=1276, 871.91046pt x 867.24pt>
+<Chapter1/Figs/scNMT_pseudobulk_profiles.pdf, id=1282, 871.91046pt x 867.24pt>
 File: Chapter1/Figs/scNMT_pseudobulk_profiles.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_pseudobulk_profiles.pdf>
@@ -2462,7 +2481,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-<Chapter1/Figs/scNMT_comparison.pdf, id=1304, 700.41673pt x 328.22626pt>
+<Chapter1/Figs/scNMT_comparison.pdf, id=1310, 700.41673pt x 328.22626pt>
 File: Chapter1/Figs/scNMT_comparison.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_comparison.pdf>
@@ -2477,7 +2496,7 @@ Package Fancyhdr Warning: \headheight is too small (14.5pt):
  This may cause the page layout to be inconsistent, however.
 
 [15 <./Chapter1/Figs/scNMT_pseudobulk_profiles.pdf>]
-<Chapter1/Figs/scNMT_correlations_acrossgenes.pdf, id=1349, 495.35063pt x 190.0
+<Chapter1/Figs/scNMT_correlations_acrossgenes.pdf, id=1356, 495.35063pt x 190.0
 4298pt>
 File: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf Graphic file (type pdf)
  <use Chapter1/Figs/scNMT_correlations_acrossgenes.pdf>
@@ -2485,7 +2504,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf used
 on input line 112.
 (pdftex.def)             Requested size: 466.62521pt x 179.0232pt.
  [16 <./Chapter1/Figs/scNMT_comparison.pdf>]
-<Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf, id=1391, 803.0pt x 403.507
+<Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf, id=1398, 803.0pt x 403.507
 5pt>
 File: Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf Graphic file (type pdf
 )
@@ -2506,14 +2525,14 @@ _pseudobulk_profiles_byexpr.pdf
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter1/Figs/scNMT_pseudo
 bulk_profiles_byexpr.pdf): PDF inclusion: multiple pdfs with page group include
 d in a single page
->] <Chapter1/Figs/scNMT_EB_QC.pdf, id=1671, 1441.385pt x 1031.855pt>
+>] <Chapter1/Figs/scNMT_EB_QC.pdf, id=1677, 1441.385pt x 1031.855pt>
 File: Chapter1/Figs/scNMT_EB_QC.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_EB_QC.pdf>
 Package pdftex.def Info: Chapter1/Figs/scNMT_EB_QC.pdf used on input line 132.
 (pdftex.def)             Requested size: 373.30159pt x 267.23682pt.
 
-<Chapter1/Figs/scNMT_EB_RNA.pdf, id=1672, 650.43pt x 505.89pt>
+<Chapter1/Figs/scNMT_EB_RNA.pdf, id=1678, 650.43pt x 505.89pt>
 File: Chapter1/Figs/scNMT_EB_RNA.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_EB_RNA.pdf>
@@ -2521,7 +2540,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_EB_RNA.pdf used on input line 141.
 
 (pdftex.def)             Requested size: 373.30159pt x 290.35185pt.
  [18 <./Chapter1/Figs/scNMT_EB_QC.pdf>]
-<Chapter1/Figs/scNMT_EB_correlations.pdf, id=1693, 430.66898pt x 280.95967pt>
+<Chapter1/Figs/scNMT_EB_correlations.pdf, id=1699, 430.66898pt x 280.95967pt>
 File: Chapter1/Figs/scNMT_EB_correlations.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_EB_correlations.pdf>
@@ -2536,7 +2555,7 @@ Package Fancyhdr Warning: \headheight is too small (14.5pt):
  This may cause the page layout to be inconsistent, however.
 
 [19 <./Chapter1/Figs/scNMT_EB_RNA.pdf>]
-<Chapter1/Figs/scNMT_profiles_examples.pdf, id=2815, 1161.97112pt x 407.10495pt
+<Chapter1/Figs/scNMT_profiles_examples.pdf, id=2821, 1161.97112pt x 407.10495pt
 >
 File: Chapter1/Figs/scNMT_profiles_examples.pdf Graphic file (type pdf)
  <use Chapter1/Figs/scNMT_profiles_examples.pdf>
@@ -2544,7 +2563,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_examples.pdf used on inpu
 t line 166.
 (pdftex.def)             Requested size: 419.95984pt x 147.13538pt.
  [20 <./Chapter1/Figs/scNMT_EB_correlations.pdf>]
-<Chapter1/Figs/scNMT_profiles_prediction.pdf, id=2915, 505.89pt x 505.89pt>
+<Chapter1/Figs/scNMT_profiles_prediction.pdf, id=2921, 505.89pt x 505.89pt>
 File: Chapter1/Figs/scNMT_profiles_prediction.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_profiles_prediction.pdf>
@@ -2552,7 +2571,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_prediction.pdf used on in
 put line 175.
 (pdftex.def)             Requested size: 303.30353pt x 303.30475pt.
 
-<Chapter1/Figs/scNMT_profiles_expr.pdf, id=2916, 1773.80698pt x 1683.45943pt>
+<Chapter1/Figs/scNMT_profiles_expr.pdf, id=2922, 1773.80698pt x 1683.45943pt>
 File: Chapter1/Figs/scNMT_profiles_expr.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_profiles_expr.pdf>
@@ -2578,7 +2597,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--192
  []
 
 
-<Chapter1/Figs/scNMT_profiles_clusters.pdf, id=3012, 463.7325pt x 194.22563pt>
+<Chapter1/Figs/scNMT_profiles_clusters.pdf, id=3019, 463.7325pt x 194.22563pt>
 File: Chapter1/Figs/scNMT_profiles_clusters.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_profiles_clusters.pdf>
@@ -2586,7 +2605,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_clusters.pdf used on inpu
 t line 195.
 (pdftex.def)             Requested size: 419.95984pt x 175.89502pt.
  [22 <./Chapter1/Figs/scNMT_profiles_expr.pdf>]
-<Chapter1/Figs/scNMT_profiles_clusters2.pdf, id=3097, 472.76625pt x 189.70876pt
+<Chapter1/Figs/scNMT_profiles_clusters2.pdf, id=3104, 472.76625pt x 189.70876pt
 >
 File: Chapter1/Figs/scNMT_profiles_clusters2.pdf Graphic file (type pdf)
  <use Chapter1/Figs/scNMT_profiles_clusters2.pdf>
@@ -2606,7 +2625,7 @@ es_clusters2.pdf
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter1/Figs/scNMT_profil
 es_clusters2.pdf): PDF inclusion: multiple pdfs with page group included in a s
 ingle page
->] <Chapter1/Figs/scNMT_pseudotime.pdf, id=3257, 503.8825pt x 138.5175pt>
+>] <Chapter1/Figs/scNMT_pseudotime.pdf, id=3263, 503.8825pt x 138.5175pt>
 File: Chapter1/Figs/scNMT_pseudotime.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_pseudotime.pdf>
@@ -2614,7 +2633,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_pseudotime.pdf used on input line
 230.
 (pdftex.def)             Requested size: 419.95984pt x 115.44716pt.
 
-<Chapter1/Figs/scNMT_pseudotime_coupling.pdf, id=3260, 403.17325pt x 144.20576p
+<Chapter1/Figs/scNMT_pseudotime_coupling.pdf, id=3266, 403.17325pt x 144.20576p
 t>
 File: Chapter1/Figs/scNMT_pseudotime_coupling.pdf Graphic file (type pdf)
  <use Chapter1/Figs/scNMT_pseudotime_coupling.pdf>
@@ -2661,14 +2680,14 @@ LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 LaTeX Warning: Reference `section:ard' on page 1 undefined on input line 35.
 
 [31] [32] [33]
-<Chapter2/Figs/lower_bound.pdf, id=4140, 490.72935pt x 368.86005pt>
+<Chapter2/Figs/lower_bound.pdf, id=4147, 490.72935pt x 368.86005pt>
 File: Chapter2/Figs/lower_bound.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/lower_bound.pdf>
 Package pdftex.def Info: Chapter2/Figs/lower_bound.pdf used on input line 111.
 (pdftex.def)             Requested size: 163.32167pt x 122.7598pt.
 
-<Chapter2/Figs/mean_field.pdf, id=4151, 578.16pt x 337.26pt>
+<Chapter2/Figs/mean_field.pdf, id=4158, 578.16pt x 337.26pt>
 File: Chapter2/Figs/mean_field.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/mean_field.pdf>
@@ -2676,7 +2695,7 @@ Package pdftex.def Info: Chapter2/Figs/mean_field.pdf used on input line 129.
 (pdftex.def)             Requested size: 326.63622pt x 190.5368pt.
  [34 <./Chapter2/Figs/lower_bound.pdf>]
 [35 <./Chapter2/Figs/mean_field.pdf>] [36]
-<Chapter2/Figs/VB_vs_EP.pdf, id=4266, 1133.10326pt x 373.37592pt>
+<Chapter2/Figs/VB_vs_EP.pdf, id=4272, 1133.10326pt x 373.37592pt>
 File: Chapter2/Figs/VB_vs_EP.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/VB_vs_EP.pdf>
@@ -2703,14 +2722,14 @@ Overfull \hbox (6.17361pt too wide) in paragraph at lines 18--19
 [39
 
 
-] <Chapter2/Figs/pca1.pdf, id=4416, 1002.74625pt x 267.08885pt>
+] <Chapter2/Figs/pca1.pdf, id=4423, 1002.74625pt x 267.08885pt>
 File: Chapter2/Figs/pca1.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/pca1.pdf>
 Package pdftex.def Info: Chapter2/Figs/pca1.pdf used on input line 46.
 (pdftex.def)             Requested size: 466.62521pt x 124.28876pt.
  [40 <./Chapter2/Figs/pca1.pdf>]
-<Chapter2/Figs/pca2.pdf, id=4460, 803.0pt x 564.1075pt>
+<Chapter2/Figs/pca2.pdf, id=4467, 803.0pt x 564.1075pt>
 File: Chapter2/Figs/pca2.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/pca2.pdf>
@@ -2736,14 +2755,14 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 ) [43]
-<Chapter2/Figs/ard.pdf, id=4536, 630.355pt x 399.4925pt>
+<Chapter2/Figs/ard.pdf, id=4542, 630.355pt x 399.4925pt>
 File: Chapter2/Figs/ard.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/ard.pdf>
 Package pdftex.def Info: Chapter2/Figs/ard.pdf used on input line 164.
 (pdftex.def)             Requested size: 326.63622pt x 207.0058pt.
  [44]
-<Chapter2/Figs/hinton.pdf, id=4555, 505.89pt x 216.81pt>
+<Chapter2/Figs/hinton.pdf, id=4561, 505.89pt x 216.81pt>
 File: Chapter2/Figs/hinton.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/hinton.pdf>
@@ -2817,14 +2836,14 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 )
-<Chapter2/Figs/hinton_cca.pdf, id=4679, 556.65565pt x 193.6274pt>
+<Chapter2/Figs/hinton_cca.pdf, id=4685, 556.65565pt x 193.6274pt>
 File: Chapter2/Figs/hinton_cca.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/hinton_cca.pdf>
 Package pdftex.def Info: Chapter2/Figs/hinton_cca.pdf used on input line 280.
 (pdftex.def)             Requested size: 396.63428pt x 137.9698pt.
  [49] [50 <./Chapter2/Figs/hinton_cca.pdf>]
-<Chapter2/Figs/GFA.png, id=4721, 695.59875pt x 151.56625pt>
+<Chapter2/Figs/GFA.png, id=4727, 695.59875pt x 151.56625pt>
 File: Chapter2/Figs/GFA.png Graphic file (type png)
 
 <use Chapter2/Figs/GFA.png>
@@ -2842,7 +2861,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--71
 
  []
 
-[54] [55] <Chapter2/Figs/MOFA.pdf, id=4766, 1471.4975pt x 748.7975pt>
+[54] [55] <Chapter2/Figs/MOFA.pdf, id=4772, 1471.4975pt x 748.7975pt>
 File: Chapter2/Figs/MOFA.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA.pdf>
@@ -2879,7 +2898,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 ) [57 <./Chapter2/Figs/MOFA.pdf>]
-<Chapter2/Figs/elbo_convergence.pdf, id=5032, 243.83195pt x 224.32709pt>
+<Chapter2/Figs/elbo_convergence.pdf, id=5039, 243.83195pt x 224.32709pt>
 File: Chapter2/Figs/elbo_convergence.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/elbo_convergence.pdf>
@@ -2887,7 +2906,7 @@ Package pdftex.def Info: Chapter2/Figs/elbo_convergence.pdf used on input line
 129.
 (pdftex.def)             Requested size: 233.3126pt x 214.64983pt.
  [58]
-<Chapter2/Figs/MOFA_robustness.pdf, id=5043, 846.16125pt x 323.2075pt>
+<Chapter2/Figs/MOFA_robustness.pdf, id=5050, 846.16125pt x 323.2075pt>
 File: Chapter2/Figs/MOFA_robustness.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_robustness.pdf>
@@ -2895,7 +2914,7 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_robustness.pdf used on input line 1
 42.
 (pdftex.def)             Requested size: 466.62521pt x 178.23318pt.
  [59 <./Chapter2/Figs/elbo_convergence.pdf>] <Chapter2/Figs/MOFA_nfactors.pdf, 
-id=5067, 375.4025pt x 311.1625pt>
+id=5073, 375.4025pt x 311.1625pt>
 File: Chapter2/Figs/MOFA_nfactors.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_nfactors.pdf>
@@ -2904,14 +2923,14 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_nfactors.pdf used on input line 163
 (pdftex.def)             Requested size: 233.3126pt x 193.3888pt.
  [60 <./Chapter2/Figs/MOFA_robustness.pdf> <./Chapter2/Figs/MOFA_nfactors.pdf>]
  [61] [62] [63]
-<Chapter2/Figs/MOFA_learnK.pdf, id=5163, 1213.53375pt x 746.79pt>
+<Chapter2/Figs/MOFA_learnK.pdf, id=5170, 1213.53375pt x 746.79pt>
 File: Chapter2/Figs/MOFA_learnK.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_learnK.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_learnK.pdf used on input line 293.
 (pdftex.def)             Requested size: 466.62521pt x 287.15608pt.
 
-<Chapter2/Figs/MOFA_group_sparsity.pdf, id=5166, 646.415pt x 242.9075pt>
+<Chapter2/Figs/MOFA_group_sparsity.pdf, id=5173, 646.415pt x 242.9075pt>
 File: Chapter2/Figs/MOFA_group_sparsity.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_group_sparsity.pdf>
@@ -2923,7 +2942,7 @@ ne 306.
 LaTeX Warning: Reference `section:mofa_priors' on page 1 undefined on input lin
 e 312.
 
-<Chapter2/Figs/MOFA_sparsity.pdf, id=5374, 505.89pt x 361.35pt>
+<Chapter2/Figs/MOFA_sparsity.pdf, id=5381, 505.89pt x 361.35pt>
 File: Chapter2/Figs/MOFA_sparsity.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_sparsity.pdf>
@@ -2939,7 +2958,7 @@ input line 328.
 LaTeX Warning: Reference `fig:MOFA_nongaussian_binary' on page 1 undefined on i
 nput line 328.
 
-<Chapter2/Figs/MOFA_nongaussian.pdf, id=5401, 2093.8225pt x 821.0675pt>
+<Chapter2/Figs/MOFA_nongaussian.pdf, id=5407, 2093.8225pt x 821.0675pt>
 File: Chapter2/Figs/MOFA_nongaussian.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_nongaussian.pdf>
@@ -2951,7 +2970,7 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_nongaussian.pdf used on input line
 LaTeX Warning: Reference `fig:MOFA_scalability' on page 1 undefined on input li
 ne 339.
 
-<Chapter2/Figs/MOFA_scalability.pdf, id=5414, 505.89pt x 361.35pt>
+<Chapter2/Figs/MOFA_scalability.pdf, id=5420, 505.89pt x 361.35pt>
 File: Chapter2/Figs/MOFA_scalability.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_scalability.pdf>
@@ -2960,7 +2979,7 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_scalability.pdf used on input line
 (pdftex.def)             Requested size: 419.95984pt x 299.97556pt.
  [67 <./Chapter2/Figs/MOFA_nongaussian.pdf>] [68 <./Chapter2/Figs/MOFA_scalabil
 ity.pdf>]
-<Chapter2/Figs/MOFA_CLL_Figure1.pdf, id=5844, 525.965pt x 388.53558pt>
+<Chapter2/Figs/MOFA_CLL_Figure1.pdf, id=5850, 525.965pt x 388.53558pt>
 File: Chapter2/Figs/MOFA_CLL_Figure1.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_CLL_Figure1.pdf>
@@ -2968,7 +2987,7 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Figure1.pdf used on input line
 377.
 (pdftex.def)             Requested size: 466.62521pt x 344.71657pt.
  [69]
-<Chapter2/Figs/MOFA_IGHV_outlier.pdf, id=5857, 920.92659pt x 735.32817pt>
+<Chapter2/Figs/MOFA_IGHV_outlier.pdf, id=5864, 920.92659pt x 735.32817pt>
 File: Chapter2/Figs/MOFA_IGHV_outlier.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_IGHV_outlier.pdf>
@@ -2976,7 +2995,7 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_IGHV_outlier.pdf used on input line
  392.
 (pdftex.def)             Requested size: 466.62521pt x 372.58884pt.
  [70 <./Chapter2/Figs/MOFA_CLL_Figure1.pdf>]
-<Chapter2/Figs/MOFA_CLL_Factor1.pdf, id=5912, 1061.41539pt x 812.92809pt>
+<Chapter2/Figs/MOFA_CLL_Factor1.pdf, id=5919, 1061.41539pt x 812.92809pt>
 File: Chapter2/Figs/MOFA_CLL_Factor1.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_CLL_Factor1.pdf>
@@ -2984,7 +3003,7 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Factor1.pdf used on input line
 404.
 (pdftex.def)             Requested size: 466.62521pt x 357.37935pt.
  [71 <./Chapter2/Figs/MOFA_IGHV_outlier.pdf>] <Chapter2/Figs/MOFA_CLL_Cox.pdf, 
-id=5980, 1040.03558pt x 883.52386pt>
+id=5986, 1040.03558pt x 883.52386pt>
 File: Chapter2/Figs/MOFA_CLL_Cox.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_CLL_Cox.pdf>
@@ -2993,7 +3012,7 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Cox.pdf used on input line 427.
 (pdftex.def)             Requested size: 419.95984pt x 356.76018pt.
  [72 <./Chapter2/Figs/MOFA_CLL_Factor1.pdf>] [73 <./Chapter2/Figs/MOFA_CLL_Cox.
 pdf>]
-<Chapter2/Figs/MOFA_imputation.pdf, id=6150, 712.6625pt x 345.29pt>
+<Chapter2/Figs/MOFA_imputation.pdf, id=6156, 712.6625pt x 345.29pt>
 File: Chapter2/Figs/MOFA_imputation.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_imputation.pdf>
@@ -3001,14 +3020,14 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_imputation.pdf used on input line 4
 47.
 (pdftex.def)             Requested size: 466.62521pt x 226.07965pt.
  [74 <./Chapter2/Figs/MOFA_imputation.pdf>] <Chapter2/Figs/MOFA_scMT.pdf, id=61
-92, 697.60625pt x 569.12625pt>
+98, 697.60625pt x 569.12625pt>
 File: Chapter2/Figs/MOFA_scMT.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_scMT.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_scMT.pdf used on input line 467.
 (pdftex.def)             Requested size: 419.95984pt x 342.61601pt.
  [75]
-<Chapter2/Figs/MOFA_scMT_clustering.pdf, id=6206, 639.05449pt x 278.373pt>
+<Chapter2/Figs/MOFA_scMT_clustering.pdf, id=6213, 639.05449pt x 278.373pt>
 File: Chapter2/Figs/MOFA_scMT_clustering.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_scMT_clustering.pdf>
@@ -3071,8 +3090,9 @@ See the caption package documentation for explanation.
 [100]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 203.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 203.
- (./thesis.aux (./Abstract/abstract.aux) (./Chapter1/introduction.aux)
-(./Chapter1/scnmt-seq.aux) (./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
+ (./thesis.aux (./Dedication/dedication.aux) (./Abstract/abstract.aux)
+(./Chapter1/introduction.aux) (./Chapter1/scnmt-seq.aux)
+(./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
 (./Chapter2/factor_analysis.aux) (./Chapter2/mofa.aux)
 (./Chapter3/introduction.aux) (./Chapter4/introduction.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 203.
@@ -3094,10 +3114,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48616 strings out of 493014
- 943249 string characters out of 6133351
- 1764093 words of memory out of 5000000
- 50436 multiletter control sequences out of 15000+600000
+ 48624 strings out of 493014
+ 943440 string characters out of 6133351
+ 1766527 words of memory out of 5000000
+ 50437 multiletter control sequences out of 15000+600000
  48248 words of font info for 282 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,18n,92p,10442b,1633s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3135,10 +3155,10 @@ pe1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 public/cm-super/sftt1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
 blic/stmaryrd/stmary10.pfb>
-Output written on thesis.pdf (108 pages, 30476417 bytes).
+Output written on thesis.pdf (110 pages, 30477201 bytes).
 PDF statistics:
- 6914 PDF objects out of 7423 (max. 8388607)
- 4417 compressed objects within 45 object streams
+ 6922 PDF objects out of 7423 (max. 8388607)
+ 4423 compressed objects within 45 object streams
  519 named destinations out of 1000 (max. 500000)
  46960 words of extra memory for PDF output out of 51595 (max. 10000000)
 

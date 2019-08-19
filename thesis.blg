@@ -1,23 +1,23 @@
 [0] Config.pm:343> INFO - This is Biber 2.5
-[1] Config.pm:346> INFO - Logfile is 'thesis.blg'
-[60] biber-darwin:290> INFO - === Fri Mar 22, 2019, 10:50:25
-[85] Biber.pm:351> INFO - Reading 'thesis.bcf'
-[214] Biber.pm:776> INFO - Found 256 citekeys in bib section 0
-[227] Biber.pm:3493> INFO - Processing section 0
-[246] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter1/references.bib' for section 0
-[263] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[280] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter1/references.bib'
-[638] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter2/references.bib' for section 0
-[655] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[670] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter2/references.bib'
-[686] Utils.pm:149> WARN - Duplicate entry key: 'Chen2016' in file 'Chapter2/references.bib', skipping ...
-[918] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/yl/sc7b3yv53z1_hx81w56mrxd9tg5hxc/T/9ujJ47sfMT/references.bib_10209.utf8, line 547, warning: 10 characters of junk seen at toplevel
-[919] Utils.pm:149> WARN - I didn't find a database entry for 'XX' (section 0)
-[919] Utils.pm:149> WARN - I didn't find a database entry for 'DR-seq' (section 0)
-[1244] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1245] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1245] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[1245] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
-[1733] bbl.pm:526> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[1807] bbl.pm:619> INFO - Output to thesis.bbl
-[1807] Biber.pm:108> INFO - WARNINGS: 4
+[0] Config.pm:346> INFO - Logfile is 'thesis.blg'
+[47] biber-darwin:290> INFO - === Thu May 16, 2019, 11:08:48
+[76] Biber.pm:351> INFO - Reading 'thesis.bcf'
+[197] Biber.pm:776> INFO - Found 256 citekeys in bib section 0
+[211] Biber.pm:3493> INFO - Processing section 0
+[227] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter1/references.bib' for section 0
+[246] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[263] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter1/references.bib'
+[604] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter2/references.bib' for section 0
+[620] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[634] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter2/references.bib'
+[650] Utils.pm:149> WARN - Duplicate entry key: 'Chen2016' in file 'Chapter2/references.bib', skipping ...
+[874] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/yl/sc7b3yv53z1_hx81w56mrxd9tg5hxc/T/AIXW8IYoOH/references.bib_66976.utf8, line 547, warning: 10 characters of junk seen at toplevel
+[875] Utils.pm:149> WARN - I didn't find a database entry for 'XX' (section 0)
+[875] Utils.pm:149> WARN - I didn't find a database entry for 'DR-seq' (section 0)
+[1212] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1213] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1213] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[1213] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
+[1770] bbl.pm:526> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[1856] bbl.pm:619> INFO - Output to thesis.bbl
+[1856] Biber.pm:108> INFO - WARNINGS: 4

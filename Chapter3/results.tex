@@ -1,0 +1,66 @@
+
+\section{...}
+
+
+To study the relationship between the transcriptome and the epigenome during gastrulation we applied scNMT-seq (described in Chapter 1) to generate a comprehensive map of post-implantation mouse embryos
+
+In total, we jointly profiled chromatin accessibility, DNA methylation and gene expression from 1,105  cells at four developmental stages (Embryonic Day (E) 4.5, E5.5, E6.5 and E7.5), spanning exit from pluripotency and early germ layer commitment.
+
+(COPIED) Additionally, to improve lineage resolution, the transcriptomes of 1,419 additional cells from the relevant time points were also profiled.
+
+
+ADD FIGURE 1 left
+
+(COPIED) Venn Diagram displaying the number of cells that pass quality control for RNA expression (green), DNA methylation (red), chromatin accessibility (blue).
+(COPIED) Number of cells that pass quality control for each molecular layer, grouped by stage. Note that for 1,419 out of 2,524 total cells only the RNA expression was sequenced.
+
+\subsection{Quality control}
+\subsubsection{Quality control for the RNA expression}
+
+Cells with less than 10,000 reads and less than 500 expressed genes (read counts $>0$) were discarded on the basis of poor quality.
+
+ADD FIGURE
+
+
+
+\subsubsection{Quality control for the DNA methylation}
+
+Cells with less than 50,000 CpG measurements were discarded on the basis of poor coverage.
+
+To further validate the quality of the DNA methylation readouts, we performed dimensionality reduction across all cells and also separately for every stage using a Bayesian Factor Analysis model (i.e. MOFA with one view). The rationality for this choice of model is:
+- The presence of missing values: on average, ~75\% of sites are missing per cell and ~70\% cells are missing per site when quantifying the DNA methylation data in 1kb regions. In this scenario, we argue that imputing missing data for PCA, UMAP or t-SNE is unlikely to be successful. MOFA naturally accounts for missing data by omitting the corresponding sites from its likelihood function, thus mitigating the need to use any imputation.
+- The linearity assumption in MOFA makes the model more robust to changes in hyperparameters than for example t-SNE, where different values of the perplexity parameter can lead to highly variable results, especially for datasets with moderate cell counts such as ours4. In addition, linearity assumption ensures that MOFA yields a directly interpretable latent space (by inspection of the weights) and enables the quantification of how much variance each factor explains.
+
+Reassuringly, from E4.5 to E7.5 the factor with the highest variance explained (Factor 1) separates cells by embryonic versus extraembryonic origin. At E7.5, the first two latent factors discriminate the three germ layers.
+
+	ADD FIGURE
+
+\subsubsection{Quality control for the chromatin accessibility}
+
+Cells with less than 500,000 Gpc measurements were discarded on the basis of poor coverage.
+
+To further validate the quality of the chromatin accessibility readouts, we performed dimensionality reduction across all cells and also separately for every stage using a Bayesian Factor Analysis model, as described above.
+
+As with DNA methylation, from E4.5 to E7.5 the factor with the highest variance explained (Factor 1) separates cells by embryonic versus extraembryonic origin. At E7.5, the first two latent factors discriminate the three germ layers.
+
+	ADD FIGURE
+
+\subsection{Lineage assignment}
+
+To define cell type annotations for the E6.5 and E7.5 stages, we mapped the RNA expression profiles to the single-cell gastrulation atlas [XXX] by matching mutual nearest neighbours [XXX]. In short, the count matrices for both data sets were concatenated and normalised together. Then, we performed Principal Component Analyisis followed by batch correction to remove the technical variability between experiments. This latent space was then used for the construction of a k-nearest neighbours graph. Finally, for each scNMT-seq cell, we assigned a cell type using majority voting on the cell type distribution of the top 30 nearest neighbours in the atlas.
+
+	ADD FIGURE
+
+For the E4.5 and E5.5 stages, no atlas was available and we instead used SC3, a consensus clustering method:
+
+	ADD FIGURE
+
+\subsection{Exit from pluripotency is concomitant with the establishment of a repressive epigenetic landscape}
+First, 
+
+(COPIED) To better understand epigenomic dynamics during development, we characterised the changes in DNA methylation and chromatin accessibility during each stage transition. Globally, CpG methylation levels rise from ~25% to ~75% in the embryonic tissue and ~50% in the extra-embryonic tissue (Figure S9), mainly driven by a de novo methylation wave from E4.5 to E5.5 that preferentially targets CpG-poor genomic loci16,17,45 (Figure 1e). Subsequent stage transitions induce relatively small global changes, but are instead associated with prominent local methylation processes, including X-chromosome inactivation in female embryos17,46,47 (Figure S10).
+
+In contrast to the sharp de novo methylation dynamics between E4.5 and E5.5, we observed a more gradual decline in global chromatin accessibility from ~38% at E4.5 to ~30% at E7.5, with no differences between embryonic and extraembryonic tissues (Figure S9). Consistent with the DNA methylation changes, CpG rich regions remain more accessible than CpG poor regions of the genome (Figure 1f)
+
+To relate the epigenetic changes to transcriptional dynamics across stages, we calculated, for each gene, the correlation between its RNA expression and the corresponding DNA methylation or chromatin accessibility levels at its promoter. Out of 5,000 genes tested (see Methods) we identified 125 genes whose expression shows significant correlation with promoter DNA methylation and 52 that show a significant correlation with chromatin accessibility (Figure 1g, Figure S12, Table S2-3). Inspection of the dynamics for these associated loci reveals the repression of early pluripotency and germ cell markers, including Dppa4, Dppa5a, Rex1, Tex19.1 and Pou3f1 (Figure 1g-h, Figure S11), largely reflecting the genome-wide trend of DNA methylation gain and chromatin closure (Figure 1e-f). In addition, this analysis identifies novel genes, including Trap1a, Zfp981, Zfp985, as well as a number of metabolism genes (e.g. Apoc1, Pla2g1b, Pla2g10) that may have yet unknown roles in pluripotency or germ cell development. Notably, only 39 and 9 genes found to be upregulated after E4.5 show a significant correlation between RNA expression and promoter methylation or accessibility, respectively (Figure 1g, Figure S12). This suggests that the upregulation of these genes is more likely controlled by other regulatory elements; a hypothesis that is further explored below.
+
