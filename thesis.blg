@@ -1,23 +1,28 @@
 [0] Config.pm:343> INFO - This is Biber 2.5
 [0] Config.pm:346> INFO - Logfile is 'thesis.blg'
-[47] biber-darwin:290> INFO - === Thu May 16, 2019, 11:08:48
-[76] Biber.pm:351> INFO - Reading 'thesis.bcf'
-[197] Biber.pm:776> INFO - Found 256 citekeys in bib section 0
-[211] Biber.pm:3493> INFO - Processing section 0
-[227] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter1/references.bib' for section 0
-[246] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[263] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter1/references.bib'
-[604] Biber.pm:3657> INFO - Looking for bibtex format file 'Chapter2/references.bib' for section 0
-[620] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[634] bibtex.pm:1048> INFO - Found BibTeX data source 'Chapter2/references.bib'
-[650] Utils.pm:149> WARN - Duplicate entry key: 'Chen2016' in file 'Chapter2/references.bib', skipping ...
-[874] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/yl/sc7b3yv53z1_hx81w56mrxd9tg5hxc/T/AIXW8IYoOH/references.bib_66976.utf8, line 547, warning: 10 characters of junk seen at toplevel
-[875] Utils.pm:149> WARN - I didn't find a database entry for 'XX' (section 0)
-[875] Utils.pm:149> WARN - I didn't find a database entry for 'DR-seq' (section 0)
-[1212] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1213] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1213] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[1213] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
-[1770] bbl.pm:526> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[1856] bbl.pm:619> INFO - Output to thesis.bbl
-[1856] Biber.pm:108> INFO - WARNINGS: 4
+[48] biber-darwin:290> INFO - === Mon Mar 23, 2020, 12:10:34
+[68] Biber.pm:351> INFO - Reading 'thesis.bcf'
+[181] Biber.pm:776> INFO - Found 139 citekeys in bib section 0
+[195] Biber.pm:3493> INFO - Processing section 0
+[209] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter1.bib' for section 0
+[228] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[245] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter1.bib'
+[307] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter2.bib' for section 0
+[322] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[337] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter2.bib'
+[352] Utils.pm:149> WARN - Duplicate entry key: 'Chen2016' in file 'references/references_chapter2.bib', skipping ...
+[555] Utils.pm:149> WARN - BibTeX subsystem: /var/folders/yl/sc7b3yv53z1_hx81w56mrxd9tg5hxc/T/ZMe1eXyfxZ/references_chapter2.bib_18705.utf8, line 547, warning: 10 characters of junk seen at toplevel
+[556] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter3.bib' for section 0
+[562] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[568] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter3.bib'
+[569] Utils.pm:149> WARN - Entry Tam1993 does not parse correctly
+[570] Utils.pm:149> WARN - Duplicate entry key: 'Lee2014' in file 'references/references_chapter3.bib', skipping ...
+[570] Utils.pm:149> WARN - Duplicate entry key: 'Cao2019' in file 'references/references_chapter3.bib', skipping ...
+[571] Utils.pm:149> WARN - Duplicate entry key: 'Stuart2019' in file 'references/references_chapter3.bib', skipping ...
+[572] Utils.pm:149> WARN - Duplicate entry key: 'Wang2019' in file 'references/references_chapter3.bib', skipping ...
+[572] Utils.pm:149> WARN - Duplicate entry key: 'Rulands2018' in file 'references/references_chapter3.bib', skipping ...
+[573] Utils.pm:149> WARN - Duplicate entry key: 'Li2016' in file 'references/references_chapter3.bib', skipping ...
+[575] Utils.pm:149> WARN - Duplicate entry key: 'Angermueller2017' in file 'references/references_chapter3.bib', skipping ...
+[575] Utils.pm:165> ERROR - BibTeX subsystem: /var/folders/yl/sc7b3yv53z1_hx81w56mrxd9tg5hxc/T/ZMe1eXyfxZ/references_chapter3.bib_18705.utf8, line 45, syntax error: found ",", expected one of: name (entry type, key, field, or macro name) or end of entry ("}" or ")")
+[575] Biber.pm:108> INFO - WARNINGS: 10
+[575] Biber.pm:112> INFO - ERRORS: 1

@@ -1,6 +1,10 @@
 % ******************************* PhD Thesis Template **************************
 
-\documentclass[a4paper,11pt,times,custombib,print,index,custommargin]{Classes/PhDThesisPSnPDF}
+% Print version
+%\documentclass[a4paper,11pt,times,custombib,print,index,custommargin]{Classes/PhDThesisPSnPDF}
+
+% Online version
+\documentclass[a4paper,11pt,times,custombib,custommargin]{Classes/PhDThesisPSnPDF}
 
 % ******************************************************************************
 % ******************************* Class Options ********************************
@@ -73,7 +77,8 @@
 
 % ********************************** Preamble **********************************
 
-\input{Preamble/preamble} % Contains packages and user-defined commands and settings
+% Contains packages and user-defined commands and settings
+\input{Preamble/preamble} 
 
 % ************************ Thesis Information & Meta-data **********************
 
@@ -84,26 +89,12 @@
 \usepackage{listings}
 
 \usepackage{graphicx}
-%\usepackage{tabularx}
-%\usepackage{longtable}
-%\usepackage{csvsimple}
 \usepackage{multicol}
-%\usepackage{xtab,booktabs}
-%\usepackage{array}
-%\usepackage{transparent}
 \usepackage{stmaryrd}
-
-%\usepackage{pifont}
-%\usepackage[export]{adjustbox}
-% \usepackage[hidelinks]{hyperref}
 
 % Math
 \usepackage{dsfont} % Dirac Delta
 \usepackage{amsmath}
-
-% Captions for figures and subfigures
-\usepackage[font={small}, margin=20pt]{caption}
-\usepackage[font={footnotesize}, margin=20pt]{subcaption}
 
 \input{sty/personal_commands}
 \input{sty/listing_style}
@@ -138,17 +129,16 @@
 
 \maketitle
 
-\include{Dedication/dedication}
+%\include{Dedication/dedication}
 % \include{Declaration/declaration}
 % \include{Acknowledgement/acknowledgement}
-\include{Abstract/abstract}
+%\include{Abstract/abstract}
 
 % *********************** Adding TOC and List of Figures ***********************
 
-\tableofcontents
+% \tableofcontents
 
 %\listoffigures
-
 % \listoftables
 
 % \printnomenclature[space] space can be set as 2em between symbol and description
@@ -160,8 +150,8 @@
 \mainmatter
 
 % Chapter 1
-\include{Chapter1/introduction}
-\include{Chapter1/scnmt-seq}
+%\include{Chapter1/introduction}
+%\include{Chapter1/scnmt-seq}
 
 % Chapter 2
 \include{Chapter2/introduction}
@@ -170,11 +160,8 @@
 \include{Chapter2/mofa}
 
 % Chapter 3
-\include{Chapter3/introduction}
-
-% Chapter 4
-\include{Chapter4/introduction}
-
+%\include{Chapter3/introduction}
+%\include{Chapter3/results}
 
 % ********************************** Appendices ********************************
 
@@ -198,6 +185,6 @@
 % \bibliographystyle{apalike}
 \cleardoublepage
 
-\printbibliography
+%\printbibliography
 
 \end{document}

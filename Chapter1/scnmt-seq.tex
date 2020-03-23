@@ -3,18 +3,17 @@
 
 \graphicspath{{Chapter1/Figs/}}
 
-Single-cell profiling techniques have provided an unprecented opportunity to study cellular heterogeneity at multiple molecular levels. The maturation of single-cell RNA-sequencing technologies has enabled the identification of transcriptional profiles associated with lineage diversification and cell fate commitment \cite{Kolodziejczyk2015,Griffiths2018,Papalexi2017,Patel2014}. Yet, the accompanying epigenetic changes and the role of other molecular layers in driving cell fate decisions remains poorly understood. Consequently, the profiling the epigenome at the single-cell level is receiving increasing attention, but without associated transcriptomic readouts, the conclusions that can be extracted from epigenetic measurements are limited \cite{Stuart2019,Kelsey2017,Griffiths2018}.
+In this chapter we will describe scNMT-seq, an experimental protocol for genome-wide profiling of RNA expression, DNA methylation and chromatin accessibility in single cells. First, we will validate the quality of the omics readouts, followed by a comparison with existing technologies. Subsequently, we will showcase how scNMT-seq can be used to reveal coordinated epigenetic and transcriptomic heterogeneity along a differentiation process.
 
-In this chapter we will describe scNMT-seq, an experimental protocol for genome-wide profiling of RNA expression, DNA methylation and chromatin accessibility in single cells. First, we will validate the quality of the triple omics readouts, followed by a comparison with similar available technologies. Subsequently, we will showcase how scNMT-seq can be used to reveal coordinated epigenetic and transcriptomic heterogeneity along a differentiation process.
+The work discussed in this chapter results from a collaboration with the group of Wolf Reik (Babraham Institute, Cambridge, UK). It has been peer-reviewed and published in \cite{Clark2018}.\\
 
-The work discussed in this chapter results from a collaboration with the Wolf Reik lab (Babraham Institute, Cambridge, UK). It has been peer-reviewed and published in Clark \& Argelaguet et al \cite{Clark2018}.\\
-The methodology was conceived by Stephen Clark, who performed most of the experiments. Felix Krueger processed and managed sequencing data. I performed the computational analysis, except for the reconsutraction of chromatin accessibility profiles, which was done by Andreas Kapourani. Guido Sanguinetti, Gavin Kelsey, John C. Marioni, Oliver Stegle and Wolf Reik supervised the project.\\
-The article was jointly written by Stephen Clark, John Marioni, Oliver Stegle and Wolf Reik, and me.
+The methodology was conceived by Stephen Clark, who performed most of the experiments. Felix Krueger processed and managed sequencing data. I performed the computational analysis, except for the reconsutraction of chromatin accessibility profiles, which was done by Andreas Kapourani. John C. Marioni, Oliver Stegle and Wolf Reik supervised the project.\\
+The article was jointly written by Stephen Clark and me, with input from all authors.
 
 \subsection{Description of the experimental protocol} \label{section:scnmt_protocol}
-scNMT-seq builds upon two previous multi-modal single-cell sequencing protocols: single-cell Methylation and Transcriptome sequencing (scM\&T-seq) \cite{Angermueller2016} and Nucleosome Occupancy and Methylation sequencing (NOMe-seq) \cite{Kelly2012,Pott2016}. An overview of the experiment protocol is shown in \Cref{fig:scnmt_protocol}.
+scNMT-seq builds upon two previous multi-modal protocols: single-cell Methylation and Transcriptome sequencing (scM\&T-seq) \cite{Angermueller2016} and Nucleosome Occupancy and Methylation sequencing (NOMe-seq) \cite{Kelly2012,Pott2016}. An overview of the protocol is shown in \Cref{fig:scnmt_protocol}.
 
-In the first step (the NOMe-seq step), cells are sorted into individual wells and incubated with a GpC methyltransferase (M.CviPI). As shown \textit{in vitro}, this enzyme labels accessible (or nucleosome depleted) GpC sites via DNA methylation\cite{Kilgore2007, Kelly2012}. In mammalian genomes, cytosine residues in GpC dinucleotides are methylated at a very low rate. Hence, after M.CviPI treatment, GpC methylation marks can be interpreted as direct read outs for chromatin accessibility, as opposed to the CpG methylation readouts, which can be interpreted as endogenous DNA methylation\cite{Kilgore2007, Kelly2012}.
+In the first step (the NOMe-seq step), cells are sorted into individual wells and incubated with a GpC methyltransferase (M.CviPI). This enzyme labels accessible (or nucleosome depleted) GpC sites via DNA methylation\cite{Kilgore2007, Kelly2012}. In mammalian genomes, cytosine residues in GpC dinucleotides are methylated at a very low rate. Hence, after M.CviPI treatment, GpC methylation marks can be interpreted as direct read outs for chromatin accessibility, as opposed to the CpG methylation readouts, which can be interpreted as endogenous DNA methylation\cite{Kilgore2007, Kelly2012}.
 
 In a second step (the scM\&T-seq step), the DNA molecules are separated from the mRNA using oligo-dT probes pre-annealed to magnetic beads. Subsequently, the DNA fraction undergoes single-cell bisulfite conversion\cite{Smallwood2014}, whereas the RNA fraction undergoes Smart-seq2 \cite{Picelli2014}.\\
 
@@ -25,27 +24,24 @@ In a second step (the scM\&T-seq step), the DNA molecules are separated from the
 	\label{fig:scnmt_protocol}
 \end{figure}
 
-As discussed in \Cref{section:chromatin_accessibility}, NOMe-seq has a range of appealing properties in comparison with count-based methods such as ATAC-seq or DNAseq-seq.
-
-First, the obvious gain of simultaneously measuring another epigenetic readout such as DNA methylation with little additional cost. Second, the resolution of the method is determined by the frequency of GpC sites within the genome ($\approx$ 1 in 16 bp), rather than the size of a library fragment (usually >100 bp). This allows the robust inspection of individual regulatory elements, nucleosome positioning and transcription factor footprints \cite{Kelly2012,Pott2016,Nordstrom2019}. Third, missing data can be easily discriminated from inaccessible chromatin. Importantly, this implies that lowly accessible sites will not suffer from increased technical variation (due to low read counts) compared to highly accessible sites. Finally, the M.CviPI enzyme shows less sequence motif biases than the DNAse or the Tn5 transposase \cite{Nordstrom2019}.
+[REWRITE] As discussed in \Cref{section:chromatin_accessibility}, NOMe-seq has a range of appealing properties in comparison with count-based methods such as ATAC-seq or DNAseq-seq. First, the obvious gain of simultaneously measuring another epigenetic readout such as DNA methylation with little additional cost. Second, the resolution of the method is determined by the frequency of GpC sites within the genome ($\approx$ 1 in 16 bp), rather than the size of a library fragment (usually >100 bp). This allows the robust inspection of individual regulatory elements, nucleosome positioning and transcription factor footprints \cite{Kelly2012,Pott2016,Nordstrom2019}. Third, missing data can be easily discriminated from inaccessible chromatin. Importantly, this implies that lowly accessible sites will not suffer from increased technical variation (due to low read counts) compared to highly accessible sites. Finally, the M.CviPI enzyme shows less sequence motif biases than the DNAse or the Tn5 transposase \cite{Nordstrom2019}.
 % STEPHEN: this paragraph is just copied from intro right? most of these advantages are specific to single-cell so it fits better here (i.e. i would remove a lot of this from the introduction)
 
 The downsides of the approach are the limited scalability associated with plate-based methods, and the need to discard read outs from (1) GCG positions (21\%), as it is intrinsically not possible to distinguish endogenous methylation from \textit{in vitro} methylated bases, and (2) CGC positions (27\%), to mitigate off-target effects of the enzyme \cite{Kelly2012}. This filtering step reduces the number of genome-wide cytosines that can be assayed from 22 million to 11 million. 
 
 
 \subsection{Description of the data processing pipeline}
-After DNA sequencing, reads undergo quality control and trimming using TrimGalore to remove the flanking 6bp (the random primers), adaptor contamination and poor-quality base calls. Subsequently, trimmed reads are aligned to the corresponding genome assembly. Here we used Bismark \cite{Krueger2011} with the additional --NOMe option, which produces CpG report files containing only ACG and TCG trinucleotides and GpC report files containing only GCA, GCC and GCT positions. After mapping, a new round of quality control is performed based on mapping efficiency, bisulfite conversion efficiency and library size.
+After DNA sequencing, reads undergo quality control and trimming using TrimGalore\cite{XX} to remove the flanking 6bp (the random primers), adaptor contamination and poor-quality base calls. Subsequently, trimmed reads are aligned to the corresponding genome assembly. Here we used Bismark \cite{Krueger2011} with the additional --NOMe option, which produces CpG report files containing only ACG and TCG trinucleotides and GpC report files containing only GCA, GCC and GCT positions. After mapping, a new round of quality control is performed per cell based on mapping efficiency, bisulfite conversion efficiency and library size.\\
+Finally, methylation calls for each CpG and GpC site are calculated after removal of duplicate alignments. Following the approach of \cite{Smallwood2014}, individual CpG or GpC sites in each cell are modelled using a binomial model where the number of successes is the number of methylated reads and the number of trials is the total number of reads. A CpG methylation or GpC accessibility rate for each site and cell is calculated by maximum likelihood.
 
-Finally, methylation calls for each CpG and GpC site are extracted after removal of duplicate alignments. Following the approach of \cite{Smallwood2014}, individual CpG or GpC sites in each cell are modelled using a binomial model where the number of successes is the number of methylated reads and the number of trials is the total number of reads. A CpG methylation or GpC accessibility rate for each site and cell is calculated by maximum likelihood.
-
-When quantifying DNA methylation and chromatin accessibility rates over genomic features (i.e. promoters or enhancers), a binomial node is assumed again per cell and feature, but aggregating the counts over all CpG (methylation) and GpC (accessibility) dinucleotides overlapping the genomic feature.
+% When quantifying DNA methylation and chromatin accessibility over genomic features (i.e. promoters or enhancers) instead of individual CpG or GpC sites, a binomial model is again assumed. For each cell and feature, we calculated a...but aggregating the counts over all CpG (methylation) and GpC (accessibility) dinucleotides overlapping the genomic feature.
 
 \subsection{Validation}
 
 \subsubsection{Coverage} \label{section:scnmt_coverage}
-We validated scNMT-seq using 70 EL16 mouse embryonic stem cells (ESCs) cultured in serum conditions, together with two controls: negative empty wells and three cells processed without M.CviPI enzyme treatment (i.e. using scM\&T-seq). The use of this relatively simple and well-studied \textit{in vitro} system allows us to compare DNA methylation and chromatin accessibility statistics from published data \cite{Smallwood2014,Angermueller2016,Ficz2013}.
+We validated scNMT-seq in 70 EL16 mouse embryonic stem cells (ESCs), together with three cells processed without M.CviPI enzyme treatment (i.e. using scM\&T-seq). The use of this relatively simple and well-studied \textit{in vitro} system allows us to compare our DNA methylation and chromatin accessibility statistics to published data \cite{Smallwood2014,Angermueller2016,Ficz2013}.
 
-First, we compared the theoretical maximum coverage with the empirical coverage (\Cref{fig:scnmt_coverage}). Despite the reduction in theoretical coverage due to the removal of CCG and GCG sites, we observed, for DNA methylation, a median of $\approx$ 50\% of promoters, $\approx$ 75\% of gene bodies and $\approx$ 25\% of active enhancers captured by at least 5 CpGs in each cell. Nevertheless, limited coverage is indeed observed for small genomic contexts such as p300 ChIP-seq peaks (median of $\approx$ 200bp).\\
+First, we compared the theoretical maximum coverage that could be achieved with the empirical coverage (\Cref{fig:scnmt_coverage}). Despite the reduction in theoretical coverage due to the removal of ambiguous CCG and GCG sites, we observed, for DNA methylation, a median of $\approx$ 50\% of promoters, $\approx$ 75\% of gene bodies and $\approx$ 25\% of active enhancers captured by at least 5 CpGs in each cell. Nevertheless, limited coverage is indeed observed for small genomic contexts such as p300 ChIP-seq peaks (median of $\approx$ 200bp).\\
 For chromatin accessibility, coverage was larger than that observed for endogenous methylation due to the higher frequency of GpC dinucleotides, with a median of $\approx$ 85\% of gene bodies and $\approx$ 75\% of promoters measured with at least 5 GpCs.
 
 \begin{figure}[H]
@@ -68,9 +64,20 @@ Despite scNMT-seq yielding less CpG measurements, we find little differences in 
 
 \subsubsection{Consistency with previous studies}
 
-To assess the consistency with previous studies we performed several comparisons.
+To assess the consistency with previous studies we quantified DNA methylation and chromatin accessibility using a running window throughout the genome. The resulting methylomes were compared to data sets from the same cell lines profiled with similar technologies, including scM\&T-seq\cite{Angermueller2016}, scBS-seq\cite{Smallwood2014} and bulk BS-seq\cite{Ficz2013}. We find that most of the variation is not attributed to the technology but to differences in culture condition (2i vs serum, captured by PC1). This result is expected, as cells grown in 2i media remain in a native pluripotency state that is associated with genome-wide DNA hypomethylation \cite{Ficz2013}. Interestingly, the serum-cultured cells processed in this study overlapped with 2i-cultured cells from previous data sets. suggesting that they remained in a more pluripotent state. The most likely explanation for this variation is the differences in the cell lines (we used female EL16 versus male E14 in \cite{Angermueller2016,Smallwood2014,Ficz2013}). Previous studies have sown that female ESCs tend to show lower levels of mean global methylation, which is consistent with a more pluripotent phenotype \cite{Zvetkova2005}.\\
 
-First, we computationally pseudobulked the data across all cells and we examined DNA methylation and chromatin accessibility levels at loci with known regulatory roles. We found that in promoters, DNaseI hypersensitivity sites, enhancer regions and transcription factors binding sites, DNA methylation was decreased while chromatin accessibility was increased, as previously reported \cite{Pott2016}. As a control, we observe that cells which did not receive M.CviPI treatment showed globally low GpC methylation levels ( $\approx$ 2\%, \Cref{fig:scnmt_profiles_MT}).
+In terms of accessibility, no NOMe-seq measurements were available for ESCs at the time of the study, so we compared it to bulk DNase-seq data from the same cell type \cite{XX}, yielding good consistency between datasets (Pearson R = 0.74).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{scNMT_comparison}
+	\caption[]{Comparison of unsupervised genome-wide quantifications to published data sets. (a) Principal Component Analysis of 1kb running windows. Missing values were imputed using the average methylation rate per locus. (b) Scatter plot of chromatin accessibility quantified over 10kb running windows of scNMT-seq data versus published bulk DNase-seq. For DNase-seq, accessibility is quantified as the log2 reads. The Pearson correlation was weighted by the GpC coverage in scNMT-seq data. }
+	\label{fig:scnmt_comparison}
+\end{figure}
+
+
+\subsubsection{Quantification of DNA methylation and chromatin accessibility in known regulatory regions}
+
+We pseudobulked the data across all cells and we examined DNA methylation and chromatin accessibility levels at loci with known regulatory roles. We found that in promoters, DNaseI hypersensitivity sites, enhancer regions and transcription factors binding sites, DNA methylation was decreased while chromatin accessibility was increased, as previously reported \cite{Pott2016}. As a control, we observe that cells which did not receive M.CviPI treatment showed globally low GpC methylation levels ( $\approx$ 2\%, \Cref{fig:scnmt_profiles_MT}).
 
 % TO-DO: ADD PROMOTERS
 \begin{figure}[H]
@@ -80,31 +87,7 @@ First, we computationally pseudobulked the data across all cells and we examined
 	\label{fig:scnmt_profiles}
 \end{figure}
 
-
-% TO-DO: ADD SCMT CONTROLS
-% \begin{figure}[H]
-% 	\centering
-% 	\includegraphics[width=0.8\linewidth]{scNMT_profiles_MT}
-% 	\caption[]{}
-% 	\label{fig:scnmt_profiles_MT}
-% \end{figure}
-
-
-Second, instead of interrogating pre-defined genomic annotations, we quantified DNA methylation and chromatin accessibility using a running window throughout the genome. The resulting measurements were compared to data sets from the same cell lines profiled with similar technologies, including scM\&T-seq\cite{Angermueller2016}, scBS-seq\cite{Smallwood2014} and bulk BS-seq\cite{Ficz2013}.
-
-When comparing the resulting methylomes, we find that most of the variation is not attributed to the technology but to differences in culture condition (serum vs 2i media). Cells grown in 2i media remain in a native pluripotency state with genome-wide DNA hypomethylation \cite{Ficz2013}, whereas cells in serum media transition to a primed pluripotency state poised for differentiation \cite{Tosolini2016}.
-
-Interestingly, the serum-cultured cells processed in this study overlapped with 2i-cultured cells from previous data sets. suggesting that they remained in a more pluripotent state. The most likely explanation for this variation is the differences in the cell lines (we used female EL16 versus male E14 in \cite{Angermueller2016,Smallwood2014,Ficz2013}). Previous studies have sown that female ESCs tend to show lower levels of mean global methylation, which is consistent with a more pluripotent phenotype \cite{Zvetkova2005}.\\
-
-In terms of accessibility, no NOMe-seq measurements were available for ESCs at the time of the study, so we compared it to bulk DNase-seq data from the same cell type \cite{XX}, yielding good consistency between datasets (weighted Pearson R = 0.74).
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1.0\linewidth]{scNMT_comparison}
-	\caption[]{Comparison of unsupervised genome-wide quantifications to published data sets. (a) Principal Component Analysis of 1kb running windows. Missing values were imputed using the average methylation rate per locus. (b) Scatter plot of chromatin accessibility quantified over 10kb running windows of scNMT-seq data versus published bulk DNase-seq. For DNase-seq, accessibility is quantified as the log2 reads. The Pearson correlation was weighted by the GpC coverage in scNMT-seq data. }
-	\label{fig:scnmt_comparison}
-\end{figure}
-
-Finally, we attempted to reconstruct the expected directional relationships between the transcriptome and the epigenome, namely the positive association between RNA expression and chromatin accessibility and the negative association between DNA methylation and RNA expression \cite{Thurman2012,Angermueller2016}.\\
+Next, we attempted to reconstruct the expected directional relationships between the transcriptome and the epigenome, namely the positive association between RNA expression and chromatin accessibility and the negative association between DNA methylation and RNA expression \cite{Thurman2012,Angermueller2016}.\\
 To get a measure of the coupling between two molecular layers, we quantified a linear association per cell (across genes). Notice that this approach is not exclusive to single-cell data and can be computed (more accurately) with bulk measurements. Reassuringly, this analysis confirmed, even within single cells, the expected positive correlation between chromatin accessibility and RNA expression, and the negative correlations between RNA expression and DNA methylation, and between DNA methylation and chromatin accessibility.
 
 \begin{figure}[H]
@@ -114,27 +97,29 @@ To get a measure of the coupling between two molecular layers, we quantified a l
 	\label{fig:scNMT_correlations_acrossgenes}
 \end{figure}
 
-Consistently, when stratifiying the loci from \Cref{fig:scnmt_profiles} based on the expression level of the nearest gene, we observe that higher RNA expression is associated with chromatin openness and decreased DNA methylation levels \Cref{fig:scnmt_profiles_byexpr}. 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\linewidth]{scNMT_pseudobulk_profiles_byexpr}
-	\caption[]{DNA methylation (red) and chromatin accessibility profiles (blue), stratified by RNA expression of the nearest gene. The profiles are quantified as in \Cref{fig:scnmt_profiles}. The RNA expression is discretised in three groups: log normalised counts less than 2 (low), between 2 and 6 (medium) and higher than 5 (high)}
-	\label{fig:scnmt_profiles_byexpr}
-\end{figure}
+% Consistently, when stratifiying the loci from \Cref{fig:scnmt_profiles} based on the expression level of the nearest gene, we observe that higher RNA expression is associated with chromatin openness and decreased DNA methylation levels \Cref{fig:scnmt_profiles_byexpr}. 
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.9\linewidth]{scNMT_pseudobulk_profiles_byexpr}
+% 	\caption[]{DNA methylation (red) and chromatin accessibility profiles (blue), stratified by RNA expression of the nearest gene. The profiles are quantified as in \Cref{fig:scnmt_profiles}. The RNA expression is discretised in three groups: log normalised counts less than 2 (low), between 2 and 6 (medium) and higher than 5 (high)}
+% 	\label{fig:scnmt_profiles_byexpr}
+% \end{figure}
+
+
 
 \subsection{Identification of genomic elements with coordinated variability across molecular layers}
 
-Having validated the quality of scNMT-seq data, we next explored its potential to identify coordinated heterogeneity across different molecular layers.\\
-We generated a second data set of 43 embryonic stem cells (after QC), where we induced a differentiation process towards embryoid bodies by removing the LIF media for 3 days:
+Having validated the quality of scNMT-seq data with a relatively homogeneous data set, we next explored its potential to identify coordinated heterogeneity across different molecular layers.\\
+We generated a second data set of 43 embryonic stem cells (after QC), where we induced a differentiation process towards embryoid bodies by removing the LIF media for 3 days.\\Dimensionality reduction on the RNA expression data reveals the existence of two subpopulations: one with high expression of pluripotency markers (\textit{Esrrb} and \textit{Rex1}) and the other with high expression of differentiation markers (\textit{T} and \textit{Prtg}).
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{scNMT_EB_QC}
-	\caption[]{Quality control statistics on the 43 embryoid body cells. (a) number of aligned RNA reads per cell (left) and number of expressed genes (right). (b) Number of CpG sites (DNA methylation) observed. (c) Number of GpC sites (chromatin accessibility) observed. Dashed lines indicate binary thresholds, such that cells below the threshold are excluded for the downstream analysis.}
-	\label{fig:scnmt_eb_qc}
-\end{figure}
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\linewidth]{scNMT_EB_QC}
+% 	\caption[]{Quality control statistics on the 43 embryoid body cells. (a) number of aligned RNA reads per cell (left) and number of expressed genes (right). (b) Number of CpG sites (DNA methylation) observed. (c) Number of GpC sites (chromatin accessibility) observed. Dashed lines indicate binary thresholds, such that cells below the threshold are excluded for the downstream analysis.}
+% 	\label{fig:scnmt_eb_qc}
+% \end{figure}
 
-Dimensionality reduction on the RNA expression data reveals the existence of two subpopulations: one with high expression of pluripotency markers (Esrrb and Rex1) and the other with high expression of differentiation markers (T and Prtg). This confirms the existence of significant phenotypic heterogeneity that is required for an association analysis.
+
 
 \begin{figure}[H]
 	\centering

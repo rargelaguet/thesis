@@ -4,7 +4,7 @@
 
 Probabilistic models can be represented in a diagrammatic format (i.e. a graph or a network) that offers a compact visual representation of complicated systems of probability distributions \cite{Bishop}. In a graphical model the relationship between the nodes becomes more explicit, namely their conditional independence properties which allow the joint distribution over all variables to be factorised into a series of simpler products involving subsets of variables \cite{Bishop}. The basic unit of a network is the node, which represents the different types of variables, including observed variables, unobserved probabilistic variables and unobserved parameters. The nodes are connected by unidirectional edges (arrows) which capture the conditional independence relationship between the variables.
 
-For this thesis we adapted the graphical notations from~\cite{Dietz2010-technical-report-graphs}. 
+For this thesis we adapted the graphical notations from~\cite{Dietz2010-technical-report-graphs}.
 
 \begin{center}
   \begin{tabular}{m{8cm} m{2cm}}
@@ -147,7 +147,7 @@ The corresponding graphical model is:
 	\label{fig:bayesianFA}
 \end{figure}
 
-\subsubsection{Hierarchical priors: Automatic relevance determination}
+\subsubsection{Hierarchical priors: Automatic relevance determination} \label{section_ard}
 A key advantage of the full Bayesian treatment is that it explicitly captures uncertainity on the estimation of all unobserved variables, as opposed to the probabilistic PCA model \cite{Bishop1999a,Bishop1999b}. Yet, more importantly, the use of (hierarchical) prior distributions allow different modelling assumptions to be encoded, providing a flexible and principled approach to extend PCA to a myriad of modelling scenarios, including multi-view generalisations \cite{Klami2008,Virtanen2012,Klami2015,Bunte2016,Khan2014,Zhao2016}.
 
 As an example, a major challenge in PCA is how to determine the dimensionality of the latent space (i.e. the number of principle components). As we will show, the use of hierarchical prior distributions allows the model to introduce sparsity assumptions on the loadings in such a way that the model automatically learns the number of factors.\\
@@ -202,10 +202,10 @@ The spike-and-slab prior is effectively a mixture model where features are sampl
 
 \section{Multi-view factor analysis models}
 
-Probabilistic PCA and Factor Analysis perform dimensionality reduction from a single input matrix. However, in some occasions data is collected from multiple data sources that exibit heterogeneous statistical properties, resulting in a structured data set where features are naturally partitioned into groups \cite{Xu2013,Li2016,Zeng2018}. A clear biological example is multi-omics data, where, for the same set of samples, multiple molecular layers are profiled, including genetic background, epigenetic information, protein levels or lipid composition \cite{Huang2017b,Hasin2017b}. Each of the data modalities can be analysed separately using conventional (single-view) methods, but the challenge is the use of a single model that integrates all these layers of information using a flexible and principled approach. This is refered to as the multi-view learning problem \cite{Xu2013,Li2016}.\\
-A tempting approach to circumvent the multi-view learning problem is to simply concatenate all different data sets before applying conventional (single-view) latent variable models \cite{Ritchie2015}. However, this is prone to fail for several reasons. First, heterogeneous data modalities cannot always be modelled using the same likelihood function. For example, the normal likelihood is commonly used for analysing continuous data, yet the statistical properties of binary readouts and count-based traits are not appropriately modelled by this distribution \cite{Pilling2018}. Second, even if all views are modelled with the same likelihood, differences in the scale and the magnitude of the variance can lead to some views being overrepresented in the latent space, hence requiring strong normalisation steps. Finally, for a structured input data, composed of different groups of features, one can also expect a structured latent representation, with factors capturing signal in different subsets of views \cite{Virtanen2012,Klami2015}. Not taking this behaviour into account can lead to challenges in the interpretability of the latent space.
+Probabilistic PCA and Factor Analysis perform dimensionality reduction from a single input matrix. In some occasions data is collected from multiple data sources that exibit heterogeneous statistical properties, resulting in a structured data set where features are naturally partitioned into views \cite{Xu2013,Li2016,Zeng2018}. A clear biological example is multi-omics data, where, for the same set of samples, multiple molecular layers are profiled. Each of the data modalities can be analysed separately using conventional (single-view) methods, but in the ideal strategy a single model should be used to leverage information across all molecular layers using a flexible and principled approach. This is refered to as the multi-view learning problem \cite{Xu2013,Li2016}.\\
+A tempting approach to circumvent the multi-view learning problem is to simply concatenate all different data sets before applying conventional (single-view) latent variable models \cite{Ritchie2015}. However, this is prone to fail for several reasons. First, heterogeneous data modalities cannot always be modelled using the same likelihood function. For example, continuous measurements are often modelled using a normal distribution, but binary and count-based traits are not appropriately modelled by this distribution \cite{Pilling2018}. Second, even if all views are modelled with the same likelihood, differences in the scale and the magnitude of the variance can lead to some views being overrepresented in the latent space. Finally, in a multi-view data set we expect multiple sources of variation, some of which driven by a single view, whereas others could capture shared variability across multiple views. In other words, from a structured input space, one can also expect a structured latent representation. Not taking this behaviour into account can lead to challenges in the interpretability of the latent space.
 
-A comprehensive review of multi-view machine learning methods can be found in \cite{Xu2013} and a more genomics-based perspective can be found in \cite{Ritchie2015}. For the purpose of this thesis, we will describe multi-view methods based on latent variable models.
+A comprehensive review of multi-view machine learning methods can be found in \cite{Xu2013} and a more genomics-oriented perspective can be found in \cite{Ritchie2015}. For the purpose of this thesis, we will describe only the use of latent variable models for multi-view data integration.
 
 \subsection{Canonical Correlation Analysis} \label{cca}
 Canonical Correlation Analysis (CCA) is a simple extension of PCA to find linear components that capture correlations between two datasets \cite{Hotteling1936,Hardle2007}.\\
@@ -249,7 +249,7 @@ The corresponding graphical model is:
 \end{center} \end{figure}
 
 Notice that the observations for both data sets are generated from the same set of latent variables $\bfZ$. This ensures that the model is focused on capturing the variation associated with cross-correlated groups of features.\\
-Analogously to probabilistic PCA, the expected value of the posterior distribution $p(\bfZ|\bfY^{1},\bfY^{2})$ span the same subspace as standard CCA \cite{Bach2005}. Nonetheless, this formulation enables a broad range of principled extensions into larger probabilistic models.
+Analogously to probabilistic PCA, the expected value of the posterior distribution $p(\bfZ|\bfY^{1},\bfY^{2})$ span the same subspace as standard CCA \cite{Bach2005}. Nonetheless, one of the many advantage of a probabilistic formulation is that it enables a broad range of principled extensions into larger graphical models.
 
 
 \subsection{Bayesian Canonical Correlation Analysis} \label{section:bayesian_cca}
@@ -278,42 +278,52 @@ As expected, in practice this yields a more sparse solution than traditional CCA
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\linewidth]{hinton_cca}
-	\caption{Comparison of the hintons diagram of $\bfW^{1}$ and $\bfW^{2}$ for the maximum likelihood CCA model (two left plots) and the variational bayes CCA model (two right plots). Reprinted from \cite{Wang2007}.}
+	\caption{Comparison of the Hinton's diagram of $\bfW^{1}$ and $\bfW^{2}$ for the maximum likelihood CCA model (two left plots) and the variational bayes CCA model (two right plots). Reprinted from \cite{Wang2007} with modifications.}
 	\label{fig:hinton_cca}
 \end{figure}
 
 
-\subsection{Group Factor Analysis}
+\subsection{Group Factor Analysis} \label{section:gfa}
 
 Group Factor Analysis (GFA) is the natural generalisation of Bayesian Canonical Correlation Analysis to an arbitrary number of views.
-The original idea was originally presented in \cite{Virtanen2012} and a series of generalisations followed, tailored with specific assumptions for different applications \cite{Klami2015,Leppaaho2017,Bunte2016,Khan2014,Zhao2016,Remes2015}. In this section we will outline the core principle of GFA and describe some of the applications that followed.
+The original idea was originally presented in \cite{Virtanen2012} and a series of generalisations followed, tailored with specific assumptions for different applications \cite{Klami2015,Leppaaho2017,Bunte2016,Khan2014,Zhao2016,Remes2015}. In this section we will outline the core principle of GFA.
 
-Given a data set of $M$ views $\bfY_1, \cdots, \bfY_M$, the task of GFA is to find $K$ factors that capture the inter-variability between views as well as the intra-variability within views. In other words, some factors should explain variance across multiple views whereas some factors should explain variance within a single view.\\
-The starting point from the model is Bayesian CCA \Cref{section:bayesian_cca}. Generalising it to $M$ views:
+Given a data set of $M$ views $\bfY_1, \cdots, \bfY_M$, the task of GFA is to find $K$ factors that capture the variability \textit{within} as well as the variability \textit{between} views. In other words, we want to capture factors that not only explain variance that is shared across all views but we also want to capture factors that explain variance within a single view or between different subsets of views.\\
+The starting point is to generalise the Bayesian CCA model (\Cref{section:bayesian_cca}) to $M$ views:
 \begin{align*}
 	\bfY^{1} &= \bfW^{2} \bfZ + \epsilon^{1} \\
 	\bfY^{2} &= \bfW^{2} \bfZ + \epsilon^{2} \\
 	& \cdots \\
-	\bfY^{M} &= \bfW^{3} \bfZ + \epsilon^{3}
+	\bfY^{M} &= \bfW^{M} \bfZ + \epsilon^{M}
 \end{align*}
-The key in learning the GFA solution lies on the sparsity structure of the loadings. If using the same ARD prior per factor as in Bayesian CCA, the factors would be exclusively restricted to have the same activity across all views. In GFA, however, the aim is to find components that capture intra-specific variation (active in a single view) and components that capture inter-specific dependencies (active in multiple views). This can be achieved by generalising the ARD sparsity as follows:
+Notice that there is a common factor space for all views, but there is a view-specific weight matrix. The key to disentangle the activity of each factor in each view lies on the sparsity structure imposed in the weights. Intuitively, if a facto $k$ is not driving any variation in a specific view $m$ we want all the individual weights to be pushed to zero. As shown before, this behaviour can be achieved using Automatic Relevance Determination (ARD) priors. However, if we were to use the same approach as in Bayesian CCA, where the ARD prior for factor $k$ is shared across all views, then factors would be restricted to have the same activity across all views.\\
+In GFA this is generalised as follows:
 \begin{align}
 	p(\bfW) &= \prod_{m=1}^{M} \prod_{k=1}^{K} \Ndist{\bfw_{:,k}^m}{0,\frac{1}{\alpha_k^m}} \\
 	p(\balpha) &= \prod_{m=1}^{M} \prod_{k=1}^{K} \Gdist{\alpha_k^m}{a_0^\alpha, b_0^\alpha}
 \end{align}
-Effectively, setting an ARD prior per factor and group defines a matrix $\balpha \in \R^{M \times K}$ with four types of factors: (1) Inactive factors that do not explain variance in any view, such that all values $\balpha_k$ are large. (2) Fully shared factors that explain variance across all views, such that all values $\balpha_k$ are small. (3) Unique factors that explain variance in a single view, such that all values $\balpha_k$ are very large, except one. (4) Partially shared factors that explain variance in a subsets views, such that some values in $\balpha_k$ are large whereas others are small.
+This is effectively setting an ARD prior per factor $k$ and view $m$. The matrix $\balpha \in \R^{M \times K}$ defines four types of factors: (1) Inactive factors that do not explain variance in any view, which corresponds to all values $\balpha_k$ being large. (2) Fully shared factors that explain variance across all views, which corresponds to all values $\balpha_k$ being small. (3) Unique factors that explain variance in a single view, which corresponds to all values $\balpha_k$ being large, except for one entry. (4) Partially shared factors that explain variance in a subsets views, which corresponds to a mixture of small and large values for $\balpha_k$.\\
 
-The following figure illustrates a representative GFA solution for three views:
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1.0\linewidth]{GFA}
-	\caption{(RE-DO FIGURE) Illustration of the GFA solution for $M=3$. The data sets are concatenated into a single matrix $\bfY$, which is factorised into a product of the latent variable matrix $\bfZ$ and a concatenated loading matrix $\bfW$. The shade in $\bfW$ depicts the factor and view-wise sparsity, where gray shading indicates high activity (small $\alpha_m^k$ value) and no shading indicates low activity (large $\alpha_m^k$ value). Note that some factors are active across all views (top), some factors are active in subsets of views (middle) and some factors are active in a single view (bottom).}
-	\label{fig:intro:gfa}
-\end{figure}
+The corresponding graphical model is:
 
-Finally, notice that if $M=1$ the model reduces to Bayesian PCA (\Cref{section:bayesian_pca}). However, if $M=2$ the model does not reduce to Bayesian CCA, because in the GFA setting some factors are also allowed to capture intra-specific variability.
+\begin{figure}[H] \begin{center}
+	\input{graphical_models/GFA}
+	\label{fig:graphical_GFA}
+	\caption{Graphical model for Bayesian Group Factor Analysis}
+\end{center} \end{figure}
 
-\subsubsection{Similar approaches}
+
+% The following figure illustrates a representative GFA solution for three views:
+% \begin{figure}[h]
+% 	\centering
+% 	\includegraphics[width=1.0\linewidth]{GFA}
+% 	\caption{(RE-DO FIGURE) Illustration of the GFA solution for $M=3$. The data sets are concatenated into a single matrix $\bfY$, which is factorised into a product of the latent variable matrix $\bfZ$ and a concatenated loading matrix $\bfW$. The shade in $\bfW$ depicts the factor and view-wise sparsity, where gray shading indicates high activity (small $\alpha_m^k$ value) and no shading indicates low activity (large $\alpha_m^k$ value). Note that some factors are active across all views (top), some factors are active in subsets of views (middle) and some factors are active in a single view (bottom).}
+% 	\label{fig:intro:gfa}
+% \end{figure}
+
+Finally, notice that if $M=1$ the model reduces to Bayesian PCA (\Cref{section:bayesian_pca}), but when $M=2$ the model does \textit{not} reduce to Bayesian CCA because in the GFA setting factors are also allowed to capture both inter-specific variability (i.e. across views) intra-specific variability (within a view). In Bayesian CCA, the views share a common ARD prior per factor to enforce the factors to explain variation in both views, at the expense of ignoring sources of variability that are specific to a single view.
+
+% \subsubsection{Similar approaches}
 % Y. Jia, M. Salzmann, and T. Darrell. Factorized la- tent spaces with structured sparsity. In Advances in Neural Information Processing Systems 23, pages 982-990, 2010.
 
 % GFA extends multi-battery factor analysis (MBFA), introduced by McDonald [4] and Browne [5] as a generalization of inter-battery fac- tor analysis (IBFA)
@@ -322,27 +332,27 @@ Finally, notice that if $M=1$ the model reduces to Bayesian PCA (\Cref{section:b
 
 % The MBFA models provide one set of factors that describe the rela- tionships between all groups, and then model the varia- tion specific to each group either with a free covariance matrix or a separate set of factors for that group. Besides the multi-set extensions of CCA, also the probabilistic interpretation of sparse matrix factorization [21], and the JIVE model for integrated analysis of multiple data types [22], [23] belong to the family of MBFA models
 
-\subsubsection{Extensions}
-Multiple extensions from the initial GFA framework have been proposed:
+% \subsubsection{Extensions}
+% Multiple extensions from the initial GFA framework have been proposed:
 
-\begin{itemize}
-	\item Klami et al, 2015 \cite{Klami2015}: in the GFA framework outlined above, $\balpha \in \R^{M,K}$ is drawn from a flat gamma prior where views and factors are assumed independent. To encourage the model to find correlations between views, they specify a low-rank decomposition for $\balpha$:
-	\[
-		\log \balpha = \bfU \bfV^T + \bmu_{u}^T + \bmu_{v}^t
-	\]
-	with corresponding priors for $\bfU$ and $\bfV$. This representation directly captures correlations between the view activation profiles and is particularly useful when dealing with large number of views \cite{Klami2015}.
+% \begin{itemize}
+% 	\item Klami et al, 2015 \cite{Klami2015}: in the GFA framework outlined above, $\balpha \in \R^{M,K}$ is drawn from a flat gamma prior where views and factors are assumed independent. To encourage the model to find correlations between views, they specify a low-rank decomposition for $\balpha$:
+% 	\[
+% 		\log \balpha = \bfU \bfV^T + \bmu_{u}^T + \bmu_{v}^t
+% 	\]
+% 	with corresponding priors for $\bfU$ and $\bfV$. This representation directly captures correlations between the view activation profiles and is particularly useful when dealing with large number of views \cite{Klami2015}.
 
-	\item Zhao et al, 2016 \cite{Zhao2016}: in the GFA framework outlined above, $\bfW^M$ have no element-wise sparsity. In this study, they implemented a more sophisticated structured sparsity prior called the three parameter beta prior \cite{Armagan2011}. The advantage of this prior distribution is three-fold: (1) it regularises the matrix, globally, removing factors that do not explain variation in any view. (2) Shrinks columns $\bfw_{:,k}^{m}$ to obtain the desired factor and group-wise sparsity. (3) Introduces feature-wise sparsity for each element $w_{d,k}^{m}$
+% 	\item Zhao et al, 2016 \cite{Zhao2016}: in the GFA framework outlined above, $\bfW^M$ have no element-wise sparsity. In this study, they implemented a more sophisticated structured sparsity prior called the three parameter beta prior \cite{Armagan2011}. The advantage of this prior distribution is three-fold: (1) it regularises the matrix, globally, removing factors that do not explain variation in any view. (2) Shrinks columns $\bfw_{:,k}^{m}$ to obtain the desired factor and group-wise sparsity. (3) Introduces feature-wise sparsity for each element $w_{d,k}^{m}$
  
-	% \item Remes et al, 2015 \cite{Remes2015}: 
+% 	% \item Remes et al, 2015 \cite{Remes2015}: 
 
-	% \item Bunte et al, 2016 \cite{Bunte2016}:
+% 	% \item Bunte et al, 2016 \cite{Bunte2016}:
 
-	% 	Biclustering is tradition- ally defined as simultaneously clustering both rows and columns in a data matrix
-	% his is done simi- larly to how Khan et al. (2014) produced variable-wise sparsity, but now for both variables and samples to produce biclusters. Namely we use the following spike and slab priors (Suvitaival et al. (2014) included sparsity for samples 
+% 	% 	Biclustering is tradition- ally defined as simultaneously clustering both rows and columns in a data matrix
+% 	% his is done simi- larly to how Khan et al. (2014) produced variable-wise sparsity, but now for both variables and samples to produce biclusters. Namely we use the following spike and slab priors (Suvitaival et al. (2014) included sparsity for samples 
 
-	% 	We present a Bayesian approach for joint biclustering of multiple data sources
+% 	% 	We present a Bayesian approach for joint biclustering of multiple data sources
 
 
-\end{itemize}
+% \end{itemize}
 

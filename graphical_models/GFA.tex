@@ -1,0 +1,57 @@
+% \begin{tikzpicture}
+
+% % Define nodes
+% \node[obs, xshift=-1.5cm] (Y1) {$y^{m}_{n,d}$};
+
+% \node[latent, below=of Y1, yshift=+0.5cm, xshift=+1.5cm] (Z) {$z_{n,k}$};
+
+% \node[latent, double, double distance=1pt, below=of Y1, xshift=-1cm, yshift=-1cm] (W1) {$w^{1}_{d,k}$};
+% \node[latent, double, double distance=1pt, below=of Y2, xshift=+1cm, yshift=-1cm] (W2) {$w^{2}_{d,k}$};
+
+% \node[latent, double, double distance=1pt, left=of Y1, yshift=-0.5cm] (Tau1) {$\tau^{1}$};
+% \node[latent, double, double distance=1pt, right=of Y2, yshift=-0.5cm] (Tau2) {$\tau^{2}$};
+
+% % Connect the nodes
+% \edge {Z} {Y1};
+% \edge {Z} {Y2};
+% \edge {W1} {Y1};
+% \edge {W2} {Y2};
+% \edge {Tau1} {Y1};
+% \edge {Tau2} {Y2};
+% % \edge {Z,W, Tau} {Y};
+
+% % Plates
+% \plate[] {plateK} {(Z)(W1)(W2)} {$K$};
+% % \plate[] {plateN} {(Y1)(Y2)(Z)(plateD1.north)} {$N$};
+% % \plate[] {plateD1} {(Y1)(W1)(plateK.south)(plateN.north)} {$D_1$};
+% % \plate[] {plateD2} {(Y2)(W2)(plateK.south)(plateN.north)} {$D_2$};
+% \plate[] {plateN} {(Y1)(Y2)(Z)} {$N$};
+% \plate[] {plateD1} {(Y1)(W1)(Tau1)} {$D_1$};
+% \plate[] {plateD2} {(Y2)(W2)(Tau2)} {$D_2$};
+
+% \end{tikzpicture}
+
+
+
+\begin{tikzpicture}
+  % Define nodes:
+  % matrix factorisation level
+  \node[obs]   (Y) {$y_{n,d}^m$};
+  \node[latent, above=of Y, xshift=-1.5cm] (Z) {$z_{n,k}$};
+  \node[latent, above=of Y, xshift=1.5cm] (W) {$w^m_{k,d}$};
+  % \node[latent, xshift=1.5cm] (Tau) {$\tau^m_{d}$};
+  \node[latent, xshift=2.5cm] (Tau) {$\tau^m$};
+  \node[latent, above=of W] (alpha) {$\alpha^m_{k}$};
+
+  % Connect the nodes
+  \edge {Z,W,Tau} {Y}; %
+  \edge {alpha} {W};
+
+  % Plates
+  \plate[] {plateK} {(Z)(W)(alpha)} {$K$};
+  \plate[] {plateN} {(Y)(Z) (plateK.south west)} {$N$};
+  % \plate[] {plateD} {(Y)(W) (plateK.south east) (plateN.south east) (plateN.north east)} {$D_m$};
+  \plate[] {plateD} {(Y)(W)} {$D_m$};
+  % \plate[] {plateM} {(Tau) (plateK.north east)(plateD.south east)(plateD.south west)} {$M$};
+  \plate[] {plateM} {(Y)(W)(Tau)(alpha)} {$M$};
+\end{tikzpicture}

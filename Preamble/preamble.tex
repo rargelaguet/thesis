@@ -32,11 +32,14 @@
 
 % ********************Captions and Hyperreferencing / URL **********************
 
-% Captions: This makes captions of figures use a boldfaced small font.
-%\RequirePackage[small,bf]{caption}
+% to support older versions of captions.sty
+%\renewcommand{\figurename}{Fig.} 
 
-\RequirePackage[labelsep=space,tableposition=top]{caption}
-\renewcommand{\figurename}{Fig.} %to support older versions of captions.sty
+% Captions for figures and subfigures
+%\RequirePackage[small,bf]{caption} % This makes captions of figures use a boldfaced small font.
+%\RequirePackage[labelsep=space,tableposition=top]{caption}
+\RequirePackage[font={small}, margin=20pt, labelfont=bf]{caption}
+\RequirePackage[font={footnotesize}, margin=20pt]{subcaption}
 
 
 % *************************** Graphics and figures *****************************
@@ -60,19 +63,18 @@
 \usepackage{booktabs} % For professional looking tables
 \usepackage{multirow}
 
-%\usepackage{multicol}
-%\usepackage{longtable}
-%\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{tabularx}
 
 
 % *********************************** SI Units *********************************
-\usepackage{siunitx} % use this package module for SI units
 
+%\usepackage{siunitx}
 
 % ******************************* Line Spacing *********************************
 
-% Choose linespacing as appropriate. Default is one-half line spacing as per the
-% University guidelines
+% Default is one-half line spacing as per the University guidelines
 
 % \doublespacing
 \onehalfspacing
@@ -97,20 +99,25 @@
 % *************************** Bibliography  and References ********************
 
 % References
-\usepackage{hyperref}  % Hyperlink in references
-\usepackage[nameinlink]{cleveref}  % Clever references
+%\usepackage{hyperref}             % Hyperlink in references
+\usepackage[nameinlink]{cleveref}  % Clever references (Cref)
+
+% Per-chapter numbering of figures
+\usepackage{chngcntr}
+\counterwithin{figure}{chapter}
+
 
 % Bibliography
 % \RequirePackage[backend=biber, style=numeric-comp, citestyle=numeric, sorting=nty, natbib=true]{biblatex}
 \RequirePackage[hyperref=true, url=false, backref=false, backend=biber, style=numeric,firstinits=true]{biblatex}
 
-% \bibliography{Chapter1/references,Chapter2/references} % Depreciated
-\addbibresource{Chapter1/references.bib}
-\addbibresource{Chapter2/references.bib}
+% Add bib resources
+\addbibresource{references/references_chapter1.bib}
+\addbibresource{references/references_chapter2.bib}
+\addbibresource{references/references_chapter3.bib}
 
 % changes the default name `Bibliography` -> `References'
 % \renewcommand{\bibname}{References}
-
 
 % ******************************************************************************
 % ************************* User Defined Commands ******************************

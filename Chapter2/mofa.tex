@@ -1,64 +1,42 @@
 \graphicspath{{Chapter2/Figs/}}
 
-\section{Multi-Omics Factor Analysis: a framework for unsupervised integration of multi-omics data sets}
-% In the first section of this chapter, we will describe XXX
+\section{Multi-Omics Factor Analysis}
 
-The work described in this chapter results from a collaboration with the Multi-omics and statistical computing group lead by Wolfgang Huber at the EMBL (Heidelberg, Germany). It has been peer-reviewed and published in \cite{Argelaguet2018}.
+The work described in this chapter results from a collaboration with Wolfgang Huber's group at the EMBL (Heidelberg, Germany). It has been peer-reviewed and published in \cite{Argelaguet2018}.
 
-The method was conceived by Florian Buettner, Oliver Stegle and me. I performed most of the mathematical derivations and implementation, but with significant contributions from Damien Arnol and Britta Velten. The single-cell application was led by me whereas the CLL data application was led by Britta Velten, but with joint contributions in either cases. Florian Buettner, Wolfgang Huber and Oliver Stegle supervised the project.\\
-The article was jointly written by Britta Velten, Florian Buettner, Wolfgang Huber, Oliver Stegle and me.
+The method was conceived by Florian Buettner, Oliver Stegle and me. I performed most of the mathematical derivations and implementation, but with significant contributions from Damien Arnol and Britta Velten. The CLL data application was led by Britta Velten whereas the single-cell application was lead by me, but with joint contributions in either cases. Florian Buettner, Wolfgang Huber and Oliver Stegle supervised the project.\\
+The article was jointly written by Britta Velten and me, with contributions from all authors.
 
 
 \subsection{Model description} \label{mofa:model_description}
-MOFA is a multi-view generalisation of traditional Factor Analysis to $M$ input matrices (or views) $\bfY^m \in \R^{N \times D_m}$ based on the framework of Group Factor Analysis (discussed in Section X).\\
-The input data consists on $M$ views with non-overlapping features that often represent different assays. However, there is flexibility in the definition of views and they can be tailored to address different hypothesis.\\
-%For example, if one has DNA methylation data, one could define as a single view the matrix with all genome-wide measurements, but one could also split this matrix into different views, either by chromosome or by genomic context (i.e. promoters, enhancers, etc.).\\
+MOFA is a multi-view generalisation of traditional Factor Analysis to $M$ input matrices (or views) based on the framework of Group Factor Analysis (discussed in \Cref{section_gfa}).\\
+The input data consists on $M$ views $\bfY^m \in \R^{N \times D_m}$ with non-overlapping features that often represent different assays. However, there is flexibility in the definition of views.\\
 Formally, the input data is factorised as:
-\begin{equation}
+\begin{equation} \label{mofa_master_equation}
 	\mathbf{Y}^m = \mathbf{Z}\mathbf{W}^{mT} + \bepsilon^m
 \end{equation}
-where $\bfZ \in \R^{N \times K}$ is a matrix that contains the factor values and $\bfW^m \in \R^{D_m \times K}$ are $M$ matrices that contain the loadings that relate the high-dimensional space to the low-dimensional latent representation. Finally, $\bepsilon^m \in \R^{D_m}$ captures the residuals, or the noise, which is assumed to be normally distributed and heteroskedastic:
+where $\bfZ \in \R^{N \times K}$ is a matrix that contains the factor values and $\bfW^m \in \R^{D_m \times K}$ are a set of $M$ matrices (one per view) that contain the weights that relate the high-dimensional space to the low-dimensional latent representation. Finally, $\bepsilon^m \in \R^{D_m}$ captures the residuals, or the noise, which is assumed to be normally distributed and heteroskedastic:
 \begin{equation}
 	p(\epsilon^m_d) = \Ndist{\epsilon^m_d}{0,1/\tau_d^m}
 \end{equation}
-Non-gaussian noise models can also be defined (see \Cref{section:mofa_ngaussian}). Unless otherwise stated, we will always assume Gaussian noise.\\
+Non-gaussian noise models can also be defined (see \Cref{section:mofa_ngaussian}), but unless otherwise stated, we will always assume Gaussian noise.\\
 Altogether, this results in the following likelihood:
 \begin{equation}
 	p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{d=1}^{D_m} \prod_{n=1}^{N} \Ndist{y_{nd}^m}{\bfz_{n}^T\bfw_{d}^{m},1/\tau_d^m}
 	% p(y_{nd}^m) = \Ndist{y_{nd}^m}{\bfz_{n,:}\bfw_{d,:}^{mT},1/\tau_d^m},
 \end{equation}
 
-\subsubsection{Interpretation of the factors}
-Each factor ordinates cells along a one-dimensional axis centered at zero. Samples with different signs indicate opposite phenotypes, with higher absolute value indicating a stronger effect. For example, if the $k$-th factor captures the variability associated with cell cycle, we could expect cells in the Mitosis state to be at one end of the factor (irrespective of the sign, only the relative positioning being of importance). In contrast, cells in G1 phase are expected to be at the other end of the factor. Cells with intermediate phenotype, or with no clear phenotype (i.e. no cell cycle genes profiled), are expected to be located around zero, as specified by the prior distribution.
+Notice that the mathematical formulation so far is equivalent to the Group Factor Analysis described in \Cref{section_gfa}.
 
-\subsubsection{Interpretation of the loadings}
-The loadings provide a score for each gene on each factor, and are interpreted in a similar way as the factors. Genes with no association with the factor are expected to have values close to zero, as specified by the prior. In contrast, genes with strong association with the factor are expected to have large absolute values. The sign of the loading indicates the direction of the effect: a positive loading indicates that the feature is more active in the cells with positive factor values, and viceversa. \\
-Following the cell cycle example from above, we expect genes that are upregulated in the M phase to have large positive loadings, whereas genes that are downregulated in the M phase (or, equivalently, upregulated in the G1 phase) are expected to have large negative loadings.
-
-% The following figure shows a real-case example of a Factor capturing the cell cycle effect, with the corresponding loadings:
-
-% \begin{figure}[H]
-% 	\begin{center}
-% 		\includegraphics[width=1.0\textwidth]{figures/cell_cycle}
-% 		\caption{Example of a factor (Factor 2) that captures the cell cycle phenotype. Left shows a scatterplot of Factor 1 and Factor 2, where each dot is a single cell. The cells are colored by the infered lineage and they are shaped by the infered cell cycle phase. Right shows the RNA expression loadings for Factor 5. Each dot represents a gene.  }
-% 		\label{fig:cell_cycle}
-% 	\end{center}
-% \end{figure}
-
-
-\subsubsection{Interpretation of the noise}
-The use of a probabilistic framework allows the model to explicitly disentangle the signal (i.e. the explained variance) from the noise (i.e. unexplained variance). Large values of $\tau_d^m$ indicate high certainity on the observations for the feature $d$ in view $m$, as predicted by the latent variables. In contrast, small values of $\tau_d^m$ are indicative of low predictive power by the latent variables.
-
-\subsubsection{Missing values} \label{section:mofa_missing_values}
-The probabilistic formalism naturally accounts for incomplete data matrices, as missing observations do not intervene in the likelihood.\\
-In practice, we implement this using memory-efficient binary masks $\mathcal{O}^m \in \mathbb{R}^{N\times D_m}$ for each view $m$, such that $\mathcal{O}_{n,d} = 1$ when feature $d$ is observed for sample $n$, 0 otherwise. 
-
-\subsubsection{Prior distributions for the factors and the loadings}  \label{section:mofa_loadings}
-The key determinant of the model is the regularization used on the prior distributions of the factors and the weights. For the factors, we define an isotropic Gaussian prior:
+\subsubsection{Prior distributions for the factors}  \label{section:mofa_factors}
+For the factors, we define an isotropic Gaussian prior, as commonly done in most factor analysis models:
 \begin{equation}
 	p(z_{nk}) = \Ndist{z_{nk}}{0,1}
 \end{equation}
-which effectively assumes a continuous latent space and independent samples and factors. For the weights we encode two levels of sparsity, a (1) view- and factor-wise sparsity and (2) an individual feature-wise sparsity. The aim of the factor- and view-wise sparsity is to disentangle the activity of factors to the different views, such that the weight vector $\bfw_{:,k}^m$ is shrunk to zero if the factor $k$ does not explain any variation in view $m$. \\
+This effectively  assumes (1) a continuous latent space and (2) independence between samples and factors. 
+
+\subsubsection{Prior distributions for the weights}  \label{section:mofa_weights}
+The key determinant of the model is the regularization used on the prior distributions for the weights. Here we encode two levels of sparsity, a (1) view- and factor-wise sparsity and (2) an individual feature-wise sparsity. The aim of the factor- and view-wise sparsity is to disentangle the activity of factors to the different views, such that the weight vector $\bfw_{:,k}^m$ is shrunk to zero if the factor $k$ does not explain any variation in view $m$. \\
 In addition, we place a second layer of sparsity which encourages inactive weights on each individual feature. Mathematically, we express this as a combination of an Automatic Relevance Determination (ARD) prior \cite{Mackay1996} for the view- and factor-wise sparsity and a spike-and-slab prior \cite{Mitchell1988} for the feature-wise sparsity:
 % \begin{equation*}
 % 	p(w_{dk}^{m}) = (1-\theta_{k}^{m}) \mathds{1}_0(w_{dk}^{m}) + \theta_{k}^{m} \Ndist{w_{dk}^{m}}{0, 1 / \alpha_{k}^{m}}
@@ -67,14 +45,14 @@ However, this formulation of the spike-and-slab prior contains a Dirac delta fun
 % \begin{equation}
 % 	p(\hat{w}_{dk}^m,s_{dk}^m) &= \Ndist{\hat{w}_{dk}^m}{0, 1/\alpha_k^m}  \text{Ber}(s_{dk}^m \,|\,\theta_k^m)
 % \end{equation}
-In this formulation $\alpha_k^m$ controls the activity of factor $k$ in view $m$ and $\theta_k^m$ controls the corresponding fraction of active loadings (i.e. the sparsity levels).\\
+In this formulation $\alpha_k^m$ controls the activity of factor $k$ in view $m$ and $\theta_k^m$ controls the corresponding fraction of active weights (i.e. the sparsity levels).\\
 
 Finally, we define conjugate priors for $\theta$ and $\alpha$:
 \begin{align}
 	p(\theta_k^m) &= \Bdist{\theta_k^m}{a_0^\theta,b_0^\theta}\\
 	p(\alpha_k^m) &= \Gdist{\alpha_k^m}{a_0^\alpha, b_0^\alpha}
 \end{align}
-with hyper-parameters $a_0^\theta,b_0^\theta =1$ and $a_0^\alpha, b_0^\alpha=1e^{-3}$ to get uninformative priors. Posterior values of $\theta_k^m$ close to $0$ implies that most of the weights of factor $k$ in view $m$ are shrinked to $0$ (sparse factor). In contrast, a value of $\theta_k^m$ close to $1$ implies that most of the weights are non-zero (non-sparse factor). A small value of $\alpha_k^m$ implies that factor $k$ is active in view $m$. In contrast, a large value of $\alpha_k^m$ implies that factor $k$ is inactive in view $m$.
+with hyper-parameters $a_0^\theta,b_0^\theta =1$ and $a_0^\alpha, b_0^\alpha=1e^{-5}$ to get uninformative priors. Posterior values of $\theta_k^m$ close to $0$ implies that most of the weights of factor $k$ in view $m$ are shrinked to $0$ (sparse factor). In contrast, a value of $\theta_k^m$ close to $1$ implies that most of the weights are non-zero (non-sparse factor). A small value of $\alpha_k^m$ implies that factor $k$ is active in view $m$. In contrast, a large value of $\alpha_k^m$ implies that factor $k$ is inactive in view $m$.
 
 All together, the joint probability density function of the model is given by
 \begin{align}
@@ -90,18 +68,38 @@ All together, the joint probability density function of the model is given by
 \end{align}
 and the corresponding graphical model is shown in \Cref{fig:MOFA_graphical_model}. This completes the definition of the MOFA model.
 
+\subsubsection{Interpretation of the factors}
+Each factor ordinates cells along a one-dimensional axis centered at zero. Samples with different signs indicate opposite phenotypes, with higher absolute value indicating a stronger effect. Intuitively, their interpretation is similar to that of principal components in PCA.\\
+For example, if the $k$-th factor captures the variability associated with cell cycle, we could expect cells in the Mitosis state to be at one end of the factor (irrespective of the sign, only the relative positioning being of importance). In contrast, cells in G1 phase are expected to be at the other end of the factor. Cells with intermediate phenotype, or with no clear phenotype (for example if no cell cycle genes are profiled), are expected to be located around zero.
+
+\subsubsection{Interpretation of the weights}
+The weights provide a score for each gene on each factor, and are interpreted in a similar way as the factors. Genes with no association with the factor are expected to have values close to zero, as specified by the prior. In contrast, genes with strong association with the factor are expected to have large absolute values. The sign of the loading indicates the direction of the effect: a positive loading indicates that the feature is more active in the cells with positive factor values, and viceversa. \\
+Following the cell cycle example from above, genes that are upregulated in the M phase are expected to have large positive weights, whereas genes that are downregulated in the M phase (or, equivalently, upregulated in the G1 phase) are expected to have large negative weights.
+
+% \subsubsection{Interpretation of the noise}
+% The use of a probabilistic framework allows the model to explicitly disentangle the signal (the explained variance) from the noise (the unexplained variance). As a rule of thumb, the larger the value of $\tau_d^m$, the higher the explained variance the feature $d$ in view $m$. In contrast, small values of $\tau_d^m$ are indicative of low predictive power by the model.
+
+
+\subsubsection{Missing values} \label{section:mofa_missing_values}
+The probabilistic formulation naturally accounts for incomplete data matrices, as missing observations do not intervene in the likelihood. In practice, we implement this using memory-efficient binary masks $\mathcal{O}^m \in \mathbb{R}^{N\times D_m}$ for each view $m$, such that $\mathcal{O}_{n,d} = 1$ when feature $d$ is observed for sample $n$, 0 otherwise. 
+
 \subsection{Downstream analysis} \label{mofa:downstream}
 
-Once trained, the MOFA model can be queried for a set of downstream analysis:
+Once trained, the MOFA model can be queried for a set of downstream analysis (\Cref{fig:MOFA}):
 \begin{itemize}
-	\item \textbf{Variance decomposition}: calculate the variance explained ($R^2$) by each factor in each view. 
-	\item \textbf{Ordination of the samples in the latent space}: scatterplots or beeswarm plots of factors, colored or shaped by sample covariates can reveal the main drivers of sample heterogeneity.
-	\item \textbf{Inspection of loadings}: the weights (or loadings) can be interpreted as an activity score for each gene on each factor. Hence, inspecting the top loadings reveals the genes (or other genomic features) that underlie each factor.
-	\item \textbf{Imputation}: MOFA generates a condensed and denoised low-dimensional representation of the data. As discussed in Section X, the data can be reconstructed from the latent space by a simple matrix multiplication: $\hat{\bfY} = \bfZ \bfW^T$. 
-	\item \textbf{Feature set enrichment analysis}: when a factor is difficult to characterise based only on the inspection of the top loadings, one can compute a statistical test for enrichment of biological pathways using predefined gene-set annotations.
-\end{itemize}
+	\item \textbf{Variance decomposition}: calculate the variance explained ($R^2$) by each factor in each view. This is the first and arguably the most important plot to be inspected once the model is trained, as it summarises the variation (i.e. the signal) in a complex multi-view data set using a simple heatmap. With a quick visual inspection, this plot can be used to determine which factors are shared between multiple data modalities and which ones are exclusive to a single data modality.
 
-The downstream functionalities implemented in MOFA are highlighted in \Cref{fig:MOFA}.
+	\item \textbf{Ordination of the samples in the latent space}: as in any latent variable model, the samples can be visualised in the latent space using scatterplots or beeswarm plots. As we will demonstrate, simply by colouring or shaping the samples in the factor space using external covariates one can easily characterise the etiology of some of the factors.
+
+	\item \textbf{Inspection of weights}: the feature weights can be interpreted as an importance score for each feature on each factor. Inspecting the top weights for a given factor can help to reveals the molecular signatures that underlie each factor.
+
+	\item \textbf{Association analysis between factors and external covariates}: multi-omic data sets typically consist on a large set of molecular readouts that are used for model training, and a small set of additionals covariates or response variables such as clinical outcome measurements. The external covariates that are not used for model training can be linked to the factors \textit{a posteriori} using a simple association analysis.
+
+	\item \textbf{Imputation}: the latent factors capture a condensed low-dimensional representation of the data that can be used to generate (denoised) reconstructions of the input data. This can be valuable for the inspection of very sparse data sets.
+
+	\item \textbf{Feature set enrichment analysis}: when a factor is difficult to characterise based only on the inspection of the top weights, one can compute a statistical test for enrichment of biological pathways using predefined gene-set annotations.
+
+\end{itemize}
 
 \begin{figure}[H]
 	\begin{center}
@@ -119,10 +117,35 @@ The downstream functionalities implemented in MOFA are highlighted in \Cref{fig:
 \end{figure}
 
 \subsubsection{Inference}
-To make the model scalable to large data sets we adopt a Variational inference framework with a structured mean field approximation. A detailed overview is given in \Cref{section:variational_inference}, and details on the variational updates for the MOFA model are given in Appendix XX. To enable efficient inference for non-Gaussian likelihoods we employ local bounds \cite{Jaakkola2000,Seeger2012}. This is described in detail in \Cref{section:mofa_ngaussian}
+To make the model scalable to large data sets we adopt a Variational inference framework with a structured mean field approximation. A detailed overview is given in \Cref{section:variational_inference}, and details on the variational updates for the MOFA model are given in \Cref{Appendix XX}. To enable efficient inference for non-Gaussian likelihoods we employ local bounds \cite{Jaakkola2000,Seeger2012}. This is described in detail in \Cref{section:mofa_ngaussian}
+
+
+\subsection{Model selection and consistency across random initilizations} \label{section:mofa_robustness}
+The optimisation problem in MOFA is not convex and the resulting posterior distributions depend on the initialisation of the model. Thus, when doing random initialisation of the parameters and/or expectations it becomes mandatory to perform model selection and assess the consistency of the factors across different trials.\\
+The strategy we adopted in this work is to train several instances MOFA models under different parameter initialisations, where the expectation of each node is randomly sampled from its underlying distribution. After fitting, we select the model with the highest ELBO for downstream analysis. In addition, we evaluate the robustness of the factors by plotting the Pearson correlations between factors across all trials:
+
+\begin{figure}[H]
+	\centering 	
+	\includegraphics[width=1.0\textwidth]{MOFA_robustness}
+	\caption{ \textbf{Model selection and robustness analysis in MOFA}.\\
+	The left plot the log ELBO (y-axis) for 25 model instances (x-axis). The arrow indicates the model with the highest ELBO that would be selected for downstream analysis. The right plot displays the absolute value of the Pearson correlation coefficient between pairwise combinations of all factors across the 25 model instances. A block-diagonal matrix indicates that factors are robustly estimated regardless of the initialisation.}
+	\label{fig:MOFA_robustness}
+\end{figure}
+
+\subsection{Learning the number of factors} \label{section:mofa_nfactors}
+As described in \Cref{ard}, the use of an ARD prior allows factors to be actively prunned by the model if their variance explained is negligible. In the implementation we control the prunning of factors by a hyperparameter that defines a threshold on the minimum fraction of variance explained by a factor (across all views).\\
+Additionally, because of the non-convexity of the optimisation problem, different model instances can potentially yield solutions with different number of active factors (\Cref{fig:mofa_nfactors}). Thus, the optimal number of factors can be selected by the model selection strategy outlined in \Cref{section:mofa_robustness}.
+
+\begin{figure}[H]
+	\centering 	
+	\includegraphics[width=0.5\textwidth]{MOFA_nfactors}
+	\caption{\textbf{Training curve for the number of active factors across 25 different model instances}.\\
+	The y-axis displays the number of active factors. The x-axis displays the iteration number. Different lines denote different model instances.}
+	\label{fig:mofa_nfactors}
+\end{figure}
 
 \subsection{Monitoring convergence}
-An attractive property of Variational inference is that the objective function, the Evidence Lower Bound (ELBO), increases monotonically at every iteration. This provides a simple way of monitoring convergence \Cref{fig:elbo_convergence}. This is indeed one of the reasons why we opted for this inference framework over Expectation Propagation or sampling-based approaches.
+An attractive property ofvVariational inference is that the objective function, the Evidence Lower Bound (ELBO), increases monotonically at every iteration. This provides a simple way of monitoring convergence:
 
  \begin{figure}[H]
 	\centering 	
@@ -131,40 +154,7 @@ An attractive property of Variational inference is that the objective function, 
 	\label{fig:elbo_convergence}
 \end{figure}
 
-\subsection{Model selection and consistency across random initilizations} \label{section:mofa_robustness}
-The variational optimisation problem in MOFA is not convex and the posterior distributions will vary depending on the initialisation of the model. Thus, it becomes mandatory to perform model selection and assess the consistency of the factors across different trials.\\
-The strategy we adopted in this work is to train several MOFA models (e.g. 10 trials) under different parameter initialisations, and after training we select the model with the highest ELBO for downstream analysis \Cref{fig:MOFA_robustness}. In addition, we evaluate the robustness of the factors by plotting the Pearson correlations between factors across all trials. \Cref{fig:MOFA_robustness}. 
-A similar strategy has also been proposed in \cite{Hore2016,Hore2015-thesis}.
-
-
-\begin{figure}[H]
-	\centering 	
-	\includegraphics[width=1.0\textwidth]{MOFA_robustness}
-	\caption{ Model selection and robustness analysis in MOFA. The left plot the log ELBO (y-axis) for 25 model instances (x-axis).
-	The arrow indicates the model with the highest ELBO that would be selected for downstream analysis. The right plot displays the absolute value of the Pearson correlation coefficient between pairwise combinations of all factors across the 25 model instances. A block-diagonal matrix indicates that factors are robustly estimated regardless of the initialisation.}
-	\label{fig:MOFA_robustness}
-\end{figure}
-
-
-% \subsection{Feature Set Enrichment Analysis}
-
-% \subsection{Comparison with previous methods}
-
-%The key difference with the sparse Bayesian factor analysis model in Section XX is that we learn a separate $\alpha_k^m$ and $\theta_k^m$ per factor and view, instead of per factor. This allows the model to take into account that the data is structured into different views.\\
-
-
-
-\subsection{Learning the number of factors} \label{section:mofa_nfactors}
-As described in section X, the use of an ARD prior allows factors to be actively prunned by the model if their variance explained is negligible. In the implementation we control the prunning of factors by a hyperparameter that defines a threshold on the minimum fraction of variance explained by a factor (across all views).\\
-Additionally, because of the non-convexity of the optimisation problem, different model instances can potentially yield solutions with different number of active factors (\Cref{fig:mofa_nfactors}). Thus, the optimal number of factors can be selected by the model selection strategy outlined in \Cref{section:mofa_robustness}.
-
-\begin{figure}[H]
-	\centering 	
-	\includegraphics[width=0.5\textwidth]{MOFA_nfactors}
-	\caption{Training curve for the number of active factors across 25 different model instances. The y-axis displays the number of active factors. The x-axis displays the iteration number. Different lines denote different model instances.}
-	\label{fig:mofa_nfactors}
-\end{figure}
-
+Training is stopped when the change in the lower bound becomes smaller than a predefined threshold. In MOFA we implemented
 
 \subsection{Modelling and inference with non-Gaussian data} \label{section:mofa_ngaussian}
 To implement efficient variational inference in conjunction with a non-Gaussian likelihood we adapt prior work from \cite{Seeger2012} using local variational bounds. The key idea is to dynamically approximate non-Gaussian data by Gaussian pseudo-data based on a second-order Taylor expansion.  To make the approximation justifiable we need to introduce variational parameters that are adjusted alongside the updates to improve the fit.	\\
@@ -276,110 +266,148 @@ The pseudodata updates are given by
 \end{equation*}
 
 
+\newpage
+
+
 \subsection{Model validation with simulated data} \label{section:mofa_simulated}
 We used simulated data from the generative model to systematically test the technical capabilities of MOFA.
 
-
-
-
-
-\subsubsection{Recovery of the latent space}
-First, we tested the ability of MOFA to recover simulated factors, varying the number of views, the number of features, the number of factors and the fraction of missing values.\\ 
-For every simulation scenario we initialised a model with a high number of factors ($K=100$), and inactive factors were automatically dropped during model training using a threshold of 1\% variance explained. In addition, to test the robustness under different initialisations, ten models were trained for every simulation scenario.\\
+\subsubsection{Recovery of simulated factors}
+First, we tested the ability of MOFA to recover simulated factors under varying number of views, features, factors and with different amounts of missing values.\\ 
+For every simulation scenario we initialised a model with a high number of factors ($K=100$), and inactive factors were automatically dropped during model training by the ARD prior. In addition, to test the robustness under different random initialisations, ten model instances were trained for every simulation scenario.\\
 We observe that in most settings the model accurately recovers the correct number of factors (\Cref{fig:MOFA_learnK}). Exceptions occur when the dimensionality of the latent space is too large (more than 50 factors) or when an excessive amount of missing values (more than 80\%) is present in the data.
 
 \begin{figure}[H]
 	\centering 	
 	\includegraphics[width=1.0\textwidth]{MOFA_learnK}
-	\caption{Assessing the ability of MOFA to recover simulated latent spaces. In all plots the y-axis displays the number of infered factors. (a) x-axis displays the number of true factors, and boxplots summarise the distribution across 10 model instances. For (c-d) the true number of factors was set to $K=10$ and each bar corresponds to a different model instance. (b) x-axis displays the number of features, (c) x-axis displays the number of views, (d) x-axis displays fraction of missing values. }
+	\caption{\textbf{Assessing the ability to recover simulated factors}.\\
+	In all plots the y-axis displays the number of infered factors. (a) x-axis displays the number of true factors, and boxplots summarise the distribution across 10 model instances. For (c-d) the true number of factors was set to $K=10$ and each bar corresponds to a different model instance. (b) x-axis displays the number of features, (c) x-axis displays the number of views, (d) x-axis displays fraction of missing values. }
 	\label{fig:MOFA_learnK}
 \end{figure}
 
-\subsubsection{Group-wise sparsity on the loadings}
-One of the most important statistical assumptions underlying MOFA (and other Group Factor Analysis methods) is the sparsity prior aimed at disentangling the activity of factors across views.\\
-To evaluate this feature we simulated data from the generative model were the factors were clearly set to be active or inactive in specific views. We compared the performance with two other methods: the iCluster+ model \cite{Mo2013} and a GFA implementation \cite{Leppaaho2017}.\\
-the GFA implementation shares the same factor and view-wise sparsity as MOFA, and is therefore expected to show similar performance. On the other hand, iCluster is a model that is aimed at clustering and it only contains a sparsity constraint (in a penalised maximum likelihood setting) per factor, shared across all views.\\
-On simulated data, MOFA and GFA correctly infer the true activity pattern of the factors whereas iCluster infers incorrect sharedness of factors across views, especially with increasing dimensionality of the latent space.
+\subsubsection{View-wise sparsity on the weights}
+One of the most important statistical assumptions underlying MOFA is the ARD prior aimed at disentangling the activity of factors across views (see \Cref{section_ard} and \Cref{mofa:model_description}.\\
+We simulated data from the generative model were the factors were set to be active or inactive in specific views by sampling $\alpha_{k}^{m}$ from a discrete distribution with values $\{ 1, 1e3\}$. We compared the performance with a popular integrative clustering method (iCluster) that is also formulated as a latent variable model \cite{Mo2013}. In iCluster each factor shares the same sparsity constraint across all views, and hence the model is less accurate when it comes to the detection of factors that show differential activity across different views.:
 
 \begin{figure}[H]
 	\centering 	
 	\includegraphics[width=1.0\textwidth]{MOFA_group_sparsity}
-	\caption{Evaluating the ability of MOFA, iCluster and GFA to recover sparse factor activity patterns across views. The leftmost plot displays the true activity pattern, with factors being (strongly) active in different subsets of views. The remaining three plots show, for each model, the fraction of variance explained ($R^2$) by each factor in each view.}
+	\caption{\textbf{Evaluating the ability to recover differential factor activity across views}.\\
+	(a) The true activity pattern, with factors sampled to display differential activity across views.
+	(b) Percentage of variance explained for each factor in each view, for MOFA and iCluster\cite{Mo2013}.}
 	\label{fig:MOFA_group_sparsity}
 \end{figure}
 
-\subsubsection{Feature-wise sparsity on the loadings}
-A key aspect of MOFA is the use of a spike-and-slab prior distribution to enforce feature-wise sparsity on the loadings, which yields a more interpretable solution (see \Cref{section:mofa_priors}).\\
-To assess the effect of the spike-and-slab prior we fit a group of models with a spike-and-slab prior and another group of models only with Automatic Relevance Determination prior. We further compared both solutions to a conventional Principal Component Analysis fit on the concatenated data set.\\
+\subsubsection{Feature-wise sparsity on the weights} \label{section:spike_slab}
+In MOFA we implemented a spike-and-slab prior prior to enforce feature-wise sparsity on the weights with the aim of delivering a more interpretable solution (see \Cref{section:mofa_weights}).\\
+To assess the effect of the spike-and-slab prior we trained a group of models with and without the spike-and-slab prior. Importantly, the model without spike-and-slab priors contains the ARD prior, which should provide some degree of regularisation. To compare both options to a non-spare method, we also fit a Principal Component Analysis on the concatenated data set.\\
 As expected, we observe that the spike-and-slab prior induces more zero-inflated weights, although the ARD prior provided a moderate degree of regularisation. The PCA solution was notably more dense than both bayesian models (\Cref{fig:MOFA_sparsity}).
 
 \begin{figure}[H]
 	\centering 	
 	\includegraphics[width=0.7\textwidth]{MOFA_sparsity}
-	\caption{Assessing sparsity on the loadings in MOFA. The plot shows the empirical cumulative density function of the loadings for an arbitrary factor in a single view. The loadings were simulated with a sparsity level of $\theta_k^m=0.5$ (50\% of active features.)
+	\caption{\textbf{Assessing the sparsity priors on the weights}.\\ 
+	The plot shows the empirical cumulative density function of the weights for an arbitrary factor in a single view. The weights were simulated with a sparsity level of $\theta_k^m=0.5$ (50\% of active features.)
 	}
 	\label{fig:MOFA_sparsity}
 \end{figure}
 
 
 \subsubsection{Non-gaussian likelihoods}  \label{section:mofa_nongaussian_results}
-A key improvement of MOFA with respect to previous methods is the use of non-Gaussian likelihoods to integrate multiple data modalities. As described in \Cref{section:mofa_ngaussian}, we implemented a Bernoulli likelihood to model binary data and a Poisson likelihood to model count data.\\
+A key improvement of MOFA with respect to previous methods is the use of non-Gaussian likelihoods to integrate data modalities with different types of readouts. In particular, as described in \Cref{section:mofa_ngaussian}, we implemented a Bernoulli likelihood to model binary data and a Poisson likelihood to model count data.\\
 To validate both likelihood models, we simulated binary and count data using the generative model and we fit two sets of models for each data type: a group of models with a Gaussian likelihood and a group of models with a Bernoulli or Poisson likelihood, respectively.\\
-We observe that although both likelihoods are able to recover the true number of factors, the models with the non-Gaussian likelihoods clearly result in a better fit to the data (\Cref{fig:MOFA_nongaussian_binary,fig:MOFA_nongaussian_poisson}).
+Reassuringly, we observe that although the Gaussian likelihood is also able to recover the true number of factors, the models with the non-Gaussian likelihoods result in a better fit to the data:
 
 \begin{figure}[H]
 	\centering 	
-	\includegraphics[width=1.0\textwidth]{MOFA_nongaussian}
-	\caption{Validation of the non-gaussian likelihood models implemented in MOFA on simulated data. The four plots on the left assess the Poisson and the Gaussian likelihoods applied to count data. The four plots on the right assess the Bernoulli and the Gaussian likelihoods applied to binary data. (a) The y-axis displays the ELBO for each model instance (x-axis). (b) The y-axis displays the mean reconstruction error for each model instance (x-axis). (c) The y-axis displays the number of estimated factrors for each model instance (x-axis). The horizontal dashed line marks the true number of factors $K=10$. (d) Distribution of reconstructed data.}
-	\label{fig:MOFA_nongaussian}
-\end{figure}
-
-
-\subsubsection{Scalability}
-Finally, we evaluated the scalability of the model when varying each of its dimensions independently (\Cref{fig:MOFA_scalability}), and we compared the speed with a Gibbs sampling implementation of GFA \cite{Leppaaho2017} and iCluster+ \cite{Mo2013}.\\
-Overall, we observe that MOFA scales linear with respect to all dimensions and is significantly faster than any of the three evaluated techniques.\\
-As a real application showcase, the training on the CLL data \Cref{fig:MOFA_CLL_Figure1} required 25 minutes using MOFA, 34 hours with GFA and 5-6 days with iCluster.
-
-\begin{figure}[H]
-	\centering 	
-	\includegraphics[width=0.9\textwidth]{MOFA_scalability}
-	\caption{Evaluation of speed and scalability in MOFA. The y-axis displays the time required for convergence. The x-axis displays the value of the dimension that was tested, either number of factors ($K$), number of features ($D$), number of samples ($N$) and number of views ($M$). Baseline parameters were $M=3, K=10, D=1000, N=100$. Each line represents a different model, GFA (red), MOFA (blue) and iCluster (green). Default convergence criteria where used for all methods. Each dot displays the average time across 10 trials with error bars denoting the standard deviation. iCluster is only shown for one value as all other settings required more than 200min for convergence.
+	\includegraphics[width=0.9\textwidth]{MOFA_nongaussian}
+	\caption{\textbf{Validation of the non-gaussian likelihood models using simulated data}.\\
+	(a-d) Comparison of Poisson and Gaussian likelihood models applied to count data.\\
+	(e-h) Comparison of Bernoulli and Gaussian likelihood models applied to binary data.\\
+	(a,e) The y-axis displays the ELBO for each model instance (x-axis). (b,f) The y-axis displays the mean reconstruction error for each model instance (x-axis). (c,g) The y-axis displays the number of estimated factrors for each model instance (x-axis). The horizontal dashed line marks the true number of factors $K=10$. (d,h) Distribution of reconstructed data. Plotted are the expected values of the inferred posterior distributions, not samples from the corresponding posteriors. This is why reconstructed measurements are continuous and not discrete.
 	}
 	\label{fig:MOFA_nongaussian}
 \end{figure}
 
 
+% \subsubsection{Scalability}
+% Finally, we evaluated the scalability of the model when varying each of its dimensions independently, and we compared the speed with a Gibbs sampling implementation of GFA \cite{Leppaaho2017} and iCluster+ \cite{Mo2013}.\\
+% Overall, we observe that MOFA scales linear with respect to all dimensions and is significantly faster than any of the three evaluated techniques:
+% % As a real application showcase, the training on the CLL data \Cref{fig:MOFA_CLL_Figure1} required 25 minutes using MOFA, 34 hours with GFA and 5-6 days with iCluster.
+
+% \begin{figure}[H]
+% 	\centering 	
+% 	\includegraphics[width=0.9\textwidth]{MOFA_scalability}
+% 	\caption{\textbf{Evaluation of speed and scalability in MOFA}.\\
+% 	The y-axis displays the time required for convergence. The x-axis displays the value of the dimension that was tested, either number of factors ($K$), number of features ($D$), number of samples ($N$) and number of views ($M$). Baseline parameters were $M=3, K=10, D=1000, N=100$. Each line represents a different model, GFA (red), MOFA (blue) and iCluster (green). Default convergence criteria where used for all methods. Each dot displays the average time across 10 trials with error bars denoting the standard deviation. iCluster is only shown for one value as all other settings required more than 200min for convergence.
+% 	}
+% 	\label{fig:MOFA_scalability}
+% \end{figure}
+
+
 
 \subsection{Application to chronic lymphocytic leukaemia} \label{section:mofa_cll}
-Personalised medicine is an attractive field for the use of multi-omics, as dissecting heterogeneity across patients is a major challenge in complex diseases, and requires integration of information from multiple biological layers \cite{Chen2013,Costello2014,Alyass2015}. In most cases, predicting patient survival and response to a treatment is still not reliable due to a lack of predictive biomarkers and our incomplete understanding of the mechanisms underlying response heterogeneity. Identification of the main drivers of inter-patient variation and their molecular basis is an important step towards personalized treatment decisions. 
+Personalised medicine is an attractive field for the use of multi-omics, as dissecting heterogeneity across patients is a major challenge in complex diseases, and requires data integration from multiple biological layers \cite{Chen2013,Costello2014,Alyass2015}.
+%In most cases, predicting patient survival and response to a treatment is still not reliable due to a lack of predictive biomarkers and our incomplete understanding of the mechanisms underlying response heterogeneity. Identification of the main drivers of inter-patient variation and their molecular basis is an important step towards personalized treatment decisions. 
 
-To demonstrate the potential of the method, we applied MOFA to a study of 200 patient samples of chronic lymphocytic leukaemia (CLL) profiled for somatic mutations, RNA expression, DNA methylation and ex-vivo drug responses\cite{Dietrich2018} \Cref{fig:MOFA_CLL_Figure1}.
+To demonstrate the potential of the method, we applied MOFA to a publicly available study of 200 patient samples of chronic lymphocytic leukaemia (CLL) profiled for somatic mutations, RNA expression, DNA methylation and \textit{ex vivo} drug responses\cite{Dietrich2018}. We selected this data set for three main reasons: (1) The complex missing data structure, with nearly 40\% samples having incomplete assays (see \Cref{fig:MOFA_CLL_Figure1}). As described in \Cref{section:mofa_missing_values}, the inference framework implemented in MOFA should cope with large amounts of missing values, including missing assays. (2) The different data modalities: after data processing, three assays had continuous observations whereas for the somatic mutations the observations were binary. As described in \Cref{section:mofa_ngaussian}, MOFA can combine different likelihood models. (3) The existence of clinical covariates: this provides an excellent test to evaluate whether the MOFA factors can capture the variation underlying clinically-relevant phenotypes.
 
-This data set was selected for five main reasons. 
+\subsubsection{Data overview and processing}
+
+%Data processing and normalisation is impotant for the model to work and it requires a few considerations. First, one needs to remove differences in library size between samples. If not done correctly, the signal in the data will be dominated by this (undesired) source of variation, and more subtle heterogeneity will be harder to identify. Similarly, batch effects and other undesired technical sources of variation should be regressed out \textit{a priori}.
+
+%Second, feature selection must be performed by removing uninformative features. This is typically done by removing features with low levels across samples, followed by the selection of highly variable features. A proper feature selection will increase the signal-to-noise-ratio, it will simplify model selection and it will speed up the training procedure.
+
+%Third, feature imbalance:
+
+% - Feature imbalance
+% - Normalisation
+% - Feature selection
+
+Here we proceed to briefly describe the different data modalities and outline the basic data processing steps that we performed before applying MOFA.
+
 \begin{itemize}
-	\item The large number of cases to benchmark the speed of MOFA against other common integrative methods.
-	\item The rich literature in this type of cancer which provides a good resource for the interpretation of the factors.
-	\item The complex missing data structure of the study, with nearly 40\% samples having incomplete assays \Cref{fig:MOFA_CLL_Figure1}, in addition to the missing values present within some assays. hence, this study is ideal to benchmark MOFA's capabilities to deal with missing entries. As described in Section X, the inference framework we implemented allows the model to cope with this setting by merely ignoring missing entries and, when possible, pooling information from other molecular layers in order to infer the factor values.
-	\item The different data modalities: after data processing, three assays had continuous observations whereas for the somatic mutations the observations were binary. As described in \Cref{section:mofa_ngaussian}, MOFA can combine different likelihood models to integrate multiple data types.
-	\item The existence of clinical covariates: after model fitting, the factors can be associated with additional covariates. This provides an excellent test to assess whether the MOFA factors can capture the clinical phenotypes better than other dimensionality reduction techniques.
+	\item \textbf{RNA expression} was profiled using bulk RNA-seq. Genes with low counts were filtered out and the data was subsequently normalized using DESeq2 \cite{Love2014}. Feature selection was performed by considering the top 5,000 most variable genes.
+	\item \textbf{DNA methylation} was profiled using Illumina 450K arrays \cite{XXX}. We converted the beta-values to M-values, as it has better statistical properties when modelled with a Gaussian distribution \cite{XXX}. Feature selection was performed by considering the top 1\% most variable CpG sites. 
+	\item \textbf{\textit{Ex vivo} Drug response} was screened using the ATP-based CellTiter-Glo assay. Briefly, the asay includes a panel of 62 drugs at 5 different concentrations each, for a total of 310 measurements. 
+
+	\item \textbf{TO FINISHSomatic mutations} were profiled using a combination of targeted and whole exome sequencing. Feature selection was performed by considering only mutations that were present in at least three samples, which resulted in a total of 69 mutations.
 \end{itemize}
 
+For more details on the data generation steps we refer the reader to \cite{Dietrich2018}.
 
 \subsubsection{Model overview}
-In this data set, MOFA recovered 10 factors explaining a minimum of 3\% of variance. Among these, the first two factors (sorted by variance explained) were active across most views, indicating a strong effect across multiple molecular layers. Other factors such as Factor 3 or Factor 5 explained variation in two data modalities, whereas Factor 4 was only in the RNA expression data.\\
-All together, the ten MOFA factors inferred explained 41\% of variance in the drug response data, 38\% in the mRNA expression, 24\% in the DNA methylation and 24\% in somatic mutations.
 
-Inspection of the top weights in the somatic mutation view revealed that Factor 1 was strongly associated with the mutation status of the immunoglobulin heavy-chain variable (IGHV) region, while Factor 2 was aligned with a trisomy of chromosome 12 (Figure X). In a completely unsupervised fashion, MOFA identified the two major axes of molecular disease heterogeneity being indeed the two most important clinical markers in CLL \cite{Fabbri2016,Zenz2010}.\\
-A scatterplot based on these factors shows a clear separation of patients by their IGHV status on the first factor and presence or absence of trisomy 12 on the second factor. Remarkably, the IGHV status of a fraction of patients was missing (grey dots). Yet, as the two factors were shared across multiple views, MOFA was able to pool information from the other molecular layers to map those samples to the latent space.
+In this data set, MOFA recovered $K=10$ factors, each one explaining a minimum of 3\% of variance in at least one assay. Interestingly, MOFA detects Factors which are shared across several data modalities (Factors 1 and 2, sorted by variance explained). Some factors capture sources of covariation between two data modalities (Factor 3 and 5, active in the RNA expression and drug response). In addition, some factors capture variation that is unique to a single data modality (Factor 4, active in the RNA expression data).\\
+All together, the 10 MOFA factors explained 41\% of variance in the drug response data, 38\% in the mRNA expression, 24\% in the DNA methylation and 24\% in somatic mutations.
 
 \begin{figure}[H]
 	\centering 	
-	\includegraphics[width=1.0\textwidth]{MOFA_CLL_Figure1}
-	\caption{XX}
-	\label{fig:MOFA_CLL_Figure1}
+	\includegraphics[width=1.0\textwidth]{MOFA_CLL_overview}
+	\caption{\textbf{Application of MOFA to a study of chronic lymphocytic leukaemia. Model overview.}\\
+	(a) Data overview. Assays are shown in different rows ($D$ = number of features) and samples ($N$) in columns, with missing samples shown using grey bars. Notice that some samples are missing entire assays.\\
+	(b) Variance explained (\%) by each Factor in each assay.\\
+	(c) Total variance explained (\%) for each assay by all Factors.
+	}
+	\label{fig:MOFA_CLL_overview}
 \end{figure}
 
-\subsubsection{Characterisation of Factor 1}
+The two first Factors are the most interesting from a clinical perspective, as they capture a phenotypic effect that is manifested across all molecular layers, from the genome to the transcriptome and ultimately in the drug response assay.
+
+%Inspection of the top weights in the somatic mutation view revealed that Factor 1 was strongly associated with the mutation status of the immunoglobulin heavy-chain variable (IGHV) region, while Factor 2 was aligned with a trisomy of chromosome 12 (Figure X). In a completely unsupervised fashion, MOFA identified the two major axes of molecular disease heterogeneity being indeed the two most important clinical markers in CLL \cite{Fabbri2016,Zenz2010}.\\
+%A scatterplot based on these factors shows a clear separation of patients by their IGHV status on the first factor and presence or absence of trisomy 12 on the second factor. Remarkably, the IGHV status of a fraction of patients was missing (grey dots). Yet, as the two factors were shared across multiple views, MOFA was able to pool information from the other molecular layers to map those samples to the latent space.
+
+\begin{figure}[H]
+	\centering 	
+	\includegraphics[width=1.0\textwidth]{MOFA_CLL_factors12}
+	\caption{\textbf{Visualisation of the genetic signature underlying Factor 1 and 2}\\
+	(a) Absolute loadings of the top features of Factors 1 and 2 in the Mutations data.
+	(b) Visualization of samples using Factors 1 and 2. The colours denote the IGHV status of the tumours; symbol shape and colour tone indicate chromosome 12 trisomy status.
+	}
+	\label{fig:MOFA_CLL_factors12}
+\end{figure}
+
+\subsubsection{Molecular characterisation of Factor 1}
 
 IGHV status is probably the most important prognostic marker in CLL and has routinely been used to distinguish between two distinct subtypes of the disease. Molecularly, it is a surrogate of the level of activation of the B-cell receptor, which is in turn related to the differentiation state of the tumoral cells. Multiple studies have associated mutated IGHV with a better resposne to chemoimmunotherapy, whereas unmutated IGHV patients have a worse prognosis \cite{Fabbri2016,Bulian2017,Crombie2017,Damle1999}.
 
@@ -397,55 +425,99 @@ To validate the MOFA-based classification, we inspected the molecular profiles. 
 
 Finally, we characterised in more detail the molecular changes associated with IGHV status, as predicted by MOFA.\\
 On the RNA expression, inspection of the top weights pinpoint genes that have been previously associated to IGHV status, some of which have been proposed as clinical markers\cite{Vasconcelos2005,Maloum2009,Trojani2011,Morabito2015,Plesingerova2017}. Heatmaps of the RNA expression levels for these genes reveals clear differences between samples when ordered according to the corresponding Factor 1 values.\\
-On the drug response data the loadings highlight kinase inhibitors targeting the B-cell receptor pathway. Splitting the patients into three groups based on k-means clustering shows clear separation in the drug response curves.
+On the drug response data the weights highlight kinase inhibitors targeting the B-cell receptor pathway. Splitting the patients into three groups based on k-means clustering shows clear separation in the drug response curves.
 
+% Copied
 \begin{figure}[H]
 	\centering 	
 	\includegraphics[width=1.0\textwidth]{MOFA_CLL_Factor1}
-	\caption{XX}
+	\caption{
+	\textbf{Characterization of MOFA Factor 1 as IGHV status.}\\
+	(a) Beeswarm plot with Factor 1 values for each sample with colours corresponding to three groups found by 3-means clustering with low factor values (LZ), intermediate factor values (IZ) and high factor values (HZ).\\
+	(b) Absolute weights for the genes with the largest absolute weights in the mRNA data. Plus or minus symbols on the right indicate the sign of the loading. Genes highlighted in orange were previously described as prognostic markers in CLL and associated with IGHV status (Vasconcelos et al, 2005; Maloum et al, 2009; Trojani et al, 2012; Morabito et al, 2015; Plesingerova et al, 2017).\\
+	(c) Heatmap of gene expression values for genes with the largest weights as in (b).\\
+	(d) Absolute weights of the drugs with the largest weights, annotated by target category.\\
+	(e) Drug response curves for two of the drugs with top weights, stratified by the clusters as in (a).
+	}
 	\label{fig:MOFA_CLL_Factor1}
 \end{figure}
 
 \subsubsection{Characterisation of other Factors}
-% While the well-known clinical markers such as IGHV status and the more recently studied trisomy 12 are identified as most important sources of variation, they explain less than 20% variability in any view, suggesting the existence of more subtle sources of variation. 
-% As an example, we further investigated latent factor 5, which explains 2% variation in the mRNA view and 6% of variation in the drug response view and is highly enriched for oxidative stress and senescence pathways in the mRNA view (Figure S12a). In particular, the top weights correspond to heat shock proteins (HSPs) such as HSPA1A, HSPA1B and HSPA6 (Figure S12b), a group of proteins that are essential for protein stability which are up-regulated upon stress conditions like high temperatures, pH shift or oxidative stress. Importantly, in tumour cells, including CLL, HSPs have been described to be elevated and may contribute to prolonged tumour cell survival (Dempsey et al. 2010a).
-% In agreement with the findings from the mRNA view, the drugs with largest weights on factor 5 belong to clinical categories also associated with stress response, such as target reactive oxygen species (SD07, MIS-43, SD51) and DNA damage response (fludarabine, nutlin-3, doxorubicine) (Figure S12c-d). In particular, patients with high expression of HSPs display higher viability to the aforementioned drugs.
+
+Despite their clinical importance, Factor 1 (IGHV status) and Factor 2 (chr12 trisomy) they explain less than 20\% variability in each data modality, suggesting the existence of more subtle sources of variation. As an example, we will also characterise Factor 5, which explains 2\% of the variance in the mRNA and 6\% of variance in the drug response.\\
+As mentioned in \Cref{mofa:downstream}, instead of exploring the feature weights individually, factors can be characterised using gene set annotations (i.e. biological pathways). Briefly, the idea is to aggregate the weights to obtain a single statistic for each gene set, which can be subsequently tested against a competitive null hypothesis.
+
+This procedure is particularly appealing for RNA expression data, as a rich resources exist that h
+
+Briefly, here we performed gene set enrichment analysis (GSEA) based on the Reactome gene sets \cite{Fabregat2015}.
+
+%Resulting P
+
+
+Appling Gene Set Enrichment Analysis on the RNA weights reveals that this Factor is strongly enriched for oxidative stress and senescence pathways. Inspection of the top features highlights the importance of heat shock proteins (HSPs), a group of proteins that are essential for protein stability which are up-regulated upon stress conditions like high temperatures, pH shift or oxidative stress. Importantly, HSPs can be elevated in tumour cells and potentially contribute to prolonged tumour cell survival\cite{Dempsey2010}.
+
+In agreement with the findings from the mRNA view, the drugs with largest weights on Factor 5 belong to clinical categories associated with stress response, such as target reactive oxygen species (SD07, MIS-43, SD51) and DNA damage response (fludarabine, nutlin-3, doxorubicine) (Figure S12c-d).
+
+% All together, our results indicate that blood cells from patients with high expression of HSPs display higher viability to the aforementioned drugs.
+
+% Copied
+% Explain better GSEA
+\begin{figure}[H]
+	\centering 	
+	\includegraphics[width=1.0\textwidth]{MOFA_CLL_Factor5}
+	\caption{
+	\textbf{Characterization of Factor 5 in the CLL data as oxidative stress response.}\\
+	(a) Beeswarm plot of Factor 5. Colours denote the expression of TNF, an inflammatory stress marker that is present among the top RNA weights.\\
+	(b) Gene set enrichment analysis for the top Reactome pathways. Displayed are the top pathways with the strongest enrichment in the RNA weights. P-values were adjusted for multiple testing using the Benjamini-Hochberg procedure.\\
+	(c) Heatmap of mRNA expression values for representative genes with the largest weights. Samples are ordered by their factor values.\\
+	(d) Scaled weights for the top drugs with the largest loading, annotated by target category.\\
+	(e) Heatmap of drug response values for the top three drugs with largest weight.
+	}
+	\label{fig:MOFA_CLL_Factor5}
+\end{figure}
+
 
 \subsubsection{Prediction of clinical outcomes}
 
+We conjectured that the integration of the multiple molecular layers could allow an improved prediction of the patients' clinical response.\\
+To evaluate the utility of the MOFA factors as predictors of clinical outcomes we fit Cox regression models \cite{Cox1972} using the patients' time to next treatment (TTT) as a response variable. Two types of analysis were performed: a univariate analysis where each Factor was independently associated with TTT, and a multivariate analysis where the combination of all Factors were used to predict TTT \Cref{fig:MOFA_CLL_Cox}.\\
+In the univariate Cox models, we observe  that Factor 1 (IGHV status), Factor 7 (associated with chemo-immunotherapy treatment prior to sample collection) and Factor 8 (enriched for Wnt signalling) were significant predictors of TTT. Accordingly, when splitting patients into binary groups based on the corresponding factor values, we observe clear differences in the survival curves.\\
+In the multivariate Cox model, MOFA (Harrell's C-Index C=0.78) outperformed all other input settings, including PCA on single-omic data (C=0.68-0.72), individual genetic markers (C=0.66) as well PCA applied to the concatenated data matrix (C=0.74).
 
-We conjectured that the integration of the multiple molecular layers could allow a better prediction of clinical response compared to using single omics or naive data integration.\\
-To evaluate the utility of the MOFA factors as predictors of clinical outcomes we fit Cox regression models \cite{Cox1972} using the patients' time to next treatment (TTT) as a response variable. Two types of analysis were performed: a univariate analysis where each Factor was independently associated with TTT, and a multivariate analysis where the combination of all Factors were used to predict TTT.
+%As predictors, we included the top 10 principal components calculated on the data for each single view, a concatenated data set ('all') as well as the 10 MOFA factors. Missing values in a view were set to the feature-wise mean. 
 
-(CHECK) In the univariate Cox models, we observe  that Factor 1 (IGHV status), Factor 7 (associated with chemo-immunotherapy treatment prior to sample collection) and Factor 8 (Wnt signalling) were significant predictors of TTT. Accordingly, when splitting patients into binary groups based on the corresponding factor values, we observe clear differences in the survival curves.\\
-In the multivariate Cox model, MOFA (Harrell's C-Index C=0.78) outperformed all other input settings, including single-omic data (C=0.68-0.72), individual genetic markers (C=0.66) as well the concatenated data matrix (C=0.74).
-
-%As predictors, we included the top 10 principal components calculated on the data for each single view, a concatenated data set ('all') as well as the 10 MOFA factors. Missing values in a view were set to the feature-wise mean. In a second set of models, we used the complete set of all features in a view with a ridge penalty in the Cox model as imple- mented in the R package glmnet. For the Kaplan-Meier plots, an optimal cut-point on each factor was determined to define the two groups using the maximally selected rank statistics as implemented in the R package survminer with P-values based on a log-rank test between the resulting groups.
-
+% Caption copied
 \begin{figure}[H]
 	\centering 	
 	\includegraphics[width=0.9\textwidth]{MOFA_CLL_Cox}
-	\caption{XX}
+	\caption{
+	\textbf{Association analysis between MOFA Factors and clinical response.}\\
+	(a) Association of MOFA factors to time to next treatment using a univariate Cox regression with N = 174 samples (96 of which are uncensored cases) and p-values based on the Wald statistic. Error bars denote 95\% confidence intervals. Numbers on the right denote p-values for each predictor.\\
+	(b) Kaplan-Meier plots measuring time to next treatment for the individual MOFA factors. The cut-points on each factor were chosen using maximally selected rank statistics, and p-values were calculated using a log-rank test on the resulting groups.\\
+	(c) Prediction accuracy of time to treatment for N = 174 patients using multivariate Cox regression trained with the 10 MOFA factors, as well using the first 10 principal components applied to single data modalities and the full data set. Shown are average values of Harrell's C-index from fivefold cross-validation. Error bars denote standard error of the mean.
+	}
 	\label{fig:MOFA_CLL_Cox}
 \end{figure}
 
 
 \subsubsection{Imputation of missing values}
 
-A promising application of MOFA is the imputation of missing values as well as entire missing assays, which could massively reduce experimental costs.\\
-The principle of imputation in MOFA follows the same logic as simulating from the generative model: if the factors and weights are available one can reconstruct the data by a simple matrix multiplication:
+A promising application of MOFA is the imputation of missing values, including the potential imputation of entire assays.\\
+The principle of imputation in MOFA follows the same logic as simulating from the generative model: if the factors and weights are known, the input data can be reconstructed by a simple matrix multiplication:
 \[
 	\hat{\bfY} = \E[\bfZ] \E[\bfW]^T
 \]
-where $\E[\bfZ]$ and $\E[\bfW]$ denote the expected values of the variational distributions for the factors and the loadings, respectively. Instead of point estimates, more advanced and fully Bayesian posterior predictive distribution could be obtained by propagating the uncertainity \cite{Gelman2013}. Yet, given that the variance of the variational distributions tend to be heavily underestimated (see \Cref{section:expectation_propagation}), we did not attempt this approach.
+where $\E[\bfZ]$ and $\E[\bfW]$ denote the expected values of the variational distributions for the factors and the weights, respectively. Notice that, when using the expectations of the posterior distributions, the noise $\epsilon$ (see \Cref{mofa_master_equation}) has a mean of zero and does not contribute to the predictions.\\
+Instead of relying in point estimates, one could adopt a more Bayesian approach and calculate the posterior predictive distribution by propagating the uncertainity \cite{Gelman2013}. Nonetheless, due to the nature of the optimisation problem in variational inference, the variance of the posterior distributions can be underestimated (see \Cref{section:expectation_propagation}). Hence, and also because of the additional computational complexity, we did not attempt this approach.
 
 To assess the imputation performance, we trained MOFA models on patients with complete measurements after masking parts of the drug response data. In a first experiment, we masked values at random, and in a second experiment we masked the entire drug response data. We compared the results to some established imputation strategies, including imputation by feature-wise mean, SoftImpute \cite{Mazumder2010}, a k-nearest neighbour method \cite{Troyanskaya2001}.\\
-For both imputation tasks, MOFA consistently yielded more accurate predictions, albeit the differences became less pronounced in the imputation of full assays, a more challenging task.
+For both imputation tasks, MOFA consistently yielded more accurate predictions, albeit the differences are less pronounced in the imputation of full assays, a significantly more challenging task.
 
 \begin{figure}[H]
 	\centering 	
 	\includegraphics[width=1.0\textwidth]{MOFA_imputation}
-	\caption{Evaluation of imputation performance in the drug response assay of the CLL data. The y-axis shows averages of the mean-squared error across 15 trials for increasing fractions of missing data (x-axis). Two experiments were considered: (a) values missing at random and (b) entire assays missing at random. Error bars represent standard deviations.}
+	\caption{\textbf{Evaluation of imputation performance in the drug response assay of the CLL data}. The y-axis shows averages of the mean-squared error across 15 trials for increasing fractions of missing data (x-axis).\\
+	Two experiments were considered: (a) values missing at random and (b) entire assays missing at random. Error bars represent standard deviations.}
 	\label{fig:MOFA_imputation}
 \end{figure}
 
@@ -454,18 +526,31 @@ For both imputation tasks, MOFA consistently yielded more accurate predictions, 
 \newpage
 
 \subsection{Application to single-cell multi-omics} \label{section:mofa_scmt}
-The emergence of single-cell multi-modal techniques has created open opportunities for the development of novel computational techniques \cite{Stuart2019,Colome-Tatche2018,Chappell2018}. Here, we investigated the potential of MOFA to disentangle the heterogeneity in one of the earliest single-cell multi-omics experiments \cite{Angermueller2016}.\\
-The data set consists on 87 embryonic stem cells (ESCs) where RNA expression and DNA methylation were simultaneously measured using single-cell Methylation and Transcriptome sequencing (scM\&T-seq). Two populations of ESCs were profiled: the first one contains 16 cells grown in 2i media, which induces a native pluripotency state with genome-wide DNA hypomethylation \cite{Ficz2013}. the second population contains 71 cells grown in serum media, which triggers a primed pluripotency state poised for differentiation \cite{Tosolini2016}.
 
-The RNA expression data was processed using standard pipelines to obtain log normalised counts, followed by a selection of the top 5,000 most overdispersed genes \cite{Lun2016}. The DNA methylation data was processed as described in Chapter 1. Briefly, for each CpG site, we calculated a binary methylation rate from the ratio of methylated read counts to total read counts. Next, CpG sites were classified by overlapping with genomic contexts, namely promoters, CpG islands and enhancers (defined by the presence of distal H3K27ac marks). Finally, for each annotation we selected the top 5,000 most variable CpG sites with a minimum coverage of 10\% across cells. Each of the resulting matrices was defined as a separate view for MOFA \Cref{fig:mofa_scMT}. The methylation data was modelled with a Bernoulli likelihood and the RNA expression data was modelled with a Gaussian likelihood.
+The emergence of single-cell multi-modal techniques has created open opportunities for the development of novel computational strategies \cite{Stuart2019,Colome-Tatche2018,Chappell2018}.\\
+To show case how MOFA can be used to integrate single-cell multi-omics data, we considered a simple data set that consists on 87 ESCs where RNA expression and DNA methylation were simultaneously measured using single-cell Methylation and Transcriptome sequencing (scM\&T-seq)\cite{Angermueller2016}. Two populations of ESCs were profiled: the first one contains 16 cells grown in 2i media, which is known to induce a native pluripotency state associated with genome-wide DNA hypomethylation \cite{Ficz2013}. The second population contains 71 cells grown in serum media, which contain stimuli that trigger a primed pluripotency state poised for differentiation \cite{Tosolini2016}.
 
-In this data set, MOFA learnt 3 factors (\Cref{fig:mofa_scMT}, minimum explained variance of 1\%). Factor 1 captured the transition from naive to primed pluripotent states, which MOFA links to widespread coordinated changes between DNA methylation and RNA expression. Inspection of the gene loadings for Factor 1 pinpoints important pluripotency markers including  Rex1/Zpf42 or Essrb \cite{Mohammed2017}. As previously described both \textit{in vitro} \cite{Angermueller2016} and \textit{in vivo} \cite{Auclair2014}, the dynamics of DNA methylation are driven by a genome-wide increase in DNA methylation levels. Factor 2 captured a second dimension of heterogeneity driven by the transition from a primed pluripotency state to a differentiated state, with RNA loadings enriched with canonical differentiation markers including keratins and annexins \cite{Fuchs1988}.\\
+\subsection{Data processing}
+
+The RNA expression data was processed using \textit{scran}\cite{Lun2016b} to obtain log normalised counts adjusted by library size. Feature selection was performed by selecting the top 5,000 most overdispersed genes\cite{Lun2016a}. A Gaussian likelihod was used for this data modality. \\
+The DNA methylation data was processed as described in Chapter 1. Briefly, for each CpG site, we calculated a binary methylation rate from the ratio of methylated read counts to total read counts. Next, CpG sites were classified by overlapping with genomic contexts, namely promoters, CpG islands and enhancers (distal H3K27ac peaks). Finally, for each annotation we selected the top 5,000 most variable CpG sites with a minimum coverage of 10\% across cells. Each of the resulting matrices was defined as a separate view for MOFA (\Cref{fig:mofa_scMT}). A Bernoulli likelihod was used for this data modality.
+
+
+\subsubsection{Model overview}
+
+In this data set, MOFA inferred 3 factors with a minimum explained variance of 1\% (\Cref{fig:mofa_scMT}). Factor 1 captured the transition from naive to primed pluripotent states, which MOFA links to widespread coordinated changes between DNA methylation and RNA expression. Inspection of the gene weights for Factor 1 pinpoints important pluripotency markers including  \textit{Rex1/Zpf42} or \textit{Essrb} \cite{Mohammed2017}. As previously described both \textit{in vitro} \cite{Angermueller2016} and \textit{in vivo} \cite{Auclair2014}, the transition from naive to primed pluripotency state is concomitant with a genome-wide increase in DNA methylation levels. Factor 2 captured a second dimension of heterogeneity driven by the transition from a primed pluripotency state to a differentiated state, with RNA weights enriched with canonical differentiation markers including keratins and annexins \cite{Fuchs1988}.\\
 Jointly, the combination of Factors 1 and 2 reconstruct the coordinated changes between the transcriptome and the epigenome along the differentiation trajectory from naive pluripotent cells to differentiated cells.
 
 \begin{figure}[H]
 	\centering 	
 	\includegraphics[width=0.9\textwidth]{MOFA_scMT}
-	\caption{MOFA disentangles the main sources of heterogeneity in single-cell multi-omics data. (a) Overview of the data modalities. Rows indicate number of features ($D$) and columns indicate number of samples ($N$). Grey bars denote missing samples. (b) Fraction of variance explained per factor (column) and view (row). (c) Cumulative fraction of variance explained per view (across all factors). (c) mRNA loadings of Factor 1 (bottom) and Factor 2 (top). The genes that are labelled are known markers of pluripotency (for Factor 1) or differentiation (for Factor 2). (d) Scatter plot of Factor 1 (x-axis) against Factor 2 (y-axis). Cells are colored based on the culture condition. Grey arrow illustrates the differentiation trajectory from a naive pluripotency state to a differentiated state. }
+	\caption{\textbf{MOFA recovers a differentiation process from single-cell multi-omics data}.\\
+	(a) Overview of the data modalities. Rows indicate number of features ($D$) and columns indicate number of samples ($N$). Grey bars denote missing samples.\\
+	(b) Fraction of variance explained per factor (column) and view (row).\\
+	(c) Cumulative fraction of variance explained per view (across all factors).\\
+	(d) mRNA weights of Factor 1 (bottom) and Factor 2 (top). The genes that are labelled are known markers of pluripotency (for Factor 1) or differentiation (for Factor 2). \\
+	(e) Scatter plot of Factor 1 (x-axis) against Factor 2 (y-axis). Cells are colored based on the culture condition. Grey arrow illustrates the differentiation trajectory from a naive pluripotency state to a differentiated state. 
+	}
 	\label{fig:mofa_scMT}
 \end{figure}
 
@@ -476,36 +561,43 @@ Jointly, the combination of Factors 1 and 2 reconstruct the coordinated changes 
 % 	\label{fig:MOFA_scMT2}
 % \end{figure}
 
-When applying popular integrative clustering algorithms \cite{Wang2014,Shen2009,Mo2013}, the trajectory is not recovered \Cref{fig:MOFA_scMT_clustering}, illustrating the importance of learning continuous latent spaces before applying clustering methods.
+% \subsubsection{Comparison with clustering strategies}
 
-\begin{figure}[H]
-	\centering 	
-	\includegraphics[width=1.0\textwidth]{MOFA_scMT_clustering}
-	\caption{XX}
-	\label{fig:MOFA_scMT_clustering}
-\end{figure}
+% To illustrate the importance of learning continuous latent spaces before clustering samples, we applied popular integrative clustering algorithms \cite{Wang2014,Shen2009,Mo2013} to the data set. As expected, two clusters can be recovered that broadly match the culture conditions. However, no trajectory is recovered, illustrating the importance of 
+
+% \begin{figure}[H]
+% 	\centering 	
+% 	\includegraphics[width=1.0\textwidth]{MOFA_scMT_clustering}
+% 	\caption{\textbf{Multi-omics clustering applied to scMT data set.}\\
+% 	(a) Similarity matrix and dendogram obtained using Similarity Network Fusion\cite{Wang2014}\\
+% 	(b) Dendrogram obtained using iClusterPlus\cite{Mo2013} with two clusters.
+% 	}
+% 	\label{fig:MOFA_scMT_clustering}
+% \end{figure}
 
 
 \newpage
 
 \subsection{Open perspectives}
 
-MOFA addresses important challenges for the integrative analysis of multi-omics applications. Yet, the model is not free of limitations and there are open possibilities for future research, some of which we followed in Chapter 4:
+MOFA solves important challenges for the integrative analysis of (single-cell) multi-omics data sets. Yet, the model is not free of limitations and there are open possibilities for future research:
 
 \begin{itemize}
 
-	\item \textbf{Linearity}: this is an assumption that is critical for obtaining interpretable feature loadings. Yet, as in any machine learning technique, there is often a trade-off between explanatory power and interpretability\cite{Kuhn}. Non-linear appproaches are particularly appealing in biology, where the drivers of variation often result from the complex (non-linear) interaction between potentially simple (and linear) processes. As such, non-linear approaches, including deep neural networks or variational autoencoders have shown promising results when it comes to dimensionality reduction \cite{Lin2017,Ding2018,Lopez2018}, batch correction\cite{Lopez2018}, denoising \cite{Eraslan2019} or imputation \cite{Lin2016}. Notably, few non-linear multi-view factor analysis models exist \cite{Damianou2016}, making it an interesting line of research.
+	\item \textbf{Linearity}: this is an assumption that is critical for obtaining interpretable feature weights. Nonetheless, there is a trade-off between explanatory power and interpretability\cite{Kuhn}. Non-linear approaches, including deep neural networks or variational autoencoders have shown promising results when it comes to dimensionality reduction \cite{Lin2017,Ding2018,Lopez2018}, batch correction\cite{Lopez2018}, denoising \cite{Eraslan2019} or imputation \cite{Lin2016}. Interestngly, very few multi-view factor analysis models exist that incorporate flexible non-linear assumptions, making it an interesting line of research to explore.
 
-	\item \textbf{Scalability}: the size of biological datasets is rapidly increasing, particularly in the field of single cell sequencing, with some studies reporting more than a milion cells\cite{Svensson2018,Cao2019}. \\
-	When comparing to previous methods that make use of maximum likelihood or sampling-based Bayesian methods, the variatonal framework implemented in MOFA yields a notable improvement in scalability. Yet, in its vanilla form, variational inference becomes prohibitively slow with very large datasets \cite{Hoffman2013,Blei2016,Hoffman2014}, hence motivating the development of even more efficient inference schemes that potentially scale to milions of samples. This line of research is followed in Chapter 4, with the development of a stochastic version of the variational inference algorithm.
+	\item \textbf{Scalability}: the size of biological datasets is rapidly increasing, particularly in the field of single cell sequencing \cite{Svensson2018,Cao2019}. \\
+	When comparing the inference framework to previous methods that make use of sampling-based MCMC approaches, the variatonal framework implemented in MOFA yields a vast improvement in scalability. Yet, in its vanilla form, variational inference also becomes prohibitively slow with very large datasets \cite{Hoffman2013,Blei2016,Hoffman2014}. This has been recently addressed by a reformulation of the variational inference problem in terms of a gradient descent optimisation problem, which enables the full machinery of stochastic inference to be applied in the context of Bayesian inference.
+	%hence motivating the development of even more efficient inference schemes that potentially scale to milions of samples. 
+	%This line of research is followed in Chapter 4, with the development of a stochastic version of the variational inference algorithm.
 
-	\item \textbf{Sample independence assumption and generalisations to multi-group structures}: the sparsity assumptions in MOFA are based on the principle that features are structured into well-defined views. As such, the activity of the infered factors is also expected to be structured, so that different factors explain variability in different subsets of views (\Cref{fig:MOFA}). Following the same logic, many studies contain structured samples, as either multiple experiments or conditions. The integration of multiple sample groups requires breaking the assumption of independent samples and introducing a prior that captures the structured sparsity at the sample level. This line of research is followed in Chapter 4, with the introduction of a symmetric multi-group and multi-view sparsity prior.
+	\item \textbf{Generalisations to multi-group structures}: the sparsity assumptions in MOFA are based on the principle that features are structured into non-overlapping views. As such, the activity of the latent factors is also expected to be structured, so that different factors explain variability in different subsets of views (\Cref{fig:MOFA}). Following the same logic, many studies contain structured samples, as either multiple experiments or conditions. A simple generalisation of MOFA would be to intuitively break the assumption of independent samples and introduce an additional prior that captures the group structure at the sample level.
 
 	\item \textbf{Tailored likelihoods for single-cell analysis}: MOFA enables the modular extension to arbitrary non-gaussian likelihoods, provided that they can be locally bounded and integrated into the variational framework (see \Cref{section:mofa_ngaussian}). New likelihood models such as zero-inflated negative binomial distributions \cite{Risso2018} could make MOFA more suited to the analysis of single-cell data.
 
-	\item \textbf{Bayesian treatment of predictions}: in the current implementation, after inference we extract point estimates for each variable, namely expectations. While convienient for plotting, this ignores the uncertainity associated with the estimates, one of the main strength of Bayesian methods. Future extensions could attempt a more comprehensive Bayesian treatment that propagates uncertainity in the downstream analyses, mainly when it comes to making predictions and imputation \cite{Gelman2013}.
+	\item \textbf{Bayesian treatment of predictions}: in the current implementation of MOFA, only the point estimates for the posterior distributions are used in the downstream analysis. While convienient for most operations, this ignores the uncertainity associated with the point estimates, which is a major strength of Bayesian modelling. Future extensions could attempt a more comprehensive Bayesian treatment that propagates uncertainity in the downstream analyses, mainly when it comes to making predictions and imputation \cite{Gelman2013}.
 
-	\item \textbf{Incorporation of prior information}: an unsupevised approach is appealing for discovering the principal axes of variation, but sometimes this can yield challenges in the interpretation of factors. Future extensions could exploit the rich information encoded in pathway databases, similar to the approach proposed in \cite{Buettner2017}.
+	\item \textbf{Incorporation of prior information}: an unsupevised approach is appealing for discovering the principal axes of variation, but sometimes this can yield challenges in the interpretation of factors. Future extensions could exploit the rich information encoded in gene set ontologies, similar to the methodology proposed in \cite{Buettner2017}.
 
 \end{itemize}
 

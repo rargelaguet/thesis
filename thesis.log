@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  16 MAY 2019 11:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  23 MAR 2020 12:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -905,15 +905,16 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip50
 )
-Package hyperref Info: Option `final' set `true' on input line 621.
-Package hyperref Info: Option `plainpages' set `false' on input line 621.
-Package hyperref Info: Option `pdftoolbar' set `true' on input line 621.
-Package hyperref Info: Option `pdfmenubar' set `true' on input line 621.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 621.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 621.
+Package hyperref Info: Option `final' set `true' on input line 652.
+Package hyperref Info: Option `plainpages' set `false' on input line 652.
+Package hyperref Info: Option `pdftoolbar' set `true' on input line 652.
+Package hyperref Info: Option `pdfmenubar' set `true' on input line 652.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 652.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 652.
 
-Package hyperref Info: Option `breaklinks' set `true' on input line 621.
-Package hyperref Info: Option `colorlinks' set `true' on input line 621.
+Package hyperref Info: Option `breaklinks' set `true' on input line 652.
+Package hyperref Info: Option `linktocpage' set `true' on input line 652.
+Package hyperref Info: Option `colorlinks' set `true' on input line 652.
 
 PhDThesisPSnPDF: The University identity guidelines recommend using left aligne
 d text. Please use `flushleft' in the documentclass option, if you wish to left
@@ -940,14 +941,6 @@ Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 
 
 Writing nomenclature file thesis.nlo
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/makeidx.sty
-Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
-)
-\@indexfile=\write4
-\openout4 = `thesis.idx'.
-
-
-Writing index file thesis.idx
 ) (./Preamble/preamble.tex
 (/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -997,13 +990,13 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/placeins/placeins.sty
-Package: placeins 2005/04/18  v 2.2
-)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
 \c@subfigure=\count154
 \c@subtable=\count155
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
@@ -1028,319 +1021,105 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 (/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen151
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/siunitx/siunitx.sty
-(/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2016/05/18 v6512 L3 programming layer (loader) 
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2016/05/18 v6512 L3 programming layer (code)
-L3 Module: l3bootstrap 2016/02/12 v6412 L3 Bootstrap code
-L3 Module: l3names 2016/03/11 v6433 L3 Namespace for primitives
-L3 Module: l3basics 2015/11/22 v6315 L3 Basic definitions
-L3 Module: l3expan 2015/09/10 v5983 L3 Argument expansion
-L3 Module: l3tl 2016/03/26 v6465 L3 Token lists
-L3 Module: l3str 2016/03/24 v6441 L3 Strings
-L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
-L3 Module: l3int 2016/03/24 v6441 L3 Integers
-\c_max_int=\count160
-\l_tmpa_int=\count161
-\l_tmpb_int=\count162
-\g_tmpa_int=\count163
-\g_tmpb_int=\count164
-L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
-L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
-\g__prg_map_int=\count165
-L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
-L3 Module: l3token 2016/04/03 v6470 L3 Experimental token manipulation
-L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
-L3 Module: l3msg 2016/03/26 v6464 L3 Messages
-L3 Module: l3file 2016/03/25 v6458 L3 File and I/O operations
-\l_iow_line_count_int=\count166
-\l__iow_target_count_int=\count167
-\l__iow_current_line_int=\count168
-\l__iow_current_word_int=\count169
-\l__iow_current_indentation_int=\count170
-L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
-\c_zero_dim=\dimen152
-\c_max_dim=\dimen153
-\l_tmpa_dim=\dimen154
-\l_tmpb_dim=\dimen155
-\g_tmpa_dim=\dimen156
-\g_tmpb_dim=\dimen157
-\c_zero_skip=\skip61
-\c_max_skip=\skip62
-\l_tmpa_skip=\skip63
-\l_tmpb_skip=\skip64
-\g_tmpa_skip=\skip65
-\g_tmpb_skip=\skip66
-\c_zero_muskip=\muskip12
-\c_max_muskip=\muskip13
-\l_tmpa_muskip=\muskip14
-\l_tmpb_muskip=\muskip15
-\g_tmpa_muskip=\muskip16
-\g_tmpb_muskip=\muskip17
-L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
-\g__keyval_level_int=\count171
-\l_keys_choice_int=\count172
-L3 Module: l3fp 2016/03/26 v6465 L3 Floating points
-\c__fp_leading_shift_int=\count173
-\c__fp_middle_shift_int=\count174
-\c__fp_trailing_shift_int=\count175
-\c__fp_big_leading_shift_int=\count176
-\c__fp_big_middle_shift_int=\count177
-\c__fp_big_trailing_shift_int=\count178
-\c__fp_Bigg_leading_shift_int=\count179
-\c__fp_Bigg_middle_shift_int=\count180
-\c__fp_Bigg_trailing_shift_int=\count181
-L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
-\c_empty_box=\box30
-\l_tmpa_box=\box31
-\l_tmpb_box=\box32
-\g_tmpa_box=\box33
-\g_tmpb_box=\box34
-L3 Module: l3coffins 2016/05/17 v6508 L3 Coffin code layer
-\l__coffin_internal_box=\box35
-\l__coffin_internal_dim=\dimen158
-\l__coffin_offset_x_dim=\dimen159
-\l__coffin_offset_y_dim=\dimen160
-\l__coffin_x_dim=\dimen161
-\l__coffin_y_dim=\dimen162
-\l__coffin_x_prime_dim=\dimen163
-\l__coffin_y_prime_dim=\dimen164
-\c_empty_coffin=\box36
-\l__coffin_aligned_coffin=\box37
-\l__coffin_aligned_internal_coffin=\box38
-\l_tmpa_coffin=\box39
-\l_tmpb_coffin=\box40
-\l__coffin_display_coffin=\box41
-\l__coffin_display_coord_coffin=\box42
-\l__coffin_display_pole_coffin=\box43
-\l__coffin_display_offset_dim=\dimen165
-\l__coffin_display_x_dim=\dimen166
-\l__coffin_display_y_dim=\dimen167
-L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
-L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
-L3 Module: l3candidates 2016/05/13 v6484 L3 Experimental additions to l3kernel
-\l__box_top_dim=\dimen168
-\l__box_bottom_dim=\dimen169
-\l__box_left_dim=\dimen170
-\l__box_right_dim=\dimen171
-\l__box_top_new_dim=\dimen172
-\l__box_bottom_new_dim=\dimen173
-\l__box_left_new_dim=\dimen174
-\l__box_right_new_dim=\dimen175
-\l__box_internal_box=\box44
-\l__coffin_bounding_shift_dim=\dimen176
-\l__coffin_left_corner_dim=\dimen177
-\l__coffin_right_corner_dim=\dimen178
-\l__coffin_bottom_corner_dim=\dimen179
-\l__coffin_top_corner_dim=\dimen180
-\l__coffin_scaled_total_height_dim=\dimen181
-\l__coffin_scaled_width_dim=\dimen182
-L3 Module: l3luatex 2016/03/26 v6465 L3 Experimental LuaTeX-specific functions
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
+\c@tracingmulticols=\count160
+\mult@box=\box30
+\multicol@leftmargin=\dimen152
+\c@unbalance=\count161
+\c@collectmore=\count162
+\doublecol@number=\count163
+\multicoltolerance=\count164
+\multicolpretolerance=\count165
+\full@width=\dimen153
+\page@free=\dimen154
+\premulticols=\dimen155
+\postmulticols=\dimen156
+\multicolsep=\skip61
+\multicolbaselineskip=\skip62
+\partial@page=\box31
+\last@line=\box32
+\maxbalancingoverflow=\dimen157
+\mult@rightbox=\box33
+\mult@grightbox=\box34
+\mult@gfirstbox=\box35
+\mult@firstbox=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\c@columnbadness=\count166
+\c@finalcolumnbadness=\count167
+\last@try=\dimen158
+\multicolovershoot=\dimen159
+\multicolundershoot=\dimen160
+\mult@nat@firstbox=\box54
+\colbreak@box=\box55
+\mc@col@check@num=\count168
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-File: l3pdfmode.def 2016/03/26 v6465 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count182
-\l__driver_tmp_box=\box45
-))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2016/05/18 v6512 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count183
-\l__xparse_m_args_int=\count184
-\l__xparse_mandatory_args_int=\count185
-\l__xparse_processor_int=\count186
-\l__xparse_v_nesting_int=\count187
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip63
+\LTright=\skip64
+\LTpre=\skip65
+\LTpost=\skip66
+\LTchunksize=\count169
+\LTcapwidth=\dimen161
+\LT@head=\box56
+\LT@firsthead=\box57
+\LT@foot=\box58
+\LT@lastfoot=\box59
+\LT@cols=\count170
+\LT@rows=\count171
+\c@LT@tables=\count172
+\c@LT@chunks=\count173
+\LT@p@ftn=\toks31
 )
-Package: siunitx 2016/03/01 v2.6q A comprehensive (SI) units package
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen183
-\extrarowheight=\dimen184
-\NC@list=\toks31
+\col@sep=\dimen162
+\extrarowheight=\dimen163
+\NC@list=\toks32
 \extratabsurround=\skip67
 \backup@length=\skip68
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2016/05/18 v6512 LaTeX2e option processing using LaTeX3 keys
+\TX@col@width=\dimen164
+\TX@old@table=\dimen165
+\TX@old@col=\dimen166
+\TX@target=\dimen167
+\TX@delta=\dimen168
+\TX@cols=\count174
+\TX@ftn=\toks33
 )
-\l__siunitx_tmp_box=\box46
-\l__siunitx_tmp_dim=\dimen185
-\l__siunitx_tmp_int=\count188
-\l__siunitx_number_mantissa_length_int=\count189
-\l__siunitx_number_uncert_length_int=\count190
-\l__siunitx_round_int=\count191
-\l__siunitx_process_decimal_int=\count192
-\l__siunitx_process_uncertainty_int=\count193
-\l__siunitx_process_fixed_int=\count194
-\l__siunitx_process_integer_min_int=\count195
-\l__siunitx_process_precision_int=\count196
-\l__siunitx_group_min_int=\count197
-\l__siunitx_angle_marker_box=\box47
-\l__siunitx_angle_unit_box=\box48
-\l__siunitx_angle_marker_dim=\dimen186
-\l__siunitx_angle_unit_dim=\dimen187
-\l__siunitx_unit_int=\count198
-\l__siunitx_unit_denominator_int=\count199
-\l__siunitx_unit_numerator_int=\count266
-\l__siunitx_unit_prefix_int=\count267
-\l__siunitx_unit_prefix_base_int=\count268
-\l__siunitx_unit_prefix_gram_int=\count269
-\l__siunitx_number_product_int=\count270
-\c__siunitx_one_fill_skip=\skip69
-\l__siunitx_table_unit_align_skip=\skip70
-\l__siunitx_table_exponent_dim=\dimen188
-\l__siunitx_table_integer_dim=\dimen189
-\l__siunitx_table_mantissa_dim=\dimen190
-\l__siunitx_table_marker_dim=\dimen191
-\l__siunitx_table_result_dim=\dimen192
-\l__siunitx_table_uncert_dim=\dimen193
-\l__siunitx_table_fill_pre_dim=\dimen194
-\l__siunitx_table_fill_post_dim=\dimen195
-\l__siunitx_table_fill_mid_dim=\dimen196
-\l__siunitx_table_pre_box=\box49
-\l__siunitx_table_post_box=\box50
-\l__siunitx_table_mantissa_box=\box51
-\l__siunitx_table_result_box=\box52
-\l__siunitx_table_number_align_skip=\skip71
-\l__siunitx_table_text_align_skip=\skip72
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareBinaryPrefix with sig. 'mmm' on line 7218.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareSIPostPower with sig. 'mm' on line 7221.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareSIPrefix with sig. 'mmm' on line 7224.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareSIPrePower with sig. 'mm' on line 7227.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareSIQualifier with sig. 'mm' on line 7230.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareSIUnit with sig. 'O{}mm' on line 7233.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareSIUnitWithOptions with sig. 'mmm' on line 7236.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \ang with sig. 'o>{\SplitArgument {2}{;}}m' on line 7251.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \num with sig. 'om' on line 7260.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7269.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \numrange with sig. 'omm' on line 7278.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7290.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \SIrange with sig. 'ommm' on line 7302.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \SI with sig. 'omom' on line 7314.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \sisetup with sig. 'm' on line 7317.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \tablenum with sig. 'om' on line 7332.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \si with sig. 'om' on line 7344.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \__siunitx_bookmark_num:w with sig. 'om' on line 7391.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \__siunitx_bookmark_numrange:w with sig. 'omm' on line
-. 7393.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \__siunitx_bookmark_SI:w with sig. 'omom' on line 7395.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \__siunitx_bookmark_SIlist:w with sig. 'omm' on line 7397.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \__siunitx_bookmark_SIrange:w with sig. 'ommm' on line
-. 7399.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \__siunitx_bookmark_si:w with sig. 'om' on line 7400.
-.................................................
-\g__file_internal_ior=\read1
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/translator.sty
-Package: translator 2010/06/12 ver 1.10
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/translator-lang
-uage-mappings.tex)))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
-\pgfutil@everybye=\toks32
-\pgfutil@tempdima=\dimen197
-\pgfutil@tempdimb=\dimen198
+\pgfutil@everybye=\toks34
+\pgfutil@tempdima=\dimen169
+\pgfutil@tempdimb=\dimen170
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box53
+\pgfutil@abb=\box60
 (/usr/local/texlive/2016/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -1353,30 +1132,30 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks33
-\pgfkeys@temptoks=\toks34
+\pgfkeys@pathtoks=\toks35
+\pgfkeys@temptoks=\toks36
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
 ode.tex
-\pgfkeys@tmptoks=\toks35
+\pgfkeys@tmptoks=\toks37
 ))
-\pgf@x=\dimen199
-\pgf@y=\dimen256
-\pgf@xa=\dimen257
-\pgf@ya=\dimen258
-\pgf@xb=\dimen259
-\pgf@yb=\dimen260
-\pgf@xc=\dimen261
-\pgf@yc=\dimen262
-\w@pgf@writea=\write5
-\r@pgf@reada=\read2
-\c@pgf@counta=\count271
-\c@pgf@countb=\count272
-\c@pgf@countc=\count273
-\c@pgf@countd=\count274
-\t@pgf@toka=\toks36
-\t@pgf@tokb=\toks37
-\t@pgf@tokc=\toks38
+\pgf@x=\dimen171
+\pgf@y=\dimen172
+\pgf@xa=\dimen173
+\pgf@ya=\dimen174
+\pgf@xb=\dimen175
+\pgf@yb=\dimen176
+\pgf@xc=\dimen177
+\pgf@yc=\dimen178
+\w@pgf@writea=\write4
+\r@pgf@reada=\read1
+\c@pgf@counta=\count175
+\c@pgf@countb=\count176
+\c@pgf@countc=\count177
+\c@pgf@countd=\count178
+\t@pgf@toka=\toks38
+\t@pgf@tokb=\toks39
+\t@pgf@tokc=\toks40
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -1394,8 +1173,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count275
-\pgfsyssoftpath@bigbuffer@items=\count276
+\pgfsyssoftpath@smallbuffer@items=\count179
+\pgfsyssoftpath@bigbuffer@items=\count180
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -1424,12 +1203,12 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen263
-\pgfmath@count=\count277
-\pgfmath@box=\box54
-\pgfmath@toks=\toks39
-\pgfmath@stack@operand=\toks40
-\pgfmath@stack@operation=\toks41
+\pgfmath@dimen=\dimen179
+\pgfmath@count=\count181
+\pgfmath@box=\box61
+\pgfmath@toks=\toks41
+\pgfmath@stack@operand=\toks42
+\pgfmath@stack@operation=\toks43
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex
@@ -1450,57 +1229,57 @@ code.tex)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count278
+\c@pgfmathroundto@lastzeros=\count182
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen264
-\pgf@picmaxx=\dimen265
-\pgf@picminy=\dimen266
-\pgf@picmaxy=\dimen267
-\pgf@pathminx=\dimen268
-\pgf@pathmaxx=\dimen269
-\pgf@pathminy=\dimen270
-\pgf@pathmaxy=\dimen271
-\pgf@xx=\dimen272
-\pgf@xy=\dimen273
-\pgf@yx=\dimen274
-\pgf@yy=\dimen275
-\pgf@zx=\dimen276
-\pgf@zy=\dimen277
+\pgf@picminx=\dimen180
+\pgf@picmaxx=\dimen181
+\pgf@picminy=\dimen182
+\pgf@picmaxy=\dimen183
+\pgf@pathminx=\dimen184
+\pgf@pathmaxx=\dimen185
+\pgf@pathminy=\dimen186
+\pgf@pathmaxy=\dimen187
+\pgf@xx=\dimen188
+\pgf@xy=\dimen189
+\pgf@yx=\dimen190
+\pgf@yy=\dimen191
+\pgf@zx=\dimen192
+\pgf@zy=\dimen193
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
 ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen278
-\pgf@path@lasty=\dimen279
+\pgf@path@lastx=\dimen194
+\pgf@path@lasty=\dimen195
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
 .code.tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen280
-\pgf@shorten@start@additional=\dimen281
+\pgf@shorten@end@additional=\dimen196
+\pgf@shorten@start@additional=\dimen197
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box55
-\pgf@hbox=\box56
-\pgf@layerbox@main=\box57
-\pgf@picture@serial@count=\count279
+\pgfpic=\box62
+\pgf@hbox=\box63
+\pgf@layerbox@main=\box64
+\pgf@picture@serial@count=\count183
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen282
+\pgflinewidth=\dimen198
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
 ations.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen283
-\pgf@pt@y=\dimen284
-\pgf@pt@temp=\dimen285
+\pgf@pt@x=\dimen199
+\pgf@pt@y=\dimen256
+\pgf@pt@temp=\dimen257
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
 e.tex
@@ -1517,13 +1296,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen286
+\pgfarrowsep=\dimen258
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
 e.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen287
-\pgf@sys@shading@range@num=\count280
+\pgf@max=\dimen259
+\pgf@sys@shading@range@num=\count184
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -1532,7 +1311,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
 code.tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box58
+\pgfexternal@startupbox=\box65
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
 de.tex
@@ -1549,7 +1328,7 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
 e.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box59
+\pgfnodeparttextbox=\box66
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
 tex
@@ -1558,8 +1337,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen288
-\pgf@nodesepend=\dimen289
+\pgf@nodesepstart=\dimen260
+\pgf@nodesepend=\dimen261
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
@@ -1574,10 +1353,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen290
-\pgffor@skip=\dimen291
-\pgffor@stack=\toks42
-\pgffor@toks=\toks43
+\pgffor@iter=\dimen262
+\pgffor@skip=\dimen263
+\pgffor@stack=\toks44
+\pgffor@toks=\toks45
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -1586,32 +1365,32 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count281
-\pgfplotmarksize=\dimen292
+\pgf@plot@mark@count=\count185
+\pgfplotmarksize=\dimen264
 )
-\tikz@lastx=\dimen293
-\tikz@lasty=\dimen294
-\tikz@lastxsaved=\dimen295
-\tikz@lastysaved=\dimen296
-\tikzleveldistance=\dimen297
-\tikzsiblingdistance=\dimen298
-\tikz@figbox=\box60
-\tikz@figbox@bg=\box61
-\tikz@tempbox=\box62
-\tikz@tempbox@bg=\box63
-\tikztreelevel=\count282
-\tikznumberofchildren=\count283
-\tikznumberofcurrentchild=\count284
-\tikz@fig@count=\count285
+\tikz@lastx=\dimen265
+\tikz@lasty=\dimen266
+\tikz@lastxsaved=\dimen267
+\tikz@lastysaved=\dimen268
+\tikzleveldistance=\dimen269
+\tikzsiblingdistance=\dimen270
+\tikz@figbox=\box67
+\tikz@figbox@bg=\box68
+\tikz@tempbox=\box69
+\tikz@tempbox@bg=\box70
+\tikztreelevel=\count186
+\tikznumberofchildren=\count187
+\tikznumberofcurrentchild=\count188
+\tikz@fig@count=\count189
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count286
-\pgfmatrixcurrentcolumn=\count287
-\pgf@matrix@numberofcolumns=\count288
+\pgfmatrixcurrentrow=\count190
+\pgfmatrixcurrentcolumn=\count191
+\pgf@matrix@numberofcolumns=\count192
 )
-\tikz@expandcount=\count289
+\tikz@expandcount=\count193
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -1674,26 +1453,26 @@ File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
 shapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 
-\pgfnodepartlowerbox=\box64
-\pgfnodeparttwobox=\box65
-\pgfnodepartthreebox=\box66
-\pgfnodepartfourbox=\box67
-\pgfnodeparttwentybox=\box68
-\pgfnodepartnineteenbox=\box69
-\pgfnodeparteighteenbox=\box70
-\pgfnodepartseventeenbox=\box71
-\pgfnodepartsixteenbox=\box72
-\pgfnodepartfifteenbox=\box73
-\pgfnodepartfourteenbox=\box74
-\pgfnodepartthirteenbox=\box75
-\pgfnodeparttwelvebox=\box76
-\pgfnodepartelevenbox=\box77
-\pgfnodeparttenbox=\box78
-\pgfnodepartninebox=\box79
-\pgfnodeparteightbox=\box80
-\pgfnodepartsevenbox=\box81
-\pgfnodepartsixbox=\box82
-\pgfnodepartfivebox=\box83
+\pgfnodepartlowerbox=\box71
+\pgfnodeparttwobox=\box72
+\pgfnodepartthreebox=\box73
+\pgfnodepartfourbox=\box74
+\pgfnodeparttwentybox=\box75
+\pgfnodepartnineteenbox=\box76
+\pgfnodeparteighteenbox=\box77
+\pgfnodepartseventeenbox=\box78
+\pgfnodepartsixteenbox=\box79
+\pgfnodepartfifteenbox=\box80
+\pgfnodepartfourteenbox=\box81
+\pgfnodepartthirteenbox=\box82
+\pgfnodeparttwelvebox=\box83
+\pgfnodepartelevenbox=\box84
+\pgfnodeparttenbox=\box85
+\pgfnodepartninebox=\box86
+\pgfnodeparteightbox=\box87
+\pgfnodepartsevenbox=\box88
+\pgfnodepartsixbox=\box89
+\pgfnodepartfivebox=\box90
 )))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryfit.code.tex
@@ -1710,7 +1489,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen299
+\arrowsize=\dimen271
 ))) (/usr/local/texlive/2016/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2013/12/28 v0.19 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2230.
@@ -1728,7 +1507,10 @@ Package cleveref Info: include cross-reference names in hyperlinks on input lin
 e 7476.
 Package cleveref Info: include cross-reference names in hyperlinks on input lin
 e 7493.
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/biblatex.sty
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/chngcntr/chngcntr.sty
+Package: chngcntr 2009/09/02 v1.0a change counter resetting
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2016/05/14 v3.4 programmable bibliographies (PK/JW/AB)
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/iftex/iftex.sty
@@ -1737,70 +1519,70 @@ and LuaTeX
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count290
+\lrq@indent=\count194
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/local/texlive/2016/texmf-dist/tex/generic/xstring/xstring.tex
-\@xs@message=\write6
-\integerpart=\count291
-\decimalpart=\count292
+\@xs@message=\write5
+\integerpart=\count195
+\decimalpart=\count196
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count293
-\c@listtotal=\count294
-\c@listcount=\count295
-\c@liststart=\count296
-\c@liststop=\count297
-\c@citecount=\count298
-\c@citetotal=\count299
-\c@multicitecount=\count300
-\c@multicitetotal=\count301
-\c@instcount=\count302
-\c@maxnames=\count303
-\c@minnames=\count304
-\c@maxitems=\count305
-\c@minitems=\count306
-\c@citecounter=\count307
-\c@savedcitecounter=\count308
-\c@uniquelist=\count309
-\c@uniquename=\count310
-\c@refsection=\count311
-\c@refsegment=\count312
-\c@maxextratitle=\count313
-\c@maxextratitleyear=\count314
-\c@maxextrayear=\count315
-\c@maxextraalpha=\count316
-\c@abbrvpenalty=\count317
-\c@highnamepenalty=\count318
-\c@lownamepenalty=\count319
-\c@maxparens=\count320
-\c@parenlevel=\count321
-\blx@tempcnta=\count322
-\blx@tempcntb=\count323
-\blx@tempcntc=\count324
-\blx@maxsection=\count325
-\blx@maxsegment@0=\count326
-\blx@notetype=\count327
-\blx@parenlevel@text=\count328
-\blx@parenlevel@foot=\count329
-\blx@sectionciteorder@0=\count330
-\labelnumberwidth=\skip73
-\labelalphawidth=\skip74
-\biblabelsep=\skip75
-\bibitemsep=\skip76
-\bibnamesep=\skip77
-\bibinitsep=\skip78
-\bibparsep=\skip79
-\bibhang=\skip80
-\blx@bcfin=\read3
-\blx@bcfout=\write7
-\c@mincomprange=\count331
-\c@maxcomprange=\count332
-\c@mincompwidth=\count333
+\c@tabx@nest=\count197
+\c@listtotal=\count198
+\c@listcount=\count199
+\c@liststart=\count266
+\c@liststop=\count267
+\c@citecount=\count268
+\c@citetotal=\count269
+\c@multicitecount=\count270
+\c@multicitetotal=\count271
+\c@instcount=\count272
+\c@maxnames=\count273
+\c@minnames=\count274
+\c@maxitems=\count275
+\c@minitems=\count276
+\c@citecounter=\count277
+\c@savedcitecounter=\count278
+\c@uniquelist=\count279
+\c@uniquename=\count280
+\c@refsection=\count281
+\c@refsegment=\count282
+\c@maxextratitle=\count283
+\c@maxextratitleyear=\count284
+\c@maxextrayear=\count285
+\c@maxextraalpha=\count286
+\c@abbrvpenalty=\count287
+\c@highnamepenalty=\count288
+\c@lownamepenalty=\count289
+\c@maxparens=\count290
+\c@parenlevel=\count291
+\blx@tempcnta=\count292
+\blx@tempcntb=\count293
+\blx@tempcntc=\count294
+\blx@maxsection=\count295
+\blx@maxsegment@0=\count296
+\blx@notetype=\count297
+\blx@parenlevel@text=\count298
+\blx@parenlevel@foot=\count299
+\blx@sectionciteorder@0=\count300
+\labelnumberwidth=\skip69
+\labelalphawidth=\skip70
+\biblabelsep=\skip71
+\bibitemsep=\skip72
+\bibnamesep=\skip73
+\bibinitsep=\skip74
+\bibparsep=\skip75
+\bibhang=\skip76
+\blx@bcfin=\read2
+\blx@bcfout=\write6
+\c@mincomprange=\count301
+\c@maxcomprange=\count302
+\c@mincompwidth=\count303
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1809,78 +1591,78 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count334
-\c@savedafterword=\count335
-\c@annotator=\count336
-\c@savedannotator=\count337
-\c@author=\count338
-\c@savedauthor=\count339
-\c@bookauthor=\count340
-\c@savedbookauthor=\count341
-\c@commentator=\count342
-\c@savedcommentator=\count343
-\c@editor=\count344
-\c@savededitor=\count345
-\c@editora=\count346
-\c@savededitora=\count347
-\c@editorb=\count348
-\c@savededitorb=\count349
-\c@editorc=\count350
-\c@savededitorc=\count351
-\c@foreword=\count352
-\c@savedforeword=\count353
-\c@holder=\count354
-\c@savedholder=\count355
-\c@introduction=\count356
-\c@savedintroduction=\count357
-\c@namea=\count358
-\c@savednamea=\count359
-\c@nameb=\count360
-\c@savednameb=\count361
-\c@namec=\count362
-\c@savednamec=\count363
-\c@translator=\count364
-\c@savedtranslator=\count365
-\c@shortauthor=\count366
-\c@savedshortauthor=\count367
-\c@shorteditor=\count368
-\c@savedshorteditor=\count369
-\c@labelname=\count370
-\c@savedlabelname=\count371
-\c@institution=\count372
-\c@savedinstitution=\count373
-\c@lista=\count374
-\c@savedlista=\count375
-\c@listb=\count376
-\c@savedlistb=\count377
-\c@listc=\count378
-\c@savedlistc=\count379
-\c@listd=\count380
-\c@savedlistd=\count381
-\c@liste=\count382
-\c@savedliste=\count383
-\c@listf=\count384
-\c@savedlistf=\count385
-\c@location=\count386
-\c@savedlocation=\count387
-\c@organization=\count388
-\c@savedorganization=\count389
-\c@origlocation=\count390
-\c@savedoriglocation=\count391
-\c@origpublisher=\count392
-\c@savedorigpublisher=\count393
-\c@publisher=\count394
-\c@savedpublisher=\count395
-\c@language=\count396
-\c@savedlanguage=\count397
-\c@pageref=\count398
-\c@savedpageref=\count399
-\shorthandwidth=\skip81
-\shortjournalwidth=\skip82
-\shortserieswidth=\skip83
-\shorttitlewidth=\skip84
-\shortauthorwidth=\skip85
-\shorteditorwidth=\skip86
+\c@afterword=\count304
+\c@savedafterword=\count305
+\c@annotator=\count306
+\c@savedannotator=\count307
+\c@author=\count308
+\c@savedauthor=\count309
+\c@bookauthor=\count310
+\c@savedbookauthor=\count311
+\c@commentator=\count312
+\c@savedcommentator=\count313
+\c@editor=\count314
+\c@savededitor=\count315
+\c@editora=\count316
+\c@savededitora=\count317
+\c@editorb=\count318
+\c@savededitorb=\count319
+\c@editorc=\count320
+\c@savededitorc=\count321
+\c@foreword=\count322
+\c@savedforeword=\count323
+\c@holder=\count324
+\c@savedholder=\count325
+\c@introduction=\count326
+\c@savedintroduction=\count327
+\c@namea=\count328
+\c@savednamea=\count329
+\c@nameb=\count330
+\c@savednameb=\count331
+\c@namec=\count332
+\c@savednamec=\count333
+\c@translator=\count334
+\c@savedtranslator=\count335
+\c@shortauthor=\count336
+\c@savedshortauthor=\count337
+\c@shorteditor=\count338
+\c@savedshorteditor=\count339
+\c@labelname=\count340
+\c@savedlabelname=\count341
+\c@institution=\count342
+\c@savedinstitution=\count343
+\c@lista=\count344
+\c@savedlista=\count345
+\c@listb=\count346
+\c@savedlistb=\count347
+\c@listc=\count348
+\c@savedlistc=\count349
+\c@listd=\count350
+\c@savedlistd=\count351
+\c@liste=\count352
+\c@savedliste=\count353
+\c@listf=\count354
+\c@savedlistf=\count355
+\c@location=\count356
+\c@savedlocation=\count357
+\c@organization=\count358
+\c@savedorganization=\count359
+\c@origlocation=\count360
+\c@savedoriglocation=\count361
+\c@origpublisher=\count362
+\c@savedorigpublisher=\count363
+\c@publisher=\count364
+\c@savedpublisher=\count365
+\c@language=\count366
+\c@savedlanguage=\count367
+\c@pageref=\count368
+\c@savedpageref=\count369
+\shorthandwidth=\skip77
+\shortjournalwidth=\skip78
+\shortserieswidth=\skip79
+\shorttitlewidth=\skip80
+\shortauthorwidth=\skip81
+\shorteditorwidth=\skip82
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1892,13 +1674,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2016/05/14 v3.4 biblatex compatibility (PK/JW/AB)
-\c@textcitecount=\count400
-\c@textcitetotal=\count401
-\c@textcitemaxnames=\count402
-\c@biburlnumpenalty=\count403
-\c@biburlucpenalty=\count404
-\c@biburllcpenalty=\count405
-\c@smartand=\count406
+\c@textcitecount=\count370
+\c@textcitetotal=\count371
+\c@textcitemaxnames=\count372
+\c@biburlnumpenalty=\count373
+\c@biburlucpenalty=\count374
+\c@biburllcpenalty=\count375
+\c@smartand=\count376
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1910,8 +1692,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2016/05/14 v3.4 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count407
-\c@bbx:relatedtotal=\count408
+\c@bbx:relatedcount=\count377
+\c@bbx:relatedtotal=\count378
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1942,87 +1724,38 @@ nstead.
 
 )) (/usr/local/texlive/2016/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip87
-\enit@outerparindent=\dimen300
-\enit@toks=\toks44
-\enit@inbox=\box84
-\enitdp@description=\count409
+\labelindent=\skip83
+\enit@outerparindent=\dimen272
+\enit@toks=\toks46
+\enit@inbox=\box91
+\enitdp@description=\count379
 )
 (./thesis-info.tex)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count410
-\lst@gtempboxa=\box85
-\lst@token=\toks45
-\lst@length=\count411
-\lst@currlwidth=\dimen301
-\lst@column=\count412
-\lst@pos=\count413
-\lst@lostspace=\dimen302
-\lst@width=\dimen303
-\lst@newlines=\count414
-\lst@lineno=\count415
-\lst@maxwidth=\dimen304
+\lst@mode=\count380
+\lst@gtempboxa=\box92
+\lst@token=\toks47
+\lst@length=\count381
+\lst@currlwidth=\dimen273
+\lst@column=\count382
+\lst@pos=\count383
+\lst@lostspace=\dimen274
+\lst@width=\dimen275
+\lst@newlines=\count384
+\lst@lineno=\count385
+\lst@maxwidth=\dimen276
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count416
-\lst@skipnumbers=\count417
-\lst@framebox=\box86
+\c@lstnumber=\count386
+\lst@skipnumbers=\count387
+\lst@framebox=\box93
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
-\c@tracingmulticols=\count418
-\mult@box=\box87
-\multicol@leftmargin=\dimen305
-\c@unbalance=\count419
-\c@collectmore=\count420
-\doublecol@number=\count421
-\multicoltolerance=\count422
-\multicolpretolerance=\count423
-\full@width=\dimen306
-\page@free=\dimen307
-\premulticols=\dimen308
-\postmulticols=\dimen309
-\multicolsep=\skip88
-\multicolbaselineskip=\skip89
-\partial@page=\box88
-\last@line=\box89
-\maxbalancingoverflow=\dimen310
-\mult@rightbox=\box90
-\mult@grightbox=\box91
-\mult@gfirstbox=\box92
-\mult@firstbox=\box93
-\@tempa=\box94
-\@tempa=\box95
-\@tempa=\box96
-\@tempa=\box97
-\@tempa=\box98
-\@tempa=\box99
-\@tempa=\box100
-\@tempa=\box101
-\@tempa=\box102
-\@tempa=\box103
-\@tempa=\box104
-\@tempa=\box105
-\@tempa=\box106
-\@tempa=\box107
-\@tempa=\box108
-\@tempa=\box109
-\@tempa=\box110
-\c@columnbadness=\count424
-\c@finalcolumnbadness=\count425
-\last@try=\dimen311
-\multicolovershoot=\dimen312
-\multicolundershoot=\dimen313
-\mult@nat@firstbox=\box111
-\colbreak@box=\box112
-\mc@col@check@num=\count426
-)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
 Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 \symstmry=\mathgroup6
@@ -2039,12 +1772,10 @@ Package biblatex Info: ... file 'english.lbx' found.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 )
-\@quotelevel=\count427
-\@quotereset=\count428
+\@quotelevel=\count388
+\@quotereset=\count389
 
-(./thesis.aux (./Dedication/dedication.aux) (./Abstract/abstract.aux)
-(./Chapter1/introduction.aux) (./Chapter1/scnmt-seq.aux)
-(./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
+(./thesis.aux (./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
 (./Chapter2/factor_analysis.aux
 
 LaTeX Warning: Label `fig:bayesianFA' multiply defined.
@@ -2052,56 +1783,49 @@ LaTeX Warning: Label `fig:bayesianFA' multiply defined.
 
 LaTeX Warning: Label `fig:bayesianFA@cref' multiply defined.
 
-) (./Chapter2/mofa.aux
-
-LaTeX Warning: Label `fig:MOFA_nongaussian' multiply defined.
-
-
-LaTeX Warning: Label `fig:MOFA_nongaussian@cref' multiply defined.
-
-) (./Chapter3/introduction.aux) (./Chapter4/introduction.aux))
+) (./Chapter2/mofa.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 135.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 126.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count429
-\scratchdimen=\dimen314
-\scratchbox=\box113
-\nofMPsegments=\count430
-\nofMParguments=\count431
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count432
-\MPscratchDim=\dimen315
-\MPnumerator=\count433
-\makeMPintoPDFobject=\count434
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count390
+\scratchdimen=\dimen277
+\scratchbox=\box94
+\nofMPsegments=\count391
+\nofMParguments=\count392
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count393
+\MPscratchDim=\dimen278
+\MPnumerator=\count394
+\makeMPintoPDFobject=\count395
+\everyMPtoPDFconversion=\toks49
 )
-LaTeX Info: Redefining \microtypecontext on input line 135.
+LaTeX Info: Redefining \microtypecontext on input line 126.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2115,8 +1839,8 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-\AtBeginShipoutBox=\box114
-Package hyperref Info: Link coloring ON on input line 135.
+\AtBeginShipoutBox=\box95
+Package hyperref Info: Link coloring ON on input line 126.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -2124,15 +1848,15 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count435
+\c@section@level=\count396
 )
-LaTeX Info: Redefining \ref on input line 135.
-LaTeX Info: Redefining \pageref on input line 135.
-LaTeX Info: Redefining \nameref on input line 135.
+LaTeX Info: Redefining \ref on input line 126.
+LaTeX Info: Redefining \pageref on input line 126.
+LaTeX Info: Redefining \nameref on input line 126.
 
 (./thesis.out) (./thesis.out)
-\@outlinefile=\write8
-\openout8 = `thesis.out'.
+\@outlinefile=\write7
+\openout7 = `thesis.out'.
 
 
 *geometry* driver: auto-detecting
@@ -2171,50 +1895,34 @@ LaTeX Info: Redefining \nameref on input line 135.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+)
 Package caption Info: End \AtBeginDocument code.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/dicts/translato
-r-basic-dictionary/translator-basic-dictionary-English.dict
-Dictionary: translator-basic-dictionary, Language: English 
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
-File: siunitx-abbreviations.cfg 2016/03/01 v2.6q siunitx: Abbreviated units
-) ABD: EveryShipout initializing macros
+ABD: EveryShipout initializing macros
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout7 = `thesis.bcf'.
+\openout6 = `thesis.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
- (./thesis.bbl
+ (./thesis.bbl)
+Package biblatex Info: Reference section=0 on input line 126.
+Package biblatex Info: Reference segment=0 on input line 126.
+\c@lstlisting=\count397
+\PHD@Title=\box96
+LaTeX Font Info:    Try loading font information for U+msa on input line 130.
 
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                XX
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                DR-seq
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
-Package biblatex Info: Reference section=0 on input line 135.
-Package biblatex Info: Reference segment=0 on input line 135.
-\c@lstlisting=\count436
-\c__siunitx_mathsf_int=\count437
-LaTeX Font Info:    Try loading font information for U+msa on input line 135.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 135.
+LaTeX Font Info:    Try loading font information for U+msb on input line 130.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2222,449 +1930,155 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 135.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 130.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `cmss' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-\c__siunitx_mathtt_int=\count438
-Package microtype Info: Loading generic settings for font family
-(microtype)             `cmtt' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-\PHD@Title=\box115
-\PHD@crest=\box116
+\PHD@crest=\box97
 
-<Figs/University_Crest.pdf, id=324, 59.22125pt x 69.25874pt>
+<Figs/University_Crest.pdf, id=236, 59.22125pt x 69.25874pt>
 File: Figs/University_Crest.pdf Graphic file (type pdf)
 
 <use Figs/University_Crest.pdf>
-Package pdftex.def Info: Figs/University_Crest.pdf used on input line 139.
+Package pdftex.def Info: Figs/University_Crest.pdf used on input line 130.
 (pdftex.def)             Requested size: 93.32361pt x 109.14542pt.
-\PHD@collegecrest=\box117
-\PHD@author=\box118
-\PHD@supervisor=\box119
-\PHD@advisor=\box120
-\PHD@dept=\box121
-\PHD@submission=\box122
-\PHD@collegedate=\box123
-\PHD@titlepagespacing=\skip90
+\PHD@collegecrest=\box98
+\PHD@author=\box99
+\PHD@supervisor=\box100
+\PHD@advisor=\box101
+\PHD@dept=\box102
+\PHD@submission=\box103
+\PHD@collegedate=\box104
+\PHD@titlepagespacing=\skip84
  [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figs/
-University_Crest.pdf>]
-\openout2 = `Dedication/dedication.aux'.
-
-
-(./Dedication/dedication.tex [2
-
-
-]) [3]
-\openout2 = `Abstract/abstract.aux'.
-
- (./Abstract/abstract.tex [4
-
-
+University_Crest.pdf>] [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 8--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--19
-
- []
-
-[5
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--25
-
- []
-
-) [6] (./thesis.toc [7
-
-
-
-] [8] [9])
-\tf@toc=\write9
-\openout9 = `thesis.toc'.
-
- [10]
-\openout2 = `Chapter1/introduction.aux'.
-
- (./Chapter1/introduction.tex
-Chapter 1.
-
-LaTeX Warning: Reference `fig:scrna_methods' on page 1 undefined on input line 
-11.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.15 D
-      roplet-based methods are based on the use of droplet microfluidics tec...
-[1
-
-
-
-] <Chapter1/Figs/scRNA_seq_comparison.pdf, id=598, 3533.2pt x 3773.16658pt>
-File: Chapter1/Figs/scRNA_seq_comparison.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scRNA_seq_comparison.pdf>
-Package pdftex.def Info: Chapter1/Figs/scRNA_seq_comparison.pdf used on input l
-ine 19.
-(pdftex.def)             Requested size: 396.63428pt x 423.57054pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.25 
-      [2 <./Chapter1/Figs/scRNA_seq_comparison.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 31--35
-
- []
-
-<Chapter1/Figs/methylation_protocols.pdf, id=676, 722.7pt x 534.99875pt>
-File: Chapter1/Figs/methylation_protocols.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/methylation_protocols.pdf>
-Package pdftex.def Info: Chapter1/Figs/methylation_protocols.pdf used on input 
-line 40.
-(pdftex.def)             Requested size: 373.30159pt x 276.34785pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.44 
-      [3] <Chapter1/Figs/scBS_protocol.pdf, id=714, 228.39249pt x 120.52167pt>
-File: Chapter1/Figs/scBS_protocol.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scBS_protocol.pdf>
-Package pdftex.def Info: Chapter1/Figs/scBS_protocol.pdf used on input line 51.
-
-(pdftex.def)             Requested size: 373.30159pt x 197.00394pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.55 
-      [4 <./Chapter1/Figs/methylation_protocols.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.63 
-      [5 <./Chapter1/Figs/scBS_protocol.pdf>]pdfTeX warning (ext4): destination
- with the same identifier (name{page.6}) has been already used, duplicate ignor
-ed
-<to be read again> 
-                   \relax 
-l.79 
-      [6]
-<Chapter1/Figs/ChromatinAcc_protocols.png, id=1091, 981.6675pt x 735.74875pt>
-File: Chapter1/Figs/ChromatinAcc_protocols.png Graphic file (type png)
-
-<use Chapter1/Figs/ChromatinAcc_protocols.png>
-Package pdftex.def Info: Chapter1/Figs/ChromatinAcc_protocols.png used on input
- line 86.
-(pdftex.def)             Requested size: 373.30159pt x 279.77827pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.96 
-      [7 <./Chapter1/Figs/ChromatinAcc_protocols.png>]pdfTeX warning (ext4): de
-stination with the same identifier (name{page.8}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.116 \end{itemize}
-                    [8])pdfTeX warning (ext4): destination with the same identi
-fier (name{page.9}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.163 \include{Chapter1/introduction}
-                                      [9]
-\openout2 = `Chapter1/scnmt-seq.aux'.
-
- (./Chapter1/scnmt-seq.tex
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
-
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.20 
-      [10
-
-
-]
-<Chapter1/Figs/scNMT_protocol.pdf, id=1190, 311.1625pt x 427.5975pt>
-File: Chapter1/Figs/scNMT_protocol.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_protocol.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_protocol.pdf used on input line 23
-.
-(pdftex.def)             Requested size: 279.97797pt x 384.74937pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[11 <./Chapter1/Figs/scNMT_protocol.pdf>] [12]
-<Chapter1/Figs/scNMT_coverage.pdf, id=1254, 435.6275pt x 226.8475pt>
-File: Chapter1/Figs/scNMT_coverage.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_coverage.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_coverage.pdf used on input line 53
-.
-(pdftex.def)             Requested size: 466.62521pt x 242.98749pt.
-
-<Chapter1/Figs/scNMT_coverage2.pdf, id=1257, 205.76875pt x 152.06813pt>
-File: Chapter1/Figs/scNMT_coverage2.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_coverage2.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_coverage2.pdf used on input line 6
-3.
-(pdftex.def)             Requested size: 373.30159pt x 275.90123pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[13 <./Chapter1/Figs/scNMT_coverage.pdf>]
-
-LaTeX Warning: Reference `fig:scnmt_profiles_MT' on page 1 undefined on input l
-ine 73.
-
-
-<Chapter1/Figs/scNMT_pseudobulk_profiles.pdf, id=1282, 871.91046pt x 867.24pt>
-File: Chapter1/Figs/scNMT_pseudobulk_profiles.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_pseudobulk_profiles.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_pseudobulk_profiles.pdf used on in
-put line 78.
-(pdftex.def)             Requested size: 373.30159pt x 371.2915pt.
- [14 <./Chapter1/Figs/scNMT_coverage2.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-
- []
-
-<Chapter1/Figs/scNMT_comparison.pdf, id=1310, 700.41673pt x 328.22626pt>
-File: Chapter1/Figs/scNMT_comparison.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_comparison.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_comparison.pdf used on input line 
-102.
-(pdftex.def)             Requested size: 466.62521pt x 218.66838pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[15 <./Chapter1/Figs/scNMT_pseudobulk_profiles.pdf>]
-<Chapter1/Figs/scNMT_correlations_acrossgenes.pdf, id=1356, 495.35063pt x 190.0
-4298pt>
-File: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf Graphic file (type pdf)
- <use Chapter1/Figs/scNMT_correlations_acrossgenes.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf used 
-on input line 112.
-(pdftex.def)             Requested size: 466.62521pt x 179.0232pt.
- [16 <./Chapter1/Figs/scNMT_comparison.pdf>]
-<Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf, id=1398, 803.0pt x 403.507
-5pt>
-File: Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf Graphic file (type pdf
-)
- <use Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_pseudobulk_profiles_byexpr.pdf use
-d on input line 120.
-(pdftex.def)             Requested size: 419.95984pt x 211.03188pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[17 <./Chapter1/Figs/scNMT_correlations_acrossgenes.pdf> <./Chapter1/Figs/scNMT
-_pseudobulk_profiles_byexpr.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter1/Figs/scNMT_pseudo
-bulk_profiles_byexpr.pdf): PDF inclusion: multiple pdfs with page group include
-d in a single page
->] <Chapter1/Figs/scNMT_EB_QC.pdf, id=1677, 1441.385pt x 1031.855pt>
-File: Chapter1/Figs/scNMT_EB_QC.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_EB_QC.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_EB_QC.pdf used on input line 132.
-(pdftex.def)             Requested size: 373.30159pt x 267.23682pt.
-
-<Chapter1/Figs/scNMT_EB_RNA.pdf, id=1678, 650.43pt x 505.89pt>
-File: Chapter1/Figs/scNMT_EB_RNA.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_EB_RNA.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_EB_RNA.pdf used on input line 141.
-
-(pdftex.def)             Requested size: 373.30159pt x 290.35185pt.
- [18 <./Chapter1/Figs/scNMT_EB_QC.pdf>]
-<Chapter1/Figs/scNMT_EB_correlations.pdf, id=1699, 430.66898pt x 280.95967pt>
-File: Chapter1/Figs/scNMT_EB_correlations.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_EB_correlations.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_EB_correlations.pdf used on input 
-line 152.
-(pdftex.def)             Requested size: 419.95984pt x 273.97957pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[19 <./Chapter1/Figs/scNMT_EB_RNA.pdf>]
-<Chapter1/Figs/scNMT_profiles_examples.pdf, id=2821, 1161.97112pt x 407.10495pt
->
-File: Chapter1/Figs/scNMT_profiles_examples.pdf Graphic file (type pdf)
- <use Chapter1/Figs/scNMT_profiles_examples.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_examples.pdf used on inpu
-t line 166.
-(pdftex.def)             Requested size: 419.95984pt x 147.13538pt.
- [20 <./Chapter1/Figs/scNMT_EB_correlations.pdf>]
-<Chapter1/Figs/scNMT_profiles_prediction.pdf, id=2921, 505.89pt x 505.89pt>
-File: Chapter1/Figs/scNMT_profiles_prediction.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_profiles_prediction.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_prediction.pdf used on in
-put line 175.
-(pdftex.def)             Requested size: 303.30353pt x 303.30475pt.
-
-<Chapter1/Figs/scNMT_profiles_expr.pdf, id=2922, 1773.80698pt x 1683.45943pt>
-File: Chapter1/Figs/scNMT_profiles_expr.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_profiles_expr.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_expr.pdf used on input li
-ne 184.
-(pdftex.def)             Requested size: 419.95984pt x 398.5671pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[21 <./Chapter1/Figs/scNMT_profiles_examples.pdf> <./Chapter1/Figs/scNMT_profil
-es_prediction.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter1/Figs/scNMT_profil
-es_prediction.pdf): PDF inclusion: multiple pdfs with page group included in a 
-single page
->]
-Underfull \hbox (badness 10000) in paragraph at lines 189--192
-
- []
-
-
-<Chapter1/Figs/scNMT_profiles_clusters.pdf, id=3019, 463.7325pt x 194.22563pt>
-File: Chapter1/Figs/scNMT_profiles_clusters.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_profiles_clusters.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_clusters.pdf used on inpu
-t line 195.
-(pdftex.def)             Requested size: 419.95984pt x 175.89502pt.
- [22 <./Chapter1/Figs/scNMT_profiles_expr.pdf>]
-<Chapter1/Figs/scNMT_profiles_clusters2.pdf, id=3104, 472.76625pt x 189.70876pt
->
-File: Chapter1/Figs/scNMT_profiles_clusters2.pdf Graphic file (type pdf)
- <use Chapter1/Figs/scNMT_profiles_clusters2.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_profiles_clusters2.pdf used on inp
-ut line 208.
-(pdftex.def)             Requested size: 419.95984pt x 168.52184pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[23 <./Chapter1/Figs/scNMT_profiles_clusters.pdf> <./Chapter1/Figs/scNMT_profil
-es_clusters2.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter1/Figs/scNMT_profil
-es_clusters2.pdf): PDF inclusion: multiple pdfs with page group included in a s
-ingle page
->] <Chapter1/Figs/scNMT_pseudotime.pdf, id=3263, 503.8825pt x 138.5175pt>
-File: Chapter1/Figs/scNMT_pseudotime.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_pseudotime.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_pseudotime.pdf used on input line 
-230.
-(pdftex.def)             Requested size: 419.95984pt x 115.44716pt.
-
-<Chapter1/Figs/scNMT_pseudotime_coupling.pdf, id=3266, 403.17325pt x 144.20576p
-t>
-File: Chapter1/Figs/scNMT_pseudotime_coupling.pdf Graphic file (type pdf)
- <use Chapter1/Figs/scNMT_pseudotime_coupling.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_pseudotime_coupling.pdf used on in
-put line 254.
-(pdftex.def)             Requested size: 419.95984pt x 150.21468pt.
- [24 <./Chapter1/Figs/scNMT_pseudotime.pdf> <./Chapter1/Figs/scNMT_pseudotime_c
-oupling.pdf>] [25])
-[26]
 \openout2 = `Chapter2/introduction.aux'.
 
- (./Chapter2/introduction.tex
-Chapter 2.
+
+(./Chapter2/introduction.tex
+Chapter 1.
+
+LaTeX Warning: Citation 'Stegle2015' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Citation 'Stuart2019' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Citation 'Colome-Tatche2018' on page 1 undefined on input line 4
+.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
-[27
+
+LaTeX Warning: Citation 'Xu2013' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Citation 'Li2016' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Citation 'Zhang2018' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation 'Ritchie2015' on page 1 undefined on input line 14.
+
+
+LaTeX Warning: Citation 'Buettner2015' on page 1 undefined on input line 14.
+
+
+LaTeX Warning: Citation 'Meng2016' on page 1 undefined on input line 14.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15 
+      [1
+
+
+]
+
+LaTeX Warning: Citation 'Smallwood2014' on page 2 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'Clark2018' on page 2 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'Svensson2018' on page 2 undefined on input line 18.
+
+
+LaTeX Warning: Citation 'Stegle2015' on page 2 undefined on input line 20.
+
+
+LaTeX Warning: Citation 'Vallejos2015' on page 2 undefined on input line 20.
+
+
+LaTeX Warning: Citation 'Kharchenko2014' on page 2 undefined on input line 20.
+
+
+LaTeX Warning: Citation 'Ritchie2015' on page 2 undefined on input line 29.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.31 L
+      ocal analysis refers to the study of hierarchical associations between...
+[2]
+
+LaTeX Warning: Citation 'VanDerWijst2018' on page 3 undefined on input line 31.
 
 
 
-] [28]
+LaTeX Warning: Citation 'Chen2016' on page 3 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'Pierce2018' on page 3 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'Bonder2016' on page 3 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'Sul2015' on page 3 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'Lanckriet2004' on page 3 undefined on input line 34.
+
+
+LaTeX Warning: Citation 'Wang2014' on page 3 undefined on input line 34.
+
+
+LaTeX Warning: Citation 'Hanafi2011' on page 3 undefined on input line 36.
+
+
+LaTeX Warning: Citation 'Liu2012' on page 3 undefined on input line 36.
+
 
 LaTeX Warning: Reference `XX' on page 1 undefined on input line 36.
+
+
+LaTeX Warning: Citation 'Shen2009' on page 3 undefined on input line 36.
+
+
+LaTeX Warning: Citation 'Mo2013' on page 3 undefined on input line 36.
 
 
 LaTeX Warning: Reference `section:icluster' on page 1 undefined on input line 3
 6.
 
-) [29]
+
+LaTeX Warning: Citation 'Argelaguet2018' on page 3 undefined on input line 36.
+
+
+LaTeX Warning: Citation 'Sass2013' on page 3 undefined on input line 38.
+
+) [3]
 \openout2 = `Chapter2/bayes.aux'.
 
  (./Chapter2/bayes.tex
@@ -2672,40 +2086,320 @@ LaTeX Warning: Reference `section:icluster' on page 1 undefined on input line 3
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 19.
 
-[30
+
+LaTeX Warning: Citation 'Stigler2008' on page 4 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Bishop' on page 4 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Murphy' on page 4 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Hastie' on page 4 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Bishop' on page 4 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Murphy' on page 4 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Bayes1763' on page 4 undefined on input line 26.
+
+[4
 
 
 ]
 
+LaTeX Warning: Citation 'Bishop' on page 5 undefined on input line 30.
+
+
+LaTeX Warning: Citation 'Murphy' on page 5 undefined on input line 30.
+
+
+LaTeX Warning: Citation 'Bishop' on page 5 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'Murphy' on page 5 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'Gelman2013' on page 5 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'Jaynes1968' on page 5 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Raiffa1961' on page 5 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'Bishop' on page 5 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'Murphy' on page 5 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'Gelman2013' on page 5 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'Gelman2013' on page 5 undefined on input line 35.
+
+
 LaTeX Warning: Reference `section:ard' on page 1 undefined on input line 35.
 
-[31] [32] [33]
-<Chapter2/Figs/lower_bound.pdf, id=4147, 490.72935pt x 368.86005pt>
+
+LaTeX Warning: Citation 'Bishop' on page 5 undefined on input line 37.
+
+
+LaTeX Warning: Citation 'Murphy' on page 5 undefined on input line 37.
+
+
+LaTeX Warning: Citation 'Gelman2013' on page 5 undefined on input line 37.
+
+
+LaTeX Warning: Citation 'Bishop' on page 5 undefined on input line 41.
+
+
+LaTeX Warning: Citation 'Murphy' on page 5 undefined on input line 41.
+
+
+LaTeX Warning: Citation 'Gelman2013' on page 5 undefined on input line 41.
+
+
+LaTeX Warning: Citation 'Gelman2013' on page 5 undefined on input line 44.
+
+
+LaTeX Warning: Citation 'Blei2016' on page 5 undefined on input line 44.
+
+[5]
+
+LaTeX Warning: Citation 'Blei2016' on page 6 undefined on input line 46.
+
+
+LaTeX Warning: Citation 'Bishop' on page 6 undefined on input line 47.
+
+
+LaTeX Warning: Citation 'Murphy' on page 6 undefined on input line 47.
+
+
+LaTeX Warning: Citation 'Blei2016' on page 6 undefined on input line 47.
+
+
+LaTeX Warning: Citation 'Bishop' on page 6 undefined on input line 50.
+
+
+LaTeX Warning: Citation 'Murphy' on page 6 undefined on input line 50.
+
+[6]
+
+LaTeX Warning: Citation 'Blei2016' on page 7 undefined on input line 77.
+
+
+LaTeX Warning: Citation 'Zhang2017' on page 7 undefined on input line 77.
+
+
+LaTeX Warning: Citation 'Minka2001' on page 7 undefined on input line 84.
+
+
+LaTeX Warning: Citation 'Bishop' on page 7 undefined on input line 88.
+
+
+LaTeX Warning: Citation 'Murphy' on page 7 undefined on input line 88.
+
+
+Overfull \hbox (16.41187pt too wide) in paragraph at lines 88--89
+[]\T1/cmr/m/n/10.95 (-20) Doing some cal-cu-lus it can be shown (see [[], []]) 
+that the KL di-ver-gence $[]\OT1/cmr/m/n/10.95 (-20) (\OML/cmm/m/it/10.95 q\OT1
+/cmr/m/n/10.95 (-20) (\OT1/cmr/bx/n/10.95 X\OT1/cmr/m/n/10.95 (-20) )\OMS/cmsy/
+m/n/10.95 jj\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (-20) (\OT1/cmr/bx/n/10.95 
+X\OMS/cmsy/m/n/10.95 j\OT1/cmr/bx/n/10.95 Y\OT1/cmr/m/n/10.95 (-20) ))$
+ []
+
+[7] <Chapter2/Figs/lower_bound.pdf, id=295, 490.72935pt x 368.86005pt>
 File: Chapter2/Figs/lower_bound.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/lower_bound.pdf>
 Package pdftex.def Info: Chapter2/Figs/lower_bound.pdf used on input line 111.
 (pdftex.def)             Requested size: 163.32167pt x 122.7598pt.
 
-<Chapter2/Figs/mean_field.pdf, id=4158, 578.16pt x 337.26pt>
+
+LaTeX Warning: Citation 'Zhang2017' on page 8 undefined on input line 116.
+
+
+LaTeX Warning: Citation 'Blei2016' on page 8 undefined on input line 116.
+
+
+LaTeX Warning: Citation 'Saul1996' on page 8 undefined on input line 119.
+
+
+LaTeX Warning: Citation 'Barber1998' on page 8 undefined on input line 123.
+
+
+LaTeX Warning: Citation 'Lawrence1996' on page 8 undefined on input line 123.
+
+
+LaTeX Warning: Citation 'Hoffman2014' on page 8 undefined on input line 123.
+
+[8 <./Chapter2/Figs/lower_bound.pdf>]
+
+LaTeX Warning: Citation 'Blei2006' on page 9 undefined on input line 125.
+
+
+LaTeX Warning: Citation 'Faes2011' on page 9 undefined on input line 125.
+
+
+LaTeX Warning: Citation 'Braun2007' on page 9 undefined on input line 125.
+
+<Chapter2/Figs/mean_field.pdf, id=321, 578.16pt x 337.26pt>
 File: Chapter2/Figs/mean_field.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/mean_field.pdf>
 Package pdftex.def Info: Chapter2/Figs/mean_field.pdf used on input line 129.
 (pdftex.def)             Requested size: 326.63622pt x 190.5368pt.
- [34 <./Chapter2/Figs/lower_bound.pdf>]
-[35 <./Chapter2/Figs/mean_field.pdf>] [36]
-<Chapter2/Figs/VB_vs_EP.pdf, id=4272, 1133.10326pt x 373.37592pt>
+
+
+LaTeX Warning: Citation 'Bishop' on page 9 undefined on input line 134.
+
+
+LaTeX Warning: Citation 'Murphy' on page 9 undefined on input line 134.
+
+
+LaTeX Warning: Citation 'Bishop' on page 9 undefined on input line 143.
+
+
+LaTeX Warning: Citation 'Murphy' on page 9 undefined on input line 143.
+
+
+LaTeX Warning: Citation 'Zhao2009' on page 9 undefined on input line 143.
+
+[9 <./Chapter2/Figs/mean_field.pdf>]
+
+LaTeX Warning: Citation 'Braun2007' on page 10 undefined on input line 152.
+
+
+LaTeX Warning: Citation 'Ranganath2014' on page 10 undefined on input line 152.
+
+
+
+LaTeX Warning: Citation 'Braun2007' on page 10 undefined on input line 152.
+
+
+LaTeX Warning: Citation 'Zhang2017' on page 10 undefined on input line 155.
+
+
+LaTeX Warning: Citation 'Blei2016' on page 10 undefined on input line 155.
+
+
+LaTeX Warning: Citation 'Hoffman2012' on page 10 undefined on input line 155.
+
+
+LaTeX Warning: Citation 'Ranganath2014' on page 10 undefined on input line 155.
+
+
+
+LaTeX Warning: Citation 'Platt2008' on page 10 undefined on input line 155.
+
+
+LaTeX Warning: Citation 'Zhang2017' on page 10 undefined on input line 156.
+
+
+LaTeX Warning: Citation 'Blei2016' on page 10 undefined on input line 156.
+
+[10]
+
+LaTeX Warning: Citation 'Bishop' on page 11 undefined on input line 179.
+
+
+LaTeX Warning: Citation 'Bishop' on page 11 undefined on input line 181.
+
+
+LaTeX Warning: Citation 'Murphy' on page 11 undefined on input line 181.
+
+
+LaTeX Warning: Citation 'Minka2001' on page 11 undefined on input line 181.
+
+<Chapter2/Figs/VB_vs_EP.pdf, id=386, 1133.10326pt x 373.37592pt>
 File: Chapter2/Figs/VB_vs_EP.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/VB_vs_EP.pdf>
 Package pdftex.def Info: Chapter2/Figs/VB_vs_EP.pdf used on input line 185.
 (pdftex.def)             Requested size: 466.62521pt x 153.75739pt.
- [37 <./Chapter2/Figs/VB_vs_EP.pdf>]) [38]
+
+
+LaTeX Warning: Citation 'Blei2006' on page 11 undefined on input line 190.
+
+
+LaTeX Warning: Citation 'Carbonetto2012' on page 11 undefined on input line 194
+.
+
+
+LaTeX Warning: Citation 'Raj2014' on page 11 undefined on input line 194.
+
+
+LaTeX Warning: Citation 'Sanguinetti2006' on page 11 undefined on input line 19
+4.
+
+
+LaTeX Warning: Citation 'Likas2004' on page 11 undefined on input line 194.
+
+
+LaTeX Warning: Citation 'Blei2003' on page 11 undefined on input line 194.
+
+
+LaTeX Warning: Citation 'Blei2016' on page 11 undefined on input line 196.
+
+
+LaTeX Warning: Citation 'Zhang2017' on page 11 undefined on input line 196.
+
+
+LaTeX Warning: Citation 'Nakajima2007' on page 11 undefined on input line 196.
+
+
+LaTeX Warning: Citation 'Blei2016' on page 11 undefined on input line 196.
+
+
+LaTeX Warning: Citation 'Zhang2017' on page 11 undefined on input line 196.
+
+[11 <./Chapter2/Figs/VB_vs_EP.pdf>]
+
+LaTeX Warning: Citation 'Barber1998' on page 12 undefined on input line 198.
+
+
+LaTeX Warning: Citation 'Lawrence1996' on page 12 undefined on input line 198.
+
+
+LaTeX Warning: Citation 'Hoffman2014' on page 12 undefined on input line 198.
+
+
+LaTeX Warning: Reference `section:mofa_loadings' on page 1 undefined on input l
+ine 198.
+
+
+LaTeX Warning: Citation 'Titsias2011' on page 12 undefined on input line 198.
+
+
+LaTeX Warning: Citation 'Zhang2017' on page 12 undefined on input line 200.
+
+
+LaTeX Warning: Citation 'Seeger2012' on page 12 undefined on input line 200.
+
+
+LaTeX Warning: Citation 'Khan2017' on page 12 undefined on input line 200.
+
+) [12]
 \openout2 = `Chapter2/factor_analysis.aux'.
 
+ (./Chapter2/factor_analysis.tex
 
-(./Chapter2/factor_analysis.tex
+LaTeX Warning: Citation 'Bishop' on page 13 undefined on input line 5.
+
+
+LaTeX Warning: Citation 'Bishop' on page 13 undefined on input line 5.
+
+
+LaTeX Warning: Citation 'Dietz2010-technical-report-graphs' on page 13 undefine
+d on input line 7.
+
 Missing character: There is no ; in font nullfont!
 
 Underfull \hbox (badness 10000) in paragraph at lines 15--15
@@ -2719,24 +2413,76 @@ Overfull \hbox (6.17361pt too wide) in paragraph at lines 18--19
 []|[]| 
  []
 
-[39
+
+LaTeX Warning: Citation 'Komili2008' on page 13 undefined on input line 24.
 
 
-] <Chapter2/Figs/pca1.pdf, id=4423, 1002.74625pt x 267.08885pt>
+LaTeX Warning: Citation 'Stegle2012' on page 13 undefined on input line 24.
+
+
+LaTeX Warning: Citation 'Leek2007' on page 13 undefined on input line 24.
+
+
+LaTeX Warning: Citation 'Pournara2007' on page 13 undefined on input line 24.
+
+
+LaTeX Warning: Citation 'Dai2017' on page 13 undefined on input line 24.
+
+
+LaTeX Warning: Citation 'Genevieve2018' on page 13 undefined on input line 24.
+
+
+LaTeX Warning: Citation 'Meng2016' on page 13 undefined on input line 24.
+
+
+LaTeX Warning: Citation 'Zhang2018_NN' on page 13 undefined on input line 29.
+
+
+LaTeX Warning: Citation 'XX' on page 13 undefined on input line 29.
+
+[13
+
+
+]
+
+LaTeX Warning: Citation 'Rattray2009' on page 14 undefined on input line 39.
+
+
+LaTeX Warning: Citation 'Hotelling1933' on page 14 undefined on input line 42.
+
+
+LaTeX Warning: Citation 'Ringner2008' on page 14 undefined on input line 42.
+
+
+LaTeX Warning: Citation 'Bishop' on page 14 undefined on input line 42.
+
+<Chapter2/Figs/pca1.pdf, id=487, 1002.74625pt x 267.08885pt>
 File: Chapter2/Figs/pca1.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/pca1.pdf>
 Package pdftex.def Info: Chapter2/Figs/pca1.pdf used on input line 46.
 (pdftex.def)             Requested size: 466.62521pt x 124.28876pt.
- [40 <./Chapter2/Figs/pca1.pdf>]
-<Chapter2/Figs/pca2.pdf, id=4467, 803.0pt x 564.1075pt>
+ [14 <./Chapter2/Figs/pca1.pdf>]
+
+LaTeX Warning: Citation 'Bishop' on page 15 undefined on input line 74.
+
+<Chapter2/Figs/pca2.pdf, id=526, 803.0pt x 564.1075pt>
 File: Chapter2/Figs/pca2.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/pca2.pdf>
 Package pdftex.def Info: Chapter2/Figs/pca2.pdf used on input line 81.
 (pdftex.def)             Requested size: 419.95984pt x 295.02466pt.
- [41 <./Chapter2/Figs/pca2.pdf>]
-(./graphical_models/pPCA.tex
+ [15]
+
+LaTeX Warning: Citation 'Li2017b' on page 16 undefined on input line 87.
+
+
+LaTeX Warning: Citation 'Ilin2010' on page 16 undefined on input line 87.
+
+
+LaTeX Warning: Citation 'Tipping1999' on page 16 undefined on input line 90.
+
+[16 <./Chapter2/Figs/pca2.pdf>] (./graphical_models/pPCA.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2745,7 +2491,26 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [42] (./graphical_models/bayesianFA.tex
+)
+
+LaTeX Warning: Citation 'Rubin1982' on page 17 undefined on input line 116.
+
+
+LaTeX Warning: Citation 'Bishop' on page 17 undefined on input line 116.
+
+
+LaTeX Warning: Citation 'Rubin1982' on page 17 undefined on input line 118.
+
+
+LaTeX Warning: Citation 'Bishop' on page 17 undefined on input line 118.
+
+
+LaTeX Warning: Citation 'Tipping1999' on page 17 undefined on input line 118.
+
+
+LaTeX Warning: Citation 'Tipping1999' on page 17 undefined on input line 119.
+
+[17] (./graphical_models/bayesianFA.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2754,23 +2519,74 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [43]
-<Chapter2/Figs/ard.pdf, id=4542, 630.355pt x 399.4925pt>
+)
+
+LaTeX Warning: Citation 'Bishop1999a' on page 18 undefined on input line 151.
+
+
+LaTeX Warning: Citation 'Bishop1999b' on page 18 undefined on input line 151.
+
+
+LaTeX Warning: Citation 'Klami2008' on page 18 undefined on input line 151.
+
+
+LaTeX Warning: Citation 'Virtanen2012' on page 18 undefined on input line 151.
+
+
+LaTeX Warning: Citation 'Klami2015' on page 18 undefined on input line 151.
+
+
+LaTeX Warning: Citation 'Bunte2016' on page 18 undefined on input line 151.
+
+
+LaTeX Warning: Citation 'Khan2014' on page 18 undefined on input line 151.
+
+
+LaTeX Warning: Citation 'Zhao2016' on page 18 undefined on input line 151.
+
+[18]
+
+LaTeX Warning: Citation 'Neal1995' on page 19 undefined on input line 154.
+
+
+LaTeX Warning: Citation 'Mackay1996' on page 19 undefined on input line 154.
+
+
+LaTeX Warning: Citation 'Bishop1999a' on page 19 undefined on input line 154.
+
+
+LaTeX Warning: Citation 'Bishop1999b' on page 19 undefined on input line 154.
+
+<Chapter2/Figs/ard.pdf, id=583, 630.355pt x 399.4925pt>
 File: Chapter2/Figs/ard.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/ard.pdf>
 Package pdftex.def Info: Chapter2/Figs/ard.pdf used on input line 164.
 (pdftex.def)             Requested size: 326.63622pt x 207.0058pt.
- [44]
-<Chapter2/Figs/hinton.pdf, id=4561, 505.89pt x 216.81pt>
+
+<Chapter2/Figs/hinton.pdf, id=584, 505.89pt x 216.81pt>
 File: Chapter2/Figs/hinton.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/hinton.pdf>
 Package pdftex.def Info: Chapter2/Figs/hinton.pdf used on input line 170.
 (pdftex.def)             Requested size: 373.30159pt x 159.99026pt.
- [45 <./Chapter2/Figs/ard.pdf> <./Chapter2/Figs/hinton.pdf>]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 185.
+ [19 <./Chapter2/Figs/ard.pdf>]
 
+LaTeX Warning: Citation 'Stegle2012' on page 20 undefined on input line 176.
+
+
+LaTeX Warning: Citation 'Gao2013' on page 20 undefined on input line 176.
+
+
+LaTeX Warning: Citation 'Gao2013' on page 20 undefined on input line 177.
+
+
+LaTeX Warning: Citation 'Mitchell1988' on page 20 undefined on input line 180.
+
+
+LaTeX Warning: Citation 'Titsias2011' on page 20 undefined on input line 180.
+
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 185.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
@@ -2788,7 +2604,68 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [46] [47]
+) [20 <./Chapter2/Figs/hinton.pdf>]
+
+LaTeX Warning: Citation 'Xu2013' on page 21 undefined on input line 205.
+
+
+LaTeX Warning: Citation 'Li2016' on page 21 undefined on input line 205.
+
+
+LaTeX Warning: Citation 'Zeng2018' on page 21 undefined on input line 205.
+
+
+LaTeX Warning: Citation 'Xu2013' on page 21 undefined on input line 205.
+
+
+LaTeX Warning: Citation 'Li2016' on page 21 undefined on input line 205.
+
+
+LaTeX Warning: Citation 'Ritchie2015' on page 21 undefined on input line 206.
+
+
+LaTeX Warning: Citation 'Pilling2018' on page 21 undefined on input line 206.
+
+[21]
+
+LaTeX Warning: Citation 'Xu2013' on page 22 undefined on input line 208.
+
+
+LaTeX Warning: Citation 'Ritchie2015' on page 22 undefined on input line 208.
+
+
+LaTeX Warning: Citation 'Hotteling1936' on page 22 undefined on input line 211.
+
+
+
+LaTeX Warning: Citation 'Hardle2007' on page 22 undefined on input line 211.
+
+
+LaTeX Warning: Citation 'Hotteling1936' on page 22 undefined on input line 219.
+
+
+
+LaTeX Warning: Citation 'Hardle2007' on page 22 undefined on input line 219.
+
+
+LaTeX Warning: Citation 'Hardle2007' on page 22 undefined on input line 220.
+
+
+LaTeX Warning: Citation 'McCabe2018' on page 22 undefined on input line 220.
+
+
+LaTeX Warning: Citation 'Guo2016' on page 22 undefined on input line 220.
+
+
+LaTeX Warning: Citation 'Tipping1999' on page 22 undefined on input line 225.
+
+
+LaTeX Warning: Citation 'Bach2005' on page 22 undefined on input line 225.
+
+[22]
+
+LaTeX Warning: Citation 'Tipping1999' on page 23 undefined on input line 237.
+
 (./graphical_models/CCA.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2812,7 +2689,24 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [48] (./graphical_models/bayesianCCA.tex
+)
+
+LaTeX Warning: Citation 'Bach2005' on page 23 undefined on input line 252.
+
+
+LaTeX Warning: Citation 'Wang2007' on page 23 undefined on input line 256.
+
+
+LaTeX Warning: Citation 'Klami2013' on page 23 undefined on input line 256.
+
+[23]
+
+LaTeX Warning: Citation 'Wang2007' on page 24 undefined on input line 266.
+
+
+LaTeX Warning: Citation 'Klami2013' on page 24 undefined on input line 266.
+
+(./graphical_models/bayesianCCA.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2836,38 +2730,97 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 )
-<Chapter2/Figs/hinton_cca.pdf, id=4685, 556.65565pt x 193.6274pt>
+<Chapter2/Figs/hinton_cca.pdf, id=671, 556.65565pt x 193.6274pt>
 File: Chapter2/Figs/hinton_cca.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/hinton_cca.pdf>
 Package pdftex.def Info: Chapter2/Figs/hinton_cca.pdf used on input line 280.
 (pdftex.def)             Requested size: 396.63428pt x 137.9698pt.
- [49] [50 <./Chapter2/Figs/hinton_cca.pdf>]
-<Chapter2/Figs/GFA.png, id=4727, 695.59875pt x 151.56625pt>
-File: Chapter2/Figs/GFA.png Graphic file (type png)
-
-<use Chapter2/Figs/GFA.png>
-Package pdftex.def Info: Chapter2/Figs/GFA.png used on input line 309.
-(pdftex.def)             Requested size: 466.62521pt x 101.67374pt.
- [51 <./Chapter2/Figs/GFA.png>]) [52]
-\openout2 = `Chapter2/mofa.aux'.
 
 
-(./Chapter2/mofa.tex [53
+LaTeX Warning: Citation 'Wang2007' on page 24 undefined on input line 281.
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 60--71
+LaTeX Warning: Citation 'Wang2007' on page 24 undefined on input line 281.
+
+[24]
+
+LaTeX Warning: Citation 'Virtanen2012' on page 25 undefined on input line 289.
+
+
+LaTeX Warning: Citation 'Klami2015' on page 25 undefined on input line 289.
+
+
+LaTeX Warning: Citation 'Leppaaho2017' on page 25 undefined on input line 289.
+
+
+LaTeX Warning: Citation 'Bunte2016' on page 25 undefined on input line 289.
+
+
+LaTeX Warning: Citation 'Khan2014' on page 25 undefined on input line 289.
+
+
+LaTeX Warning: Citation 'Zhao2016' on page 25 undefined on input line 289.
+
+
+LaTeX Warning: Citation 'Remes2015' on page 25 undefined on input line 289.
+
+[25 <./Chapter2/Figs/hinton_cca.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 304--306
 
  []
 
-[54] [55] <Chapter2/Figs/MOFA.pdf, id=4772, 1471.4975pt x 748.7975pt>
+(./graphical_models/GFA.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+)) [26]
+\openout2 = `Chapter2/mofa.aux'.
+
+ (./Chapter2/mofa.tex
+
+LaTeX Warning: Citation 'Argelaguet2018' on page 27 undefined on input line 5.
+
+
+LaTeX Warning: Reference `section_gfa' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Reference `section_gfa' on page 1 undefined on input line 29.
+
+[27
+
+
+]
+
+LaTeX Warning: Citation 'Mackay1996' on page 28 undefined on input line 40.
+
+
+LaTeX Warning: Citation 'Mitchell1988' on page 28 undefined on input line 40.
+
+
+LaTeX Warning: Citation 'Titsias2011' on page 28 undefined on input line 44.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--49
+
+ []
+
+[28] [29] <Chapter2/Figs/MOFA.pdf, id=732, 1471.4975pt x 748.7975pt>
 File: Chapter2/Figs/MOFA.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA.pdf used on input line 108.
+Package pdftex.def Info: Chapter2/Figs/MOFA.pdf used on input line 106.
 (pdftex.def)             Requested size: 466.62521pt x 237.4492pt.
- [56] (./graphical_models/mofa.tex
+ [30] (./graphical_models/mofa.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2897,208 +2850,376 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [57 <./Chapter2/Figs/MOFA.pdf>]
-<Chapter2/Figs/elbo_convergence.pdf, id=5039, 243.83195pt x 224.32709pt>
-File: Chapter2/Figs/elbo_convergence.pdf Graphic file (type pdf)
+) [31 <./Chapter2/Figs/MOFA.pdf>]
 
-<use Chapter2/Figs/elbo_convergence.pdf>
-Package pdftex.def Info: Chapter2/Figs/elbo_convergence.pdf used on input line 
-129.
-(pdftex.def)             Requested size: 233.3126pt x 214.64983pt.
- [58]
-<Chapter2/Figs/MOFA_robustness.pdf, id=5050, 846.16125pt x 323.2075pt>
+LaTeX Warning: Reference `Appendix XX' on page 1 undefined on input line 120.
+
+
+LaTeX Warning: Citation 'Jaakkola2000' on page 32 undefined on input line 120.
+
+
+LaTeX Warning: Citation 'Seeger2012' on page 32 undefined on input line 120.
+
+<Chapter2/Figs/MOFA_robustness.pdf, id=993, 846.16125pt x 323.2075pt>
 File: Chapter2/Figs/MOFA_robustness.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_robustness.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_robustness.pdf used on input line 1
-42.
+29.
 (pdftex.def)             Requested size: 466.62521pt x 178.23318pt.
- [59 <./Chapter2/Figs/elbo_convergence.pdf>] <Chapter2/Figs/MOFA_nfactors.pdf, 
-id=5073, 375.4025pt x 311.1625pt>
+ [32]
+
+LaTeX Warning: Reference `ard' on page 1 undefined on input line 136.
+
+<Chapter2/Figs/MOFA_nfactors.pdf, id=1000, 375.4025pt x 311.1625pt>
 File: Chapter2/Figs/MOFA_nfactors.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_nfactors.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_nfactors.pdf used on input line 163
+Package pdftex.def Info: Chapter2/Figs/MOFA_nfactors.pdf used on input line 141
 .
 (pdftex.def)             Requested size: 233.3126pt x 193.3888pt.
- [60 <./Chapter2/Figs/MOFA_robustness.pdf> <./Chapter2/Figs/MOFA_nfactors.pdf>]
- [61] [62] [63]
-<Chapter2/Figs/MOFA_learnK.pdf, id=5170, 1213.53375pt x 746.79pt>
+
+<Chapter2/Figs/elbo_convergence.pdf, id=1001, 243.83195pt x 224.32709pt>
+File: Chapter2/Figs/elbo_convergence.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/elbo_convergence.pdf>
+Package pdftex.def Info: Chapter2/Figs/elbo_convergence.pdf used on input line 
+152.
+(pdftex.def)             Requested size: 233.3126pt x 214.64983pt.
+ [33 <./Chapter2/Figs/MOFA_robustness.pdf> <./Chapter2/Figs/MOFA_nfactors.pdf>]
+
+
+LaTeX Warning: Citation 'Seeger2012' on page 34 undefined on input line 160.
+
+[34 <./Chapter2/Figs/elbo_convergence.pdf>]
+
+LaTeX Warning: Citation 'Seeger2012' on page 35 undefined on input line 173.
+
+
+LaTeX Warning: Citation 'Seeger2012' on page 35 undefined on input line 181.
+
+
+LaTeX Warning: Citation 'Seeger2012' on page 35 undefined on input line 216.
+
+
+LaTeX Warning: Citation 'Seeger2012' on page 35 undefined on input line 216.
+
+
+LaTeX Warning: Citation 'Jaakkola2000' on page 35 undefined on input line 216.
+
+
+LaTeX Warning: Citation 'Jaakkola2000' on page 35 undefined on input line 217.
+
+[35]
+
+LaTeX Warning: Citation 'Jaakkola2000' on page 36 undefined on input line 228.
+
+
+LaTeX Warning: Citation 'Jaakkola2000' on page 36 undefined on input line 238.
+
+
+LaTeX Warning: Citation 'Bishop' on page 36 undefined on input line 238.
+
+Package microtype Info: Loading generic settings for font family
+(microtype)             `cmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+[36]
+
+LaTeX Warning: Citation 'Seeger2012' on page 37 undefined on input line 256.
+
+[37] <Chapter2/Figs/MOFA_learnK.pdf, id=1107, 1213.53375pt x 746.79pt>
 File: Chapter2/Figs/MOFA_learnK.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_learnK.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_learnK.pdf used on input line 293.
+Package pdftex.def Info: Chapter2/Figs/MOFA_learnK.pdf used on input line 282.
 (pdftex.def)             Requested size: 466.62521pt x 287.15608pt.
 
-<Chapter2/Figs/MOFA_group_sparsity.pdf, id=5173, 646.415pt x 242.9075pt>
+
+LaTeX Warning: Citation 'Mo2013' on page 38 undefined on input line 290.
+
+[38 <./Chapter2/Figs/MOFA_learnK.pdf>]
+<Chapter2/Figs/MOFA_group_sparsity.pdf, id=1316, 520.94624pt x 242.9075pt>
 File: Chapter2/Figs/MOFA_group_sparsity.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_group_sparsity.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_group_sparsity.pdf used on input li
-ne 306.
-(pdftex.def)             Requested size: 466.62521pt x 175.34544pt.
- [64 <./Chapter2/Figs/MOFA_learnK.pdf>]
+ne 294.
+(pdftex.def)             Requested size: 466.62521pt x 217.58061pt.
 
-LaTeX Warning: Reference `section:mofa_priors' on page 1 undefined on input lin
-e 312.
 
-<Chapter2/Figs/MOFA_sparsity.pdf, id=5381, 505.89pt x 361.35pt>
+LaTeX Warning: Citation 'Mo2013' on page 39 undefined on input line 297.
+
+
+LaTeX Warning: Citation 'Mo2013' on page 39 undefined on input line 297.
+
+<Chapter2/Figs/MOFA_sparsity.pdf, id=1319, 505.89pt x 361.35pt>
 File: Chapter2/Figs/MOFA_sparsity.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_sparsity.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_sparsity.pdf used on input line 318
+Package pdftex.def Info: Chapter2/Figs/MOFA_sparsity.pdf used on input line 308
 .
 (pdftex.def)             Requested size: 326.63622pt x 233.31433pt.
- [65 <./Chapter2/Figs/MOFA_group_sparsity.pdf>]
-
-LaTeX Warning: Reference `fig:MOFA_nongaussian_poisson' on page 1 undefined on 
-input line 328.
-
-
-LaTeX Warning: Reference `fig:MOFA_nongaussian_binary' on page 1 undefined on i
-nput line 328.
-
-<Chapter2/Figs/MOFA_nongaussian.pdf, id=5407, 2093.8225pt x 821.0675pt>
+ [39 <./Chapter2/Figs/MOFA_group_sparsity.pdf>]
+<Chapter2/Figs/MOFA_nongaussian.pdf, id=1341, 1582.91376pt x 2116.90875pt>
 File: Chapter2/Figs/MOFA_nongaussian.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_nongaussian.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_nongaussian.pdf used on input line 
-332.
-(pdftex.def)             Requested size: 466.62521pt x 182.97823pt.
- [66 <./Chapter2/Figs/MOFA_sparsity.pdf>]
+323.
+(pdftex.def)             Requested size: 419.95984pt x 561.62419pt.
+ [40 <./Chapter2/Figs/MOFA_sparsity.pdf>]
 
-LaTeX Warning: Reference `fig:MOFA_scalability' on page 1 undefined on input li
-ne 339.
+LaTeX Warning: Citation 'Chen2013' on page 41 undefined on input line 350.
 
-<Chapter2/Figs/MOFA_scalability.pdf, id=5420, 505.89pt x 361.35pt>
-File: Chapter2/Figs/MOFA_scalability.pdf Graphic file (type pdf)
 
-<use Chapter2/Figs/MOFA_scalability.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_scalability.pdf used on input line 
-345.
-(pdftex.def)             Requested size: 419.95984pt x 299.97556pt.
- [67 <./Chapter2/Figs/MOFA_nongaussian.pdf>] [68 <./Chapter2/Figs/MOFA_scalabil
-ity.pdf>]
-<Chapter2/Figs/MOFA_CLL_Figure1.pdf, id=5850, 525.965pt x 388.53558pt>
-File: Chapter2/Figs/MOFA_CLL_Figure1.pdf Graphic file (type pdf)
+LaTeX Warning: Citation 'Costello2014' on page 41 undefined on input line 350.
 
-<use Chapter2/Figs/MOFA_CLL_Figure1.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Figure1.pdf used on input line 
-377.
-(pdftex.def)             Requested size: 466.62521pt x 344.71657pt.
- [69]
-<Chapter2/Figs/MOFA_IGHV_outlier.pdf, id=5864, 920.92659pt x 735.32817pt>
+
+LaTeX Warning: Citation 'Alyass2015' on page 41 undefined on input line 350.
+
+[41 <./Chapter2/Figs/MOFA_nongaussian.pdf>]
+
+LaTeX Warning: Citation 'Dietrich2018' on page 42 undefined on input line 353.
+
+
+LaTeX Warning: Reference `fig:MOFA_CLL_Figure1' on page 1 undefined on input li
+ne 353.
+
+
+LaTeX Warning: Citation 'Love2014' on page 42 undefined on input line 370.
+
+
+LaTeX Warning: Citation 'XXX' on page 42 undefined on input line 371.
+
+
+LaTeX Warning: Citation 'XXX' on page 42 undefined on input line 371.
+
+
+LaTeX Warning: Citation 'Dietrich2018' on page 42 undefined on input line 377.
+
+[42] <Chapter2/Figs/MOFA_CLL_overview.pdf, id=1763, 528.30676pt x 192.05049pt>
+File: Chapter2/Figs/MOFA_CLL_overview.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_CLL_overview.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_overview.pdf used on input line
+ 386.
+(pdftex.def)             Requested size: 466.62521pt x 169.63498pt.
+
+<Chapter2/Figs/MOFA_CLL_factors12.pdf, id=1764, 479.7925pt x 257.96375pt>
+File: Chapter2/Figs/MOFA_CLL_factors12.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_CLL_factors12.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_factors12.pdf used on input lin
+e 402.
+(pdftex.def)             Requested size: 466.62521pt x 250.8858pt.
+ [43 <./Chapter2/Figs/MOFA_CLL_overview.pdf>]
+
+LaTeX Warning: Citation 'Fabbri2016' on page 44 undefined on input line 412.
+
+
+LaTeX Warning: Citation 'Bulian2017' on page 44 undefined on input line 412.
+
+
+LaTeX Warning: Citation 'Crombie2017' on page 44 undefined on input line 412.
+
+
+LaTeX Warning: Citation 'Damle1999' on page 44 undefined on input line 412.
+
+
+LaTeX Warning: Citation 'Oakes2016' on page 44 undefined on input line 414.
+
+
+LaTeX Warning: Citation 'Queiros2015' on page 44 undefined on input line 414.
+
+<Chapter2/Figs/MOFA_IGHV_outlier.pdf, id=1799, 920.92659pt x 735.32817pt>
 File: Chapter2/Figs/MOFA_IGHV_outlier.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_IGHV_outlier.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_IGHV_outlier.pdf used on input line
- 392.
+ 420.
 (pdftex.def)             Requested size: 466.62521pt x 372.58884pt.
- [70 <./Chapter2/Figs/MOFA_CLL_Figure1.pdf>]
-<Chapter2/Figs/MOFA_CLL_Factor1.pdf, id=5919, 1061.41539pt x 812.92809pt>
+ [44 <./Chapter2/Figs/MOFA_CLL_factors12.pdf>]
+
+LaTeX Warning: Citation 'Vasconcelos2005' on page 45 undefined on input line 42
+7.
+
+
+LaTeX Warning: Citation 'Maloum2009' on page 45 undefined on input line 427.
+
+
+LaTeX Warning: Citation 'Trojani2011' on page 45 undefined on input line 427.
+
+
+LaTeX Warning: Citation 'Morabito2015' on page 45 undefined on input line 427.
+
+
+LaTeX Warning: Citation 'Plesingerova2017' on page 45 undefined on input line 4
+27.
+
+<Chapter2/Figs/MOFA_CLL_Factor1.pdf, id=1841, 1061.41539pt x 812.92809pt>
 File: Chapter2/Figs/MOFA_CLL_Factor1.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_CLL_Factor1.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Factor1.pdf used on input line 
-404.
+433.
 (pdftex.def)             Requested size: 466.62521pt x 357.37935pt.
- [71 <./Chapter2/Figs/MOFA_IGHV_outlier.pdf>] <Chapter2/Figs/MOFA_CLL_Cox.pdf, 
-id=5986, 1040.03558pt x 883.52386pt>
+ [45 <./Chapter2/Figs/MOFA_IGHV_outlier.pdf>] [46 <./Chapter2/Figs/MOFA_CLL_Fac
+tor1.pdf>]
+
+LaTeX Warning: Citation 'Fabregat2015' on page 47 undefined on input line 452.
+
+
+LaTeX Warning: Citation 'Dempsey2010' on page 47 undefined on input line 457.
+
+<Chapter2/Figs/MOFA_CLL_Factor5.pdf, id=1994, 1061.41539pt x 812.92809pt>
+File: Chapter2/Figs/MOFA_CLL_Factor5.pdf Graphic file (type pdf)
+
+<use Chapter2/Figs/MOFA_CLL_Factor5.pdf>
+Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Factor5.pdf used on input line 
+467.
+(pdftex.def)             Requested size: 466.62521pt x 357.37935pt.
+ [47]
+
+LaTeX Warning: Citation 'Cox1972' on page 48 undefined on input line 483.
+
+[48 <./Chapter2/Figs/MOFA_CLL_Factor5.pdf>]
+<Chapter2/Figs/MOFA_CLL_Cox.pdf, id=2057, 1040.03558pt x 883.52386pt>
 File: Chapter2/Figs/MOFA_CLL_Cox.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_CLL_Cox.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Cox.pdf used on input line 427.
+Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Cox.pdf used on input line 492.
 
 (pdftex.def)             Requested size: 419.95984pt x 356.76018pt.
- [72 <./Chapter2/Figs/MOFA_CLL_Factor1.pdf>] [73 <./Chapter2/Figs/MOFA_CLL_Cox.
-pdf>]
-<Chapter2/Figs/MOFA_imputation.pdf, id=6156, 712.6625pt x 345.29pt>
+ [49 <./Chapter2/Figs/MOFA_CLL_Cox.pdf>]
+
+LaTeX Warning: Citation 'Gelman2013' on page 50 undefined on input line 511.
+
+
+LaTeX Warning: Citation 'Mazumder2010' on page 50 undefined on input line 513.
+
+
+LaTeX Warning: Citation 'Troyanskaya2001' on page 50 undefined on input line 51
+3.
+
+<Chapter2/Figs/MOFA_imputation.pdf, id=2131, 674.52pt x 353.32pt>
 File: Chapter2/Figs/MOFA_imputation.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_imputation.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_imputation.pdf used on input line 4
-47.
-(pdftex.def)             Requested size: 466.62521pt x 226.07965pt.
- [74 <./Chapter2/Figs/MOFA_imputation.pdf>] <Chapter2/Figs/MOFA_scMT.pdf, id=61
-98, 697.60625pt x 569.12625pt>
+Package pdftex.def Info: Chapter2/Figs/MOFA_imputation.pdf used on input line 5
+18.
+(pdftex.def)             Requested size: 466.62521pt x 244.42723pt.
+ [50 <./Chapter2/Figs/MOFA_imputation.pdf>]
+
+LaTeX Warning: Citation 'Stuart2019' on page 51 undefined on input line 530.
+
+
+LaTeX Warning: Citation 'Colome-Tatche2018' on page 51 undefined on input line 
+530.
+
+
+LaTeX Warning: Citation 'Chappell2018' on page 51 undefined on input line 530.
+
+
+LaTeX Warning: Citation 'Angermueller2016' on page 51 undefined on input line 5
+31.
+
+
+LaTeX Warning: Citation 'Ficz2013' on page 51 undefined on input line 531.
+
+
+LaTeX Warning: Citation 'Tosolini2016' on page 51 undefined on input line 531.
+
+
+LaTeX Warning: Citation 'Lun2016b' on page 51 undefined on input line 535.
+
+
+LaTeX Warning: Citation 'Lun2016a' on page 51 undefined on input line 535.
+
+
+LaTeX Warning: Citation 'Mohammed2017' on page 51 undefined on input line 541.
+
+
+LaTeX Warning: Citation 'Angermueller2016' on page 51 undefined on input line 5
+41.
+
+
+LaTeX Warning: Citation 'Auclair2014' on page 51 undefined on input line 541.
+
+
+LaTeX Warning: Citation 'Fuchs1988' on page 51 undefined on input line 541.
+
+<Chapter2/Figs/MOFA_scMT.pdf, id=2157, 674.52pt x 525.965pt>
 File: Chapter2/Figs/MOFA_scMT.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_scMT.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_scMT.pdf used on input line 467.
-(pdftex.def)             Requested size: 419.95984pt x 342.61601pt.
- [75]
-<Chapter2/Figs/MOFA_scMT_clustering.pdf, id=6213, 639.05449pt x 278.373pt>
-File: Chapter2/Figs/MOFA_scMT_clustering.pdf Graphic file (type pdf)
+Package pdftex.def Info: Chapter2/Figs/MOFA_scMT.pdf used on input line 546.
+(pdftex.def)             Requested size: 419.95984pt x 327.47531pt.
+ [51] [52 <./Chapter2/Figs/MOFA_scMT.pdf>]
 
-<use Chapter2/Figs/MOFA_scMT_clustering.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_scMT_clustering.pdf used on input l
-ine 483.
-(pdftex.def)             Requested size: 466.62521pt x 203.26581pt.
- [76 <./Chapter2/Figs/MOFA_scMT.pdf>] [77 <./Chapter2/Figs/MOFA_scMT_clustering
-.pdf>] [78]) [79]
-\openout2 = `Chapter3/introduction.aux'.
+LaTeX Warning: Citation 'Kuhn' on page 53 undefined on input line 587.
 
 
-(./Chapter3/introduction.tex [80
+LaTeX Warning: Citation 'Lin2017' on page 53 undefined on input line 587.
 
 
-
-]
-Chapter 3.
-) [81]
-\openout2 = `Chapter4/introduction.aux'.
-
- (./Chapter4/introduction.tex [82
+LaTeX Warning: Citation 'Ding2018' on page 53 undefined on input line 587.
 
 
-
-]
-Chapter 4.
-) [83] [84
+LaTeX Warning: Citation 'Lopez2018' on page 53 undefined on input line 587.
 
 
-]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 201.
+LaTeX Warning: Citation 'Lopez2018' on page 53 undefined on input line 587.
 
- (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 
-[85
+LaTeX Warning: Citation 'Eraslan2019' on page 53 undefined on input line 587.
 
-] [86] [87] [88]
-Overfull \hbox (1.30855pt too wide) in paragraph at lines 202--202
-[]\T1/cmr/m/n/10.95 (-20) G. Fab-bri and R. Dalla-Favera. ``The molec-u-lar pat
-ho-gen-e-sis of chronic lym-pho-cytic leukaemia''.
- []
 
-[89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99]
-Overfull \hbox (12.48563pt too wide) in paragraph at lines 202--202
-[]\T1/cmr/m/n/10.95 (-20) C. Xu, D. Tao, and C. Xu. ``A Sur-vey on Multi-view L
-earn-ing''. In: \T1/cmr/m/it/10.95 (-20) arXiv e-prints\T1/cmr/m/n/10.95 (-20) 
-, arXiv:1304.5634
+LaTeX Warning: Citation 'Lin2016' on page 53 undefined on input line 587.
+
+
+Overfull \hbox (5.69876pt too wide) in paragraph at lines 587--588
+[]\T1/cmr/m/n/10.95 (-20) ], batch correction[[]], de-nois-ing [[]] or im-pu-ta
+-tion [[]].
  []
 
 
-Package caption Warning: Unused \captionsetup[sub] on input line 107.
+LaTeX Warning: Citation 'Svensson2018' on page 53 undefined on input line 589.
+
+
+LaTeX Warning: Citation 'Cao2019' on page 53 undefined on input line 589.
+
+
+LaTeX Warning: Citation 'Hoffman2013' on page 53 undefined on input line 590.
+
+
+LaTeX Warning: Citation 'Blei2016' on page 53 undefined on input line 590.
+
+
+LaTeX Warning: Citation 'Hoffman2014' on page 53 undefined on input line 590.
+
+
+LaTeX Warning: Citation 'Risso2018' on page 53 undefined on input line 596.
+
+
+LaTeX Warning: Citation 'Gelman2013' on page 53 undefined on input line 598.
+
+
+LaTeX Warning: Citation 'Buettner2017' on page 53 undefined on input line 600.
+
+[53]) [54]
+
+Package caption Warning: Unused \captionsetup[sub] on input line 61.
 See the caption package documentation for explanation.
 
-[100]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 203.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 203.
- (./thesis.aux (./Dedication/dedication.aux) (./Abstract/abstract.aux)
-(./Chapter1/introduction.aux) (./Chapter1/scnmt-seq.aux)
-(./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
-(./Chapter2/factor_analysis.aux) (./Chapter2/mofa.aux)
-(./Chapter3/introduction.aux) (./Chapter4/introduction.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 203.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 203.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
+(./thesis.aux (./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
+(./Chapter2/factor_analysis.aux) (./Chapter2/mofa.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 190.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 190.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: AF0C7671A357236C81CBFB24E8FF3B45;23183.
+(rerunfilecheck)             Checksum: 2BFE7B4A1ABA7144AE9E96BC923C9D62;15306.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3109,18 +3230,23 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                thesis
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48624 strings out of 493014
- 943440 string characters out of 6133351
- 1766527 words of memory out of 5000000
- 50437 multiletter control sequences out of 15000+600000
- 48248 words of font info for 282 fonts, out of 8000000 for 9000
+ 38210 strings out of 493014
+ 699274 string characters out of 6133351
+ 1190568 words of memory out of 5000000
+ 40604 multiletter control sequences out of 15000+600000
+ 40476 words of font info for 209 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,18n,92p,10442b,1633s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,18n,92p,1217b,1213s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
@@ -3141,24 +3267,23 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2016/texmf
--dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2016/texmf-dist/
-fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/texmf-dist/font
-s/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
-public/cm-super/sftt1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
-blic/stmaryrd/stmary10.pfb>
-Output written on thesis.pdf (110 pages, 30477201 bytes).
+public/stmaryrd/stmary10.pfb>
+Output written on thesis.pdf (56 pages, 18059917 bytes).
 PDF statistics:
- 6922 PDF objects out of 7423 (max. 8388607)
- 4423 compressed objects within 45 object streams
- 519 named destinations out of 1000 (max. 500000)
- 46960 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 2492 PDF objects out of 2984 (max. 8388607)
+ 1462 compressed objects within 15 object streams
+ 173 named destinations out of 1000 (max. 500000)
+ 37458 words of extra memory for PDF output out of 42996 (max. 10000000)
 
