@@ -120,7 +120,7 @@ The most common type of variational Bayes, known as the mean-field approach, ass
 \begin{equation} \label{eq:mean_field}
 	q(\bfX) = \prod_{i=1}^{M} q(\bfx_i)
 \end{equation}
-Typically all unobserved variables are assumed to be independent, extensions that consider structured groups of variables have also been considered\cite{Barber1998,Lawrence1996,Hoffman2014}. Importantly, notice that no parametric assumptions were placed regarding the nature of $q(\bfx_i)$.
+where typically all unobserved variables are assumed to be independent. Importantly, notice that no parametric assumptions were placed regarding the nature of $q(\bfx_i)$.
 
 Evidently, in sufficiently complex models where the unobserved variables have dependencies this family of distributions do not contain the true posterior (\Cref{fig:mean_field}). Yet, this is a key assumption to obtain an analytical inference scheme that yields surprisingly accurate results \cite{Blei2006,Faes2011,Braun2007}.
 
@@ -131,7 +131,7 @@ Evidently, in sufficiently complex models where the unobserved variables have de
 	\label{fig:mean_field}
 \end{figure}
 
-Using calculus of variations (see \cite{Bishop,Murphy}), it follows that the optimal distribution $q(\bfX)$ that maximises the lower bound $\Lagr(\bfX)$ is
+Using calculus of variations (derivations can be found in \cite{Bishop,Murphy}), it follows that the optimal distribution $q(\bfX)$ that maximises the lower bound $\Lagr(\bfX)$ is
 \begin{equation} \label{eq:optimal}
 	\log \hat{q}_i(\bfx_i) = \E_{-i} [\log p(\bfY,\bfX)] + \mathrm{const}
 \end{equation}
@@ -144,7 +144,8 @@ While the form of $\hat{q}(\bfx_i)$ is not restricted to a specific parametric f
 
 
 \subsubsection{Fixed-form variational inference}  \label{section:fixed_form}
-An alternative and straightforward choice is to directly define a specific parameric form for the distribution $q(\bfX)$ with some parameters $\bTheta$. Once the (parametric) choice of $q(\bfX)$ is made, the parameters $\bTheta$ are optimised to minimise $\KL(q(\bfX)||p(\bfX|\bfY))$ (the variational problem):
+
+An alternative and straightforward choice is to directly define a parametric form for the distribution $q(\bfX)$ with some parameters $\bTheta$. Once the choice of $q(\bfX)$ is made, the parameters $\bTheta$ are optimised to minimise $\KL(q(\bfX)||p(\bfX|\bfY))$ (the variational problem):
 \begin{align}
 	\hat{\bTheta} &= \argmin_{\bTheta} \KL(q(\bfX)||p(\bfX|\bfY)) \\
 	&= \E[\log(q(\bfX)) - \log(p(\bfX,\bfY))]
@@ -152,17 +153,14 @@ An alternative and straightforward choice is to directly define a specific param
 Numerically optimising this function requires the evaluation of expectations with respect to $q(\bfX)$. In closed form, this is only feasable for a limited group of variational distributions. Alternatively, one can attempt Monte Carlo approximations, but in practice this turns to be slow and leads to high-variance estimates \cite{Braun2007,Ranganath2014,Braun2007}.
 
 Typically, one would choose this distribution to factorise over parameters and to be of the same (exponential) family as the prior $p(\bfX)$. In such case there is a closed form coordinate-ascent scheme available, and it turns out that the fixed-form formulation is equivalent to the (non-parametric) mean-field derivation when using conjugate priors.\\
-Unfortunately, for generic models with arbitrary families of distributions, no closed-form variational distributions exist in neither settings \cite{Zhang2017,Blei2016}. However, while the parametric assumption certainly limits the flexibility of variational distributions, the advantage of this formulation is that it unveils the possibility to use (potentially fast) gradient-based methods for the inference procedure \cite{Hoffman2012,Ranganath2014,Platt2008}.\\
-Furthmore, additional approximations permit generic variational inference methods that can be applied to virtually any model definition\cite{Zhang2017,Blei2016}.
+Unfortunately, for generic models with arbitrary families of distributions, no closed-form variational distributions exist \cite{Zhang2017,Blei2016}. 
 
-\paragraph{Black box variational inference}
-(TO-DO...)
+However, while the parametric assumption certainly limits the flexibility of variational distributions, the advantage of this formulation is that it unveils the possibility to use fast gradient-based methods for the inference procedure \cite{Hoffman2012,Ranganath2014}.
 
-\paragraph{Reparametrization gradients variational inference}
-(TO-DO...)
-
+%\paragraph{Black box variational inference}
 
 \subsection{Expectation Propagation}  \label{section:expectation_propagation}
+
 Expectation Propagation (EP) is another deterministic strategy with a similar philosophy as the Variational approach. It is also based on minimising the KL divergence between a variational distribution $q(\bfX)$ and the true posterior $p(\bfX|\bfY)$, but while variational inference minimises $KL(p||q)$, EP maximises the reverse KL-divergence $KL(q||p)$.
 
 Interestingly, this simple difference leads to an inference scheme with stringkly different properties. This can be understood by inspecting the differences between the two KL divergence formulas:
@@ -189,14 +187,14 @@ A detailed mathematical treatment of EP, including derivations for specific exam
 
 Following the rationale above, it is easy to predict that variational inference tends to be underestimate the variance of the posterior density. Yet, empirical research have shown that this is acceptable, provided that a good model selection is performed \cite{Blei2006}.
 
+\subsubsection{Conclusions}
 
-\subsubsection{Open perspectives}  \label{section:bayes_open_perspectives}
-Variational inference is growing in popularity for the analysis of big data sets and it has been applied to a myriad of different problems, including genome-wide association studies \cite{Carbonetto2012}, population genetics, \cite{Raj2014}, network analysis \cite{Sanguinetti2006}, computer vision \cite{Likas2004} and natural language processing \cite{Blei2003}.
+In this section we have introduced Bayesian modelling and variational inference methods, which will be used later in this chapter.\\
+More generally, variational inference is growing in popularity for the analysis of big data sets and it has been applied to a myriad of different problems, including genome-wide association studies \cite{Carbonetto2012}, population genetics, \cite{Raj2014}, network analysis \cite{Sanguinetti2006} and natural language processing \cite{Blei2003}.
 
-Yet, despite its success, there is room for improvement. First, the theoretical guarantees are not as well developed as in sampling-based MCMC approaches\cite{Blei2016,Zhang2017,Nakajima2007}. For example, although it is surprisingly effective, the mean-field assumption makes strong independence assumptions about the parameters. As we have described, this leads to an underestimation of the true variance in the variational distributions, hence potentially limiting the ability of VI to propagate uncertainity when doing predictions. Additionally, it is not clear in which applications the dependencies between the parameters are important enough than the mean-field approximation could potentially break. Hence, more generally, an open research problem is understanding what are the statistical properties of the variational posterior with respect to the exact posterior \cite{Blei2016,Zhang2017}.
+Yet, despite its increasing success, there is significant room for improvement. First and foremost, the theoretical guarantees of variational inference are not as developed as in sampling-based MCMC schemes\cite{Blei2016,Zhang2017,Nakajima2007}. As an example, the mean-field setting makes strong independence assumptions about the parameters.  Although it tends to besurprisingly effective, it is not clear in which applications the dependencies between the parameters are important enough than the mean-field approximation could potentially break.\\
+More generally, an open research problem is understanding what are the statistical properties of the variational posterior with respect to the exact posterior \cite{Blei2016,Zhang2017}.
 
-Alternative strategies beyond the mean-field assumption have been considered by allowing some dependencies between the variables, resulting in \textit{structured} mean-field approximations\cite{Barber1998,Lawrence1996,Hoffman2014}. However, they often lead to very complex (if not intractable) inference frameworks. In this thesis we make use of a structured mean-field assumption for the spike-and-slab prior (see \Cref{section:mofa_loadings}), as initially proposed in \cite{Titsias2011}.
+As we shall demonstrate later, alternative strategies have been considered to allow some dependencies between the variables, resulting in \textit{structured} mean-field approximations\cite{Hoffman2014,Titsias2011}. However, they often lead to very complex (if not intractable) inference frameworks. 
 
-Another area of extensive research is how to extend the applicability of VI to non-conjugate models. As discussed in section \Cref{section:deterministic_bayesian_inference}, the ELBO of non-conjugate models contains intractable integrals and closed-form variational updates cannot be derived. Amenable inference hence requires the use of either stochastic Monte Carlo approximations or deterministic Taylor/Laplace approximations that introduce additional lower bounds \cite{Zhang2017,Seeger2012,Khan2017}. In this thesis we follow this rationale to derive an inference framework for a model with general likelihoods (see \Cref{section:mofa_ngaussian}).
-
-% TO-DO: DISCUSS DEEP LEARNING AND VARIATIONAL AUTOENCODERS
+Finally, another area of extensive research is how to extend the applicability of VI to non-conjugate models. As discussed in \Cref{section:deterministic_bayesian_inference}, the ELBO of non-conjugate models contains intractable integrals, and setting up an inference scheme requires the use of either stochastic Monte Carlo approximations or deterministic approximations that introduce additional lower bounds \cite{Zhang2017,Seeger2012,Khan2017}. In this thesis we follow this rationale to derive an inference framework for a model with non-gaussian likelihoods.

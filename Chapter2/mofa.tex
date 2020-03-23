@@ -392,10 +392,12 @@ All together, the 10 MOFA factors explained 41\% of variance in the drug respons
 	\label{fig:MOFA_CLL_overview}
 \end{figure}
 
-The two first Factors are the most interesting from a clinical perspective, as they capture a phenotypic effect that is manifested across all molecular layers, from the genome to the transcriptome and ultimately in the drug response assay.
+The first two Factors are the most interesting from a molecular perspective, as they capture a phenotypic effect that is manifested across all molecular layers, from the genome to the transcriptome and ultimately in the drug response assay.\\
+To annotate Factors 1 and 2 we proceeded to visualise the feature weights, starting by the (binary) somatic mutation data, as it is the simplest data modality to interpret. Inspection of the top weights revealed that Factor 1 was associated with the mutation status of the immunoglobulin heavy-chain variable (IGHV) region, while Factor 2 was aligned with trisomy of chromosome 12 (\Cref{fig:MOFA_CLL_factors12}).\\
+Remarkably, in a completely unsupervised fashion, MOFA recovered the two most important clinical markers in CLL as the two major axes of molecular disease heterogeneity \cite{Fabbri2016,Bulian2017,Crombie2017}.
 
-%Inspection of the top weights in the somatic mutation view revealed that Factor 1 was strongly associated with the mutation status of the immunoglobulin heavy-chain variable (IGHV) region, while Factor 2 was aligned with a trisomy of chromosome 12 (Figure X). In a completely unsupervised fashion, MOFA identified the two major axes of molecular disease heterogeneity being indeed the two most important clinical markers in CLL \cite{Fabbri2016,Zenz2010}.\\
-%A scatterplot based on these factors shows a clear separation of patients by their IGHV status on the first factor and presence or absence of trisomy 12 on the second factor. Remarkably, the IGHV status of a fraction of patients was missing (grey dots). Yet, as the two factors were shared across multiple views, MOFA was able to pool information from the other molecular layers to map those samples to the latent space.
+Next, we visualised the samples in the latent space spanned by Factors 1 and 2. A scatterplot based on these factors shows a clear separation of patients by their IGHV status on the first Factor and presence or absence of trisomy 12 on the second Factor (\Cref{fig:MOFA_CLL_factors12}). Note that this latent representation enables simple patient stratification into molecular subgroups (see dashed lines), a first step towards personalised medicine.\\
+Interestingly, 24 patients lacked IGHV status measurements (see grey crosses) due to quality control filtering in the DNA sequencing assay. Nonetheless, MOFA is able to pool information from the other molecular layers to map those samples to the latent space, and could be classified to the corresponding molecular subgroup.
 
 \begin{figure}[H]
 	\centering 	
@@ -407,30 +409,37 @@ The two first Factors are the most interesting from a clinical perspective, as t
 	\label{fig:MOFA_CLL_factors12}
 \end{figure}
 
+IGHV status is currently the most important prognostic marker in CLL and has routinely been used to distinguish between two distinct subtypes of the disease\cite{Fabbri2016}. Molecularly, it is a surrogate of the level of activation of the B-cell receptor, which is in turn related to the differentiation state of the tumoral cells. Multiple studies have associated mutated IGHV with a better resposne to chemoimmunotherapy, whereas unmutated IGHV patients have a worse prognosis \cite{Fabbri2016,Bulian2017,Crombie2017}.\\
+In clinical practice, the IGHV status has been considered binary. Our results suggest that this is a fairly good approximation, but a more complex structure with at least three groups or a potential underlying continuum (\Cref{fig:MOFA_CLL_factors12,fig:MOFA_CLL_Factor1}), as also suggested in \cite{Queiros2015}.
+
+% \subsubsection{Detection of outlier samples}
+
+% Interestingly, there is some discrepancy between the IGHV status predicted by MOFA and the IGHV status reported in the clinical data. Out the 200 patients, MOFA classifies 176 in accordance with the clinical label, it classifies 12 patients that lacked the clinical marker and it re-classifies 12 patients to the opposite group.\\
+% To validate the MOFA-based classification, we proceeded to inspect the molecular data in more detail.
+
+% sample-to-sample correlation matrices for the individual layers suggest that for 3 of the cases where the inferred factor disagrees with the clinical label, the molecular data supports the predicted label. The other 9 cases showed intermediate molecular sgnatures now well captured by the binary classification.
+% %Based on these results, we hypothesize that a multi-omics approach based on several molecular signatures could be a more precise and robust approach to predict clinical phenotypes than the use of single features such as mutations or expression of marker genes.
+
+% \begin{figure}[H]
+% 	\centering 	
+% 	\includegraphics[width=1.0\textwidth]{MOFA_IGHV_outlier}
+% 	\caption{XX}
+% 	\label{fig:MOFA_IGHV_outlier}
+% \end{figure}
+
 \subsubsection{Molecular characterisation of Factor 1}
+% \tabularnewline
 
-IGHV status is probably the most important prognostic marker in CLL and has routinely been used to distinguish between two distinct subtypes of the disease. Molecularly, it is a surrogate of the level of activation of the B-cell receptor, which is in turn related to the differentiation state of the tumoral cells. Multiple studies have associated mutated IGHV with a better resposne to chemoimmunotherapy, whereas unmutated IGHV patients have a worse prognosis \cite{Fabbri2016,Bulian2017,Crombie2017,Damle1999}.
+An important step in the MOFA pipeline is the characterisation of the molecular signatures underlying each Factor. I will demonstrate this for Factor 1, although a similar strategy can be applied to Factor 2.
 
-In clinical practice, the IGHV status has been generally considered binary. However, our results suggest a more complex structure with at least three groups or a potential underlying continuum, as also suggested in \cite{Oakes2016,Queiros2015}. Interestingly, there is some discrepancy between the IGHV status predicted by MOFA and the IGHV status reported in the clinical data. Out the 200 patients, MOFA classifies 176 in accordance with the clinical label, it classifies 12 patients that lacked the clinical marker and it re-classifies 12 patients to the opposite group.\\
-To validate the MOFA-based classification, we inspected the molecular profiles. sample-to-sample correlation matrices for the individual layers suggest that for 3 of the cases where the inferred factor disagrees with the clinical label, the molecular data supports the predicted label. The other 9 cases showed intermediate molecular sgnatures now well captured by the binary classification.
-%Based on these results, we hypothesize that a multi-omics approach based on several molecular signatures could be a more precise and robust approach to predict clinical phenotypes than the use of single features such as mutations or expression of marker genes.
+On the RNA expression, inspection of the top weights pinpoint genes that have been previously associated to IGHV status, some of which have been proposed as clinical markers\cite{Vasconcelos2005,Morabito2015}. Heatmaps of the RNA expression levels for these genes reveals clear differences between samples when ordinated according to the Factor 1 values.
 
-\begin{figure}[H]
-	\centering 	
-	\includegraphics[width=1.0\textwidth]{MOFA_IGHV_outlier}
-	\caption{XX}
-	\label{fig:MOFA_IGHV_outlier}
-\end{figure}
-
-
-Finally, we characterised in more detail the molecular changes associated with IGHV status, as predicted by MOFA.\\
-On the RNA expression, inspection of the top weights pinpoint genes that have been previously associated to IGHV status, some of which have been proposed as clinical markers\cite{Vasconcelos2005,Maloum2009,Trojani2011,Morabito2015,Plesingerova2017}. Heatmaps of the RNA expression levels for these genes reveals clear differences between samples when ordered according to the corresponding Factor 1 values.\\
 On the drug response data the weights highlight kinase inhibitors targeting the B-cell receptor pathway. Splitting the patients into three groups based on k-means clustering shows clear separation in the drug response curves.
 
 % Copied
 \begin{figure}[H]
 	\centering 	
-	\includegraphics[width=1.0\textwidth]{MOFA_CLL_Factor1}
+	\includegraphics[width=0.90\textwidth]{MOFA_CLL_Factor1}
 	\caption{
 	\textbf{Characterization of MOFA Factor 1 as IGHV status.}\\
 	(a) Beeswarm plot with Factor 1 values for each sample with colours corresponding to three groups found by 3-means clustering with low factor values (LZ), intermediate factor values (IZ) and high factor values (HZ).\\
@@ -445,26 +454,18 @@ On the drug response data the weights highlight kinase inhibitors targeting the 
 \subsubsection{Characterisation of other Factors}
 
 Despite their clinical importance, Factor 1 (IGHV status) and Factor 2 (chr12 trisomy) they explain less than 20\% variability in each data modality, suggesting the existence of more subtle sources of variation. As an example, we will also characterise Factor 5, which explains 2\% of the variance in the mRNA and 6\% of variance in the drug response.\\
-As mentioned in \Cref{mofa:downstream}, instead of exploring the feature weights individually, factors can be characterised using gene set annotations (i.e. biological pathways). Briefly, the idea is to aggregate the weights to obtain a single statistic for each gene set, which can be subsequently tested against a competitive null hypothesis.
+As mentioned in \Cref{mofa:downstream}, instead of exploring the feature weights individually, factors can be annotated using gene set annotations. This procedure is particularly appealing for RNA expression data, as a rich amount of resources exist that have categorised genes into ontologies in terms of biological pathways, molecular function and cellular components  \cite{Fabregat2015,Ashburner2000}.\\
+Briefly, the idea is to aggregate the weights using prior information to obtain a single statistic for each gene set, which can be tested against a competitive null hypothesis. Inspired from \cite{Frost2015}, in MOFA we implemented several scoring schemes and a variety of parametric and unparametric statistical tests. We refer the reader to \cite{Frost2015} for details.
 
-This procedure is particularly appealing for RNA expression data, as a rich resources exist that h
-
-Briefly, here we performed gene set enrichment analysis (GSEA) based on the Reactome gene sets \cite{Fabregat2015}.
-
-%Resulting P
-
-
-Appling Gene Set Enrichment Analysis on the RNA weights reveals that this Factor is strongly enriched for oxidative stress and senescence pathways. Inspection of the top features highlights the importance of heat shock proteins (HSPs), a group of proteins that are essential for protein stability which are up-regulated upon stress conditions like high temperatures, pH shift or oxidative stress. Importantly, HSPs can be elevated in tumour cells and potentially contribute to prolonged tumour cell survival\cite{Dempsey2010}.
-
+Appling Gene Set Enrichment Analysis on the RNA weights using the Reactome annotations \cite{Fabregat2015} reveals that Factor 2 is strongly enriched for oxidative stress and senescence pathways. Inspection of the top features highlights the importance of heat shock proteins (HSPs), a group of proteins that are essential for protein stability which are up-regulated upon stress conditions like high temperatures, pH shift or oxidative stress. Importantly, HSPs can be elevated in tumour cells and potentially contribute to prolonged tumour cell survival\cite{Dempsey2010}.\\
 In agreement with the findings from the mRNA view, the drugs with largest weights on Factor 5 belong to clinical categories associated with stress response, such as target reactive oxygen species (SD07, MIS-43, SD51) and DNA damage response (fludarabine, nutlin-3, doxorubicine) (Figure S12c-d).
 
 % All together, our results indicate that blood cells from patients with high expression of HSPs display higher viability to the aforementioned drugs.
 
 % Copied
-% Explain better GSEA
 \begin{figure}[H]
 	\centering 	
-	\includegraphics[width=1.0\textwidth]{MOFA_CLL_Factor5}
+	\includegraphics[width=0.95\textwidth]{MOFA_CLL_Factor5}
 	\caption{
 	\textbf{Characterization of Factor 5 in the CLL data as oxidative stress response.}\\
 	(a) Beeswarm plot of Factor 5. Colours denote the expression of TNF, an inflammatory stress marker that is present among the top RNA weights.\\
@@ -479,9 +480,9 @@ In agreement with the findings from the mRNA view, the drugs with largest weight
 
 \subsubsection{Prediction of clinical outcomes}
 
-We conjectured that the integration of the multiple molecular layers could allow an improved prediction of the patients' clinical response.\\
-To evaluate the utility of the MOFA factors as predictors of clinical outcomes we fit Cox regression models \cite{Cox1972} using the patients' time to next treatment (TTT) as a response variable. Two types of analysis were performed: a univariate analysis where each Factor was independently associated with TTT, and a multivariate analysis where the combination of all Factors were used to predict TTT \Cref{fig:MOFA_CLL_Cox}.\\
-In the univariate Cox models, we observe  that Factor 1 (IGHV status), Factor 7 (associated with chemo-immunotherapy treatment prior to sample collection) and Factor 8 (enriched for Wnt signalling) were significant predictors of TTT. Accordingly, when splitting patients into binary groups based on the corresponding factor values, we observe clear differences in the survival curves.\\
+We conjectured that the integration of multiple molecular layers could allow an improved prediction of the patients' clinical outcome.\\
+To evaluate the utility of the MOFA factors as predictors of clinical outcomes we fit Cox regression models \cite{Cox1972} using the patients' time to next treatment (TTT) as a response variable. Two types of analysis were performed: a univariate analysis where each Factor was independently associated with TTT, and a multivariate analysis where the combination of all Factors were used to predict TTT (\Cref{fig:MOFA_CLL_Cox}).\\
+In the univariate Cox models, we observe  that Factor 1 (IGHV status), Factor 7 (associated with chemo-immunotherapy treatment prior to sample collection) and Factor 8 (enriched for Wnt signalling) were significant predictors of TTT. Accordingly, when splitting patients into binary groups based on the corresponding Factor values, we observe clear differences in the survival curves.\\
 In the multivariate Cox model, MOFA (Harrell's C-Index C=0.78) outperformed all other input settings, including PCA on single-omic data (C=0.68-0.72), individual genetic markers (C=0.66) as well PCA applied to the concatenated data matrix (C=0.74).
 
 %As predictors, we included the top 10 principal components calculated on the data for each single view, a concatenated data set ('all') as well as the 10 MOFA factors. Missing values in a view were set to the feature-wise mean. 
@@ -491,7 +492,7 @@ In the multivariate Cox model, MOFA (Harrell's C-Index C=0.78) outperformed all 
 	\centering 	
 	\includegraphics[width=0.9\textwidth]{MOFA_CLL_Cox}
 	\caption{
-	\textbf{Association analysis between MOFA Factors and clinical response.}\\
+	\textbf{Association analysis between MOFA Factors and clinical putcome.}\\
 	(a) Association of MOFA factors to time to next treatment using a univariate Cox regression with N = 174 samples (96 of which are uncensored cases) and p-values based on the Wald statistic. Error bars denote 95\% confidence intervals. Numbers on the right denote p-values for each predictor.\\
 	(b) Kaplan-Meier plots measuring time to next treatment for the individual MOFA factors. The cut-points on each factor were chosen using maximally selected rank statistics, and p-values were calculated using a log-rank test on the resulting groups.\\
 	(c) Prediction accuracy of time to treatment for N = 174 patients using multivariate Cox regression trained with the 10 MOFA factors, as well using the first 10 principal components applied to single data modalities and the full data set. Shown are average values of Harrell's C-index from fivefold cross-validation. Error bars denote standard error of the mean.
@@ -502,26 +503,25 @@ In the multivariate Cox model, MOFA (Harrell's C-Index C=0.78) outperformed all 
 
 \subsubsection{Imputation of missing values}
 
-A promising application of MOFA is the imputation of missing values, including the potential imputation of entire assays.\\
+A promising application of MOFA is the imputation of missing values, including the potential to impute of entire assays.\\
 The principle of imputation in MOFA follows the same logic as simulating from the generative model: if the factors and weights are known, the input data can be reconstructed by a simple matrix multiplication:
 \[
 	\hat{\bfY} = \E[\bfZ] \E[\bfW]^T
 \]
-where $\E[\bfZ]$ and $\E[\bfW]$ denote the expected values of the variational distributions for the factors and the weights, respectively. Notice that, when using the expectations of the posterior distributions, the noise $\epsilon$ (see \Cref{mofa_master_equation}) has a mean of zero and does not contribute to the predictions.\\
-Instead of relying in point estimates, one could adopt a more Bayesian approach and calculate the posterior predictive distribution by propagating the uncertainity \cite{Gelman2013}. Nonetheless, due to the nature of the optimisation problem in variational inference, the variance of the posterior distributions can be underestimated (see \Cref{section:expectation_propagation}). Hence, and also because of the additional computational complexity, we did not attempt this approach.
+where $\E[\bfZ]$ and $\E[\bfW]$ denote the expected values of the variational distributions for the factors and the weights, respectively. Notice that, when using the expectations of the posterior distributions, the noise $\epsilon$ (\Cref{mofa_master_equation}) has a mean of zero and does not contribute to the predictions.\\
+The equation above computes a point estimate for every sample $n$ and feature $d$, but it ignores the uncertainity on $\bfZ$ and $\bfW$. Instead of relying in point estimates, one could adopt a more Bayesian approach and calculate the posterior predictive distribution by propagating the uncertainity \cite{Gelman2013}. Nonetheless, due to the nature of the optimisation problem in variational inference, the variance of the posterior distributions can be underestimated (see \Cref{section:expectation_propagation}). In addition, this would more complex to implement and would result in a significant increase in computational complexity. 
+Hence, and also because of the additional computational complexity, we did not attempt this approach.
 
-To assess the imputation performance, we trained MOFA models on patients with complete measurements after masking parts of the drug response data. In a first experiment, we masked values at random, and in a second experiment we masked the entire drug response data. We compared the results to some established imputation strategies, including imputation by feature-wise mean, SoftImpute \cite{Mazumder2010}, a k-nearest neighbour method \cite{Troyanskaya2001}.\\
+To assess the imputation performance, we trained MOFA models using a data set of complete measurements (a total of N=121 samples) after masking parts of the drug response measurements. In a first experiment, we masked values at random, and in a second experiment we masked the entire drug response measurements. We compared the imputation accuracy of MOFA to some established imputation strategies, including imputation by feature-wise mean, SoftImpute \cite{Mazumder2010}, a k-nearest neighbour method \cite{Troyanskaya2001}.\\
 For both imputation tasks, MOFA consistently yielded more accurate predictions, albeit the differences are less pronounced in the imputation of full assays, a significantly more challenging task.
 
 \begin{figure}[H]
 	\centering 	
 	\includegraphics[width=1.0\textwidth]{MOFA_imputation}
-	\caption{\textbf{Evaluation of imputation performance in the drug response assay of the CLL data}. The y-axis shows averages of the mean-squared error across 15 trials for increasing fractions of missing data (x-axis).\\
-	Two experiments were considered: (a) values missing at random and (b) entire assays missing at random. Error bars represent standard deviations.}
+	\caption{\textbf{Evaluation of imputation performance in the drug response assay.}\\
+	The y-axis shows the mean-squared error (MSE) across 15 trials for increasing fractions of missing data (x-axis). Two experiments were considered: (a) values missing at random and (b) entire assays missing at random. Each point displays the mean across all trials and the error bars depict the corresponding standard deviations.}
 	\label{fig:MOFA_imputation}
 \end{figure}
-
-% TO-DO: ADD EXAMPLES
 
 \newpage
 
@@ -533,7 +533,7 @@ To show case how MOFA can be used to integrate single-cell multi-omics data, we 
 \subsection{Data processing}
 
 The RNA expression data was processed using \textit{scran}\cite{Lun2016b} to obtain log normalised counts adjusted by library size. Feature selection was performed by selecting the top 5,000 most overdispersed genes\cite{Lun2016a}. A Gaussian likelihod was used for this data modality. \\
-The DNA methylation data was processed as described in Chapter 1. Briefly, for each CpG site, we calculated a binary methylation rate from the ratio of methylated read counts to total read counts. Next, CpG sites were classified by overlapping with genomic contexts, namely promoters, CpG islands and enhancers (distal H3K27ac peaks). Finally, for each annotation we selected the top 5,000 most variable CpG sites with a minimum coverage of 10\% across cells. Each of the resulting matrices was defined as a separate view for MOFA (\Cref{fig:mofa_scMT}). A Bernoulli likelihod was used for this data modality.
+The DNA methylation data was processed as described in Chapter 1. Briefly, for each CpG site, we calculated a binary methylation rate from the ratio of methylated read counts to total read counts. Next, CpG sites were classified by overlapping with genomic contexts, namely promoters, CpG islands and enhancers (distal H3K27ac peaks). Finally, for each annotation we selected the top 5,000 most variable CpG sites with a minimum coverage of 10\% across cells. Each of the resulting matrices was defined as a separate view for MOFA. A Bernoulli likelihod was used for this data modality.
 
 
 \subsubsection{Model overview}
@@ -544,7 +544,7 @@ Jointly, the combination of Factors 1 and 2 reconstruct the coordinated changes 
 \begin{figure}[H]
 	\centering 	
 	\includegraphics[width=0.9\textwidth]{MOFA_scMT}
-	\caption{\textbf{MOFA recovers a differentiation process from single-cell multi-omics data}.\\
+	\caption{\textbf{MOFA recovers a differentiation process from a single-cell multi-omics data set.} \\
 	(a) Overview of the data modalities. Rows indicate number of features ($D$) and columns indicate number of samples ($N$). Grey bars denote missing samples.\\
 	(b) Fraction of variance explained per factor (column) and view (row).\\
 	(c) Cumulative fraction of variance explained per view (across all factors).\\
@@ -578,7 +578,7 @@ Jointly, the combination of Factors 1 and 2 reconstruct the coordinated changes 
 
 \newpage
 
-\subsection{Open perspectives}
+\subsection{Limitations and open perspectives}
 
 MOFA solves important challenges for the integrative analysis of (single-cell) multi-omics data sets. Yet, the model is not free of limitations and there are open possibilities for future research:
 
