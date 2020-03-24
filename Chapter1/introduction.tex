@@ -4,21 +4,24 @@
 
 \section{Introduction to single-cell (multi-) omics sequencing}
 
-Next-generation sequencing technologies have revolutionised the study of biological systems by enabling the unbiased profiling of molecular layers in un unbiased manner, including the genome\cite{Fleischmann1995} the epigenome\cite{Frommer1992} and the transcriptome\cite{Lister2008,Bainbridge2006,Nagalakshmi2008,Mortazavi2008}, among others. However, bulk sequencing approaches rely on the pool of large number of cells to report an average molecular readout, and are hence limited for the study of complex biological processes where heterogeneity is expected at single cell resolution \cite{Griffiths2018,Papalexi2017,Patel2014}.\\
-The progressive development of low-input sequencing techniques resulted in an explosion of single-cell sequencing technologies, mostly for the transcriptome. In contrast to bulk protocols, single-cell profiling techniques provide an unprecented opportunity to study the molecular variation associated with cellular heterogeneity, lineage diversification and cell fate commitment \cite{Kolodziejczyk2015}.
+
+Single-cell profiling techniques have provided an unprecented opportunity to study cellular heterogeneity at multiple molecular levels. The maturation of single-cell RNA-sequencing technologies has enabled the identification of transcriptional profiles associated with lineage diversification and cell fate commitment \cite{Kolodziejczyk2015,Griffiths2018,Papalexi2017,Patel2014}. Yet, the accompanying epigenetic changes and the role of other molecular layers in driving cell fate decisions still remains poorly understood.
+
+Consequently, the profiling the epigenome at the single-cell level is receiving increasing attention, but without associated transcriptomic readouts, the conclusions that can be extracted from epigenetic measurements are limited \cite{Stuart2019,Kelsey2017,Griffiths2018}.
 
 \subsection{Single-cell RNA sequencing} \label{section:rna_expresssion}
+
 single-cell RNA sequencing (scRNA-seq) protocols differ extensively in terms of scalability, costs and sensitivity \cite{Svensson2018, Lafzi2018}. Broadly speaking, they can be classified into plate-based and dropled-based methods. \Cref{fig:scrna_methods}. In plate-based methods, cells are isolated using micropipettes or flow cytometry into individual wells of a plate, where the library preparation is performed. These class of methods include CEL-seq \cite{Hashimshony2012} and Smart-seq\cite{Ramskold2012, Picelli2014}. 
 Although plate-based strategies have limitations in terms of throughput and scalability, their main advantage is the higher quality of libraries and the full length transcript information (in the case of Smart-seq) which enables a more accurate quantification of splice variants\cite{Huang2017}, allele-specific fractions\cite{Deng2014} and RNA velocity information \cite{LaManno2018}.
 	
 Droplet-based methods are based on the use of droplet microfluidics technology \cite{Zhang2019}. By capturing cells in individual droplets, each containing all necessary reagents for library preparation, this protocol allows the profiling of thousands of cells in a single experiment. These class of methods include InDrop \cite{Klein2015,Zilionis2016}, Drop-seq\cite{Macosko2015} and the comercial 10x Genomics Chromium \cite{Zheng2017}. As a trade-off, the increased high throughput of droplet-based approaches comes at the expense of reduced sensitivity\cite{Ziegenhain2017,Wang2019,Svensson2017} (\Cref{fig:scRNA_seq_comparison}).
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{scRNA_seq_comparison}
-	\caption[]{Comparison of quality metrics between different scRNA-seq technologies. (a) Overview of the two types of scRNA-seq methods: plate-based and dropled-based. (b) Fraction of reads mapped to exons (cyan), outside exons (orange) and unmapped (gray). -A and -B denote different replicates. For UMI methods, also shown is the fraction of reads mapping to unique UMIs (dark blue). (c) Median number of genes detected per cell (more than one count) as a function of the (downsampled) sequencing depth. Dashed lines represent extrapolated fits assuming a saturating model. Figure reprinted from \cite{Ziegenhain2017} }
-	\label{fig:scRNA_seq_comparison}
-\end{figure}
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.85\linewidth]{scRNA_seq_comparison}
+% 	\caption[]{Comparison of quality metrics between different scRNA-seq technologies. (a) Overview of the two types of scRNA-seq methods: plate-based and dropled-based. (b) Fraction of reads mapped to exons (cyan), outside exons (orange) and unmapped (gray). -A and -B denote different replicates. For UMI methods, also shown is the fraction of reads mapping to unique UMIs (dark blue). (c) Median number of genes detected per cell (more than one count) as a function of the (downsampled) sequencing depth. Dashed lines represent extrapolated fits assuming a saturating model. Figure reprinted from \cite{Ziegenhain2017} }
+% 	\label{fig:scRNA_seq_comparison}
+% \end{figure}
 
 More recently, a third type of scRNA-seq methodology emerged based on a combinatorial cellular indexing strategy \cite{Cao2017,Rosenberg2018,Cao2019}, which has permitted the sequencing of more than a milion cells in a single experiment for a fraction of the cost of other methods, yet with much lower sensitivity.
 
@@ -49,6 +52,7 @@ Alongisde developments in scRNA-seq technologies, protocols for the profiling of
 % Alongside scBS, other bulk sequencing methods were also adapted to the single cell resolution, with different trade-offs between coverage and costs. For instance, \cite{Guo2015} adapted the reduced-representation bisulfite sequencing (RRBS-seq) to low starting material by performing all experimental steps before PCR amplification into a single tube. The key principle behind RRBS-seq is to digest the DNA with a restriction endonuclease, followed by a size-selection strategy to enrich for CpG-dense areas \cite{Meissner2005}. This approach significantly reduces sequencing costs at the expense of low coverage in CpG-poor genomic areas, which include repetitive elements, gene bodies and enhancer elements \cite{Martin-Herranz2017}.\\
 
 \subsubsection{Chromatin accessibility} \label{section:chromatin_accessibility}
+
 In eukaryotes, the genome is packed into a compact complex of DNA, RNA and proteins called chromatin. Several layers of chromatin condensation have been identified, the fundamental unit being the nucleosome, which consists on a string of $\approx$  150bp of DNA wrapped around histone proteins, with linker DNA of $\approx$ 80bp connecting them \cite{Klemm2019,Tsompana2014}. The positioning of the nucleosomes in the nucleus provide an important layer of gene regulation, mostly by exposing or sheltering transcription factors binding sites \cite{Jiang2009}. In general, active regulatory regions tend to have low occupancy of nucleosomes, whereas inactive regions show a high density of nucleosomes \cite{Struhl2013}. Thus, the profiling of DNA accessibility and transcription factor footprints represents an important dimension to understand the regulation of gene expression.
 
 % The N-terminal tails of the histones emerge from the nucleosome and are a strong hotspot for chemical modifications, including methylation, acetylation, phosphorylation and others \cite{Bannister2011}. The complex interaction between a histone modification and the corresponding position, often called the histone code, is an important driver of epigenetic regulation and an active area of research \cite{Zhao2015}.
@@ -82,6 +86,7 @@ As with DNA methylation, single-cell profiling methods for chromatin accessibili
 
 
 \subsection{Multi-modal single-cell sequencing} \label{section:single_cell_multi_modal}
+
 Cellular phenotypes result from the combination of multiple sources of biological information. Undoubtedly, no single "-omics" technology can capture the intricacy of complex molecular mechanisms, but the collective information has the potential to draw a more comprehensive picture of biological processes \cite{Hasin2017,Ritchie2015}. In addition, multi-omics assays have the potential to go beyond snapshopts to provide a more dynamic, perhaps even mechanistic, understanding of the connection between molecular layers.
 
 

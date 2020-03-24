@@ -1,0 +1,66 @@
+\section{Introduction}
+
+\subsection{Profiling of multi-modal readouts at single-cell resolution}
+
+Next-generation sequencing technologies have revolutionised the study of biological systems by enabling the unbiased profiling of molecular layers in un unbiased manner, including the genome\cite{Fleischmann1995} the epigenome\cite{Frommer1992} and the transcriptome\cite{Lister2008,Bainbridge2006,Nagalakshmi2008,Mortazavi2008}, among others. However, bulk sequencing approaches rely on the pool of large number of cells to report an average molecular readout, and are hence limited for the study of complex biological processes where heterogeneity is expected at single cell resolution \cite{Griffiths2018,Papalexi2017,Patel2014}. \\
+The progressive development of low-input sequencing techniques resulted in an explosion of single-cell sequencing technologies, mostly for the transcriptome. In contrast to bulk protocols, single-cell techniques provide an unprecented opportunity to study the molecular variation associated with cellular heterogeneity, lineage diversification and cell fate commitment \cite{Kolodziejczyk2015}.
+
+The field of single-cell sequencing has largely been driven by the quantification of the cellular messenger RNA (mRNA). 
+- A BIT MORE DESCRIPTION HERE
+To date, there are studies that have achieved the astonishing milestone of profiling the transcriptome for more than a milion cells in a single experiment \cite{XX}. With the development of efficient commercial platforms, the maturation of scRNA-sequencing technologies has provided major insights on the study of lineage diversification and cell fate commitment \cite{Kolodziejczyk2015,Griffiths2018,Papalexi2017,Patel2014}.
+
+While the large majority of single-cell studies are focused on capturing RNA expression information, transcriptomic readouts provide a single dimension of cellular heterogeneity and hence contain limited information to characterise the molecular determinants of phenotypic variation \cite{Ritchie2015}. Consequently, gene expression markers have been identified for a myriad of biological systems, but the role of the accompanying epigenetic changes in driving cell fate decisions remains poorly understood \cite{Griffiths2018,Kelsey2017,Bheda2014}.\\
+
+To get a better insight into the epigenetics of cell fate commitment, significant effort has been placed to obtain epigenetic measurements at single-cell resolution by adapting bulk methods to low-input material. This has been particularly successful for chromatin accessibility. Due to its cost-effective strategy, single-cell ATAC-seq (scATAC-seq) has become the most popular technique to map open chromatin, and is also available in an efficient commercial platform. \cite{Cusanovich2015,Cao2018,Chen2018}. Other strategies to profile the epigenome through the lens of single cells will be discussed in this thesis. 
+
+Despite is profuse success in studying molecular variation, no single "-omics" technology can capture the intricacy of complex biological mechanisms. However, the collective information has the potential to draw a more comprehensive picture of biological processes \cite{Hasin2017,Ritchie2015}. In particular, multi-omics (or multi-modal) assays have the potential to go beyond snapshopts and provide a more dynamic, perhaps even mechanistic, understanding of the connection between molecular layers. Motivated by this, multi-omic data sets are receiveing increasing interest across a wide range of biological domains, including cancer biology \cite{Akavia2010,Gerstung2015}, regulatory genomics \cite{Chen2016}, microbiology \cite{Kim2016} or host-pathogen interactions \cite{Soderholm2016}. 
+
+The profiling of multi-omic readouts at the bulk level is relatively simple, as the same tissue can be dissociated into different aliquotes, where each assay can be performed independently. This strategy is also being used for single-cell levels, but it has the important downside that the different molecular layers cannot be unambiguously linked, hence limitating the insights that can be inferred from the data.\\
+The ultimate goal in single-cell sequencing is to obtain molecular readouts from the same cell, which is critical to reveal how the cellular variation is coupled (or uncoupled) between the captured molecular layers.\\
+Multi-modal measurements at single-cell resolution can be obtained using a variety of strategies, some of which will be discussed in this thesis. BRIEFLY....
+
+
+Notably, their early success and rapid development has led to their recognition as Method of the year in 2019 by the journal \textit{Nature Methods}. However, their development is still in pilot stages and there is no comercial platform available, limiting its widespread use by the community. Furthermore, common challenges in (uni-modal) single-cell assays such as low coverage and high levels of technical noise become exacerbated when doing multi-modal profiling. Quoting a befitting sentence from Cole Trapnell, one of the pioneers of single-cell data analysis: \textit{When you do a multi-omic assay, you're combining all the bad things from multiple protocols}.
+
+% hence, computational...
+
+
+\subsection{Integrative analysis of multi-modal assays}
+
+From the computational perspective, the rapid development of single-cell technologies is introducing unprecedented challenges for the statistical community, and novel computational methods need to be developed (or adapted) for interrogating the data generated \cite{Stegle2015}. 
+
+% DISCUSS METHODS THAT HAVE BEEN DEVELOPED FOR ANAYSIS OF SC DATA
+
+Yet, given the high levels of missing information, the inherent amounts of technical noise and the potentially large number of cells, the integrative analysis of multi-modal measurements is one of the most challenging problems in single-cell biology. \\
+
+%In particular, integrative analyses that simultaneously pool information across multiple data modalities (-omics) and across multiple studies promise to deliver a more comprehensive insights into the complex variation that underly cellular populations \cite{Stuart2019,Colome-Tatche2018}.
+
+
+% 
+% DISCUSS MORE THE CHALLENGES
+
+There are broadly two types of methods for single-cell data integration: \textit{matched} and \textit{non-matched}. In the matched case, the measurements are derived from the same cell, and the aim of the computational strategies is to exploit this information to distinguish axis of cell-to-cell heterogeneity that are coordinated versus axis of variation that are uncoordinated across different molecular layers.\\
+In contrast, in the unmatched case, the measurements are not derived from the same cell, and the aim is to anchor the different -omics to a common manifold. This is typically achieved by  exploiting the existence of a common feature space (for example gene expression and promoter accessibility).
+
+%In this thesis our focus will be in the \textit{matched} approach.
+
+
+
+\subsection{Thesis overview}
+
+In this PhD thesis we sought to develop new experimental and computational strategies for the integrative analysis of single-cell multi-omics data.
+
+In Chapter 1 we discuss single-cell nucleosome, methylation and transcription sequencing (scNMT-seq), an experimental protocol for the genome-wide profiling of RNA expression, DNA methylation and chromatin accessibility in single cells. While some approaches have reported unbiased genome-wide measurements of up to two molecular layers, scNMT-seq allows, for the first time, the profiling of RNA expression coupled with multiple epigenetic layers at single cell resolution.\\
+%In a prototypic application, we validate the quality of the readouts . Finally, we show how scNMT-seq can be used to study coordinated epigenetic and transcriptomic heterogeneity along a simple differentiation process.
+
+In Chapter 2 we discuss Multi-Omics Factor Analysis (MOFA), a statistical framework for the integration of multi-omics data sets. MOFA is a latent variable model that offers principled approach to interrogate multi-omics data sets in a completely unsupervised manner, revealing the underlying sources of sample heterogeneity. Once the model is trained, the infered low-dimensional space can be queried using a toolkit of downstream analysis, including visualisation, clusteirng, imputation or prediction of clinical outcomes.\\
+First, we validate the different features of the model using simulated data, including the scalability, sparsity assumptions and the non-gaussian likelihoods. Second, to demonstrate the potential of the method, we applied MOFA to a multi-omics study of 200 chronic lymphocytic leukaemia patients. In a quick unsupervised analysis, MOFA revealed the most important dimensions of disease heterogeneity, connected to clinical markers that are commonly used in practice. In a second application we show how MOFA can cope with noisy single-cell multi-modal data, identifying coordinated transcriptional and epigenetic changes along a differentiation process.
+
+In Chapter 3 we apply scNMT-seq to study the role of epigenetic layers during mouse gastrulation, a critical embryonic stage that spans exit from pluripotency to primary germ layer specification. Gene expression dynamics during gastrulation have been characterised in detail, but the role of the epigenome in driving cell fate decisions remains poorly understood.\\
+In this study we provide the first triple-omics roadmap of mouse gastrulation. Using MOFA, we perform an integrative study of all molecular layers, revealing novel insights on the dynamics of the epigenome. Notably, we show that cells commited to mesoderm and endoderm undergo widespread epigenetic rearrangements, driven by demethylation in enhancer marks and by concerted changes in chromatin accessibility. In contrast, the epigenetic landscape of ectoderm cells remains in a “default” state, resembling earlier stage epiblast cells is epigenetically established in the early epiblast. This work provides a comprehensive insight into the molecular logic for a hierarchical emergence of the primary germ layers, revealing underlying molecular constituents of the Waddington's landscape.
+
+% In Chapter 4 we propose an improved formulation of the MOFA framework presented in Chapter 2 with the aim of performing integrative analysis of large-scale (single-cell) data sets across multiple studies/conditions as well as data modalities.\\
+% To tailor MOFA to the statistical challenges of single-cell data, we introduce key methodological developments, including a fast stochastic variational inference framework, a new structured sparsity prior and the relaxation of the assumption of independent samples. All together, this allows MOFA to simultaneously disentangle heterogeneity across studes/conditions and data modalities in very large single-cell studies.\\
+% First, we benchmark the new features of the model using simulated data. Next, we use a single-cell DNA methylation data set of neurons from mouse frontal cortex to demonstrate how from a seemingly unimodal data set, one can investigate hypothesis using a multi-group and multi-view setting. Finally, we apply MOFA to the scNMT-seq data set generated in Chapter3, disentangling the sources of heterogeneity assocaited with early cell fate decisions.\\
+
+Finally, Chapter 5 summarises this thesis and provides an outlook of future research.

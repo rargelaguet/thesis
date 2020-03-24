@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  23 MAR 2020 12:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  24 MAR 2020 12:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -14,6 +14,12 @@ LaTeX Warning: You have requested document class `Classes/PhDThesisPSnPDF',
 Document Class: PhDThesisPSnPDF 2016/04/23 A PhD thesis class file by Krishna K
 umar (v2.3.1)
 https://github.com/kks32/phd-thesis-template/
+
+Class PhDThesisPSnPDF Warning: Draft is ON. Don't forget to turn it off in your
+ final version. This is the classic version of draft. Use `draft' for enhanced 
+mode, which adds watermark with timestamp, line numbering, and version number. 
+on input line 238.
+
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/bk11.clo
@@ -1775,7 +1781,8 @@ File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 \@quotelevel=\count388
 \@quotereset=\count389
 
-(./thesis.aux (./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
+(./thesis.aux (./Introduction/introduction.aux) (./Chapter1/introduction.aux)
+(./Chapter1/scnmt-seq.aux) (./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
 (./Chapter2/factor_analysis.aux
 
 LaTeX Warning: Label `fig:bayesianFA' multiply defined.
@@ -1783,33 +1790,32 @@ LaTeX Warning: Label `fig:bayesianFA' multiply defined.
 
 LaTeX Warning: Label `fig:bayesianFA@cref' multiply defined.
 
-) (./Chapter2/mofa.aux))
+) (./Chapter2/mofa.aux) (./Chapter3/introduction.aux) (./Chapter3/results.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 126.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 129.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1825,7 +1831,7 @@ LaTeX Font Info:    ... okay on input line 126.
 \makeMPintoPDFobject=\count395
 \everyMPtoPDFconversion=\toks49
 )
-LaTeX Info: Redefining \microtypecontext on input line 126.
+LaTeX Info: Redefining \microtypecontext on input line 129.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1840,7 +1846,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 \AtBeginShipoutBox=\box95
-Package hyperref Info: Link coloring ON on input line 126.
+Package hyperref Info: Link coloring ON on input line 129.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1850,9 +1856,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count396
 )
-LaTeX Info: Redefining \ref on input line 126.
-LaTeX Info: Redefining \pageref on input line 126.
-LaTeX Info: Redefining \nameref on input line 126.
+LaTeX Info: Redefining \ref on input line 129.
+LaTeX Info: Redefining \pageref on input line 129.
+LaTeX Info: Redefining \nameref on input line 129.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write7
@@ -1910,11 +1916,11 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
  (./thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 126.
-Package biblatex Info: Reference segment=0 on input line 126.
+Package biblatex Info: Reference section=0 on input line 129.
+Package biblatex Info: Reference segment=0 on input line 129.
 \c@lstlisting=\count397
 \PHD@Title=\box96
-LaTeX Font Info:    Try loading font information for U+msa on input line 130.
+LaTeX Font Info:    Try loading font information for U+msa on input line 133.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1922,7 +1928,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 130.
+LaTeX Font Info:    Try loading font information for U+msb on input line 133.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1930,18 +1936,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 130.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 133.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 \PHD@crest=\box97
 
-<Figs/University_Crest.pdf, id=236, 59.22125pt x 69.25874pt>
-File: Figs/University_Crest.pdf Graphic file (type pdf)
+<Figs/University_Crest.pdf, id=417, 59.22125pt x 69.25874pt>
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 133.
 
-<use Figs/University_Crest.pdf>
-Package pdftex.def Info: Figs/University_Crest.pdf used on input line 130.
-(pdftex.def)             Requested size: 93.32361pt x 109.14542pt.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 \PHD@collegecrest=\box98
 \PHD@author=\box99
 \PHD@supervisor=\box100
@@ -1952,133 +1963,850 @@ Package pdftex.def Info: Figs/University_Crest.pdf used on input line 130.
 \PHD@titlepagespacing=\skip84
  [1
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figs/
-University_Crest.pdf>] [2
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-\openout2 = `Chapter2/introduction.aux'.
+\openout2 = `Introduction/introduction.aux'.
 
 
-(./Chapter2/introduction.tex
-Chapter 1.
+(./Introduction/introduction.tex
 
-LaTeX Warning: Citation 'Stegle2015' on page 1 undefined on input line 4.
-
-
-LaTeX Warning: Citation 'Stuart2019' on page 1 undefined on input line 4.
+LaTeX Warning: Citation 'Fleischmann1995' on page 1 undefined on input line 5.
 
 
-LaTeX Warning: Citation 'Colome-Tatche2018' on page 1 undefined on input line 4
+LaTeX Warning: Citation 'Frommer1992' on page 1 undefined on input line 5.
+
+
+LaTeX Warning: Citation 'Lister2008' on page 1 undefined on input line 5.
+
+
+LaTeX Warning: Citation 'Bainbridge2006' on page 1 undefined on input line 5.
+
+
+LaTeX Warning: Citation 'Nagalakshmi2008' on page 1 undefined on input line 5.
+
+
+LaTeX Warning: Citation 'Mortazavi2008' on page 1 undefined on input line 5.
+
+
+LaTeX Warning: Citation 'Griffiths2018' on page 1 undefined on input line 5.
+
+
+LaTeX Warning: Citation 'Papalexi2017' on page 1 undefined on input line 5.
+
+
+LaTeX Warning: Citation 'Patel2014' on page 1 undefined on input line 5.
+
+
+LaTeX Warning: Citation 'Kolodziejczyk2015' on page 1 undefined on input line 6
 .
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
+Overfull \hbox (58.45917pt too wide) in paragraph at lines 5--7
+\T1/cmr/m/n/10.95 (-20) abling the un-bi-ased pro-fil-ing of molec-u-lar lay-er
+s in un un-bi-ased man-ner, in-clud-ing the genome[[]]|
+ []
+
+
+Overfull \hbox (36.04019pt too wide) in paragraph at lines 5--7
+\T1/cmr/m/n/10.95 (-20) the epigenome[[]] and the transcriptome[[], [], [],|
+ []
+
+
+LaTeX Warning: Citation 'XX' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Citation 'Kolodziejczyk2015' on page 1 undefined on input line 1
+0.
+
+
+LaTeX Warning: Citation 'Griffiths2018' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Citation 'Papalexi2017' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Citation 'Patel2014' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Citation 'Ritchie2015' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation 'Griffiths2018' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation 'Kelsey2017' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation 'Bheda2014' on page 1 undefined on input line 12.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
 
-LaTeX Warning: Citation 'Xu2013' on page 1 undefined on input line 10.
+LaTeX Warning: Citation 'Cusanovich2015' on page 1 undefined on input line 14.
 
 
-LaTeX Warning: Citation 'Li2016' on page 1 undefined on input line 10.
+LaTeX Warning: Citation 'Cao2018' on page 1 undefined on input line 14.
 
 
-LaTeX Warning: Citation 'Zhang2018' on page 1 undefined on input line 12.
+LaTeX Warning: Citation 'Chen2018' on page 1 undefined on input line 14.
 
 
-LaTeX Warning: Citation 'Ritchie2015' on page 1 undefined on input line 14.
+LaTeX Warning: Citation 'Hasin2017' on page 1 undefined on input line 16.
 
 
-LaTeX Warning: Citation 'Buettner2015' on page 1 undefined on input line 14.
+LaTeX Warning: Citation 'Ritchie2015' on page 1 undefined on input line 16.
 
 
-LaTeX Warning: Citation 'Meng2016' on page 1 undefined on input line 14.
+LaTeX Warning: Citation 'Akavia2010' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'Gerstung2015' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'Chen2016' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'Kim2016' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'Soderholm2016' on page 1 undefined on input line 16.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15 
-      [1
-
+l.18 T
+      he profiling of multi-omic readouts at the bulk level is relatively si...
+[1
 
 ]
 
-LaTeX Warning: Citation 'Smallwood2014' on page 2 undefined on input line 16.
+LaTeX Warning: Citation 'Stegle2015' on page 2 undefined on input line 30.
 
 
-LaTeX Warning: Citation 'Clark2018' on page 2 undefined on input line 16.
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
-
-LaTeX Warning: Citation 'Svensson2018' on page 2 undefined on input line 18.
-
-
-LaTeX Warning: Citation 'Stegle2015' on page 2 undefined on input line 20.
-
-
-LaTeX Warning: Citation 'Vallejos2015' on page 2 undefined on input line 20.
-
-
-LaTeX Warning: Citation 'Kharchenko2014' on page 2 undefined on input line 20.
-
-
-LaTeX Warning: Citation 'Ritchie2015' on page 2 undefined on input line 29.
+ []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 L
-      ocal analysis refers to the study of hierarchical associations between...
+l.53 I
+      n Chapter 1 we discuss single-cell nucleosome, methylation and transcr...
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
 
-LaTeX Warning: Citation 'VanDerWijst2018' on page 3 undefined on input line 31.
-
-
-
-LaTeX Warning: Citation 'Chen2016' on page 3 undefined on input line 31.
-
-
-LaTeX Warning: Citation 'Pierce2018' on page 3 undefined on input line 31.
-
-
-LaTeX Warning: Citation 'Bonder2016' on page 3 undefined on input line 31.
-
-
-LaTeX Warning: Citation 'Sul2015' on page 3 undefined on input line 31.
-
-
-LaTeX Warning: Citation 'Lanckriet2004' on page 3 undefined on input line 34.
-
-
-LaTeX Warning: Citation 'Wang2014' on page 3 undefined on input line 34.
-
-
-LaTeX Warning: Citation 'Hanafi2011' on page 3 undefined on input line 36.
-
-
-LaTeX Warning: Citation 'Liu2012' on page 3 undefined on input line 36.
-
-
-LaTeX Warning: Reference `XX' on page 1 undefined on input line 36.
-
-
-LaTeX Warning: Citation 'Shen2009' on page 3 undefined on input line 36.
-
-
-LaTeX Warning: Citation 'Mo2013' on page 3 undefined on input line 36.
-
-
-LaTeX Warning: Reference `section:icluster' on page 1 undefined on input line 3
-6.
-
-
-LaTeX Warning: Citation 'Argelaguet2018' on page 3 undefined on input line 36.
-
-
-LaTeX Warning: Citation 'Sass2013' on page 3 undefined on input line 38.
+ []
 
 ) [3]
+\openout2 = `Chapter1/introduction.aux'.
+
+ (./Chapter1/introduction.tex [4
+
+
+
+]
+Chapter 1.
+
+LaTeX Warning: Citation 'Kolodziejczyk2015' on page 5 undefined on input line 8
+.
+
+
+LaTeX Warning: Citation 'Griffiths2018' on page 5 undefined on input line 8.
+
+
+LaTeX Warning: Citation 'Papalexi2017' on page 5 undefined on input line 8.
+
+
+LaTeX Warning: Citation 'Patel2014' on page 5 undefined on input line 8.
+
+
+LaTeX Warning: Citation 'Stuart2019' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation 'Kelsey2017' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation 'Griffiths2018' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation 'Svensson2018' on page 5 undefined on input line 14.
+
+
+LaTeX Warning: Citation 'Lafzi2018' on page 5 undefined on input line 14.
+
+
+LaTeX Warning: Reference `fig:scrna_methods' on page 1 undefined on input line 
+14.
+
+
+LaTeX Warning: Citation 'Hashimshony2012' on page 5 undefined on input line 14.
+
+
+
+LaTeX Warning: Citation 'Ramskold2012' on page 5 undefined on input line 14.
+
+
+LaTeX Warning: Citation 'Picelli2014' on page 5 undefined on input line 14.
+
+
+LaTeX Warning: Citation 'Huang2017' on page 5 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'Deng2014' on page 5 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'LaManno2018' on page 5 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'Zhang2019' on page 5 undefined on input line 17.
+
+
+LaTeX Warning: Citation 'Klein2015' on page 5 undefined on input line 17.
+
+
+LaTeX Warning: Citation 'Zilionis2016' on page 5 undefined on input line 17.
+
+
+LaTeX Warning: Citation 'Macosko2015' on page 5 undefined on input line 17.
+
+
+LaTeX Warning: Citation 'Zheng2017' on page 5 undefined on input line 17.
+
+
+LaTeX Warning: Citation 'Ziegenhain2017' on page 5 undefined on input line 17.
+
+
+LaTeX Warning: Citation 'Wang2019' on page 5 undefined on input line 17.
+
+
+LaTeX Warning: Citation 'Svensson2017' on page 5 undefined on input line 17.
+
+
+LaTeX Warning: Reference `fig:scRNA_seq_comparison' on page 1 undefined on inpu
+t line 17.
+
+[5]
+
+LaTeX Warning: Citation 'Cao2017' on page 6 undefined on input line 26.
+
+
+LaTeX Warning: Citation 'Rosenberg2018' on page 6 undefined on input line 26.
+
+
+LaTeX Warning: Citation 'Cao2019' on page 6 undefined on input line 26.
+
+
+LaTeX Warning: Citation 'Ritchie2015' on page 6 undefined on input line 30.
+
+
+LaTeX Warning: Citation 'Griffiths2018' on page 6 undefined on input line 30.
+
+
+LaTeX Warning: Citation 'Kelsey2017' on page 6 undefined on input line 30.
+
+
+LaTeX Warning: Citation 'Bheda2014' on page 6 undefined on input line 30.
+
+
+LaTeX Warning: Citation 'Jin2018' on page 6 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Harrison2011' on page 6 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Lee2014' on page 6 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Smith2013' on page 6 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Jones2012' on page 6 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Baylin2011' on page 6 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Liu2013' on page 6 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Amir1999' on page 6 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'He2015' on page 6 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Ramsahoye2000' on page 6 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Lister2009' on page 6 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Smallwood2014' on page 6 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'Guo2013' on page 6 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'Gravina2016' on page 6 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'Farlik2015' on page 6 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'Frommer1992' on page 6 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'Clark2016' on page 6 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'Clark2017' on page 6 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'Smallwood2014' on page 6 undefined on input line 35.
+
+
+LaTeX Warning: Reference `fig:scBS' on page 1 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'Smallwood2014' on page 6 undefined on input line 35.
+
+[6] <Chapter1/Figs/methylation_protocols.pdf, id=463, 722.7pt x 534.99875pt>
+
+LaTeX Warning: Citation 'Yong2016' on page 7 undefined on input line 41.
+
+
+LaTeX Warning: Citation 'Yong2016' on page 7 undefined on input line 41.
+
+
+LaTeX Warning: Citation 'Klemm2019' on page 7 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'Tsompana2014' on page 7 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'Jiang2009' on page 7 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'Struhl2013' on page 7 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'Song2010' on page 7 undefined on input line 60.
+
+
+LaTeX Warning: Citation 'Buenrostro2013' on page 7 undefined on input line 60.
+
+
+LaTeX Warning: Citation 'Kelly2012' on page 7 undefined on input line 60.
+
+
+LaTeX Warning: Citation 'Nordstrom2019' on page 7 undefined on input line 60.
+
+
+LaTeX Warning: Citation 'Song2010' on page 7 undefined on input line 64.
+
+
+LaTeX Warning: Citation 'ENCODE2012' on page 7 undefined on input line 64.
+
+
+LaTeX Warning: Citation 'Thurman2012' on page 7 undefined on input line 64.
+
+
+LaTeX Warning: Citation 'He2013' on page 7 undefined on input line 64.
+
+[7]
+
+LaTeX Warning: Citation 'Buenrostro2015b' on page 8 undefined on input line 66.
+
+
+
+LaTeX Warning: Citation 'Tsompana2014' on page 8 undefined on input line 66.
+
+
+LaTeX Warning: Citation 'Nordstrom2019' on page 8 undefined on input line 66.
+
+
+LaTeX Warning: Citation 'Kilgore2007' on page 8 undefined on input line 68.
+
+
+LaTeX Warning: Citation 'Kelly2012' on page 8 undefined on input line 68.
+
+
+LaTeX Warning: Citation 'Kelly2012' on page 8 undefined on input line 68.
+
+
+LaTeX Warning: Citation 'Pott2016' on page 8 undefined on input line 68.
+
+
+LaTeX Warning: Citation 'Nordstrom2019' on page 8 undefined on input line 68.
+
+<Chapter1/Figs/ChromatinAcc_protocols.png, id=472, 981.6675pt x 735.74875pt>
+
+LaTeX Warning: Citation 'Nordstrom2019' on page 8 undefined on input line 77.
+
+
+LaTeX Warning: Citation 'Nordstrom2019' on page 8 undefined on input line 77.
+
+[8]
+
+LaTeX Warning: Citation 'Buenrostro2015a' on page 9 undefined on input line 81.
+
+
+
+LaTeX Warning: Citation 'Pott2016' on page 9 undefined on input line 81.
+
+
+LaTeX Warning: Citation 'Jin2015' on page 9 undefined on input line 81.
+
+
+LaTeX Warning: Citation 'Cusanovich2015' on page 9 undefined on input line 81.
+
+
+LaTeX Warning: Citation 'Cao2018' on page 9 undefined on input line 81.
+
+
+LaTeX Warning: Citation 'Chen2018' on page 9 undefined on input line 81.
+
+
+LaTeX Warning: Citation 'Cusanovich2015' on page 9 undefined on input line 81.
+
+
+LaTeX Warning: Citation 'Cusanovich2018b' on page 9 undefined on input line 81.
+
+
+
+LaTeX Warning: Citation 'Hasin2017' on page 9 undefined on input line 90.
+
+
+LaTeX Warning: Citation 'Ritchie2015' on page 9 undefined on input line 90.
+
+
+LaTeX Warning: Citation 'Stuart2019' on page 9 undefined on input line 95.
+
+
+LaTeX Warning: Citation 'Chappell2018' on page 9 undefined on input line 95.
+
+[9]
+
+LaTeX Warning: Citation 'Paul2015' on page 10 undefined on input line 98.
+
+
+LaTeX Warning: Citation 'Macaulay2015' on page 10 undefined on input line 100.
+
+
+LaTeX Warning: Citation 'Macaulay2015' on page 10 undefined on input line 100.
+
+
+LaTeX Warning: Citation 'Hou2016' on page 10 undefined on input line 100.
+
+
+LaTeX Warning: Citation 'Angermueller2016' on page 10 undefined on input line 1
+00.
+
+
+LaTeX Warning: Citation 'Hu2016' on page 10 undefined on input line 100.
+
+
+LaTeX Warning: Citation 'Stoeckius2017' on page 10 undefined on input line 102.
+
+
+
+LaTeX Warning: Citation 'Peterson2017' on page 10 undefined on input line 102.
+
+
+LaTeX Warning: Citation 'Cao2018a' on page 10 undefined on input line 113.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+[10]) [11]
+\openout2 = `Chapter1/scnmt-seq.aux'.
+
+ (./Chapter1/scnmt-seq.tex
+
+LaTeX Warning: Citation 'Clark2018' on page 12 undefined on input line 8.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+LaTeX Warning: Citation 'Angermueller2016' on page 12 undefined on input line 1
+4.
+
+
+LaTeX Warning: Citation 'Kelly2012' on page 12 undefined on input line 14.
+
+
+LaTeX Warning: Citation 'Pott2016' on page 12 undefined on input line 14.
+
+
+LaTeX Warning: Citation 'Kilgore2007' on page 12 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'Kelly2012' on page 12 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'Kilgore2007' on page 12 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'Kelly2012' on page 12 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'Smallwood2014' on page 12 undefined on input line 18.
+
+
+LaTeX Warning: Citation 'Picelli2014' on page 12 undefined on input line 18.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+<Chapter1/Figs/scNMT_protocol.pdf, id=494, 311.1625pt x 427.5975pt> [12
+
+
+]
+
+LaTeX Warning: Citation 'Kelly2012' on page 13 undefined on input line 27.
+
+
+LaTeX Warning: Citation 'Pott2016' on page 13 undefined on input line 27.
+
+
+LaTeX Warning: Citation 'Nordstrom2019' on page 13 undefined on input line 27.
+
+
+LaTeX Warning: Citation 'Nordstrom2019' on page 13 undefined on input line 27.
+
+
+LaTeX Warning: Citation 'Kelly2012' on page 13 undefined on input line 30.
+
+
+Package Fancyhdr Warning: \headheight is too small (14.5pt): 
+ Make it at least 25.22153pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13]
+
+LaTeX Warning: Citation 'XX' on page 14 undefined on input line 34.
+
+
+LaTeX Warning: Citation 'Krueger2011' on page 14 undefined on input line 34.
+
+
+LaTeX Warning: Citation 'Smallwood2014' on page 14 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'Smallwood2014' on page 14 undefined on input line 42.
+
+
+LaTeX Warning: Citation 'Angermueller2016' on page 14 undefined on input line 4
+2.
+
+
+LaTeX Warning: Citation 'Ficz2013' on page 14 undefined on input line 42.
+
+<Chapter1/Figs/scNMT_coverage.pdf, id=506, 435.6275pt x 226.8475pt> [14]
+
+LaTeX Warning: Citation 'Angermueller2016' on page 15 undefined on input line 5
+4.
+
+<Chapter1/Figs/scNMT_coverage2.pdf, id=513, 205.76875pt x 152.06813pt>
+
+LaTeX Warning: Citation 'Angermueller2016' on page 15 undefined on input line 6
+1.
+
+
+LaTeX Warning: Citation 'Angermueller2016' on page 15 undefined on input line 6
+1.
+
+
+Package Fancyhdr Warning: \headheight is too small (14.5pt): 
+ Make it at least 25.22153pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+
+LaTeX Warning: Citation 'Angermueller2016' on page 16 undefined on input line 6
+7.
+
+
+LaTeX Warning: Citation 'Smallwood2014' on page 16 undefined on input line 67.
+
+
+LaTeX Warning: Citation 'Ficz2013' on page 16 undefined on input line 67.
+
+
+LaTeX Warning: Citation 'Ficz2013' on page 16 undefined on input line 67.
+
+
+LaTeX Warning: Citation 'Angermueller2016' on page 16 undefined on input line 6
+7.
+
+
+LaTeX Warning: Citation 'Smallwood2014' on page 16 undefined on input line 67.
+
+
+LaTeX Warning: Citation 'Ficz2013' on page 16 undefined on input line 67.
+
+
+LaTeX Warning: Citation 'Zvetkova2005' on page 16 undefined on input line 67.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+
+ []
+
+
+LaTeX Warning: Citation 'XX' on page 16 undefined on input line 69.
+
+<Chapter1/Figs/scNMT_comparison.pdf, id=518, 700.41673pt x 328.22626pt>
+[16]
+
+LaTeX Warning: Citation 'Pott2016' on page 17 undefined on input line 80.
+
+
+LaTeX Warning: Reference `fig:scnmt_profiles_MT' on page 1 undefined on input l
+ine 80.
+
+<Chapter1/Figs/scNMT_pseudobulk_profiles.pdf, id=524, 871.91046pt x 867.24pt>
+
+Package Fancyhdr Warning: \headheight is too small (14.5pt): 
+ Make it at least 25.22153pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+
+LaTeX Warning: Citation 'Thurman2012' on page 18 undefined on input line 90.
+
+
+LaTeX Warning: Citation 'Angermueller2016' on page 18 undefined on input line 9
+0.
+
+
+<Chapter1/Figs/scNMT_correlations_acrossgenes.pdf, id=531, 495.35063pt x 190.04
+298pt>
+
+LaTeX Warning: Citation 'Ficz2013' on page 18 undefined on input line 96.
+
+
+LaTeX Warning: Citation 'ENCODE2012' on page 18 undefined on input line 96.
+
+
+LaTeX Warning: Citation 'Ficz2013' on page 18 undefined on input line 96.
+
+
+LaTeX Warning: Citation 'ENCODE2012' on page 18 undefined on input line 96.
+
+[18] <Chapter1/Figs/scNMT_EB_RNA.pdf, id=537, 650.43pt x 505.89pt>
+
+Package Fancyhdr Warning: \headheight is too small (14.5pt): 
+ Make it at least 25.22153pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19]
+
+LaTeX Warning: Citation 'XX' on page 20 undefined on input line 132.
+
+
+LaTeX Warning: Citation 'Papp2012' on page 20 undefined on input line 133.
+
+
+LaTeX Warning: Citation 'Angermueller2016' on page 20 undefined on input line 1
+33.
+
+<Chapter1/Figs/scNMT_EB_correlations.pdf, id=544, 430.66898pt x 280.95967pt>
+[20]
+
+LaTeX Warning: Citation 'Kapourani2018' on page 21 undefined on input line 146.
+
+
+
+<Chapter1/Figs/scNMT_profiles_examples.pdf, id=550, 1161.97112pt x 407.10495pt>
+
+LaTeX Warning: Citation 'Kapourani2018' on page 21 undefined on input line 152.
+
+
+
+LaTeX Warning: Citation 'Kapourani2018' on page 21 undefined on input line 152.
+
+
+
+Package Fancyhdr Warning: \headheight is too small (14.5pt): 
+ Make it at least 25.22153pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21]
+<Chapter1/Figs/scNMT_profiles_prediction.pdf, id=557, 505.89pt x 505.89pt>
+<Chapter1/Figs/scNMT_profiles_expr.pdf, id=558, 1773.80698pt x 1683.45943pt>
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 174--177
+
+ []
+
+<Chapter1/Figs/scNMT_profiles_clusters.pdf, id=570, 463.7325pt x 194.22563pt>
+
+Package Fancyhdr Warning: \headheight is too small (14.5pt): 
+ Make it at least 25.22153pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23]
+
+LaTeX Warning: Citation 'She2009' on page 24 undefined on input line 188.
+
+
+LaTeX Warning: Citation 'Vastenhouw2012' on page 24 undefined on input line 189
+.
+
+
+LaTeX Warning: Citation 'Bernstein2006' on page 24 undefined on input line 189.
+
+
+
+<Chapter1/Figs/scNMT_profiles_clusters2.pdf, id=577, 472.76625pt x 189.70876pt>
+
+LaTeX Warning: Citation 'Trapnell2014' on page 24 undefined on input line 209.
+
+
+LaTeX Warning: Citation 'Haghverdi2016' on page 24 undefined on input line 209.
+
+
+
+LaTeX Warning: Citation 'Saelens2018' on page 24 undefined on input line 209.
+
+[24]
+
+LaTeX Warning: Citation 'Haghverdi2016' on page 25 undefined on input line 211.
+
+
+
+LaTeX Warning: Citation 'Lun2016' on page 25 undefined on input line 211.
+
+<Chapter1/Figs/scNMT_pseudotime.pdf, id=584, 503.8825pt x 138.5175pt>
+<Chapter1/Figs/scNMT_pseudotime_coupling.pdf, id=587, 403.17325pt x 144.20576pt
+>
+
+Package Fancyhdr Warning: \headheight is too small (14.5pt): 
+ Make it at least 25.22153pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[25]
+
+LaTeX Warning: Citation 'Cao2019' on page 26 undefined on input line 250.
+
+
+LaTeX Warning: Citation 'Cao2018' on page 26 undefined on input line 250.
+
+
+LaTeX Warning: Citation 'Guo2017' on page 26 undefined on input line 250.
+
+
+LaTeX Warning: Citation 'Chappell2018' on page 26 undefined on input line 250.
+
+
+LaTeX Warning: Citation 'Bell2011' on page 26 undefined on input line 250.
+
+
+LaTeX Warning: Citation 'DR-seq' on page 26 undefined on input line 251.
+
+
+LaTeX Warning: Citation 'Mulqueen2018' on page 26 undefined on input line 251.
+
+
+LaTeX Warning: Citation 'DR-seq' on page 26 undefined on input line 252.
+
+
+LaTeX Warning: Citation 'Svensson2018' on page 26 undefined on input line 253.
+
+
+LaTeX Warning: Citation 'Guo2013' on page 26 undefined on input line 253.
+
+
+LaTeX Warning: Citation 'Spektor2018' on page 26 undefined on input line 253.
+
+
+LaTeX Warning: Citation 'Angermueller2017' on page 26 undefined on input line 2
+55.
+
+
+LaTeX Warning: Citation 'Angermueller2017' on page 26 undefined on input line 2
+56.
+
+
+LaTeX Warning: Citation 'Angermueller2017' on page 26 undefined on input line 2
+56.
+
+
+LaTeX Warning: Citation 'Kapourani2018b' on page 26 undefined on input line 256
+.
+
+
+Overfull \hbox (1.54755pt too wide) in paragraph at lines 255--257
+\T1/cmr/m/n/10.95 (-20) single-cell methy-la-tion pro-to-cols are lim-ited by i
+n-com-plete CpG cov-er-age [[]].|
+ []
+
+[26]
+
+LaTeX Warning: Citation 'Poirion2018' on page 27 undefined on input line 258.
+
+
+LaTeX Warning: Citation 'Fan2018' on page 27 undefined on input line 258.
+
+
+LaTeX Warning: Citation 'McCarthy2018' on page 27 undefined on input line 258.
+
+
+LaTeX Warning: Citation 'Enge2017' on page 27 undefined on input line 258.
+
+
+LaTeX Warning: Citation 'Huang2017' on page 27 undefined on input line 258.
+
+
+LaTeX Warning: Citation 'Deng2014' on page 27 undefined on input line 258.
+
+
+LaTeX Warning: Citation 'LaManno2018' on page 27 undefined on input line 258.
+
+
+LaTeX Warning: Citation 'Moudgil2019' on page 27 undefined on input line 259.
+
+
+LaTeX Warning: Citation 'Kaya-Okur2019' on page 27 undefined on input line 259.
+
+
+
+LaTeX Warning: Citation 'XX' on page 27 undefined on input line 262.
+
+
+LaTeX Warning: Citation 'Kelly2012' on page 27 undefined on input line 262.
+
+
+LaTeX Warning: Citation 'Lee2018' on page 27 undefined on input line 264.
+
+) [27]
+\openout2 = `Chapter2/introduction.aux'.
+
+ (./Chapter2/introduction.tex) [28
+
+
+]
 \openout2 = `Chapter2/bayes.aux'.
 
  (./Chapter2/bayes.tex
@@ -2087,124 +2815,124 @@ LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 19.
 
 
-LaTeX Warning: Citation 'Stigler2008' on page 4 undefined on input line 23.
+LaTeX Warning: Citation 'Stigler2008' on page 29 undefined on input line 23.
 
 
-LaTeX Warning: Citation 'Bishop' on page 4 undefined on input line 23.
+LaTeX Warning: Citation 'Bishop' on page 29 undefined on input line 23.
 
 
-LaTeX Warning: Citation 'Murphy' on page 4 undefined on input line 23.
+LaTeX Warning: Citation 'Murphy' on page 29 undefined on input line 23.
 
 
-LaTeX Warning: Citation 'Hastie' on page 4 undefined on input line 23.
+LaTeX Warning: Citation 'Hastie' on page 29 undefined on input line 23.
 
 
-LaTeX Warning: Citation 'Bishop' on page 4 undefined on input line 23.
+LaTeX Warning: Citation 'Bishop' on page 29 undefined on input line 23.
 
 
-LaTeX Warning: Citation 'Murphy' on page 4 undefined on input line 23.
+LaTeX Warning: Citation 'Murphy' on page 29 undefined on input line 23.
 
 
-LaTeX Warning: Citation 'Bayes1763' on page 4 undefined on input line 26.
+LaTeX Warning: Citation 'Bayes1763' on page 29 undefined on input line 26.
 
-[4
+[29
 
 
 ]
 
-LaTeX Warning: Citation 'Bishop' on page 5 undefined on input line 30.
+LaTeX Warning: Citation 'Bishop' on page 30 undefined on input line 30.
 
 
-LaTeX Warning: Citation 'Murphy' on page 5 undefined on input line 30.
+LaTeX Warning: Citation 'Murphy' on page 30 undefined on input line 30.
 
 
-LaTeX Warning: Citation 'Bishop' on page 5 undefined on input line 31.
+LaTeX Warning: Citation 'Bishop' on page 30 undefined on input line 31.
 
 
-LaTeX Warning: Citation 'Murphy' on page 5 undefined on input line 31.
+LaTeX Warning: Citation 'Murphy' on page 30 undefined on input line 31.
 
 
-LaTeX Warning: Citation 'Gelman2013' on page 5 undefined on input line 31.
+LaTeX Warning: Citation 'Gelman2013' on page 30 undefined on input line 31.
 
 
-LaTeX Warning: Citation 'Jaynes1968' on page 5 undefined on input line 33.
+LaTeX Warning: Citation 'Jaynes1968' on page 30 undefined on input line 33.
 
 
-LaTeX Warning: Citation 'Raiffa1961' on page 5 undefined on input line 35.
+LaTeX Warning: Citation 'Raiffa1961' on page 30 undefined on input line 35.
 
 
-LaTeX Warning: Citation 'Bishop' on page 5 undefined on input line 35.
+LaTeX Warning: Citation 'Bishop' on page 30 undefined on input line 35.
 
 
-LaTeX Warning: Citation 'Murphy' on page 5 undefined on input line 35.
+LaTeX Warning: Citation 'Murphy' on page 30 undefined on input line 35.
 
 
-LaTeX Warning: Citation 'Gelman2013' on page 5 undefined on input line 35.
+LaTeX Warning: Citation 'Gelman2013' on page 30 undefined on input line 35.
 
 
-LaTeX Warning: Citation 'Gelman2013' on page 5 undefined on input line 35.
+LaTeX Warning: Citation 'Gelman2013' on page 30 undefined on input line 35.
 
 
 LaTeX Warning: Reference `section:ard' on page 1 undefined on input line 35.
 
 
-LaTeX Warning: Citation 'Bishop' on page 5 undefined on input line 37.
+LaTeX Warning: Citation 'Bishop' on page 30 undefined on input line 37.
 
 
-LaTeX Warning: Citation 'Murphy' on page 5 undefined on input line 37.
+LaTeX Warning: Citation 'Murphy' on page 30 undefined on input line 37.
 
 
-LaTeX Warning: Citation 'Gelman2013' on page 5 undefined on input line 37.
+LaTeX Warning: Citation 'Gelman2013' on page 30 undefined on input line 37.
 
 
-LaTeX Warning: Citation 'Bishop' on page 5 undefined on input line 41.
+LaTeX Warning: Citation 'Bishop' on page 30 undefined on input line 41.
 
 
-LaTeX Warning: Citation 'Murphy' on page 5 undefined on input line 41.
+LaTeX Warning: Citation 'Murphy' on page 30 undefined on input line 41.
 
 
-LaTeX Warning: Citation 'Gelman2013' on page 5 undefined on input line 41.
+LaTeX Warning: Citation 'Gelman2013' on page 30 undefined on input line 41.
 
 
-LaTeX Warning: Citation 'Gelman2013' on page 5 undefined on input line 44.
+LaTeX Warning: Citation 'Gelman2013' on page 30 undefined on input line 44.
 
 
-LaTeX Warning: Citation 'Blei2016' on page 5 undefined on input line 44.
+LaTeX Warning: Citation 'Blei2016' on page 30 undefined on input line 44.
 
-[5]
+[30]
 
-LaTeX Warning: Citation 'Blei2016' on page 6 undefined on input line 46.
-
-
-LaTeX Warning: Citation 'Bishop' on page 6 undefined on input line 47.
+LaTeX Warning: Citation 'Blei2016' on page 31 undefined on input line 46.
 
 
-LaTeX Warning: Citation 'Murphy' on page 6 undefined on input line 47.
+LaTeX Warning: Citation 'Bishop' on page 31 undefined on input line 47.
 
 
-LaTeX Warning: Citation 'Blei2016' on page 6 undefined on input line 47.
+LaTeX Warning: Citation 'Murphy' on page 31 undefined on input line 47.
 
 
-LaTeX Warning: Citation 'Bishop' on page 6 undefined on input line 50.
+LaTeX Warning: Citation 'Blei2016' on page 31 undefined on input line 47.
 
 
-LaTeX Warning: Citation 'Murphy' on page 6 undefined on input line 50.
-
-[6]
-
-LaTeX Warning: Citation 'Blei2016' on page 7 undefined on input line 77.
+LaTeX Warning: Citation 'Bishop' on page 31 undefined on input line 50.
 
 
-LaTeX Warning: Citation 'Zhang2017' on page 7 undefined on input line 77.
+LaTeX Warning: Citation 'Murphy' on page 31 undefined on input line 50.
+
+[31]
+
+LaTeX Warning: Citation 'Blei2016' on page 32 undefined on input line 77.
 
 
-LaTeX Warning: Citation 'Minka2001' on page 7 undefined on input line 84.
+LaTeX Warning: Citation 'Zhang2017' on page 32 undefined on input line 77.
 
 
-LaTeX Warning: Citation 'Bishop' on page 7 undefined on input line 88.
+LaTeX Warning: Citation 'Minka2001' on page 32 undefined on input line 84.
 
 
-LaTeX Warning: Citation 'Murphy' on page 7 undefined on input line 88.
+LaTeX Warning: Citation 'Bishop' on page 32 undefined on input line 88.
+
+
+LaTeX Warning: Citation 'Murphy' on page 32 undefined on input line 88.
 
 
 Overfull \hbox (16.41187pt too wide) in paragraph at lines 88--89
@@ -2212,192 +2940,141 @@ Overfull \hbox (16.41187pt too wide) in paragraph at lines 88--89
 that the KL di-ver-gence $[]\OT1/cmr/m/n/10.95 (-20) (\OML/cmm/m/it/10.95 q\OT1
 /cmr/m/n/10.95 (-20) (\OT1/cmr/bx/n/10.95 X\OT1/cmr/m/n/10.95 (-20) )\OMS/cmsy/
 m/n/10.95 jj\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (-20) (\OT1/cmr/bx/n/10.95 
-X\OMS/cmsy/m/n/10.95 j\OT1/cmr/bx/n/10.95 Y\OT1/cmr/m/n/10.95 (-20) ))$
+X\OMS/cmsy/m/n/10.95 j\OT1/cmr/bx/n/10.95 Y\OT1/cmr/m/n/10.95 (-20) ))$|
  []
 
-[7] <Chapter2/Figs/lower_bound.pdf, id=295, 490.72935pt x 368.86005pt>
-File: Chapter2/Figs/lower_bound.pdf Graphic file (type pdf)
+[32] <Chapter2/Figs/lower_bound.pdf, id=634, 490.72935pt x 368.86005pt>
 
-<use Chapter2/Figs/lower_bound.pdf>
-Package pdftex.def Info: Chapter2/Figs/lower_bound.pdf used on input line 111.
-(pdftex.def)             Requested size: 163.32167pt x 122.7598pt.
+LaTeX Warning: Citation 'Zhang2017' on page 33 undefined on input line 116.
 
 
-LaTeX Warning: Citation 'Zhang2017' on page 8 undefined on input line 116.
+LaTeX Warning: Citation 'Blei2016' on page 33 undefined on input line 116.
 
 
-LaTeX Warning: Citation 'Blei2016' on page 8 undefined on input line 116.
+LaTeX Warning: Citation 'Saul1996' on page 33 undefined on input line 119.
 
 
-LaTeX Warning: Citation 'Saul1996' on page 8 undefined on input line 119.
+LaTeX Warning: Citation 'Blei2006' on page 33 undefined on input line 125.
 
 
-LaTeX Warning: Citation 'Barber1998' on page 8 undefined on input line 123.
+LaTeX Warning: Citation 'Faes2011' on page 33 undefined on input line 125.
 
 
-LaTeX Warning: Citation 'Lawrence1996' on page 8 undefined on input line 123.
+LaTeX Warning: Citation 'Braun2007' on page 33 undefined on input line 125.
 
+[33] <Chapter2/Figs/mean_field.pdf, id=645, 578.16pt x 337.26pt>
 
-LaTeX Warning: Citation 'Hoffman2014' on page 8 undefined on input line 123.
+LaTeX Warning: Citation 'Bishop' on page 34 undefined on input line 134.
 
-[8 <./Chapter2/Figs/lower_bound.pdf>]
 
-LaTeX Warning: Citation 'Blei2006' on page 9 undefined on input line 125.
+LaTeX Warning: Citation 'Murphy' on page 34 undefined on input line 134.
 
 
-LaTeX Warning: Citation 'Faes2011' on page 9 undefined on input line 125.
+LaTeX Warning: Citation 'Bishop' on page 34 undefined on input line 143.
 
 
-LaTeX Warning: Citation 'Braun2007' on page 9 undefined on input line 125.
+LaTeX Warning: Citation 'Murphy' on page 34 undefined on input line 143.
 
-<Chapter2/Figs/mean_field.pdf, id=321, 578.16pt x 337.26pt>
-File: Chapter2/Figs/mean_field.pdf Graphic file (type pdf)
 
-<use Chapter2/Figs/mean_field.pdf>
-Package pdftex.def Info: Chapter2/Figs/mean_field.pdf used on input line 129.
-(pdftex.def)             Requested size: 326.63622pt x 190.5368pt.
+LaTeX Warning: Citation 'Zhao2009' on page 34 undefined on input line 143.
 
+[34]
 
-LaTeX Warning: Citation 'Bishop' on page 9 undefined on input line 134.
+LaTeX Warning: Citation 'Braun2007' on page 35 undefined on input line 153.
 
 
-LaTeX Warning: Citation 'Murphy' on page 9 undefined on input line 134.
+LaTeX Warning: Citation 'Ranganath2014' on page 35 undefined on input line 153.
 
 
-LaTeX Warning: Citation 'Bishop' on page 9 undefined on input line 143.
 
+LaTeX Warning: Citation 'Braun2007' on page 35 undefined on input line 153.
 
-LaTeX Warning: Citation 'Murphy' on page 9 undefined on input line 143.
 
+LaTeX Warning: Citation 'Zhang2017' on page 35 undefined on input line 156.
 
-LaTeX Warning: Citation 'Zhao2009' on page 9 undefined on input line 143.
 
-[9 <./Chapter2/Figs/mean_field.pdf>]
+LaTeX Warning: Citation 'Blei2016' on page 35 undefined on input line 156.
 
-LaTeX Warning: Citation 'Braun2007' on page 10 undefined on input line 152.
 
+LaTeX Warning: Citation 'Hoffman2012' on page 35 undefined on input line 158.
 
-LaTeX Warning: Citation 'Ranganath2014' on page 10 undefined on input line 152.
 
+LaTeX Warning: Citation 'Ranganath2014' on page 35 undefined on input line 158.
 
 
-LaTeX Warning: Citation 'Braun2007' on page 10 undefined on input line 152.
 
+LaTeX Warning: Citation 'Bishop' on page 35 undefined on input line 177.
 
-LaTeX Warning: Citation 'Zhang2017' on page 10 undefined on input line 155.
 
+LaTeX Warning: Citation 'Bishop' on page 35 undefined on input line 179.
 
-LaTeX Warning: Citation 'Blei2016' on page 10 undefined on input line 155.
 
+LaTeX Warning: Citation 'Murphy' on page 35 undefined on input line 179.
 
-LaTeX Warning: Citation 'Hoffman2012' on page 10 undefined on input line 155.
 
+LaTeX Warning: Citation 'Minka2001' on page 35 undefined on input line 179.
 
-LaTeX Warning: Citation 'Ranganath2014' on page 10 undefined on input line 155.
+[35] <Chapter2/Figs/VB_vs_EP.pdf, id=665, 1133.10326pt x 373.37592pt>
 
+LaTeX Warning: Citation 'Blei2006' on page 36 undefined on input line 188.
 
 
-LaTeX Warning: Citation 'Platt2008' on page 10 undefined on input line 155.
-
-
-LaTeX Warning: Citation 'Zhang2017' on page 10 undefined on input line 156.
-
-
-LaTeX Warning: Citation 'Blei2016' on page 10 undefined on input line 156.
-
-[10]
-
-LaTeX Warning: Citation 'Bishop' on page 11 undefined on input line 179.
-
-
-LaTeX Warning: Citation 'Bishop' on page 11 undefined on input line 181.
-
-
-LaTeX Warning: Citation 'Murphy' on page 11 undefined on input line 181.
-
-
-LaTeX Warning: Citation 'Minka2001' on page 11 undefined on input line 181.
-
-<Chapter2/Figs/VB_vs_EP.pdf, id=386, 1133.10326pt x 373.37592pt>
-File: Chapter2/Figs/VB_vs_EP.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/VB_vs_EP.pdf>
-Package pdftex.def Info: Chapter2/Figs/VB_vs_EP.pdf used on input line 185.
-(pdftex.def)             Requested size: 466.62521pt x 153.75739pt.
-
-
-LaTeX Warning: Citation 'Blei2006' on page 11 undefined on input line 190.
-
-
-LaTeX Warning: Citation 'Carbonetto2012' on page 11 undefined on input line 194
+LaTeX Warning: Citation 'Carbonetto2012' on page 36 undefined on input line 193
 .
 
 
-LaTeX Warning: Citation 'Raj2014' on page 11 undefined on input line 194.
+LaTeX Warning: Citation 'Raj2014' on page 36 undefined on input line 193.
 
 
-LaTeX Warning: Citation 'Sanguinetti2006' on page 11 undefined on input line 19
-4.
+LaTeX Warning: Citation 'Sanguinetti2006' on page 36 undefined on input line 19
+3.
 
 
-LaTeX Warning: Citation 'Likas2004' on page 11 undefined on input line 194.
+LaTeX Warning: Citation 'Blei2003' on page 36 undefined on input line 193.
 
 
-LaTeX Warning: Citation 'Blei2003' on page 11 undefined on input line 194.
+LaTeX Warning: Citation 'Blei2016' on page 36 undefined on input line 195.
 
 
-LaTeX Warning: Citation 'Blei2016' on page 11 undefined on input line 196.
+LaTeX Warning: Citation 'Zhang2017' on page 36 undefined on input line 195.
 
 
-LaTeX Warning: Citation 'Zhang2017' on page 11 undefined on input line 196.
+LaTeX Warning: Citation 'Nakajima2007' on page 36 undefined on input line 195.
 
 
-LaTeX Warning: Citation 'Nakajima2007' on page 11 undefined on input line 196.
+LaTeX Warning: Citation 'Blei2016' on page 36 undefined on input line 196.
 
 
-LaTeX Warning: Citation 'Blei2016' on page 11 undefined on input line 196.
+LaTeX Warning: Citation 'Zhang2017' on page 36 undefined on input line 196.
 
 
-LaTeX Warning: Citation 'Zhang2017' on page 11 undefined on input line 196.
-
-[11 <./Chapter2/Figs/VB_vs_EP.pdf>]
-
-LaTeX Warning: Citation 'Barber1998' on page 12 undefined on input line 198.
+LaTeX Warning: Citation 'Hoffman2014' on page 36 undefined on input line 198.
 
 
-LaTeX Warning: Citation 'Lawrence1996' on page 12 undefined on input line 198.
+LaTeX Warning: Citation 'Titsias2011' on page 36 undefined on input line 198.
+
+[36]
+
+LaTeX Warning: Citation 'Zhang2017' on page 37 undefined on input line 200.
 
 
-LaTeX Warning: Citation 'Hoffman2014' on page 12 undefined on input line 198.
+LaTeX Warning: Citation 'Seeger2012' on page 37 undefined on input line 200.
 
 
-LaTeX Warning: Reference `section:mofa_loadings' on page 1 undefined on input l
-ine 198.
+LaTeX Warning: Citation 'Khan2017' on page 37 undefined on input line 200.
 
-
-LaTeX Warning: Citation 'Titsias2011' on page 12 undefined on input line 198.
-
-
-LaTeX Warning: Citation 'Zhang2017' on page 12 undefined on input line 200.
-
-
-LaTeX Warning: Citation 'Seeger2012' on page 12 undefined on input line 200.
-
-
-LaTeX Warning: Citation 'Khan2017' on page 12 undefined on input line 200.
-
-) [12]
+) [37]
 \openout2 = `Chapter2/factor_analysis.aux'.
 
  (./Chapter2/factor_analysis.tex
 
-LaTeX Warning: Citation 'Bishop' on page 13 undefined on input line 5.
+LaTeX Warning: Citation 'Bishop' on page 38 undefined on input line 5.
 
 
-LaTeX Warning: Citation 'Bishop' on page 13 undefined on input line 5.
+LaTeX Warning: Citation 'Bishop' on page 38 undefined on input line 5.
 
 
-LaTeX Warning: Citation 'Dietz2010-technical-report-graphs' on page 13 undefine
+LaTeX Warning: Citation 'Dietz2010-technical-report-graphs' on page 38 undefine
 d on input line 7.
 
 Missing character: There is no ; in font nullfont!
@@ -2410,79 +3087,67 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
 Overfull \hbox (6.17361pt too wide) in paragraph at lines 18--19
-[]|[]| 
+[]|[]| |
  []
 
 
-LaTeX Warning: Citation 'Komili2008' on page 13 undefined on input line 24.
+LaTeX Warning: Citation 'Komili2008' on page 38 undefined on input line 24.
 
 
-LaTeX Warning: Citation 'Stegle2012' on page 13 undefined on input line 24.
+LaTeX Warning: Citation 'Stegle2012' on page 38 undefined on input line 24.
 
 
-LaTeX Warning: Citation 'Leek2007' on page 13 undefined on input line 24.
+LaTeX Warning: Citation 'Leek2007' on page 38 undefined on input line 24.
 
 
-LaTeX Warning: Citation 'Pournara2007' on page 13 undefined on input line 24.
+LaTeX Warning: Citation 'Pournara2007' on page 38 undefined on input line 24.
 
 
-LaTeX Warning: Citation 'Dai2017' on page 13 undefined on input line 24.
+LaTeX Warning: Citation 'Dai2017' on page 38 undefined on input line 24.
 
 
-LaTeX Warning: Citation 'Genevieve2018' on page 13 undefined on input line 24.
+LaTeX Warning: Citation 'Genevieve2018' on page 38 undefined on input line 24.
 
 
-LaTeX Warning: Citation 'Meng2016' on page 13 undefined on input line 24.
+LaTeX Warning: Citation 'Meng2016' on page 38 undefined on input line 24.
 
 
-LaTeX Warning: Citation 'Zhang2018_NN' on page 13 undefined on input line 29.
+LaTeX Warning: Citation 'Zhang2018_NN' on page 38 undefined on input line 29.
 
 
-LaTeX Warning: Citation 'XX' on page 13 undefined on input line 29.
+LaTeX Warning: Citation 'XX' on page 38 undefined on input line 29.
 
-[13
+[38
 
 
 ]
 
-LaTeX Warning: Citation 'Rattray2009' on page 14 undefined on input line 39.
+LaTeX Warning: Citation 'Rattray2009' on page 39 undefined on input line 39.
 
 
-LaTeX Warning: Citation 'Hotelling1933' on page 14 undefined on input line 42.
+LaTeX Warning: Citation 'Hotelling1933' on page 39 undefined on input line 42.
 
 
-LaTeX Warning: Citation 'Ringner2008' on page 14 undefined on input line 42.
+LaTeX Warning: Citation 'Ringner2008' on page 39 undefined on input line 42.
 
 
-LaTeX Warning: Citation 'Bishop' on page 14 undefined on input line 42.
+LaTeX Warning: Citation 'Bishop' on page 39 undefined on input line 42.
 
-<Chapter2/Figs/pca1.pdf, id=487, 1002.74625pt x 267.08885pt>
-File: Chapter2/Figs/pca1.pdf Graphic file (type pdf)
+<Chapter2/Figs/pca1.pdf, id=685, 1002.74625pt x 267.08885pt> [39]
 
-<use Chapter2/Figs/pca1.pdf>
-Package pdftex.def Info: Chapter2/Figs/pca1.pdf used on input line 46.
-(pdftex.def)             Requested size: 466.62521pt x 124.28876pt.
- [14 <./Chapter2/Figs/pca1.pdf>]
+LaTeX Warning: Citation 'Bishop' on page 40 undefined on input line 74.
 
-LaTeX Warning: Citation 'Bishop' on page 15 undefined on input line 74.
+<Chapter2/Figs/pca2.pdf, id=696, 803.0pt x 564.1075pt> [40]
 
-<Chapter2/Figs/pca2.pdf, id=526, 803.0pt x 564.1075pt>
-File: Chapter2/Figs/pca2.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/pca2.pdf>
-Package pdftex.def Info: Chapter2/Figs/pca2.pdf used on input line 81.
-(pdftex.def)             Requested size: 419.95984pt x 295.02466pt.
- [15]
-
-LaTeX Warning: Citation 'Li2017b' on page 16 undefined on input line 87.
+LaTeX Warning: Citation 'Li2017b' on page 41 undefined on input line 87.
 
 
-LaTeX Warning: Citation 'Ilin2010' on page 16 undefined on input line 87.
+LaTeX Warning: Citation 'Ilin2010' on page 41 undefined on input line 87.
 
 
-LaTeX Warning: Citation 'Tipping1999' on page 16 undefined on input line 90.
+LaTeX Warning: Citation 'Tipping1999' on page 41 undefined on input line 90.
 
-[16 <./Chapter2/Figs/pca2.pdf>] (./graphical_models/pPCA.tex
+[41] (./graphical_models/pPCA.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2493,24 +3158,24 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 )
 
-LaTeX Warning: Citation 'Rubin1982' on page 17 undefined on input line 116.
+LaTeX Warning: Citation 'Rubin1982' on page 42 undefined on input line 116.
 
 
-LaTeX Warning: Citation 'Bishop' on page 17 undefined on input line 116.
+LaTeX Warning: Citation 'Bishop' on page 42 undefined on input line 116.
 
 
-LaTeX Warning: Citation 'Rubin1982' on page 17 undefined on input line 118.
+LaTeX Warning: Citation 'Rubin1982' on page 42 undefined on input line 118.
 
 
-LaTeX Warning: Citation 'Bishop' on page 17 undefined on input line 118.
+LaTeX Warning: Citation 'Bishop' on page 42 undefined on input line 118.
 
 
-LaTeX Warning: Citation 'Tipping1999' on page 17 undefined on input line 118.
+LaTeX Warning: Citation 'Tipping1999' on page 42 undefined on input line 118.
 
 
-LaTeX Warning: Citation 'Tipping1999' on page 17 undefined on input line 119.
+LaTeX Warning: Citation 'Tipping1999' on page 42 undefined on input line 119.
 
-[17] (./graphical_models/bayesianFA.tex
+[42] (./graphical_models/bayesianFA.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2521,70 +3186,58 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 )
 
-LaTeX Warning: Citation 'Bishop1999a' on page 18 undefined on input line 151.
+LaTeX Warning: Citation 'Bishop1999a' on page 43 undefined on input line 151.
 
 
-LaTeX Warning: Citation 'Bishop1999b' on page 18 undefined on input line 151.
+LaTeX Warning: Citation 'Bishop1999b' on page 43 undefined on input line 151.
 
 
-LaTeX Warning: Citation 'Klami2008' on page 18 undefined on input line 151.
+LaTeX Warning: Citation 'Klami2008' on page 43 undefined on input line 151.
 
 
-LaTeX Warning: Citation 'Virtanen2012' on page 18 undefined on input line 151.
+LaTeX Warning: Citation 'Virtanen2012' on page 43 undefined on input line 151.
 
 
-LaTeX Warning: Citation 'Klami2015' on page 18 undefined on input line 151.
+LaTeX Warning: Citation 'Klami2015' on page 43 undefined on input line 151.
 
 
-LaTeX Warning: Citation 'Bunte2016' on page 18 undefined on input line 151.
+LaTeX Warning: Citation 'Bunte2016' on page 43 undefined on input line 151.
 
 
-LaTeX Warning: Citation 'Khan2014' on page 18 undefined on input line 151.
+LaTeX Warning: Citation 'Khan2014' on page 43 undefined on input line 151.
 
 
-LaTeX Warning: Citation 'Zhao2016' on page 18 undefined on input line 151.
+LaTeX Warning: Citation 'Zhao2016' on page 43 undefined on input line 151.
 
-[18]
+[43]
 
-LaTeX Warning: Citation 'Neal1995' on page 19 undefined on input line 154.
-
-
-LaTeX Warning: Citation 'Mackay1996' on page 19 undefined on input line 154.
+LaTeX Warning: Citation 'Neal1995' on page 44 undefined on input line 154.
 
 
-LaTeX Warning: Citation 'Bishop1999a' on page 19 undefined on input line 154.
+LaTeX Warning: Citation 'Mackay1996' on page 44 undefined on input line 154.
 
 
-LaTeX Warning: Citation 'Bishop1999b' on page 19 undefined on input line 154.
-
-<Chapter2/Figs/ard.pdf, id=583, 630.355pt x 399.4925pt>
-File: Chapter2/Figs/ard.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/ard.pdf>
-Package pdftex.def Info: Chapter2/Figs/ard.pdf used on input line 164.
-(pdftex.def)             Requested size: 326.63622pt x 207.0058pt.
-
-<Chapter2/Figs/hinton.pdf, id=584, 505.89pt x 216.81pt>
-File: Chapter2/Figs/hinton.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/hinton.pdf>
-Package pdftex.def Info: Chapter2/Figs/hinton.pdf used on input line 170.
-(pdftex.def)             Requested size: 373.30159pt x 159.99026pt.
- [19 <./Chapter2/Figs/ard.pdf>]
-
-LaTeX Warning: Citation 'Stegle2012' on page 20 undefined on input line 176.
+LaTeX Warning: Citation 'Bishop1999a' on page 44 undefined on input line 154.
 
 
-LaTeX Warning: Citation 'Gao2013' on page 20 undefined on input line 176.
+LaTeX Warning: Citation 'Bishop1999b' on page 44 undefined on input line 154.
+
+<Chapter2/Figs/ard.pdf, id=724, 630.355pt x 399.4925pt>
+<Chapter2/Figs/hinton.pdf, id=725, 505.89pt x 216.81pt> [44]
+
+LaTeX Warning: Citation 'Stegle2012' on page 45 undefined on input line 176.
 
 
-LaTeX Warning: Citation 'Gao2013' on page 20 undefined on input line 177.
+LaTeX Warning: Citation 'Gao2013' on page 45 undefined on input line 176.
 
 
-LaTeX Warning: Citation 'Mitchell1988' on page 20 undefined on input line 180.
+LaTeX Warning: Citation 'Gao2013' on page 45 undefined on input line 177.
 
 
-LaTeX Warning: Citation 'Titsias2011' on page 20 undefined on input line 180.
+LaTeX Warning: Citation 'Mitchell1988' on page 45 undefined on input line 180.
+
+
+LaTeX Warning: Citation 'Titsias2011' on page 45 undefined on input line 180.
 
 LaTeX Font Info:    Try loading font information for U+dsrom on input line 185.
 
@@ -2604,67 +3257,67 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [20 <./Chapter2/Figs/hinton.pdf>]
+) [45]
 
-LaTeX Warning: Citation 'Xu2013' on page 21 undefined on input line 205.
-
-
-LaTeX Warning: Citation 'Li2016' on page 21 undefined on input line 205.
+LaTeX Warning: Citation 'Xu2013' on page 46 undefined on input line 205.
 
 
-LaTeX Warning: Citation 'Zeng2018' on page 21 undefined on input line 205.
+LaTeX Warning: Citation 'Li2016' on page 46 undefined on input line 205.
 
 
-LaTeX Warning: Citation 'Xu2013' on page 21 undefined on input line 205.
+LaTeX Warning: Citation 'Zeng2018' on page 46 undefined on input line 205.
 
 
-LaTeX Warning: Citation 'Li2016' on page 21 undefined on input line 205.
+LaTeX Warning: Citation 'Xu2013' on page 46 undefined on input line 205.
 
 
-LaTeX Warning: Citation 'Ritchie2015' on page 21 undefined on input line 206.
+LaTeX Warning: Citation 'Li2016' on page 46 undefined on input line 205.
 
 
-LaTeX Warning: Citation 'Pilling2018' on page 21 undefined on input line 206.
-
-[21]
-
-LaTeX Warning: Citation 'Xu2013' on page 22 undefined on input line 208.
+LaTeX Warning: Citation 'Ritchie2015' on page 46 undefined on input line 206.
 
 
-LaTeX Warning: Citation 'Ritchie2015' on page 22 undefined on input line 208.
+LaTeX Warning: Citation 'Pilling2018' on page 46 undefined on input line 206.
+
+[46]
+
+LaTeX Warning: Citation 'Xu2013' on page 47 undefined on input line 208.
 
 
-LaTeX Warning: Citation 'Hotteling1936' on page 22 undefined on input line 211.
+LaTeX Warning: Citation 'Ritchie2015' on page 47 undefined on input line 208.
 
 
-
-LaTeX Warning: Citation 'Hardle2007' on page 22 undefined on input line 211.
-
-
-LaTeX Warning: Citation 'Hotteling1936' on page 22 undefined on input line 219.
+LaTeX Warning: Citation 'Hotteling1936' on page 47 undefined on input line 211.
 
 
 
-LaTeX Warning: Citation 'Hardle2007' on page 22 undefined on input line 219.
+LaTeX Warning: Citation 'Hardle2007' on page 47 undefined on input line 211.
 
 
-LaTeX Warning: Citation 'Hardle2007' on page 22 undefined on input line 220.
+LaTeX Warning: Citation 'Hotteling1936' on page 47 undefined on input line 219.
 
 
-LaTeX Warning: Citation 'McCabe2018' on page 22 undefined on input line 220.
+
+LaTeX Warning: Citation 'Hardle2007' on page 47 undefined on input line 219.
 
 
-LaTeX Warning: Citation 'Guo2016' on page 22 undefined on input line 220.
+LaTeX Warning: Citation 'Hardle2007' on page 47 undefined on input line 220.
 
 
-LaTeX Warning: Citation 'Tipping1999' on page 22 undefined on input line 225.
+LaTeX Warning: Citation 'McCabe2018' on page 47 undefined on input line 220.
 
 
-LaTeX Warning: Citation 'Bach2005' on page 22 undefined on input line 225.
+LaTeX Warning: Citation 'Guo2016' on page 47 undefined on input line 220.
 
-[22]
 
-LaTeX Warning: Citation 'Tipping1999' on page 23 undefined on input line 237.
+LaTeX Warning: Citation 'Tipping1999' on page 47 undefined on input line 225.
+
+
+LaTeX Warning: Citation 'Bach2005' on page 47 undefined on input line 225.
+
+[47]
+
+LaTeX Warning: Citation 'Tipping1999' on page 48 undefined on input line 237.
 
 (./graphical_models/CCA.tex
 Missing character: There is no ; in font nullfont!
@@ -2691,20 +3344,20 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 )
 
-LaTeX Warning: Citation 'Bach2005' on page 23 undefined on input line 252.
+LaTeX Warning: Citation 'Bach2005' on page 48 undefined on input line 252.
 
 
-LaTeX Warning: Citation 'Wang2007' on page 23 undefined on input line 256.
+LaTeX Warning: Citation 'Wang2007' on page 48 undefined on input line 256.
 
 
-LaTeX Warning: Citation 'Klami2013' on page 23 undefined on input line 256.
+LaTeX Warning: Citation 'Klami2013' on page 48 undefined on input line 256.
 
-[23]
+[48]
 
-LaTeX Warning: Citation 'Wang2007' on page 24 undefined on input line 266.
+LaTeX Warning: Citation 'Wang2007' on page 49 undefined on input line 266.
 
 
-LaTeX Warning: Citation 'Klami2013' on page 24 undefined on input line 266.
+LaTeX Warning: Citation 'Klami2013' on page 49 undefined on input line 266.
 
 (./graphical_models/bayesianCCA.tex
 Missing character: There is no ; in font nullfont!
@@ -2730,42 +3383,36 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 )
-<Chapter2/Figs/hinton_cca.pdf, id=671, 556.65565pt x 193.6274pt>
-File: Chapter2/Figs/hinton_cca.pdf Graphic file (type pdf)
+<Chapter2/Figs/hinton_cca.pdf, id=761, 556.65565pt x 193.6274pt>
 
-<use Chapter2/Figs/hinton_cca.pdf>
-Package pdftex.def Info: Chapter2/Figs/hinton_cca.pdf used on input line 280.
-(pdftex.def)             Requested size: 396.63428pt x 137.9698pt.
+LaTeX Warning: Citation 'Wang2007' on page 49 undefined on input line 281.
 
 
-LaTeX Warning: Citation 'Wang2007' on page 24 undefined on input line 281.
+LaTeX Warning: Citation 'Wang2007' on page 49 undefined on input line 281.
+
+[49]
+
+LaTeX Warning: Citation 'Virtanen2012' on page 50 undefined on input line 289.
 
 
-LaTeX Warning: Citation 'Wang2007' on page 24 undefined on input line 281.
-
-[24]
-
-LaTeX Warning: Citation 'Virtanen2012' on page 25 undefined on input line 289.
+LaTeX Warning: Citation 'Klami2015' on page 50 undefined on input line 289.
 
 
-LaTeX Warning: Citation 'Klami2015' on page 25 undefined on input line 289.
+LaTeX Warning: Citation 'Leppaaho2017' on page 50 undefined on input line 289.
 
 
-LaTeX Warning: Citation 'Leppaaho2017' on page 25 undefined on input line 289.
+LaTeX Warning: Citation 'Bunte2016' on page 50 undefined on input line 289.
 
 
-LaTeX Warning: Citation 'Bunte2016' on page 25 undefined on input line 289.
+LaTeX Warning: Citation 'Khan2014' on page 50 undefined on input line 289.
 
 
-LaTeX Warning: Citation 'Khan2014' on page 25 undefined on input line 289.
+LaTeX Warning: Citation 'Zhao2016' on page 50 undefined on input line 289.
 
 
-LaTeX Warning: Citation 'Zhao2016' on page 25 undefined on input line 289.
+LaTeX Warning: Citation 'Remes2015' on page 50 undefined on input line 289.
 
-
-LaTeX Warning: Citation 'Remes2015' on page 25 undefined on input line 289.
-
-[25 <./Chapter2/Figs/hinton_cca.pdf>]
+[50]
 Underfull \hbox (badness 10000) in paragraph at lines 304--306
 
  []
@@ -2783,12 +3430,12 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-)) [26]
+)) [51]
 \openout2 = `Chapter2/mofa.aux'.
 
  (./Chapter2/mofa.tex
 
-LaTeX Warning: Citation 'Argelaguet2018' on page 27 undefined on input line 5.
+LaTeX Warning: Citation 'Argelaguet2018' on page 52 undefined on input line 5.
 
 
 LaTeX Warning: Reference `section_gfa' on page 1 undefined on input line 12.
@@ -2796,31 +3443,26 @@ LaTeX Warning: Reference `section_gfa' on page 1 undefined on input line 12.
 
 LaTeX Warning: Reference `section_gfa' on page 1 undefined on input line 29.
 
-[27
+[52
 
 
 ]
 
-LaTeX Warning: Citation 'Mackay1996' on page 28 undefined on input line 40.
+LaTeX Warning: Citation 'Mackay1996' on page 53 undefined on input line 40.
 
 
-LaTeX Warning: Citation 'Mitchell1988' on page 28 undefined on input line 40.
+LaTeX Warning: Citation 'Mitchell1988' on page 53 undefined on input line 40.
 
 
-LaTeX Warning: Citation 'Titsias2011' on page 28 undefined on input line 44.
+LaTeX Warning: Citation 'Titsias2011' on page 53 undefined on input line 44.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 39--49
 
  []
 
-[28] [29] <Chapter2/Figs/MOFA.pdf, id=732, 1471.4975pt x 748.7975pt>
-File: Chapter2/Figs/MOFA.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/MOFA.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA.pdf used on input line 106.
-(pdftex.def)             Requested size: 466.62521pt x 237.4492pt.
- [30] (./graphical_models/mofa.tex
+[53] [54] <Chapter2/Figs/MOFA.pdf, id=808, 1471.4975pt x 748.7975pt> [55]
+(./graphical_models/mofa.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2850,376 +3492,667 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [31 <./Chapter2/Figs/MOFA.pdf>]
+) [56]
 
 LaTeX Warning: Reference `Appendix XX' on page 1 undefined on input line 120.
 
 
-LaTeX Warning: Citation 'Jaakkola2000' on page 32 undefined on input line 120.
+LaTeX Warning: Citation 'Jaakkola2000' on page 57 undefined on input line 120.
 
 
-LaTeX Warning: Citation 'Seeger2012' on page 32 undefined on input line 120.
+LaTeX Warning: Citation 'Seeger2012' on page 57 undefined on input line 120.
 
-<Chapter2/Figs/MOFA_robustness.pdf, id=993, 846.16125pt x 323.2075pt>
-File: Chapter2/Figs/MOFA_robustness.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/MOFA_robustness.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_robustness.pdf used on input line 1
-29.
-(pdftex.def)             Requested size: 466.62521pt x 178.23318pt.
- [32]
+<Chapter2/Figs/MOFA_robustness.pdf, id=820, 846.16125pt x 323.2075pt> [57]
 
 LaTeX Warning: Reference `ard' on page 1 undefined on input line 136.
 
-<Chapter2/Figs/MOFA_nfactors.pdf, id=1000, 375.4025pt x 311.1625pt>
-File: Chapter2/Figs/MOFA_nfactors.pdf Graphic file (type pdf)
+<Chapter2/Figs/MOFA_nfactors.pdf, id=827, 375.4025pt x 311.1625pt>
+<Chapter2/Figs/elbo_convergence.pdf, id=828, 243.83195pt x 224.32709pt>
+[58]
 
-<use Chapter2/Figs/MOFA_nfactors.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_nfactors.pdf used on input line 141
-.
-(pdftex.def)             Requested size: 233.3126pt x 193.3888pt.
+LaTeX Warning: Citation 'Seeger2012' on page 59 undefined on input line 160.
 
-<Chapter2/Figs/elbo_convergence.pdf, id=1001, 243.83195pt x 224.32709pt>
-File: Chapter2/Figs/elbo_convergence.pdf Graphic file (type pdf)
+[59]
 
-<use Chapter2/Figs/elbo_convergence.pdf>
-Package pdftex.def Info: Chapter2/Figs/elbo_convergence.pdf used on input line 
-152.
-(pdftex.def)             Requested size: 233.3126pt x 214.64983pt.
- [33 <./Chapter2/Figs/MOFA_robustness.pdf> <./Chapter2/Figs/MOFA_nfactors.pdf>]
+LaTeX Warning: Citation 'Seeger2012' on page 60 undefined on input line 173.
 
 
-LaTeX Warning: Citation 'Seeger2012' on page 34 undefined on input line 160.
-
-[34 <./Chapter2/Figs/elbo_convergence.pdf>]
-
-LaTeX Warning: Citation 'Seeger2012' on page 35 undefined on input line 173.
+LaTeX Warning: Citation 'Seeger2012' on page 60 undefined on input line 181.
 
 
-LaTeX Warning: Citation 'Seeger2012' on page 35 undefined on input line 181.
+LaTeX Warning: Citation 'Seeger2012' on page 60 undefined on input line 216.
 
 
-LaTeX Warning: Citation 'Seeger2012' on page 35 undefined on input line 216.
+LaTeX Warning: Citation 'Seeger2012' on page 60 undefined on input line 216.
 
 
-LaTeX Warning: Citation 'Seeger2012' on page 35 undefined on input line 216.
+LaTeX Warning: Citation 'Jaakkola2000' on page 60 undefined on input line 216.
 
 
-LaTeX Warning: Citation 'Jaakkola2000' on page 35 undefined on input line 216.
+LaTeX Warning: Citation 'Jaakkola2000' on page 60 undefined on input line 217.
+
+[60]
+
+LaTeX Warning: Citation 'Jaakkola2000' on page 61 undefined on input line 228.
 
 
-LaTeX Warning: Citation 'Jaakkola2000' on page 35 undefined on input line 217.
-
-[35]
-
-LaTeX Warning: Citation 'Jaakkola2000' on page 36 undefined on input line 228.
+LaTeX Warning: Citation 'Jaakkola2000' on page 61 undefined on input line 238.
 
 
-LaTeX Warning: Citation 'Jaakkola2000' on page 36 undefined on input line 238.
-
-
-LaTeX Warning: Citation 'Bishop' on page 36 undefined on input line 238.
+LaTeX Warning: Citation 'Bishop' on page 61 undefined on input line 238.
 
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-[36]
+[61]
 
-LaTeX Warning: Citation 'Seeger2012' on page 37 undefined on input line 256.
+LaTeX Warning: Citation 'Seeger2012' on page 62 undefined on input line 256.
 
-[37] <Chapter2/Figs/MOFA_learnK.pdf, id=1107, 1213.53375pt x 746.79pt>
-File: Chapter2/Figs/MOFA_learnK.pdf Graphic file (type pdf)
+[62] <Chapter2/Figs/MOFA_learnK.pdf, id=857, 1213.53375pt x 746.79pt>
 
-<use Chapter2/Figs/MOFA_learnK.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_learnK.pdf used on input line 282.
-(pdftex.def)             Requested size: 466.62521pt x 287.15608pt.
+LaTeX Warning: Citation 'Mo2013' on page 63 undefined on input line 290.
 
+[63] <Chapter2/Figs/MOFA_group_sparsity.pdf, id=865, 520.94624pt x 242.9075pt>
 
-LaTeX Warning: Citation 'Mo2013' on page 38 undefined on input line 290.
-
-[38 <./Chapter2/Figs/MOFA_learnK.pdf>]
-<Chapter2/Figs/MOFA_group_sparsity.pdf, id=1316, 520.94624pt x 242.9075pt>
-File: Chapter2/Figs/MOFA_group_sparsity.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/MOFA_group_sparsity.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_group_sparsity.pdf used on input li
-ne 294.
-(pdftex.def)             Requested size: 466.62521pt x 217.58061pt.
+LaTeX Warning: Citation 'Mo2013' on page 64 undefined on input line 297.
 
 
-LaTeX Warning: Citation 'Mo2013' on page 39 undefined on input line 297.
+LaTeX Warning: Citation 'Mo2013' on page 64 undefined on input line 297.
+
+<Chapter2/Figs/MOFA_sparsity.pdf, id=868, 505.89pt x 361.35pt> [64]
+<Chapter2/Figs/MOFA_nongaussian.pdf, id=876, 1582.91376pt x 2116.90875pt>
+[65]
+
+LaTeX Warning: Citation 'Chen2013' on page 66 undefined on input line 350.
 
 
-LaTeX Warning: Citation 'Mo2013' on page 39 undefined on input line 297.
-
-<Chapter2/Figs/MOFA_sparsity.pdf, id=1319, 505.89pt x 361.35pt>
-File: Chapter2/Figs/MOFA_sparsity.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/MOFA_sparsity.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_sparsity.pdf used on input line 308
-.
-(pdftex.def)             Requested size: 326.63622pt x 233.31433pt.
- [39 <./Chapter2/Figs/MOFA_group_sparsity.pdf>]
-<Chapter2/Figs/MOFA_nongaussian.pdf, id=1341, 1582.91376pt x 2116.90875pt>
-File: Chapter2/Figs/MOFA_nongaussian.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/MOFA_nongaussian.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_nongaussian.pdf used on input line 
-323.
-(pdftex.def)             Requested size: 419.95984pt x 561.62419pt.
- [40 <./Chapter2/Figs/MOFA_sparsity.pdf>]
-
-LaTeX Warning: Citation 'Chen2013' on page 41 undefined on input line 350.
+LaTeX Warning: Citation 'Costello2014' on page 66 undefined on input line 350.
 
 
-LaTeX Warning: Citation 'Costello2014' on page 41 undefined on input line 350.
+LaTeX Warning: Citation 'Alyass2015' on page 66 undefined on input line 350.
 
+[66]
 
-LaTeX Warning: Citation 'Alyass2015' on page 41 undefined on input line 350.
-
-[41 <./Chapter2/Figs/MOFA_nongaussian.pdf>]
-
-LaTeX Warning: Citation 'Dietrich2018' on page 42 undefined on input line 353.
+LaTeX Warning: Citation 'Dietrich2018' on page 67 undefined on input line 353.
 
 
 LaTeX Warning: Reference `fig:MOFA_CLL_Figure1' on page 1 undefined on input li
 ne 353.
 
 
-LaTeX Warning: Citation 'Love2014' on page 42 undefined on input line 370.
+LaTeX Warning: Citation 'Love2014' on page 67 undefined on input line 370.
 
 
-LaTeX Warning: Citation 'XXX' on page 42 undefined on input line 371.
+LaTeX Warning: Citation 'XXX' on page 67 undefined on input line 371.
 
 
-LaTeX Warning: Citation 'XXX' on page 42 undefined on input line 371.
+LaTeX Warning: Citation 'XXX' on page 67 undefined on input line 371.
 
 
-LaTeX Warning: Citation 'Dietrich2018' on page 42 undefined on input line 377.
+LaTeX Warning: Citation 'Dietrich2018' on page 67 undefined on input line 377.
 
-[42] <Chapter2/Figs/MOFA_CLL_overview.pdf, id=1763, 528.30676pt x 192.05049pt>
-File: Chapter2/Figs/MOFA_CLL_overview.pdf Graphic file (type pdf)
+[67] <Chapter2/Figs/MOFA_CLL_overview.pdf, id=894, 528.30676pt x 192.05049pt>
 
-<use Chapter2/Figs/MOFA_CLL_overview.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_overview.pdf used on input line
- 386.
-(pdftex.def)             Requested size: 466.62521pt x 169.63498pt.
-
-<Chapter2/Figs/MOFA_CLL_factors12.pdf, id=1764, 479.7925pt x 257.96375pt>
-File: Chapter2/Figs/MOFA_CLL_factors12.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/MOFA_CLL_factors12.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_factors12.pdf used on input lin
-e 402.
-(pdftex.def)             Requested size: 466.62521pt x 250.8858pt.
- [43 <./Chapter2/Figs/MOFA_CLL_overview.pdf>]
-
-LaTeX Warning: Citation 'Fabbri2016' on page 44 undefined on input line 412.
+LaTeX Warning: Citation 'Fabbri2016' on page 68 undefined on input line 397.
 
 
-LaTeX Warning: Citation 'Bulian2017' on page 44 undefined on input line 412.
+LaTeX Warning: Citation 'Bulian2017' on page 68 undefined on input line 397.
 
 
-LaTeX Warning: Citation 'Crombie2017' on page 44 undefined on input line 412.
+LaTeX Warning: Citation 'Crombie2017' on page 68 undefined on input line 397.
+
+[68] <Chapter2/Figs/MOFA_CLL_factors12.pdf, id=904, 479.7925pt x 257.96375pt>
+
+LaTeX Warning: Citation 'Fabbri2016' on page 69 undefined on input line 412.
 
 
-LaTeX Warning: Citation 'Damle1999' on page 44 undefined on input line 412.
+LaTeX Warning: Citation 'Fabbri2016' on page 69 undefined on input line 412.
 
 
-LaTeX Warning: Citation 'Oakes2016' on page 44 undefined on input line 414.
+LaTeX Warning: Citation 'Bulian2017' on page 69 undefined on input line 412.
 
 
-LaTeX Warning: Citation 'Queiros2015' on page 44 undefined on input line 414.
-
-<Chapter2/Figs/MOFA_IGHV_outlier.pdf, id=1799, 920.92659pt x 735.32817pt>
-File: Chapter2/Figs/MOFA_IGHV_outlier.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/MOFA_IGHV_outlier.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_IGHV_outlier.pdf used on input line
- 420.
-(pdftex.def)             Requested size: 466.62521pt x 372.58884pt.
- [44 <./Chapter2/Figs/MOFA_CLL_factors12.pdf>]
-
-LaTeX Warning: Citation 'Vasconcelos2005' on page 45 undefined on input line 42
-7.
+LaTeX Warning: Citation 'Crombie2017' on page 69 undefined on input line 412.
 
 
-LaTeX Warning: Citation 'Maloum2009' on page 45 undefined on input line 427.
+LaTeX Warning: Citation 'Queiros2015' on page 69 undefined on input line 413.
 
 
-LaTeX Warning: Citation 'Trojani2011' on page 45 undefined on input line 427.
+LaTeX Warning: Citation 'Vasconcelos2005' on page 69 undefined on input line 43
+5.
 
 
-LaTeX Warning: Citation 'Morabito2015' on page 45 undefined on input line 427.
+LaTeX Warning: Citation 'Morabito2015' on page 69 undefined on input line 435.
+
+[69] <Chapter2/Figs/MOFA_CLL_Factor1.pdf, id=912, 1061.41539pt x 812.92809pt>
+
+LaTeX Warning: Citation 'Fabregat2015' on page 70 undefined on input line 457.
 
 
-LaTeX Warning: Citation 'Plesingerova2017' on page 45 undefined on input line 4
-27.
-
-<Chapter2/Figs/MOFA_CLL_Factor1.pdf, id=1841, 1061.41539pt x 812.92809pt>
-File: Chapter2/Figs/MOFA_CLL_Factor1.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/MOFA_CLL_Factor1.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Factor1.pdf used on input line 
-433.
-(pdftex.def)             Requested size: 466.62521pt x 357.37935pt.
- [45 <./Chapter2/Figs/MOFA_IGHV_outlier.pdf>] [46 <./Chapter2/Figs/MOFA_CLL_Fac
-tor1.pdf>]
-
-LaTeX Warning: Citation 'Fabregat2015' on page 47 undefined on input line 452.
+LaTeX Warning: Citation 'Ashburner2000' on page 70 undefined on input line 457.
 
 
-LaTeX Warning: Citation 'Dempsey2010' on page 47 undefined on input line 457.
 
-<Chapter2/Figs/MOFA_CLL_Factor5.pdf, id=1994, 1061.41539pt x 812.92809pt>
-File: Chapter2/Figs/MOFA_CLL_Factor5.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/MOFA_CLL_Factor5.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Factor5.pdf used on input line 
-467.
-(pdftex.def)             Requested size: 466.62521pt x 357.37935pt.
- [47]
-
-LaTeX Warning: Citation 'Cox1972' on page 48 undefined on input line 483.
-
-[48 <./Chapter2/Figs/MOFA_CLL_Factor5.pdf>]
-<Chapter2/Figs/MOFA_CLL_Cox.pdf, id=2057, 1040.03558pt x 883.52386pt>
-File: Chapter2/Figs/MOFA_CLL_Cox.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/MOFA_CLL_Cox.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Cox.pdf used on input line 492.
-
-(pdftex.def)             Requested size: 419.95984pt x 356.76018pt.
- [49 <./Chapter2/Figs/MOFA_CLL_Cox.pdf>]
-
-LaTeX Warning: Citation 'Gelman2013' on page 50 undefined on input line 511.
+LaTeX Warning: Citation 'Frost2015' on page 70 undefined on input line 458.
 
 
-LaTeX Warning: Citation 'Mazumder2010' on page 50 undefined on input line 513.
+LaTeX Warning: Citation 'Frost2015' on page 70 undefined on input line 458.
+
+[70]
+
+LaTeX Warning: Citation 'Fabregat2015' on page 71 undefined on input line 460.
 
 
-LaTeX Warning: Citation 'Troyanskaya2001' on page 50 undefined on input line 51
-3.
+LaTeX Warning: Citation 'Dempsey2010' on page 71 undefined on input line 460.
 
-<Chapter2/Figs/MOFA_imputation.pdf, id=2131, 674.52pt x 353.32pt>
-File: Chapter2/Figs/MOFA_imputation.pdf Graphic file (type pdf)
+<Chapter2/Figs/MOFA_CLL_Factor5.pdf, id=918, 1019.18768pt x 660.35808pt>
+[71]
 
-<use Chapter2/Figs/MOFA_imputation.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_imputation.pdf used on input line 5
-18.
-(pdftex.def)             Requested size: 466.62521pt x 244.42723pt.
- [50 <./Chapter2/Figs/MOFA_imputation.pdf>]
+LaTeX Warning: Citation 'Cox1972' on page 72 undefined on input line 484.
 
-LaTeX Warning: Citation 'Stuart2019' on page 51 undefined on input line 530.
+<Chapter2/Figs/MOFA_CLL_Cox.pdf, id=925, 1040.03558pt x 883.52386pt> [72]
+
+LaTeX Warning: Citation 'Gelman2013' on page 73 undefined on input line 512.
+
+[73]
+
+LaTeX Warning: Citation 'Mazumder2010' on page 74 undefined on input line 515.
 
 
-LaTeX Warning: Citation 'Colome-Tatche2018' on page 51 undefined on input line 
+LaTeX Warning: Citation 'Troyanskaya2001' on page 74 undefined on input line 51
+5.
+
+<Chapter2/Figs/MOFA_imputation.pdf, id=938, 674.52pt x 353.32pt> [74]
+
+LaTeX Warning: Citation 'Stuart2019' on page 75 undefined on input line 530.
+
+
+LaTeX Warning: Citation 'Colome-Tatche2018' on page 75 undefined on input line 
 530.
 
 
-LaTeX Warning: Citation 'Chappell2018' on page 51 undefined on input line 530.
+LaTeX Warning: Citation 'Chappell2018' on page 75 undefined on input line 530.
 
 
-LaTeX Warning: Citation 'Angermueller2016' on page 51 undefined on input line 5
+LaTeX Warning: Citation 'Angermueller2016' on page 75 undefined on input line 5
 31.
 
 
-LaTeX Warning: Citation 'Ficz2013' on page 51 undefined on input line 531.
+LaTeX Warning: Citation 'Ficz2013' on page 75 undefined on input line 531.
 
 
-LaTeX Warning: Citation 'Tosolini2016' on page 51 undefined on input line 531.
+LaTeX Warning: Citation 'Tosolini2016' on page 75 undefined on input line 531.
 
 
-LaTeX Warning: Citation 'Lun2016b' on page 51 undefined on input line 535.
+LaTeX Warning: Citation 'Lun2016b' on page 75 undefined on input line 535.
 
 
-LaTeX Warning: Citation 'Lun2016a' on page 51 undefined on input line 535.
+LaTeX Warning: Citation 'Lun2016a' on page 75 undefined on input line 535.
 
 
-LaTeX Warning: Citation 'Mohammed2017' on page 51 undefined on input line 541.
+LaTeX Warning: Citation 'Mohammed2017' on page 75 undefined on input line 541.
 
 
-LaTeX Warning: Citation 'Angermueller2016' on page 51 undefined on input line 5
+LaTeX Warning: Citation 'Angermueller2016' on page 75 undefined on input line 5
 41.
 
 
-LaTeX Warning: Citation 'Auclair2014' on page 51 undefined on input line 541.
+LaTeX Warning: Citation 'Auclair2014' on page 75 undefined on input line 541.
 
 
-LaTeX Warning: Citation 'Fuchs1988' on page 51 undefined on input line 541.
+LaTeX Warning: Citation 'Fuchs1988' on page 75 undefined on input line 541.
 
-<Chapter2/Figs/MOFA_scMT.pdf, id=2157, 674.52pt x 525.965pt>
-File: Chapter2/Figs/MOFA_scMT.pdf Graphic file (type pdf)
+<Chapter2/Figs/MOFA_scMT.pdf, id=945, 674.52pt x 525.965pt> [75] [76]
 
-<use Chapter2/Figs/MOFA_scMT.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_scMT.pdf used on input line 546.
-(pdftex.def)             Requested size: 419.95984pt x 327.47531pt.
- [51] [52 <./Chapter2/Figs/MOFA_scMT.pdf>]
-
-LaTeX Warning: Citation 'Kuhn' on page 53 undefined on input line 587.
+LaTeX Warning: Citation 'Kuhn' on page 77 undefined on input line 587.
 
 
-LaTeX Warning: Citation 'Lin2017' on page 53 undefined on input line 587.
+LaTeX Warning: Citation 'Lin2017' on page 77 undefined on input line 587.
 
 
-LaTeX Warning: Citation 'Ding2018' on page 53 undefined on input line 587.
+LaTeX Warning: Citation 'Ding2018' on page 77 undefined on input line 587.
 
 
-LaTeX Warning: Citation 'Lopez2018' on page 53 undefined on input line 587.
+LaTeX Warning: Citation 'Lopez2018' on page 77 undefined on input line 587.
 
 
-LaTeX Warning: Citation 'Lopez2018' on page 53 undefined on input line 587.
+LaTeX Warning: Citation 'Lopez2018' on page 77 undefined on input line 587.
 
 
-LaTeX Warning: Citation 'Eraslan2019' on page 53 undefined on input line 587.
+LaTeX Warning: Citation 'Eraslan2019' on page 77 undefined on input line 587.
 
 
-LaTeX Warning: Citation 'Lin2016' on page 53 undefined on input line 587.
+LaTeX Warning: Citation 'Lin2016' on page 77 undefined on input line 587.
 
 
 Overfull \hbox (5.69876pt too wide) in paragraph at lines 587--588
 []\T1/cmr/m/n/10.95 (-20) ], batch correction[[]], de-nois-ing [[]] or im-pu-ta
--tion [[]].
+-tion [[]].|
  []
 
 
-LaTeX Warning: Citation 'Svensson2018' on page 53 undefined on input line 589.
+LaTeX Warning: Citation 'Svensson2018' on page 77 undefined on input line 589.
 
 
-LaTeX Warning: Citation 'Cao2019' on page 53 undefined on input line 589.
+LaTeX Warning: Citation 'Cao2019' on page 77 undefined on input line 589.
 
 
-LaTeX Warning: Citation 'Hoffman2013' on page 53 undefined on input line 590.
+LaTeX Warning: Citation 'Hoffman2013' on page 77 undefined on input line 590.
 
 
-LaTeX Warning: Citation 'Blei2016' on page 53 undefined on input line 590.
+LaTeX Warning: Citation 'Blei2016' on page 77 undefined on input line 590.
 
 
-LaTeX Warning: Citation 'Hoffman2014' on page 53 undefined on input line 590.
+LaTeX Warning: Citation 'Hoffman2014' on page 77 undefined on input line 590.
 
 
-LaTeX Warning: Citation 'Risso2018' on page 53 undefined on input line 596.
+LaTeX Warning: Citation 'Risso2018' on page 77 undefined on input line 596.
 
 
-LaTeX Warning: Citation 'Gelman2013' on page 53 undefined on input line 598.
+LaTeX Warning: Citation 'Gelman2013' on page 77 undefined on input line 598.
 
 
-LaTeX Warning: Citation 'Buettner2017' on page 53 undefined on input line 600.
+LaTeX Warning: Citation 'Buettner2017' on page 77 undefined on input line 600.
 
-[53]) [54]
+[77]) [78]
+\openout2 = `Chapter3/introduction.aux'.
+
+ (./Chapter3/introduction.tex
+Chapter 2.
+
+LaTeX Warning: Citation 'Rosalind2018' on page 79 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'Tam1997' on page 79 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'Solnica-Krezel2012' on page 79 undefined on input line
+ 7.
+
+
+LaTeX Warning: Citation 'Tam2007' on page 79 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'Arnold2009' on page 79 undefined on input line 9.
+
+
+LaTeX Warning: Citation 'Tam2007' on page 79 undefined on input line 9.
+
+
+LaTeX Warning: Citation 'Tam1997' on page 79 undefined on input line 9.
+
+
+LaTeX Warning: Citation 'Tam1993' on page 79 undefined on input line 9.
+
+
+LaTeX Warning: Citation 'Solnica-Krezel2012' on page 79 undefined on input line
+ 9.
+
+
+LaTeX Warning: Citation 'Schaum2018' on page 79 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'PijuanSala2019' on page 79 undefined on input line 15.
+
+
+
+LaTeX Warning: Citation 'Cao2019' on page 79 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'Regev2018' on page 79 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'PijuanSala2019' on page 79 undefined on input line 15.
+
+
+
+LaTeX Warning: Citation 'Mohammed2017' on page 79 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'Scialdone2016' on page 79 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'Ibarra-Soria2018' on page 79 undefined on input line 1
+5.
+
+
+LaTeX Warning: Citation 'Wen2017' on page 79 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'Cao2019' on page 79 undefined on input line 15.
+
+[79
+
+
+
+]
+
+LaTeX Warning: Citation 'Kelsey2017' on page 80 undefined on input line 19.
+
+
+LaTeX Warning: Citation 'Smith2012' on page 80 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Lee2014' on page 80 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Wu2016' on page 80 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Ke2017' on page 80 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Du2017' on page 80 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Tee2014' on page 80 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Hanna2018' on page 80 undefined on input line 24.
+
+
+LaTeX Warning: Citation 'Tee2014' on page 80 undefined on input line 24.
+
+
+LaTeX Warning: Citation 'Zhao2015' on page 80 undefined on input line 24.
+
+
+LaTeX Warning: Citation 'Bernstein2006' on page 80 undefined on input line 24.
+
+
+LaTeX Warning: Citation 'Tee2014' on page 80 undefined on input line 24.
+
+[80]
+
+LaTeX Warning: Citation 'Auclar2014' on page 81 undefined on input line 30.
+
+
+LaTeX Warning: Citation 'Zhang2017' on page 81 undefined on input line 30.
+
+
+LaTeX Warning: Citation 'Dai2016' on page 81 undefined on input line 30.
+
+
+LaTeX Warning: Citation 'Rulands2018' on page 81 undefined on input line 30.
+
+
+LaTeX Warning: Citation 'Atlasi2017' on page 81 undefined on input line 30.
+
+
+LaTeX Warning: Citation 'Auclair2014' on page 81 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'Okano1999' on page 81 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'Tsumura2006' on page 81 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'Heintzman2009' on page 81 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Atlasi2017' on page 81 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Vastenhouw2010' on page 81 undefined on input line 33.
+
+
+
+LaTeX Warning: Citation 'Atlasi2017' on page 81 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'Rada-Iglesias2011' on page 81 undefined on input line 
+33.
+
+
+LaTeX Warning: Citation 'Brinkman2012' on page 81 undefined on input line 34.
+
+
+LaTeX Warning: Citation 'Atlasi2017' on page 81 undefined on input line 34.
+
+
+LaTeX Warning: Citation 'Shan2017' on page 81 undefined on input line 34.
+
+
+LaTeX Warning: Citation 'Zhang2018' on page 81 undefined on input line 38.
+
+
+LaTeX Warning: Citation 'Zhang2018' on page 81 undefined on input line 38.
+
+
+LaTeX Warning: Citation 'Lee2015' on page 81 undefined on input line 38.
+
+
+LaTeX Warning: Citation 'Dai2016' on page 81 undefined on input line 38.
+
+[81]
+
+LaTeX Warning: Citation 'Guo2017' on page 82 undefined on input line 40.
+
+
+LaTeX Warning: Citation 'Wang2019' on page 82 undefined on input line 40.
+
+
+LaTeX Warning: Citation 'Liu2019' on page 82 undefined on input line 40.
+
+
+LaTeX Warning: Citation 'Rulands2018' on page 82 undefined on input line 40.
+
+) [82]
+\openout2 = `Chapter3/results.aux'.
+
+ (./Chapter3/results.tex
+
+LaTeX Warning: Citation 'Argelaguet2019' on page 83 undefined on input line 8.
+
+
+LaTeX Warning: Reference `XXX' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Reference `XXX' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Reference `XXX' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Reference `Chapter1' on page 1 undefined on input line 12.
+
+<Chapter3/Figs/dataset_overview.pdf, id=984, 1593.955pt x 1260.71pt>
+
+LaTeX Warning: Citation 'McInnes2018' on page 83 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Argelaguet2018' on page 83 undefined on input line 23.
+
+
+
+LaTeX Warning: Citation 'McInnes2018' on page 83 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Argelaguet2018' on page 83 undefined on input line 23.
+
+
+[83
+
+
+] [84] <Chapter3/Figs/metacc_dimred.pdf, id=997, 571.63562pt x 315.67938pt>
+
+LaTeX Warning: Citation 'Pijuan-Sala2019' on page 85 undefined on input line 52
+.
+
+
+LaTeX Warning: Citation 'Haghverdi2018' on page 85 undefined on input line 52.
+
+
+LaTeX Warning: Citation 'Kiselev2017' on page 85 undefined on input line 53.
+
+<Chapter3/Figs/rna_lineage_assignment.pdf, id=999, 800.55789pt x 739.1595pt>
+
+LaTeX Warning: Citation 'Kiselev2017' on page 85 undefined on input line 64.
+
+
+LaTeX Warning: Citation 'Kiselev2017' on page 85 undefined on input line 64.
+
+[85]
+
+LaTeX Warning: Reference `fig:met_acc_heatmaps' on page 1 undefined on input li
+ne 70.
+
+
+LaTeX Warning: Citation 'Auclair2014' on page 86 undefined on input line 70.
+
+
+LaTeX Warning: Citation 'Zhang2017' on page 86 undefined on input line 70.
+
+[86] <Chapter3/Figs/metacc_heatmaps.pdf, id=1013, 576.22577pt x 160.6pt>
+<Chapter3/Figs/metacc_boxplots.pdf, id=1014, 694.595pt x 652.4375pt>
+
+LaTeX Warning: Citation 'Bourgon2010' on page 87 undefined on input line 92.
+
+
+LaTeX Warning: Reference `xxx' on page 1 undefined on input line 94.
+
+[87] <Chapter3/Figs/metacc_vs_rna_cor.pdf, id=1022, 510.73409pt x 183.7796pt>
+[88] <Chapter3/Figs/mofa_overview.pdf, id=1029, 1378.14874pt x 821.0675pt>
+[89]
+
+LaTeX Warning: Citation 'Xiang2020' on page 90 undefined on input line 124.
+
+<Chapter3/Figs/chip_seq.pdf, id=1036, 538.01pt x 236.885pt>
+
+LaTeX Warning: Citation 'Creyghton2010' on page 90 undefined on input line 130.
+
+
+
+LaTeX Warning: Citation 'Liang2004' on page 90 undefined on input line 130.
+
+
+LaTeX Warning: Citation 'Creyghton2010' on page 90 undefined on input line 130.
+
+
+
+LaTeX Warning: Citation 'Liang2004' on page 90 undefined on input line 130.
+
+[90]
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+<Chapter3/Figs/mofa_results.pdf, id=1041, 1350.39503pt x 323.24463pt> [91]
+
+LaTeX Warning: Reference `XXXXX' on page 1 undefined on input line 165.
+
+
+LaTeX Warning: Citation 'Tosic2019' on page 92 undefined on input line 182.
+
+[92] <Chapter3/Figs/motif_enrichment.pdf, id=1053, 1112.05466pt x 329.71582pt>
+<Chapter3/Figs/enhancers_metacc_profiles.pdf, id=1055, 1287.81125pt x 649.24055
+pt> [93]
+<Chapter3/Figs/enhancers_metacc_umap.png, id=1063, 1219.6767pt x 649.9482pt>
+[94] [95]
+
+LaTeX Warning: Citation 'Feng2014' on page 96 undefined on input line 238.
+
+
+<Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf, id=1079, 611.09303pt x 194.058pt>
+[96]
+<Chapter3/Figs/pluri_vs_midbrain_metacc.pdf, id=1089, 736.7525pt x 429.605pt>
+[97]
+
+LaTeX Warning: Citation 'Munoz2002' on page 98 undefined on input line 278.
+
+
+LaTeX Warning: Citation 'Hemmati-Brivanlou1997' on page 98 undefined on input l
+ine 278.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 282.
+
+<Chapter3/Figs/metacc_diagram.pdf, id=1096, 448.65416pt x 392.55861pt>
+
+LaTeX Warning: Citation 'Tosci2019' on page 98 undefined on input line 293.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--298
+
+ []
+
+<Chapter3/Figs/mesendoderm_dynamics.pdf, id=1099, 1114.1625pt x 720.6925pt>
+[98] [99]
+
+LaTeX Warning: Citation 'Rasmussen2016' on page 100 undefined on input line 322
+.
+
+
+LaTeX Warning: Citation 'Dai2016' on page 100 undefined on input line 323.
+
+
+LaTeX Warning: Citation 'Sardina2018' on page 100 undefined on input line 323.
+
+
+LaTeX Warning: Citation 'Rasmussen2016' on page 100 undefined on input line 323
+.
+
+
+LaTeX Warning: Citation 'Li2016' on page 100 undefined on input line 323.
+
+[100]
+
+LaTeX Warning: Citation 'Haghverdi2018' on page 101 undefined on input line 328
+.
+
+<Chapter3/Figs/EB_rna_celltypes.pdf, id=1115, 1325.69276pt x 769.33621pt>
+<Chapter3/Figs/EB_rna_markers.pdf, id=1116, 538.13246pt x 437.635pt> [101]
+<Chapter3/Figs/EB_metacc_global.pdf, id=1123, 459.94437pt x 322.16261pt>
+[102] <Chapter3/Figs/EB_metacc_profiles.pdf, id=1129, 633.2719pt x 252.945pt>
+[103]
+<Chapter3/Figs/EB_metacc_WTvsKO_boxplots.pdf, id=1137, 706.10303pt x 590.1759pt
+> [104]
+
+LaTeX Warning: Citation 'Dai2016' on page 105 undefined on input line 410.
+
+
+LaTeX Warning: Citation 'Munoz2002' on page 105 undefined on input line 419.
+
+
+LaTeX Warning: Citation 'Hemmati-Brivanlou1997' on page 105 undefined on input 
+line 419.
+
+
+Overfull \hbox (33.35391pt too wide) in paragraph at lines 418--420
+\T1/cmr/m/n/10.95 (-20) in the ab-sence of ex-ter-nal stim-uli, ESCs dif-fer-en
+-ti-ate to neu-rons [[], []],|
+ []
+
+[105]
+
+LaTeX Warning: Citation 'Angermueller2017' on page 106 undefined on input line 
+430.
+
+
+LaTeX Warning: Citation 'PijuanSala2019' on page 106 undefined on input line 43
+4.
+
+[106]) [107] [108
+
+
+]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 61.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
-(./thesis.aux (./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
-(./Chapter2/factor_analysis.aux) (./Chapter2/mofa.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 190.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 190.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
+(./thesis.aux (./Introduction/introduction.aux) (./Chapter1/introduction.aux)
+(./Chapter1/scnmt-seq.aux) (./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
+(./Chapter2/factor_analysis.aux) (./Chapter2/mofa.aux)
+(./Chapter3/introduction.aux) (./Chapter3/results.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 196.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2BFE7B4A1ABA7144AE9E96BC923C9D62;15306.
+(rerunfilecheck)             Checksum: 2D1D5BF98878346C67DF9683AFD39CC0;30878.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3240,13 +4173,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38210 strings out of 493014
- 699274 string characters out of 6133351
- 1190568 words of memory out of 5000000
- 40604 multiletter control sequences out of 15000+600000
- 40476 words of font info for 209 fonts, out of 8000000 for 9000
+ 38723 strings out of 493014
+ 711164 string characters out of 6133351
+ 1212007 words of memory out of 5000000
+ 40853 multiletter control sequences out of 15000+600000
+ 43989 words of font info for 236 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,18n,92p,1217b,1213s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,18n,92p,1551b,1483s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
@@ -3277,13 +4210,15 @@ fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/texmf-dist/fo
 nts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/font
 s/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
-pe1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
-1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
-public/stmaryrd/stmary10.pfb>
-Output written on thesis.pdf (56 pages, 18059917 bytes).
+pe1/public/cm-super/sfti1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
+1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
+public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
+blic/cm-super/sftt1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
+ic/stmaryrd/stmary10.pfb>
+Output written on thesis.pdf (110 pages, 817537 bytes).
 PDF statistics:
- 2492 PDF objects out of 2984 (max. 8388607)
- 1462 compressed objects within 15 object streams
- 173 named destinations out of 1000 (max. 500000)
- 37458 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 1375 PDF objects out of 1440 (max. 8388607)
+ 1119 compressed objects within 12 object streams
+ 307 named destinations out of 1000 (max. 500000)
+ 40563 words of extra memory for PDF output out of 42996 (max. 10000000)
 

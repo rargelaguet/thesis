@@ -4,7 +4,10 @@
 %\documentclass[a4paper,11pt,times,custombib,print,index,custommargin]{Classes/PhDThesisPSnPDF}
 
 % Online version
-\documentclass[a4paper,11pt,times,custombib,custommargin]{Classes/PhDThesisPSnPDF}
+%\documentclass[a4paper,11pt,times,custombib,custommargin]{Classes/PhDThesisPSnPDF}
+\documentclass[a4paper,11pt,times,custombib,custommargin,draftclassic]{Classes/PhDThesisPSnPDF}
+
+
 
 % ******************************************************************************
 % ******************************* Class Options ********************************
@@ -149,9 +152,12 @@
 % ******************************** Main Matter *********************************
 \mainmatter
 
+% Introduction
+\include{Introduction/introduction}
+
 % Chapter 1
-%\include{Chapter1/introduction}
-%\include{Chapter1/scnmt-seq}
+\include{Chapter1/introduction}
+\include{Chapter1/scnmt-seq}
 
 % Chapter 2
 \include{Chapter2/introduction}
@@ -160,8 +166,8 @@
 \include{Chapter2/mofa}
 
 % Chapter 3
-%\include{Chapter3/introduction}
-%\include{Chapter3/results}
+\include{Chapter3/introduction}
+\include{Chapter3/results}
 
 % ********************************** Appendices ********************************
 
