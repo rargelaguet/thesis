@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  24 MAR 2020 15:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  25 MAR 2020 18:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -14,12 +14,6 @@ LaTeX Warning: You have requested document class `Classes/PhDThesisPSnPDF',
 Document Class: PhDThesisPSnPDF 2016/04/23 A PhD thesis class file by Krishna K
 umar (v2.3.1)
 https://github.com/kks32/phd-thesis-template/
-
-Class PhDThesisPSnPDF Warning: Draft is ON. Don't forget to turn it off in your
- final version. This is the classic version of draft. Use `draft' for enhanced 
-mode, which adds watermark with timestamp, line numbering, and version number. 
-on input line 238.
-
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/bk11.clo
@@ -1781,16 +1775,14 @@ File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 \@quotelevel=\count388
 \@quotereset=\count389
 
-(./thesis.aux (./Introduction/introduction.aux) (./Chapter1/introduction.aux)
-(./Chapter1/scnmt-seq.aux) (./Chapter2/introduction.aux) (./Chapter2/bayes.aux)
-(./Chapter2/factor_analysis.aux
+(./thesis.aux (./Chapter4/introduction.aux
 
-LaTeX Warning: Label `fig:bayesianFA' multiply defined.
+LaTeX Warning: Label `fig:mofa2_scmet_factor1' multiply defined.
 
 
-LaTeX Warning: Label `fig:bayesianFA@cref' multiply defined.
+LaTeX Warning: Label `fig:mofa2_scmet_factor1@cref' multiply defined.
 
-) (./Chapter2/mofa.aux) (./Chapter4/introduction.aux))
+))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
@@ -1808,8 +1800,7 @@ LaTeX Font Info:    ... okay on input line 129.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 129.
 
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 129.
@@ -1943,17 +1934,12 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 133.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 \PHD@crest=\box97
 
-<Figs/University_Crest.pdf, id=356, 59.22125pt x 69.25874pt>
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 133.
+<Figs/University_Crest.pdf, id=87, 59.22125pt x 69.25874pt>
+File: Figs/University_Crest.pdf Graphic file (type pdf)
 
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+<use Figs/University_Crest.pdf>
+Package pdftex.def Info: Figs/University_Crest.pdf used on input line 133.
+(pdftex.def)             Requested size: 93.32361pt x 109.14542pt.
 \PHD@collegecrest=\box98
 \PHD@author=\box99
 \PHD@supervisor=\box100
@@ -1964,7 +1950,8 @@ Package microtype Info: Loading generic settings for font family
 \PHD@titlepagespacing=\skip84
  [1
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figs/
+University_Crest.pdf>] [2
 
 ]
 \openout2 = `Chapter4/introduction.aux'.
@@ -1973,91 +1960,311 @@ Package microtype Info: Loading generic settings for font family
 (./Chapter4/introduction.tex
 Chapter 1.
 
-LaTeX Warning: Citation 'Bishop2006' on page 1 undefined on input line 15.
+LaTeX Warning: Citation 'Bishop2006' on page 1 undefined on input line 17.
 
 
-LaTeX Warning: Citation 'Murphy' on page 1 undefined on input line 15.
+LaTeX Warning: Citation 'Murphy' on page 1 undefined on input line 17.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.18 \end{equation}
+l.20 \end{equation}
                     [1
 
 
 ]
 
-LaTeX Warning: Citation 'Ranganath2013' on page 2 undefined on input line 19.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--20
-
- []
-
-
-LaTeX Warning: Citation 'Spall2003' on page 2 undefined on input line 21.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-
- []
-
-
 LaTeX Warning: Citation 'Robbins-Monro1951' on page 2 undefined on input line 2
-8.
+5.
+
+
+LaTeX Warning: Citation 'Spall2003' on page 2 undefined on input line 34.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.55 \end{equation}
-                    [2]
+l.62 
+      [2]
 
 LaTeX Warning: Reference `fig:problem_with_Euclidean_distances' on page 1 undef
-ined on input line 57.
+ined on input line 75.
 
 
-LaTeX Warning: Citation 'Amari1998' on page 3 undefined on input line 71.
+LaTeX Warning: Citation 'Amari1998' on page 3 undefined on input line 89.
 
 
-LaTeX Warning: Citation 'Martens2014' on page 3 undefined on input line 71.
+LaTeX Warning: Citation 'Martens2014' on page 3 undefined on input line 89.
 
 
-LaTeX Warning: Citation 'Amari1998' on page 3 undefined on input line 79.
+LaTeX Warning: Citation 'Amari1998' on page 3 undefined on input line 96.
 
 
-LaTeX Warning: Citation 'Kristiadi2019' on page 3 undefined on input line 79.
+LaTeX Warning: Citation 'Kristiadi2019' on page 3 undefined on input line 96.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--89
+LaTeX Warning: Citation 'Kristiadi2019' on page 3 undefined on input line 108.
+
+
+LaTeX Warning: Citation 'Amari1998' on page 3 undefined on input line 108.
+
+
+LaTeX Warning: Citation 'Hoffman2012' on page 3 undefined on input line 108.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+[3]
+
+LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
+(Font)              using `U/stmry/m/n' instead on input line 117.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--120
 
  []
 
 
-LaTeX Warning: Citation 'Kristiadi2019' on page 3 undefined on input line 90.
+<Chapter4/Figs/simulations/mofa2_overview.pdf, id=133, 1471.37706pt x 1130.6641
+pt>
+File: Chapter4/Figs/simulations/mofa2_overview.pdf Graphic file (type pdf)
+ <use Chapter4/Figs/simulations/mofa2_overview.pdf>
+Package pdftex.def Info: Chapter4/Figs/simulations/mofa2_overview.pdf used on i
+nput line 127.
+(pdftex.def)             Requested size: 396.63428pt x 304.78307pt.
+ [4]
 
+LaTeX Warning: Citation 'Titsias2011' on page 5 undefined on input line 142.
 
-LaTeX Warning: Citation 'Amari1998' on page 3 undefined on input line 90.
+[5 <./Chapter4/Figs/simulations/mofa2_overview.pdf>] [6]
+(./graphical_models/mofa2.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+)
 
+LaTeX Warning: Citation 'Zhao2009' on page 7 undefined on input line 215.
 
-LaTeX Warning: Citation 'Hoffman2012' on page 3 undefined on input line 90.
-
-
-LaTeX Warning: Citation 'Argelaguet2018' on page 3 undefined on input line 96.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 228--231
 
  []
 
 
-Overfull \hbox (6.81598pt too wide) in paragraph at lines 150--150
+LaTeX Warning: Citation 'Hore2015-thesis' on page 8 undefined on input line 232
+.
+
+
+Overfull \hbox (6.8607pt too wide) in paragraph at lines 232--233
+[]\T1/cmr/m/n/10.95 (-20) Sparsity as-sump-tions, how-ever, par-tially ad-dress
+ the ro-ta-tional in-vari-ance prob-lem [[]].
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+[8]
+<Chapter4/Figs/simulations/mofa2_stochastic_validation.pdf, id=204, 1089.44014p
+t x 650.43pt>
+File: Chapter4/Figs/simulations/mofa2_stochastic_validation.pdf Graphic file (t
+ype pdf)
+ <use Chapter4/Figs/simulations/mofa2_stochastic_validation.pdf>
+Package pdftex.def Info: Chapter4/Figs/simulations/mofa2_stochastic_validation.
+pdf used on input line 255.
+(pdftex.def)             Requested size: 443.29253pt x 264.6633pt.
+
+<Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf, id=205, 576.1525pt x 505
+.89pt>
+File: Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf Graphic file (type p
+df)
+ <use Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf>
+Package pdftex.def Info: Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf u
+sed on input line 267.
+(pdftex.def)             Requested size: 396.63428pt x 348.2771pt.
+ [9 <./Chapter4/Figs/simulations/mofa2_stochastic_validation.pdf>]
+<Chapter4/Figs/simulations/mofa2_multigroup_validation.pdf, id=599, 421.575pt x
+ 312.83574pt>
+File: Chapter4/Figs/simulations/mofa2_multigroup_validation.pdf Graphic file (t
+ype pdf)
+ <use Chapter4/Figs/simulations/mofa2_multigroup_validation.pdf>
+Package pdftex.def Info: Chapter4/Figs/simulations/mofa2_multigroup_validation.
+pdf used on input line 288.
+(pdftex.def)             Requested size: 373.30159pt x 277.01953pt.
+
+[10 <./Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf>]
+
+LaTeX Warning: Citation 'Pijuan-Sala2019' on page 11 undefined on input line 30
+2.
+
+
+<Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf, id=619, 882.29625pt x 
+272.01625pt>
+File: Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf Graphic file (type
+ pdf)
+ <use Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf>
+Package pdftex.def Info: Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf
+ used on input line 308.
+(pdftex.def)             Requested size: 443.29253pt x 136.66772pt.
+
+[11 <./Chapter4/Figs/simulations/mofa2_multigroup_validation.pdf>]
+
+LaTeX Warning: Citation 'Argelaguet2020' on page 12 undefined on input line 321
+.
+
+
+<Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pdf, id=649, 622.42535pt x
+ 396.42606pt>
+File: Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pdf Graphic file (typ
+e pdf)
+ <use Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pdf>
+Package pdftex.def Info: Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pd
+f used on input line 325.
+(pdftex.def)             Requested size: 396.63428pt x 252.62299pt.
+
+[12 <./Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf>]
+<Chapter4/Figs/scrna/mofa2_scrna_mesoderm_factor.pdf, id=683, 615.29875pt x 390
+.45876pt>
+File: Chapter4/Figs/scrna/mofa2_scrna_mesoderm_factor.pdf Graphic file (type pd
+f)
+ <use Chapter4/Figs/scrna/mofa2_scrna_mesoderm_factor.pdf>
+Package pdftex.def Info: Chapter4/Figs/scrna/mofa2_scrna_mesoderm_factor.pdf us
+ed on input line 337.
+(pdftex.def)             Requested size: 396.63428pt x 251.70395pt.
+
+<Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf, id=684, 582.175pt x 445
+.1872pt>
+File: Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf Graphic file (type 
+pdf)
+ <use Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf>
+Package pdftex.def Info: Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf 
+used on input line 349.
+(pdftex.def)             Requested size: 396.63428pt x 303.30748pt.
+
+
+LaTeX Warning: Citation 'Fabregat2015' on page 13 undefined on input line 355.
+
+
+LaTeX Warning: Citation 'Fabregat2015' on page 13 undefined on input line 355.
+
+[13 <./Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pdf> <./Chapter4/Fig
+s/scrna/mofa2_scrna_mesoderm_factor.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter4/Figs/scrna/mofa2_
+scrna_mesoderm_factor.pdf): PDF inclusion: multiple pdfs with page group includ
+ed in a single page
+>]
+Overfull \hbox (6.81598pt too wide) in paragraph at lines 364--364
 []\T1/cmr/bx/n/12 Identification of context-dependent methy-la-tion sig-na-ture
-s as-so-ci-ated with|
+s as-so-ci-ated with
  []
 
-) [3] [4]
+
+LaTeX Warning: Citation 'Luo2018' on page 14 undefined on input line 368.
+
+
+LaTeX Warning: Citation 'He2015' on page 14 undefined on input line 368.
+
+[14 <./Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf>]
+
+LaTeX Warning: Reference `XXX' on page 1 undefined on input line 372.
+
+
+<Chapter4/Figs/scmet/mofa2_scmet_datastructure.pdf, id=1161, 495.18301pt x 226.
+178pt>
+File: Chapter4/Figs/scmet/mofa2_scmet_datastructure.pdf Graphic file (type pdf)
+
+ <use Chapter4/Figs/scmet/mofa2_scmet_datastructure.pdf>
+Package pdftex.def Info: Chapter4/Figs/scmet/mofa2_scmet_datastructure.pdf used
+ on input line 376.
+(pdftex.def)             Requested size: 396.63428pt x 181.17386pt.
+
+<Chapter4/Figs/scmet/mofa2_scmet_r2.pdf, id=1162, 781.92125pt x 159.59625pt>
+File: Chapter4/Figs/scmet/mofa2_scmet_r2.pdf Graphic file (type pdf)
+
+<use Chapter4/Figs/scmet/mofa2_scmet_r2.pdf>
+Package pdftex.def Info: Chapter4/Figs/scmet/mofa2_scmet_r2.pdf used on input l
+ine 386.
+(pdftex.def)             Requested size: 396.63428pt x 80.95709pt.
+
+
+LaTeX Warning: Reference `mofa2_scmet_factor1' on page 1 undefined on input lin
+e 391.
+
+[15 <./Chapter4/Figs/scmet/mofa2_scmet_datastructure.pdf> <./Chapter4/Figs/scme
+t/mofa2_scmet_r2.pdf>]
+<Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf, id=1213, 701.42754pt x 240.9pt>
+File: Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf Graphic file (type pdf)
+
+<use Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf>
+Package pdftex.def Info: Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf used on in
+put line 395.
+(pdftex.def)             Requested size: 396.63428pt x 136.22269pt.
+
+
+LaTeX Warning: Reference `mofa2_scmet_factor3' on page 1 undefined on input lin
+e 403.
+
+File: Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf Graphic file (type pdf)
+<use Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf>
+Package pdftex.def Info: Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf used on in
+put line 407.
+(pdftex.def)             Requested size: 396.63428pt x 136.22269pt.
+
+<Chapter4/Figs/scmet/mofa2_scmet_dimred.pdf, id=1214, 761.84625pt x 360.34625pt
+>
+File: Chapter4/Figs/scmet/mofa2_scmet_dimred.pdf Graphic file (type pdf)
+ <use Chapter4/Figs/scmet/mofa2_scmet_dimred.pdf>
+Package pdftex.def Info: Chapter4/Figs/scmet/mofa2_scmet_dimred.pdf used on inp
+ut line 416.
+(pdftex.def)             Requested size: 396.63428pt x 187.60106pt.
+ [16 <./Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf>]) [17 <./Chapter4/Figs/scm
+et/mofa2_scmet_dimred.pdf>]
+[18
+
+
+]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 61.
 See the caption package documentation for explanation.
@@ -2067,15 +2274,12 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
 (./thesis.aux (./Chapter4/introduction.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 201.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 42D6FC31581FE82127995FC7C7D48DAC;5532.
 
 
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: CD6A10E6729AB58BBB4BC9AFA8816878;25391
-(rerunfilecheck)             After:  270A41BF2CB0FCAB3090571B275183CD;3943.
 
 LaTeX Warning: There were undefined references.
 
@@ -2092,272 +2296,44 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37392 strings out of 493014
- 685490 string characters out of 6133351
- 1195579 words of memory out of 5000000
- 40102 multiletter control sequences out of 15000+600000
- 21904 words of font info for 80 fonts, out of 8000000 for 9000
+ 37600 strings out of 493014
+ 689719 string characters out of 6133351
+ 1160350 words of memory out of 5000000
+ 40259 multiletter control sequences out of 15000+600000
+ 34258 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,15n,92p,1198b,851s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.2.4.3} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.4.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.4.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.2.4} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.2.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.2.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.1.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.1.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.2.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.2} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.9.11} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.10.1} has been referenced but doe
-s not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.9.10} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.9.9} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.8.6} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.8.5} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.8.4} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.8.3} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.8.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.8.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.9.8} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.7.4} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.7.3} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.7.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.7.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.9.7} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.9.6} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.9.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.9.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.9.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.2.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.9.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.1.5} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.1.4} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.1.3} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.1.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.9.1.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.9.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.9} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.8.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.8.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.8.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.8.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.8} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.7.4.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.7.4.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.7.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.7.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.7.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.7.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.7} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.6} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.5.5.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.5.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.5.4.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.5.4.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.5.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.5.3.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.5.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.5.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.5.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.5} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2.6} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.3.3} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.3.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.3.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.1.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.1.2.2} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.1.2.1} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.0.1.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.0.1.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.0.1.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.0.1} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf
--dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis.pdf (6 pages, 297444 bytes).
+ 57i,15n,92p,1131b,1213s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/f
+onts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/public/cm-super/sfti1200.pfb>
+Output written on thesis.pdf (20 pages, 20130591 bytes).
 PDF statistics:
- 516 PDF objects out of 1000 (max. 8388607)
- 462 compressed objects within 5 object streams
- 99 named destinations out of 1000 (max. 500000)
- 17098 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 13901 PDF objects out of 15390 (max. 8388607)
+ 6969 compressed objects within 70 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 30446 words of extra memory for PDF output out of 35830 (max. 10000000)
 
