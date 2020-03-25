@@ -17,9 +17,9 @@ Formally, the input data is factorised as:
 \end{equation}
 where $\bfZ \in \R^{N \times K}$ is a matrix that contains the factor values and $\bfW^m \in \R^{D_m \times K}$ are a set of $M$ matrices (one per view) that contain the weights that relate the high-dimensional space to the low-dimensional latent representation. Finally, $\bepsilon^m \in \R^{D_m}$ captures the residuals, or the noise, which is assumed to be normally distributed and heteroskedastic:
 \begin{equation}
-	p(\epsilon^m_d) = \Ndist{\epsilon^m_d}{0,1/\tau_d^m}
+	p(\epsilon^{m}_{d}) = \Ndist{\epsilon^{m}_{d}}{0,1/\tau_{d}^{m}}
 \end{equation}
-Non-gaussian noise models can also be defined (see \Cref{section:mofa_ngaussian}), but unless otherwise stated, we will always assume Gaussian noise.\\
+Non-gaussian noise models can also be defined (see \Cref{section:mofa_ngaussian}), but unless otherwise stated, we will always assume Gaussian residuals.\\
 Altogether, this results in the following likelihood:
 \begin{equation}
 	p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{d=1}^{D_m} \prod_{n=1}^{N} \Ndist{y_{nd}^m}{\bfz_{n}^T\bfw_{d}^{m},1/\tau_d^m}
@@ -42,9 +42,9 @@ In addition, we place a second layer of sparsity which encourages inactive weigh
 % 	p(w_{dk}^{m}) = (1-\theta_{k}^{m}) \mathds{1}_0(w_{dk}^{m}) + \theta_{k}^{m} \Ndist{w_{dk}^{m}}{0, 1 / \alpha_{k}^{m}}
 % \end{equation*}
 However, this formulation of the spike-and-slab prior contains a Dirac delta function, which makes the inference procedure troublesome. To solve this we introduce a re-parametrization of the weights $w$ as a product of a Gaussian random variable $\hat{w}$ and a Bernoulli random variable $s$, \cite{Titsias2011} resulting in the following prior:
-% \begin{equation}
-% 	p(\hat{w}_{dk}^m,s_{dk}^m) &= \Ndist{\hat{w}_{dk}^m}{0, 1/\alpha_k^m}  \text{Ber}(s_{dk}^m \,|\,\theta_k^m)
-% \end{equation}
+\begin{equation}
+	p(\hat{w}_{dk}^m,s_{dk}^m) &= \Ndist{\hat{w}_{dk}^m}{0, 1/\alpha_k^m}  \text{Ber}(s_{dk}^m \,|\,\theta_k^m)
+\end{equation}
 In this formulation $\alpha_k^m$ controls the activity of factor $k$ in view $m$ and $\theta_k^m$ controls the corresponding fraction of active weights (i.e. the sparsity levels).\\
 
 Finally, we define conjugate priors for $\theta$ and $\alpha$:
