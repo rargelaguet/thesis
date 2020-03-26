@@ -1,6 +1,5 @@
 \graphicspath{{Chapter4/Figs/simulations/}{Chapter4/Figs/scrna/}{Chapter4/Figs/scmet/}{Chapter4/Figs/scnmt/}}
 
-
 \chapter{MOFA+: an improved framework for the comprehensive integration of structured single-cell data}
 
 In Chapter 2 we developed Multi-Omics Factor Analysis (MOFA), a statistical framework for the unsupervised integration of multi-modal data. \\
@@ -9,24 +8,73 @@ In addition to the increase in the number of cells, the increased experimental t
 
 In this new Chapter we improve the first model formulation with the aim of performing integrative analysis of large-scale datasets simultaneously across multiple data modalities and across multiple groups.
 
+
 \section{Theoretical fundations}
 
+\subsection{Exponential family distributions} \label{section:exponential_family}
+
+Exponential family distributions are a parametric class of probability distributions that have a characteristic set of mathematical properties which make them amenable for probabilistic modelling.\\
+Most of the commonly used probability distributions belong to the exponential family, including the normal or Gaussian, gamma, Poisson, bernoulli, exponential, etc.
+
+Exponential family distributions can be summarised in the following form:
+\begin{equation}
+	p(\bfx|\btheta) = h(\bfx) \exp \{ \eta(\btheta) T(\bfx) - A(\btheta) \}
+\end{equation}
+where $\bfx$ is a multivariate random variable and $\btheta$ are the distribution's parameters. Each one of the term has a common notation:
+\begin{itemize}
+	\item T(\bfx): the sufficient statistics.
+	\item $\eta(\btheta)$: the natural parameters.
+	\item $h(\bfx)$: the base mesure.
+	\item $A(\eta)$: the log-partition function (or the normaliser).
+\end{itemize}
+In the context of Bayesian inference, the major property that make exponential family distributions useful for statistical modelling is that they have conjugate priors. Just as a reminder for the reader, a conjugate prior is a combination of likelihood and prior distributions which ensure a closed-form posterior distribution which is of the same form as the prior. As we have discussed in Chapter 2, this property is crucial for enabling efficient statistical inference, otherwise posterior distributions must be computed using expensive and approximate numerical methods.
+
+The exponential family form for the probability distributions frequently used in this thesis are the following:
+
+Univariate normal distribution:
+\begin{align*}
+	& \eta(\mu,\sigma) = \lbrack \frac{\mu}{\sigma^2}; -\frac{1}{2\sigma^2} \rbrack \\
+	& h(x) = \frac{1}{\sqrt{2\pi}} \\
+	& T(x) = \lbrack x; x^2 \rbrack \\
+	& A(\mu,\sigma) = \frac{\mu^2}{2\sigma^2} + \log \| \sigma \|
+\end{align*}
+
+Multivariate normal distribution:
+\begin{align*}
+	& \eta(\bmu,\bSigma)  = \lbrack\Sigma^{-1} \mu; -0.5\Sigma^{-1} \rbrack \\
+	& T(x) = \lbrack x; xx^T \rbrack \\
+	& h(x) = (2\pi)^{-\frac{k}{2}} \\
+	& A(\theta) = -0.25\eta_1^T \eta_2{-1} \eta_1 - 0.5\log(\|-2\eta_2\|)
+\end{align*}
+
+Gamma distribution:
+\begin{align*}
+	& \eta = \lbrack \alpha - 1; -\beta \rbrack \\
+	& T(x) = \lbrack \log x; x \rbrack \\
+	& h(x) = 1 \\
+	& A(\theta) = \log(\Gamma(\eta_1 + 1)) - (\eta_1 + 1) \log(-\eta_2)
+\end{align*}
+
+Beta distribution:
+\begin{align*}
+	& \eta = [\alpha; \beta] \\
+	& T(x) = [\log x; \log (1-x)] \\
+	& h(x) = \frac{1}{x(1-x)} \\
+	& A(\theta) = \log(\Gamma(\eta_1)) +\log(\Gamma(\eta_2)) - \log(\Gamma(\eta_1+\eta_2))
+\end{align*}
+
+
 \subsection{Gradient ascent} \label{section:gradient_ascent}
-% THIS IS ALL COPIED
 
 Gradient ascent is a first-order optimization algorithm for finding the (local) maximum of a function \cite{Bishop2006,Murphy}. Formally, for a differentiable function $F(x)$, the iterative scheme of gradient ascent is:
 \begin{equation} \label{gradient_ascent}
 	\bfx^{(t+1)} = \bfx^{(t)} + \rho^{(t)} \nabla F(\bfx^{(t)})
 \end{equation}
-Simply speaking, it works by taking steps proportional to the gradient $\nabla F$ evaluated at each iteration $t$. This leads to a monotonic sequence:
+In short, it works by taking steps proportional to the gradient $\nabla F$ evaluated at each iteration $t$. This leads to a monotonic sequence:
 \[
 	\bfx^{0} \leq \bfx^{1} \leq \bfx^{1} \cdots 
 \]
 Importantly, the step size $\rho^{(t)}$ is typically adjusted at each iteration $t$ such that it satisfies the Robbins-Monro conditions: $\sum_t \rho^{(t)} = \infty \text{ and } \sum_t (\rho^{(t)})^2 < \infty$. Then $F$ is guaranteed to converge to the global maximum \cite{Robbins-Monro1951} if the objective function is convex. If $F$ is not convex, the algorithm is sensible to the initialisation $\bfx^{t=0}$ and can converge to local maxima instead of the global maximum.
-
-Gradient ascent is appealing because of its simplicity, but 
-
-
 
 
 \subsubsection{Stochastic gradient ascent} \label{section:stochastic_gradient_ascent}
@@ -40,12 +88,13 @@ The iterative scheme is then defined in the same way as in standard gradient asc
 
 %In practice, the stochastic nature of the algorithm makes the optimisation trajectory more wiggly and typically requires a larger number of iterations than standard gradient ascent. However, the reduced computational cost in computing the gradients yields an overall faster training time
 
-\subsection{Natural gradient ascent} \label{section:natural_gradient_ascent}
+% Copied from hoffman
+% Under the right conditions, stochastic optimization algorithms provably converge to an optimum of the objective. Stochastic optimization is particularly attractive when the objective (and therefore its gradient) is a sum of many terms that can be computed independently. In that setting, we can cheaply compute noisy gradients by subsampling only a few of these terms.
+
+
+\subsubsection{Natural gradient ascent} \label{section:natural_gradient_ascent}
 
 Gradient descent becomes problematic when it comes to doing inference in probabilistic models. 
-
-%The gradients are calculated with respect to the objective function, and they represent the direction in which we can update our parameters to get the biggest change in our objective function 
-% THIS IS ALL COPIED
 
 Consider a probabilistic model with a hidden variable $x$ and corresponding parameters $\theta$, with a general objective function $\Lagr(\theta)$. From the definition of a derivative:
 \[
@@ -108,395 +157,103 @@ where $\bfF(\theta)$ is defined as
 In conclusion, while the standard gradient points to the direction of steepest ascent in Euclidean space, the natural gradient points to the direction of steepest ascent in a space where distances are defined by the KL divergence \cite{Kristiadi2019,Amari1998,Hoffman2012}.
 
 
-\section{Model description}
+\subsection{Derivation of a stochastic variational inference algorithm}
 
-In MOFA v2 we generalise the model to a disjoint set of $M$ input views (i.e. groups of features) and $G$ input groups (i.e. groups of samples).\\
+In this section I will show how to derive a stochastic variational inference algorithm for general Bayesian models. This work is inspired from \cite{Hoffman2012} which we adapted and implemented in the MOFA model.\\
+This section builds upon three theoretical fundations that have been introduced before: Variational inference (\Cref{XXXX}), exponential family distributions (\Cref{section:exponential_family}) and (natural) gradient ascent (\Cref{section:gradient_ascent}).
 
-The data is factorised according to the following model:
-\begin{equation} \label{mofa_master_equation}
-	\mathbf{Y}^{m}_{g} = \mathbf{Z}_{g} \mathbf{W}^{mT} + \bepsilon^{m}_{g}
-\end{equation}
-where  $\bfZ_{g} \in \R^{N_{g} \times K}$ are a set of $G$ matrices that contains the factor values for the $g$-th group and $\bfW^{m} \in \R^{D_m \times K}$ are a set of $M$ matrices that define the feature weights for the $m$-th view. $\bepsilon^{m}_{g} \in \R^{D_m}$ captures the residuals, or the noise for each feature in ech group.\\
+In this section I will not aim to recount a comprehensive derivation of the algorithm. I will describe a modified and simplified derivation of the main elements that are essential to understand the algorithm. For a complete mathematical derivation we refer the reader to \cite{Hoffman2012}.
 
+% COPIED
+%The stochastic nature of the approach is interesting when one dimension of the matrix of observed variables is much larger than the others. In our case, it corresponds to $N$, the number of samples (or cells). \\
 
-EXPLAIN INTUITION
-REGRESSED OUT GROUP EFFECT
+\subsubsection{Model definition}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_overview}
-	\caption[]{ \\
-	\textbf{Multi-Omics Factor Analysis v2 (MOFA+) provides an unsupervised framework for the integration of multi-group and multi-view single-cell data.} \\
-	(a) Model overview: the input consists of multiple data sets structured into M views and G groups. Views consist of non-overlapping sets of features that can represent different assays. Analogously, groups consist of non-overlapping sets of samples that can represent different conditions or experiments. Missing values are allowed in the input data. MOFA+ exploits the dependencies between the features to learn a low-dimensional representation of the data (Z) defined by K latent factors that capture the global sources of molecular variability. For each factor, the weights (W) link the high-dimensional space with the low-dimensional manifold and provide a measure of feature importance. The sparsity-inducing priors on both the factors and the weights enable the model to disentangle variation that is unique to or shared across the different groups and views. Model inference is performed using GPU-accelerated stochastic variational inference. \\
-	(b) The trained MOFA+ model can be queried for a range of downstream analyses: 3D variance decomposition, quantifying the amount of variance explained by each factor in each group and view, inspection of feature weights, visualisation of factors and other applications such as clustering, inference of non-linear differentiation trajectories, denoising and feature selection.
-	}
-	\label{fig:mofa2_overview}
-\end{figure}
+Consider a probabilistic model with a set of unobserved random variables, observations and (non-random) parameters. We begin by classifying the variables of the model into four different categories:
 
+% what about the params for the local variables???
+\begin{itemize}
+	\itemsep-1.5em
+	\item observations ($\bfY$): $N$ different vectors $\bfy_{n}$ which contain the observed variables for the $n$-th sample. \\
+	\item local (hidden) variables ($\bfZ)$: $N$ different vectors $\bfz_{n}$ which contain all $K$ hidden variables associated with each sample $n$. \\
+	\item global (hidden) variables ($\bbeta$): one vector that contains all $B$ hidden variables not indexed by $n$. \\
+	\item parameters ($\balpha$): a vector that contains all fixed parameters for the global variables.
+\end{itemize}
 
-
-\subsection{Model priors and likelihood}
-
-\subsubsection{Prior on the weights}
-
-This remains the same as in MOFA v1. We adopt a two-level sparsity prior with an Automatic Relevance Determination per factor and view, and a feature-wise spike-and-slab prior (reparametrised\cite{Titsias2011}):
-\begin{equation}
-	p(\hat{w}_{dk}^m,s_{dk}^m) = \Ndist{\hat{w}_{dk}^{m}}{0, 1/\alpha_{k}^{m}}  \text{Ber}(s_{dk}^{m} \,|\,\theta_{k}^{m})
-\end{equation}
-with the corresponding conjugate priors for $\theta$ and $\alpha$:
-\begin{align}
-	p(\theta_k^m) &= \Bdist{\theta_k^m}{a_0^\theta,b_0^\theta}\\
-	p(\alpha_k^m) &= \Gdist{\alpha_k^m}{a_0^\alpha, b_0^\alpha}
-\end{align}
-
-The aim of the ARD prior is to disentangle the activity of factors to the different views, such that the weight vector $\bfw_{:,k}^m$ is shrunk to zero if the factor $k$ does not explain any variation in view $m$. The aim of the spike-and-slab prior is to push individual weights to zero to yield a more interpretable solution.\\
-For more details, we refer the reader to Chapter 2.
-
-
-\subsubsection{Prior on the factors}
-
-In MOFA v1 we adopted an isotropic Gaussian prior:
-\begin{equation}
-	p(z_{nk}) = \Ndist{z_{nk}}{0,1}
-\end{equation}
-which assumes \textit{a priori} an unstructured latent space. This is the assumption that we want to break. Following the same logic as in the factor and view-wise ARD prior, the integration of multiple groups of samples requires introducing a \textit{structured} prior that captures the existence of different groups, such that some factors are allowed to be active in different subsets of groups.
-
-To formalise the intuition above we simply need to copy the double sparsity prior from the weights to the factors:
-\begin{align}
-	p(\hat{z}_{nk}^g,s_{nk}^g) &= \mathcal{N} (\hat{z}_{nk}^g \,|\, 0, 1/\alpha_k^g)\, \text{Ber}(s_{nk}^g \,|\,\theta_k^g) \\
-	p(\theta_k^g) &= \Bdist{\theta_k^g}{a_0^\theta,b_0^\theta} \\
-	p(\alpha_k^g) &= \Gdist{\alpha_k^g}{a_0^\alpha, b_0^\alpha},
-\end{align}
-where $g$ is the index of the sample groups.\\
-Notice that the spike-and-slab prior is introduced for completeness but is not necessarily required, and can be disabled by fixing $\E[\theta_k^g]=1$.
-
-\subsubsection{Prior on the noise}
-
-The variable $\bepsilon$ captures the residuals, or the noise, which is assumed to be normally distributed and heteroskedastic. In MOFA v2 we generalise the noise to have an estimate per individual feature and per group:
-\begin{align}
-	p(\epsilon^{m}_{g}) &= \Ndist{\epsilon^{m}_{g}}{0,/\tau^{m}_{g}\I_{Dm}} \\
-	p(\tau^{m}_{g}) &= \prod_{d=1}^{D_m} \Gdist{\tau^{m}_{g}}{a_0^\tau, b_0^\tau}
-\end{align}
-% \begin{align}
-% 	p(\epsilon^{m,g}_d) &= \Ndist{\epsilon^{m,g}_d}{0,1/\tau_d^{m,g}} \\
-% 	p(\tau_{d}^{m,g}) &= \Gdist{\tau_{d}^{m,g}}{a_0^{\tau}, b_0^{\tau}}
-% \end{align}
-This formulation is important to capture the (realistic) events where a specific feature may be highly variable in one group but non-variable in another group.\\
-In addition, as in MOFA v1, non-gaussian noise models can also be defined, but unless otherwise stated, we will always assume Gaussian residuals.
-
-
-% \subsubsection{Likelihood}
-
-% Altogether, this results in the following likelihood:
-% \begin{equation}
-% 	p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{d=1}^{D_m} \prod_{n=1}^{N} \Ndist{y_{nd}^m}{\bfz_{n}^T\bfw_{d}^{m},1/\tau_d^m}
-% 	% p(y_{nd}^m) = \Ndist{y_{nd}^m}{\bfz_{n,:}\bfw_{d,:}^{mT},1/\tau_d^m},
-% \end{equation}
-
-\subsubsection{Graphical model}
-
-In summary, the updated model formulation introduces asymmetric sparsity prior in both the weights and the factors, which enables the model to simultaneously integrate multiple views as well as multiple groups of samples:
+This is the corresponding graphical model representation:
 
 \begin{figure}[H]
 	\centering	
-	% \begin{center}
-	\input{graphical_models/mofa2}
-	\caption{\textbf{Graphical model for MOFA+}ºº
-	.The white circles represent hidden variables that are inferred by the model, whereas the grey circles represent the observed variables. There are a total of five plates, each one representing a dimension of the model: $M$ for the number of views, $G$ for the number of groups, $K$ for the number of factors, $D_m$ for the number of features in view $m$ and $N_g$ for the number of samples in group $g$ 
+	\input{graphical_models/general_stochastic}
+	\caption{\textbf{Graphical model for a general probabilistic model where unobserved variables are classified as global or local variables.}\\
 	}
-	\label{fig:MOFA2}
-	% \end{center}
+	\label{fig:graphical_model_stochastic}
 \end{figure}
 
-
-% COPIED
-\subsection{Solving the rotational invariance problem}
-
-Conventional Factor Analysis is invariant to rotation in the latent space\cite{Zhao2009}. To demonstrate this property, let us apply an arbitrary rotation to the loadings and the factors, specified by the rotation matrix $\bfR \in \R^{K \times K}$:
-\begin{align*}
-		\tilde{\bfZ} &= \bfZ \bfR^{-1} \\
-		\tilde{\bfW} &= \bfR \bfW
-\end{align*}
-
-First, note that the model likelihood is unchanged by this rotation, irrespective of the prior distribution used.
-\begin{equation*}
-		p(\bfY | \tilde{\bfZ} \tilde{\bfW}, \tau) = p(\bfY | \bfZ \bfR^{-1} \bfR \bfW, \tau) = p(\bfY | \bfZ \bfW, \tau)
-\end{equation*}
-However, the prior distributions of the factors and the loadings are only invariant to rotations when using isotropic Normal priors:
-\begin{equation*}
-	\ln p(\bfW) \propto \sum_{k=1}^{K} \sum_{d=1}^{D} w_{d,k}^2 = \mathrm{Tr}(\bfW^T \bfW) = \mathrm{Tr}(\bfW^T \bfR^{-1} \bfR \bfW) = \mathrm{Tr}(\tilde{\bfW^T} \tilde{\bfW})
-\end{equation*}
-where we have used the property $\bfR^{T} = \bfR^{-1}$ that applies to rotation matrices. The same derivation follows for the factors $\bfZ$.\\
-In practice, this property renders conventional Factor Analysis unidentifiable, as shown using simulations in Figure SX (TO-FILL), hence limiting its interpretation and applicability.\\
-
-Sparsity assumptions, however, partially address the rotational invariance problem~\cite{Hore2015-thesis}. When using independent identically distributed spike-and-slab priors the proof above cannot be applied, hence making the proposed factor analysis model not rotationally invariant.\\
-
-It is important to remark that the factors are nonetheless invariant to permutations. This implies that under different initial conditions, the order of the factors is not necessarily the same in independent model fittings. To address this we manually sort factors \textit{a posteriori} based on total variance explained.
-
-
-
-\subsection{GPU-accelerated stochastic variational inference}
-
-
-\section{Model validation}
-
-We validated the new features of MOFA+ using simulated data drawn from its generative model.
-
-\subsection{Stochastic variational inference}
-
-We simulated data with varying sample sizes, with the other dimensions fixed to $M=3$ views, $G=3$ groups, $D=1000$ features (per view), and $K=25$ factors.
-
-We trained a set of models with (deterministic) variational inference (VI) and a set of models with stochastic variational inference (SVI). Overall, we observe that SVI yields Evidence Lower Bounds that matched those obtained from conventional inference across a range of batch sizes, learning rates and forgetting rates.\\
-In terms of speed, GPU-accelerated SVI inference was up to $\approx$ 20x faster than VI, with speed differences becoming more pronounced with increasing number of cells. For completeness, we also compared the the convergence time estimates for SVI when using CPU versus GPU. We observe that for large sample sizes there is a speed improvement even when using CPUs, although these advantages become more prominent when using GPUs.
-
-% COPIED
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\linewidth]{mofa2_stochastic_validation}
-	\caption[]{
-	\textbf{Validation of stochastic variational inference using simulated data.} \\
-	(a) Line plots display the iteration number of the inference (x-axis) and the log- Evidence Lower Bound (ELBO) on the y-axis. Panels correspond to different values of batch sizes (10\%, 25\%, 50\% of the data) and initial learning rates (0.05, 0.25, 0.5, 0.75). Colors correspond to different forgetting rates (0.05, 0.25, 0.5, 0.75, 1.0). The dashed horizontal line indicates the ELBO achieved using standard VI. \\
-	(b) Bar plots display the forgetting rate (x-axis) and the total variance explained (\%) in the y-axis. Panels correspond to different values of batch sizes (10\%, 25\%, 50\% of the data) and initial learning rates (0.05, 0.25, 0.5, 0.75). The dashed line indicates the variance explained achieved using standard VI. 
-	}
-	\label{fig:mofa2_stochastic_validation}
-\end{figure}
-
-% COPIED
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_stochastic_speed}
-	\caption[]{
-	\textbf{Evaluation of convergence speed for stochastic variational inference using simulated data.} \\
-	Bar plots show the time elapsed for training MOFA+ models with  stochastic variational inference (SVI). Colors represent different batch sizes (10\%, 25\% or 50\%). The dashed line indicates the training time for standard VI.\\
-	VI models were trained using a single E5-2680v3 CPU. SVI models were trained either using a single E5-2680v3 CPU (first column) or using an Nvidia GTX 1080Ti GPU (second column). 
-	}
-	\label{fig:mofa2_stochastic_speed}
-\end{figure}
-
-
-
-\subsection{Multi-group structure}
-
-Finally, we evaluated whether the double view and group-wise sparsity prior enables the detection of factors with simultaneous differential activity between groups and views.\\
-We simulated data with the following parameters: $M=2$ modalities, $G=2$ groups, $D=1000$ features, $N=1000$ samples and $K=10$ factors. Differential factor activities are incorporated in the simulation process by turning some factors off in random sets of modalities and groups (\Cref{fig:mofa2_multigroup_validation}, see ground truth). The task is to recover the true factor activity structure given a random initialisation.\\
-We fit three models: Bayesian Factor Analysis (no sparsity priors), MOFA v1 (only view-wise sparsity prior) and MOFA+ (view-wise and group-wise sparsity prior). 
-Indeed, we observe that when having factors that explain differing amounts of variance across groups and across views, MOFA+ was able to more accurately reconstruct the true factor activity patterns:
-
-% COPIED
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.80\linewidth]{mofa2_multigroup_validation}
-	\caption[]{
-	\textbf{Validation of group-wise ARD prior in the factors using simulated data.} \\
-	Representative example of the resulting variance explained patterns. The first row of heatmaps correspond to modality 0 and the second row to modality 1. In each heatmap, the first column corresponds to group 0 and the second column to group 1. Rows correspond to the inferred factors. The colour scale displays the percentage of variance explained by a given factor in a given modality and group. The heatmaps displayed in columns one to three show the solutions yielded by different models (Bayesian Factor Analysis; MOFA; MOFA+). The ground truth is shown in the right panel. 
-	}
-	\label{fig:mofa2_multigroup_validation}
-\end{figure}
-
-
-
-\section{Applications}
-
-\subsection{Integration of a heterogeneous time-course single-cell RNA-seq dataset}
-
-To demonstrate the novel multi-group integration framework, we considered a time course scRNA-seq dataset comprising 16,152 cells that were isolated from a total of 8 mouse embryos from developmental stages E6.5, E7.0 and E7.25 (two biological replicates per stage), encompassing post-implantation and early gastrulation\cite{Pijuan-Sala2019}. This data set, which has been introduced in Chapter 3, consists on a single view (RNA expression) but with a clear group structure where cells belongs to different biological replicates at different time points. Different embryos are expected to contain similar subpopulations of cells but also some differences due to developmental progression. As a proof of principle, we used MOFA+ to disentangle stage-specific transcriptional signatures from signatures that are shared across all stages. 
-
-MOFA+ identified 7 Factors that explain at least 1\% of variance (across all groups). Notably, this latent representation captures between 35\% and 55\% of the total transcriptional heterogeneity per embryo:
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\linewidth]{mofa2_scrna_variance_explained}
-	\caption[]{
-	\textbf{MOFA+ variance explained estimates in the gastrulation scRNA-seq atlas.} \\
-	(a) Heatmap displays the variance explained (\%) for each factor (rows) in each group (pool of mouse embryos at a specific developmental stage, columns). The bar plots show the variance explained per group with all factors. \\
-	(b) Cumulative variance explained (per group, y-axis) versus factor number (x-axis). Asterisks indicate the factors that are selected for downstream analysis (minimum of 1\% variance explained).
-	}
-	\label{fig:mofa2_scrna_variance_explained}
-\end{figure}
-
-
-\subsubsection{Characterisation of individual factors}
-
-Some factors recover the existence of post-implantation developmental cell types, including extra-embryonic (ExE) tissue (Factor 1 and Factor 2), and the emergence of mesoderm cells from the primitive streak (Factor 4). Consistently, the top weights for these factors are enriched for lineage-specific gene expression markers, including \textit{Ttr} and \textit{Apoa1} for ExE endoderm \Cref{fig:mofa2_scrna_ExE_endoderm_factor}; \textit{Rhox5} and \textit{Bex3} for ExE ectoderm (not shown); \textit{Mesp1} and \textit{Phlda2} for nascent mesoderm \Cref{fig:mofa2_scrna_mesoderm_factor}. Other factors captured technical variation due to metabolic stress that affects all batches in a similar fashion (Factor 3, \Cref{fig:mofa2_scrna_metabolism_factor}).\\
-The characterisation of other factors is described in\cite{Argelaguet2020} and is not reproduced here for simplicity.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scrna_ExE_endoderm_factor}
-	\caption[]{
-	\textbf{Characterisation of Factor 1 as extra-embryonic (ExE) endoderm formation.} \\
-	(a) Beeswarm plot of Factor values for each group. Cells are grouped and coloured by cell type. \\
-	(b) Plot of gene weights. Highlighted are the top five genes with largest weight (in absolute values) \\
-	(c) Beeswarm plot of Factor values for each group. Cells are coloured by the expression of the two genes with largest weight (in absolute values).
-	}
-	\label{fig:mofa2_scrna_ExE_endoderm_factor}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scrna_mesoderm_factor}
-	\caption[]{ \\
-	\textbf{Characterisation of Factor 4 as mesoderm commitment.} \\
-	(a) Beeswarm plot of Factor values for each group. Cells are grouped and coloured by cell type. \\
-	(b) Plot of gene weights. Highlighted are the top five genes with largest weight (in absolute values) \\
-	(c) Beeswarm plot of Factor values for each group. Cells are coloured by the expression of the two genes with largest weight (in absolute values).
-	}
-	\label{fig:mofa2_scrna_mesoderm_factor}
-\end{figure} 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scrna_metabolism_factor}
-	\caption[]{ \\
-	\textbf{Characterisation of Factor 3 as cell-to-cell differences in metabolic activity.} \\
-	(a) Beeswarm plot of Factor values for each group. Cells are grouped and coloured by cell type. \\
-	(b) Plot of gene weights. Highlighted are the top seven genes with largest weight (in absolute values) \\
-	(c) Gene set enrichment analysis applied to the gene weights using the Reactome gene sets\cite{Fabregat2015}. Significance is assessed via a parametric. Resulting p-values were adjusted for multiple testing using the Benjamini-Hochberg procedure.
-	}
-	\label{fig:mofa2_scrna_metabolism_factor}
-\end{figure}
-
-Interestingly, Factors display differeent signatures of activity (variance explained) across developmental stages. For example, the variance explained by Factor 1 remains constant across developmental progression (\Cref{fig:mofa2_scrna_variance_explained}), indicating that commitment to ExE endoderm fate occurs early in the embryo and the proportion of this cell type remains relatively constant. In contrast, the activity of Factor 4 increases with developmental progression, consistent with a higher proportion of cells committing to mesoderm after ingression through the primitive streak. 
-
-In conclusion, this application shows how MOFA+ can identify biologically relevant structure in \textit{structured} scRNA-seq datasets.
-
-
-\subsection{Identification of context-dependent methylation signatures associated with cellular diversity in the mammalian cortex}
-
-As a second use case, we considered how MOFA+ can be used to investigate cellular heterogeneity  in epigenetic signatures between populations of neurons. This application illustrates how a multi-group and multi-view structure can be defined from seemingly uni-modal data.
-
-We considered a data set of of 3,069 cells isolated from the frontal cortex of young adult mouse, where DNA methylation was profiled using single-cell bisulfite sequencing\cite{Luo2018}.\\Some background to motivate our experimental design: in mammalian genomes, DNA methylation predominantly occurs at CpG dinucleotides (mCG), with more than 75\% of CpG sites being methylated in differentiated cell types. By contrast non-CpG methylation (mCH) has been historically dismissed as methodological artifact of incomplete bisulfite conversion, until recent works have confirmed their existence in restricted cell types. Yet, evidence for a potential functional role remains controversial\cite{He2015}.
-
-Here we used MOFA+ to dissect the cellular heterogeneity associated with mCH and mCG in the mouse frontal cortex. As input data we quantified mCH and mCG levels at gene bodies, promoters and putative enhancer elements. Each combination of genomic and sequence context was defined as a separate view.\\
-As described in Chapters 1 and 3, methylation levels were calculated per cell and genomic feature using a binomial model where the number of successes correspond to the number of reads that support methylation (or accessibility) and the number of trials the total number of reads.\\
-Finally, to explore the influence of the neuron's location we grouped cells according to their cortical layer: Deep, Middle or Superficial (\Cref{Luo2017}). Notably, the resulting data set is extremely sparse, which hampers the use of conventional dimensionality reduction techniques.The probabilistic framework underlying MOFA+ naturally enables the handling of missing values by ignoring the corresponding terms in the likelihood function.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scmet_datastructure}
-	\caption[]{}
-	\label{fig:mofa2_scmet_datastructure}
-\end{figure}
-%Figure S7: Overview of the single-cell DNA methylation data set. The tile plot shows the structure of the input data in terms of modalities (rows) versus groups (columns), with associated dimensionalities (D for features, N for samples). The color displays the fraction of missing values for each combination of sample and modality.
-
-
-% Copied from bioRxiv
-MOFA+ identifies 10 factors with a minimum variance explained of 1\% in at least one data modality. 
-
-% TO REWRITE
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scmet_r2}
-	\caption[]{
-	\textbf{MOFA+ variance explained estimates in the frontal cortex DNA methylation data set.} \\
-	(a) Percentage of variance explained for each factor across the different groups (cortical layer, x-axis) and views (genomic context, y-axis). For simplicity, only the first three factors are shown. \\
-	(b) Cumulative variance explained (per group, y-axis) versus factor number (x-axis). Asterisks indicate the factors that are selected for downstream analysis (minimum of 1\% variance explained in at least one data modality).
-	}
-	\label{fig:mofa2_scmet_r2}
-\end{figure}
-
-Factor 1, the major source of variation, is linked to the existence of inhibitory and excitatory neurons, the two major classes of neurons (\Cref{mofa2_scmet_factor1}). This factor shows significant mCG activity across all cortical layers, mostly driven by coordinated changes in enhancer elements, but to some extent also gene bodies.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scmet_factor1}
-	\caption[]{
-	\textbf{Characterisation of Factor 1 as DNA methylation signatures distinguishing inhibitory versus excitatory cell types.} \\
-	(a) Beeswarm plots of Factor values per group (cortical layer). In the left plot, cells are coloured by neuron class. In the middle and right plots the cells are coloured by average mCG and mCH levels (\%), respectively, of the top 100 enhancers with the largest weights. \\
-	(b) Correlation of enhancer mCG weights (x-axis) and mCH weights (y-axis)
-	}
-	\label{fig:mofa2_scmet_factor1}
-\end{figure}
-
-
-Factor 2 captures genome-wide differences in global mCH levels (R=0.99, not shown), most likely to be a technical source of variation.
-
-% TO REWRITE
-Factor 3 captures heterogeneity linked to the increased cellular diversity along cortical depth, with the Deep layer displaying significantly more diversity of excitatory cell types than the Superficial layer (\Cref{mofa2_scmet_factor3}).  
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scmet_factor1}
-	\caption[]{
-	\textbf{Characterisation of Factor 3 as increased cellular diversity along cortical depth.} \\
-	(a) Beeswarm plots of Factor values per group (cortical layer). In the left plot, cells are coloured by neuron class. In the middle and right plots the cells are coloured by average mCG and mCH levels (\%), respectively, of the top 100 enhancers with the largest weights. \\
-	(b) Correlation of enhancer mCG weights (x-axis) and mCH weights (y-axis)
-	}
-	\label{fig:mofa2_scmet_factor1}
-\end{figure}
-
-The (linear) MOFA factors can be combined by further non-linear dimensionality reduction algorithms such as UMAP or t-SNE. In this case, we show that the UMAP projections reveals the existence of multiple subpopulations of both excitatory and inhibitory cell types. Notably, the MOFA+ factors are significantly better at identifying these subpopulations than the conventional approach of using Principal Component Analysis with imputed measurements.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scmet_dimred}
-	\caption[]{
-	\textbf{Comparison of MOFA+ Factors and Principal Components as input to t-SNE.}\\
-	The scatterplots display t-SNE projections when using as input MOFA+ factors (left) or principal components (right). Each dot represents a cell, coloured by cell type assignments. To ensure a fair comparison we used the same number of PCs and MOFA+ Factors ($K=15$). Feature-wise imputation of missing values is applied for the PCA.
-	}
-	\label{fig:mofa2_scmet_dimred}
-\end{figure}
-
-
-
-% TO REWRITE
-Interestingly, in addition to the dominant mCG signal, MOFA+ connects Factor 1 and Factor 3 to variation in mCH, which suggest a role of mCH in cellular diversity. We hypothesise that this could be supported if the genomic regions that show mCH signatures are different than the ones marked the conventional mCG signatures. To investigate this, we correlated the mCH and mCG feature loadings for each factor and genomic context (Figure 3e and Figure S14). In all cases we observe a strong positive dependency, indicating that mCH and mCG signatures are spatially correlated and target similar loci.
-Taken together, these results supports the hypothesis that mCH and mCG tag the same genomic loci and are associated with the same sources of variation, suggesting that the presence of mCH may be the result of non-specific \textit{de novo} methylation as a by-product of the establishment of mCG
-
-
-
-% \subsection{Identification of molecular signatures of lineage commitment during mammalian embryogenesis}
-
-% \begin{figure}[H]
-% 	\centering
-% 	\includegraphics[width=0.85\linewidth]{xxx}
-% 	\caption[]{}
-% 	\label{fig:xxx}
-% \end{figure}
-%Figure S13. Overview of multi-omic atlas of mouse gastrulation generated using scNMT-seq. 
-%(a) Structure of the input data in terms of modalities (x-axis) versus samples (y-axis). Each panel corresponds to a different group (embryonic stage). Grey bars represent missing modalities.
-%(b) Structure of the missing values in the data. For each cell and modality, the colour displays the fraction of missing values.
-
-
-% \begin{figure}[H]
-% 	\centering
-% 	\includegraphics[width=0.85\linewidth]{xxx}
-% 	\caption[]{}
-% 	\label{fig:xxx}
-% \end{figure}
-% \textbf{MOFA+ integrates multi-modal scNMT-seq experiments to reveal epigenetic signatures associated with lineage commitment during mammalian embryogenesis.} \\
-% (a-b) Characterisation of Factor 1 as ExE endoderm formation and Factor 2 as Mesoderm commitment. Top left plot shows the percentage of variance explained by the factor across the different views (rows) and groups (embryonic stages, as columns). Bottom left plot shows the distribution of factor values for each stage, coloured by cell type assignment. Histograms display the distribution of DNA methylation and chromatin accessibility weights for promoters and enhancer elements. \\
-% (c) Dimensionality reduction using t-SNE on the inferred MOFA factors. Cells are coloured by cell type. \\
-% (d) Same as (c), but cells are coloured by Factor 1 values (top left) and Factor 2 values (bottom left); by the DNA methylation levels of the enhancers with the largest weight in  Factor 1 (top middle) and Factor 2 (bottom middle);  by the chromatin accessibility levels of the enhancers with the largest weight in  Factor 1 (top right) and Factor 2 (bottom right).
-
-
-
-% \begin{figure}[H]
-% 	\centering
-% 	\includegraphics[width=0.85\linewidth]{xxx}
-% 	\caption[]{}
-% 	\label{fig:xxx}
-% \end{figure}
-
-
-
-
-\section{A note on the implementation}
-
-\section{Limitations and opern perspectives}
-
-In this Chapter we proposed a generalisation of the MOFA model for the principled analysis of large \textit{structured} data sets. This solves some of the limitations of the MOFA model presented in Chapter 2, but a significant amount of them remain unsolved, hence leaving the door open for future research opportunities:
-
-\begin{itemize}
-	\item \textbf{Linearity}: this is arguably the major limitation of MOFA. Although it is cirtiical for obtaining interpretable feature weights, this results in a significant loss of explanatory power.
-	- MENTION VAE
-
-	\item \textbf{Improving the stochastic inference scheme}: a common extension of stochastic gradient descent is the addition of a \textit{momentum} term, which has been very successful in the training of artificial neural networks \cite{Zeiler2012,Ning1999}. The idea is to take account past updates when calculating the present step, using ofr example a moving average. This has been shown to help accelerate gradients vectors in the right directions, thus leading to a faster convergence.
-
-	\item \textbf{Modelling dependencies between groups}: often groups are not independent and have some type of structure among themselves. A clear example are time course experiments. Explicitly modelling these dependencies, when known, could help on model inference and interpretation.
-
-	\item \textbf{Modelling continuous dependencies between samples and/or features}: in the MOFA framework the views and the groups are discrete and non-overlapping. An interesting improvement would be to model continuous dependencies using Gaussian Process priors
-	- Temporal data
-	- Spatial transcriptomics data
-
-\end{itemize}
+% The first key assumption of this approach is that the prior distributions of the global variables and the local variables are members of the exponential family:
+% \begin{align} \label{eq_priors} \begin{split}
+% 	p(\beta|\alpha_{\beta}) = h(\beta) \exp\{ \eta_g(\alpha_{\beta}) t(\beta) - a_g(\alpha_{\beta}) \} \\
+% 	p(z_{nk}|\alpha_{z}) = h(z_{nk}) \exp\{ \eta_l(\alpha_{z}) t(z_{nk}) - a_l(\alpha_{z}) \}
+% \end{split} \end{align}
+
+
+% COPIED FROM OLD
+% The second assumption is that the complete conditionals of the hidden variables are also members of the exponential family:
+% \begin{align} \label{eq_complete_conditionals} \begin{split}
+% 	p(\beta|\bfY,\bfZ,\balpha) = h(\beta) \exp\{ \eta_g(\bfY,\bfZ,\balpha)^T t(\beta) - a_g(\eta_g(\bfY,\bfZ,\balpha)) \} \\
+% 	p(\bfz_{n}|\bfy_{nj},\bfz_{nj},\beta) = h(\bfz_{n}) \exp\{ \eta_l(\bfy_{nj}, \bfz_{nj},\beta)^T t(\bfz_{n}) - a_l(\eta_l(\bfy_{nj},\bfz_{nj},\beta)) \}
+% \end{split} \end{align}
+
+% COPIED FROM BIORXIV
+% \item the complete conditionals are members of the exponential family:
+% \begin{align} \label{eq_complete_conditionals} \begin{split}
+% 	p(\beta|\bfY,\bfZ,\balpha) = h(\beta) \exp\{ \eta_g(\bfY,\bfZ,\balpha)^T t(\beta) - a_g(\eta_g(\bfY,\bfZ,\balpha)) \} \\
+% 	p(\bfz_{n}|\bfy_{nj},\bfz_{nj},\beta) = h(\bfz_{n}) \exp\{ \eta_l(\bfy_{nj}, \bfz_{nj},\beta)^T t(\bfz_{n}) - a_l(\eta_l(\bfy_{nj},\bfz_{nj},\beta)) \}
+% \end{split} \end{align}
+
+\subsubsection{Setting up the inference problem}
+
+% Copoed from Hoffman
+% In variational inference, we define a flexible family of distributions over the hidden variables, indexed by free parameters (Jordan et al., 1999; Wainwright and Jordan, 2008). We then find the setting of the parameters (i.e., the member of the family) that is closest to the posterior. Thus we solve the inference problem by solving an optimization problem.\\
+%Variational inference is amenable to stochastic optimization because the variational objective decomposes into a sum of terms, one for each data point in the analysis. We can cheaply obtain noisy estimates of the gradient by subsampling the data and computing a scaled gradient on the subsample. If we sample independently then the expectation of this noisy gradient is equal to the true gradient.
+
+%  First, we set up the variational distributions for both the local variables and the global variables. Here we are going to assume that all hidden variables are independent (mean-field assumption)
+% \[
+% 	q(\bfz,\beta) = q(\beta|\lambda) \prod_{n=1}^{N} \prod_{k=1}^{K} p(z_{nk}|\phi_{nk})
+% \]
+% and belong to the same exponential family as the corresponding prior distribution:
+% \begin{align} \label{eq_variational_distributions}
+% 	q(\beta|\lambda) &= h(\beta) \exp\{ \eta_g(\lambda) t(\beta) - a_g(\lambda) \} \\
+% 	q(z_{nk}|\phi_{nk}) &= h(z_{nk}) \exp \{ \eta_l(\phi_{n}) t(z_{nk}) - a_l(z_{nk}) \}
+% \end{align}
+% where $\lambda$ are the parameters governing the global variable and $\phi_{nk}$ are the parameters governing the $k$-th local variable for the $n$-th sample.\\
+
+% From the assumptions above, the ELBO (\Cref{eq_elbo1}) factorises as:
+% \begin{align} \label{eq_elbo_factorised} \begin{split}
+% 	\Lagr &= \E_{q(\bfZ,\beta)}[\log p(\bfY,\bfZ,\beta)] - \E_{q(\bfZ)}[\log q(\bfZ)] - \E_{q(\beta)}[\log q(\beta)] \\
+% 	 &= \sum_{n=1}^{N} \E_{q(\bfz_n,\beta)}[\log p(\bfy_n,\bfz_n,\beta)] - \sum_{n=1}^{N} \sum_{k=1}^{K} \E_{q(z_{nk})}[\log q(z_{nk})] - \E_{q(\beta)}[\log q(\beta)]
+% \end{split} \end{align}
+% This defines the objetive function. The next step is to derive an iterative algorithm to find the values of the variational parameters that maximise the ELBO.
+
+
+\subsubsection{Computing the gradient for the global parameters}
+
+To derive the updates for the global parameters we first write the ELBO in terms of $\lambda$:
+\[
+	\Lagr(\lambda) = \E_{q(z,\beta)}[\log p(\beta|\bfY,\bfZ)] - \E_{q(\beta)}[\log q(\beta)] + \const
+\]
+where the constant term captures all quantities that do not depend on $\beta$. Then, from the assumption that the complete conditionals and the variational distributions belong to the exponential family (\Crefrange{eq_complete_conditionals}{eq_variational_distributions}):
+\baln
+	\Lagr(\lambda) &= \E_{q(z,\beta)}[\eta_g(\bfY,\bfZ,\balpha)^T t(\beta)] - \E_{q(\beta)}[\lambda^T t(\beta) - a_g(\lambda) ] + \const \\
+	&= \E_{q(z)}[\eta_g(\bfY,\bfZ,\balpha)^T] \nabla a(\lambda) - \lambda^T \nabla a_g(\lambda) - a_g(\lambda) + \const
+\ealn
+where we have used the exponential family identity $\E_{q(\beta)}[t(\beta)] = \nabla a_g(\lambda)$. \\
+Taking the gradient with respect to $\lambda$:
+\begin{equation} \label{gradient_global}
+	\nabla_{\lambda} \Lagr(\lambda) = \nabla_{\lambda}^{2} a_g(\lambda)(\E_{q(z)}[\eta_g(\bfY,\bfZ,\balpha)] - \lambda)
+\end{equation}
+and setting it to zero leads to the solution:
+\begin{equation} \label{solution_global}
+	\lambda = \E_{q(z)}[\eta_g(\bfY,\bfZ,\balpha)]
+\end{equation}
+Hence, we conclude that the global variational parameter $\lambda$ corresponds to the expectation (with respect to $q(z)$) of the natural parameter $\eta$ of the complete conditional for $\beta$.

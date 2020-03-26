@@ -1,0 +1,128 @@
+\graphicspath{{Chapter4/Figs/simulations/}{Chapter4/Figs/scrna/}{Chapter4/Figs/scmet/}{Chapter4/Figs/scnmt/}}
+
+\section{Model description}
+
+In MOFA v2 we generalise the model to a disjoint set of $M$ input views (i.e. groups of features) and $G$ input groups (i.e. groups of samples).\\
+
+The data is factorised according to the following model:
+\begin{equation} \label{mofa_master_equation}
+	\mathbf{Y}^{m}_{g} = \mathbf{Z}_{g} \mathbf{W}^{mT} + \bepsilon^{m}_{g}
+\end{equation}
+where  $\bfZ_{g} \in \R^{N_{g} \times K}$ are a set of $G$ matrices that contains the factor values for the $g$-th group and $\bfW^{m} \in \R^{D_m \times K}$ are a set of $M$ matrices that define the feature weights for the $m$-th view. $\bepsilon^{m}_{g} \in \R^{D_m}$ captures the residuals, or the noise for each feature in ech group.\\
+
+
+EXPLAIN INTUITION
+REGRESSED OUT GROUP EFFECT
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\linewidth]{mofa2_overview}
+	\caption[]{ \\
+	\textbf{Multi-Omics Factor Analysis v2 (MOFA+) provides an unsupervised framework for the integration of multi-group and multi-view single-cell data.} \\
+	(a) Model overview: the input consists of multiple data sets structured into M views and G groups. Views consist of non-overlapping sets of features that can represent different assays. Analogously, groups consist of non-overlapping sets of samples that can represent different conditions or experiments. Missing values are allowed in the input data. MOFA+ exploits the dependencies between the features to learn a low-dimensional representation of the data (Z) defined by K latent factors that capture the global sources of molecular variability. For each factor, the weights (W) link the high-dimensional space with the low-dimensional manifold and provide a measure of feature importance. The sparsity-inducing priors on both the factors and the weights enable the model to disentangle variation that is unique to or shared across the different groups and views. Model inference is performed using GPU-accelerated stochastic variational inference. \\
+	(b) The trained MOFA+ model can be queried for a range of downstream analyses: 3D variance decomposition, quantifying the amount of variance explained by each factor in each group and view, inspection of feature weights, visualisation of factors and other applications such as clustering, inference of non-linear differentiation trajectories, denoising and feature selection.
+	}
+	\label{fig:mofa2_overview}
+\end{figure}
+
+
+
+\subsection{Model priors and likelihood}
+
+\subsubsection{Prior on the weights}
+
+This remains the same as in MOFA v1. We adopt a two-level sparsity prior with an Automatic Relevance Determination per factor and view, and a feature-wise spike-and-slab prior (reparametrised\cite{Titsias2011}):
+\begin{equation}
+	p(\hat{w}_{dk}^m,s_{dk}^m) = \Ndist{\hat{w}_{dk}^{m}}{0, 1/\alpha_{k}^{m}}  \text{Ber}(s_{dk}^{m} \,|\,\theta_{k}^{m})
+\end{equation}
+with the corresponding conjugate priors for $\theta$ and $\alpha$:
+\begin{align}
+	p(\theta_k^m) &= \Bdist{\theta_k^m}{a_0^\theta,b_0^\theta}\\
+	p(\alpha_k^m) &= \Gdist{\alpha_k^m}{a_0^\alpha, b_0^\alpha}
+\end{align}
+
+The aim of the ARD prior is to disentangle the activity of factors to the different views, such that the weight vector $\bfw_{:,k}^m$ is shrunk to zero if the factor $k$ does not explain any variation in view $m$. The aim of the spike-and-slab prior is to push individual weights to zero to yield a more interpretable solution.\\
+For more details, we refer the reader to Chapter 2.
+
+
+\subsubsection{Prior on the factors}
+
+In MOFA v1 we adopted an isotropic Gaussian prior:
+\begin{equation}
+	p(z_{nk}) = \Ndist{z_{nk}}{0,1}
+\end{equation}
+which assumes \textit{a priori} an unstructured latent space. This is the assumption that we want to break. Following the same logic as in the factor and view-wise ARD prior, the integration of multiple groups of samples requires introducing a \textit{structured} prior that captures the existence of different groups, such that some factors are allowed to be active in different subsets of groups.
+
+To formalise the intuition above we simply need to copy the double sparsity prior from the weights to the factors:
+\begin{align}
+	p(\hat{z}_{nk}^g,s_{nk}^g) &= \mathcal{N} (\hat{z}_{nk}^g \,|\, 0, 1/\alpha_k^g)\, \text{Ber}(s_{nk}^g \,|\,\theta_k^g) \\
+	p(\theta_k^g) &= \Bdist{\theta_k^g}{a_0^\theta,b_0^\theta} \\
+	p(\alpha_k^g) &= \Gdist{\alpha_k^g}{a_0^\alpha, b_0^\alpha},
+\end{align}
+where $g$ is the index of the sample groups.\\
+Notice that the spike-and-slab prior is introduced for completeness but is not necessarily required, and can be disabled by fixing $\E[\theta_k^g]=1$.
+
+\subsubsection{Prior on the noise}
+
+The variable $\bepsilon$ captures the residuals, or the noise, which is assumed to be normally distributed and heteroskedastic. In MOFA v2 we generalise the noise to have an estimate per individual feature and per group:
+\begin{align}
+	p(\epsilon^{m}_{g}) &= \Ndist{\epsilon^{m}_{g}}{0,/\tau^{m}_{g}\I_{Dm}} \\
+	p(\tau^{m}_{g}) &= \prod_{d=1}^{D_m} \Gdist{\tau^{m}_{g}}{a_0^\tau, b_0^\tau}
+\end{align}
+% \begin{align}
+% 	p(\epsilon^{m,g}_d) &= \Ndist{\epsilon^{m,g}_d}{0,1/\tau_d^{m,g}} \\
+% 	p(\tau_{d}^{m,g}) &= \Gdist{\tau_{d}^{m,g}}{a_0^{\tau}, b_0^{\tau}}
+% \end{align}
+This formulation is important to capture the (realistic) events where a specific feature may be highly variable in one group but non-variable in another group.\\
+In addition, as in MOFA v1, non-gaussian noise models can also be defined, but unless otherwise stated, we will always assume Gaussian residuals.
+
+
+% \subsubsection{Likelihood}
+
+% Altogether, this results in the following likelihood:
+% \begin{equation}
+% 	p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{d=1}^{D_m} \prod_{n=1}^{N} \Ndist{y_{nd}^m}{\bfz_{n}^T\bfw_{d}^{m},1/\tau_d^m}
+% 	% p(y_{nd}^m) = \Ndist{y_{nd}^m}{\bfz_{n,:}\bfw_{d,:}^{mT},1/\tau_d^m},
+% \end{equation}
+
+\subsubsection{Graphical model}
+
+In summary, the updated model formulation introduces asymmetric sparsity prior in both the weights and the factors, which enables the model to simultaneously integrate multiple views as well as multiple groups of samples:
+
+\begin{figure}[H]
+	\centering	
+	% \begin{center}
+	\input{graphical_models/mofa2}
+	\caption{\textbf{Graphical model for MOFA+}ºº
+	.The white circles represent hidden variables that are inferred by the model, whereas the grey circles represent the observed variables. There are a total of five plates, each one representing a dimension of the model: $M$ for the number of views, $G$ for the number of groups, $K$ for the number of factors, $D_m$ for the number of features in view $m$ and $N_g$ for the number of samples in group $g$ 
+	}
+	\label{fig:MOFA2}
+	% \end{center}
+\end{figure}
+
+
+% COPIED
+\subsection{Solving the rotational invariance problem}
+
+Conventional Factor Analysis is invariant to rotation in the latent space\cite{Zhao2009}. To demonstrate this property, let us apply an arbitrary rotation to the loadings and the factors, specified by the rotation matrix $\bfR \in \R^{K \times K}$:
+\begin{align*}
+		\tilde{\bfZ} &= \bfZ \bfR^{-1} \\
+		\tilde{\bfW} &= \bfR \bfW
+\end{align*}
+
+First, note that the model likelihood is unchanged by this rotation, irrespective of the prior distribution used.
+\begin{equation*}
+		p(\bfY | \tilde{\bfZ} \tilde{\bfW}, \tau) = p(\bfY | \bfZ \bfR^{-1} \bfR \bfW, \tau) = p(\bfY | \bfZ \bfW, \tau)
+\end{equation*}
+However, the prior distributions of the factors and the loadings are only invariant to rotations when using isotropic Normal priors:
+\begin{equation*}
+	\ln p(\bfW) \propto \sum_{k=1}^{K} \sum_{d=1}^{D} w_{d,k}^2 = \mathrm{Tr}(\bfW^T \bfW) = \mathrm{Tr}(\bfW^T \bfR^{-1} \bfR \bfW) = \mathrm{Tr}(\tilde{\bfW^T} \tilde{\bfW})
+\end{equation*}
+where we have used the property $\bfR^{T} = \bfR^{-1}$ that applies to rotation matrices. The same derivation follows for the factors $\bfZ$.\\
+In practice, this property renders conventional Factor Analysis unidentifiable, as shown using simulations in Figure SX (TO-FILL), hence limiting its interpretation and applicability.\\
+
+Sparsity assumptions, however, partially address the rotational invariance problem~\cite{Hore2015-thesis}. When using independent identically distributed spike-and-slab priors the proof above cannot be applied, hence making the proposed factor analysis model not rotationally invariant.\\
+
+It is important to remark that the factors are nonetheless invariant to permutations. This implies that under different initial conditions, the order of the factors is not necessarily the same in independent model fittings. To address this we manually sort factors \textit{a posteriori} based on total variance explained.
+
+
