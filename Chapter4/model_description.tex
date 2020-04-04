@@ -119,10 +119,9 @@ However, the prior distributions of the factors and the loadings are only invari
 	\ln p(\bfW) \propto \sum_{k=1}^{K} \sum_{d=1}^{D} w_{d,k}^2 = \mathrm{Tr}(\bfW^T \bfW) = \mathrm{Tr}(\bfW^T \bfR^{-1} \bfR \bfW) = \mathrm{Tr}(\tilde{\bfW^T} \tilde{\bfW})
 \end{equation*}
 where we have used the property $\bfR^{T} = \bfR^{-1}$ that applies to rotation matrices. The same derivation follows for the factors $\bfZ$.\\
-In practice, this property renders conventional Factor Analysis unidentifiable, as shown using simulations in Figure SX (TO-FILL), hence limiting its interpretation and applicability.\\
-
-Sparsity assumptions, however, partially address the rotational invariance problem~\cite{Hore2015-thesis}. When using independent identically distributed spike-and-slab priors the proof above cannot be applied, hence making the proposed factor analysis model not rotationally invariant.\\
+In practice, this property renders conventional Factor Analysis unidentifiable, hence limiting its interpretation and applicability. Sparsity assumptions, however, partially address the rotational invariance problem \cite{Hore2015}.
 
 It is important to remark that the factors are nonetheless invariant to permutations. This implies that under different initial conditions, the order of the factors is not necessarily the same in independent model fittings. To address this we manually sort factors \textit{a posteriori} based on total variance explained.
 
 
+%TO-DO: ADD STOCHASTIC ALGORITHM

@@ -7,7 +7,8 @@
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}Exponential family distributions}{1}{subsection.1.1.1}}
 \newlabel{section:exponential_family}{{1.1.1}{1}{Exponential family distributions}{subsection.1.1.1}{}}
 \newlabel{section:exponential_family@cref}{{[subsection][1][1,1]1.1.1}{1}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1.1}Exponential family form of common distributions}{2}{subsubsection.1.1.1.1}}
+\newlabel{eq:exponential_family}{{1.1}{2}{Exponential family distributions}{equation.1.1.1}{}}
+\newlabel{eq:exponential_family@cref}{{[equation][1][1]1.1}{2}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}Gradient ascent}{3}{subsection.1.1.2}}
 \newlabel{section:gradient_ascent}{{1.1.2}{3}{Gradient ascent}{subsection.1.1.2}{}}
 \newlabel{section:gradient_ascent@cref}{{[subsection][2][1,1]1.1.2}{3}}
@@ -16,15 +17,47 @@
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.2.1}Stochastic gradient ascent}{3}{subsubsection.1.1.2.1}}
 \newlabel{section:stochastic_gradient_ascent}{{1.1.2.1}{3}{Stochastic gradient ascent}{subsubsection.1.1.2.1}{}}
 \newlabel{section:stochastic_gradient_ascent@cref}{{[subsubsection][1][1,1,2]1.1.2.1}{3}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.2.2}Natural gradient ascent}{4}{subsubsection.1.1.2.2}}
-\newlabel{section:natural_gradient_ascent}{{1.1.2.2}{4}{Natural gradient ascent}{subsubsection.1.1.2.2}{}}
-\newlabel{section:natural_gradient_ascent@cref}{{[subsubsection][2][1,1,2]1.1.2.2}{4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.2.2}Natural gradient ascent}{3}{subsubsection.1.1.2.2}}
+\newlabel{section:natural_gradient_ascent}{{1.1.2.2}{3}{Natural gradient ascent}{subsubsection.1.1.2.2}{}}
+\newlabel{section:natural_gradient_ascent@cref}{{[subsubsection][2][1,1,2]1.1.2.2}{3}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces \textbf  {Illustration of the problem of using Euclidean distances to measure distances between parameters of distributions}.  In both plots, the red and blue distributions are separated by the same Euclidean distance of 100. Yet, the distance in probability space between the two distributions is higher in the right. \relax }}{4}{figure.caption.1}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:mofa2_euclidean_distributions}{{1.1}{4}{\textbf {Illustration of the problem of using Euclidean distances to measure distances between parameters of distributions}.\\ In both plots, the red and blue distributions are separated by the same Euclidean distance of 100. Yet, the distance in probability space between the two distributions is higher in the right. \relax }{figure.caption.1}{}}
+\newlabel{fig:mofa2_euclidean_distributions@cref}{{[figure][1][1]1.1}{4}}
 \newlabel{natural_gradient}{{1.5}{5}{Natural gradient ascent}{equation.1.1.5}{}}
 \newlabel{natural_gradient@cref}{{[equation][5][1]1.5}{5}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}GPU-accelerated stochastic variational inference}{5}{subsection.1.1.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}Derivation of a stochastic variational inference algorithm}{5}{subsection.1.1.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3.1}Model definition}{5}{subsubsection.1.1.3.1}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces \textbf  {Graphical model for a general probabilistic model where unobserved variables are classified as global and local.}  The dashed line indicates that the connection between global and local variables is optional and it is not used in the MOFA model. \relax }}{6}{figure.caption.2}}
+\newlabel{fig:graphical_model_stochastic}{{1.2}{6}{\textbf {Graphical model for a general probabilistic model where unobserved variables are classified as global and local.}\\ The dashed line indicates that the connection between global and local variables is optional and it is not used in the MOFA model. \relax }{figure.caption.2}{}}
+\newlabel{fig:graphical_model_stochastic@cref}{{[figure][2][1]1.2}{6}}
+\newlabel{eq_priors}{{1.7}{6}{Model definition}{equation.1.1.7}{}}
+\newlabel{eq_priors@cref}{{[equation][7][1]1.7}{6}}
+\newlabel{eq_complete_conditionals}{{1.8}{6}{Model definition}{equation.1.1.8}{}}
+\newlabel{eq_complete_conditionals@cref}{{[equation][8][1]1.8}{6}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3.2}Setting up the inference problem}{7}{subsubsection.1.1.3.2}}
+\newlabel{eq_variational_distributions}{{1.9}{7}{Setting up the inference problem}{equation.1.1.9}{}}
+\newlabel{eq_variational_distributions@cref}{{[equation][9][1]1.9}{7}}
+\newlabel{eq_elbo_factorised}{{1.11}{7}{Setting up the inference problem}{equation.1.1.11}{}}
+\newlabel{eq_elbo_factorised@cref}{{[equation][11][1]1.11}{7}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3.3}Calculating the gradient for the global parameters}{7}{subsubsection.1.1.3.3}}
+\newlabel{gradient_global}{{1.12}{8}{Calculating the gradient for the global parameters}{equation.1.1.12}{}}
+\newlabel{gradient_global@cref}{{[equation][12][1]1.12}{8}}
+\newlabel{solution_global}{{1.13}{8}{Calculating the gradient for the global parameters}{equation.1.1.13}{}}
+\newlabel{solution_global@cref}{{[equation][13][1]1.13}{8}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3.4}Calculating the gradient for the local parameters}{8}{subsubsection.1.1.3.4}}
+\newlabel{gradient_local}{{1.14}{8}{Calculating the gradient for the local parameters}{equation.1.1.14}{}}
+\newlabel{gradient_local@cref}{{[equation][14][1]1.14}{8}}
+\newlabel{solution_local}{{1.15}{8}{Calculating the gradient for the local parameters}{equation.1.1.15}{}}
+\newlabel{solution_local@cref}{{[equation][15][1]1.15}{8}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3.5}Coordinate ascent variational inference algorithm}{8}{subsubsection.1.1.3.5}}
+\@writefile{loa}{\defcounter {refsection}{0}\relax }\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Coordinate ascent mean-field variational inference algorithm\relax }}{9}{algorithm.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3.6}Deriving the natural gradients for the global variational parameters}{9}{subsubsection.1.1.3.6}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3.7}Deriving the natural gradients for the local variational parameters}{9}{subsubsection.1.1.3.7}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.4}Hyperparameters}{9}{subsection.1.1.4}}
 \@setckpt{Chapter4/introduction}{
-\setcounter{page}{6}
-\setcounter{equation}{5}
+\setcounter{page}{11}
+\setcounter{equation}{15}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -34,11 +67,11 @@
 \setcounter{part}{0}
 \setcounter{chapter}{1}
 \setcounter{section}{1}
-\setcounter{subsection}{3}
+\setcounter{subsection}{4}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{0}
+\setcounter{figure}{2}
 \setcounter{table}{0}
 \setcounter{@pps}{0}
 \setcounter{@ppsavesec}{0}
@@ -46,9 +79,9 @@
 \setcounter{parentequation}{0}
 \setcounter{Item}{0}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{8}
+\setcounter{bookmark@seq@number}{15}
 \setcounter{float@type}{16}
-\setcounter{algorithm}{0}
+\setcounter{algorithm}{1}
 \setcounter{ContinuedFloat}{0}
 \setcounter{subfigure}{0}
 \setcounter{subtable}{0}
@@ -162,6 +195,13 @@
 \setcounter{bbx:relatedcount}{0}
 \setcounter{bbx:relatedtotal}{0}
 \setcounter{lstnumber}{1}
+\setcounter{ALG@line}{9}
+\setcounter{ALG@rem}{0}
+\setcounter{ALG@nested}{0}
+\setcounter{ALG@Lnr}{2}
+\setcounter{ALG@blocknr}{10}
+\setcounter{ALG@storecount}{0}
+\setcounter{ALG@tmpcounter}{0}
 \setcounter{section@level}{2}
 \setcounter{lstlisting}{0}
 }

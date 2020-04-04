@@ -1,17 +1,19 @@
 \begin{tikzpicture}
 
 % Define nodes
-\node[obs]   (Y) {$y_{n,d}$};
-\node[latent, above=of Y, xshift=-1.5cm] (Z) {$z_{n,k}$};
-\node[latent, above=of Y, xshift=1.5cm] (W) {$w_{d,k}$};
-\node[latent, xshift=1.5cm] (Tau) {$\tau_{d}$};
+\node[obs] (Y) {$\bfy_{n}$};
+\node[latent, above=of Y] (local) {$\bfz_{n}$};
+\node[latent, xshift=1.5cm] (global) {$\bbeta$};
+\node[latent, double, double distance=1pt, right=of global] (global_params) {$\balpha_{\beta}$};
+\node[latent, double, double distance=1pt, right=of local] (local_params) {$\balpha_{z}$};
 
 % Connect the nodes
-\edge {Z,W, Tau} {Y};
+\edge {global,local} {Y};
+\edge[] {global_params} {global};
+\edge[] {local_params} {local};
+\edge[dashed] {global} {local};
 
 % Plates
-\plate[] {plateK} {(Z)(W)} {$K$};
-\plate[] {plateN} {(Y)(Z)(plateK.north west)} {$N$};
-\plate[] {plateD} {(Y)(W)(Tau)(plateK.south east) (plateN.south east) (plateN.north east)} {$D$};
+\plate[] {plateN} {(local)(Y)} {$N$};
 
 \end{tikzpicture}

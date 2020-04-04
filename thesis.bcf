@@ -2098,16 +2098,40 @@
     <bcf:datasource type="file" datatype="bibtex">references/references_chapter3.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Bishop2006</bcf:citekey>
-    <bcf:citekey order="1">Murphy</bcf:citekey>
-    <bcf:citekey order="2">Robbins-Monro1951</bcf:citekey>
-    <bcf:citekey order="3">Spall2003</bcf:citekey>
-    <bcf:citekey order="4">Amari1998</bcf:citekey>
-    <bcf:citekey order="4">Martens2014</bcf:citekey>
+    <bcf:citekey order="1">Replogle2020</bcf:citekey>
+    <bcf:citekey order="2">Bishop2006</bcf:citekey>
+    <bcf:citekey order="2">Murphy</bcf:citekey>
+    <bcf:citekey order="3">Robbins-Monro1951</bcf:citekey>
+    <bcf:citekey order="4">Spall2003</bcf:citekey>
     <bcf:citekey order="5">Amari1998</bcf:citekey>
-    <bcf:citekey order="5">Kristiadi2019</bcf:citekey>
-    <bcf:citekey order="6">Kristiadi2019</bcf:citekey>
+    <bcf:citekey order="5">Martens2014</bcf:citekey>
     <bcf:citekey order="6">Amari1998</bcf:citekey>
-    <bcf:citekey order="6">Hoffman2012</bcf:citekey>
+    <bcf:citekey order="6">Kristiadi2019</bcf:citekey>
+    <bcf:citekey order="7">Kristiadi2019</bcf:citekey>
+    <bcf:citekey order="7">Amari1998</bcf:citekey>
+    <bcf:citekey order="7">Hoffman2012</bcf:citekey>
+    <bcf:citekey order="8">Hoffman2012</bcf:citekey>
+    <bcf:citekey order="9">Hoffman2012</bcf:citekey>
+    <bcf:citekey order="10">Ranganath2013</bcf:citekey>
+    <bcf:citekey order="11">Titsias2011</bcf:citekey>
+    <bcf:citekey order="12">Zhao2009</bcf:citekey>
+    <bcf:citekey order="13">Hore2015</bcf:citekey>
+    <bcf:citekey order="14">Pijuan-Sala2019</bcf:citekey>
+    <bcf:citekey order="15">Argelaguet2020</bcf:citekey>
+    <bcf:citekey order="16">Fabregat2015</bcf:citekey>
+    <bcf:citekey order="17">Fabregat2015</bcf:citekey>
+    <bcf:citekey order="18">Luo2018</bcf:citekey>
+    <bcf:citekey order="19">He2015</bcf:citekey>
+    <bcf:citekey order="20">Luo2016</bcf:citekey>
+    <bcf:citekey order="21">Luo2016</bcf:citekey>
+    <bcf:citekey order="22">Luo2016</bcf:citekey>
+    <bcf:citekey order="23">Luo2016</bcf:citekey>
+    <bcf:citekey order="24">Argelaguet2019</bcf:citekey>
+    <bcf:citekey order="25">Argelaguet2019</bcf:citekey>
+    <bcf:citekey order="26">Okuta2017</bcf:citekey>
+    <bcf:citekey order="27">Ainsworth2018</bcf:citekey>
+    <bcf:citekey order="28">Zeiler2012</bcf:citekey>
+    <bcf:citekey order="28">Ning1999</bcf:citekey>
+    <bcf:citekey order="29">XX</bcf:citekey>
   </bcf:section>
 </bcf:controlfile>

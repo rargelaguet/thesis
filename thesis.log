@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  26 MAR 2020 10:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  4 APR 2020 11:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1765,59 +1765,85 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (/usr/local/texlive/2016/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
-(./sty/personal_commands.tex) (./sty/listing_style.tex) (./utils.tex)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count388
+\c@ALG@rem=\count389
+\c@ALG@nested=\count390
+\ALG@tlm=\skip84
+\ALG@thistlm=\skip85
+\c@ALG@Lnr=\count391
+\c@ALG@blocknr=\count392
+\c@ALG@storecount=\count393
+\c@ALG@tmpcounter=\count394
+\ALG@tmplength=\skip86
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (./sty/personal_commands.tex) (./sty/listing_style.tex) (./utils.tex)
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 )
-\@quotelevel=\count388
-\@quotereset=\count389
+\@quotelevel=\count395
+\@quotereset=\count396
 
-(./thesis.aux (./Chapter4/introduction.aux))
+(./thesis.aux (./Chapter4/introduction.aux) (./Chapter4/model_description.aux)
+(./Chapter4/results.aux
+
+LaTeX Warning: Label `fig:mofa2_scmet_factor1' multiply defined.
+
+
+LaTeX Warning: Label `fig:mofa2_scmet_factor1@cref' multiply defined.
+
+))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 129.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 133.
 
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count390
+\scratchcounter=\count397
 \scratchdimen=\dimen277
 \scratchbox=\box94
-\nofMPsegments=\count391
-\nofMParguments=\count392
+\nofMPsegments=\count398
+\nofMParguments=\count399
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count393
+\MPscratchCnt=\count400
 \MPscratchDim=\dimen278
-\MPnumerator=\count394
-\makeMPintoPDFobject=\count395
+\MPnumerator=\count401
+\makeMPintoPDFobject=\count402
 \everyMPtoPDFconversion=\toks49
 )
-LaTeX Info: Redefining \microtypecontext on input line 129.
+LaTeX Info: Redefining \microtypecontext on input line 133.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1832,7 +1858,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 \AtBeginShipoutBox=\box95
-Package hyperref Info: Link coloring ON on input line 129.
+Package hyperref Info: Link coloring ON on input line 133.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1840,11 +1866,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count396
+\c@section@level=\count403
 )
-LaTeX Info: Redefining \ref on input line 129.
-LaTeX Info: Redefining \pageref on input line 129.
-LaTeX Info: Redefining \nameref on input line 129.
+LaTeX Info: Redefining \ref on input line 133.
+LaTeX Info: Redefining \pageref on input line 133.
+LaTeX Info: Redefining \nameref on input line 133.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write7
@@ -1902,11 +1928,11 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
  (./thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 129.
-Package biblatex Info: Reference segment=0 on input line 129.
-\c@lstlisting=\count397
+Package biblatex Info: Reference section=0 on input line 133.
+Package biblatex Info: Reference segment=0 on input line 133.
+\c@lstlisting=\count404
 \PHD@Title=\box96
-LaTeX Font Info:    Try loading font information for U+msa on input line 133.
+LaTeX Font Info:    Try loading font information for U+msa on input line 137.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1914,7 +1940,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 133.
+LaTeX Font Info:    Try loading font information for U+msb on input line 137.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1922,17 +1948,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 133.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 137.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 \PHD@crest=\box97
 
-<Figs/University_Crest.pdf, id=39, 59.22125pt x 69.25874pt>
+<Figs/University_Crest.pdf, id=155, 59.22125pt x 69.25874pt>
 File: Figs/University_Crest.pdf Graphic file (type pdf)
 
 <use Figs/University_Crest.pdf>
-Package pdftex.def Info: Figs/University_Crest.pdf used on input line 133.
+Package pdftex.def Info: Figs/University_Crest.pdf used on input line 137.
 (pdftex.def)             Requested size: 93.32361pt x 109.14542pt.
 \PHD@collegecrest=\box98
 \PHD@author=\box99
@@ -1941,7 +1967,7 @@ Package pdftex.def Info: Figs/University_Crest.pdf used on input line 133.
 \PHD@dept=\box102
 \PHD@submission=\box103
 \PHD@collegedate=\box104
-\PHD@titlepagespacing=\skip84
+\PHD@titlepagespacing=\skip87
  [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figs/
@@ -1953,67 +1979,438 @@ University_Crest.pdf>] [2
 
 (./Chapter4/introduction.tex
 Chapter 1.
+
+LaTeX Warning: Citation 'Replogle2020' on page 1 undefined on input line 6.
+
+
+LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
+(Font)              using `U/stmry/m/n' instead on input line 19.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.18 E
-      xponential family distributions can be summarised in the following form:
-[1
+l.20 \end{equation}
+                    [1
+
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.58 
+      [2]
+
+LaTeX Warning: Citation 'Bishop2006' on page 3 undefined on input line 63.
+
+
+LaTeX Warning: Citation 'Murphy' on page 3 undefined on input line 63.
+
+
+LaTeX Warning: Citation 'Robbins-Monro1951' on page 3 undefined on input line 7
+2.
+
+
+LaTeX Warning: Citation 'Spall2003' on page 3 undefined on input line 77.
+
+[3]
+<Chapter4/Figs/simulations/mofa2_euclidean_distributions.pdf, id=200, 722.7pt x
+ 361.35pt>
+File: Chapter4/Figs/simulations/mofa2_euclidean_distributions.pdf Graphic file 
+(type pdf)
+ <use Chapter4/Figs/simulations/mofa2_euclidean_distributions.pdf>
+Package pdftex.def Info: Chapter4/Figs/simulations/mofa2_euclidean_distribution
+s.pdf used on input line 120.
+(pdftex.def)             Requested size: 303.30353pt x 151.65018pt.
+
+
+LaTeX Warning: Citation 'Amari1998' on page 4 undefined on input line 132.
+
+
+LaTeX Warning: Citation 'Martens2014' on page 4 undefined on input line 132.
+
+[4 <./Chapter4/Figs/simulations/mofa2_euclidean_distributions.pdf>]
+
+LaTeX Warning: Citation 'Amari1998' on page 5 undefined on input line 139.
+
+
+LaTeX Warning: Citation 'Kristiadi2019' on page 5 undefined on input line 139.
+
+
+LaTeX Warning: Citation 'Kristiadi2019' on page 5 undefined on input line 151.
+
+
+LaTeX Warning: Citation 'Amari1998' on page 5 undefined on input line 151.
+
+
+LaTeX Warning: Citation 'Hoffman2012' on page 5 undefined on input line 151.
+
+
+LaTeX Warning: Citation 'Hoffman2012' on page 5 undefined on input line 156.
+
+
+LaTeX Warning: Citation 'Hoffman2012' on page 5 undefined on input line 156.
+
+
+LaTeX Warning: Reference `section:variational_inference' on page 1 undefined on
+ input line 157.
+
+[5] (./graphical_models/stochastic_general.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+) [6]
+
+LaTeX Warning: Reference `eq:XXX' on page 1 undefined on input line 233.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--244
+
+ []
+
+[7]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 299.
+ [8]
+
+LaTeX Warning: Citation 'Ranganath2013' on page 9 undefined on input line 349.
+
+[9]) [10]
+\openout2 = `Chapter4/model_description.aux'.
+
+ (./Chapter4/model_description.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--12
+
+ []
+
+
+<Chapter4/Figs/simulations/mofa2_overview.pdf, id=271, 1471.37706pt x 1130.6641
+pt>
+File: Chapter4/Figs/simulations/mofa2_overview.pdf Graphic file (type pdf)
+ <use Chapter4/Figs/simulations/mofa2_overview.pdf>
+Package pdftex.def Info: Chapter4/Figs/simulations/mofa2_overview.pdf used on i
+nput line 19.
+(pdftex.def)             Requested size: 396.63428pt x 304.78307pt.
+ [11
 
 
 ]
 
-LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 20.
+LaTeX Warning: Citation 'Titsias2011' on page 12 undefined on input line 34.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.58 \end{align*}
-                  [2]
+[12 <./Chapter4/Figs/simulations/mofa2_overview.pdf>] [13]
+(./graphical_models/mofa2.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+)
 
-LaTeX Warning: Citation 'Bishop2006' on page 3 undefined on input line 71.
+LaTeX Warning: Citation 'Zhao2009' on page 14 undefined on input line 107.
+
+[14]
+
+LaTeX Warning: Citation 'Hore2015' on page 15 undefined on input line 122.
+
+) [15]
+\openout2 = `Chapter4/results.aux'.
+
+ (./Chapter4/results.tex
+<Chapter4/Figs/simulations/mofa2_stochastic_validation.pdf, id=337, 1089.44014p
+t x 650.43pt>
+File: Chapter4/Figs/simulations/mofa2_stochastic_validation.pdf Graphic file (t
+ype pdf)
+ <use Chapter4/Figs/simulations/mofa2_stochastic_validation.pdf>
+Package pdftex.def Info: Chapter4/Figs/simulations/mofa2_stochastic_validation.
+pdf used on input line 17.
+(pdftex.def)             Requested size: 443.29253pt x 264.6633pt.
+
+<Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf, id=338, 576.1525pt x 505
+.89pt>
+File: Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf Graphic file (type p
+df)
+ <use Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf>
+Package pdftex.def Info: Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf u
+sed on input line 29.
+(pdftex.def)             Requested size: 396.63428pt x 348.2771pt.
+ [16
 
 
-LaTeX Warning: Citation 'Murphy' on page 3 undefined on input line 71.
+ <./Chapter4/Figs/simulations/mofa2_stochastic_validation.pdf>]
+<Chapter4/Figs/simulations/mofa2_multigroup_validation.pdf, id=732, 421.575pt x
+ 312.83574pt>
+File: Chapter4/Figs/simulations/mofa2_multigroup_validation.pdf Graphic file (t
+ype pdf)
+ <use Chapter4/Figs/simulations/mofa2_multigroup_validation.pdf>
+Package pdftex.def Info: Chapter4/Figs/simulations/mofa2_multigroup_validation.
+pdf used on input line 50.
+(pdftex.def)             Requested size: 373.30159pt x 277.01953pt.
+
+[17 <./Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf>]
+
+LaTeX Warning: Citation 'Pijuan-Sala2019' on page 18 undefined on input line 64
+.
 
 
-LaTeX Warning: Citation 'Robbins-Monro1951' on page 3 undefined on input line 7
-9.
+<Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf, id=753, 882.29625pt x 
+272.01625pt>
+File: Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf Graphic file (type
+ pdf)
+ <use Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf>
+Package pdftex.def Info: Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf
+ used on input line 70.
+(pdftex.def)             Requested size: 443.29253pt x 136.66772pt.
+
+[18 <./Chapter4/Figs/simulations/mofa2_multigroup_validation.pdf>]
+
+LaTeX Warning: Citation 'Argelaguet2020' on page 19 undefined on input line 83.
 
 
-LaTeX Warning: Citation 'Spall2003' on page 3 undefined on input line 84.
 
-[3]
+<Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pdf, id=782, 622.42535pt x
+ 396.42606pt>
+File: Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pdf Graphic file (typ
+e pdf)
+ <use Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pdf>
+Package pdftex.def Info: Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pd
+f used on input line 87.
+(pdftex.def)             Requested size: 396.63428pt x 252.62299pt.
 
-LaTeX Warning: Reference `fig:problem_with_Euclidean_distances' on page 1 undef
-ined on input line 126.
+[19 <./Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf>]
+<Chapter4/Figs/scrna/mofa2_scrna_mesoderm_factor.pdf, id=816, 615.29875pt x 390
+.45876pt>
+File: Chapter4/Figs/scrna/mofa2_scrna_mesoderm_factor.pdf Graphic file (type pd
+f)
+ <use Chapter4/Figs/scrna/mofa2_scrna_mesoderm_factor.pdf>
+Package pdftex.def Info: Chapter4/Figs/scrna/mofa2_scrna_mesoderm_factor.pdf us
+ed on input line 99.
+(pdftex.def)             Requested size: 396.63428pt x 251.70395pt.
+
+<Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf, id=817, 582.175pt x 445
+.1872pt>
+File: Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf Graphic file (type 
+pdf)
+ <use Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf>
+Package pdftex.def Info: Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf 
+used on input line 111.
+(pdftex.def)             Requested size: 396.63428pt x 303.30748pt.
 
 
-LaTeX Warning: Citation 'Amari1998' on page 4 undefined on input line 140.
+LaTeX Warning: Citation 'Fabregat2015' on page 20 undefined on input line 117.
 
 
-LaTeX Warning: Citation 'Martens2014' on page 4 undefined on input line 140.
+LaTeX Warning: Citation 'Fabregat2015' on page 20 undefined on input line 117.
+
+[20 <./Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pdf> <./Chapter4/Fig
+s/scrna/mofa2_scrna_mesoderm_factor.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter4/Figs/scrna/mofa2_
+scrna_mesoderm_factor.pdf): PDF inclusion: multiple pdfs with page group includ
+ed in a single page
+>]
+Overfull \hbox (6.81598pt too wide) in paragraph at lines 126--126
+[]\T1/cmr/bx/n/12 Identification of context-dependent methy-la-tion sig-na-ture
+s as-so-ci-ated with
+ []
 
 
-LaTeX Warning: Citation 'Amari1998' on page 4 undefined on input line 147.
+LaTeX Warning: Citation 'Luo2018' on page 21 undefined on input line 130.
 
 
-LaTeX Warning: Citation 'Kristiadi2019' on page 4 undefined on input line 147.
+LaTeX Warning: Citation 'He2015' on page 21 undefined on input line 130.
 
-[4]
+[21 <./Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf>]
 
-LaTeX Warning: Citation 'Kristiadi2019' on page 5 undefined on input line 159.
-
-
-LaTeX Warning: Citation 'Amari1998' on page 5 undefined on input line 159.
+LaTeX Warning: Reference `Luo2017' on page 1 undefined on input line 134.
 
 
-LaTeX Warning: Citation 'Hoffman2012' on page 5 undefined on input line 159.
+<Chapter4/Figs/scmet/mofa2_scmet_datastructure.pdf, id=1294, 495.18301pt x 226.
+178pt>
+File: Chapter4/Figs/scmet/mofa2_scmet_datastructure.pdf Graphic file (type pdf)
 
-) [5] [6
+ <use Chapter4/Figs/scmet/mofa2_scmet_datastructure.pdf>
+Package pdftex.def Info: Chapter4/Figs/scmet/mofa2_scmet_datastructure.pdf used
+ on input line 138.
+(pdftex.def)             Requested size: 396.63428pt x 181.17386pt.
+
+<Chapter4/Figs/scmet/mofa2_scmet_r2.pdf, id=1295, 781.92125pt x 159.59625pt>
+File: Chapter4/Figs/scmet/mofa2_scmet_r2.pdf Graphic file (type pdf)
+
+<use Chapter4/Figs/scmet/mofa2_scmet_r2.pdf>
+Package pdftex.def Info: Chapter4/Figs/scmet/mofa2_scmet_r2.pdf used on input l
+ine 151.
+(pdftex.def)             Requested size: 443.29253pt x 90.47887pt.
+ [22 <./Chapter4/Figs/scmet/mofa2_scmet_datastructure.pdf>]
+<Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf, id=1325, 701.42754pt x 240.9pt>
+File: Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf Graphic file (type pdf)
+
+<use Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf>
+Package pdftex.def Info: Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf used on in
+put line 164.
+(pdftex.def)             Requested size: 443.29253pt x 152.24933pt.
+
+
+LaTeX Warning: Citation 'Luo2016' on page 23 undefined on input line 169.
+
+
+LaTeX Warning: Citation 'Luo2016' on page 23 undefined on input line 169.
+
+
+LaTeX Warning: Reference `fig:mofa2_scmet_factor3' on page 1 undefined on input
+ line 177.
+
+File: Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf Graphic file (type pdf)
+<use Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf>
+Package pdftex.def Info: Chapter4/Figs/scmet/mofa2_scmet_factor1.pdf used on in
+put line 181.
+(pdftex.def)             Requested size: 443.29253pt x 152.24933pt.
+ [23 <./Chapter4/Figs/scmet/mofa2_scmet_r2.pdf> <./Chapter4/Figs/scmet/mofa2_sc
+met_factor1.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter4/Figs/scmet/mofa2_
+scmet_factor1.pdf): PDF inclusion: multiple pdfs with page group included in a 
+single page
+>]
+<Chapter4/Figs/scmet/mofa2_scmet_dimred.pdf, id=1525, 761.84625pt x 360.34625pt
+>
+File: Chapter4/Figs/scmet/mofa2_scmet_dimred.pdf Graphic file (type pdf)
+ <use Chapter4/Figs/scmet/mofa2_scmet_dimred.pdf>
+Package pdftex.def Info: Chapter4/Figs/scmet/mofa2_scmet_dimred.pdf used on inp
+ut line 194.
+(pdftex.def)             Requested size: 419.95984pt x 198.63641pt.
+
+
+LaTeX Warning: Citation 'Luo2016' on page 24 undefined on input line 198.
+
+
+LaTeX Warning: Citation 'Luo2016' on page 24 undefined on input line 198.
+
+[24 <./Chapter4/Figs/scmet/mofa2_scmet_dimred.pdf>]
+
+LaTeX Warning: Citation 'Argelaguet2019' on page 25 undefined on input line 212
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+
+LaTeX Warning: Citation 'Argelaguet2019' on page 25 undefined on input line 221
+.
+
+
+<Chapter4/Figs/scnmt/mofa2_scnmt_datastructure.pdf, id=13907, 939.56721pt x 714
+.67pt>
+File: Chapter4/Figs/scnmt/mofa2_scnmt_datastructure.pdf Graphic file (type pdf)
+
+ <use Chapter4/Figs/scnmt/mofa2_scnmt_datastructure.pdf>
+Package pdftex.def Info: Chapter4/Figs/scnmt/mofa2_scnmt_datastructure.pdf used
+ on input line 225.
+(pdftex.def)             Requested size: 396.63428pt x 301.68604pt.
+ [25]
+<Chapter4/Figs/scnmt/mofa2_scnmt_modeloverview.pdf, id=13914, 771.88374pt x 311
+.1625pt>
+File: Chapter4/Figs/scnmt/mofa2_scnmt_modeloverview.pdf Graphic file (type pdf)
+
+ <use Chapter4/Figs/scnmt/mofa2_scnmt_modeloverview.pdf>
+Package pdftex.def Info: Chapter4/Figs/scnmt/mofa2_scnmt_modeloverview.pdf used
+ on input line 240.
+(pdftex.def)             Requested size: 396.63428pt x 159.892pt.
+ [26 <./Chapter4/Figs/scnmt/mofa2_scnmt_datastructure.pdf>]
+<Chapter4/Figs/scnmt/mofa2_scnmt_factors12.pdf, id=13943, 790.2855pt x 440.9805
+pt>
+File: Chapter4/Figs/scnmt/mofa2_scnmt_factors12.pdf Graphic file (type pdf)
+ <use Chapter4/Figs/scnmt/mofa2_scnmt_factors12.pdf>
+Package pdftex.def Info: Chapter4/Figs/scnmt/mofa2_scnmt_factors12.pdf used on 
+input line 257.
+(pdftex.def)             Requested size: 396.63428pt x 221.31734pt.
+ [27 <./Chapter4/Figs/scnmt/mofa2_scnmt_modeloverview.pdf> <./Chapter4/Figs/scn
+mt/mofa2_scnmt_factors12.pdf>]
+<Chapter4/Figs/scnmt/mofa2_scnmt_factor6.pdf, id=14180, 832.66785pt x 562.1pt>
+File: Chapter4/Figs/scnmt/mofa2_scnmt_factor6.pdf Graphic file (type pdf)
+
+<use Chapter4/Figs/scnmt/mofa2_scnmt_factor6.pdf>
+Package pdftex.def Info: Chapter4/Figs/scnmt/mofa2_scnmt_factor6.pdf used on in
+put line 271.
+(pdftex.def)             Requested size: 396.63428pt x 267.74648pt.
+
+
+LaTeX Warning: Citation 'Okuta2017' on page 28 undefined on input line 290.
+
+
+Overfull \hbox (84.98637pt too wide) in paragraph at lines 290--292
+\T1/cmr/m/n/10.95 (-20) To fa-cil-i-tate adop-tion of the method, we de-ploy MO
+FA+ as open-source soft-ware (https://github.com/bioFAM/MOFA2)
+ []
+
+[28 <./Chapter4/Figs/scnmt/mofa2_scnmt_factor6.pdf>]
+
+LaTeX Warning: Citation 'Ainsworth2018' on page 29 undefined on input line 299.
+
+
+
+LaTeX Warning: Citation 'Zeiler2012' on page 29 undefined on input line 301.
+
+
+LaTeX Warning: Citation 'Ning1999' on page 29 undefined on input line 301.
+
+
+LaTeX Warning: Citation 'XX' on page 29 undefined on input line 305.
+
+) [29] [30
 
 
 ]
@@ -2021,19 +2418,23 @@ LaTeX Warning: Citation 'Hoffman2012' on page 5 undefined on input line 159.
 Package caption Warning: Unused \captionsetup[sub] on input line 61.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
-(./thesis.aux (./Chapter4/introduction.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 201.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 206.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
+(./thesis.aux (./Chapter4/introduction.aux) (./Chapter4/model_description.aux)
+(./Chapter4/results.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 206.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 206.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 981C99B8B14A2400E5137E50EB4AD4F3;2360.
+(rerunfilecheck)             Checksum: D4B084F4865C359CBE9B32B7E9D9B208;10800.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -2045,40 +2446,47 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37033 strings out of 493014
- 677665 string characters out of 6133351
- 1152928 words of memory out of 5000000
- 39840 multiletter control sequences out of 15000+600000
- 24589 words of font info for 87 fonts, out of 8000000 for 9000
+ 38328 strings out of 493014
+ 701914 string characters out of 6133351
+ 1177373 words of memory out of 5000000
+ 40858 multiletter control sequences out of 15000+600000
+ 38835 words of font info for 176 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,15n,92p,1131b,833s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,17n,92p,1131b,1223s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/201
-6/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on thesis.pdf (8 pages, 330540 bytes).
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/f
+onts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts
+/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
+ype1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
+e1/public/cm-super/sfti1200.pfb>
+Output written on thesis.pdf (32 pages, 23723419 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 18514 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 14513 PDF objects out of 15390 (max. 8388607)
+ 7343 compressed objects within 74 object streams
+ 114 named destinations out of 1000 (max. 500000)
+ 33167 words of extra memory for PDF output out of 35830 (max. 10000000)
 
