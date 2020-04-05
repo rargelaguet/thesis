@@ -2,6 +2,10 @@
 
 \chapter{Multi-omics profiling of mouse gastrulation at single-cell resolution}
 
+In this chapter I will describe a study where we combined scNMT-seq (Chapter 1) and MOFA (Chapter 2) to explore the relationship between the transcriptome and the epigenome during mouse gastrulation.
+
+The work discussed in this chapter results from a collaboration with the group of Wolf Reik (Babraham Institute, Cambridge, UK). It has been peer-reviewed and published in \cite{Argelaguet2019}. The experiments were carried out by Stephen Clark, Hisham Mohammed and Carine Stapel, with the help of Wendy Dean and Courtney Hanna for the collection of embryos. Tim Lohoff prepared the Embryoid Body \textit{TET} TKO culture. Wei Xie and Yunlong Xiang shared the ChIP-seq data that was used to define germ layer-specific enhancers. Felix Krueger processed and managed sequencing data. Christel Krueger processed the ChIP-seq data. I performed the majority of the computational analysis, but with contributions from all authors. In particular, Stephen Clark calculated the transcription factor motif enrichment analysis (\Cref{XXX}), Carine Stapel explored the neuroectoderm and pluripotency signatures in ectoderm enhancers (\Cref{XXX}), and Ivan Imaz-Rosshandler performed the mapping to the gastrulation atlas (\Cref{XXX}). John C. Marioni, Oliver Stegle and Wolf Reik supervised the project. The article was jointly written by Stephen Clark, Carine Stapel and me, with input from all authors.
+
 \section{Introduction}
 
 The human body is composed of a myriad of cell types with specialised structure, organisation and function; and yet, each cell in the body contains the same genetic information. The modulation of the genetic code by internal and external factors begin during embryonic development, giving rise to the formation of specialised molecular patterns that ultimately determines the complexity of adult organisms \cite{Rosalind2018}. A key phase in mammalian embryonic development is gastrulation, when a single-layered blastula of pluripotent and relatively homogeneous cells is reorganised to form the three primordial germ layers: the ectoderm, mesoderm and endoderm \cite{Tam1997, Solnica-Krezel2012, Tam2007}.
@@ -13,6 +17,7 @@ The onset of gastrulation is determined by the formation of the primitive streak
 \subsection{Transcriptomic studies}
 
 Significant research effort has been deployed to understand the molecular changes underlying gastrulation. Historically, microscopy was used to quantify gene expression at single cell resolution. However, constraints imposed by fluorophore emission spectra made this approach unsuitable for genome-wide studies. Only after the breakthrough made by the introduction of single-cell sequencing technologies it has been possible to generate comprehensive molecular roadmaps of embryonic development \cite{Schaum2018,PijuanSala2019,Cao2019,Regev2018}. In a pioneer study, \cite{PijuanSala2019} generated the first high-resolution atlas of gastrulation and early somitogenesis by profiling the RNA expression of 116,312 cells from 411 whole mouse embryos collected between E6.5 and E8.5. This effort completed earlier attempts of reconstructing the transcriptomic landscape of post-implantation embryos \cite{Mohammed2017,Scialdone2016,Ibarra-Soria2018,Wen2017}. At the same time, another study employed a more scalable methodology  to profile around 2 million cells from 61 embryos ranging from E9.5 and 13.5 days of gestation, spanning early organogenesis \cite{Cao2019}. By constructing a densely sampled reference data set, both works have let the ground for understanding transcriptomic variation during development. 
+
 
 \subsection{Epigenetic studies}
 

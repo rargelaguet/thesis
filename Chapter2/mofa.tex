@@ -43,7 +43,7 @@ In addition, we place a second layer of sparsity which encourages inactive weigh
 % \end{equation*}
 However, this formulation of the spike-and-slab prior contains a Dirac delta function, which makes the inference procedure troublesome. To solve this we introduce a re-parametrization of the weights $w$ as a product of a Gaussian random variable $\hat{w}$ and a Bernoulli random variable $s$, \cite{Titsias2011} resulting in the following prior:
 \begin{equation}
-	p(\hat{w}_{dk}^m,s_{dk}^m) &= \Ndist{\hat{w}_{dk}^m}{0, 1/\alpha_k^m}  \text{Ber}(s_{dk}^m \,|\,\theta_k^m)
+	p(\hat{w}_{dk}^{m},s_{dk}^{m}) = \Ndist{\hat{w}_{dk}^{m}}{0, \frac{1}{\alpha_k^m}}  \text{Ber}(s_{dk}^m \,|\,\theta_k^m)
 \end{equation}
 In this formulation $\alpha_k^m$ controls the activity of factor $k$ in view $m$ and $\theta_k^m$ controls the corresponding fraction of active weights (i.e. the sparsity levels).\\
 

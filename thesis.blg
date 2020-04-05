@@ -1,27 +1,58 @@
 [0] Config.pm:343> INFO - This is Biber 2.5
 [0] Config.pm:346> INFO - Logfile is 'thesis.blg'
-[71] biber-darwin:290> INFO - === Tue Mar 24, 2020, 15:04:37
-[94] Biber.pm:351> INFO - Reading 'thesis.bcf'
-[249] Biber.pm:776> INFO - Found 228 citekeys in bib section 0
-[264] Biber.pm:3493> INFO - Processing section 0
-[280] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter1.bib' for section 0
-[309] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[336] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter1.bib'
-[1111] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter2.bib' for section 0
-[1123] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[1136] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter2.bib'
-[1149] Utils.pm:149> WARN - Duplicate entry key: 'Chen2016' in file 'references/references_chapter2.bib', skipping ...
-[1304] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter3.bib' for section 0
-[1310] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[1316] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter3.bib'
-[1317] Utils.pm:149> WARN - Entry Tam1993 does not parse correctly
-[1318] Utils.pm:149> WARN - Duplicate entry key: 'Lee2014' in file 'references/references_chapter3.bib', skipping ...
-[1318] Utils.pm:149> WARN - Duplicate entry key: 'Cao2019' in file 'references/references_chapter3.bib', skipping ...
-[1319] Utils.pm:149> WARN - Duplicate entry key: 'Stuart2019' in file 'references/references_chapter3.bib', skipping ...
-[1320] Utils.pm:149> WARN - Duplicate entry key: 'Wang2019' in file 'references/references_chapter3.bib', skipping ...
-[1321] Utils.pm:149> WARN - Duplicate entry key: 'Rulands2018' in file 'references/references_chapter3.bib', skipping ...
-[1322] Utils.pm:149> WARN - Duplicate entry key: 'Li2016' in file 'references/references_chapter3.bib', skipping ...
-[1323] Utils.pm:149> WARN - Duplicate entry key: 'Angermueller2017' in file 'references/references_chapter3.bib', skipping ...
-[1324] Utils.pm:165> ERROR - BibTeX subsystem: /var/folders/yl/sc7b3yv53z1_hx81w56mrxd9tg5hxc/T/UQNIMP3CnS/references_chapter3.bib_40022.utf8, line 45, syntax error: found ",", expected one of: name (entry type, key, field, or macro name) or end of entry ("}" or ")")
-[1324] Biber.pm:108> INFO - WARNINGS: 9
-[1324] Biber.pm:112> INFO - ERRORS: 1
+[48] biber-darwin:290> INFO - === Sat Apr  4, 2020, 12:33:37
+[75] Biber.pm:351> INFO - Reading 'thesis.bcf'
+[198] Biber.pm:776> INFO - Found 286 citekeys in bib section 0
+[210] Biber.pm:3493> INFO - Processing section 0
+[230] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter1.bib' for section 0
+[245] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[262] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter1.bib'
+[565] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter2.bib' for section 0
+[578] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[591] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter2.bib'
+[605] Utils.pm:149> WARN - Duplicate entry key: 'Chen2016' in file 'references/references_chapter2.bib', skipping ...
+[767] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter3.bib' for section 0
+[773] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[780] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter3.bib'
+[781] Utils.pm:149> WARN - Duplicate entry key: 'Lee2014' in file 'references/references_chapter3.bib', skipping ...
+[781] Utils.pm:149> WARN - Duplicate entry key: 'Cao2019' in file 'references/references_chapter3.bib', skipping ...
+[782] Utils.pm:149> WARN - Duplicate entry key: 'Stuart2019' in file 'references/references_chapter3.bib', skipping ...
+[783] Utils.pm:149> WARN - Duplicate entry key: 'Wang2019' in file 'references/references_chapter3.bib', skipping ...
+[784] Utils.pm:149> WARN - Duplicate entry key: 'Rulands2018' in file 'references/references_chapter3.bib', skipping ...
+[784] Utils.pm:149> WARN - Duplicate entry key: 'Li2016' in file 'references/references_chapter3.bib', skipping ...
+[785] Utils.pm:149> WARN - Duplicate entry key: 'Angermueller2017' in file 'references/references_chapter3.bib', skipping ...
+[883] Utils.pm:149> WARN - I didn't find a database entry for 'XX' (section 0)
+[883] Utils.pm:149> WARN - I didn't find a database entry for 'Lun2016' (section 0)
+[883] Utils.pm:149> WARN - I didn't find a database entry for 'DR-seq' (section 0)
+[883] Utils.pm:149> WARN - I didn't find a database entry for 'Love2014' (section 0)
+[883] Utils.pm:149> WARN - I didn't find a database entry for 'XXX' (section 0)
+[884] Utils.pm:149> WARN - I didn't find a database entry for 'Fabregat2015' (section 0)
+[884] Utils.pm:149> WARN - I didn't find a database entry for 'Ashburner2000' (section 0)
+[884] Utils.pm:149> WARN - I didn't find a database entry for 'Solnica-Krezel2012' (section 0)
+[884] Utils.pm:149> WARN - I didn't find a database entry for 'Tam2007' (section 0)
+[884] Utils.pm:149> WARN - I didn't find a database entry for 'Arnold2009' (section 0)
+[884] Utils.pm:149> WARN - I didn't find a database entry for 'PijuanSala2019' (section 0)
+[884] Utils.pm:149> WARN - I didn't find a database entry for 'Scialdone2016' (section 0)
+[884] Utils.pm:149> WARN - I didn't find a database entry for 'Ibarra-Soria2018' (section 0)
+[884] Utils.pm:149> WARN - I didn't find a database entry for 'Wen2017' (section 0)
+[885] Utils.pm:149> WARN - I didn't find a database entry for 'Smith2012' (section 0)
+[885] Utils.pm:149> WARN - I didn't find a database entry for 'Auclar2014' (section 0)
+[885] Utils.pm:149> WARN - I didn't find a database entry for 'Dai2016' (section 0)
+[885] Utils.pm:149> WARN - I didn't find a database entry for 'Tosic2019' (section 0)
+[885] Utils.pm:149> WARN - I didn't find a database entry for 'Feng2014' (section 0)
+[885] Utils.pm:149> WARN - I didn't find a database entry for 'Replogle2020' (section 0)
+[885] Utils.pm:149> WARN - I didn't find a database entry for 'Argelaguet2020' (section 0)
+[885] Utils.pm:149> WARN - I didn't find a database entry for 'Bishop2006' (section 0)
+[885] Utils.pm:149> WARN - I didn't find a database entry for 'Hore2015' (section 0)
+[886] Utils.pm:149> WARN - I didn't find a database entry for 'Luo2016' (section 0)
+[886] Utils.pm:149> WARN - I didn't find a database entry for 'Okuta2017' (section 0)
+[886] Utils.pm:149> WARN - I didn't find a database entry for 'Ainsworth2018' (section 0)
+[886] Utils.pm:149> WARN - I didn't find a database entry for 'Zeiler2012' (section 0)
+[886] Utils.pm:149> WARN - I didn't find a database entry for 'Ning1999' (section 0)
+[1205] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1206] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1206] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[1206] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
+[1709] bbl.pm:526> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[1781] bbl.pm:619> INFO - Output to thesis.bbl
+[1781] Biber.pm:108> INFO - WARNINGS: 36

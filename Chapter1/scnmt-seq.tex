@@ -3,14 +3,15 @@
 
 \graphicspath{{Chapter1/Figs/}}
 
-In this chapter we will describe scNMT-seq, an experimental protocol for genome-wide profiling of RNA expression, DNA methylation and chromatin accessibility in single cells. First, we will validate the quality of the omics readouts, followed by a comparison with existing technologies. Subsequently, we will showcase how scNMT-seq can be used to reveal coordinated epigenetic and transcriptomic heterogeneity along a differentiation process.
+In this chapter I describe scNMT-seq, an experimental protocol for genome-wide profiling of RNA expression, DNA methylation and chromatin accessibility in single cells. First, I show a validation of the quality of the molecular readouts, including a comparison with existing technologies. Subsequently, I showcase how scNMT-seq can be used to reveal coordinated epigenetic and transcriptomic heterogeneity along a differentiation process.
 
 The work discussed in this chapter results from a collaboration with the group of Wolf Reik (Babraham Institute, Cambridge, UK). It has been peer-reviewed and published in \cite{Clark2018}.\\
-
-The methodology was conceived by Stephen Clark, who performed most of the experiments. Felix Krueger processed and managed sequencing data. I performed the computational analysis, except for the reconsutraction of chromatin accessibility profiles, which was done by Andreas Kapourani. John C. Marioni, Oliver Stegle and Wolf Reik supervised the project.\\
+The methodology was conceived by Stephen Clark, who performed most of the experiments. Felix Krueger processed and managed sequencing data. I performed all the computational analysis shown in this thesis, except for the non-linear chromatin accessibility profiles, which was done by Andreas Kapourani. John C. Marioni, Oliver Stegle and Wolf Reik supervised the project.\\
 The article was jointly written by Stephen Clark and me, with input from all authors.
 
+
 \subsection{Description of the experimental protocol} \label{section:scnmt_protocol}
+
 scNMT-seq builds upon two previous multi-modal protocols: single-cell Methylation and Transcriptome sequencing (scM\&T-seq) \cite{Angermueller2016} and Nucleosome Occupancy and Methylation sequencing (NOMe-seq) \cite{Kelly2012,Pott2016}. An overview of the protocol is shown in \Cref{fig:scnmt_protocol}.
 
 In the first step (the NOMe-seq step), cells are sorted into individual wells and incubated with a GpC methyltransferase (M.CviPI). This enzyme labels accessible (or nucleosome depleted) GpC sites via DNA methylation\cite{Kilgore2007, Kelly2012}. In mammalian genomes, cytosine residues in GpC dinucleotides are methylated at a very low rate. Hence, after M.CviPI treatment, GpC methylation marks can be interpreted as direct read outs for chromatin accessibility, as opposed to the CpG methylation readouts, which can be interpreted as endogenous DNA methylation\cite{Kilgore2007, Kelly2012}.
@@ -20,18 +21,19 @@ In a second step (the scM\&T-seq step), the DNA molecules are separated from the
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\linewidth]{scNMT_protocol}
-	\caption[]{scNMT-seq protocol overview. In the first step, cells are isolated and lysed. Second, cells are incubated with a GpC methyltransferase. Third, the RNA fraction is separated using oligo-dT probes and sequenced using Smart-seq2. The DNA fraction undergoes scBS-seq library preparation and sequencing. Finally, CpG Methylation and GpC chromatin accessibility data are separated computationally.}
+	\caption[]{\textbf{scNMT-seq protocol overview.}\\
+	In the first step, cells are isolated and lysed. Second, cells are incubated with a GpC methyltransferase. Third, the RNA fraction is separated using oligo-dT probes and sequenced using Smart-seq2. The DNA fraction undergoes scBS-seq library preparation and sequencing. Finally, CpG Methylation and GpC chromatin accessibility data are separated computationally.}
 	\label{fig:scnmt_protocol}
 \end{figure}
 
-[REWRITE] As discussed in \Cref{section:chromatin_accessibility}, NOMe-seq has a range of appealing properties in comparison with count-based methods such as ATAC-seq or DNAseq-seq. First, the obvious gain of simultaneously measuring another epigenetic readout such as DNA methylation with little additional cost. Second, the resolution of the method is determined by the frequency of GpC sites within the genome ($\approx$ 1 in 16 bp), rather than the size of a library fragment (usually >100 bp). This allows the robust inspection of individual regulatory elements, nucleosome positioning and transcription factor footprints \cite{Kelly2012,Pott2016,Nordstrom2019}. Third, missing data can be easily discriminated from inaccessible chromatin. Importantly, this implies that lowly accessible sites will not suffer from increased technical variation (due to low read counts) compared to highly accessible sites. Finally, the M.CviPI enzyme shows less sequence motif biases than the DNAse or the Tn5 transposase \cite{Nordstrom2019}.
-% STEPHEN: this paragraph is just copied from intro right? most of these advantages are specific to single-cell so it fits better here (i.e. i would remove a lot of this from the introduction)
+As discussed in \Cref{section:chromatin_accessibility}, NOMe-seq has a range of appealing properties in comparison with count-based methods such as ATAC-seq or DNAseq-seq. First, the obvious gain of simultaneously measuring another epigenetic readout such as DNA methylation with little additional cost. Second, the resolution of the method is determined by the frequency of GpC sites within the genome ($\approx$ 1 in 16 bp), rather than the size of a library fragment (usually >100 bp). This allows the robust inspection of individual regulatory elements, nucleosome positioning and transcription factor footprints \cite{Kelly2012,Pott2016,Nordstrom2019}. Third, missing data can be easily discriminated from inaccessible chromatin. Importantly, this implies that lowly accessible sites will not suffer from increased technical variation (due to low read counts) compared to highly accessible sites. Finally, the M.CviPI enzyme shows less sequence motif biases than the DNAse or the Tn5 transposase \cite{Nordstrom2019}.
 
 The downsides of the approach are the limited scalability associated with plate-based methods, and the need to discard read outs from (1) GCG positions (21\%), as it is intrinsically not possible to distinguish endogenous methylation from \textit{in vitro} methylated bases, and (2) CGC positions (27\%), to mitigate off-target effects of the enzyme \cite{Kelly2012}. This filtering step reduces the number of genome-wide cytosines that can be assayed from 22 million to 11 million. 
 
 
 \subsection{Description of the data processing pipeline}
-After DNA sequencing, reads undergo quality control and trimming using TrimGalore\cite{XX} to remove the flanking 6bp (the random primers), adaptor contamination and poor-quality base calls. Subsequently, trimmed reads are aligned to the corresponding genome assembly. Here we used Bismark \cite{Krueger2011} with the additional --NOMe option, which produces CpG report files containing only ACG and TCG trinucleotides and GpC report files containing only GCA, GCC and GCT positions. After mapping, a new round of quality control is performed per cell based on mapping efficiency, bisulfite conversion efficiency and library size.\\
+
+After DNA sequencing, reads undergo quality control and trimming using TrimGalore to remove the flanking 6bp (the random primers), adaptor contamination and poor-quality base calls. Subsequently, trimmed reads are aligned to the corresponding genome assembly. Here we used Bismark \cite{Krueger2011} with the additional --NOMe option, which produces CpG report files containing only ACG and TCG trinucleotides and GpC report files containing only GCA, GCC and GCT positions. After mapping, a new round of quality control is performed per cell based on mapping efficiency, bisulfite conversion efficiency and library size.\\
 Finally, methylation calls for each CpG and GpC site are calculated after removal of duplicate alignments. Following the approach of \cite{Smallwood2014}, individual CpG or GpC sites in each cell are modelled using a binomial model where the number of successes is the number of methylated reads and the number of trials is the total number of reads. A CpG methylation or GpC accessibility rate for each site and cell is calculated by maximum likelihood.
 
 % When quantifying DNA methylation and chromatin accessibility over genomic features (i.e. promoters or enhancers) instead of individual CpG or GpC sites, a binomial model is again assumed. For each cell and feature, we calculated a...but aggregating the counts over all CpG (methylation) and GpC (accessibility) dinucleotides overlapping the genomic feature.
@@ -47,7 +49,8 @@ For chromatin accessibility, coverage was larger than that observed for endogeno
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{scNMT_coverage}
-	\caption[]{Coverage statistics for CpG DNA methylation and GpC chromatin accessibility. (a) Fraction of loci with at least 5 CpG (red) or GpC (blue) dinucleotides (y-axis) per genomic context (x-axis), after exclusion of the conflictive trinucleotides. The grey bar shows the total number of CpGs without exclusion of trinucleotides. (b) Empirical coverage (y-axis) per genomic context (x-axis) in a data set of 61 mouse ES cells. The empirical coverage is quantified as the fraction of loci with at least 5 CpG (red) or GpC (blue) observed. The boxplots summarise the distribution across cells, showing the median and the 1st and 3rd quartiles.}
+	\caption[]{\textbf{Coverage statistics for CpG DNA methylation and GpC chromatin accessibility}.\\ 
+	(a) Fraction of loci with at least 5 CpG (red) or GpC (blue) dinucleotides (y-axis) per genomic context (x-axis), after exclusion of the conflictive trinucleotides. The grey bar shows the total number of CpGs without exclusion of trinucleotides. (b) Empirical coverage (y-axis) per genomic context (x-axis) in a data set of 61 mouse ES cells. The empirical coverage is quantified as the fraction of loci with at least 5 CpG (red) or GpC (blue) observed. The boxplots summarise the distribution across cells, showing the median and the 1st and 3rd quartiles.}
 	\label{fig:scnmt_coverage}
 \end{figure}
 
@@ -57,7 +60,7 @@ Despite scNMT-seq yielding less CpG measurements, we find little differences in 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{scNMT_coverage2}
-	\caption[]{Comparison of the empirical coverage of DNA methylation with scM\&T-seq \cite{Angermueller2016}.
+	\caption[]{\textbf{Comparison of the empirical coverage of DNA methylation with scM\&T-seq \cite{Angermueller2016}}.\\
 	The y-axis displays the fraction of loci covered with at least 5 CpG sites. The x-axis displays the downsampling factor. To facilitate the comparison, we selected two cells that were sequenced at equivalent depth.}
 	\label{fig:scnmt_coverage2}
 \end{figure}
@@ -66,25 +69,29 @@ Despite scNMT-seq yielding less CpG measurements, we find little differences in 
 
 To assess the consistency with previous studies we quantified DNA methylation and chromatin accessibility using a running window throughout the genome. The resulting methylomes were compared to data sets from the same cell lines profiled with similar technologies, including scM\&T-seq\cite{Angermueller2016}, scBS-seq\cite{Smallwood2014} and bulk BS-seq\cite{Ficz2013}. We find that most of the variation is not attributed to the technology but to differences in culture condition (2i vs serum, captured by PC1). This result is expected, as cells grown in 2i media remain in a native pluripotency state that is associated with genome-wide DNA hypomethylation \cite{Ficz2013}. Interestingly, the serum-cultured cells processed in this study overlapped with 2i-cultured cells from previous data sets. suggesting that they remained in a more pluripotent state. The most likely explanation for this variation is the differences in the cell lines (we used female EL16 versus male E14 in \cite{Angermueller2016,Smallwood2014,Ficz2013}). Previous studies have sown that female ESCs tend to show lower levels of mean global methylation, which is consistent with a more pluripotent phenotype \cite{Zvetkova2005}.\\
 
-In terms of accessibility, no NOMe-seq measurements were available for ESCs at the time of the study, so we compared it to bulk DNase-seq data from the same cell type \cite{XX}, yielding good consistency between datasets (Pearson R = 0.74).
+In terms of accessibility, no NOMe-seq measurements were available for ESCs at the time of the study, so we compared it to bulk DNase-seq data from the same cell type, yielding good consistency between datasets ($R=0.74$).
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{scNMT_comparison}
-	\caption[]{Comparison of unsupervised genome-wide quantifications to published data sets. (a) Principal Component Analysis of 1kb running windows. Missing values were imputed using the average methylation rate per locus. (b) Scatter plot of chromatin accessibility quantified over 10kb running windows of scNMT-seq data versus published bulk DNase-seq. For DNase-seq, accessibility is quantified as the log2 reads. The Pearson correlation was weighted by the GpC coverage in scNMT-seq data. }
+	\caption[]{\textbf{Comparison of unsupervised genome-wide quantifications to published data sets}.\\
+	(a) Principal Component Analysis of 1kb running windows. Missing values were imputed using the average methylation rate per locus.\\
+	(b) Scatter plot of chromatin accessibility quantified over 10kb running windows of scNMT-seq data versus published bulk DNase-seq. For DNase-seq, accessibility is quantified as the log2 reads. The Pearson correlation was weighted by the GpC coverage in scNMT-seq data. }
 	\label{fig:scnmt_comparison}
 \end{figure}
 
 
 \subsubsection{Quantification of DNA methylation and chromatin accessibility in known regulatory regions}
 
-We pseudobulked the data across all cells and we examined DNA methylation and chromatin accessibility levels at loci with known regulatory roles. We found that in promoters, DNaseI hypersensitivity sites, enhancer regions and transcription factors binding sites, DNA methylation was decreased while chromatin accessibility was increased, as previously reported \cite{Pott2016}. As a control, we observe that cells which did not receive M.CviPI treatment showed globally low GpC methylation levels ( $\approx$ 2\%, \Cref{fig:scnmt_profiles_MT}).
+We pseudobulked the data across all cells and we examined DNA methylation and chromatin accessibility levels at loci with known regulatory roles. We found that in CTCF binding sites and DNaseI hypersensitivity sites DNA methylation was decreased while chromatin accessibility was increased, as previously reported \cite{Pott2016}. As a control, we observe that cells which did not receive M.CviPI treatment showed globally low GpC methylation levels ( $\approx$ 2\%, \Cref{fig:scmt_pseudobulk_profiles}).
 
-% TO-DO: ADD PROMOTERS
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{scNMT_pseudobulk_profiles}
-	\caption[]{Accessibility and methylation profiles in regulatory genomic contexts. First, we pseudobulk the data set by pooling information across all cells. Next, we compute running averages  of the CpG methylation (red) and the GpC accessibility (blue) in consecutive non-overlapping 50bp windows. Solid line displays the mean across all genomic elements within a given annotation and the shading displays the corresponding standard deviation.}
-	\label{fig:scnmt_profiles}
+	\includegraphics[width=0.8\linewidth]{scnmt_pseudobulk_profiles}
+	\caption[]{\textbf{Accessibility and methylation profiles in regulatory genomic contexts.}\\
+	First, we pseudobulk the data set by pooling information across all cells. Next, we compute running averages of the CpG methylation (red) and the GpC accessibility (blue) in consecutive non-overlapping 50bp windows. Solid line displays the mean across all genomic elements within a given annotation and the shading displays the corresponding standard deviation.\\
+	(a) Profiles for scNMT-seq cells. (b) Profiles for scMT-seq cells
+	}
+	\label{fig:scnmt_pseudobulked_profiles}
 \end{figure}
 
 Next, we attempted to reconstruct the expected directional relationships between the transcriptome and the epigenome, namely the positive association between RNA expression and chromatin accessibility and the negative association between DNA methylation and RNA expression \cite{Thurman2012,Angermueller2016}.\\
@@ -93,7 +100,8 @@ To get a measure of the coupling between two molecular layers, we quantified a l
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{scNMT_correlations_acrossgenes}
-	\caption[]{Quantification of linear associations between molecular layer. The top diagram illustrates the computation of an association test per cell (across all loci in a given genomic context). The left panel shows DNA methylation vs RNA expression. The middle panel shows DNA methylation vs chromatin accessibility. The right panel shows RNA expression vs chromatin accessibility. The x-axis displays the Pearson correlation coefficients between two molecular layers, per genomic context (y-axis). The box plots summarise the distribution of correlation coefficients across cells. The dots and stars show the linear associations quantified in pseudo-bulked scNMT-seq data and published bulk data from the same cell types \cite{Ficz2013,ENCODE2012}, respectively. }
+	\caption[]{\textbf{Quantification of linear associations between molecular layers.}\\
+	The top diagram illustrates the computation of an association test per cell (across all loci in a given genomic context). The left panel shows DNA methylation versus RNA expression. The middle panel shows DNA methylation versus chromatin accessibility. The right panel shows RNA expression versus chromatin accessibility. The x-axis displays the Pearson correlation coefficients between two molecular layers, per genomic context (y-axis). The box plots summarise the distribution of correlation coefficients across cells. The dots and stars show the linear associations quantified in pseudo-bulked scNMT-seq data and published bulk data from the same cell types \cite{Ficz2013,ENCODE2012}, respectively. }
 	\label{fig:scNMT_correlations_acrossgenes}
 \end{figure}
 
@@ -109,8 +117,8 @@ To get a measure of the coupling between two molecular layers, we quantified a l
 
 \subsection{Identification of genomic elements with coordinated variability across molecular layers}
 
-Having validated the quality of scNMT-seq data with a relatively homogeneous data set, we next explored its potential to identify coordinated heterogeneity across different molecular layers.\\
-We generated a second data set of 43 embryonic stem cells (after QC), where we induced a differentiation process towards embryoid bodies by removing the LIF media for 3 days.\\Dimensionality reduction on the RNA expression data reveals the existence of two subpopulations: one with high expression of pluripotency markers (\textit{Esrrb} and \textit{Rex1}) and the other with high expression of differentiation markers (\textit{T} and \textit{Prtg}).
+Having validated the quality of scNMT-seq data with a simple and relatively homogeneous data set, we next explored its potential to identify coordinated heterogeneity between the transcriptome and the epigenome.\\
+We generated a second data set of 43 embryonic stem cells (after quality control), where we induced a differentiation process towards embryoid bodies by removing the LIF media for 3 days.\\Dimensionality reduction on the RNA expression data reveals the existence of two subpopulations: one with high expression of pluripotency markers (\textit{Esrrb} and \textit{Rex1}) and the other with high expression of differentiation markers (\textit{T} and \textit{Prtg}).
 
 % \begin{figure}[H]
 % 	\centering
@@ -120,17 +128,17 @@ We generated a second data set of 43 embryonic stem cells (after QC), where we i
 % \end{figure}
 
 
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{scNMT_EB_RNA}
-	\caption[]{t-SNE Dimensionality reduction on the RNA expression profiles for the embryoid body cells. The scatter plots show t-SNE dimensions 1 (x-axis) and 2 (y-axis). Cells are coloured based on expression of canonical (top) pluripotency factors and (bottom) differentiation markers.  }
+	\caption[]{\textbf{t-SNE Dimensionality reduction on the RNA expression profiles for the embryoid body cells}.\\
+	The scatter plots show t-SNE dimensions 1 (x-axis) and 2 (y-axis). Cells are coloured based on expression of pluripotency factors (top) and differentiation markers (bottom). }
 	\label{fig:scnmt_eb_rna}
 \end{figure}
 
-Next, we tested locus-specific linear associations (across cells) between pairwise combinations of molecular layers, using the average CpG rate and GpC rate within a loci as a metric for DNA methylation and chromatin accessibility, respectively.\\
-First, considering correlations between DNA methylation and RNA expression, we identified a majority of negative associations, reflecting the known relationship between these two layers. In contrast, we obtained largely positive associations between chromatin accessibility and RNA expression, mainly in promoters, p300 binding sites and super enhancer regions. Finally, we found mostly negative associations between DNA methylation and chromatin accessibility, as previously reported \cite{XX}.\\
-Again, this confirms the expected direction of association between molecular layers, as reported in bulk studies. Yet, the single-cell measurements allow us to inspect the dynamics of single loci (across cells). As an illustrative example, we display the Estrogen Related Receptor Beta (Esrrb) locus, a gene involved in early development and pluripotency \cite{Papp2012}. A previous study \cite{Angermueller2016}, identified a super enhancer near Esrrb that showed high degree of correlation between DNA methylation and associated RNA expression changes. In our study, we find Esrrb to be expressed primarily in the pluripotent cells, consistent with its role in early development. When examining the epigenetic dynamics of the corresponding super enhancers, we observe a strong negative correlation between DNA methylation and RNA expression, hence replicating previous findings. Additionally, we observe a strong negative relationship between DNA methylation and chromatin accesibility, indicating the two epigenetic layers are tightly coupled, consistent with the correlations per cell (across genes), displayed in Figure X.
+Next, we tested for locus-specific associations between pairwise combinations of molecular layers (correlation across cells, \Cref{fig:scnmt_eb_correlations}).\\
+First, considering correlations between DNA methylation and RNA expression, we identified a majority of negative associations, reflecting the known relationship between these two layers. In contrast, we obtained largely positive associations between chromatin accessibility and RNA expression, mainly in promoters, p300 binding sites and super enhancer regions. Finally, we found mostly negative associations between DNA methylation and chromatin accessibility. This confirms the expected direction of association between molecular layers, as reported in bulk studies.\\
+As an illustrative example, we display the(\textit{Esrrb}) locus, a gene involved in early development and pluripotency \cite{Papp2012}. A previous study \cite{Angermueller2016}, identified a super enhancer near the gene that showed high degree of correlation between DNA methylation and RNA expression changes. In our study, we find \textit{Esrrb} to be expressed primarily in the pluripotent cells, consistent with its role in early development. When examining the epigenetic dynamics of the corresponding super enhancers, we observe a strong negative correlation between DNA methylation and RNA expression, thus replicating previous findings. Additionally, we observe a strong negative relationship between DNA methylation and chromatin accessibility, indicating the two epigenetic layers are tightly coupled
 
 \begin{figure}[H]
 	\centering
@@ -142,23 +150,26 @@ Again, this confirms the expected direction of association between molecular lay
 % Figure 3: scNMT-seq enables the discovery of novel associations at individual loci. (a) Left panel shows an illustration for the correlation analysis across cells, which results in one association test per locus. The right panel shows the Pearson correlation coefficient (x-axis) and log10 p-value (y-axis) from association tests between different molecular layers at individual loci, stratified by genomic contexts. Significant associations (FDR<0.1, Benjamini-Hochberg adjusted), are highlighted in red. The number of significant positive and negative associations and the number of tests (centre) are indicated above. (c) Zoom-in view of the Esrrb gene locus. Shown from top to bottom are: Pairwise Pearson correlation coefficients between each pair of the three layers (Met, methylation; Acc, accessibility; Expr, expression). Accessibility (blue) and methylation (red) profiles shown separately for pluripotent and differentiated sub-populations; mean rates (solid line) and standard deviation (shade) were calculated using a running window of 10kb with a step size of 1000bp; Track with genomic annotations highlighting the position of regulatory elements: promoters, super enhancers, and p300 binding sites
 
 \subsection{Inference of non-linear chromatin accessibility profiles at single nucleotide resolution}
-A clear advantage of scNMT-seq, compared to other chromatin accessibility technologies, is the high resolution of the its readouts, namely a binary output for each observed GpC dinucleotide. As illustrated in Figure 1, GpC accessibility measurements show complex oscillatory patterns, likely due to presence of nucleosomes, which are not appropriately captured by using an average rate. Therefore, we next attempted to exploit this high-resolution information to infer non-linear chromatin accessibility profiles at individual promoters.\\
-The approach we followed is based on BPRMeth \cite{Kapourani2018}, a generalized linear regression model with gaussian basis functions, coupled with a Bernoulli likelihood. A model was fit for every gene and every cell, provided enough coverage (at least 10 GpC sites observed per gene across 40\% of cells).\\
- Examples of infered regression patterns are shown in Figure X, showing significant heterogeneity in both the position and the number of nucleosomes:
+
+A clear advantage of scNMT-seq is the high resolution of the its chromatin accessibility readouts, namely a binary output for each observed GpC dinucleotide. As illustrated in \Cref{fig:scnmt_pseudobulked_profiles}, GpC accessibility measurements rate extremely dynamic and display complex oscillatory patterns, likely due to presence of nucleosomes. This makes our approach of quantifying rates over a fixed genomic window not appropriate to capture the complexity of accessibility data. Therefore, we next attempted to exploit this high-resolution information to infer non-linear chromatin accessibility profiles at individual promoters.\\
+The approach we followed is based on BPRMeth \cite{Kapourani2018}, a generalized linear regression model with Gaussian basis functions, coupled with a Bernoulli likelihood. A model was fit for every gene and every cell, provided enough coverage (at least 10 GpC sites observed per gene across 40\% of cells).\\
+ Examples of inferred regression patterns are shown below:
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{scNMT_profiles_examples}
-	\caption[]{Illustrative examples of single-cell accessibility profiles around the transcription start site. Shown are representative profiles for two genes, \textit{Tmem54} and \textit{Tns1}. Each panel corresponds to separate cell. The y-axis displays the binary GpC accessibility balues, with 1 being accessibility and 0 unaccessible. The x-axis displays the genomic region around the TSS (200bp upstream and downstream). The blue area depicts the infered (non-linear) accessibility profile using the BPRMeth model \cite{Kapourani2018}.}
+	\caption[]{\textbf{Illustrative examples of single-cell accessibility profiles around the transcription start site}.\\
+	Shown are representative profiles for two genes, \textit{Tmem54} and \textit{Tns1}. Each panel corresponds to separate cell. The y-axis displays the binary GpC accessibility values, with 1 being accessibility and 0 inaccessible. The x-axis displays the genomic region around the TSS (200bp upstream and downstream). The blue area depicts the inferred (non-linear) accessibility profile using the BPRMeth model \cite{Kapourani2018}.}
 	\label{fig:scnmt_profiles_examples}
 \end{figure}
 
-As a first validation step, we showed that the accessibility profiles infered around the transcription start site (TSS) lead to a better prediction of RNA expression than using conventional accessibility rates (\Cref{fig:scnmt_profiles_prediction}).
+As a first validation step, we showed that the accessibility profiles inferred around the transcription start site (TSS) lead to a better prediction of RNA expression than using conventional accessibility rates (\Cref{fig:scnmt_profiles_prediction}):
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.65\linewidth]{scNMT_profiles_prediction}
-	\caption[]{Prediction of RNA expression using conventional accessibility rates (red) and non-linear accessibility profiles (blue). The y-axis displays the adjusted $R^2$ between observed RNA expression and predicted RNA expression. We fit a linear model per cell (across genes) where the response variable is RNA expression (log normalised counts) and the covariates are either the accessibility rate or the weights of the basis functions in BPRmeth.}
+	\caption[]{\textbf{Prediction of RNA expression using conventional accessibility rates (red) and non-linear accessibility profiles (blue)}.\\
+	The y-axis displays the adjusted $R^2$ between observed RNA expression and predicted RNA expression. We fit a linear model per cell (across genes) where the response variable is RNA expression (log normalised counts) and the covariates are either the accessibility rate or the weights of the basis functions in BPRmeth.}
 	\label{fig:scnmt_profiles_prediction}
 \end{figure}
 
@@ -167,101 +178,91 @@ Consistently, when inspecting individual genes we observe that highly expressed 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{scNMT_profiles_expr}
-	\caption[]{Single-cell accessibility profiles of representative genes with high expression levels (top, \textit{Rpl5} and \textit{Eef1g}) and low expression levels (bottom, \textit{Abcc9} and \textit{Theg}). Each panel corresponds to a separate cell. Axis are the same as in \Cref{fig:scnmt_profiles_examples}. }
+	\caption[]{\textbf{Single-cell accessibility profiles of representative genes with high and low expression levels.}\\
+	Shown are \textit{Rpl5} and \textit{Eef1g} (high expression levels, top); \textit{Abcc9} and \textit{Theg} (low expression levels, bottom). Each panel corresponds to a separate cell. Axis are the same as in \Cref{fig:scnmt_profiles_examples}. }
 	\label{fig:scnmt_profiles_highexpr}
 \end{figure}
 
 Next, we attempted at linking the heterogeneity in chromatin accessibility profiles with the variability in RNA expression.\\
 A challenge of this augmented representation is how to find a one-dimensional statistic that summarises the heterogeneity across cells (as the variance statistic in conventional rates), which can be in turn correlated with summary statistics from the RNA expression. The approach we followed here is to cluster cells (per gene) based on the similarity of the accessibility profiles, using a finite mixture model with an expectation-maximisation algorithm. The optimal number of clusters was estimated using a Bayesian Information Criterion.\\
-After model fitting, we considered the number of clusters as a proxy for accessibility heterogeneity, the rationale being that homogeneous genes will be grouped in a single cluster, while heterogeneous genes will contain a higher number of clusters.\\
+After model fitting, we considered the number of clusters as a proxy for accessibility heterogeneity, the rationale being that homogeneous genes will be grouped in a single cluster, while heterogeneous genes will contain a higher number of clusters. The result of the analysis is shown below:\\
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{scNMT_profiles_clusters}
-	\caption[]{}
+	\caption[]{
+	\textbf{Clustering chromatin accessibility profiles at gene promoters}. \\
+	(a) Accessibility profiles are fitted for each cell and gene using 200 bp windows around the TSS. Then, a clustering step is applied for each gene and the most likely number of clusters is estimated using a Bayesian Information Criterion. Genes with higher numbers of clusters correspond to genes with increased heterogeneity compared to genes with small numbers of clusters.\\
+	(b) Relationship between heterogeneity in the accessibility profile (x-axis) and average gene expression (across cells, y-axis).
+	}
 	\label{fig:scnmt_profiles_clusters}
 \end{figure}
 
-% Fig. 4 Modelling chromatin accessibility profiles at gene promoters in single cells. a Accessibility profiles for each cell and gene are fitted at a single nucleotide resolution (+/–200 bp around the TSS), followed by clustering of profiles for each gene to estimate the most likely number of clusters. Genes with higher numbers of clusters correspond to genes with increased heterogeneity compared to genes with small numbers of clusters. b Relationship between heterogeneity in the accessibility profile and gene expression. Boxplots show the distribution of average gene expression levels for genes with increasing numbers of accessibility clusters. Upper and lower hinges display third and first quartiles; the bar displays the median and the whiskers 1.5 times the inter-quartile range above and below the boxes. c Proportion of gene promoters marked with H3K4me3 and/or H3K27me3 stratified by number of accessibility clusters. Promoters with high levels of accessibility heterogeneity are associated with the presence of bivalent histone marks (both H3K4me3 and H3K27me3). d Gene ontology terms significantly enriched in genes with most homogeneous accessibility profiles (K = 1)
+When relating the number of clusters to the gene expression, we observed that genes with homogeneous accessibility profiles (fewer clusters) were associated with higher average expression levels. 
 
-
-When relating the number of clusters to the gene expression, we observed that genes with homogeneous accessibility profiles (fewer clusters) were associated with higher average expression levels. Gene Ontology enrichment analysis suggests that this cluster is enriched by genes with houseekeping functions, which are known to display more conserved epigenetic features \cite{She2009}.\\
+Gene Ontology enrichment analysis suggests that this cluster is enriched by genes with housekeeping functions, which are known to display more conserved epigenetic features \cite{She2009}.\\
 In contrast, genes with heterogeneous accessibility (multiple clusters) were associated with lower expression levels and were enriched for bivalent domains, containing both active H3K4me3 and repressive H3K27me3 histone marks. As reported in previous studies, bivalent chromatin is normally associated with lowly-expressed genes that are poised for activation upon cell differentiation, thus playing a fundamental role in pluripotency and development \cite{Vastenhouw2012,Bernstein2006}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{scNMT_profiles_clusters2}
-	\caption[]{}
+	\caption[]{
+%c Proportion of gene promoters marked with H3K4me3 and/or H3K27me3 stratified by number of accessibility clusters. Promoters with high levels of accessibility heterogeneity are associated with the presence of bivalent histone marks (both H3K4me3 and H3K27me3). d Gene ontology terms significantly enriched in genes with most homogeneous accessibility profiles (K = 1)
+	}
 	\label{fig:scnmt_profiles_clusters2}
 \end{figure}
 
 
-% \begin{figure}[H]
-% 	\centering
-% 	\includegraphics[width=0.9\linewidth]{scNMT_profiles_clusters_examples}
-% 	\caption[]{}
-% 	\label{fig:scnmt_profiles_clusters_examples}
-% \end{figure}
+\subsection{Exploration of epigenome connections along a developmental trajectory}
 
-
-
-\subsection{Characterisation of epigenome dynamics along a developmental trajectory}
-The use of single-cell technologies has permitted the unbiased study of continuous trajectories by computationally reconstructing the \textit{pseudotemporal} dynamics from the molecular profiles \cite{Trapnell2014,Haghverdi2016,Saelens2018}. A novel opportunity unveiled by the introduction of single-cell multi-modal technologies is the study of epigenetic dynamics along trajectories infered from the transcriptome.
-
-To explore this idea, we applied a diffusion-based pseudotime method\cite{Haghverdi2016} to the EB data set, using the RNA expression of the 500 genes with highest biological overdispersion\cite{Lun2016}. The resulting first diffusion component was used to reconstruct a pseudotemporal ordering of cells from pluripotent to differentiated states:
+The use of single-cell technologies has permitted the unbiased study of continuous trajectories by computationally reconstructing the \textit{pseudotemporal} dynamics from the molecular profiles \cite{Trapnell2014,Haghverdi2016,Saelens2018}. A novel opportunity unveiled by the introduction of single-cell multi-modal technologies is the study of epigenetic dynamics along trajectories inferred from the transcriptome. To explore this idea, we applied a diffusion-based pseudotime method\cite{Haghverdi2016} to the EB data set, using the RNA expression of the 500 genes with highest biological overdispersion\cite{Lun2016}. The first diffusion component was used to reconstruct a pseudotemporal ordering of cells from pluripotent to differentiated states:
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{scNMT_pseudotime}
-	\caption[]{Reconstruction of developmental trajectory in embryoid body cells from the RNA expression data. Each dot corresponds to one cell. The y-axis displays expression of Esrrb, a canonical pluripotency marker, and the x-axis shows the position of the cells in the first diffusion component.}
+	\caption[]{\textbf{Reconstruction of developmental trajectory in embryoid body cells from the RNA expression data}.\\
+	Each dot corresponds to one cell. The y-axis displays expression of \textit{Esrrb}, a canonical pluripotency marker, and the x-axis shows the position of the cells in the first diffusion component.}
 	\label{fig:scnmt_pseudotime}
 \end{figure}
-%b Reconstructed dynamics of variation in chromatin accessibility profiles across the developmental trajectory. Shown are profiles of representative cells for Rock2 and Efhd1. Axis ticks display –200 bp, 0 bp and +200 bp relative to the TSS. Shading is used to highlight changes between cells. c Developmental trajectory is associated changes in genome-wide methylation-accessibility coupling. Shown is the location of each cell in pseudotime (x axis) and the corresponding Pearson correlation coefficients between methylation and accessibility (y axis) in different genomic contexts
-
-% (EXPLAIN BETTER..) Next, we aimed at identifying genes with coordinated promoter accessibility changes along the trajectory. To do this, we quantified for each gene the Spearman's rank coefficient between the cell's non-linear chromatin accessiiblity profile and the corresponding position in the pseudotime. This identified 15 significant genes, most of them showing a positive coefficient linked to a decrease in chromatin accessibility along the trajectory.
-
-% \begin{figure}[H]
-% 	\centering
-% 	\includegraphics[width=0.9\linewidth]{scNMT_pseudotime_correlation}
-% 	\caption[]{}
-% 	\label{fig:scnmt_pseudotime_correlation}
-% \end{figure}
-
-% Association analysis between promoter accessibility profile and development trajectory. For each gene, the cell cluster assignments were associated with the corresponding cell’s position in the pseudotime axis using Spearman’s rank coefficient. Shown is a volcano plot of correlation coefficients in the x axis with the corresponding log10 p-values in the y axis. Red dots denote genes that pass statistical significance threshold (alpha = 0.01).
-% Reconstructed dynamics of chromatin accessibility profiles along the developmental trajectory. Shown are profiles of representative cells for genes that show dynamic behaviour along the pseudotime in their accessibility profile: (a) Nek9 and (b) Trmt112. Each red dot represents a GpC site, with binary accessibility value (1=accessible, 0=inaccessible). A non-linear regression curve is fit for each gene and cell using the BPRMeth package5. The blue line represents the mean of the posterior distribution of the inferred non- linear function, and the shading represents the corresponding 80% credible interval. Axis ticks display windows of +-200bp around the TSS. Yellow shading is used to highlight the relevant region of dynamic changes.
 
 
-Next, we investigated whether the strength of association between molecular layers (as calculated in \Cref{fig:scNMT_correlations_acrossgenes}) are affected along the predicted developmental trajectory. We observe that for DNA methylation and chromatin accessibility, the negative correlation coefficients decreases in practically all genomic contexts \Cref{fig:scnmt_pseudotime_coupling}, such that pluripotent cells have a notably weaker methylation-chromatin coupling than differentiated cells.\\
-This triple-omics analysis, which was made possible by the ability to profile three molecular layers, and the continuous nature of single-cell data, indicates that the strength of regulation between two molecular layers can be altered during cell fate decisions.
+Using the pseudotime reconstruction we investigated whether the strength of association between molecular layers (as calculated in \Cref{fig:scNMT_correlations_acrossgenes}) are affected along the developmental trajectory. To do this, we simply correlated the correlation coefficient across genes between each pair of molecular layers (one value per cell) versus the pseudotime position \Cref{fig:scnmt_pseudotime_coupling}. Importantly, this analysis is possible by the continuous nature of single-cell data and by the ability of scNMT-seq to profile three molecular layers at the same time.\\
+We observe that for DNA methylation and chromatin accessibility, the negative correlation coefficients decreases in important regulatory genomic contexts \Cref{fig:scnmt_pseudotime_coupling}, such that pluripotent cells have a notably weaker methylation-chromatin coupling than differentiated cells. This suggests that the strength of regulation between molecular layers can be altered during cell fate decisions.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{scNMT_pseudotime_coupling}
-	\caption[]{}
+	\caption[]{\textbf{Developmental trajectory is associated changes in genome-wide methylation-accessibility coupling.}\\
+	Shown is the location of each cell in pseudotime (x-axis) and the corresponding Pearson correlation coefficients between methylation and accessibility (y-axis) in three different genomic contexts with regulatory roles.
+	}
 	\label{fig:scnmt_pseudotime_coupling}
 \end{figure}
 
-\section{Open perspectives}
+\section{Conclusions and open perspectives}
 
-Multi-modal sequencing technologies are becoming rapidly available. Yet, compared to scRNA-seq technologies, the field still is at an early stage amd numerous developments are expected to occur in the next years. These are the lines of research that we are considering to improve in scNMT-seq:
+In this Chapter I have introduce single-cell nucleosome, methylation and transcription sequencing (scNMT-seq), an experimental protocol for the genome-wide profiling of RNA expression, DNA methylation and chromatin accessibility in single cells. We have shown that this novel technology can be used to study the connection between the epigenome and the transcriptome in an unsupervised manner.
+
+This protocol is an important step forward in the field of single-cell multi-modal sequencing. Yet, as with other protocols, the technology is still in a very early stage and numerous developments are expected to occur in the next years. These are the lines of research that I believe are important to improve scNMT-seq:
 
 \begin{itemize}
 
-	\item \textbf{Scalability}. scRNA-seq protocols are reaching the astonishing numbers of milions of cells per experiment, compared to the limited cell numbers achieved in multi-modal experiments \cite{Cao2019,Cao2018,Guo2017}. As in scRNA-seq, the maturation of multi-modal techniques will have a trade-off between sensitivity and scalability \cite{Chappell2018}. Under the assumption that most of the variance explained by epigenetic layers is driven by cis-regulation \cite{Bell2011}, we emphasise the importance of obtaining high-resolution measurements as provided by scNMT-seq. Hence, effort should be placed on making this comprehensive technology more scalable, which can be achieved in the short term by a series of technical improvements.\\
+	\item \textbf{Scalability}: scRNA-seq protocols are reaching the astonishing numbers of millions of cells per experiment, compared to the limited cell numbers achieved in multi-modal experiments \cite{Cao2019,Cao2018,Guo2017}. As in scRNA-seq, the maturation of multi-modal techniques will have a trade-off between sensitivity and scalability \cite{Chappell2018}. Under the assumption that most of the variance explained by epigenetic layers is driven by cis-regulation \cite{Bell2011}, we emphasise the importance of obtaining high-resolution measurements as provided by scNMT-seq. Hence, effort should be placed on making this comprehensive technology more scalable, which can be achieved in the short term by a series of technical improvements.\\
 	First, barcodes are currently added at the end of the protocol, which limits a single experiment to the size of the plate (typically 96 cells). As in droplet-based methods or combinatorial indexing methods, adding the barcodes at the start of the protocol would enable the simultaneous processing of multiple pools of cells \cite{DR-seq,Mulqueen2018}.\\
 	Similarly, the physical separation of mRNA from genomic DNA is also carried out at the start of the protocol and individually for each cell. Given that it is a time-consuming and expensive process, this step should also be performed after pooling \cite{DR-seq}.\\
 	Finally, sequencing costs are substantially decreasing (even faster than predicted by Moore's law \cite{Svensson2018}). Yet, the generation of scNMT-seq libraries remains inexorably expensive. Hence, we anticipate that efforts to decrease the library size by a pre-selection of the genetic material will be indispensable. Examples of such strategies are the digestion by restriction enzymes as in RRBS \cite{Guo2013}, an initial round of ATAC protocol to select open chromatin \cite{Spektor2018} or the pull-down of specific genomic regions using capture probes.
 
-	\item \textbf{Imputation of missing epigenetic data}. Because of the low amounts of starting material, single-cell methylation protocols are limited by incomplete CpG coverage \cite{Angermueller2017}. These becomes even more pronounced in scNMT-seq where almost $\approx$ 50\% of CpG dinucleotides are removed to avoid technical biases (see \Cref{section:scnmt_coverage}). Nonetheless, as discussed in \Cref{section:scnmt_protocol}, an important advantage of bisulfite approaches is that missing data can be easily discriminated from inaccessible chromatin. Therefore, the imputation of DNA methylation data will be a critical step to enable genome-wide analysis.\\
+	\item \textbf{Imputation of missing epigenetic data}: because of the low amounts of starting material, single-cell methylation protocols are limited by incomplete CpG coverage \cite{Angermueller2017}. These becomes even more pronounced in scNMT-seq where almost $\approx$ 50\% of CpG dinucleotides are removed to avoid technical biases (see \Cref{section:scnmt_coverage}). Nonetheless, as discussed in \Cref{section:scnmt_protocol}, an important advantage of bisulfite approaches is that missing data can be easily discriminated from inaccessible chromatin. Therefore, the imputation of DNA methylation data will be a critical step to enable genome-wide analysis.\\
 	Most of the methods developed for bulk data are unsuccesful because they do not account for cell-to-cell variability \cite{Angermueller2017}. A successful single-cell strategy based on deep learning has been proposed (DeepCpG\cite{Angermueller2017}), but is a complex model that is difficult to train and does not scale to large studies. Faster and accurate Bayesian approaches have also been considered (Melissa \cite{Kapourani2018b}), albeit the model is restricted to small genomic annotations. An interesting direction would be to extend DeepCpG and Melissa to exploit the richness of information in the GpC accessibility data to refine the imputation of CpG measurements.
 
-	\item \textbf{Adding more molecular layers}. The scNMT-seq protocol can be adapted both experimentally and computationally to profile additional molecular layers. From the computational side, one could exploit the sequence information in the libraries to infer copy number variation or single nucleotide variants \cite{Poirion2018,Fan2018,McCarthy2018,Enge2017}. This approach has been successful at dealineating the clonal substructure of somatic tissues and at tracking mutational signatures in cancer tissues. In addition, the full length transcript information enables the quantification of splice variants\cite{Huang2017}, allele-specific fractions\cite{Deng2014} and RNA velocity information \cite{LaManno2018}.\\
+	\item \textbf{Adding more molecular layers}: the scNMT-seq protocol can be adapted both experimentally and computationally to profile additional molecular layers. From the computational side, one could exploit the sequence information in the libraries to infer copy number variation or single nucleotide variants \cite{Poirion2018,Fan2018,McCarthy2018,Enge2017}. This approach has been successful at dealineating the clonal substructure of somatic tissues and at tracking mutational signatures in cancer tissues. In addition, the full length transcript information enables the quantification of splice variants\cite{Huang2017}, allele-specific fractions\cite{Deng2014} and RNA velocity information \cite{LaManno2018}.\\
 	From the experimental side, NMT-seq can theoretically be combined with novel single-cell assays that quantify transcription factor binding \cite{Moudgil2019} and histone modifications \cite{Kaya-Okur2019}.
 	% Stephen: TF binding using https://doi.org/10.1101/538553 histone modifications using https://doi.org/10.1101/568915 - both in theory could be combined with some future NMTseq
 
-	\item \textbf{Denoising}. The readouts from bisulfite sequencing are very sensitive \cite{XX}. However, in scNMT-seq the CGC positions (27\%) suffer from off-target effects of the GpC methylase \cite{Kelly2012}. In this work we have excluded those measurements to avoid undesired technical variation. Yet, no attempts have been carried to quantify this effect. If small enough, one could denoise the resulting CpG measurements by machine learning techniques that use sequence context information and pool information across cells.
+	\item \textbf{Denoising}: in scNMT-seq the CGC positions (27\%) suffer from off-target effects of the GpC methylase \cite{Kelly2012}. In this work we have excluded those measurements to avoid undesired technical variation. Yet, no attempts have been carried to quantify this effect. If small enough, one could denoise the resulting CpG measurements by machine learning techniques that use sequence context information.
+	%The readouts from bisulfite sequencing are very sensitive \cite{XX}. 
 
-	\item \textbf{Long reads}. The scNMT-seq libraries that were generated for this study contained short reads (75bp) that do not provide sufficient information about the regional context of the individual DNA molecule. By sequencing NOMe-seq libraries with long-read nanopore sequencing technology \cite{Lee2018} showed that one can obtain phased methyation and chromatin accessibility measurements and structural changes from a single assay. This approach could potentially unveil a more comprehensive understanding of the epigenome dynamics and its regulatory role on RNA expression.
+
+	\item \textbf{Long reads}: the scNMT-seq libraries that were generated for this study contained short reads (75bp) that do not provide sufficient information about the regional context of the individual DNA molecule. By sequencing NOMe-seq libraries with long-read nanopore sequencing technology \cite{Lee2018} showed that one can obtain phased methyation and chromatin accessibility measurements and structural changes from a single assay. This approach could potentially unveil a more comprehensive understanding of the epigenome dynamics and its regulatory role on RNA expression.
 
 \end{itemize}
 

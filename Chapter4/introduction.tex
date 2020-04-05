@@ -8,6 +8,7 @@ MOFA makes strong assumptions about the dependencies across samples and it hence
 
 In this new Chapter we improve the model formulation in MOFA with the aim of performing integrative analysis of large-scale datasets that are \textit{structured} into multiple data modalities and/or multiple groups.
 
+The work discussed in this chapter has been peer-reviewed and published in \cite{Argelaguet2020}. The project was conceived by Damien Arnol, Britta Velten and me. The mathematical derivations and the implementation of the stochastic variational inference scheme was done by Damien Arnol, Yonatan Deloro and me. The downstream analysis package was implemented by Danila Bredikhin and me. I generated all figures and I wrote the manuscript with feedback from all authors. John C. Marioni and Oliver Stegle supervised the project. 
 
 \section{Theoretical fundations}
 
@@ -299,10 +300,10 @@ Now that we have the gradients for both the local and the global parameters, we 
 	\State Initialise the global parameters $\blambda^{(t=0)}$
 	\Repeat
 		\For{\text{each local variational parameter $\phi_{nk}$}}
-			\State $ \phi_{nk}^{(t+1)} \gets \E_{q^{(t)}(q(\bbeta,\bfz_{nj}))[\eta_l(\bfy_{n},\bfz_{nj},\bbeta)] $
+			\State $ \phi_{nk}^{(t+1)} \gets \E_{q^{(t)}}(q(\bbeta,\bfz_{nj}))[\eta_l(\bfy_{n},\bfz_{nj},\bbeta)] $
       	\EndFor
 		\For{\text{each global variational parameter $\lambda$}}
-			\State $ \lambda{(t+1)}= \E_{q^{(t)}(q(z))[\eta_g(\bfY,\bfZ,\balpha)] $
+			\State $ \lambda{(t+1)}= \E_{q^{(t)}}(q(z))[\eta_g(\bfY,\bfZ,\balpha)] $
       	\EndFor
 	\Until{Convergence}
 	\end{algorithmic}
