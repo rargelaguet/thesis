@@ -8,7 +8,6 @@
 %\documentclass[a4paper,11pt,times,custombib,custommargin,draftclassic]{Classes/PhDThesisPSnPDF}
 
 
-
 % ******************************************************************************
 % ******************************* Class Options ********************************
 % ******************************************************************************
@@ -157,38 +156,38 @@
 \mainmatter
 
 % Introduction
-%\include{Introduction/introduction}
+\include{Introduction/introduction}
 
 % Chapter 1
-%\include{Chapter1/introduction}
-%\include{Chapter1/scnmt-seq}
+\include{Chapter1/introduction}
+\include{Chapter1/scnmt-seq}
 
 % Chapter 2
 \include{Chapter2/introduction}
-\include{Chapter2/bayes}
-\include{Chapter2/factor_analysis}
-\include{Chapter2/mofa}
+\include{Chapter2/model_description}
+\include{Chapter2/results}
+\include{Chapter2/perspectives}
 
 % Chapter 3
-%\include{Chapter3/introduction}
-%\include{Chapter3/results}
+\include{Chapter3/introduction}
+\include{Chapter3/results}
 
 % Chapter 4
-%\include{Chapter4/introduction}
-%\include{Chapter4/model_description}
-%\include{Chapter4/results}
-
+\include{Chapter4/introduction}
+\include{Chapter4/model_description}
+\include{Chapter4/results}
+\include{Chapter4/perspectives}
 
 % ********************************** Appendices ********************************
 
-%\begin{appendices} % Using appendices environment for more functunality
+\begin{appendices}
 
-% \include{Appendix1/appendix1}
+\input{Appendix/appendix1}
 % \include{Appendix2/appendix2}
 % \include{Appendix3/appendix3}
 % \include{Appendix4/appendix4}
 
-%\end{appendices}
+\end{appendices}
 
 
 % ********************************** Back Matter *******************************
@@ -201,6 +200,6 @@
 % \bibliographystyle{apalike}
 \cleardoublepage
 
-%\printbibliography
+\printbibliography
 
 \end{document}

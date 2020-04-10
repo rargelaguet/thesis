@@ -167,7 +167,7 @@ The approach we followed is based on BPRMeth \cite{Kapourani2018}, a generalized
 	\label{fig:scnmt_profiles_examples}
 \end{figure}
 
-As a first validation step, we showed that the accessibility profiles inferred around the transcription start site (TSS) lead to a better prediction of RNA expression than using conventional accessibility rates (\Cref{fig:scnmt_profiles_prediction}):
+As a first validation step, we showed that the accessibility profiles inferred around the transcription start site (TSS) lead to a better prediction of RNA expression than using conventional accessibility rates:
 
 \begin{figure}[H]
 	\centering
@@ -261,7 +261,6 @@ This protocol is an important step forward in the field of single-cell multi-mod
 
 	\item \textbf{Denoising}: in scNMT-seq the CGC positions (27\%) suffer from off-target effects of the GpC methylase \cite{Kelly2012}. In this work we have excluded those measurements to avoid undesired technical variation. Yet, no attempts have been carried to quantify this effect. If small enough, one could denoise the resulting CpG measurements by machine learning techniques that use sequence context information.
 	%The readouts from bisulfite sequencing are very sensitive \cite{XX}. 
-
 
 	\item \textbf{Long reads}: the scNMT-seq libraries that were generated for this study contained short reads (75bp) that do not provide sufficient information about the regional context of the individual DNA molecule. By sequencing NOMe-seq libraries with long-read nanopore sequencing technology \cite{Lee2018} showed that one can obtain phased methylation and chromatin accessibility measurements and structural changes from a single assay. This approach could potentially unveil a more comprehensive understanding of the epigenome dynamics and its regulatory role on RNA expression.
 

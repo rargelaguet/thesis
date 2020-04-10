@@ -78,10 +78,5 @@
     <requires type="dynamic">
       <file>thesis.bcf</file>
     </requires>
-    <requires type="editable">
-      <file>references/references_chapter1.bib</file>
-      <file>references/references_chapter2.bib</file>
-      <file>references/references_chapter3.bib</file>
-    </requires>
   </external>
 </requests>

@@ -289,19 +289,3 @@ As discussed above, the rest of the MOFA+ Factors explain significantly less var
 
 The inference framework in MOFA+ is implemented in Python, whereas the downstream analysis and visualisations are implemented in R. GPU acceleration is implemented using CuPy\cite{Okuta2017}, an open-source matrix library accelerated with NVIDIA CUDA.\\
 To facilitate adoption of the method, we deploy MOFA+ as open-source software (https://github.com/bioFAM/MOFA2) with multiple tutorials and a web-based analysis workbench, hopefully enabling a user-friendly characterisation of structured single-cell data.
-
-
-\section{Limitations and opern perspectives}
-
-In this Chapter we proposed a generalisation of the MOFA model for the principled analysis of large-scale \textit{structured} data sets. This solves some of the limitations of the MOFA model presented in Chapter 2, but a significant amount of challenges remain unsolved and could be addressed in future research:
-
-\begin{itemize}
-	\item \textbf{Linearity}: this is arguably the major limitation of MOFA. Although it is critical for obtaining interpretable feature weights, this results in a significant loss of explanatory power. Deep generative models have proven successful in modelling complex observations. Their principle is the use of non-linear maps via neural networks to encode the parameters of probability distributions. Among this class of methods, variational autoencoders provide a rigurous and scalable non-linear generalisation of factor models. \cite{Ainsworth2018}.
-
-	\item \textbf{Improving the stochastic inference scheme}: a common extension of stochastic gradient descent is the addition of a \textit{momentum} term, which has been widely adopted in the training of artificial neural networks \cite{Zeiler2012,Ning1999}. The idea is to take account of past updates when calculating the present step, using for example a moving average calculation. This has been shown to improve the stability of gradients vectors, thus leading to a faster convergence.
-
-	\item \textbf{Modelling dependencies between groups}: often groups are not independent and have some type of structure among themselves. A clear example are time course experiments. Explicit modelling of these dependencies, when known, could help on model inference and interpretation.
-
-	\item \textbf{Modelling continuous dependencies between samples and/or features}: in the MOFA framework the views and the groups correspond to discrete and non-overlapping sets. An interesting improvement would be to model continuous dependencies using Gaussian Process priors \cite{XX}. A clear application for this is  spatial transcriptomics data, where one could build a (spatial) covariance matrix using cell-to-cell distances which can then be imposed in the prior distribution of the latent factors (recall that in MOFA the prior distribution for the factors assumes independence between samples). This would improve the detection of sources of variation with a spatial component.s
-
-\end{itemize}

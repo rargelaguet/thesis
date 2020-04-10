@@ -1,0 +1,18 @@
+
+
+
+
+\subsection{Non-gaussian Bayesian Factor Analysis}
+
+ata modality, which enables integrating diverse data types such as binary-, count- and continuous-valued data
+
+Standard Factor Analysis typically assumes Normally distributed data \cite{XX}, which limits its application to other data modalities. In the biological domain, this includes binary traits such as genetic variability \cite{}, count-based traits such as copy numbers \cite{}, and zero-inflated continuous data such as single-cell RNA expression measurements \cite{}.
+
+The challenge in the use of non-Gaussian likelihoods lies on the loss of conjugacy between the likelihood and the prior, which makes inference troublesome. Several approaches have been proposed to implement efficient variational inference in conjunction with general likelihood models \cite{XX,XX,XX}.
+
+Most of the approaches rely on the use of local variational bounds. The key idea is to dynamically approximate the data by a normally-distributed pseudo-data which is derived from a second-order Taylor expansion. 
+
+	DERIVATION
+
+
+To make the approximation justifiable we need to introduce variational parameters that are adjusted alongside the updates to im- prove the fit.

@@ -1,6 +1,4 @@
-\graphicspath{{Chapter2/Figs/}}
-
-\section{Graphical notations for probabilistic models}
+\subsection{Graphical notations for probabilistic models}
 
 Probabilistic models can be represented in a diagrammatic format (i.e. a graph or a network) that offers a compact visual representation of complicated systems of probability distributions \cite{Bishop}. In a graphical model the relationship between the nodes becomes more explicit, namely their conditional independence properties which allow the joint distribution over all variables to be factorised into a series of simpler products involving subsets of variables \cite{Bishop}. The basic unit of a network is the node, which represents the different types of variables, including observed variables, unobserved probabilistic variables and unobserved parameters. The nodes are connected by unidirectional edges (arrows) which capture the conditional independence relationship between the variables.
 
@@ -20,11 +18,12 @@ For this thesis we adapted the graphical notations from~\cite{Dietz2010-technica
 \end{center}
 % For simplicity, fixed hyperparameters are not represented on the graphical model. Unobserved parameters are only represented when optimised together with the unobserved probabilistic variables.
 
-\section{Latent variable models for genomics}
+\subsection{Latent variable models for genomics}
+
 With the exponential growth in the use of high-throughput genomics, biological data sets are increasingly high dimensional, both in terms of samples and features. A key principle of biological data sets is that variation between the features results from differences in underlying, often unobserved, processes. Such processes, whether driven by biological or technical effects, are manifested by coordinated changes in multiple features. This key assumption sets off an entire statistical framework of exploiting the redundancy encoded in the data set to learn the (latent) sources of variation in an unsupervised fashion. This is the aim of dimensionality reduction techniques, or latent variable models (LVMs) \cite{Komili2008, Stegle2012, Leek2007, Pournara2007, Dai2017, Genevieve2018, Meng2016}.
 %Missing ref Meng2016
 
-\subsection{General mathematical formulation}
+\subsubsection{General mathematical formulation}
 Given a dataset $\bfY$ of $N$ samples and $D$ features, LVMs attempt to exploit the dependencies between the features by reducing the dimensionality of the data to a potentially small set of $K$ latent variables, also called factors. The mapping between the low-dimensional space and the high-dimensional space is performed via a function $f(\bfX|\bTheta)$ that depends on some parameters $\bTheta$.\\
 The choice of $f(\bfX|\bTheta)$ is essentially the field of dimensionality reduction. A trade-off exists between complexity and interpretation: while non-linear functions such as deep neural networks provide more explanatory power, this leads to a considerable challenges in interpretation \cite{Zhang2018_NN}. Hence, for most applications where interpretability is important, $f(\bfX|\bTheta)$ is assumed to be linear \cite{XX}:
 % \begin{equation} 
@@ -38,7 +37,7 @@ Note that the aim in dimensionality reduction is to exploit the coordinated hete
 
 The inference procedure consists in learning the values of all unobserved variables, including factors and weights. As we shall demonstrate, different inference schemes and assumptions on the prior distributions lead to significantly different model outputs \cite{Rattray2009}.
 
-\subsection{Principal component Analysis} \label{section:pca}
+\subsubsection{Principal component Analysis} \label{section:pca}
 Principal Component Analysis (PCA) is the most popular technique for dimensionality reduction \cite{Hotelling1933,Ringner2008}. Starting from \Cref{eq:linear_model}, two formulations of PCA exist \cite{Bishop}. In the maximum variance formulation, the aim is to infer an orthogonal projection of the data onto a low-dimensional space such that variance explained by the projected data is maximised:
 
 \begin{figure}[H]
@@ -86,7 +85,7 @@ Assuming again centered data, the variance of $\bfy_{n}$ is $\|\bfy_{n}\| = \bfy
 The main strength of PCA relies on its simplicity and closed form solution. Additionally, the linear mapping has the advantage of yielding interpretable loadings, so that inspection of $\bfw_k$ reveals which features are jointly affected by the $k$-th principal component.\\
 However, PCA suffers from serious drawbacks when applying it to real data sets \cite{Li2017b}. First, biological measurements are inherently noisy, and there is no explicit account of noise in PCA. In practice, high variance components are often asociated with signal whereas low-variance components are assumed to be noise, but an ideal model should explicitly disentangle the uncoordinated variability that is attributed to noise from the coordinated variability that is characterised as signal. Second, in its original formulation, no missing data is allowed \cite{Ilin2010}. Third, there is no rationality on how to evaluate the fit and perform model selection. Finally, it does not offer a principled way of modelling prior information about the data.
 
-\subsection{Probabilistic Principal Component Analysis and Factor Analysis} \label{section:probabilistic_pca}
+\subsubsection{Probabilistic Principal Component Analysis and Factor Analysis} \label{section:probabilistic_pca}
 A probabilistic version of PCA was initially proposed in \cite{Tipping1999}. It can be formulated by converting some (or all) fixed parameters into random variables and adding an explicit noise term to \Cref{eq:linear_model}:
 \begin{equation}
 	\bfY = \bfW \bfZ + \bepsilon
@@ -119,7 +118,7 @@ The inference procedures involves learning the parameters $\bfW$, and $\sigma^2$
 Interestingly, the EM solution of probabilistic PCA lies in the same subspace than the traditional PCA solution \cite{Tipping1999}, but the use of a probabilistic framework brings several benefits. First, model selection can be performed by comparing likelihoods across different settings of parameters. Second, missing data can naturally be accounted for by ignoring the missing observations from the likelihood. Finally, the probabilistic formulation sets the core framework for a Bayesian treatment of PCA, enabling a broad range of principled extensions tailored different types of data sets.
 
 
-\subsection{Bayesian Principal Component Analysis and Bayesian Factor Analysis} \label{section:bayesian_pca}
+\subsubsection{Bayesian Principal Component Analysis and Bayesian Factor Analysis} \label{section:bayesian_pca}
 
 The full Bayesian treatment of PCA requires the specification of prior probability distributions for all unobserved variables:
 \begin{align*}
@@ -148,6 +147,7 @@ The corresponding graphical model is:
 \end{figure}
 
 \subsubsection{Hierarchical priors: Automatic relevance determination} \label{section_ard}
+
 A key advantage of the full Bayesian treatment is that it explicitly captures uncertainity on the estimation of all unobserved variables, as opposed to the probabilistic PCA model \cite{Bishop1999a,Bishop1999b}. Yet, more importantly, the use of (hierarchical) prior distributions allow different modelling assumptions to be encoded, providing a flexible and principled approach to extend PCA to a myriad of modelling scenarios, including multi-view generalisations \cite{Klami2008,Virtanen2012,Klami2015,Bunte2016,Khan2014,Zhao2016}.
 
 As an example, a major challenge in PCA is how to determine the dimensionality of the latent space (i.e. the number of principle components). As we will show, the use of hierarchical prior distributions allows the model to introduce sparsity assumptions on the loadings in such a way that the model automatically learns the number of factors.\\
@@ -172,7 +172,8 @@ Second, performing inference on the variable $\balpha = \{ \alpha_1, \cdots, \al
 	\label{fig:hinton}
 \end{center} \end{figure}
 
-\subsubsection{Hierarchical priors: Spike-and-slab prior}
+\subsubsection{Hierarchical priors: Spike-and-slab prior} \label{section_spikeslab}
+
 Sparse extensions of the Bayesian factor analysis model have been proposed as a regularisation mechanism but also to model inherent assumptions regarding the sparse nature of biological data \cite{Stegle2012,Gao2013}.\\
 The variability observed in biological data is driven both by technical factors and biological factors. Thechnical factors (i.e. batch effects) tend to be relatively strong and alter the expression of a large proportion of genes, whereas the biological factors are potentially weak effects driven by changes in small gene regulatory networks \cite{Gao2013}. Hence, a practical factor analysis model should be able to learn factors with different degrees of sparsity.\\
 The ARD prior proposed in \Cref{eq:ard} allows entire factors to be dropped out from the model, but it provides a weak degree of regularisation when it comes to inactivating individual loadings within the active factors.
@@ -200,14 +201,14 @@ The spike-and-slab prior is effectively a mixture model where features are sampl
 
 
 
-\section{Multi-view factor analysis models}
+\subsection{Multi-view factor analysis models}
 
 Probabilistic PCA and Factor Analysis perform dimensionality reduction from a single input matrix. In some occasions data is collected from multiple data sources that exibit heterogeneous statistical properties, resulting in a structured data set where features are naturally partitioned into views \cite{Xu2013,Li2016,Zeng2018}. A clear biological example is multi-omics data, where, for the same set of samples, multiple molecular layers are profiled. Each of the data modalities can be analysed separately using conventional (single-view) methods, but in the ideal strategy a single model should be used to leverage information across all molecular layers using a flexible and principled approach. This is refered to as the multi-view learning problem \cite{Xu2013,Li2016}.\\
 A tempting approach to circumvent the multi-view learning problem is to simply concatenate all different data sets before applying conventional (single-view) latent variable models \cite{Ritchie2015}. However, this is prone to fail for several reasons. First, heterogeneous data modalities cannot always be modelled using the same likelihood function. For example, continuous measurements are often modelled using a normal distribution, but binary and count-based traits are not appropriately modelled by this distribution \cite{Pilling2018}. Second, even if all views are modelled with the same likelihood, differences in the scale and the magnitude of the variance can lead to some views being overrepresented in the latent space. Finally, in a multi-view data set we expect multiple sources of variation, some of which driven by a single view, whereas others could capture shared variability across multiple views. In other words, from a structured input space, one can also expect a structured latent representation. Not taking this behaviour into account can lead to challenges in the interpretability of the latent space.
 
 A comprehensive review of multi-view machine learning methods can be found in \cite{Xu2013} and a more genomics-oriented perspective can be found in \cite{Ritchie2015}. For the purpose of this thesis, we will describe only the use of latent variable models for multi-view data integration.
 
-\subsection{Canonical Correlation Analysis} \label{cca}
+\subsubsection{Canonical Correlation Analysis} \label{cca}
 Canonical Correlation Analysis (CCA) is a simple extension of PCA to find linear components that capture correlations between two datasets \cite{Hotteling1936,Hardle2007}.\\
 Given two data matrices $\bfY_1 \in \R^{N \times D_1}$ and $\bfY_2 \in \R^{N \times D_2}$ CCA finds a set of linear combinations $\bfU \in \R^{D_1 \times K}$ and $\bfV \in \R^{D_2 \times K}$ with maximal cross-correlation.
 For the first pair of canonical variables, the optimisation problem is:
@@ -220,7 +221,7 @@ Given the similarity with PCA, both methods share statistical properties, includ
 Because of its simplicity and efficient computation, CCA has widespread use as a dimensionality reduction technique \cite{Hardle2007}. Yet, as expected, CCA suffers from the same pitfalls as PCA: difficulties in selecting the number of components, lack of sparsity in the solutions and absence of probabilistic formulation. In addition, CCA have been shown to overfit for datasets where $D>>N$ \cite{McCabe2018,Guo2016}. Hence, probabilistic versions with sparsity assumptions that reduce overfitting and improve interpretability followed.
 
 
-\subsection{Probabilistic Canonical Correlation Analysis} \label{section_probabilisticCCA}
+\subsubsection{Probabilistic Canonical Correlation Analysis} \label{section_probabilisticCCA}
 
 Following the derivation of probabilistic PCA \cite{Tipping1999}, a similar effort enabled a probabilistic formulation of CCA as a generative model \cite{Bach2005}.\\
 In this model, the two matrix of observations $\bfY^{1}$ and $\bfY^{2}$ are decomposed in terms of two loading matrices $\bfW^{1}$ and $\bfW^{2}$ but a joint latent matrix $\bfZ$:
@@ -252,7 +253,7 @@ Notice that the observations for both data sets are generated from the same set 
 Analogously to probabilistic PCA, the expected value of the posterior distribution $p(\bfZ|\bfY^{1},\bfY^{2})$ span the same subspace as standard CCA \cite{Bach2005}. Nonetheless, one of the many advantage of a probabilistic formulation is that it enables a broad range of principled extensions into larger graphical models.
 
 
-\subsection{Bayesian Canonical Correlation Analysis} \label{section:bayesian_cca}
+\subsubsection{Bayesian Canonical Correlation Analysis} \label{section:bayesian_cca}
 A fully Bayesian treatment of CCA followed based on exactly the same principle presented in \Cref{section:bayesian_pca} by introducing prior distributions to all unobserved variables \cite{Wang2007,Klami2013}:
 \begin{align*} 
 	p(\bfZ) &= \prod_{n=1}^{N} \prod_{k=1}^{K} \Ndist{z_{nk}}{0,1} \\
@@ -283,7 +284,7 @@ As expected, in practice this yields a more sparse solution than traditional CCA
 \end{figure}
 
 
-\subsection{Group Factor Analysis} \label{section:gfa}
+\subsubsection{Group Factor Analysis} \label{section:gfa}
 
 Group Factor Analysis (GFA) is the natural generalisation of Bayesian Canonical Correlation Analysis to an arbitrary number of views.
 The original idea was originally presented in \cite{Virtanen2012} and a series of generalisations followed, tailored with specific assumptions for different applications \cite{Klami2015,Leppaaho2017,Bunte2016,Khan2014,Zhao2016,Remes2015}. In this section we will outline the core principle of GFA.

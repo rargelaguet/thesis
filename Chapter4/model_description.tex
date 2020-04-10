@@ -2,29 +2,25 @@
 
 \section{Model description}
 
-In MOFA v2 we generalise the model to a disjoint set of $M$ input views (i.e. groups of features) and $G$ input groups (i.e. groups of samples).\\
+In MOFA+ we introduce two key novelties, both in the model aspect and in the inference scheme. In the model side we introduce a principled approach for modelling multi-omic data set where the samples are structured into non-overlapping groups, where groups typically correspond to batches, donors or experimental conditions. In the inference side we implement a stochastic inference algorithm to improve scalability and enable inference with large single-cell data sets.
 
-The data is factorised according to the following model:
+Formally, we generalise the model to a disjoint set of $M$ input views (i.e. groups of features) and $G$ input groups (i.e. groups of samples). The data is factorised according to the following model:
 \begin{equation} \label{mofa_master_equation}
 	\mathbf{Y}^{m}_{g} = \mathbf{Z}_{g} \mathbf{W}^{mT} + \bepsilon^{m}_{g}
 \end{equation}
-where  $\bfZ_{g} \in \R^{N_{g} \times K}$ are a set of $G$ matrices that contains the factor values for the $g$-th group and $\bfW^{m} \in \R^{D_m \times K}$ are a set of $M$ matrices that define the feature weights for the $m$-th view. $\bepsilon^{m}_{g} \in \R^{D_m}$ captures the residuals, or the noise for each feature in ech group.\\
+where $\bfZ_{g} \in \R^{N_{g} \times K}$ are a set of $G$ matrices that contains the factor values for the $g$-th group and $\bfW^{m} \in \R^{D_m \times K}$ are a set of $M$ matrices that define the feature weights for the $m$-th view. $\bepsilon^{m}_{g} \in \R^{D_m}$ captures the residuals, or the noise for each feature in each group. Notice that if $G=1$ then the model simplifies to MOFA v1. 
 
-
-EXPLAIN INTUITION
-REGRESSED OUT GROUP EFFECT
+It is important to get the intuition for the multi-group formulation right. The aim of the multi-group framework is not to capture differential changes in \textbf{mean} levels between the groups (as for example when doing differential RNA expression) but rather to exploit the covariation of features. The aim is to find out which sources of variability (i.e. which latent Factors) are present in the different groups and which ones are exclusive to a single group. This is symmetric to the interpretation of the multi-view framework in MOFA v1: the absolute levels of the features are not to be compared across views, only the covariation patterns are of interest. To achieve this, the features are centred per view and also per group (i.e. all intercept effects are regressed out) before fitting the model. The following figure summarises the MOFA+ pipeline:
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\linewidth]{mofa2_overview}
-	\caption[]{ \\
-	\textbf{Multi-Omics Factor Analysis v2 (MOFA+) provides an unsupervised framework for the integration of multi-group and multi-view single-cell data.} \\
+	\caption[]{\textbf{Multi-Omics Factor Analysis v2 (MOFA+) provides an unsupervised framework for the integration of multi-group and multi-view single-cell data.}\\
 	(a) Model overview: the input consists of multiple data sets structured into M views and G groups. Views consist of non-overlapping sets of features that can represent different assays. Analogously, groups consist of non-overlapping sets of samples that can represent different conditions or experiments. Missing values are allowed in the input data. MOFA+ exploits the dependencies between the features to learn a low-dimensional representation of the data (Z) defined by K latent factors that capture the global sources of molecular variability. For each factor, the weights (W) link the high-dimensional space with the low-dimensional manifold and provide a measure of feature importance. The sparsity-inducing priors on both the factors and the weights enable the model to disentangle variation that is unique to or shared across the different groups and views. Model inference is performed using GPU-accelerated stochastic variational inference. \\
 	(b) The trained MOFA+ model can be queried for a range of downstream analyses: 3D variance decomposition, quantifying the amount of variance explained by each factor in each group and view, inspection of feature weights, visualisation of factors and other applications such as clustering, inference of non-linear differentiation trajectories, denoising and feature selection.
 	}
 	\label{fig:mofa2_overview}
 \end{figure}
-
 
 
 \subsection{Model priors and likelihood}
@@ -74,47 +70,53 @@ The variable $\bepsilon$ captures the residuals, or the noise, which is assumed 
 % 	p(\tau_{d}^{m,g}) &= \Gdist{\tau_{d}^{m,g}}{a_0^{\tau}, b_0^{\tau}}
 % \end{align}
 This formulation is important to capture the (realistic) events where a specific feature may be highly variable in one group but non-variable in another group.\\
-In addition, as in MOFA v1, non-gaussian noise models can also be defined, but unless otherwise stated, we will always assume Gaussian residuals.
+In addition, as in MOFA v1, non-Gaussian noise models can also be defined, but unless otherwise stated, we will always assume Gaussian residuals.
 
+\subsubsection{Likelihood}
 
-% \subsubsection{Likelihood}
-
-% Altogether, this results in the following likelihood:
-% \begin{equation}
-% 	p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{d=1}^{D_m} \prod_{n=1}^{N} \Ndist{y_{nd}^m}{\bfz_{n}^T\bfw_{d}^{m},1/\tau_d^m}
-% 	% p(y_{nd}^m) = \Ndist{y_{nd}^m}{\bfz_{n,:}\bfw_{d,:}^{mT},1/\tau_d^m},
-% \end{equation}
+Altogether, this results in the following likelihood:
+\begin{equation}
+	p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{g=1}^{G} \Ndist{\mathbf{Y}^{m}_{g}}{\mathbf{Z}_{g} \mathbf{W}^{mT},1/\btau^{m}_{g}}
+	% p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{g=1}^{G} \prod_{d=1}^{D_m} \prod_{n=1}^{N} \Ndist{y_{nd}^{mg}}{\bfz_{ng}^T\bfw_{d}^{mg},1/\tau_{d}^{mg}}
+	% p(y_{nd}^m) = \Ndist{y_{nd}^m}{\bfz_{n,:}\bfw_{d,:}^{mT},1/\tau_d^m},
+\end{equation}
 
 \subsubsection{Graphical model}
 
-In summary, the updated model formulation introduces asymmetric sparsity prior in both the weights and the factors, which enables the model to simultaneously integrate multiple views as well as multiple groups of samples:
-
+In summary, the updated model formulation introduces symmetric two-level sparsity priors in both the weights and the factors. The corresponding graphical model is shown below:
 \begin{figure}[H]
 	\centering	
-	% \begin{center}
 	\input{graphical_models/mofa2}
-	\caption{\textbf{Graphical model for MOFA+}ºº
-	.The white circles represent hidden variables that are inferred by the model, whereas the grey circles represent the observed variables. There are a total of five plates, each one representing a dimension of the model: $M$ for the number of views, $G$ for the number of groups, $K$ for the number of factors, $D_m$ for the number of features in view $m$ and $N_g$ for the number of samples in group $g$ 
+	\caption{\textbf{Graphical model for MOFA+.}\\
+	The white circles represent hidden variables that are inferred by the model, whereas the grey circles represent the observed variables. There are a total of five plates, each one representing a dimension of the model: $M$ for the number of views, $G$ for the number of groups, $K$ for the number of factors, $D_m$ for the number of features in the $m$-th view and $N_g$ for the number of samples in the $g$-th group.
 	}
 	\label{fig:MOFA2}
-	% \end{center}
 \end{figure}
+
+% COPIED
+% \subsubsection{How to define groups?}
+% Groups are typically based on the experimental design (i.e. conditions, batches, etc.), but the user can also explore data-driven groups. There is no "right" or "wrong" definition of groups, but some definitions will be more useful than others.
+% It is important to note that the size of the group can influence the reconstruction of Factors. In general, the more samples per group, the more complexity there will exist in the dataset, which can manifest itself in retrieval of a higher number of Factors.
+
+% COPIED
+% \subsubsection{Model selection}
+% The optimisation procedure of MOFA+ depends on the parameter initialisation and is hence not guaranteed to find the same exact solution at every trial. Hence, when using random initialisation Factors can vary between different model instances and a model selection step using the ELBO is advised. However, to simplify model training and interpretation in our implementation we eliminated the random component by initialising the Factors using the principal components from the concatenated data set.
+
 
 
 % COPIED
 \subsection{Solving the rotational invariance problem}
 
-Conventional Factor Analysis is invariant to rotation in the latent space\cite{Zhao2009}. To demonstrate this property, let us apply an arbitrary rotation to the loadings and the factors, specified by the rotation matrix $\bfR \in \R^{K \times K}$:
+Conventional Factor Analysis is invariant to rotation in the latent space\cite{Zhao2009}. To demonstrate this property, let us apply an arbitrary rotation to the weights and the factors, specified by the rotation matrix $\bfR \in \R^{K \times K}$:
 \begin{align*}
-		\tilde{\bfZ} &= \bfZ \bfR^{-1} \\
-		\tilde{\bfW} &= \bfR \bfW
+	\tilde{\bfZ} &= \bfZ \bfR^{-1} \\
+	\tilde{\bfW} &= \bfR \bfW
 \end{align*}
-
 First, note that the model likelihood is unchanged by this rotation, irrespective of the prior distribution used.
 \begin{equation*}
 		p(\bfY | \tilde{\bfZ} \tilde{\bfW}, \tau) = p(\bfY | \bfZ \bfR^{-1} \bfR \bfW, \tau) = p(\bfY | \bfZ \bfW, \tau)
 \end{equation*}
-However, the prior distributions of the factors and the loadings are only invariant to rotations when using isotropic Normal priors:
+However, the prior distributions of the factors and the weights are only invariant to rotations when using isotropic Normal priors:
 \begin{equation*}
 	\ln p(\bfW) \propto \sum_{k=1}^{K} \sum_{d=1}^{D} w_{d,k}^2 = \mathrm{Tr}(\bfW^T \bfW) = \mathrm{Tr}(\bfW^T \bfR^{-1} \bfR \bfW) = \mathrm{Tr}(\tilde{\bfW^T} \tilde{\bfW})
 \end{equation*}
@@ -124,4 +126,37 @@ In practice, this property renders conventional Factor Analysis unidentifiable, 
 It is important to remark that the factors are nonetheless invariant to permutations. This implies that under different initial conditions, the order of the factors is not necessarily the same in independent model fittings. To address this we manually sort factors \textit{a posteriori} based on total variance explained.
 
 
-%TO-DO: ADD STOCHASTIC ALGORITHM
+\subsection{Stochastic variational inference algorithm}
+
+In \Cref{section:stochastic_variational_inference} I have explained how to derive a stochastic variational inference (SVI) algorithm for a general Bayesian model using an adapted version of the formulation introduced in \cite{Hoffman2012}.\\
+To apply the SVI algorithm to MOFA the first step is to choose the \textit{local} and \textit{global} dimensions. Just as a reminder, the local dimension will be factorised in the ELBO and thus the one where the stochastic gradients apply.\\
+In single-cell studies we expect increasingly large data sets (more cells) but the number of features to remain roughly constant and the natural dimension to define as \textit{local} is the axis of the samples and the global dimension to be axis of features.
+
+In the case of the MOFA+ model the variables that are classified as \textit{local} are the Factors $\mathbf{Z_g} = \{ z_{nk}^g \}$, which due to the reparametrisation of the spike-and-slab prior consists on the element-wise product of two matrices: $\hat{\mathbf{Z_g}}$ and $\mathbf{S_g}$. All other hidden variables are global: $\mathbf{tau^{gm}}$, $\mathbf{W^m}$ and $\bfS^\bfm$ (whose term-wise product gives $\bfW^m$), $\bf\alpha^m, \bf\theta^m$, as well as $\bf\alpha^g$ and $\bf\theta^g$ when adding the spike-and-slab prior over the Factors.
+
+
+
+% Hence, we chose to apply the following SVI algorithm to speed-up the inference of the MOFA model on datasets with a large number of samples $N$:
+
+% \begin{algorithm}[h!]
+%   \caption{Stochastic mean-field variational inference for MOFA 2.0 with sparse factors}
+%   \begin{algorithmic}[1]
+% 	\State Initialise randomly the parameters of the global variables \{$\bf\tau^{gm}$, $\bf\hat{W}^m$, $\bfS^\bfm$, $\bf\alpha^m, \bf\theta^m$, $\bf\alpha^g$, $\bf\theta^g$\}.
+% 	\State Initialise the step size $\rho^{(t=0)}$
+% 	\Repeat
+% 	    \State \text{sample $\mathcal{B}$ a mini-batch of samples of size $S << N$}
+% 		\For{\text{each local variational parameter $\phi_{nk}^g$ of nodes \{$\hat{z_{nk}^g}$, $s_{nk}^g$\} such that $n$ is in batch $\mathcal{B}$}} \\
+% 			\State $\phi_{nk}^{(t+1)}$ is the updated parameter $\phi_{nk}$ following the classic VI update equation \\
+%       	\EndFor
+% 		\For{\text{each global variational parameter $\lambda$ of nodes \{$\bf\tau^{gm}$, $\bf\hat{\bfW}^m$, $\bfS^m$, $\bf\alpha^m, \bf\theta^m$, $\bf\alpha^g$, $\bf\theta^g$\}}}
+% 		     \State
+%         		\begin{align} \label{eq_elbo_factorised} \begin{split}
+%             	\lambda^{(t + 1)} &= (1-\rho ^{(t)})\lambda^{(t)} +  \rho ^{(t)} \lambda_{\mathcal{B}}^{(t+1)}
+%             \end{split} \end{align}
+%             \State \text{where $\lambda_{\mathcal{B}}^{(t+1)}$ is the updated parameter $\lambda$ following the classic VI update equation,}
+%             \State \text{but considering the selected batch $\mathcal{B}$ repeated $N/S$ times instead of the full dataset.}
+%       	\EndFor
+% 	\Until{ELBO convergence}
+% 	\end{algorithmic}
+% 	\label{MOFAstochasticascent}
+% \end{algorithm}

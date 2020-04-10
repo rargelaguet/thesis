@@ -3,14 +3,14 @@
 \chapter{MOFA+: an improved framework for the comprehensive integration of structured single-cell data}
 
 In Chapter 2 we developed Multi-Omics Factor Analysis (MOFA), a statistical framework for the unsupervised integration of multi-modal data. \\
-MOFA addresses key challenges in data integration, including overfitting, noise reduction, handling of missing values and improved interpretation of the model output. Hower, when applied to increasingly-large (single-cell) data sets, the inference scheme implemented in MOFA is still limited in scalability. In addition, the increased experimental throughput has facilitated the simultaneous study of multiple experimental conditions, even in a combinatorial fashion\cite{Replogle2020}.\\
+MOFA addresses key challenges in data integration, including overfitting, noise reduction, handling of missing values and improved interpretation of the model output. However, when applied to increasingly-large (single-cell) data sets, the inference scheme implemented in MOFA is still limited in scalability. In addition, the increased experimental throughput has facilitated the simultaneous study of multiple experimental conditions, even in a combinatorial fashion\cite{Replogle2020}.\\
 MOFA makes strong assumptions about the dependencies across samples and it hence has no principled way of modelling data sets where the samples are structured into multiple groups, where groups can correspond to batches, donors or independent studies. By pooling and contrasting information across experimental conditions, it would be possible to obtain more comprehensive insights into the complexity underlying biological systems.
 
 In this new Chapter we improve the model formulation in MOFA with the aim of performing integrative analysis of large-scale datasets that are \textit{structured} into multiple data modalities and/or multiple groups.
 
 The work discussed in this chapter has been peer-reviewed and published in \cite{Argelaguet2020}. The project was conceived by Damien Arnol, Britta Velten and me. The mathematical derivations and the implementation of the stochastic variational inference scheme was done by Damien Arnol, Yonatan Deloro and me. The downstream analysis package was implemented by Danila Bredikhin and me. I generated all figures and I wrote the manuscript with feedback from all authors. John C. Marioni and Oliver Stegle supervised the project. 
 
-\section{Theoretical fundations}
+\section{Theoretical foundations}
 
 \subsection{Exponential family distributions} \label{section:exponential_family}
 
@@ -19,7 +19,7 @@ The majority of commonly used probability distributions belong to the exponentia
 \begin{equation} \label{eq:exponential_family}
 	p(\bfx|\btheta) = h(\bfx) \exp \{ \eta(\btheta) T(\bfx) - A(\btheta) \}
 \end{equation}
-where $\bfx$ is a multivariate random variable and $\btheta$ are the distribution's parameters. Each term has a common notation: T(\bfx): sufficient statistics; $\eta(\btheta)$: natural parameters; $h(\bfx)$: base mesure; $A(\eta)$: the log-partition function (or the normaliser).
+where $\bfx$ is a multivariate random variable and $\btheta$ are the distribution's parameters. Each term has a common notation: T(\bfx): sufficient statistics; $\eta(\btheta)$: natural parameters; $h(\bfx)$: base measure; $A(\eta)$: the log-partition function (or the normaliser).
 
 The exponential family form for the probability distributions frequently used in this thesis are the following:
 
@@ -56,7 +56,6 @@ Beta distribution:
 \end{align*}
 
 In the context of Bayesian inference, the main property that make exponential family distributions indispensable is that they have conjugate priors (i.e. a combination of likelihood and prior distributions which ensure a closed-form posterior distribution which is of the same form as the prior). As we have discussed in Chapter 2, this property is crucial for enabling efficient statistical inference, otherwise posterior distributions must be computed using expensive and approximate numerical methods.
-
 
 
 \subsection{Gradient ascent} \label{section:gradient_ascent}
@@ -152,10 +151,10 @@ where $\bfF(\theta)$ is defined as
 In conclusion, while the standard gradient points to the direction of steepest ascent in Euclidean space, the natural gradient points to the direction of steepest ascent in a space where distances are defined by the KL divergence \cite{Kristiadi2019,Amari1998,Hoffman2012}.
 
 
-\subsection{Derivation of a stochastic variational inference algorithm}
+\subsection{Derivation of a stochastic variational inference algorithm} \label{section:stochastic_variational_inference}
 
 In this section I will show how to derive a stochastic variational inference algorithm for general Bayesian models. This work is inspired from \cite{Hoffman2012} which we adapted and implemented in the MOFA+ model. A comprehensive mathematical derivation of the algorithm is not sought in this chapter. Instead, I will describe a modified and simplified derivation to gist the essential. For a complete mathematical derivation we refer the reader to \cite{Hoffman2012}.\\
-Also, this section builds upon three theoretical fundations that have been introduced before: Variational inference (\Cref{section:variational_inference}), exponential family distributions (\Cref{section:exponential_family}) and (natural) gradient ascent (\Cref{section:gradient_ascent}).
+Also, this section builds upon three theoretical foundations that have been introduced before: Variational inference (\Cref{section:variational_inference}), exponential family distributions (\Cref{section:exponential_family}) and (natural) gradient ascent (\Cref{section:gradient_ascent}).
 
 % COPIED
 %The stochastic nature of the approach is interesting when one dimension of the matrix of observed variables is much larger than the others. In our case, it corresponds to $N$, the number of samples (or cells). \\

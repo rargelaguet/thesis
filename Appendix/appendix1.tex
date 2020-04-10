@@ -1,0 +1,273 @@
+\section{Appendix: mathematical derivations of MOFA}
+
+\subsubsection{Deriving the variational inference algorithm}
+
+The theoretical foundations for the variational inference scheme are described in \Cref{section:variational_inference}. Just to brief, we need to define a variational distribution of a factorised form and subsequently look for the member of this family that most closely resembles the true posterior using the KL divergence as a \textit{distance} metric. Following the mean-field principle, in MOFA+ we factorised the variational distribution as follows:
+
+\begin{equation} \begin{aligned}
+	q(\bfX) &= q \left(\{\widehat{\bfZ^\bfg}, \bfS^\bfg, \bf{\alpha^g}, \bf{\theta^g}\}, \{\widehat{\bfW^m}, \bfS^m, \bf\alpha^m, \bf\theta^m\}, \{ \bf\tau^{gm}\} \right)\\
+	&= \prod_{g=1}^{G} \prod_{n=1}^{N_g} \prod_{k=1}^{K} q(\hat{z}_{nk}^g, s_{nk}^g) \prod_{g=1}^{G} \prod_{k=1}^{K} q(\alpha_k^g) \prod_{g=1}^{G} \prod_{k=1}^{K} q(\theta_k^g) \\
+	&\times \prod_{m=1}^{M} \prod_{d=1}^{D_m} \prod_{k=1}^{K} q(\hat{w}_{kd}^m,s_{kd}^m) \prod_{m=1}^{M} \prod_{k=1}^{K} q(\alpha_k^m) \prod_{m=1}^{M} \prod_{k=1}^{K} q(\theta_k^m)  \\
+	&\times \prod_{g=1}^{G} \prod_{m=1}^{M} \prod_{d=1}^{D_m} q(\tau_d^{gm})
+\end{aligned} \end{equation}
+
+However, inspired by \cite{Titsias2011}, we did not adopt a fully factorised distribution as $\hat{w}_k^m$ and $s_k^m$ can hardly be assumed to be independent.
+
+To derive the variational updates we can proceed in two ways, as described in \label{section:variational_inference}. One option is to use exploit the  mean-field assumption and use calculus of variations to find the optimal distribution $q(\bfX)$ that maximises the lower bound $\Lagr(\bfX)$\cite{Bishop,Murphy}. The alternative and possibly easier approach is to define a parametric form for the distribution $q(\bfX)$ with some parameters $\bTheta$ to be of the same form as the corresponding prior distribution $p(\bfX)$. Then, one can find the gradients with respect to the parameters to obtain the coordinate ascent optimisation scheme. In our derivations we followed the first approach, but because we used conjugate priors the second one should converge to the same result.\\
+Below we give the explicit update equations for every hidden variable in the MOFA+ model which are applied at each iteration of the variational inference algorithm.
+
+\subsection{Variational update equations}
+
+\subsubsection*{Factors}
+
+For every group $g$, sample $n$ and factor $k$: \\
+
+Prior distribution $p(\hat{z}_{nk}^g,s_{nk}^g)$:
+\begin{align}
+	p(\hat{z}_{nk}^g,s_{nk}^g) &= \mathcal{N} (\hat{z}_{nk}^g \,|\, 0, ~ 1/\alpha_k^g)\, \text{Ber}(s_{nk}^g \,|\,\theta_k^g)
+\end{align}
+
+Variational distribution $q(\hat{z}_{nk}^g,s_{nk}^g)$:\\
+
+Update for $q(s_{nk}^g)$:
+\begin{equation}
+	q(s^g_{nk}) = \mathrm{Ber}(s^g_{nk}|\gamma^g_{nk})
+\end{equation}
+with
+\begin{equation} \begin{aligned}
+	&\gamma^g_{nk} = \frac{1}{1+\exp(-\lambda_{nk}^g)}\\
+	& \lambda_{nk}^g = \la \ln\frac{\theta}{1-\theta} \ra + 0.5\ln\frac{\la\alpha_k^g\ra}{\la\tau_d^{gm}\ra} - 0.5\ln\left( \sum_{m=1}^M\sum_{d=1}^{D_m} \la (w_{kd}^m)^2 \ra + \frac{\la\alpha_k^g\ra}{\la\tau_d^{gm}\ra} \right) \\
+	&+ \frac{\la\tau_d^{gm}\ra}{2} \frac{ \left( \sum_{m=1}^M\sum_{d=1}^{D_m} y_{nd}^{gm} \la w^m_{kd} \ra - \sum_{j \neq k} \la s_{nj}^g\hat{z}_{nj}^g\ra \sum_{m=1}^M\sum_{d=1}^{D_m} \la w^m_{kd} \ra \la w^m_{jd} \ra \right)^2} {\sum_{m=1}^M\sum_{d=1}^{D_m} \la (w_{kd}^m)^2 \ra + \frac{\la\alpha_k^g\ra}{\la\tau_d^{gm}\ra} }
+\end{aligned} \end{equation}
+
+Update for $q(\hat{z}_{nk}^g)$:
+\begin{equation} \begin{aligned}
+      q(\hat{z}_{nk}^g|s_{nk}^g=0) &= \mathcal{N} \left(\hat{z}_{nk}^g \middle| 0, 1/\alpha_k^g \right) \\
+      q(\hat{z}_{nk}^g|s_{nk}^g=1) &= \mathcal{N} \left( \hat{z}_{nk}^g \middle| \mu_{z_{nk}^g}, \sigma_{z_{nk}^g}^2\right)
+  \end{aligned} \end{equation}
+with
+\begin{equation} \begin{aligned}
+  	\mu_{z_{nk}^g} &= \frac{ \sum_{m=1}^M\sum_{d=1}^{D_m} y_{nd}^{m,g} \la w^m_{kd} \ra - \sum_{j \neq k} \la s_{nj}^g\hat{z}_{nj}^g \ra \sum_{m=1}^M\sum_{d=1}^{D_m} \la w^m_{kd} \ra \la w^m_{jd} \ra } { \sum_{m=1}^M\sum_{d=1}^{D_m} \la (w_{kd}^m)^2 \ra + \frac{\la\alpha_k^g\ra}{\la\tau_d^{gm}\ra} }\\
+  	\sigma_{z_{nk}^g}^2 &= \frac{ \la\tau_d^{gm}\ra^{-1} } { \sum_{m=1}^M\sum_{d=1}^{D_m} \la (w_{kd}^m)^2 \ra + \frac{\la\alpha_k^g\ra}{\la\tau_d^{gm}\ra} }
+\end{aligned} \end{equation}
+
+
+\subsubsection*{ARD prior on the factors}
+
+For every group $g$ and factor $k$: \\
+
+Prior distribution:
+\begin{align}
+	p(\alpha_k^g) &= \Gdist{\alpha_k^g}{a_0^\alpha, b_0^\alpha}
+\end{align}
+
+Variational distribution $q(\alpha_k^g)$:
+\begin{equation}
+    q(\alpha^g_{k}) = \Gdist{\alpha_k^g}{\hat{a}_{gk}^{\alpha}, \hat{b}_{gk}^{\alpha}}
+\end{equation}
+where:
+\begin{equation} \begin{aligned}
+	\hat{a}_{gk}^\alpha &= a_0^\alpha + \frac{N_g}{2}\\
+	\hat{b}_{gk}^\alpha &= b_0^\alpha +\frac{ \sum_{n=1}^{N_g} \la (\hat{z}_{nk}^g)^2 \ra }{2}
+\end{aligned} \end{equation}
+
+\subsubsection*{Sparsity parameter of the Factors}
+
+For every group $g$ and factor $k$: \\
+
+Prior distribution:
+\begin{align}
+	p(\theta_k^g) &= \Bdist{\theta_k^g}{a_0^\theta,b_0^\theta}
+\end{align}
+
+Variational distribution:
+\begin{equation}
+	q(\theta_k^g) = \Bdist{\theta_k^g}{\hat{a}_{gk}^{\theta}, \hat{b}_{gk}^{\theta}}
+\end{equation}
+where
+\begin{equation}
+     \begin{aligned}
+  	\hat{a}_{gk}^\theta &= \sum_{n=1}^{N_g} \la s^g_{nk}\ra + a_0^\theta\\
+  	\hat{b}_{gk}^\theta &= b_0^\theta - \sum_{n=1}^{N_g} \la s^g_{nk}\ra + N_g
+     \end{aligned}
+\end{equation}
+
+\subsubsection*{Feature weights}
+For every view $m$, feature $d$ and factor $k$: \\
+
+Prior distribution $p(\hat{w}_{kd}^m,s_{kd}^m)$:
+\begin{align}
+	p(\hat{w}_{kd}^m,s_{kd}^m) &= \mathcal{N} (\hat{w}_{kd}^m \,|\, 0, ~ 1/\alpha_k^m)\, \text{Ber}(s_{kd}^m \,|\,\theta_k^m)
+\end{align}
+
+Variational distribution $q(\hat{w}_{kd}^m,s_{kd}^m)$:\\
+
+Update for $q(s_{kd}^m)$:
+\begin{equation}
+	q(s^m_{kd}) = \mathrm{Ber}(s^m_{kd}|\gamma^m_{kd})
+\end{equation}
+with
+\begin{equation} \begin{aligned}
+	&\gamma^m_{kd} = \frac{1}{1+\exp(-\lambda_{kd}^m)}\\
+	& \lambda_{kd}^m = \la \ln\frac{\theta}{1-\theta} \ra + 0.5\ln\frac{\la\alpha_k^m\ra}{\la\tau_d^{gm}\ra} - 0.5\ln\left( \sum_{g=1}^G\sum_{n=1}^{N_g} \la (z_{nk}^g)^2 \ra + \frac{\la\alpha_k^m\ra}{\la\tau_d^{gm}\ra} \right) \\
+	&+ \frac{\la\tau_d^{gm}\ra}{2} \frac{ \left( \sum_{g=1}^G\sum_{n=1}^{N_g} y_{nd}^{gm} \la z^g_{nk} \ra - \sum_{j \neq k} \la s_{jd}^m\hat{w}_{jd}^m\ra \sum_{g=1}^G\sum_{n=1}^{N_g} \la z^g_{nk} \ra \la z^g_{nj} \ra \right)^2} {\sum_{g=1}^G\sum_{n=1}^{N_g} \la (z_{nk}^g)^2 \ra + \frac{\la\alpha_k^m\ra}{\la\tau_d^{gm}\ra} }
+\end{aligned} \end{equation}
+
+Update for $q(\hat{w}_{kd}^m)$:
+\begin{equation} \begin{aligned}
+      q(\hat{w}_{kd}^m|s_{kd}^m=0) &= \mathcal{N} \left(\hat{w}_{kd}^m \middle| 0, 1/\alpha_k^m \right) \\
+      q(\hat{w}_{kd}^m|s_{kd}^m=1) &= \mathcal{N} \left( \hat{w}_{kd}^m \middle| \mu_{w_{kd}^m}, \sigma_{w_{kd}^m}^2\right)
+  \end{aligned} \end{equation}
+with
+\begin{equation} \begin{aligned}
+  	\mu_{w_{kd}^m} &= \frac{ \sum_{g=1}^G\sum_{n=1}^{N_g} y_{nd}^{gm} \la z^g_{nk} \ra - \sum_{j \neq k} \la s_{jd}^m\hat{w}_{jd}^m \ra \sum_{g=1}^G\sum_{n=1}^{N_g} \la z^g_{nk} \ra \la z^g_{nj} \ra } { \sum_{g=1}^G\sum_{n=1}^{N_g} \la (z_{nk}^g)^2 \ra + \frac{\la\alpha_k^m\ra}{\la\tau_d^{gm}\ra} }\\
+  	\sigma_{w_{kd}^m}^2 &= \frac{ \la\tau_d^{gm}\ra^{-1} } { \sum_{g=1}^G\sum_{n=1}^{N_g} \la (z_{nk}^g)^2 \ra + \frac{\la\alpha_k^m\ra}{\la\tau_d^{gm}\ra} }
+\end{aligned} \end{equation}
+
+  	% Taken together this means that we can update $q(\hat{w}_{kd}^m,s_{kd}^m)$ using:
+  	% \begin{equation*}
+  	% q(\hat{w}_{kd}^m|s_{kd}^m) q(s_{kd}^m) = \Ndist{ \hat{w}_{kd}^m } { s_{kd}^m \mu_{w_{kd}^m}, s_{kd}^m\sigma_{w_{kd}^m}^2 + (1-s_{kd}^m)/\alpha_k^m}    (\new{\gamma_{kd}^m})^{s_{kd}^m} (1-\new{\gamma_{kd}^m})^{1-s_{kd}}
+  	% \end{equation*}
+
+
+\subsubsection*{ARD prior on the weights}
+
+For every view $m$ and factor $k$: \\
+
+Prior distribution $p(\alpha_k^m)$:
+\[
+	p(\alpha_k^m) = \Gdist{\alpha_k^m}{a_0^\alpha, b_0^\alpha}
+\]
+Variational distribution $q(\alpha_k^m)$:
+\begin{equation}
+    q(\alpha^m_{k}) = \Gdist{\alpha_k^m}{\hat{a}_{mk}^{\alpha}, \hat{b}_{mk}^{\alpha}}
+\end{equation}
+where:
+\begin{equation} \begin{aligned}
+	\hat{a}_{mk}^\alpha &= a_0^\alpha + \frac{D_m}{2}\\
+	\hat{b}_{mk}^\alpha &= b_0^\alpha +\frac{ \sum_{d=1}^{D_m} \la (\hat{w}_{kd}^m)^2 \ra }{2}
+\end{aligned} \end{equation}
+
+
+\subsubsection*{Sparsity parameter of the weights}
+
+For every view $m$ and factor $k$: \\
+
+Prior distribution:
+\[
+	p(\theta_k^m) = \Bdist{\theta_k^m}{a_0^\theta,b_0^\theta}
+\]
+
+Variational distribution:
+\begin{equation}
+	q(\theta_k^m) = \Bdist{\theta_k^m}{\hat{a}_{mk}^{\theta}, \hat{b}_{mk}^{\theta}}
+\end{equation}
+where
+\begin{equation}
+     \begin{aligned}
+  	\hat{a}_{mk}^\theta &= \sum_{d=1}^{D_m} \la s^m_{kd}\ra + a_0^\theta\\
+  	\hat{b}_{mk}^\theta &= b_0^\theta - \sum_{d=1}^{D_m} \la s^m_{kd}\ra + D_m
+     \end{aligned}
+\end{equation}
+
+
+\subsubsection*{Noise (Gaussian)}
+
+For every view $m$, group $g$ and feature $d$:\\
+
+Prior distribution $p(\tau_d^{gm})$:
+\[
+	p(\tau_d^{gm}) = \Gdist{\tau_{dg}^m}{a_0^\tau,b_0^\tau},
+\]
+
+Variational distribution $q(\tau_d^{gm})$:
+\begin{equation}
+	q(\tau_d^{gm}) = \Gdist{\tau_d^{gm}}{\hat{a}_{d}^{gm} , \hat{b}_{d}^{gm}}
+\end{equation}
+where:
+\begin{equation} \begin{aligned}
+	\hat{a}_{d}^{gm} &= a_0^{\tau} + \frac{N_g}{2}\\
+	\hat{b}_{d}^{gm} &= b_0^{\tau} + \frac{1}{2} \sum_{n=1}^{N_g}  \la\left(y_{nd}^{gm} - \sum_k^{K} w_{kd}^m z_{nk}^{g}\right)^2 \ra
+\end{aligned} \end{equation}
+
+
+\subsection{Evidence Lower Bound}
+
+Although computing the ELBO is not necessary in order to estimate the posterior distribution of the parameters, it is used to monitor the convergence of the algorithm. As shown in \Cref{eq_elbo2}, the ELBO can be decomposed into a sum of two terms: (1) the expected log likelihood under the current estimate of the posterior distribution of the parameters and (2) the KL divergence between the prior and the variational distributions of the parameters:\\
+
+\begin{equation} \begin{aligned}
+    \Lagr = \E_{q(X)} \ln p(Y|X) - \KL\left(q(X) \middle|\middle| p(X) \right)
+\end{aligned} \end{equation}
+
+
+\paragraph*{Log likelihood term}
+
+Assuming a Gaussian likelihood:
+\begin{equation} \begin{aligned}
+	\E_{q(X)} \ln p(Y|X) = & -\sum_{m=1}^M \frac{ND_m}{2} \ln(2\pi) + \sum_{g=1}^G \frac{N_g}{2} \sum_{m=1}^M \sum_{d=1}^{D_m} \la \ln(\tau_{d}^{gm}) \ra \\
+	&-\sum_{g=1}^G \sum_{m=1}^M \sum_{d=1}^{D_m} \frac{\la \tau_{d}^{gm} \ra}{2} \sum_{n=1}^{N_g} \big( y_{nd}^{m,g} - \sum_{k=1}^{K}\la s_{kd}^m \hat{w}_{kd}^m \ra \la z_{nk}^g \ra \big)^2
+\end{aligned} \end{equation}
+
+
+\paragraph*{KL divergence terms}
+
+Note that $\KL\left(q(X) \middle|\middle| p(X) \right) = \E_q(q(X)) - \E_q(p(X))$. \\
+Below, we will write the analytical form for these two expectations.
+
+\paragraph*{Weights}
+
+\begin{equation} \begin{aligned}
+    \E_q[\ln p(\hat{W},S)] =& -\sum_{m=1}^{M}\frac{KD_m}{2}\ln(2\pi) + \sum_{m=1}^{M}\frac{D_m}{2}\sum_{k=1}^{K} \ln(\alpha_k^m) - \sum_{m=1}^{M} \frac{\alpha_k^m}{2} \sum_{d=1}^{D_m} \sum_{k=1}^{K} \la (\hat{w}_{kd}^m)^2 \ra \\
+    & + \la \ln(\theta) \ra \sum_{m=1}^{M} \sum_{d=1}^{D_m} \sum_{k=1}^{K} \la s_{kd}^m \ra + \la \ln(1-\theta) \ra \sum_{m=1}^{M} \sum_{d=1}^{D_m}\sum_{k=1}^{K} (1- \la s_{kd}^m \ra)
+\end{aligned} \end{equation}
+
+\begin{equation} \begin{aligned}
+	\E_q[\ln q(\hat{W}, S)] =&-\sum_{m=1}^{M}\frac{KD_m}{2}\ln(2\pi) + \frac{1}{2}\sum_{m=1}^{M}\sum_{d=1}^{D_m}\sum_{k=1}^{K}\ln(\la s_{kd}^m \ra \sigma_{w_{kd}^m}^2 + (1-\la s_{kd}^m \ra)/\alpha_k^m) \\
+	&+ \sum_{m=1}^{M} \sum_{d=1}^{D_m} \sum_{k=1}^{K} (1-\la s_{kd}^m \ra) \ln(1 - \la s_{kd}^m \ra) - \la s_{kd}^m \ra \ln \la s_{kd}^m \ra
+\end{aligned} \end{equation}
+
+\paragraph*{Factors}
+
+\begin{equation} \begin{aligned}
+    \E_q[\ln p(\hat{Z},S)] =& -\sum_{g=1}^{G}\frac{N_g K}{2}\ln(2\pi) + \sum_{g=1}^{G}\frac{N_g}{2}\sum_{k=1}^{K} \ln(\alpha_k^g) - \sum_{g=1}^{G} \frac{\alpha_k^g}{2} \sum_{n=1}^{N_g} \sum_{k=1}^{K} \la (\hat{z}_{nk}^g)^2 \ra \\
+    & + \la \ln(\theta) \ra \sum_{g=1}^{G} \sum_{n=1}^{N_g} \sum_{k=1}^{K} \la s_{nk}^g \ra + \la \ln(1-\theta) \ra \sum_{g=1}^{G} \sum_{n=1}^{N_g}\sum_{k=1}^{K} (1- \la s_{nk}^g \ra)
+\end{aligned} \end{equation}
+
+\begin{equation} \begin{aligned}
+	\E_q[\ln q(\hat{Z}, S)] =&-\sum_{g=1}^{G}\frac{N_g K}{2}\ln(2\pi) + \frac{1}{2}\sum_{g=1}^{G}\sum_{n=1}^{N_g}\sum_{k=1}^{K}\ln(\la s_{nk}^g \ra \sigma_{z_{nk}^g}^2 + (1-\la s_{nk}^g \ra)/\alpha_k^g) \\
+	&+ \sum_{g=1}^{G} \sum_{n=1}^{N_g} \sum_{k=1}^{K} (1-\la s_{nk}^g \ra) \ln(1 - \la s_{nk}^g \ra) - \la s_{nk}^g \ra \ln \la s_{nk}^g \ra
+\end{aligned} \end{equation}
+
+\paragraph*{ARD prior on the weights}
+
+\begin{equation} \begin{aligned}
+	\E_q [\ln p(\balpha)] &= \sum_{m=1}^{M}\sum_{k=1}^{K}\Big(a_0^\alpha\ln b_0^\alpha +   (a_0^\alpha - 1) \la \ln \alpha_k \ra - b_0^\alpha \la \alpha_k \ra - \ln \Gamma(a_0^\alpha) \Big) \\
+	\E_q [\ln q(\balpha)] &= \sum_{m=1}^{M}\sum_{k=1}^{K} \Big( \hat{a}_{k}^\alpha \ln \hat{b}_{k}^\alpha + (\hat{a}_{k}^\alpha - 1) \la \ln \alpha_k \ra - \hat{b}_{k}^\alpha \la \alpha_k \ra - \ln \Gamma(\hat{a}_{k}^\alpha) \Big)
+\end{aligned} \end{equation}
+
+\paragraph*{Sparsity parameter of the weights}
+
+\begin{equation} \begin{aligned}
+	  &\E_q\left[ \ln p(\btheta) \right] = \sum_{m=1}^M \sum_{k=1}^K\sum_{d=1}^{D_m}\left( (a_0 - 1) \times \la \ln(\pi^m_{d, k}) \ra + (b_0 -1) \la \ln(1 - \pi^m_{d, k}) \ra - \ln (\mathrm{B} (a_0, b_0))\right) \\
+	  &\E_q\left[ \ln q(\btheta) \right] = \sum_{m=1}^M \sum_{k=1}^K\sum_{d=1}^{D_m}\left( (a^m_{k,d} - 1) \times \la \ln(\pi^m_{d, k}) \ra + (b^m_{k,d} -1) \la \ln(1 - \pi^m_{d, k}) \ra - \ln (\mathrm{B} (a^m_{k,d}, b^m_{k,d})) \right) \\
+\end{aligned} \end{equation}
+
+\paragraph*{ARD prior on the Factors}
+
+\begin{equation} \begin{aligned}
+	\E_q [\ln p(\balpha)] &= \sum_{g=1}^{G}\sum_{k=1}^{K}\Big(a_0^\alpha\ln b_0^\alpha +   (a_0^\alpha - 1) \la \ln \alpha_k \ra - b_0^\alpha \la \alpha_k \ra - \ln \Gamma(a_0^\alpha) \Big) \\
+	\E_q [\ln q(\balpha)] &= \sum_{g=1}^{G}\sum_{k=1}^{K} \Big( \hat{a}_{k}^\alpha \ln \hat{b}_{k}^\alpha + (\hat{a}_{k}^\alpha - 1) \la \ln \alpha_k \ra - \hat{b}_{k}^\alpha \la \alpha_k \ra - \ln \Gamma(\hat{a}_{k}^\alpha) \Big)
+\end{aligned} \end{equation}
+
+\paragraph*{Sparsity parameter of the Factors}
+\begin{equation} \begin{aligned}
+	  &\E_q\left[ \ln p(\btheta) \right] = \sum_{g=1}^G \sum_{k=1}^K\sum_{n=1}^{N_g}\left( (a_0 - 1) \times \la \ln(\pi^g_{n, k}) \ra + (b_0 -1) \la \ln(1 - \pi^g_{n, k}) \ra - \ln (\mathrm{B} (a_0, b_0))\right) \\
+	  &\E_q\left[ \ln q(\btheta) \right] = \sum_{g=1}^G \sum_{k=1}^K\sum_{n=1}^{N_g}\left( (a^g_{k,n} - 1) \times \la \ln(\pi^g_{n, k}) \ra + (b^g_{k,n} -1) \la \ln(1 - \pi^g_{n, k}) \ra - \ln (\mathrm{B} (a^g_{k,n}, b^g_{k,n})) \right) \\
+\end{aligned} \end{equation}
+
+\paragraph*{Noise}
+
+\begin{equation} \begin{aligned}
+	\E_q [\ln p(\btau)] &= \sum_{m=1}^{M} D_m a_0^\tau \ln b_0^\tau + \sum_{g=1}^{G}\sum_{m=1}^{M}\sum_{d=1}^{Dm} (a_0^\tau - 1) \la \ln \tau_d^{gm} \ra - \sum_{g=1}^{G}\sum_{m=1}^{M}\sum_{d=1}^{Dm} b_0^\tau \la \tau_d^{gm} \ra - \sum_{m=1}^{M} D_m \ln \Gamma(a_0^\tau)\\
+	\E_q [\ln q(\btau)] &= \sum_{g=1}^{G} \sum_{m=1}^{M} \sum_{d=1}^{D_m} \left( \hat{a}_{dgm}^\tau \ln \hat{b}_{dgm}^\tau + (\hat{a}_{dgm}^\tau - 1) \la \ln \tau_d^{gm} \ra - \hat{b}_{dgm}^\tau \la \tau_d^{gm} \ra - \ln \Gamma(\hat{a}_{dgm}^\tau) \right)
+\end{aligned} \end{equation}

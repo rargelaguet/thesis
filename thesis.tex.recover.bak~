@@ -1,0 +1,206 @@
+% ******************************* PhD Thesis Template **************************
+
+% Print version
+%\documentclass[a4paper,11pt,times,custombib,print,index,custommargin]{Classes/PhDThesisPSnPDF}
+
+% Online version
+\documentclass[a4paper,11pt,times,custombib,custommargin]{Classes/PhDThesisPSnPDF}
+%\documentclass[a4paper,11pt,times,custombib,custommargin,draftclassic]{Classes/PhDThesisPSnPDF}
+
+
+
+% ******************************************************************************
+% ******************************* Class Options ********************************
+% ******************************************************************************
+
+% `a4paper'(The University of Cambridge PhD thesis guidelines recommends a page size a4 - default option)
+%
+% `11pt' (default) or `12pt': Font Size 10pt is NOT recommended by the University guidelines
+%
+% `oneside' or `twoside'(default): Printing double side or single side.
+%
+% `print': Use `print' for print version with appropriate margins and page
+% layout. Leaving the options field blank will activate Online version.
+%
+% `index': For index at the end of the thesis
+%
+% `draftclassic': For draft mode without loading any images (same as draft in book)
+%
+% `draft': Special draft mode with line numbers, images, and water mark with
+% timestamp and custom text. Position of the text can also be modified.
+%
+% `abstract': To generate only the title page and abstract page with
+% dissertation title and name, to submit to the Student Registry
+%
+% `chapter`: This option enables only the specified chapter and it's references
+%  Useful for review and corrections.
+%
+% ************************* Custom Page Margins ********************************
+%
+% `custommargin`: Use `custommargin' in options to activate custom page margins,
+% which can be defined in the preamble.tex. Custom margin will override
+% print/online margin setup.
+%
+% *********************** Choosing the Fonts in Class Options ******************
+%
+% `times' : Times font with math support. (in Cambridge University guidelines)
+%
+% `fourier': Utopia Font with Fourier Math font (Font has to be installed)
+%            It's a free font.
+%
+% `customfont': Use `customfont' option in the document class and load the
+% package in the preamble.tex
+%
+% default or leave empty: `Latin Modern' font will be loaded.
+%
+% ********************** Choosing the Bibliography style ***********************
+%
+% `authoryear': For author-year citation eg., Krishna (2013)
+%
+% `numbered': (Default Option) For numbered and sorted citation e.g., [1,5,2]
+%
+% `custombib': Define your own bibliography style in the `preamble.tex' file.
+%              `\RequirePackage[square, sort, numbers, authoryear]{natbib}'.
+%              This can be also used to load biblatex instead of natbib
+%              (See Preamble)
+%
+% **************************** Choosing the Page Style *************************
+%
+% `default (leave empty)': For Page Numbers in Header (Left Even, Right Odd) and
+% Chapter Name in Header (Right Even) and Section Name (Left Odd). Blank Footer.
+%
+% `PageStyleI': Chapter Name next & Page Number on Even Side (Left Even).
+% Section Name & Page Number in Header on Odd Side (Right Odd). Footer is empty.
+%
+% `PageStyleII': Chapter Name on Even Side (Left Even) in Header. Section Number
+% and Section Name in Header on Odd Side (Right Odd). Page numbering in footer
+
+% Uncomment to change page style
+%\pagestyle{PageStyleII}
+
+% ********************************** Preamble **********************************
+
+% Contains packages and user-defined commands and settings
+\input{Preamble/preamble} 
+
+% ************************ Thesis Information & Meta-data **********************
+
+\input{thesis-info}
+
+%%%%% PERSONAL STUFF HERE %%%%%%%%%%%%
+
+\usepackage{listings}
+
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{stmaryrd}
+
+% Math
+\usepackage{dsfont} % Dirac Delta
+\usepackage{amsmath}
+
+% For algorithm and pseudocode
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\input{sty/personal_commands}
+\input{sty/listing_style}
+
+% Load personalised math commands
+\input{utils.tex}
+
+% ***************************** Abstract Separate ******************************
+% To printout only the titlepage and the abstract with the PhD title and the
+% author name for submission to the Student Registry, use the `abstract' option in
+% the document class.
+
+\ifdefineAbstract
+ \pagestyle{empty}
+ \includeonly{Declaration/declaration, Abstract/abstract}
+\fi
+
+% ***************************** Chapter Mode ***********************************
+% The chapter mode allows user to only print particular chapters with references
+% Title, Contents, Frontmatter are disabled by default
+% Useful option to review a particular chapter or to send it to supervisior.
+% To use choose `chapter' option in the document class
+
+% \ifdefineChapter
+%  \includeonly{Chapter2/chapter2}
+% \fi
+
+% ******************************** Front Matter ********************************
+\begin{document}
+
+%\frontmatter
+
+\maketitle
+
+%\include{Dedication/dedication}
+% \include{Declaration/declaration}
+% \include{Acknowledgement/acknowledgement}
+%\include{Abstract/abstract}
+
+% *********************** Adding TOC and List of Figures ***********************
+
+% \tableofcontents
+
+%\listoffigures
+% \listoftables
+
+% \printnomenclature[space] space can be set as 2em between symbol and description
+%\printnomenclature[3em]
+
+%\printnomenclature
+
+% ******************************** Main Matter *********************************
+\mainmatter
+
+% Introduction
+%\include{Introduction/introduction}
+
+% Chapter 1
+%\include{Chapter1/introduction}
+%\include{Chapter1/scnmt-seq}
+
+% Chapter 2
+%\include{Chapter2/introduction}
+%\include{Chapter2/model_description}
+%\include{Chapter2/results}
+%\include{Chapter2/perspectives}
+
+% Chapter 3
+%\include{Chapter3/introduction}
+%\include{Chapter3/results}
+
+% Chapter 4
+%\include{Chapter4/introduction}
+%\include{Chapter4/model_description}
+%\include{Chapter4/results}
+%\include{Chapter4/perspectives}
+
+% ********************************** Appendices ********************************
+
+%\begin{appendices} % Using appendices environment for more functunality
+
+%\input{Appendix/appendix1}
+% \include{Appendix2/appendix2}
+% \include{Appendix3/appendix3}
+% \include{Appendix4/appendix4}
+
+%\end{appendices}
+
+
+% ********************************** Back Matter *******************************
+% Backmatter should be commented out, if you are using appendices after References
+% \backmatter
+
+% ********************************** Bibliography ******************************
+% \begin{spacing}{0.9}
+
+% \bibliographystyle{apalike}
+\cleardoublepage
+
+%\printbibliography
+
+\end{document}

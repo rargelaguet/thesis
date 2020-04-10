@@ -19,6 +19,95 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global/}
+    \entry{Abdelaal2019}{article}{}
+      \name{author}{7}{}{%
+        {{hash=39cc0e3742199ed1c3218d76fb99e143}{%
+           family={Abdelaal},
+           family_i={A\bibinitperiod},
+           given={Tamim},
+           given_i={T\bibinitperiod}}}%
+        {{hash=0dba7f0f8bc453ce8c74b16236ea78a1}{%
+           family={Michielsen},
+           family_i={M\bibinitperiod},
+           given={Lieke},
+           given_i={L\bibinitperiod}}}%
+        {{hash=4dba931b744f26d50bba111b7f38d03f}{%
+           family={Cats},
+           family_i={C\bibinitperiod},
+           given={Davy},
+           given_i={D\bibinitperiod}}}%
+        {{hash=06879dcf1d80410f234fb180c0e6198f}{%
+           family={Hoogduin},
+           family_i={H\bibinitperiod},
+           given={Dylan},
+           given_i={D\bibinitperiod}}}%
+        {{hash=d6e73c1e64232411a0c791a49c2d9e4b}{%
+           family={Mei},
+           family_i={M\bibinitperiod},
+           given={Hailiang},
+           given_i={H\bibinitperiod}}}%
+        {{hash=7fd43af8d29362a56b32bc9e4b46b190}{%
+           family={Reinders},
+           family_i={R\bibinitperiod},
+           given={Marcel\bibnamedelimb J.\bibnamedelimi T.},
+           given_i={M\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=a7d21682150bd90707acec952bf963a9}{%
+           family={Mahfouz},
+           family_i={M\bibinitperiod},
+           given={Ahmed},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a64084cbf0bcba9a614c20deaf8e2b32}
+      \strng{fullhash}{e7206118d0215dc7bb0b1c5ea1c278bf}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Genome Biology}
+      \field{number}{1}
+      \field{title}{A comparison of automatic cell identification methods for single-cell RNA sequencing data}
+      \field{volume}{20}
+      \field{year}{2019}
+      \field{pages}{194}
+      \range{pages}{1}
+    \endentry
+    \entry{Ainsworth2018}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=3160521a1ff7c780d7c4bd56f4580ff5}{%
+           family={Ainsworth},
+           family_i={A\bibinitperiod},
+           given={Samuel},
+           given_i={S\bibinitperiod}}}%
+        {{hash=a0fa2168cbc23b83838f18fd85d66106}{%
+           family={Foti},
+           family_i={F\bibinitperiod},
+           given={Nicholas},
+           given_i={N\bibinitperiod}}}%
+        {{hash=92bcb3099799d46a24be7472ff3faea9}{%
+           family={Lee},
+           family_i={L\bibinitperiod},
+           given={Adrian\bibnamedelima KC},
+           given_i={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=866573c6f7990a30a16658f3076cb670}{%
+           family={Fox},
+           family_i={F\bibinitperiod},
+           given={Emily},
+           given_i={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{b96755f2ca688192002ae233d1d23367}
+      \strng{fullhash}{7b125c0fe5159f13435ea364d8a6f6d6}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Interpretable VAEs for nonlinear group factor analysis}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1802.06765
+      \endverb
+    \endentry
     \entry{Akavia2010}{article}{}
       \name{author}{10}{}{%
         {{hash=c9a38ab7cdfa6626d1ecbb82a1fd03d5}{%
@@ -78,7 +167,6 @@
       \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Summary Systematic characterization of cancer genomes has revealed a staggering number of diverse aberrations that differ among individuals, such that the functional importance and physiological impact of most tumor genetic alterations remain poorly defined. We developed a computational framework that integrates chromosomal copy number and gene expression data for detecting aberrations that promote cancer progression. We demonstrate the utility of this framework using a melanoma data set. Our analysis correctly identified known drivers of melanoma and predicted multiple tumor dependencies. Two dependencies, TBC1D16 and RAB27A, confirmed empirically, suggest that abnormal regulation of protein trafficking contributes to proliferation in melanoma. Together, these results demonstrate the ability of integrative Bayesian approaches to identify candidate drivers with biological, and possibly therapeutic, importance in cancer.}
       \field{issn}{0092-8674}
       \field{journaltitle}{Cell}
       \field{number}{6}
@@ -118,10 +206,8 @@
       \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Recent advances in high-throughput technologies have led to the emergence of systems biology as a holistic science to achieve more precise modeling of complex diseases. Many predict the emergence of personalized medicine in the near future. We are, however, moving from two-tiered health systems to a two-tiered personalized medicine. Omics facilities are restricted to affluent regions, and personalized medicine is likely to widen the growing gap in health systems between high and low-income countries. This is mirrored by an increasing lag between our ability to generate and analyze big data. Several bottlenecks slow-down the transition from conventional to personalized medicine: generation of cost-effective high-throughput data; hybrid education and multidisciplinary teams; data storage and processing; data integration and interpretation; and individual and global economic relevance. This review provides an update of important developments in the analysis of big data and forward strategies to accelerate the global transition to personalized medicine.}
       \field{issn}{1755-8794}
       \field{journaltitle}{BMC Medical Genomics}
-      \field{month}{06}
       \field{number}{1}
       \field{title}{From big data analysis to personalized medicine for all: challenges and opportunities}
       \field{volume}{8}
@@ -153,7 +239,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Neural Comput.}
-      \field{month}{02}
       \field{number}{2}
       \field{title}{Natural Gradient Works Efficiently in Learning}
       \field{volume}{10}
@@ -699,10 +784,8 @@
       \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{High throughput sequencing-by-synthesis is an emerging technology that allows the rapid production of millions of bases of data. Although the sequence reads are short, they can readily be used for re-sequencing. By re-sequencing the mRNA products of a cell, one may rapidly discover polymorphisms and splice variants particular to that cell.}
       \field{issn}{1471-2164}
       \field{journaltitle}{BMC Genomics}
-      \field{month}{09}
       \field{number}{1}
       \field{title}{Analysis of the prostate cancer cell line LNCaP transcriptome using a sequencing-by-synthesis approach}
       \field{volume}{7}
@@ -931,8 +1014,6 @@
       \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Mechanistically, how epigenetic states are inherited through cellular divisions remains an important open question in the chromatin field and beyond. Defining the heritability of epigenetic states and the underlying chromatin-based mechanisms within a population of cells is complicated due to cell heterogeneity combined with varying levels of stability of these states; thus, efforts must be focused toward single-cell analyses. The approaches presented here constitute the forefront of epigenetics research at the single-cell level using classic and innovative methods to dissect epigenetics mechanisms from the limited material available in a single cell. This review further outlines exciting future avenues of research to address the significance of epigenetic heterogeneity and the contributions of microfluidics technologies to single-cell isolation and analysis.}
-      \field{issn}{0962-8924}
       \field{journaltitle}{Trends in Cell Biology}
       \field{number}{11}
       \field{title}{Epigenetics reloaded: the single-cell revolution}
@@ -946,7 +1027,6 @@
       \verb{url}
       \verb http://www.sciencedirect.com/science/article/pii/S0962892414001470
       \endverb
-      \keyw{single cell,epigenetics,live cell,epigenomics,microfluidics}
     \endentry
     \entry{Bishop1999b}{inproceedings}{}
       \name{author}{1}{}{%
@@ -956,19 +1036,14 @@
            given={Christopher},
            given_i={C\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {IEE}%
-      }
       \strng{namehash}{f092f589860326a712a3322c4b6cc6b7}
       \strng{fullhash}{f092f589860326a712a3322c4b6cc6b7}
       \field{sortinit}{B}
       \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{One of the central issues in the use of principal component analysis (PCA) for data modelling is that of choosing the appropriate number of retained components. This problem was recently addressed through the formulation of a Bayesian treatment of PCA (Bishop, 1998) in terms of a probabilistic latent variable model. A central feature of this approach is that the effective dimensionality of the latent space (equivalent to the number of retained principal components) is determined automatically as part of the Bayesian inference procedure. In common with most non-trivial Bayesian models, however, the required marginalizations are analytically intractable, and so an approximation scheme based on a local Gaussian representation of the posterior distribution was employed. In this paper we develop an alternative, variational formulation of Bayesian PCA, based on a factorial representation of the posterior distribution. This approach is computationally efficient, and unlike other approximation schemes, it maximizes a rigourous lower bound on the marginal log probability of the observed data.}
       \field{booktitle}{Proceedings Ninth International Conference on Artificial Neural Networks, ICANN'99}
       \field{edition}{Proceedings Ninth International Conference on Artificial Neural Networks, ICANN'99}
-      \field{month}{01}
       \field{title}{Variational Principal Components}
       \field{volume}{1}
       \field{year}{1999}
@@ -1052,7 +1127,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Bayesian Anal.}
-      \field{month}{03}
       \field{number}{1}
       \field{title}{Variational inference for Dirichlet process mixtures}
       \field{volume}{1}
@@ -1094,7 +1168,6 @@
       \field{eprintclass}{stat.CO}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv e-prints}
-      \field{month}{01}
       \field{title}{{Variational Inference: A Review for Statisticians}}
       \field{year}{2016}
       \field{pages}{arXiv:1601.00670}
@@ -1102,7 +1175,6 @@
       \verb{eprint}
       \verb 1601.00670
       \endverb
-      \keyw{Statistics - Computation,Computer Science - Machine Learning,Statistics - Machine Learning}
     \endentry
     \entry{Blei2003}{article}{}
       \name{author}{3}{}{%
@@ -1133,7 +1205,6 @@
       \field{labeltitlesource}{title}
       \field{issn}{1532-4435}
       \field{journaltitle}{J. Mach. Learn. Res.}
-      \field{month}{03}
       \field{title}{Latent Dirichlet Allocation}
       \field{volume}{3}
       \field{year}{2003}
@@ -1142,6 +1213,329 @@
       \verb{url}
       \verb http://dl.acm.org/citation.cfm?id=944919.944937
       \endverb
+    \endentry
+    \entry{Bonder2016}{article}{}
+      \name{author}{56}{}{%
+        {{hash=ccbc050498313c0294bd76e5a35ac5a6}{%
+           family={Bonder},
+           family_i={B\bibinitperiod},
+           given={Marc\bibnamedelima Jan},
+           given_i={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=887e331d95ef5c7049532771cc574239}{%
+           family={Luijk},
+           family_i={L\bibinitperiod},
+           given={René},
+           given_i={R\bibinitperiod}}}%
+        {{hash=0908f0cd34143b16b911a372da4caf85}{%
+           family={Zhernakova},
+           family_i={Z\bibinitperiod},
+           given={Daria\bibnamedelima V},
+           given_i={D\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=fe86996ee152c0fd7657ad69e1a71405}{%
+           family={Moed},
+           family_i={M\bibinitperiod},
+           given={Matthijs},
+           given_i={M\bibinitperiod}}}%
+        {{hash=fe3fd7a32c0dcfe29cf59f69d3179131}{%
+           family={Deelen},
+           family_i={D\bibinitperiod},
+           given={Patrick},
+           given_i={P\bibinitperiod}}}%
+        {{hash=2db9a0362ed6d4f47bef6cd52c997358}{%
+           family={Vermaat},
+           family_i={V\bibinitperiod},
+           given={Martijn},
+           given_i={M\bibinitperiod}}}%
+        {{hash=9839dba61e1cc38828d53898444eb49f}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Iterson},
+           family_i={I\bibinitperiod},
+           given={Maarten},
+           given_i={M\bibinitperiod}}}%
+        {{hash=60a5523a0314a8dfb69ce9114395442e}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Dijk},
+           family_i={D\bibinitperiod},
+           given={Freerk},
+           given_i={F\bibinitperiod}}}%
+        {{hash=63170bfd9693a0c0bedcd013948de832}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Galen},
+           family_i={G\bibinitperiod},
+           given={Michiel},
+           given_i={M\bibinitperiod}}}%
+        {{hash=30e52c10bad0166e6409cccb881b116c}{%
+           family={Bot},
+           family_i={B\bibinitperiod},
+           given={Jan},
+           given_i={J\bibinitperiod}}}%
+        {{hash=566796a257573c3d08c2dce500547dee}{%
+           family={Slieker},
+           family_i={S\bibinitperiod},
+           given={Roderick\bibnamedelima C},
+           given_i={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=f814fa29c583456b0403014ef5300262}{%
+           family={Jhamai},
+           family_i={J\bibinitperiod},
+           given={P\bibnamedelima Mila},
+           given_i={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=61dacc0d6d2298e91589c8db297b3b18}{%
+           family={Verbiest},
+           family_i={V\bibinitperiod},
+           given={Michael},
+           given_i={M\bibinitperiod}}}%
+        {{hash=c402cb4f4daba9d3a6fd9b717c183c55}{%
+           family={Suchiman},
+           family_i={S\bibinitperiod},
+           given={H\bibnamedelima Eka\bibnamedelima D},
+           given_i={H\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=2d1ba005df914d649f06534eac6c878c}{%
+           family={Verkerk},
+           family_i={V\bibinitperiod},
+           given={Marijn},
+           given_i={M\bibinitperiod}}}%
+        {{hash=eb42ef7ca86c2e25fad168ab5df69145}{%
+           prefix={van\bibnamedelima der},
+           prefix_i={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+           family={Breggen},
+           family_i={B\bibinitperiod},
+           given={Ruud},
+           given_i={R\bibinitperiod}}}%
+        {{hash=91ef2053b83c51d38f08424723196545}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Rooij},
+           family_i={R\bibinitperiod},
+           given={Jeroen},
+           given_i={J\bibinitperiod}}}%
+        {{hash=89f6366c39db6e9a23545f6fd79c0879}{%
+           family={Lakenberg},
+           family_i={L\bibinitperiod},
+           given={Nico},
+           given_i={N\bibinitperiod}}}%
+        {{hash=a115adcd4a99a80cf4255a5ebafd5dda}{%
+           family={Arindrarto},
+           family_i={A\bibinitperiod},
+           given={Wibowo},
+           given_i={W\bibinitperiod}}}%
+        {{hash=bc523e179574e0f0f1f96949a9279dc8}{%
+           family={Kielbasa},
+           family_i={K\bibinitperiod},
+           given={Szymon\bibnamedelima M},
+           given_i={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=992fcabb9d1c6fab97ed677863d20269}{%
+           family={Jonkers},
+           family_i={J\bibinitperiod},
+           given={Iris},
+           given_i={I\bibinitperiod}}}%
+        {{hash=f99428b48616d67ea7b8aba917b20b48}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={'t\bibnamedelima Hof},
+           family_i={'\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Peter},
+           given_i={P\bibinitperiod}}}%
+        {{hash=19939a6d3f112e13b769a43615a4944d}{%
+           family={Nooren},
+           family_i={N\bibinitperiod},
+           given={Irene},
+           given_i={I\bibinitperiod}}}%
+        {{hash=bcdc037ce52b61da6fda1a558d766e33}{%
+           family={Beekman},
+           family_i={B\bibinitperiod},
+           given={Marian},
+           given_i={M\bibinitperiod}}}%
+        {{hash=1478881ab838190d6acc55cc6bab741e}{%
+           family={Deelen},
+           family_i={D\bibinitperiod},
+           given={Joris},
+           given_i={J\bibinitperiod}}}%
+        {{hash=aab1af3e00702f7d668d6ba16f0c773c}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Heemst},
+           family_i={H\bibinitperiod},
+           given={Diana},
+           given_i={D\bibinitperiod}}}%
+        {{hash=1c35f89e34ccbefcb6b995ec25523a9d}{%
+           family={Zhernakova},
+           family_i={Z\bibinitperiod},
+           given={Alexandra},
+           given_i={A\bibinitperiod}}}%
+        {{hash=a04f6b9a9eb2b4b2d46908a616d620db}{%
+           family={Tigchelaar},
+           family_i={T\bibinitperiod},
+           given={Ettje\bibnamedelima F},
+           given_i={E\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=fe4bf5cb193f18a0c063ab7ff6df021f}{%
+           family={Swertz},
+           family_i={S\bibinitperiod},
+           given={Morris\bibnamedelima A},
+           given_i={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=4296e75903bfc38f18a4e39109243ff5}{%
+           family={Hofman},
+           family_i={H\bibinitperiod},
+           given={Albert},
+           given_i={A\bibinitperiod}}}%
+        {{hash=b2d6be50878e9e24df33cce7f068b2ec}{%
+           family={Uitterlinden},
+           family_i={U\bibinitperiod},
+           given={AndréG},
+           given_i={A\bibinitperiod}}}%
+        {{hash=0be6891e3589303802f797f78bf2696f}{%
+           family={Pool},
+           family_i={P\bibinitperiod},
+           given={René},
+           given_i={R\bibinitperiod}}}%
+        {{hash=c2ffef74fbb9ad9dce0be34af78aec72}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Dongen},
+           family_i={D\bibinitperiod},
+           given={Jenny},
+           given_i={J\bibinitperiod}}}%
+        {{hash=d283df8587918b576980180b54188d2b}{%
+           family={Hottenga},
+           family_i={H\bibinitperiod},
+           given={Jouke\bibnamedelima J},
+           given_i={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=2e4dedf1c39c796262ee463ddcfd7abb}{%
+           family={Stehouwer},
+           family_i={S\bibinitperiod},
+           given={Coen\bibnamedelimb D\bibnamedelima A},
+           given_i={C\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=310516bb7f1dfa5ad50a4b5f14ccd995}{%
+           prefix={van\bibnamedelima der},
+           prefix_i={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+           family={Kallen},
+           family_i={K\bibinitperiod},
+           given={Carla\bibnamedelimb J\bibnamedelima H},
+           given_i={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=bfa4b944e740164f245936a0fab960ae}{%
+           family={Schalkwijk},
+           family_i={S\bibinitperiod},
+           given={Casper\bibnamedelima G},
+           given_i={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=9594301fe3f724c5ebce7587801d1a25}{%
+           prefix={van\bibnamedelima den},
+           prefix_i={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+           family={Berg},
+           family_i={B\bibinitperiod},
+           given={Leonard\bibnamedelima H},
+           given_i={L\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=3cdea023382b9e71ce6d1ea4efe7b462}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Zwet},
+           family_i={Z\bibinitperiod},
+           given={Erik\bibnamedelima W},
+           given_i={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=d6e73c1e64232411a0c791a49c2d9e4b}{%
+           family={Mei},
+           family_i={M\bibinitperiod},
+           given={Hailiang},
+           given_i={H\bibinitperiod}}}%
+        {{hash=2af761d9bef859ea29248418adce0dd7}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Yang},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=dda8bd6f8ce91e895378bc8f9260a657}{%
+           family={Lemire},
+           family_i={L\bibinitperiod},
+           given={Mathieu},
+           given_i={M\bibinitperiod}}}%
+        {{hash=6e64d72a92bb3a3f17f37050b0ba14a5}{%
+           family={Hudson},
+           family_i={H\bibinitperiod},
+           given={Thomas\bibnamedelima J},
+           given_i={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3e6fa98979846722f73da3fb20f6e1a3}{%
+           prefix={the},
+           prefix_i={t\bibinitperiod},
+           family={BIOS\bibnamedelima Consortium},
+           family_i={B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=ff1c0dd8899dd303a89b71a2e90d2da0}{%
+           family={Slagboom},
+           family_i={S\bibinitperiod},
+           given={P\bibnamedelima Eline},
+           given_i={P\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=f18ea16b7a1339046096fa93bb5dc87f}{%
+           family={Wijmenga},
+           family_i={W\bibinitperiod},
+           given={Cisca},
+           given_i={C\bibinitperiod}}}%
+        {{hash=1a722cf8f85a4cfd7d85d91a30180a8f}{%
+           family={Veldink},
+           family_i={V\bibinitperiod},
+           given={Jan\bibnamedelima H},
+           given_i={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=dfedda9725dbeb01a569e1d52fdc744b}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Greevenbroek},
+           family_i={G\bibinitperiod},
+           given={Marleen\bibnamedelimb M\bibnamedelima J},
+           given_i={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=53ecde9927bf422fade8a4894366154b}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Duijn},
+           family_i={D\bibinitperiod},
+           given={Cornelia\bibnamedelima M},
+           given_i={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=fe1e82425872e06d99ccef6fe4caa4dc}{%
+           family={Boomsma},
+           family_i={B\bibinitperiod},
+           given={Dorret\bibnamedelima I},
+           given_i={D\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=a1db2b771933dc4229708d0c84317bfa}{%
+           family={Isaacs},
+           family_i={I\bibinitperiod},
+           given={Aaron},
+           given_i={A\bibinitperiod}}}%
+        {{hash=a8f27dd6cbfbd8060e43133c0da8ee58}{%
+           family={Jansen},
+           family_i={J\bibinitperiod},
+           given={Rick},
+           given_i={R\bibinitperiod}}}%
+        {{hash=b00b35af01ececb8780bc0e8dc7d56b7}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Meurs},
+           family_i={M\bibinitperiod},
+           given={Joyce\bibnamedelimb B\bibnamedelima J},
+           given_i={J\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=303f994956cda99092859bec444533e9}{%
+           family={'t\bibnamedelima Hoen},
+           family_i={'\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Peter\bibnamedelimb A\bibnamedelima C},
+           given_i={P\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=940ca1f1f12dca6767f77c75027b7c00}{%
+           family={Franke},
+           family_i={F\bibinitperiod},
+           given={Lude},
+           given_i={L\bibinitperiod}}}%
+        {{hash=ea9aa78881b143744f9f303ed1fe30fc}{%
+           family={Heijmans},
+           family_i={H\bibinitperiod},
+           given={Bastiaan\bibnamedelima T},
+           given_i={B\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{d7f22a0424590bf727dacb8cdaa7472e}
+      \strng{fullhash}{8c2e9a51cd1c81d53d73e536450c0823}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Genetics}
+      \field{month}{12}
+      \field{title}{Disease variants alter transcription factor levels and methylation of their binding sites}
+      \field{volume}{49}
+      \field{year}{2016}
     \endentry
     \entry{Bourgon2010}{article}{}
       \name{author}{3}{}{%
@@ -1197,7 +1591,6 @@
       \field{eprintclass}{stat.ME}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv e-prints}
-      \field{month}{12}
       \field{title}{{Variational inference for large-scale models of discrete choice}}
       \field{year}{2007}
       \field{pages}{arXiv:0712.2526}
@@ -1270,7 +1663,6 @@
       \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Cross-talk between DNA methylation and histone modifications drives the establishment of composite epigenetic signatures and is traditionally studied using correlative rather than direct approaches. Here, we present sequential ChIP-bisulfite-sequencing (ChIP-BS-seq) as an approach to quantitatively assess DNA methylation patterns associated with chromatin modifications or chromatin-associated factors directly. A chromatin-immunoprecipitation (ChIP)-capturing step is used to obtain a restricted representation of the genome occupied by the epigenetic feature of interest, for which a single-base resolution DNA methylation map is then generated. When applied to H3 lysine 27 trimethylation (H3K27me3), we found that H3K27me3 and DNA methylation are compatible throughout most of the genome, except for CpG islands, where these two marks are mutually exclusive. Further ChIP-BS-seq-based analysis in Dnmt triple-knockout (TKO) embryonic stem cells revealed that total loss of CpG methylation is associated with alteration of H3K27me3 levels throughout the genome: H3K27me3 in localized peaks is decreased while broad local enrichments (BLOCs) of H3K27me3 are formed. At an even broader scale, these BLOCs correspond to regions of high DNA methylation in wild-type ES cells, suggesting that DNA methylation prevents H3K27me3 deposition locally and at a megabase scale. Our strategy provides a unique way of investigating global interdependencies between DNA methylation and other chromatin features.}
       \field{journaltitle}{Genome Research}
       \field{number}{6}
       \field{title}{Sequential ChIP-bisulfite sequencing enables direct genome-scale investigation of chromatin and DNA methylation cross-talk}
@@ -1280,9 +1672,6 @@
       \range{pages}{11}
       \verb{doi}
       \verb 10.1101/gr.133728.111
-      \endverb
-      \verb{eprint}
-      \verb http://genome.cshlp.org/content/22/6/1128.full.pdf+html
       \endverb
       \verb{url}
       \verb http://genome.cshlp.org/content/22/6/1128.abstract
@@ -1446,25 +1835,19 @@
            given={Oliver},
            given_i={O\bibinitperiod}}}%
       }
-      \list{language}{1}{%
-        {en}%
-      }
       \strng{namehash}{8732033a2c2ce894c29f829275ec462e}
       \strng{fullhash}{30c92d7ce4fec4f9ecbd658209c0471f}
       \field{sortinit}{B}
       \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Single-cell RNA-sequencing (scRNA-seq) allows studying heterogeneity in gene expression in large cell populations. Such heterogeneity can arise due to technical or biological factors, making decomposing sources of variation difficult. We here describe f-scLVM (factorial single-cell latent variable model), a method based on factor analysis that uses pathway annotations to guide the inference of interpretable factors underpinning the heterogeneity. Our model jointly estimates the relevance of individual factors, refines gene set annotations, and infers factors without annotation. In applications to multiple scRNA-seq datasets, we find that f-scLVM robustly decomposes scRNA-seq datasets into interpretable components, thereby facilitating the identification of novel subpopulations.}
       \field{journaltitle}{Genome Biol.}
-      \field{month}{11}
       \field{number}{1}
       \field{title}{{f-scLVM}: scalable and versatile factor analysis for single-cell {RNA-seq}}
       \field{volume}{18}
       \field{year}{2017}
       \field{pages}{212}
       \range{pages}{1}
-      \keyw{Gene set annotations; Single-cell RNA-seq; Sparse factor analysis}
     \endentry
     \entry{Bulian2017}{article}{}
       \name{author}{24}{}{%
@@ -1656,6 +2039,48 @@
       \field{pages}{2457\bibrangedash 2463}
       \range{pages}{7}
     \endentry
+    \entry{Butler2018}{article}{}
+      \name{author}{5}{}{%
+        {{hash=dfce8fcd6b20ae490d1cdc0b5c67c9dc}{%
+           family={Butler},
+           family_i={B\bibinitperiod},
+           given={Andrew},
+           given_i={A\bibinitperiod}}}%
+        {{hash=20339076a46a7815881ab552eb232220}{%
+           family={Hoffman},
+           family_i={H\bibinitperiod},
+           given={Paul},
+           given_i={P\bibinitperiod}}}%
+        {{hash=f26a014e248b84b89c12feeb6b89cb24}{%
+           family={Smibert},
+           family_i={S\bibinitperiod},
+           given={Peter},
+           given_i={P\bibinitperiod}}}%
+        {{hash=8db992b18380963d13aeafa275b5e772}{%
+           family={Papalexi},
+           family_i={P\bibinitperiod},
+           given={Efthymia},
+           given_i={E\bibinitperiod}}}%
+        {{hash=d06bc96caba8ec75d09d2d169fa958da}{%
+           family={Satija},
+           family_i={S\bibinitperiod},
+           given={Rahul},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{95a3c3a96eb400068cc19f330385a391}
+      \strng{fullhash}{037efbaddacf1fa44dbf3f9924cdb3a7}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Biotechnology}
+      \field{number}{5}
+      \field{title}{Integrating single-cell transcriptomic data across different conditions, technologies, and species}
+      \field{volume}{36}
+      \field{year}{2018}
+      \field{pages}{411\bibrangedash 420}
+      \range{pages}{10}
+    \endentry
     \entry{Cao2017}{article}{}
       \name{author}{14}{}{%
         {{hash=41b50f188564af1a10c16a572fdc6370}{%
@@ -1738,7 +2163,6 @@
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Single-cell sequencing is challenging owing to the limited biological material available in an individual cell and the high cost of sequencing across multiple cells. Cao et al. developed a two-step combinatorial barcoding method to profile both single-cell and single-nucleus transcriptomes without requiring physical isolation of each cell. The authors profiled almost 50,000 single cells from an individual Caenorhabditis elegans larval stage and were able to identify and recover information from different, even rare, cell types.Science, this issue p. 661To resolve cellular heterogeneity, we developed a combinatorial indexing strategy to profile the transcriptomes of single cells or nuclei, termed sci-RNA-seq (single-cell combinatorial indexing RNA sequencing). We applied sci-RNA-seq to profile nearly 50,000 cells from the nematode Caenorhabditis elegans at the L2 larval stage, which provided \&gt;50-fold {“}shotgun{”} cellular coverage of its somatic cell composition. From these data, we defined consensus expression profiles for 27 cell types and recovered rare neuronal cell types corresponding to as few as one or two cells in the L2 worm. We integrated these profiles with whole-animal chromatin immunoprecipitation sequencing data to deconvolve the cell type{–}specific effects of transcription factors. The data generated by sci-RNA-seq constitute a powerful resource for nematode biology and foreshadow similar atlases for other organisms.}
       \field{issn}{0036-8075}
       \field{journaltitle}{Science}
       \field{number}{6352}
@@ -1749,9 +2173,6 @@
       \range{pages}{7}
       \verb{doi}
       \verb 10.1126/science.aam8940
-      \endverb
-      \verb{eprint}
-      \verb http://science.sciencemag.org/content/357/6352/661.full.pdf
       \endverb
       \verb{url}
       \verb http://science.sciencemag.org/content/357/6352/661
@@ -1845,83 +2266,6 @@
       \field{pages}{1380}
       \range{pages}{1}
     \endentry
-    \entry{Cao2018}{article}{}
-      \name{author}{12}{}{%
-        {{hash=41b50f188564af1a10c16a572fdc6370}{%
-           family={Cao},
-           family_i={C\bibinitperiod},
-           given={Junyue},
-           given_i={J\bibinitperiod}}}%
-        {{hash=a20271daa93df867cd49124836c703b8}{%
-           family={Spielmann},
-           family_i={S\bibinitperiod},
-           given={Malte},
-           given_i={M\bibinitperiod}}}%
-        {{hash=0a655036518ca5c45070eca087350db4}{%
-           family={Qiu},
-           family_i={Q\bibinitperiod},
-           given={Xiaojie},
-           given_i={X\bibinitperiod}}}%
-        {{hash=61141c9318546dfd432bf18c769b7aea}{%
-           family={Huang},
-           family_i={H\bibinitperiod},
-           given={Xingfan},
-           given_i={X\bibinitperiod}}}%
-        {{hash=1655d7d5d52337c8a8d4f6f847a7ee68}{%
-           family={Ibrahim},
-           family_i={I\bibinitperiod},
-           given={Daniel\bibnamedelima M.},
-           given_i={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=7af38053aefce00a693d1174b8d1e93c}{%
-           family={Hill},
-           family_i={H\bibinitperiod},
-           given={Andrew\bibnamedelima J.},
-           given_i={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=ae021641a8f85fd2607152ab99ed115b}{%
-           family={Zhang},
-           family_i={Z\bibinitperiod},
-           given={Fan},
-           given_i={F\bibinitperiod}}}%
-        {{hash=f58c9706624204ce22d7d336f1949c98}{%
-           family={Mundlos},
-           family_i={M\bibinitperiod},
-           given={Stefan},
-           given_i={S\bibinitperiod}}}%
-        {{hash=70f059c660b185f964afdb2667cd93da}{%
-           family={Christiansen},
-           family_i={C\bibinitperiod},
-           given={Lena},
-           given_i={L\bibinitperiod}}}%
-        {{hash=c0f0217497c856b8bb4e82946f43f152}{%
-           family={Steemers},
-           family_i={S\bibinitperiod},
-           given={Frank\bibnamedelima J.},
-           given_i={F\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=5621efe15ca5598a9e861fc0a93a06fa}{%
-           family={Trapnell},
-           family_i={T\bibinitperiod},
-           given={Cole},
-           given_i={C\bibinitperiod}}}%
-        {{hash=5a50df52643f6bba00616c104eda3653}{%
-           family={Shendure},
-           family_i={S\bibinitperiod},
-           given={Jay},
-           given_i={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{426858d60618522a0aa24624d9d71503}
-      \strng{fullhash}{7ea3e23be7a2b24a6f13b231ce6cca7c}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Nature}
-      \field{number}{7745}
-      \field{title}{The single-cell transcriptional landscape of mammalian organogenesis}
-      \field{volume}{566}
-      \field{year}{2019}
-      \field{pages}{496\bibrangedash 502}
-      \range{pages}{7}
-    \endentry
     \entry{Cao2019}{article}{}
       \name{author}{12}{}{%
         {{hash=41b50f188564af1a10c16a572fdc6370}{%
@@ -2003,6 +2347,83 @@
       \verb 10.1038/s41586-019-0969-x
       \endverb
     \endentry
+    \entry{Cao2018}{article}{}
+      \name{author}{12}{}{%
+        {{hash=41b50f188564af1a10c16a572fdc6370}{%
+           family={Cao},
+           family_i={C\bibinitperiod},
+           given={Junyue},
+           given_i={J\bibinitperiod}}}%
+        {{hash=a20271daa93df867cd49124836c703b8}{%
+           family={Spielmann},
+           family_i={S\bibinitperiod},
+           given={Malte},
+           given_i={M\bibinitperiod}}}%
+        {{hash=0a655036518ca5c45070eca087350db4}{%
+           family={Qiu},
+           family_i={Q\bibinitperiod},
+           given={Xiaojie},
+           given_i={X\bibinitperiod}}}%
+        {{hash=61141c9318546dfd432bf18c769b7aea}{%
+           family={Huang},
+           family_i={H\bibinitperiod},
+           given={Xingfan},
+           given_i={X\bibinitperiod}}}%
+        {{hash=1655d7d5d52337c8a8d4f6f847a7ee68}{%
+           family={Ibrahim},
+           family_i={I\bibinitperiod},
+           given={Daniel\bibnamedelima M.},
+           given_i={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=7af38053aefce00a693d1174b8d1e93c}{%
+           family={Hill},
+           family_i={H\bibinitperiod},
+           given={Andrew\bibnamedelima J.},
+           given_i={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ae021641a8f85fd2607152ab99ed115b}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Fan},
+           given_i={F\bibinitperiod}}}%
+        {{hash=f58c9706624204ce22d7d336f1949c98}{%
+           family={Mundlos},
+           family_i={M\bibinitperiod},
+           given={Stefan},
+           given_i={S\bibinitperiod}}}%
+        {{hash=70f059c660b185f964afdb2667cd93da}{%
+           family={Christiansen},
+           family_i={C\bibinitperiod},
+           given={Lena},
+           given_i={L\bibinitperiod}}}%
+        {{hash=c0f0217497c856b8bb4e82946f43f152}{%
+           family={Steemers},
+           family_i={S\bibinitperiod},
+           given={Frank\bibnamedelima J.},
+           given_i={F\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=5621efe15ca5598a9e861fc0a93a06fa}{%
+           family={Trapnell},
+           family_i={T\bibinitperiod},
+           given={Cole},
+           given_i={C\bibinitperiod}}}%
+        {{hash=5a50df52643f6bba00616c104eda3653}{%
+           family={Shendure},
+           family_i={S\bibinitperiod},
+           given={Jay},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{426858d60618522a0aa24624d9d71503}
+      \strng{fullhash}{7ea3e23be7a2b24a6f13b231ce6cca7c}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{7745}
+      \field{title}{The single-cell transcriptional landscape of mammalian organogenesis}
+      \field{volume}{566}
+      \field{year}{2019}
+      \field{pages}{496\bibrangedash 502}
+      \range{pages}{7}
+    \endentry
     \entry{Carbonetto2012}{article}{}
       \name{author}{2}{}{%
         {{hash=190c2ae35f6e1cb423fa1cc648175865}{%
@@ -2026,7 +2447,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Bayesian Anal.}
-      \field{month}{03}
       \field{number}{1}
       \field{title}{Scalable Variational Inference for Bayesian Variable Selection in Regression, and Its Accuracy in Genetic Association Studies}
       \field{volume}{7}
@@ -2064,9 +2484,7 @@
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Single-cell multiomics technologies typically measure multiple types of molecule from the same individual cell, enabling more profound biological insight than can be inferred by analyzing each molecular layer from separate cells. These single-cell multiomics technologies can reveal cellular heterogeneity at multiple molecular layers within a population of cells and reveal how this variation is coupled or uncoupled between the captured omic layers. The data sets generated by these techniques have the potential to enable a deeper understanding of the key biological processes and mechanisms driving cellular heterogeneity and how they are linked with normal development and aging as well as disease etiology. This review details both established and novel single-cell mono- and multiomics technologies and considers their limitations, applications, and likely future developments.}
       \field{journaltitle}{Annual Review of Genomics and Human Genetics}
-      \field{note}{PMID: 29727584}
       \field{number}{1}
       \field{title}{Single-Cell (Multi)omics Technologies}
       \field{volume}{19}
@@ -2075,12 +2493,6 @@
       \range{pages}{27}
       \verb{doi}
       \verb 10.1146/annurev-genom-091416-035324
-      \endverb
-      \verb{eprint}
-      \verb https://doi.org/10.1146/annurev-genom-091416-035324
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1146/annurev-genom-091416-035324
       \endverb
     \endentry
     \entry{Chen2016}{article}{}
@@ -2499,7 +2911,6 @@
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Abstract The rapid development of high-throughput technologies and computational frameworks enables the examination of biological systems in unprecedented detail. The ability to study biological phenomena at omics levels in turn is expected to lead to significant advances in personalized and precision medicine. Patients can be treated according to their own molecular characteristics. Individual omes as well as the integrated profiles of multiple omes, such as the genome, the epigenome, the transcriptome, the proteome, the metabolome, the antibodyome, and other omics information are expected to be valuable for health monitoring, preventative measures, and precision medicine. Moreover, omics technologies have the potential to transform medicine from traditional symptom-oriented diagnosis and treatment of diseases toward disease prevention and early diagnostics. We discuss here the advances and challenges in systems biology-powered personalized medicine at its current stage, as well as a prospective view of future personalized health care at the end of this review. WIREs Syst Biol Med 2013, 5:73-82. doi: 10.1002/wsbm.1198 This article is categorized under: Analytical and Computational Methods > Analytical Methods Laboratory Methods and Technologies > Genetic/Genomic Methods Translational, Genomic, and Systems Medicine > Translational Medicine}
       \field{journaltitle}{Wiley Interdisciplinary Reviews: Systems Biology and Medicine}
       \field{number}{1}
       \field{title}{Promise of personalized omics to precision medicine}
@@ -2746,8 +3157,6 @@
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Single cell high throughput genomic measurements are revolutionizing the fields of biology and medicine, providing a means to tackle biological problems that have thus far been inaccessible, such as the systematic discovery of new cell types, the identification of cellular heterogeneity in health and disease, or the cell-fate decisions taking place during differentiation and reprogramming. Recently implemented multiomics measurements of genomes, transcriptomes, epigenomes, proteomes and chromatin organization are opening up new avenues to begin to disentangle the causal relationship between -omics layers and how these co-determine higher-order cellular phenotypes. This technological revolution is not restricted to basic science but promises major breakthroughs in medical diagnostics and treatments. In this paper we review existing computational methods for the analysis and integration of different -omics layers and discuss what new approaches are needed to leverage the full potential of single cell multi-omics data.}
-      \field{issn}{2452-3100}
       \field{journaltitle}{Current Opinion in Systems Biology}
       \field{note}{Future of systems biology Genomics and epigenomics}
       \field{title}{Statistical single cell multi-omics integration}
@@ -5980,7 +6389,6 @@
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The analysis of censored failure times is considered. It is assumed that on each individual are available values of one or more explanatory variables. The hazard function (age-specific failure rate) is taken to be a function of the explanatory variables and unknown regression coefficients multiplied by an arbitrary and unknown function of time. A conditional likelihood is obtained, leading to inferences about the unknown regression coefficients. Some generalizations are outlined.}
       \field{issn}{00359246}
       \field{journaltitle}{Journal of the Royal Statistical Society. Series B (Methodological)}
       \field{number}{2}
@@ -6099,7 +6507,6 @@
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Abstract As the therapeutic landscape for chronic lymphocytic leukemia (CLL) continues to expand, biological predictors of response to therapy are becoming increasingly important. One such predictive biomarker is the mutational status of the variable region of the immunoglobulin heavy chain (IGHV) gene, which is a powerful predictor of duration of response and overall survival with chemoimmunotherapy (CIT). As this test may influence choice of therapy between CIT and novel agents, it is critical that providers understand how mutational status is determined and the limitations of testing. Here, we describe the details of IGHV mutational status testing, highlighting the appropriate way to interpret this information and best apply it to the care of patients with CLL.}
       \field{journaltitle}{American Journal of Hematology}
       \field{number}{12}
       \field{title}{IGHV mutational status testing in chronic lymphocytic leukemia}
@@ -6211,7 +6618,6 @@
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Summary We applied a combinatorial indexing assay, sci-ATAC-seq, to profile genome-wide chromatin accessibility in 100,000 single cells from 13 adult mouse tissues. We identify 85 distinct patterns of chromatin accessibility, most of which can be assigned to cell types, and 400,000 differentially accessible elements. We use these data to link regulatory elements to their target genes, to define the transcription factor grammar specifying each cell type, and to discover in vivo correlates of heterogeneity in accessibility within cell types. We develop a technique for mapping single cell gene expression data to single-cell chromatin accessibility data, facilitating the comparison of atlases. By intersecting mouse chromatin accessibility with human genome-wide association summary statistics, we identify cell-type-specific enrichments of the heritability signal for hundreds of complex traits. These data define the in vivo landscape of the regulatory genome for common mammalian cell types at single-cell resolution.}
       \field{issn}{0092-8674}
       \field{journaltitle}{Cell}
       \field{number}{5}
@@ -6226,7 +6632,6 @@
       \verb{url}
       \verb http://www.sciencedirect.com/science/article/pii/S0092867418308559
       \endverb
-      \keyw{single cell,epigenetics,epigenomics,chromatin,chromatin accessibility,ATAC-seq,regulatory,GWAS}
     \endentry
     \entry{Cusanovich2015}{article}{}
       \name{author}{9}{}{%
@@ -6285,7 +6690,6 @@
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Identifying the chromatin state of any single cell, which may or may not have a different function or represent different stages relative to others collected within any single culture, experiment, or tissue, has been challenging. Cusanovitch et al. skirted previously identified technological limitations to identify regions of accessible chromatin at single-cell resolution. Combinatorial cellular indexing, a strategy for multiplex barcoding of thousands of single cells per experiment, was successfully used to investigate the genome-wide chromatin accessibility landscape in each of over 15,000 single cells.Science, this issue p. 910Technical advances have enabled the collection of genome and transcriptome data sets with single-cell resolution. However, single-cell characterization of the epigenome has remained challenging. Furthermore, because cells must be physically separated before biochemical processing, conventional single-cell preparatory methods scale linearly. We applied combinatorial cellular indexing to measure chromatin accessibility in thousands of single cells per assay, circumventing the need for compartmentalization of individual cells. We report chromatin accessibility profiles from more than 15,000 single cells and use these data to cluster cells on the basis of chromatin accessibility landscapes. We identify modules of coordinately regulated chromatin accessibility at the level of single cells both between and within cell types, with a scalable method that may accelerate progress toward a human cell atlas.}
       \field{issn}{0036-8075}
       \field{journaltitle}{Science}
       \field{number}{6237}
@@ -6296,9 +6700,6 @@
       \range{pages}{5}
       \verb{doi}
       \verb 10.1126/science.aab1601
-      \endverb
-      \verb{eprint}
-      \verb http://science.sciencemag.org/content/348/6237/910.full.pdf
       \endverb
       \verb{url}
       \verb http://science.sciencemag.org/content/348/6237/910
@@ -6379,7 +6780,6 @@
       \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Although genetic traits are often dominant or recessive, the impact of the same heterozygous genotype can vary quite a bit between individuals. Deng et al. (p. 193), analyzed global gene expression in hundreds of individual mouse cells and found that a substantial fraction of the genes only expressed one of the alleles, chosen randomly, at any given point in time. Such stochasticity in transcription increases the heterogeneity among cells and likely contributes to the phenotypic variance among individuals of identical genotype. Expression from both alleles is generally observed in analyses of diploid cell populations, but studies addressing allelic expression patterns genome-wide in single cells are lacking. Here, we present global analyses of allelic expression across individual cells of mouse preimplantation embryos of mixed background (CAST/EiJ {\texttimes} C57BL/6J). We discovered abundant (12 to 24\%) monoallelic expression of autosomal genes and that expression of the two alleles occurs independently. The monoallelic expression appeared random and dynamic because there was considerable variation among closely related embryonic cells. Similar patterns of monoallelic expression were observed in mature cells. Our allelic expression analysis also demonstrates the de novo inactivation of the paternal X chromosome. We conclude that independent and stochastic allelic transcription generates abundant random monoallelic expression in the mammalian cell.}
       \field{issn}{0036-8075}
       \field{journaltitle}{Science}
       \field{number}{6167}
@@ -6390,9 +6790,6 @@
       \range{pages}{4}
       \verb{doi}
       \verb 10.1126/science.1245316
-      \endverb
-      \verb{eprint}
-      \verb http://science.sciencemag.org/content/343/6167/193.full.pdf
       \endverb
       \verb{url}
       \verb http://science.sciencemag.org/content/343/6167/193
@@ -6660,25 +7057,19 @@
            given={Thorsten},
            given_i={T\bibinitperiod}}}%
       }
-      \list{language}{1}{%
-        {en}%
-      }
       \strng{namehash}{b9e41dfc2254d2f101bfa6bd26af10f7}
       \strng{fullhash}{a546709cd542fb3e6e9034aaf676c649}
       \field{sortinit}{D}
       \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{As new generations of targeted therapies emerge and tumor genome sequencing discovers increasingly comprehensive mutation repertoires, the functional relationships of mutations to tumor phenotypes remain largely unknown. Here, we measured ex vivo sensitivity of 246 blood cancers to 63 drugs alongside genome, transcriptome, and DNA methylome analysis to understand determinants of drug response. We assembled a primary blood cancer cell encyclopedia data set that revealed disease-specific sensitivities for each cancer. Within chronic lymphocytic leukemia (CLL), responses to 62\% of drugs were associated with 2 or more mutations, and linked the B cell receptor (BCR) pathway to trisomy 12, an important driver of CLL. Based on drug responses, the disease could be organized into phenotypic subgroups characterized by exploitable dependencies on BCR, mTOR, or MEK signaling and associated with mutations, gene expression, and DNA methylation. Fourteen percent of CLLs were driven by mTOR signaling in a non-BCR-dependent manner. Multivariate modeling revealed immunoglobulin heavy chain variable gene (IGHV) mutation status and trisomy 12 as the most important modulators of response to kinase inhibitors in CLL. Ex vivo drug responses were associated with outcome. This study overcomes the perception that most mutations do not influence drug response of cancer, and points to an updated approach to understanding tumor biology, with implications for biomarker discovery and cancer care.}
       \field{journaltitle}{J. Clin. Invest.}
-      \field{month}{01}
       \field{number}{1}
       \field{title}{Drug-perturbation-based stratification of blood cancer}
       \field{volume}{128}
       \field{year}{2018}
       \field{pages}{427\bibrangedash 445}
       \range{pages}{19}
-      \keyw{B cell receptor; Drug screens; Hematology; Leukemias; Oncology}
     \endentry
     \entry{Dietz2010-technical-report-graphs}{misc}{}
       \name{author}{1}{}{%
@@ -6728,6 +7119,60 @@
       \field{volume}{9}
       \field{year}{2018}
       \field{pages}{2002}
+      \range{pages}{1}
+    \endentry
+    \entry{Du2010}{article}{}
+      \name{author}{7}{}{%
+        {{hash=6522f2c15d813d809a082d9561630b31}{%
+           family={Du},
+           family_i={D\bibinitperiod},
+           given={Pan},
+           given_i={P\bibinitperiod}}}%
+        {{hash=227e34554b27c77e2d042504ef1edb97}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Xiao},
+           given_i={X\bibinitperiod}}}%
+        {{hash=54a9da8c33baa230defc6fecfed40ece}{%
+           family={Huang},
+           family_i={H\bibinitperiod},
+           given={Chiang-Ching},
+           given_i={C\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=a114feba9ab6a2fac0f4196e06f51fb4}{%
+           family={Jafari},
+           family_i={J\bibinitperiod},
+           given={Nadereh},
+           given_i={N\bibinitperiod}}}%
+        {{hash=09354957192c41bf6c7b9828b2e69b3a}{%
+           family={Kibbe},
+           family_i={K\bibinitperiod},
+           given={Warren\bibnamedelima A},
+           given_i={W\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=6b8f283de5dcecc25ba7b7275b594bf3}{%
+           family={Hou},
+           family_i={H\bibinitperiod},
+           given={Lifang},
+           given_i={L\bibinitperiod}}}%
+        {{hash=0ab806840e8577074dc3e178f2731742}{%
+           family={Lin},
+           family_i={L\bibinitperiod},
+           given={Simon\bibnamedelima M},
+           given_i={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{8391307e764e3920957aefd1b793508d}
+      \strng{fullhash}{37e8867e192c2f6a3a7ea8eee8564dca}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMC Bioinformatics}
+      \field{title}{Comparison of Beta-value and M-value methods for quantifying methylation levels by microarray analysis}
+      \field{volume}{11}
+      \field{year}{2010}
+      \field{pages}{587}
       \range{pages}{1}
     \endentry
     \entry{Du2017}{article}{}
@@ -6865,10 +7310,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eid}{arXiv:1703.04265}
-      \field{eprintclass}{cs.LG}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv e-prints}
-      \field{month}{03}
       \field{title}{{Conjugate-Computation Variational Inference : Converting Variational Inference in Non-Conjugate Models to Inferences in Conjugate Models}}
       \field{year}{2017}
       \field{pages}{arXiv:1703.04265}
@@ -6876,7 +7319,6 @@
       \verb{eprint}
       \verb 1703.04265
       \endverb
-      \keyw{Computer Science - Machine Learning}
     \endentry
     \entry{Enge2017}{article}{}
       \name{author}{7}{}{%
@@ -6985,18 +7427,13 @@
            given={Riccardo},
            given_i={R\bibinitperiod}}}%
       }
-      \list{language}{1}{%
-        {en}%
-      }
       \strng{namehash}{9cf4181f46897ad6f2fc0c1b98fc2320}
       \strng{fullhash}{9cf4181f46897ad6f2fc0c1b98fc2320}
       \field{sortinit}{F}
       \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Recent investigations have provided an increasingly complete picture of the genetic landscape of chronic lymphocytic leukaemia (CLL). These analyses revealed that the CLL genome displays a high degree of heterogeneity between patients and within the same patient. In addition, they highlighted molecular mechanisms and functionally relevant biological programmes that may be important for the pathogenesis and therapeutic targeting of this disease. This Review focuses on recent insights into the understanding of CLL biology, with emphasis on the role of genetic lesions in the initiation and clinical progression of CLL. We also consider the translation of these findings into the development of risk-adapted and targeted therapeutic approaches.}
       \field{journaltitle}{Nat. Rev. Cancer}
-      \field{month}{03}
       \field{number}{3}
       \field{title}{The molecular pathogenesis of chronic lymphocytic leukaemia}
       \field{volume}{16}
@@ -7031,7 +7468,6 @@
       \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Bayesian hierarchical models are attractive structures for conducting regression analyses when the data are subject to missingness. However, the requisite probability calculus is challenging and Monte Carlo methods typically are employed. We develop an alternative approach based on deterministic variational Bayes approximations. Both parametric and nonparametric regression are considered. Attention is restricted to the more challenging case of missing predictor data. We demonstrate that variational Bayes can achieve good accuracy, but with considerably less computational overhead. The main ramification is fast approximate Bayesian inference in parametric and nonparametric regression models with missing data. Supplemental materials accompany the online version of this article.}
       \field{issn}{01621459}
       \field{journaltitle}{Journal of the American Statistical Association}
       \field{number}{495}
@@ -7166,7 +7602,6 @@
       \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Summary Methods for single-cell genome and transcriptome sequencing have contributed to our understanding of cellular heterogeneity, whereas methods for single-cell epigenomics are much less established. Here, wedescribe a whole-genome bisulfite sequencing (WGBS) assay that enables DNA methylation mapping in very small cell populations (WGBS) and single cells (scWGBS). Our assay is optimized for profiling many samples at low coverage, and we describe a bioinformatic method that analyzes collections of single-cell methylomes to infer cell-state dynamics. Using these technological advances, we studied epigenomic cell-state dynamics in three in vitro models of cellular differentiation and pluripotency, where we observed characteristic patterns of epigenome remodeling and cell-to-cell heterogeneity. The described method enables single-cell analysis of DNA methylation in a broad range of biological systems, including embryonic development, stem cell differentiation, and cancer. It can also be used to establish composite methylomes that account for cell-to-cell heterogeneity in complex tissue samples.}
       \field{issn}{2211-1247}
       \field{journaltitle}{Cell Reports}
       \field{number}{8}
@@ -7336,7 +7771,6 @@
       \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{An approach for genome analysis based on sequencing and assembly of unselected pieces of DNA from the whole chromosome has been applied to obtain the complete nucleotide sequence (1,830,137 base pairs) of the genome from the bacterium Haemophilus influenzae Rd. This approach eliminates the need for initial mapping efforts and is therefore applicable to the vast array of microbial species for which genome maps are unavailable. The H. influenzae Rd genome sequence (Genome Sequence DataBase accession number L42023) represents the only complete genome sequence from a free-living organism.}
       \field{issn}{0036-8075}
       \field{journaltitle}{Science}
       \field{number}{5223}
@@ -7347,9 +7781,6 @@
       \range{pages}{17}
       \verb{doi}
       \verb 10.1126/science.7542800
-      \endverb
-      \verb{eprint}
-      \verb http://science.sciencemag.org/content/269/5223/496.full.pdf
       \endverb
       \verb{url}
       \verb http://science.sciencemag.org/content/269/5223/496
@@ -7407,7 +7838,6 @@
       \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The modulation of DNA-protein interactions by methylation of protein-binding sites in DNA and the occurrence in genomic imprinting, X chromosome inactivation, and fragile X syndrome of different methylation patterns in DNA of different chromosomal origin have underlined the need to establish methylation patterns in individual strands of particular genomic sequences. We report a genomic sequencing method that provides positive identification of 5-methylcytosine residues and yields strand-specific sequences of individual molecules in genomic DNA. The method utilizes bisulfite-induced modification of genomic DNA, under conditions whereby cytosine is converted to uracil, but 5-methylcytosine remains nonreactive. The sequence under investigation is then amplified by PCR with two sets of strand-specific primers to yield a pair of fragments, one from each strand, in which all uracil and thymine residues have been amplified as thymine and only 5-methylcytosine residues have been amplified as cytosine. The PCR products can be sequenced directly to provide a strand-specific average sequence for the population of molecules or can be cloned and sequenced to provide methylation maps of single DNA molecules. We tested the method by defining the methylation status within single DNA strands of two closely spaced CpG dinucleotides in the promoter of the human kininogen gene. During the analysis, we encountered in sperm DNA an unusual methylation pattern, which suggests that the high methylation level of single-copy sequences in sperm may be locally modulated by binding of protein factors in germ-line cells.}
       \field{issn}{0027-8424}
       \field{journaltitle}{Proceedings of the National Academy of Sciences}
       \field{number}{5}
@@ -7418,9 +7848,6 @@
       \range{pages}{5}
       \verb{doi}
       \verb 10.1073/pnas.89.5.1827
-      \endverb
-      \verb{eprint}
-      \verb https://www.pnas.org/content/89/5/1827.full.pdf
       \endverb
       \verb{url}
       \verb https://www.pnas.org/content/89/5/1827
@@ -7473,7 +7900,6 @@
       \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Keratins form a complex family of fibrous cytoskeletal proteins that are among the major differentiation-specific proteins of epithelial cells. Since their expression is very tightly linked to the particular differentiated state of a cell, their finely tuned program of differential expression has been used to probe the molecular mechanisms underlying epithelial differentiation and development.}
       \field{issn}{0168-9525}
       \field{journaltitle}{Trends in Genetics}
       \field{number}{10}
@@ -7484,9 +7910,6 @@
       \range{pages}{5}
       \verb{doi}
       \verb https://doi.org/10.1016/0168-9525(88)90169-2
-      \endverb
-      \verb{url}
-      \verb http://www.sciencedirect.com/science/article/pii/0168952588901692
       \endverb
     \endentry
     \entry{Gao2013}{article}{}
@@ -7524,7 +7947,6 @@
       \verb{eprint}
       \verb 1310.4792
       \endverb
-      \keyw{Statistics - Applications,Quantitative Biology - Genomics}
     \endentry
     \entry{Gelman2013}{misc}{}
       \name{author}{6}{}{%
@@ -7574,7 +7996,6 @@
       \field{isbn}{1439840954}
       \field{title}{Bayesian Data Analysis, Third Edition}
       \field{year}{2013}
-      \keyw{bayes}
     \endentry
     \entry{Gerstung2015}{article}{}
       \name{author}{16}{}{%
@@ -7735,7 +8156,6 @@
       \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{High-throughput -omics techniques have revolutionised biology, allowing for thorough and unbiased characterisation of the molecular states of biological systems. However, cellular decision-making is inherently a unicellular process to which {“}bulk{”} -omics techniques are poorly suited, as they capture ensemble averages of cell states. Recently developed single-cell methods bridge this gap, allowing high-throughput molecular surveys of individual cells. In this review, we cover core concepts of analysis of single-cell gene expression data and highlight areas of developmental biology where single-cell techniques have made important contributions. These include understanding of cell-to-cell heterogeneity, the tracing of differentiation pathways, quantification of gene expression from specific alleles, and the future directions of cell lineage tracing and spatial gene expression analysis.Mol Syst Biol. (2018) 14: e8046}
       \field{journaltitle}{Molecular Systems Biology}
       \field{number}{4}
       \field{title}{Using single-cell genomics to understand developmental processes and cell fate decisions}
@@ -7743,9 +8163,6 @@
       \field{year}{2018}
       \verb{doi}
       \verb 10.15252/msb.20178046
-      \endverb
-      \verb{eprint}
-      \verb http://msb.embopress.org/content/14/4/e8046.full.pdf
       \endverb
       \verb{url}
       \verb http://msb.embopress.org/content/14/4/e8046
@@ -7805,6 +8222,61 @@
       \field{title}{Single-cell multi-omics sequencing of mouse early embryos and embryonic stem cells}
       \field{volume}{27}
       \field{year}{2017}
+    \endentry
+    \entry{Guo2015}{article}{}
+      \name{author}{8}{}{%
+        {{hash=070ac3e48f6b09936460c38995606235}{%
+           family={Guo},
+           family_i={G\bibinitperiod},
+           given={Hongshan},
+           given_i={H\bibinitperiod}}}%
+        {{hash=ed054d60019cc0b6045e4feea533a61f}{%
+           family={Zhu},
+           family_i={Z\bibinitperiod},
+           given={Ping},
+           given_i={P\bibinitperiod}}}%
+        {{hash=29af38f37c23f5216ba5b94f5156f423}{%
+           family={Guo},
+           family_i={G\bibinitperiod},
+           given={Fan},
+           given_i={F\bibinitperiod}}}%
+        {{hash=fbe0f9e82b562f0830328066119f811c}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Xianlong},
+           given_i={X\bibinitperiod}}}%
+        {{hash=72bfe443a056445df32da0ab2e5368a5}{%
+           family={Wu},
+           family_i={W\bibinitperiod},
+           given={Xinglong},
+           given_i={X\bibinitperiod}}}%
+        {{hash=6a779f91c49d4fedee460530f2d16214}{%
+           family={Fan},
+           family_i={F\bibinitperiod},
+           given={Xiaoying},
+           given_i={X\bibinitperiod}}}%
+        {{hash=ec2819ae062fc2600ced737dda8ab202}{%
+           family={Wen},
+           family_i={W\bibinitperiod},
+           given={Lu},
+           given_i={L\bibinitperiod}}}%
+        {{hash=872aa6bc4d40c8c8eaeebdc4600422fc}{%
+           family={Tang},
+           family_i={T\bibinitperiod},
+           given={Fuchou},
+           given_i={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{90461c094665d5345d88a879a2c10adf}
+      \strng{fullhash}{f81d194fae465689a58155b499bdffb4}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Protocols}
+      \field{month}{04}
+      \field{title}{Profiling DNA methylome landscapes of mammalian cells with single-cell reduced-representation bisulfite sequencing}
+      \field{volume}{10}
+      \field{year}{2015}
     \endentry
     \entry{Guo2013}{article}{}
       \name{author}{6}{}{%
@@ -7877,12 +8349,6 @@
            given={Jing-Hao},
            given_i={J\bibinithyphendelim H\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Piscataway, NJ, USA}%
-      }
-      \list{publisher}{1}{%
-        {IEEE Press}%
-      }
       \strng{namehash}{c3d2c5eb4a04dd26d9e95e53e4ce9cb4}
       \strng{fullhash}{572cfc0edc67a79ee741cc5244433109}
       \field{sortinit}{G}
@@ -7891,7 +8357,6 @@
       \field{labeltitlesource}{title}
       \field{issn}{1057-7149}
       \field{journaltitle}{Trans. Img. Proc.}
-      \field{month}{06}
       \field{number}{6}
       \field{title}{Sufficient Canonical Correlation Analysis}
       \field{volume}{25}
@@ -8004,10 +8469,8 @@
       \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{{Over the past few years, advances in molecular technologies have allowed unprecedented mapping of epigenetic modifications in gametes and during early embryonic development. This work is allowing a detailed genomic analysis, which for the first time can answer long-standing questions about epigenetic regulation and reprogramming, and highlights differences between mouse and human, the implications of which are only beginning to be explored.In this review, we summarise new low-cell molecular methods enabling the interrogation of epigenetic information in gametes and early embryos, the mechanistic insights these have provided, and contrast the findings in mouse and human.Relevant studies were identified by PubMed search.We discuss the levels of epigenetic regulation, from DNA modifications to chromatin organisation, during mouse gametogenesis, fertilisation and pre- and post-implantation development. The recently characterised features of the oocyte epigenome highlight its exceptionally unique regulatory landscape. The chromatin organisation and epigenetic landscape of both gametic genomes are rapidly reprogrammed after fertilisation. This extensive epigenetic remodelling is necessary for zygotic genome activation, but the mechanistic link remains unclear. While the vast majority of epigenetic information from the gametes is erased in pre-implantation development, new insights suggest that repressive histone modifications from the oocyte may mediate a novel mechanism of imprinting. To date, the characterisation of epigenetics in human development has been almost exclusively limited to DNA methylation profiling; these data reinforce that the global dynamics are conserved between mouse and human. However, as we look closer, it is becoming apparent that the mechanisms regulating these dynamics are distinct. These early findings emphasise the importance of investigations of fundamental epigenetic mechanisms in both mouse and humans.Failures in epigenetic regulation have been implicated in human disease and infertility. With increasing maternal age and use of reproductive technologies in countries all over the world, it is becoming ever more important to understand the necessary processes required to establish a developmentally competent embryo. Furthermore, it is essential to evaluate the extent to which these epigenetic patterns are sensitive to such technologies and other adverse environmental exposures.}}
       \field{issn}{1355-4786}
       \field{journaltitle}{Human Reproduction Update}
-      \field{month}{07}
       \field{number}{5}
       \field{title}{{Epigenetic regulation in development: is the mouse a good model for the human?}}
       \field{volume}{24}
@@ -8253,7 +8716,6 @@
       \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{DNA methylation is a chemical modification that occurs predominantly on CG dinucleotides in mammalian genomes. However, recent studies have revealed that non-CG methylation (mCH) is abundant and nonrandomly distributed in the genomes of pluripotent cells and brain cells, and is present at lower levels in many other human cells and tissues. Surprisingly, mCH in pluripotent cells is distinct from that in brain cells in terms of sequence specificity and association with transcription, indicating the existence of different mCH pathways. In addition, several recent studies have begun to reveal the biological significance of mCH in diverse cellular processes. In reprogrammed somatic cells, mCH marks megabase-scale regions that have failed to revert to the pluripotent epigenetic state. In myocytes, promoter mCH accumulation is associated with the transcriptional response to environmental factors. In brain cells, mCH accumulates during the establishment of neural circuits and is associated with Rett syndrome. In this review, we summarize the current understanding of mCH and its possible functional consequences in different biological contexts.}
       \field{journaltitle}{Annual Review of Genomics and Human Genetics}
       \field{note}{PMID: 26077819}
       \field{number}{1}
@@ -8264,9 +8726,6 @@
       \range{pages}{23}
       \verb{doi}
       \verb 10.1146/annurev-genom-090413-025437
-      \endverb
-      \verb{eprint}
-      \verb https://doi.org/10.1146/annurev-genom-090413-025437
       \endverb
       \verb{url}
       \verb https://doi.org/10.1146/annurev-genom-090413-025437
@@ -8476,7 +8935,6 @@
       \field{eid}{arXiv:1404.4114}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv e-prints}
-      \field{month}{04}
       \field{title}{{Structured Stochastic Variational Inference}}
       \field{year}{2014}
       \field{pages}{arXiv:1404.4114}
@@ -8484,7 +8942,6 @@
       \verb{eprint}
       \verb 1404.4114
       \endverb
-      \keyw{Computer Science - Machine Learning}
     \endentry
     \entry{Hoffman2012}{article}{}
       \name{author}{4}{}{%
@@ -8517,7 +8974,6 @@
       \field{labeltitlesource}{title}
       \field{eid}{arXiv:1206.7051}
       \field{journaltitle}{arXiv e-prints}
-      \field{month}{06}
       \field{title}{{Stochastic Variational Inference}}
       \field{year}{2012}
       \field{pages}{arXiv:1206.7051}
@@ -8564,7 +9020,6 @@
       \field{labeltitlesource}{title}
       \field{issn}{0006-3444}
       \field{journaltitle}{Biometrika}
-      \field{month}{12}
       \field{number}{3-4}
       \field{title}{{Relations between two sets of variates}}
       \field{volume}{28}
@@ -8781,7 +9236,6 @@
       \field{labeltitlesource}{title}
       \field{issn}{1532-4435}
       \field{journaltitle}{J. Mach. Learn. Res.}
-      \field{month}{08}
       \field{title}{Practical Approaches to Principal Component Analysis in the Presence of Missing Values}
       \field{volume}{11}
       \field{year}{2010}
@@ -8962,8 +9416,6 @@
       \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Even though the importance of epigenetics was first recognized in light of its role in tissue development, an increasing amount of evidence has shown that it also plays an important role in the development and progression of many common diseases. We discuss some recent findings on one representative epigenetic modification, DNA methylation, in some common diseases. While many new risk factors have been identified through the population-based epigenetic epidemiologic studies on the role of epigenetics in common diseases, this relatively new field still faces many unique challenges. Here, we describe those promises and unique challenges of epigenetic epidemiological studies and propose some potential solutions.}
-      \field{issn}{2352-3042}
       \field{journaltitle}{Genes \& Diseases}
       \field{number}{1}
       \field{title}{DNA methylation in human diseases}
@@ -8977,7 +9429,6 @@
       \verb{url}
       \verb http://www.sciencedirect.com/science/article/pii/S2352304218300047
       \endverb
-      \keyw{DNA Methylation,Epigenetic epidemiologic studies,Epigenetics,EWAS,Human diseases}
     \endentry
     \entry{Rosalind2018}{article}{}
       \name{author}{2}{}{%
@@ -9057,10 +9508,7 @@
       \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{{High-throughput measurements of DNA methylation are increasingly becoming a mainstay of biomedical investigations. While the methylation status of individual cytosines can sometimes be informative, several recent papers have shown that the functional role of DNA methylation is better captured by a quantitative analysis of the spatial variation of methylation across a genomic region.Here, we present BPRMeth, a Bioconductor package that quantifies methylation profiles by generalized linear model regression. The original implementation has been enhanced in two important ways: we introduced a fast, variational inference approach that enables the quantification of Bayesian posterior confidence measures on the model, and we adapted the method to use several observation models, making it suitable for a diverse range of platforms including single-cell analyses and methylation arrays.http://bioconductor.org/packages/BPRMethSupplementary data are available at Bioinformatics online.}}
-      \field{issn}{1367-4803}
       \field{journaltitle}{Bioinformatics}
-      \field{month}{03}
       \field{number}{14}
       \field{title}{{BPRMeth: a flexible Bioconductor package for modelling methylation profiles}}
       \field{volume}{34}
@@ -9069,9 +9517,6 @@
       \range{pages}{2}
       \verb{doi}
       \verb 10.1093/bioinformatics/bty129
-      \endverb
-      \verb{eprint}
-      \verb http://oup.prod.sis.lan/bioinformatics/article-pdf/34/14/2485/25138157/bty129.pdf
       \endverb
       \verb{url}
       \verb https://dx.doi.org/10.1093/bioinformatics/bty129
@@ -9099,15 +9544,11 @@
       \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Measurements of DNA methylation at the single cell level are promising to revolutionise our understanding of epigenetic control of gene expression. Yet, intrinsic limitations of the technology result in very sparse coverage of CpG sites (around 5\% to 20\% coverage), effectively limiting the analysis repertoire to a semi-quantitative level. Here we introduce Melissa (MEthyLation Inference for Single cell Analysis), a Bayesian hierarchical method to quantify spatially-varying methylation profiles across genomic regions from single-cell bisulfite sequencing data (scBS-seq). Melissa clusters individual cells based on local methylation patterns, enabling the discovery of epigenetic differences and similarities among individual cells. The clustering also acts as an effective regularisation method for imputation of methylation on unassayed CpG sites, enabling transfer of information between individual cells. We show both on simulated and real data sets that Melissa provides accurate and biologically meaningful clusterings, and state-of-the-art imputation performance. An R implementation of Melissa is publicly available at https://github.com/andreaskapou/Melissa.}
       \field{journaltitle}{bioRxiv}
       \field{title}{Melissa: Bayesian clustering and imputation of single cell methylomes}
       \field{year}{2018}
       \verb{doi}
       \verb 10.1101/312025
-      \endverb
-      \verb{eprint}
-      \verb https://www.biorxiv.org/content/early/2018/05/02/312025.full.pdf
       \endverb
       \verb{url}
       \verb https://www.biorxiv.org/content/early/2018/05/02/312025
@@ -9340,7 +9781,6 @@
       \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{0036-8075}
       \field{journaltitle}{Science}
       \field{number}{6359}
       \field{title}{Single-cell epigenomics: Recording the past and predicting the future}
@@ -9350,9 +9790,6 @@
       \range{pages}{7}
       \verb{doi}
       \verb 10.1126/science.aan6826
-      \endverb
-      \verb{eprint}
-      \verb http://science.sciencemag.org/content/358/6359/69.full.pdf
       \endverb
       \verb{url}
       \verb http://science.sciencemag.org/content/358/6359/69
@@ -9408,6 +9845,36 @@
       \field{pages}{i497\bibrangedash i504}
       \range{pages}{-1}
     \endentry
+    \entry{Kharchenko2014}{article}{}
+      \name{author}{3}{}{%
+        {{hash=3371a936a039b451e60d8794a4f48d90}{%
+           family={Kharchenko},
+           family_i={K\bibinitperiod},
+           given={Peter\bibnamedelima V},
+           given_i={P\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=9264e8b750d300f111b33f4a46002c5f}{%
+           family={Silberstein},
+           family_i={S\bibinitperiod},
+           given={Lev},
+           given_i={L\bibinitperiod}}}%
+        {{hash=688d5ad0017a9572111b7b5d825ae8a2}{%
+           family={Scadden},
+           family_i={S\bibinitperiod},
+           given={David\bibnamedelima T},
+           given_i={D\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef690f470eca08c6af252b9ce8dae532}
+      \strng{fullhash}{ef690f470eca08c6af252b9ce8dae532}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Methods}
+      \field{month}{05}
+      \field{title}{Bayesian approach to single-cell differential expression analysis}
+      \field{volume}{11}
+      \field{year}{2014}
+    \endentry
     \entry{Kilgore2007}{article}{}
       \name{author}{5}{}{%
         {{hash=3d6311dc264f1dfd3178751aa1f6d066}{%
@@ -9442,7 +9909,6 @@
       \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{"Probing chromatin structure with DNA methyltransferases offers advantages over more commonly used nuclease-based and chromatin immunoprecipitation methods for detection of nucleosomes and non-histone protein-DNA interactions. Here, we describe two related methods in which the readout of MTase accessibility is obtained by assaying 5-methylcytosine in DNA through the PCR-based technique of bisulfite genomic sequencing. The methyltransferase accessibility protocol (MAP) determines the relative frequency at which the enzyme accesses each of its target sites over an entire population of PCR amplified product. While MAP yields much quantitative information about relative accessibility of a region of chromatin, a complementary single-molecule view of methyltransferase accessibility, termed MAP for individual templates (MAP-IT), is provided by analysis of cloned PCR products. Absolute rather than relative methylation frequencies in a region are obtained by summing the methylation status at each site over a cohort of clones. Moreover, as the integrity of individual molecules is maintained in MAP-IT, unique information about the distribution of multiple footprints along continuous regions is gleaned. In principle, the population MAP and single-molecule MAP-IT strategies can be used to analyze chromatin structure in a variety of model systems. Here, we describe the application of MAP in living Saccharomyces cerevisiae cells and MAP-IT in the analysis of a mammalian tumor suppressor gene in nuclei. This application of MAP-IT provides the first means to simultaneously determine CpG methylation of mammalian genes and their overlying chromatin structure in the same single DNA molecule."}
       \field{issn}{1046-2023}
       \field{journaltitle}{Methods}
       \field{note}{Methods Related to the Structure and Function of Eukaryotic Chromatin}
@@ -9458,7 +9924,6 @@
       \verb{url}
       \verb http://www.sciencedirect.com/science/article/pii/S1046202306002015
       \endverb
-      \keyw{Bisulfite,Chromatin,,MAP,MAP-IT,Methylation,Methyltransferases,Nucleosomes}
     \endentry
     \entry{Kim2016}{article}{}
       \name{author}{4}{}{%
@@ -9621,7 +10086,6 @@
       \field{labeltitlesource}{title}
       \field{issn}{1532-4435}
       \field{journaltitle}{J. Mach. Learn. Res.}
-      \field{month}{04}
       \field{number}{1}
       \field{title}{Bayesian Canonical Correlation Analysis}
       \field{volume}{14}
@@ -9796,7 +10260,6 @@
       \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The differences between individual cells can have profound functional consequences, in both unicellular and multicellular organisms. Recently developed single-cell mRNA-sequencing methods enable unbiased, high-throughput, and high-resolution transcriptomic analysis of individual cells. This provides an additional dimension to transcriptomic information relative to traditional methods that profile bulk populations of cells. Already, single-cell RNA-sequencing methods have revealed new biology in terms of the composition of tissues, the dynamics of transcription, and the regulatory relationships between genes. Rapid technological developments at the level of cell capture, phenotyping, molecular biology, and bioinformatics promise an exciting future with numerous biological and medical applications.}
       \field{issn}{1097-2765}
       \field{journaltitle}{Molecular Cell}
       \field{number}{4}
@@ -9834,9 +10297,7 @@
       \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Genome-scale analyses have allowed us to progress beyond studying gene expression at the level of individual components of a given process by providing global information about functional connections between genes, mRNAs and their regulatory proteins. Such analyses have greatly increased our understanding of the interplay between different events in gene regulation and have highlighted previously unappreciated functional connections, including coupling between nuclear and cytoplasmic processes. Genome-wide approaches have also revealed extensive coordination within regulatory levels, such as the organization of transcription factors into regulatory motifs. Overall, these studies enhance our understanding of how the many components of the eukaryotic cell function as a system to allow both coordination and versatility in gene expression.}
       \field{journaltitle}{Nat. Rev. Genet.}
-      \field{month}{01}
       \field{title}{Coupling and coordination in gene expression processes: a systems biology view}
       \field{volume}{9}
       \field{year}{2008}
@@ -9882,10 +10343,8 @@
       \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{{Summary: A combination of bisulfite treatment of DNA and high-throughput sequencing (BS-Seq) can capture a snapshot of a cell's epigenomic state by revealing its genome-wide cytosine methylation at single base resolution. Bismark is a flexible tool for the time-efficient analysis of BS-Seq data which performs both read mapping and methylation calling in a single convenient step. Its output discriminates between cytosines in CpG, CHG and CHH context and enables bench scientists to visualize and interpret their methylation data soon after the sequencing run is completed.Availability and implementation: Bismark is released under the GNU GPLv3+ licence. The source code is freely available from www.bioinformatics.bbsrc.ac.uk/projects/bismark/.Contact:felix.krueger@bbsrc.ac.ukSupplementary information:Supplementary data are available at Bioinformatics online.}}
       \field{issn}{1367-4803}
       \field{journaltitle}{Bioinformatics}
-      \field{month}{04}
       \field{number}{11}
       \field{title}{{Bismark: a flexible aligner and methylation caller for Bisulfite-Seq applications}}
       \field{volume}{27}
@@ -9895,12 +10354,66 @@
       \verb{doi}
       \verb 10.1093/bioinformatics/btr167
       \endverb
-      \verb{eprint}
-      \verb http://oup.prod.sis.lan/bioinformatics/article-pdf/27/11/1571/13845683/btr167.pdf
-      \endverb
       \verb{url}
       \verb https://dx.doi.org/10.1093/bioinformatics/btr167
       \endverb
+    \endentry
+    \entry{Ku2019}{article}{}
+      \name{author}{8}{}{%
+        {{hash=4687019c739d9fe29241020bf304d29a}{%
+           family={Ku},
+           family_i={K\bibinitperiod},
+           given={Wai\bibnamedelima Lim},
+           given_i={W\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=0529114cf7f24ce4f233cebfb94d80b3}{%
+           family={Nakamura},
+           family_i={N\bibinitperiod},
+           given={Kosuke},
+           given_i={K\bibinitperiod}}}%
+        {{hash=aec26f58cbab248742367af7e814dc87}{%
+           family={Gao},
+           family_i={G\bibinitperiod},
+           given={Weiwu},
+           given_i={W\bibinitperiod}}}%
+        {{hash=74c508c734c3ee23a410722d36e6d684}{%
+           family={Cui},
+           family_i={C\bibinitperiod},
+           given={Kairong},
+           given_i={K\bibinitperiod}}}%
+        {{hash=dbd6bd657c1f2a9917904229efccebee}{%
+           family={Hu},
+           family_i={H\bibinitperiod},
+           given={Gangqing},
+           given_i={G\bibinitperiod}}}%
+        {{hash=c14f47365c0b459bd4469a962bb083b3}{%
+           family={Tang},
+           family_i={T\bibinitperiod},
+           given={Qingsong},
+           given_i={Q\bibinitperiod}}}%
+        {{hash=a1f6e1b33794c10229da2530943a1d8c}{%
+           family={Ni},
+           family_i={N\bibinitperiod},
+           given={Bing},
+           given_i={B\bibinitperiod}}}%
+        {{hash=2cc20dd28c42453a763818321b9142dc}{%
+           family={Zhao},
+           family_i={Z\bibinitperiod},
+           given={Keji},
+           given_i={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f78c2a52877a1b91a328fa246de97fa}
+      \strng{fullhash}{cbeb108bfa527cea55c9ab542c374c81}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Methods}
+      \field{number}{4}
+      \field{title}{Single-cell chromatin immunocleavage sequencing (scChIC-seq) to profile histone modification}
+      \field{volume}{16}
+      \field{year}{2019}
+      \field{pages}{323\bibrangedash 325}
+      \range{pages}{3}
     \endentry
     \entry{Kuhn}{article}{}
       \name{author}{2}{}{%
@@ -10131,6 +10644,46 @@
       \field{pages}{2742\bibrangedash 2757}
       \range{pages}{16}
     \endentry
+    \entry{Lanckriet2004}{article}{}
+      \name{author}{5}{}{%
+        {{hash=0a58426e13e297f8f57c0d96a69b54c9}{%
+           family={Lanckriet},
+           family_i={L\bibinitperiod},
+           given={Gert\bibnamedelimb R\bibnamedelima G},
+           given_i={G\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=27468b922288dc496cf3ff2071368638}{%
+           family={De\bibnamedelima Bie},
+           family_i={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Tijl},
+           given_i={T\bibinitperiod}}}%
+        {{hash=b643588b4a53ed47702d3277b6de83a9}{%
+           family={Cristianini},
+           family_i={C\bibinitperiod},
+           given={Nello},
+           given_i={N\bibinitperiod}}}%
+        {{hash=996ffb9cb286a8b4b0fc16793c54cc31}{%
+           family={Jordan},
+           family_i={J\bibinitperiod},
+           given={Michael\bibnamedelima I},
+           given_i={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=88012ada61d616a54c2adcadcfc05b8c}{%
+           family={Noble},
+           family_i={N\bibinitperiod},
+           given={William\bibnamedelima Stafford},
+           given_i={W\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{cd540440aa31768fcb17d460990d4d80}
+      \strng{fullhash}{080e764e080519484c553a61079fc001}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioinformatics}
+      \field{number}{16}
+      \field{title}{A statistical framework for genomic data fusion}
+      \field{volume}{20}
+      \field{year}{2004}
+    \endentry
     \entry{Dai2017}{article}{}
       \name{author}{4}{}{%
         {{hash=53435e401818534c60b1cbdc1c28bcb5}{%
@@ -10160,10 +10713,8 @@
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{{Regulation of gene expression in prokaryotes involves complex co-regulatory mechanisms involving large numbers of transcriptional regulatory proteins and their target genes. Uncovering these genome-scale interactions constitutes a major bottleneck in systems biology. Sparse latent factor models, assuming activity of transcription factors (TFs) as unobserved, provide a biologically interpretable modelling framework, integrating gene expression and genome-wide binding data, but at the same time pose a hard computational inference problem. Existing probabilistic inference methods for such models rely on subjective filtering and suffer from scalability issues, thus are not well-suited for realistic genome-scale applications.We present a fast Bayesian sparse factor model, which takes input gene expression and binding sites data, either from ChIP-seq experiments or motif predictions, and outputs active TF-gene links as well as latent TF activities. Our method employs an efficient variational Bayes scheme for model inference enabling its application to large datasets which was not feasible with existing MCMC-based inference methods for such models. We validate our method on synthetic data against a similar model in the literature, employing MCMC for inference, and obtain comparable results with a small fraction of the computational time. We also apply our method to large-scale data from Mycobacterium tuberculosis involving ChIP-seq data on 113 TFs and matched gene expression data for 3863 putative target genes. We evaluate our predictions using an independent transcriptomics experiment involving over-expression of TFs.An easy-to-use Jupyter notebook demo of our method with data is available at https://github.com/zhenwendai/SITAR.Supplementary data are available at Bioinformatics online.}}
       \field{issn}{1367-4803}
       \field{journaltitle}{Bioinformatics}
-      \field{month}{08}
       \field{number}{23}
       \field{title}{{Efficient inference for sparse latent variable models of transcriptional regulation}}
       \field{volume}{33}
@@ -10204,7 +10755,6 @@
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The inheritance of epigenetic marks, in particular DNA methylation, provides a molecular memory that ensures faithful commitment to transcriptional programs during mammalian development. Epigenetic reprogramming results in global hypomethylation of the genome together with a profound loss of memory, which underlies naive pluripotency. Such global reprogramming occurs in primordial germ cells, early embryos, and embryonic stem cells where reciprocal molecular links connect the methylation machinery to pluripotency. Priming for differentiation is initiated upon exit from pluripotency, and we propose that epigenetic mechanisms create diversity of transcriptional states, which help with symmetry breaking during cell fate decisions and lineage commitment.}
       \field{issn}{1934-5909}
       \field{journaltitle}{Cell Stem Cell}
       \field{number}{6}
@@ -10343,9 +10893,7 @@
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Author SummaryIn scientific and medical studies, great care must be taken when collecting data to understand the relationship between two variables, such as a drug and its effect on a disease. In any given study there will be many other variables at play, such as the effects of age and sex on the disease. We show that in studies where the expression levels of thousands of genes are measured at once, these issues become surprisingly critical. Due to the complexity of our genomes, environment, and demographic features, there are many sources of variation when analyzing gene expression levels. In any given study, it is impossible to measure every single variable that may be influencing how our genes are expressed. Despite this, we show that by considering all expression levels simultaneously, one can actually recover the effects of these important missed variables and essentially produce an analysis as if all relevant variables were included. As opposed to traditional studies, the massive amount of data available in this setting is what makes the method, called surrogate variable analysis, possible. We hypothesize that surrogate variable analysis will be useful in many large-scale gene expression studies.}
       \field{journaltitle}{PLoS Genet.}
-      \field{month}{09}
       \field{number}{9}
       \field{title}{Capturing Heterogeneity in Gene Expression Studies by Surrogate Variable Analysis}
       \field{volume}{3}
@@ -10403,10 +10951,8 @@
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{{Driven by high-throughput sequencing techniques, modern genomic and clinical studies are in a strong need of integrative machine learning models for better use of vast volumes of heterogeneous information in the deep understanding of biological systems and the development of predictive models. How data from multiple sources (called multi-view data) are incorporated in a learning system is a key step for successful analysis. In this article, we provide a comprehensive review on omics and clinical data integration techniques, from a machine learning perspective, for various analyses such as prediction, clustering, dimension reduction and association. We shall show that Bayesian models are able to use prior information and model measurements with various distributions; tree-based methods can either build a tree with all features or collectively make a final decision based on trees learned from each view; kernel methods fuse the similarity matrices learned from individual views together for a final similarity matrix or learning model; network-based fusion methods are capable of inferring direct and indirect associations in a heterogeneous network; matrix factorization models have potential to learn interactions among features from different views; and a range of deep neural networks can be integrated in multi-modal learning for capturing the complex mechanism of biological systems.}}
       \field{issn}{1477-4054}
       \field{journaltitle}{Briefings in Bioinformatics}
-      \field{month}{12}
       \field{number}{2}
       \field{title}{{A review on machine learning principles for multi-view biological data integration}}
       \field{volume}{19}
@@ -10415,9 +10961,6 @@
       \range{pages}{16}
       \verb{doi}
       \verb 10.1093/bib/bbw113
-      \endverb
-      \verb{eprint}
-      \verb http://oup.prod.sis.lan/bib/article-pdf/19/2/325/25524236/bbw113.pdf
       \endverb
       \verb{url}
       \verb https://dx.doi.org/10.1093/bib/bbw113
@@ -10564,10 +11107,8 @@
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{{While only recently developed, the ability to profile expression data in single cells (scRNA-Seq) has already led to several important studies and findings. However, this technology has also raised several new computational challenges. These include questions about the best methods for clustering scRNA-Seq data, how to identify unique group of cells in such experiments, and how to determine the state or function of specific cells based on their expression profile. To address these issues we develop and test a method based on neural networks (NN) for the analysis and retrieval of single cell RNA-Seq data. We tested various NN architectures, some of which incorporate prior biological knowledge, and used these to obtain a reduced dimension representation of the single cell expression data. We show that the NN method improves upon prior methods in both, the ability to correctly group cells in experiments not used in the training and the ability to correctly infer cell type or state by querying a database of tens of thousands of single cell profiles. Such database queries (which can be performed using our web server) will enable researchers to better characterize cells when analyzing heterogeneous scRNA-Seq samples.}}
       \field{issn}{0305-1048}
       \field{journaltitle}{Nucleic Acids Research}
-      \field{month}{07}
       \field{number}{17}
       \field{title}{{Using neural networks for reducing the dimensions of single-cell RNA-Seq data}}
       \field{volume}{45}
@@ -10576,9 +11117,6 @@
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1093/nar/gkx681
-      \endverb
-      \verb{eprint}
-      \verb http://oup.prod.sis.lan/nar/article-pdf/45/17/e156/25366829/gkx681.pdf
       \endverb
       \verb{url}
       \verb https://dx.doi.org/10.1093/nar/gkx681
@@ -10675,7 +11213,6 @@
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Deciphering the multiple layers of epigenetic regulation that control transcription is critical to understanding how plants develop and respond to their environment. Using sequencing-by-synthesis technology we directly sequenced the cytosine methylome (methylC-seq), transcriptome (mRNA-seq), and small RNA transcriptome (smRNA-seq) to generate highly integrated epigenome maps for wild-type Arabidopsis thaliana and mutants defective in DNA methyltransferase or demethylase activity. At single-base resolution we discovered extensive, previously undetected DNA methylation, identified the context and level of methylation at each site, and observed local sequence effects upon methylation state. Deep sequencing of smRNAs revealed a direct relationship between the location of smRNAs and DNA methylation, perturbation of smRNA biogenesis upon loss of CpG DNA methylation, and a tendency for smRNAs to direct strand-specific DNA methylation in regions of RNA-DNA homology. Finally, strand-specific mRNA-seq revealed altered transcript abundance of hundreds of genes, transposons, and unannotated intergenic transcripts upon modification of the DNA methylation state.}
       \field{issn}{0092-8674}
       \field{journaltitle}{Cell}
       \field{number}{3}
@@ -10690,7 +11227,6 @@
       \verb{url}
       \verb http://www.sciencedirect.com/science/article/pii/S0092867408004480
       \endverb
-      \keyw{DNA,RNA,PROTEINS}
     \endentry
     \entry{Lister2009}{article}{}
       \name{author}{18}{}{%
@@ -11539,7 +12075,6 @@
       \field{eprintclass}{cs.LG}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv e-prints}
-      \field{month}{12}
       \field{title}{{New insights and perspectives on the natural gradient method}}
       \field{year}{2014}
       \field{pages}{arXiv:1412.1193}
@@ -11547,7 +12082,6 @@
       \verb{eprint}
       \verb 1412.1193
       \endverb
-      \keyw{Computer Science - Machine Learning,Statistics - Machine Learning}
     \endentry
     \entry{Mazumder2010}{article}{}
       \name{author}{3}{}{%
@@ -11608,7 +12142,6 @@
       \field{sortinithash}{2684bec41e9697b92699b46491061da2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The growth of multi-omics datasets has given rise to many methods for identifying sources of common variation across data types. The unsupervised nature of these methods makes it difficult to evaluate their performance. We present MOVIE, Multi-Omics VIsualization of Estimated contributions, as a framework for evaluating the degree of overfitting and the stability of unsupervised multi-omics methods. MOVIE plots the contributions of one data type against another to produce contribution plots, where contributions are calculated for each subject and each data type from the results of each multi-omics method. The usefulness of MOVIE is demonstrated by applying existing multi-omics methods to permuted null data and breast cancer data from The Cancer Genome Atlas. Contribution plots indicated that principal components-based Canonical Correlation Analysis overt null data, while Sparse multiple Canonical Correlation Analysis and Multi-Omics Factor Analysis provided stable results with high specificity for both the real and permuted null datasets.}
       \field{journaltitle}{bioRxiv}
       \field{title}{MOVIE: Multi-Omics VIsualization of Estimated contributions}
       \field{year}{2018}
@@ -11698,6 +12231,50 @@
       \field{pages}{413047}
       \range{pages}{1}
     \endentry
+    \entry{McCarthy2017}{article}{}
+      \name{author}{4}{}{%
+        {{hash=bed7a124e30be981b075ee1004ac723f}{%
+           family={McCarthy},
+           family_i={M\bibinitperiod},
+           given={Davis\bibnamedelima J},
+           given_i={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0ed4a1544aeb44dffe25f11683656e0d}{%
+           family={Campbell},
+           family_i={C\bibinitperiod},
+           given={Kieran\bibnamedelima R},
+           given_i={K\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=6648caa2b25b8772071f9fd5c1ae5bc4}{%
+           family={Lun},
+           family_i={L\bibinitperiod},
+           given={Aaron\bibnamedelimb T\bibnamedelima L},
+           given_i={A\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=e0813c9eb0a32fb28e972604ca130bd9}{%
+           family={Wills},
+           family_i={W\bibinitperiod},
+           given={Quin\bibnamedelima F},
+           given_i={Q\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc24ed9d23b23c23b4f4e377e85613ad}
+      \strng{fullhash}{a9bf7e1b5141a49ac63b71a08a164553}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1367-4803}
+      \field{journaltitle}{Bioinformatics}
+      \field{number}{8}
+      \field{title}{{Scater: pre-processing, quality control, normalization and visualization of single-cell RNA-seq data in R}}
+      \field{volume}{33}
+      \field{year}{2017}
+      \field{pages}{1179\bibrangedash 1186}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btw777
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/bioinformatics/btw777
+      \endverb
+    \endentry
     \entry{McInnes2018}{misc}{}
       \name{author}{3}{}{%
         {{hash=f3edd0ee6ca72eca5c532b9c1fcee621}{%
@@ -11728,6 +12305,60 @@
       \field{year}{2018}
       \verb{eprint}
       \verb 1802.03426
+      \endverb
+    \endentry
+    \entry{Meissner2005}{article}{}
+      \name{author}{6}{}{%
+        {{hash=9dde7613621b4b8acb3b50ffa5ed1e38}{%
+           family={Meissner},
+           family_i={M\bibinitperiod},
+           given={Alexander},
+           given_i={A\bibinitperiod}}}%
+        {{hash=f53c256d9e569f0fff3e0f1203b33b0e}{%
+           family={Gnirke},
+           family_i={G\bibinitperiod},
+           given={Andreas},
+           given_i={A\bibinitperiod}}}%
+        {{hash=ea3890e8528c9589f57e2bfbd49cfbd0}{%
+           family={Ramsahoye},
+           family_i={R\bibinitperiod},
+           given={Bernard},
+           given_i={B\bibinitperiod}}}%
+        {{hash=b59f757bbe7fe1d73139d3960737d98a}{%
+           family={Lander},
+           family_i={L\bibinitperiod},
+           given={Eric\bibnamedelima S.},
+           given_i={E\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=6a79b6e5d016f7f3fda2b734070303d2}{%
+           family={Bell},
+           family_i={B\bibinitperiod},
+           given={George\bibnamedelima W.},
+           given_i={G\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=8818ffbe614f33195f950be26ec63ca4}{%
+           family={Jaenisch},
+           family_i={J\bibinitperiod},
+           given={Rudolf},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{3cbfe171df6be486b9e92d960a7d41fd}
+      \strng{fullhash}{e0b6cb2b1cf625fe48dd707e3e955ae6}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0305-1048}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{number}{18}
+      \field{title}{{Reduced representation bisulfite sequencing for comparative high-resolution DNA methylation analysis}}
+      \field{volume}{33}
+      \field{year}{2005}
+      \field{pages}{5868\bibrangedash 5877}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1093/nar/gki901
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1093/nar/gki901
       \endverb
     \endentry
     \entry{Meng2016}{article}{}
@@ -11772,9 +12403,7 @@
       \field{sortinithash}{2684bec41e9697b92699b46491061da2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{State-of-the-art next-generation sequencing, transcriptomics, proteomics and other high-throughput omics technologies enable the efficient generation of large experimental data sets. These data may yield unprecedented knowledge about molecular pathways in cells and their role in disease. Dimension reduction approaches have been widely used in exploratory analysis of single omics data sets. This review will focus on dimension reduction approaches for simultaneous exploratory analyses of multiple data sets. These methods extract the linear relationships that best explain the correlated structure across data sets, the variability both within and between variables (or observations) and may highlight data issues such as batch effects or outliers. We explore dimension reduction techniques as one of the emerging approaches for data integration, and how these can be applied to increase our understanding of biological systems in normal physiological function and disease.}
       \field{journaltitle}{Brief. Bioinform.}
-      \field{month}{07}
       \field{number}{4}
       \field{title}{Dimension reduction techniques for the integrative analysis of multi-omics data}
       \field{volume}{17}
@@ -11799,7 +12428,6 @@
       \field{eid}{arXiv:1301.2294}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv e-prints}
-      \field{month}{01}
       \field{title}{{Expectation Propagation for approximate Bayesian inference}}
       \field{year}{2013}
       \field{pages}{arXiv:1301.2294}
@@ -11807,7 +12435,6 @@
       \verb{eprint}
       \verb 1301.2294
       \endverb
-      \keyw{Computer Science - Artificial Intelligence,Computer Science - Machine Learning}
     \endentry
     \entry{Mitchell1988}{article}{}
       \name{author}{2}{}{%
@@ -12089,9 +12716,6 @@
            given={Antonino},
            given_i={A\bibinitperiod}}}%
       }
-      \list{language}{1}{%
-        {en}%
-      }
       \strng{namehash}{5f15a79b8ef8403b78813dcabb18d874}
       \strng{fullhash}{1f124aaea5f7d1e5536a0bd630a5bc25}
       \field{sortinit}{M}
@@ -12099,14 +12723,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Leuk. Res.}
-      \field{month}{08}
       \field{number}{8}
       \field{title}{Surrogate molecular markers for {IGHV} mutational status in chronic lymphocytic leukemia for predicting time to first treatment}
       \field{volume}{39}
       \field{year}{2015}
       \field{pages}{840\bibrangedash 845}
       \range{pages}{6}
-      \keyw{CRY1; Chronic lymphocytic leukemia; Flow-cytometry; Gene expression profiling; IGHV; MBOAT1; Prognostic markers; Progression free survival; SNORA70F; ZAP-70}
     \endentry
     \entry{Mortazavi2008}{article}{}
       \name{author}{5}{}{%
@@ -12392,7 +13014,6 @@
       \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The identification of untranslated regions, introns, and coding regions within an organism remains challenging. We developed a quantitative sequencing-based method called RNA-Seq for mapping transcribed regions, in which complementary DNA fragments are subjected to high-throughput sequencing and mapped to the genome. We applied RNA-Seq to generate a high-resolution transcriptome map of the yeast genome and demonstrated that most (74.5\%) of the nonrepetitive sequence of the yeast genome is transcribed. We confirmed many known and predicted introns and demonstrated that others are not actively used. Alternative initiation codons and upstream open reading frames also were identified for many yeast genes. We also found unexpected 3'-end heterogeneity and the presence of many overlapping genes. These results indicate that the yeast transcriptome is more complex than previously appreciated.}
       \field{issn}{0036-8075}
       \field{journaltitle}{Science}
       \field{number}{5881}
@@ -12403,9 +13024,6 @@
       \range{pages}{6}
       \verb{doi}
       \verb 10.1126/science.1158441
-      \endverb
-      \verb{eprint}
-      \verb http://science.sciencemag.org/content/320/5881/1344.full.pdf
       \endverb
       \verb{url}
       \verb http://science.sciencemag.org/content/320/5881/1344
@@ -12571,7 +13189,6 @@
       \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The establishment of DNA methylation patterns requires de novo methylation that occurs predominantly during early development and gametogenesis in mice. Here we demonstrate that two recently identified DNA methyltransferases, Dnmt3a and Dnmt3b, are essential for de novo methylation and for mouse development. Inactivation of both genes by gene targeting blocks de novo methylation in ES cells and early embryos, but it has no effect on maintenance of imprinted methylation patterns. Dnmt3a and Dnmt3b also exhibit nonoverlapping functions in development, with Dnmt3b specifically required for methylation of centromeric minor satellite repeats. Mutations of human DNMT3B are found in ICF syndrome, a developmental defect characterized by hypomethylation of pericentromeric repeats. Our results indicate that both Dnmt3a and Dnmt3b function as de novo methyltransferases that play important roles in normal development and disease.}
       \field{issn}{0092-8674}
       \field{journaltitle}{Cell}
       \field{number}{3}
@@ -12585,6 +13202,47 @@
       \endverb
       \verb{url}
       \verb http://www.sciencedirect.com/science/article/pii/S0092867400816566
+      \endverb
+    \endentry
+    \entry{Okuta2017}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=149bf68f0e1eb3d040c6603fd5c995fa}{%
+           family={Okuta},
+           family_i={O\bibinitperiod},
+           given={Ryosuke},
+           given_i={R\bibinitperiod}}}%
+        {{hash=993fa143252b72cf055f9ae6eb58bfb1}{%
+           family={Unno},
+           family_i={U\bibinitperiod},
+           given={Yuya},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=0fbed5375257a37140c6fdd8ba08aec7}{%
+           family={Nishino},
+           family_i={N\bibinitperiod},
+           given={Daisuke},
+           given_i={D\bibinitperiod}}}%
+        {{hash=fffd3afc634974630f83f8b19b02a14e}{%
+           family={Hido},
+           family_i={H\bibinitperiod},
+           given={Shohei},
+           given_i={S\bibinitperiod}}}%
+        {{hash=151c25bf78c5fb89bc7232f47b8f1714}{%
+           family={Loomis},
+           family_i={L\bibinitperiod},
+           given={Crissman},
+           given_i={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{167b5fa2325ae984ee3177e74f7d544c}
+      \strng{fullhash}{93ea419079ebf27e4b2eab52fa90d1f8}
+      \field{sortinit}{O}
+      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of Workshop on Machine Learning Systems (LearningSys) in The Thirty-first Annual Conference on Neural Information Processing Systems (NIPS)}
+      \field{title}{CuPy: A NumPy-Compatible Library for NVIDIA GPU Calculations}
+      \field{year}{2017}
+      \verb{url}
+      \verb http://learningsys.org/nips17/assets/papers/paper_16.pdf
       \endverb
     \endentry
     \entry{Papalexi2017}{article}{}
@@ -12611,6 +13269,32 @@
       \field{title}{Single-cell RNA sequencing to explore immune cell heterogeneity}
       \field{volume}{18}
       \field{year}{2017}
+    \endentry
+    \entry{Papp2013}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8bcfafd3096cfd5ce9104e593f3254c3}{%
+           family={Papp},
+           family_i={P\bibinitperiod},
+           given={Bernadett},
+           given_i={B\bibinitperiod}}}%
+        {{hash=5745a4223a49af7229b13e4c922ad628}{%
+           family={Plath},
+           family_i={P\bibinitperiod},
+           given={Kathrin},
+           given_i={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ec58b565e7d952e1d1376aafeaf9201}
+      \strng{fullhash}{9ec58b565e7d952e1d1376aafeaf9201}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cell}
+      \field{month}{2020/03/15}
+      \field{number}{6}
+      \field{title}{Epigenetics of Reprogramming to Induced Pluripotency}
+      \field{volume}{152}
+      \field{year}{2013}
     \endentry
     \entry{Papp2012}{article}{}
       \name{author}{2}{}{%
@@ -12645,9 +13329,6 @@
       \verb{doi}
       \verb 10.1038/emboj.2012.285
       \endverb
-      \verb{eprint}
-      \verb http://emboj.embopress.org/content/31/22/4255.full.pdf
-      \endverb
       \verb{url}
       \verb http://emboj.embopress.org/content/31/22/4255
       \endverb
@@ -12671,7 +13352,6 @@
       \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{DNA methylation is a biochemical process where a DNA base, usually cytosine, is enzymatically methylated at the 5-carbon position. An epigenetic modification associated with gene regulation, DNA methylation is of paramount importance regarding biological health and disease. Recently, the quest to unravel the Human Epigenome commenced, calling for a modernisation of previous DNA methylation profiling techniques. Here, we describe the major developments in the methodologies used over the past three decades to examine the elusive epigenome (or methylome). The earliest techniques were based on the separation of methylated and unmethylated cytosines via chromatography. The following years would see molecular techniques being employed to indirectly examine DNA methylation levels at both a genome-wide and locus-specific context, notably immunoprecipitation via anti-5methylcytosine and selective digestion with methylation-sensitive restriction endonucleases. With the advent of sodium bisulphite treatment of DNA, a deamination reaction that converts cytosine to uracil only when unmethylated, the epigenetic modification can be identified in the same manner as a DNA base-pair change. More recently, these three techniques have been applied to more technically advanced systems such as DNA microarrays and next generation sequencing platforms, bringing us closer to unveiling a complete human epigenetic profile. While the more recent methods are currently being employed, even newer sequencing platforms and methodologies are being developed to improve our detection of DNA methylation including 5-hydroxymethylcytosine. The next decade is likely to experience an explosion in the number of completed human methylomes or epigenomes; the challenge will be to work out their functional significance.}
       \field{issn}{1664-8021}
       \field{journaltitle}{Frontiers in Genetics}
       \field{title}{DNA Methylation: A Timeline of Methods and Applications}
@@ -12773,7 +13453,6 @@
       \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Single-cell sequencing can illuminate the genetic properties of brain cancers and reveal heterogeneity within a tumor. Patel et al. examined the genome sequence of single cells isolated from brain glioblastomas. The findings revealed shared chromosomal changes but also extensive transcription variation, including genes related to signaling, which represent potential therapeutic targets. The authors suggest that the variation in tumor cells reflects neural development and that such variation among cancer cells may prove to have clinical significance.Science, this issue p. 1396 Human cancers are complex ecosystems composed of cells with distinct phenotypes, genotypes, and epigenetic states, but current models do not adequately reflect tumor composition in patients. We used single-cell RNA sequencing (RNA-seq) to profile 430 cells from five primary glioblastomas, which we found to be inherently variable in their expression of diverse transcriptional programs related to oncogenic signaling, proliferation, complement/immune response, and hypoxia. We also observed a continuum of stemness-related expression states that enabled us to identify putative regulators of stemness in vivo. Finally, we show that established glioblastoma subtype classifiers are variably expressed across individual cells within a tumor and demonstrate the potential prognostic implications of such intratumoral heterogeneity. Thus, we reveal previously unappreciated heterogeneity in diverse regulatory programs central to glioblastoma biology, prognosis, and therapy.}
       \field{issn}{0036-8075}
       \field{journaltitle}{Science}
       \field{number}{6190}
@@ -12784,9 +13463,6 @@
       \range{pages}{6}
       \verb{doi}
       \verb 10.1126/science.1254257
-      \endverb
-      \verb{eprint}
-      \verb http://science.sciencemag.org/content/344/6190/1396.full.pdf
       \endverb
       \verb{url}
       \verb http://science.sciencemag.org/content/344/6190/1396
@@ -13029,6 +13705,98 @@
       \field{volume}{9}
       \field{year}{2014}
     \endentry
+    \entry{Pierce2018}{article}{}
+      \name{author}{15}{}{%
+        {{hash=a35573a64a66ec6996cb6515aa6191b9}{%
+           family={Pierce},
+           family_i={P\bibinitperiod},
+           given={Brandon\bibnamedelima L.},
+           given_i={B\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=b0aa46a705963608ab601b6e8451f755}{%
+           family={Tong},
+           family_i={T\bibinitperiod},
+           given={Lin},
+           given_i={L\bibinitperiod}}}%
+        {{hash=8698a1e8005f16ab0e4fd730305f7d0c}{%
+           family={Argos},
+           family_i={A\bibinitperiod},
+           given={Maria},
+           given_i={M\bibinitperiod}}}%
+        {{hash=9db6a7d69dd149b41088ab594499948f}{%
+           family={Demanelis},
+           family_i={D\bibinitperiod},
+           given={Kathryn},
+           given_i={K\bibinitperiod}}}%
+        {{hash=7d7cdf31a38bb16cdada1d83ab6de2aa}{%
+           family={Jasmine},
+           family_i={J\bibinitperiod},
+           given={Farzana},
+           given_i={F\bibinitperiod}}}%
+        {{hash=c00c639dd8c431aa6d4fb7607f344d19}{%
+           family={Rakibuz-Zaman},
+           family_i={R\bibinithyphendelim Z\bibinitperiod},
+           given={Muhammad},
+           given_i={M\bibinitperiod}}}%
+        {{hash=242e02da72075d20a5be5dcaf543121c}{%
+           family={Sarwar},
+           family_i={S\bibinitperiod},
+           given={Golam},
+           given_i={G\bibinitperiod}}}%
+        {{hash=e0d5b8e3d50ff2e99cfe61fc620ff99e}{%
+           family={Islam},
+           family_i={I\bibinitperiod},
+           given={Md.\bibnamedelimi Tariqul},
+           given_i={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=03496b6dcf416e0b3e9ac455138d2977}{%
+           family={Shahriar},
+           family_i={S\bibinitperiod},
+           given={Hasan},
+           given_i={H\bibinitperiod}}}%
+        {{hash=73129519945e021914663ea30e7ee821}{%
+           family={Islam},
+           family_i={I\bibinitperiod},
+           given={Tariqul},
+           given_i={T\bibinitperiod}}}%
+        {{hash=88a2fdb5d22f7e97abea0b55b3fbaf64}{%
+           family={Rahman},
+           family_i={R\bibinitperiod},
+           given={Mahfuzar},
+           given_i={M\bibinitperiod}}}%
+        {{hash=de72b4ddcb01ca547e87db2b33b0a2e3}{%
+           family={Yunus},
+           family_i={Y\bibinitperiod},
+           given={Md.},
+           given_i={M\bibinitperiod}}}%
+        {{hash=a6dab8d3e44c6d2e492931be5ff96d3d}{%
+           family={Kibriya},
+           family_i={K\bibinitperiod},
+           given={Muhammad\bibnamedelima G.},
+           given_i={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=9b34cc31ba9ed2a662d59fbdbd9f8f84}{%
+           family={Chen},
+           family_i={C\bibinitperiod},
+           given={Lin\bibnamedelima S.},
+           given_i={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=7dc69dddcda5122adf95c7edbdecc99f}{%
+           family={Ahsan},
+           family_i={A\bibinitperiod},
+           given={Habibul},
+           given_i={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d9523f3bec0d20c6a0f95754c90d158}
+      \strng{fullhash}{bc501ba4c4d9fd4f3f38420ece93fe8c}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Communications}
+      \field{number}{1}
+      \field{title}{Co-occurring expression and methylation QTLs allow detection of common causal variants and shared biological mechanisms}
+      \field{volume}{9}
+      \field{year}{2018}
+      \field{pages}{804}
+      \range{pages}{1}
+    \endentry
     \entry{Pijuan-Sala2019}{article}{}
       \name{author}{16}{}{%
         {{hash=372979ddf76675e51ab3073e5d4f23b0}{%
@@ -13218,10 +13986,8 @@
       \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Gaining insights into the regulatory mechanisms that underlie the transcriptional variation observed between individual cells necessitates the development of methods that measure chromatin organization in single cells. Here I adapted \textit{N}ucleosome \textit{O}ccupancy and \textit{Me}thylome-sequencing (NOMe-seq) to measure chromatin accessibility and endogenous DNA methylation in single cells (scNOMe-seq). scNOMe-seq recovered characteristic accessibility and DNA methylation patterns at DNase hypersensitive sites (DHSs). An advantage of scNOMe-seq is that sequencing reads are sampled independently of the accessibility measurement. scNOMe-seq therefore controlled for fragment loss, which enabled direct estimation of the fraction of accessible DHSs within individual cells. In addition, scNOMe-seq provided high resolution of chromatin accessibility within individual loci which was exploited to detect footprints of CTCF binding events and to estimate the average nucleosome phasing distances in single cells. scNOMe-seq is therefore well-suited to characterize the chromatin organization of single cells in heterogeneous cellular mixtures.}
       \field{issn}{2050-084X}
       \field{journaltitle}{eLife}
-      \field{month}{06}
       \field{title}{Simultaneous measurement of chromatin accessibility, DNA methylation, and nucleosome phasing in single cells}
       \field{volume}{6}
       \field{year}{2017}
@@ -13233,7 +13999,6 @@
       \verb{url}
       \verb https://doi.org/10.7554/eLife.23203
       \endverb
-      \keyw{single cell genomics,chromatin organization,DNA methylation,NOMe-seq,single cell NOMe-seq}
     \endentry
     \entry{Pournara2007}{article}{}
       \name{author}{2}{}{%
@@ -13261,6 +14026,28 @@
       \field{year}{2007}
       \field{pages}{61}
       \range{pages}{1}
+    \endentry
+    \entry{Ning1999}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ea12a5aa5be72e296f6e28e632bf5b66}{%
+           family={Qian},
+           family_i={Q\bibinitperiod},
+           given={Ning},
+           given_i={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea12a5aa5be72e296f6e28e632bf5b66}
+      \strng{fullhash}{ea12a5aa5be72e296f6e28e632bf5b66}
+      \field{sortinit}{Q}
+      \field{sortinithash}{15867262911a166ca2270ec58a0e3fe9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural Networks}
+      \field{number}{1}
+      \field{title}{On the momentum term in gradient descent learning algorithms}
+      \field{volume}{12}
+      \field{year}{1999}
+      \field{pages}{145\bibrangedash 151}
+      \range{pages}{7}
     \endentry
     \entry{Queiros2015}{article}{}
       \name{author}{33}{}{%
@@ -13439,9 +14226,7 @@
       \field{sortinithash}{15867262911a166ca2270ec58a0e3fe9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Prospective identification of patients with chronic lymphocytic leukemia (CLL) destined to progress would greatly facilitate their clinical management. Recently, whole-genome DNA methylation analyses identified three clinicobiologic CLL subgroups with an epigenetic signature related to different normal B-cell counterparts. Here, we developed a clinically applicable method to identify these subgroups and to study their clinical relevance. Using a support vector machine approach, we built a prediction model using five epigenetic biomarkers that was able to classify CLL patients accurately into the three subgroups, namely naive B-cell-like, intermediate and memory B-cell-like CLL. DNA methylation was quantified by highly reproducible bisulfite pyrosequencing assays in two independent CLL series. In the initial series (n=211), the three subgroups showed differential levels of IGHV (immunoglobulin heavy-chain locus) mutation (P<0.001) and VH usage (P<0.03), as well as different clinical features and outcome in terms of time to first treatment (TTT) and overall survival (P<0.001). A multivariate Cox model showed that epigenetic classification was the strongest predictor of TTT (P<0.001) along with Binet stage (P<0.001). These findings were corroborated in a validation series (n=97). In this study, we developed a simple and robust method using epigenetic biomarkers to categorize CLLs into three subgroups with different clinicobiologic features and outcome.}
       \field{journaltitle}{Leukemia}
-      \field{month}{03}
       \field{number}{3}
       \field{title}{A B-cell epigenetic signature defines three biologic subgroups of chronic lymphocytic leukemia with clinical impact}
       \field{volume}{29}
@@ -13607,7 +14392,6 @@
       \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Current evidence indicates that methylation of cytosine in mammalian DNA is restricted to both strands of the symmetrical sequence CpG, although there have been sporadic reports that sequences other than CpG may also be methylated. We have used a dual-labeling nearest neighbor technique and bisulphite genomic sequencing methods to investigate the nearest neighbors of 5-methylcytosine residues in mammalian DNA. We find that embryonic stem cells, but not somatic tissues, have significant cytosine-5 methylation at CpA and, to a lesser extent, at CpT. As the expression of the de novo methyltransferase Dnmt3a correlates well with the presence of non-CpG methylation, we asked whether Dnmt3a might be responsible for this modification. Analysis of genomic methylation in transgenic Drosophila expressing Dnmt3a reveals that Dnmt3a is predominantly a CpG methylase but also is able to induce methylation at CpA and at CpT. 5mC,5-methylcytosine;ES cells,embryonic stem cells;Dnmt,DNA methyltransferase;NNA,nearest neighbor analysis}
       \field{issn}{0027-8424}
       \field{journaltitle}{Proceedings of the National Academy of Sciences}
       \field{number}{10}
@@ -13618,9 +14402,6 @@
       \range{pages}{6}
       \verb{doi}
       \verb 10.1073/pnas.97.10.5237
-      \endverb
-      \verb{eprint}
-      \verb https://www.pnas.org/content/97/10/5237.full.pdf
       \endverb
       \verb{url}
       \verb https://www.pnas.org/content/97/10/5237
@@ -13729,7 +14510,6 @@
       \field{eprintclass}{stat.ML}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv e-prints}
-      \field{month}{12}
       \field{title}{{Black Box Variational Inference}}
       \field{year}{2013}
       \field{pages}{arXiv:1401.0118}
@@ -13737,7 +14517,6 @@
       \verb{eprint}
       \verb 1401.0118
       \endverb
-      \keyw{Statistics - Machine Learning,Computer Science - Machine Learning,Statistics - Computation,Statistics - Methodology}
     \endentry
     \entry{Ranganath2013}{inproceedings}{}
       \name{author}{4}{}{%
@@ -13839,9 +14618,7 @@
       \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Bayesian sparse factor analysis has many applications; for example, it has been applied to the problem of inferring a sparse regulatory network from gene expression data. We describe a number of inference algorithms for Bayesian sparse factor analysis using a slab and spike mixture prior. These include well-established Markov chain Monte Carlo (MCMC) and variational Bayes (VB) algorithms as well as a novel hybrid of VB and Expectation Propagation (EP). For the case of a single latent factor we derive a theory for learning performance using the replica method. We compare the MCMC and VB/EP algorithm results with simulated data to the theoretical prediction. The results for MCMC agree closely with the theory as expected. Results for VB/EP are slightly sub-optimal but show that the new algorithm is effective for sparse inference. In large-scale problems MCMC is infeasible due to computational limitations and the VB/EP algorithm then provides a very useful computationally efficient alternative.}
       \field{journaltitle}{Journal of Physics: Conference Series}
-      \field{month}{12}
       \field{title}{Inference algorithms and learning theory for Bayesian sparse factor analysis}
       \field{volume}{197}
       \field{year}{2009}
@@ -13854,7 +14631,7 @@
       \verb https://doi.org/10.1088%2F1742-6596%2F197%2F1%2F012002
       \endverb
     \endentry
-    \entry{Regev2018}{article}{}
+    \entry{Aviv2017}{article}{}
       \name{author}{62}{}{%
         {{hash=f08f6961a7cb7d9674fb102073c60ca3}{%
            family={Regev},
@@ -13946,8 +14723,8 @@
            family_i={F\bibinitperiod},
            given={Lars},
            given_i={L\bibinitperiod}}}%
-        {{hash=01f9d532a965e704febc2234c9695bae}{%
-           family={Göttgens},
+        {{hash=45448ac6306f896240c3189a265f5b5f}{%
+           family={Gottgens},
            family_i={G\bibinitperiod},
            given={Berthold},
            given_i={B\bibinitperiod}}}%
@@ -14169,26 +14946,13 @@
            given={Human\bibnamedelimb Cell\bibnamedelimb Atlas\bibnamedelima Meeting},
            given_i={H\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
-      \name{editor}{1}{}{%
-        {{hash=8d8fd16748feec25e149673a7bf197b3}{%
-           family={Gingeras},
-           family_i={G\bibinitperiod},
-           given={Thomas\bibnamedelima R},
-           given_i={T\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {eLife Sciences Publications, Ltd}%
-      }
       \strng{namehash}{6302df2a525be52dfecf6d0b0e221bef}
-      \strng{fullhash}{76c4aadd560bd80ea22696938cebdb0e}
+      \strng{fullhash}{49291f61327f2dacb2ec60daa8aa1c17}
       \field{sortinit}{R}
       \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The recent advent of methods for high-throughput single-cell molecular profiling has catalyzed a growing sense in the scientific community that the time is ripe to complete the 150-year-old effort to identify all cell types in the human body. The Human Cell Atlas Project is an international collaborative effort that aims to define all human cell types in terms of distinctive molecular profiles (such as gene expression profiles) and to connect this information with classical cellular descriptions (such as location and morphology). An open comprehensive reference map of the molecular state of cells in healthy human tissues would propel the systematic study of physiological states, developmental trajectories, regulatory circuitry and interactions of cells, and also provide a framework for understanding cellular dysregulation in human disease. Here we describe the idea, its potential utility, early proofs-of-concept, and some design considerations for the Human Cell Atlas, including a commitment to open data, code, and community.}
-      \field{issn}{2050-084X}
       \field{journaltitle}{eLife}
-      \field{month}{12}
       \field{title}{Science Forum: The Human Cell Atlas}
       \field{volume}{6}
       \field{year}{2017}
@@ -14200,7 +14964,6 @@
       \verb{url}
       \verb https://doi.org/10.7554/eLife.27041
       \endverb
-      \keyw{single-cell genomics,lineage,cell atlas,science forum}
     \endentry
     \entry{Remes2015}{article}{}
       \name{author}{3}{}{%
@@ -14230,6 +14993,104 @@
       \field{title}{Classification of weak multi-view signals by sharing factors in a mixture of Bayesian group factor analyzers}
       \field{year}{2015}
     \endentry
+    \entry{Replogle2020}{article}{}
+      \name{author}{17}{}{%
+        {{hash=b189d64c6d4cd48bf823e9bf25580bc8}{%
+           family={Replogle},
+           family_i={R\bibinitperiod},
+           given={Joseph\bibnamedelima M.},
+           given_i={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=b3c2e25697dc878d03b60b232e366f28}{%
+           family={Norman},
+           family_i={N\bibinitperiod},
+           given={Thomas\bibnamedelima M.},
+           given_i={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=33abe6e6795366d1e016b4eb0086859b}{%
+           family={Xu},
+           family_i={X\bibinitperiod},
+           given={Albert},
+           given_i={A\bibinitperiod}}}%
+        {{hash=7214afd3e368b1b3823a80ed1d995c41}{%
+           family={Hussmann},
+           family_i={H\bibinitperiod},
+           given={Jeffrey\bibnamedelima A.},
+           given_i={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=42990f77d0dad790e7a9f0d77aa2d3b0}{%
+           family={Chen},
+           family_i={C\bibinitperiod},
+           given={Jin},
+           given_i={J\bibinitperiod}}}%
+        {{hash=95c2efebaea2d467fd0e7e362732397a}{%
+           family={Cogan},
+           family_i={C\bibinitperiod},
+           given={J.\bibnamedelimi Zachery},
+           given_i={J\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=9201cdf33d9a814815bbadf7992d1c24}{%
+           family={Meer},
+           family_i={M\bibinitperiod},
+           given={Elliott\bibnamedelima J.},
+           given_i={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=4267e4d5520ae85ad49afaef7fc24e43}{%
+           family={Terry},
+           family_i={T\bibinitperiod},
+           given={Jessica\bibnamedelima M.},
+           given_i={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=347eb62d691e03d3b1afef8f23845919}{%
+           family={Riordan},
+           family_i={R\bibinitperiod},
+           given={Daniel\bibnamedelima P.},
+           given_i={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=bba8edc4dfbbc8fe73390e4b562c9cc3}{%
+           family={Srinivas},
+           family_i={S\bibinitperiod},
+           given={Niranjan},
+           given_i={N\bibinitperiod}}}%
+        {{hash=069553e8a1234417956afdf67605ff33}{%
+           family={Fiddes},
+           family_i={F\bibinitperiod},
+           given={Ian\bibnamedelima T.},
+           given_i={I\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=98ce977b39fd6db4e6f8dc5962b9a6e0}{%
+           family={Arthur},
+           family_i={A\bibinitperiod},
+           given={Joseph\bibnamedelima G.},
+           given_i={J\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=91d8ea0eb93f03e13dbe41170cbf9d41}{%
+           family={Alvarado},
+           family_i={A\bibinitperiod},
+           given={Luigi\bibnamedelima J.},
+           given_i={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=e01795964979d75c0121c161d5d54a43}{%
+           family={Pfeiffer},
+           family_i={P\bibinitperiod},
+           given={Katherine\bibnamedelima A.},
+           given_i={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=e5dd9dd21f40752361c4ea3300613a01}{%
+           family={Mikkelsen},
+           family_i={M\bibinitperiod},
+           given={Tarjei\bibnamedelima S.},
+           given_i={T\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=bad4feb6886c9be5fad6425bd29bc01a}{%
+           family={Weissman},
+           family_i={W\bibinitperiod},
+           given={Jonathan\bibnamedelima S.},
+           given_i={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=709a0901bb2ae541b148ce12b84da8cd}{%
+           family={Adamson},
+           family_i={A\bibinitperiod},
+           given={Britt},
+           given_i={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{7195a93dc948e6d28fe767dc4382d649}
+      \strng{fullhash}{879b6b2b72270f5f0ad046c8e12320a3}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Biotechnology}
+      \field{title}{Combinatorial single-cell CRISPR screens by direct guide RNA capture and targeted sequencing}
+      \field{year}{2020}
+    \endentry
     \entry{Ringner2008}{article}{}
       \name{author}{1}{}{%
         {{hash=8cf474662ff6e1b54556f754c9d82e5d}{%
@@ -14247,9 +15108,7 @@
       \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Principal component analysis is often incorporated into genome-wide expression studies, but what is it and how can it be used to explore high-dimensional data?}
       \field{journaltitle}{Nat. Biotechnol.}
-      \field{month}{03}
       \field{title}{What is principal component analysis?}
       \field{volume}{26}
       \field{year}{2008}
@@ -14626,10 +15485,8 @@
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{{Motivation: Quantitative estimation of the regulatory relationship between transcription factors and genes is a fundamental stepping stone when trying to develop models of cellular processes. Recent experimental high-throughput techniques, such as Chromatin Immunoprecipitation (ChIP) provide important information about the architecture of the regulatory networks in the cell. However, it is very difficult to measure the concentration levels of transcription factor proteins and determine their regulatory effect on gene transcription. It is therefore an important computational challenge to infer these quantities using gene expression data and network architecture data.Results: We develop a probabilistic state space model that allows genome-wide inference of both transcription factor protein concentrations and their effect on the transcription rates of each target gene from microarray data. We use variational inference techniques to learn the model parameters and perform posterior inference of protein concentrations and regulatory strengths. The probabilistic nature of the model also means that we can associate credibility intervals to our estimates, as well as providing a tool to detect which binding events lead to significant regulation. We demonstrate our model on artificial data and on two yeast datasets in which the network structure has previously been obtained using ChIP data. Predictions from our model are consistent with the underlying biology and offer novel quantitative insights into the regulatory structure of the yeast cell.Availability: MATLAB code is available from Contact:guido@dcs.shef.ac.ukSupplementary information: Supplementary Data are available at Bioinformatics online}}
       \field{issn}{1367-4803}
       \field{journaltitle}{Bioinformatics}
-      \field{month}{09}
       \field{number}{22}
       \field{title}{{Probabilistic inference of transcription factor concentrations and gene-specific regulatory activities}}
       \field{volume}{22}
@@ -14773,7 +15630,6 @@
       \field{eid}{cs/9603102}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv e-prints}
-      \field{month}{02}
       \field{title}{{Mean Field Theory for Sigmoid Belief Networks}}
       \field{year}{1996}
       \field{pages}{cs/9603102}
@@ -14781,7 +15637,6 @@
       \verb{eprint}
       \verb cs/9603102
       \endverb
-      \keyw{Computer Science - Artificial Intelligence}
     \endentry
     \entry{Schaum2018}{article}{}
       \name{author}{182}{}{%
@@ -16113,9 +16968,7 @@
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Human influenza A viruses (IAVs) cause global pandemics and epidemics. These viruses evolve rapidly, making current treatment options ineffective. To identify novel modulators of IAV-host interactions, we re-analyzed our recent transcriptomics, metabolomics, proteomics, phosphoproteomics, and genomics/virtual ligand screening data. We identified 713 potential modulators targeting 199 cellular and two viral proteins. Anti-influenza activity for 48 of them has been reported previously, whereas the antiviral efficacy of the 665 remains unknown. Studying anti-influenza efficacy and immuno/neuro-modulating properties of these compounds and their combinations as well as potential viral and host resistance to them may lead to the discovery of novel modulators of IAV-host interactions, which might be more effective than the currently available anti-influenza therapeutics.}
       \field{journaltitle}{Viruses}
-      \field{month}{09}
       \field{number}{10}
       \field{title}{{Multi-Omics} Studies towards Novel Modulators of Influenza A {Virus-Host} Interaction}
       \field{volume}{8}
@@ -16171,6 +17024,57 @@
       \field{labeltitlesource}{title}
       \field{title}{Introduction to stochastic search and optimization: estimation, simulation, and control}
       \field{year}{2003}
+    \endentry
+    \entry{Specht2018}{article}{}
+      \name{author}{7}{}{%
+        {{hash=74307d1619ad49b47a49854b4db67144}{%
+           family={Specht},
+           family_i={S\bibinitperiod},
+           given={Harrison},
+           given_i={H\bibinitperiod}}}%
+        {{hash=b4ff387dc6a78f39f785c34e6926c00e}{%
+           family={Harmange},
+           family_i={H\bibinitperiod},
+           given={Guillaume},
+           given_i={G\bibinitperiod}}}%
+        {{hash=eac97747a8ea208112ce60cb231bee2e}{%
+           family={Perlman},
+           family_i={P\bibinitperiod},
+           given={David\bibnamedelima H.},
+           given_i={D\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=3a2f9fa13ef2209cb9d9df051a37ef43}{%
+           family={Emmott},
+           family_i={E\bibinitperiod},
+           given={Edward},
+           given_i={E\bibinitperiod}}}%
+        {{hash=5548d33f28277b5999ad3491a4db09e2}{%
+           family={Niziolek},
+           family_i={N\bibinitperiod},
+           given={Zachary},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=6eb96c847789e318a02e41f347f08515}{%
+           family={Budnik},
+           family_i={B\bibinitperiod},
+           given={Bogdan},
+           given_i={B\bibinitperiod}}}%
+        {{hash=6e20509d3bc29591ec6c3879ad484088}{%
+           family={Slavov},
+           family_i={S\bibinitperiod},
+           given={Nikolai},
+           given_i={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{e7006ffcb544439a7e920d0762347add}
+      \strng{fullhash}{a0d9eb8b529d83b064504a5fade67291}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{bioRxiv}
+      \field{month}{01}
+      \field{title}{Automated sample preparation for high-throughput single-cell proteomics}
+      \field{year}{2018}
+      \field{pages}{399774}
+      \range{pages}{1}
     \endentry
     \entry{Spektor2018}{article}{}
       \name{author}{4}{}{%
@@ -16277,9 +17181,7 @@
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{We present PEER (probabilistic estimation of expression residuals), a software package implementing statistical models that improve the sensitivity and interpretability of genetic associations in population-scale expression data. This approach builds on factor analysis methods that infer broad variance components in the measurements. PEER takes as input transcript profiles and covariates from a set of individuals, and then outputs hidden factors that explain much of the expression variability. Optionally, these factors can be interpreted as pathway or transcription factor activations by providing prior information about which genes are involved in the pathway or targeted by the factor. The inferred factors are used in genetic association analyses. First, they are treated as additional covariates, and are included in the model to increase detection power for mapping expression traits. Second, they are analyzed as phenotypes themselves to understand the causes of global expression variability. PEER extends previous related surrogate variable models and can be implemented within hours on a desktop computer.}
       \field{journaltitle}{Nat. Protoc.}
-      \field{month}{02}
       \field{number}{3}
       \field{title}{Using probabilistic estimation of expression residuals ({PEER}) to obtain increased power and interpretability of gene expression analyses}
       \field{volume}{7}
@@ -16382,7 +17284,6 @@
       \field{eprintclass}{stat.ME}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv e-prints}
-      \field{month}{04}
       \field{title}{{The Epic Story of Maximum Likelihood}}
       \field{year}{2008}
       \field{pages}{arXiv:0804.2996}
@@ -16390,7 +17291,6 @@
       \verb{eprint}
       \verb 0804.2996
       \endverb
-      \keyw{Statistics - Methodology}
     \endentry
     \entry{Stoeckius2017}{article}{}
       \name{author}{8}{}{%
@@ -16494,6 +17394,72 @@
       \field{journaltitle}{Nature Reviews Genetics}
       \field{title}{Integrative single-cell analysis}
       \field{year}{2019}
+    \endentry
+    \entry{Sul2015}{article}{}
+      \name{author}{9}{}{%
+        {{hash=f9b8d6b9bc3debe6af83afea415b69d2}{%
+           family={Sul},
+           family_i={S\bibinitperiod},
+           given={Jae\bibnamedelima Hoon},
+           given_i={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=4a43e7b8d2d7042e4e4963cea79faf05}{%
+           family={Raj},
+           family_i={R\bibinitperiod},
+           given={Towfique},
+           given_i={T\bibinitperiod}}}%
+        {{hash=5010747e140fbca95f29903d6c04179d}{%
+           prefix={de},
+           prefix_i={d\bibinitperiod},
+           family={Jong},
+           family_i={J\bibinitperiod},
+           given={Simone},
+           given_i={S\bibinitperiod}}}%
+        {{hash=8eec5b25f5d948f436610c6a0f5476a2}{%
+           prefix={de},
+           prefix_i={d\bibinitperiod},
+           family={Bakker},
+           family_i={B\bibinitperiod},
+           given={Paul\bibnamedelimb I.\bibnamedelimi W.},
+           given_i={P\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=2c58ef443978593033b939fed7b026a0}{%
+           family={Raychaudhuri},
+           family_i={R\bibinitperiod},
+           given={Soumya},
+           given_i={S\bibinitperiod}}}%
+        {{hash=10636e7b23f7e4baeec865bdade620fa}{%
+           family={Ophoff},
+           family_i={O\bibinitperiod},
+           given={Roel\bibnamedelima A.},
+           given_i={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=33d00bb3d2c29d6aeffbc5731660448a}{%
+           family={Stranger},
+           family_i={S\bibinitperiod},
+           given={Barbara\bibnamedelima E.},
+           given_i={B\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=8b11f474a5fb2f9b7bd22f43ac93759f}{%
+           family={Eskin},
+           family_i={E\bibinitperiod},
+           given={Eleazar},
+           given_i={E\bibinitperiod}}}%
+        {{hash=532ad090fd188cbda7d593dd48c54648}{%
+           family={Han},
+           family_i={H\bibinitperiod},
+           given={Buhm},
+           given_i={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc7e7c254783084b7b34b0e8d79732bf}
+      \strng{fullhash}{c0e4b8e22497682f1c99f7130829a5b6}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The American Journal of Human Genetics}
+      \field{number}{6}
+      \field{title}{Accurate and Fast Multiple-Testing Correction in eQTL Studies}
+      \field{volume}{96}
+      \field{year}{2015}
+      \field{pages}{857\bibrangedash 868}
+      \range{pages}{12}
     \endentry
     \entry{Svensson2018}{article}{}
       \name{author}{3}{}{%
@@ -16626,7 +17592,6 @@
       \verb{url}
       \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/jemt.1070260405
       \endverb
-      \keyw{Ectoderm,Endoderm,Mesoderm,Egg cylinder,Mouse embryo}
     \endentry
     \entry{Tam1997}{article}{}
       \name{author}{2}{}{%
@@ -16647,7 +17612,6 @@
       \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The process of gastrulation is a pivotal step in the formation of the vertebrate body plan. The primary function of gastrulation is the correct placement of precursor tissues for subsequent morphogenesis. There is now mounting evidence that the body plan is established through inductive interactions between germ layer tissues and by the global patterning activity emanating from embryonic organizers. An increasing number of mouse mutants have been described that have gastrulation defects, providing important insights into the molecular mechanisms that regulate this complex process. In this review, we explore the mouse embryo before and during gastrulation, highlighting its similarities with other vertebrate embryos and its unique characteristics.}
       \field{issn}{0925-4773}
       \field{journaltitle}{Mechanisms of Development}
       \field{number}{1}
@@ -16662,7 +17626,6 @@
       \verb{url}
       \verb http://www.sciencedirect.com/science/article/pii/S0925477397001238
       \endverb
-      \keyw{Mouse,Gastrulation,Mammalian body plan}
     \endentry
     \entry{Tee2014}{article}{}
       \name{author}{2}{}{%
@@ -16686,7 +17649,6 @@
       \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{In pluripotent stem cells, the interplay between signaling cues, epigenetic regulators and transcription factors orchestrates developmental potency. Flexibility in gene expression control is imparted by molecular changes to the nucleosomes, the building block of chromatin. Here, we review the current understanding of the role of chromatin as a plastic and integrative platform to direct gene expression changes in pluripotent stem cells, giving rise to distinct pluripotent states. We will further explore the concept of epigenetic asymmetry, focusing primarily on histone stoichiometry and their associated modifications, that is apparent at both the nucleosome and chromosome-wide levels, and discuss the emerging importance of these asymmetric chromatin configurations in diversifying epigenetic states and their implications for cell fate control.}
       \field{issn}{0950-1991}
       \field{journaltitle}{Development}
       \field{number}{12}
@@ -16704,6 +17666,38 @@
       \verb{url}
       \verb https://dev.biologists.org/content/141/12/2376
       \endverb
+    \endentry
+    \entry{Thiele2019}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ee92d3f0bc15cc86a7b53a6b625793e9}{%
+           family={Thiele},
+           family_i={T\bibinitperiod},
+           given={Christoph},
+           given_i={C\bibinitperiod}}}%
+        {{hash=b5ac951c7fe5a97a1c3dd1db79eefb9b}{%
+           family={Wunderling},
+           family_i={W\bibinitperiod},
+           given={Klaus},
+           given_i={K\bibinitperiod}}}%
+        {{hash=934a354df7b7ddf9778612900e985e54}{%
+           family={Leyendecker},
+           family_i={L\bibinitperiod},
+           given={Philipp},
+           given_i={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c892f1e908c13c8a938b85c23d160186}
+      \strng{fullhash}{c892f1e908c13c8a938b85c23d160186}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Methods}
+      \field{number}{11}
+      \field{title}{Multiplexed and single cell tracing of lipid metabolism}
+      \field{volume}{16}
+      \field{year}{2019}
+      \field{pages}{1123\bibrangedash 1130}
+      \range{pages}{8}
     \endentry
     \entry{Thurman2012}{article}{}
       \name{author}{62}{}{%
@@ -17189,6 +18183,43 @@
       \verb https://doi.org/10.1007/7651_2015_207
       \endverb
     \endentry
+    \entry{Townes2019}{article}{}
+      \name{author}{4}{}{%
+        {{hash=0ce42dabc9bf03432ee77c38684ee3c5}{%
+           family={Townes},
+           family_i={T\bibinitperiod},
+           given={F.\bibnamedelimi William},
+           given_i={F\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=f5f1e5f26985ac667019e2b9791df02d}{%
+           family={Hicks},
+           family_i={H\bibinitperiod},
+           given={Stephanie\bibnamedelima C.},
+           given_i={S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=a20767017656a1357c228a73a82802fd}{%
+           family={Aryee},
+           family_i={A\bibinitperiod},
+           given={Martin\bibnamedelima J.},
+           given_i={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0714f845c6ff03d15d51f4a7d0fd7080}{%
+           family={Irizarry},
+           family_i={I\bibinitperiod},
+           given={Rafael\bibnamedelima A.},
+           given_i={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{048eb74a465b28abca51cb3d3fdde787}
+      \strng{fullhash}{a82bb23210e811e4cfca21839d138f4d}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Genome Biology}
+      \field{number}{1}
+      \field{title}{Feature selection and dimension reduction for single-cell RNA-Seq based on a multinomial model}
+      \field{volume}{20}
+      \field{year}{2019}
+      \field{pages}{295}
+      \range{pages}{1}
+    \endentry
     \entry{Trapnell2014}{article}{}
       \name{author}{10}{}{%
         {{hash=5621efe15ca5598a9e861fc0a93a06fa}{%
@@ -17306,9 +18337,7 @@
       \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Motivation: Gene expression microarray experiments can generate data sets with multiple missing expression values. Unfortunately, many algorithms for gene expression analysis require a complete matrix of gene array values as input. For example, methods such as hierarchical clustering and K-means clustering are not robust to missing data, and may lose effectiveness even with a few missing values. Methods for imputing missing data are needed, therefore, to minimize the effect of incomplete data sets on analyses, and to increase the range of data sets to which these algorithms can be applied. In this report, we investigate automated methods for estimating missing data.Results: We present a comparative study of several methods for the estimation of missing values in gene microarray data. We implemented and evaluated three methods: a Singular Value Decomposition (SVD) based method (SVDimpute), weighted K-nearest neighbors (KNNimpute), and row average. We evaluated the methods using a variety of parameter settings and over different real data sets, and assessed the robustness of the imputation methods to the amount of missing data over the range of 1--20\% missing values. We show that KNNimpute appears to provide a more robust and sensitive method for missing value estimation than SVDimpute, and both SVDimpute and KNNimpute surpass the commonly used row average method (as well as filling missing values with zeros). We report results of the comparative experiments and provide recommendations and tools for accurate estimation of missing microarray data under a variety of conditions.Availability: The software is available at http://smi-web.stanford.edu/projects/helix/pubs/impute/Contact: russ.altman@stanford.eduTo whom correspondence should be addressed.}
       \field{journaltitle}{Bioinformatics}
-      \field{month}{06}
       \field{number}{6}
       \field{title}{Missing value estimation methods for {DNA} microarrays}
       \field{volume}{17}
@@ -17413,7 +18442,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Genes to Cells}
-      \field{month}{2020/03/15}
       \field{number}{7}
       \field{title}{Maintenance of self-renewal ability of mouse embryonic stem cells in the absence of DNA methyltransferases Dnmt1, Dnmt3a and Dnmt3b}
       \field{volume}{11}
@@ -17520,7 +18548,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Leukemia}
-      \field{month}{11}
       \field{number}{11}
       \field{title}{Gene expression profiling of chronic lymphocytic leukemia can discriminate cases with stable disease and mutated Ig genes from those with progressive disease and unmutated Ig genes}
       \field{volume}{19}
@@ -17645,6 +18672,61 @@
       \field{pages}{1269\bibrangedash 1277}
       \range{pages}{9}
     \endentry
+    \entry{Wang2014}{article}{}
+      \name{author}{8}{}{%
+        {{hash=2938deb5048323c6e1bfdd80975d5b28}{%
+           family={Wang},
+           family_i={W\bibinitperiod},
+           given={Bo},
+           given_i={B\bibinitperiod}}}%
+        {{hash=e6904fe88e379961172ddf63aaee4a5f}{%
+           family={Mezlini},
+           family_i={M\bibinitperiod},
+           given={Aziz\bibnamedelima M},
+           given_i={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=16d3c963e24641a109ceb2939b5d9797}{%
+           family={Demir},
+           family_i={D\bibinitperiod},
+           given={Feyyaz},
+           given_i={F\bibinitperiod}}}%
+        {{hash=5513318377ad7ac6c1fb150436d72506}{%
+           family={Fiume},
+           family_i={F\bibinitperiod},
+           given={Marc},
+           given_i={M\bibinitperiod}}}%
+        {{hash=4744828ab0e3408b2e6fc8320f7bda86}{%
+           family={Tu},
+           family_i={T\bibinitperiod},
+           given={Zhuowen},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=ada22f5246a21ee65a649cc83eea8ff1}{%
+           family={Brudno},
+           family_i={B\bibinitperiod},
+           given={Michael},
+           given_i={M\bibinitperiod}}}%
+        {{hash=219737c77284dde2d13b3a26fe4020c6}{%
+           family={Haibe-Kains},
+           family_i={H\bibinithyphendelim K\bibinitperiod},
+           given={Benjamin},
+           given_i={B\bibinitperiod}}}%
+        {{hash=7d278c6f14d04f6909e4595a6d4453d1}{%
+           family={Goldenberg},
+           family_i={G\bibinitperiod},
+           given={Anna},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{40d1d4520370fa51951db29b3f1480f2}
+      \strng{fullhash}{dd639fb2dd139153197a478094db4859}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Methods}
+      \field{month}{01}
+      \field{title}{Similarity network fusion for aggregating data types on a genomic scale}
+      \field{volume}{11}
+      \field{year}{2014}
+    \endentry
     \entry{Wang2007}{article}{}
       \name{author}{1}{}{%
         {{hash=466ce84bc5093e2ec73b823c573ad026}{%
@@ -17709,6 +18791,99 @@
       \field{title}{Comparative analysis of commercially available single-cell RNA sequencing platforms for their performance in complex human tissues}
       \field{year}{2019}
       \field{pages}{541433}
+      \range{pages}{1}
+    \endentry
+    \entry{VanDerWijst2018}{article}{}
+      \name{author}{8}{}{%
+        {{hash=2dd41e4fee973d41d1be5df14204e309}{%
+           prefix={van\bibnamedelima der},
+           prefix_i={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+           family={Wijst},
+           family_i={W\bibinitperiod},
+           given={Monique\bibnamedelimb G.\bibnamedelimi P.},
+           given_i={M\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=8e01f9812a1cc4c1723f8b8cdc326c5b}{%
+           family={Brugge},
+           family_i={B\bibinitperiod},
+           given={Harm},
+           given_i={H\bibinitperiod}}}%
+        {{hash=6b8e2f2f1f18d0c0808adc8284004d9b}{%
+           prefix={de},
+           prefix_i={d\bibinitperiod},
+           family={Vries},
+           family_i={V\bibinitperiod},
+           given={Dylan\bibnamedelima H.},
+           given_i={D\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=fe3fd7a32c0dcfe29cf59f69d3179131}{%
+           family={Deelen},
+           family_i={D\bibinitperiod},
+           given={Patrick},
+           given_i={P\bibinitperiod}}}%
+        {{hash=51412bc39c998d05738df148b79df14d}{%
+           family={Swertz},
+           family_i={S\bibinitperiod},
+           given={Morris\bibnamedelima A.},
+           given_i={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=940ca1f1f12dca6767f77c75027b7c00}{%
+           family={Franke},
+           family_i={F\bibinitperiod},
+           given={Lude},
+           given_i={L\bibinitperiod}}}%
+        {{hash=40276eac7c7f3d089dccae993dbc544a}{%
+           family={Study},
+           family_i={S\bibinitperiod},
+           given={LifeLines\bibnamedelima Cohort},
+           given_i={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=931daf890a88be9f1b6ef12b60f03a8a}{%
+           family={Consortium},
+           family_i={C\bibinitperiod},
+           given={BIOS},
+           given_i={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e5dade05224c89d024eb35ed904b12c}
+      \strng{fullhash}{b77ed437038958b1a240bb57ded12af1}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Genetics}
+      \field{number}{4}
+      \field{title}{Single-cell RNA sequencing identifies celltype-specific cis-eQTLs and co-expression QTLs}
+      \field{volume}{50}
+      \field{year}{2018}
+      \field{pages}{493\bibrangedash 497}
+      \range{pages}{5}
+    \endentry
+    \entry{Wolf2018}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c4ef4eb30c544cbefbc529bfb89ece74}{%
+           family={Wolf},
+           family_i={W\bibinitperiod},
+           given={F.\bibnamedelimi Alexander},
+           given_i={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=3ab95ab1e962c518d4fb743628dff125}{%
+           family={Angerer},
+           family_i={A\bibinitperiod},
+           given={Philipp},
+           given_i={P\bibinitperiod}}}%
+        {{hash=16a14782f2af01180a671c4964425e15}{%
+           family={Theis},
+           family_i={T\bibinitperiod},
+           given={Fabian\bibnamedelima J.},
+           given_i={F\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e2514e8f04aa9ca13738938a478cef2}
+      \strng{fullhash}{9e2514e8f04aa9ca13738938a478cef2}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Genome Biology}
+      \field{number}{1}
+      \field{title}{SCANPY: large-scale single-cell gene expression data analysis}
+      \field{volume}{19}
+      \field{year}{2018}
+      \field{pages}{15}
       \range{pages}{1}
     \endentry
     \entry{Wu2016}{article}{}
@@ -17974,7 +19149,6 @@
       \field{eprintclass}{cs.LG}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv e-prints}
-      \field{month}{04}
       \field{title}{{A Survey on Multi-view Learning}}
       \field{year}{2013}
       \field{pages}{arXiv:1304.5634}
@@ -17982,7 +19156,6 @@
       \verb{eprint}
       \verb 1304.5634
       \endverb
-      \keyw{Computer Science - Machine Learning}
     \endentry
     \entry{Yong2016}{article}{}
       \name{author}{3}{}{%
@@ -18010,7 +19183,6 @@
       \field{labeltitlesource}{title}
       \field{issn}{1756-8935}
       \field{journaltitle}{Epigenetics {\&} Chromatin}
-      \field{month}{06}
       \field{number}{1}
       \field{title}{Profiling genome-wide DNA methylation}
       \field{volume}{9}
@@ -18022,6 +19194,28 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1186/s13072-016-0075-3
+      \endverb
+    \endentry
+    \entry{Zeiler2012}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2e8f0042fa52e2976f90a025ddf6268c}{%
+           family={Zeiler},
+           family_i={Z\bibinitperiod},
+           given={Matthew\bibnamedelima D.},
+           given_i={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e8f0042fa52e2976f90a025ddf6268c}
+      \strng{fullhash}{2e8f0042fa52e2976f90a025ddf6268c}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{ADADELTA: An Adaptive Learning Rate Method}
+      \field{year}{2012}
+      \verb{eprint}
+      \verb 1212.5701
       \endverb
     \endentry
     \entry{Zeng2018}{article}{}
@@ -18080,7 +19274,6 @@
       \field{eid}{arXiv:1711.05597}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv e-prints}
-      \field{month}{11}
       \field{title}{{Advances in Variational Inference}}
       \field{year}{2017}
       \field{pages}{arXiv:1711.05597}
@@ -18088,7 +19281,6 @@
       \verb{eprint}
       \verb 1711.05597
       \endverb
-      \keyw{Computer Science - Machine Learning,Statistics - Machine Learning}
     \endentry
     \entry{Zhang2018}{article}{}
       \name{author}{4}{}{%
@@ -18120,10 +19312,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eid}{arXiv:1804.06893}
-      \field{eprintclass}{cs.LG}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{arXiv e-prints}
-      \field{month}{04}
       \field{title}{{A Study on Overfitting in Deep Reinforcement Learning}}
       \field{year}{2018}
       \field{pages}{arXiv:1804.06893}
@@ -18131,7 +19321,6 @@
       \verb{eprint}
       \verb 1804.06893
       \endverb
-      \keyw{Computer Science - Machine Learning,Statistics - Machine Learning}
     \endentry
     \entry{Zhang2019}{article}{}
       \name{author}{8}{}{%
@@ -18182,7 +19371,6 @@
       \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Since its establishment in 2009, single-cell RNA sequencing (RNA-seq) has been a major driver behind progress in biomedical research. In developmental biology and stem cell studies, the ability to profile single cells confers particular benefits. Although most studies still focus on individual tissues or organs, the recent development of ultra-high-throughput single-cell RNA-seq has demonstrated potential power in characterizing more complex systems or even the entire body. However, although multiple ultra-high-throughput single-cell RNA-seq systems have attracted attention, no systematic comparison of these systems has been performed. Here, with the same cell line and bioinformatics pipeline, we developed directly comparable datasets for each of three widely used droplet-based ultra-high-throughput single-cell RNA-seq systems, inDrop, Drop-seq, and 10X Genomics Chromium. Although each system is capable of profiling single-cell transcriptomes, their detailed comparison revealed the distinguishing features and suitable applications for each system.}
       \field{issn}{1097-2765}
       \field{journaltitle}{Molecular Cell}
       \field{number}{1}
@@ -18694,34 +19882,30 @@
       \field{year}{2005}
     \endentry
   \endsortlist
-  \missing{DR-seq}
-  \missing{Luo2016}
-  \missing{PijuanSala2019}
-  \missing{XX}
-  \missing{Scialdone2016}
-  \missing{Tosic2019}
-  \missing{Hore2015}
-  \missing{Solnica-Krezel2012}
-  \missing{XXX}
-  \missing{Okuta2017}
-  \missing{Ashburner2000}
-  \missing{Auclar2014}
-  \missing{Feng2014}
-  \missing{Tam2007}
-  \missing{Ainsworth2018}
-  \missing{Fabregat2015}
-  \missing{Bishop2006}
-  \missing{Wen2017}
-  \missing{Arnold2009}
   \missing{Argelaguet2020}
-  \missing{Ibarra-Soria2018}
-  \missing{Smith2012}
-  \missing{Zeiler2012}
-  \missing{Replogle2020}
   \missing{Love2014}
-  \missing{Ning1999}
+  \missing{Solnica-Krezel2012}
+  \missing{Arnold2009}
   \missing{Dai2016}
+  \missing{Svensson2019}
+  \missing{Ashburner2000}
+  \missing{Hore2015}
+  \missing{Feng2014}
+  \missing{Lun2018}
+  \missing{Scialdone2016}
   \missing{Lun2016}
+  \missing{Bishop2006}
+  \missing{Ibarra-Soria2018}
+  \missing{Auclar2014}
+  \missing{Wen2017}
+  \missing{DR-seq}
+  \missing{Tam2007}
+  \missing{Smith2012}
+  \missing{XX}
+  \missing{Luo2016}
+  \missing{Fabregat2015}
+  \missing{PijuanSala2019}
+  \missing{Tosic2019}
 \endrefsection
 \endinput
 
