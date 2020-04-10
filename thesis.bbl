@@ -365,10 +365,10 @@
            family_i={K\bibinitperiod},
            given={Felix},
            given_i={F\bibinitperiod}}}%
-        {{hash=f300b796ea81498e2ef64659e8bc12a0}{%
+        {{hash=6c110dbfc849aa40a351552da5a83155}{%
            family={Smallwood},
            family_i={S\bibinitperiod},
-           given={Sébastien\bibnamedelima A},
+           given={Sebastien\bibnamedelima A},
            given_i={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
         {{hash=38a7064afb9dbdbf05181fa0a90b2c47}{%
            family={Ponting},
@@ -397,7 +397,7 @@
            given_i={W\bibinitperiod}}}%
       }
       \strng{namehash}{10e0af9d07cae5bb5d8daba167ea4b6e}
-      \strng{fullhash}{fafc502df1b4d38847993ef52049585d}
+      \strng{fullhash}{46cc8bdc6aeaf8e394f2b4c184757c02}
       \field{sortinit}{A}
       \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
       \field{labelnamesource}{author}
@@ -490,8 +490,8 @@
            family_i={K\bibinitperiod},
            given={Felix},
            given_i={F\bibinitperiod}}}%
-        {{hash=01f9d532a965e704febc2234c9695bae}{%
-           family={Göttgens},
+        {{hash=45448ac6306f896240c3189a265f5b5f}{%
+           family={Gottgens},
            family_i={G\bibinitperiod},
            given={Berthold},
            given_i={B\bibinitperiod}}}%
@@ -532,7 +532,7 @@
            given_i={W\bibinitperiod}}}%
       }
       \strng{namehash}{cc570ad59e46cf8bee82e57dc8ffd159}
-      \strng{fullhash}{6486c5bd15bbde061ca32eed7d66b8f1}
+      \strng{fullhash}{d1d331132319f5ec5a36d7865427b1be}
       \field{sortinit}{A}
       \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
       \field{labelnamesource}{author}
@@ -633,7 +633,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nature Reviews Genetics}
-      \field{month}{08}
       \field{title}{The interplay of epigenetic marks during stem cell differentiation and development}
       \field{volume}{18}
       \field{year}{2017}
@@ -707,10 +706,10 @@
            family_i={B\bibinitperiod},
            given={Matthew\bibnamedelima N.},
            given_i={M\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-        {{hash=f217e631a591880c2ac51d9fa22475b2}{%
+        {{hash=f40ba50c450f4bab317d3b03b8778a61}{%
            family={Warren},
            family_i={W\bibinitperiod},
-           given={René\bibnamedelima L.},
+           given={Rene\bibnamedelima L.},
            given_i={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
         {{hash=6594a9c1c84e80d085cf6d8994e9b35b}{%
            family={Hirst},
@@ -779,7 +778,7 @@
            given_i={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
       }
       \strng{namehash}{26a297b4206ed8e02f7d2d04be160a21}
-      \strng{fullhash}{6829e913398685f1f5810e5f4a507d38}
+      \strng{fullhash}{990f046e5372cfa6d5bbacfad5d78640}
       \field{sortinit}{B}
       \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
       \field{labelnamesource}{author}
@@ -1562,7 +1561,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the National Academy of Sciences}
-      \field{month}{05}
       \field{number}{21}
       \field{title}{Independent filtering increases detection power for high-throughput experiments}
       \field{volume}{107}
@@ -2522,8 +2520,8 @@
            family_i={K\bibinitperiod},
            given={Tony},
            given_i={T\bibinitperiod}}}%
-        {{hash=c65c33ed43579abf41c1c0c4689759b7}{%
-           family={Garrido-Martı́n},
+        {{hash=886bb1e21f9d133cff9de5caaee3cffd}{%
+           family={Garrido-Martin},
            family_i={G\bibinithyphendelim M\bibinitperiod},
            given={Diego},
            given_i={D\bibinitperiod}}}%
@@ -2879,7 +2877,7 @@
            given_i={N\bibinitperiod}}}%
       }
       \strng{namehash}{c404dca26d16387ee2aa7e164129683f}
-      \strng{fullhash}{40342805b52482bd1be00a5db8f3d1a3}
+      \strng{fullhash}{2b1d6d5b010557fdb318e73d6914b357}
       \field{sortinit}{C}
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
@@ -2972,10 +2970,10 @@
            family_i={C\bibinitperiod},
            given={Stephen\bibnamedelima J},
            given_i={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=f300b796ea81498e2ef64659e8bc12a0}{%
+        {{hash=6c110dbfc849aa40a351552da5a83155}{%
            family={Smallwood},
            family_i={S\bibinitperiod},
-           given={Sébastien\bibnamedelima A},
+           given={Sebastien\bibnamedelima A},
            given_i={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
         {{hash=65ac3f4a5c854ddd2f6a2167a6319bd7}{%
            family={Lee},
@@ -3002,7 +3000,7 @@
         {Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved. SN -}%
       }
       \strng{namehash}{a99b41e6f3a2c15c5e4cfc2f94858f78}
-      \strng{fullhash}{863d67a1defead99d6a23cc5f629e68e}
+      \strng{fullhash}{068c5205be50770ebcfd5e457b7d9959}
       \field{sortinit}{C}
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
@@ -3108,10 +3106,10 @@
            family_i={L\bibinitperiod},
            given={Heather\bibnamedelima J.},
            given_i={H\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=36004358e463f331e7b4a56c391740e4}{%
+        {{hash=e5f0a529450c34452900a913369b520c}{%
            family={Smallwood},
            family_i={S\bibinitperiod},
-           given={Sébastien\bibnamedelima A.},
+           given={Sebastien\bibnamedelima A.},
            given_i={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
         {{hash=f5906a32bee1caceef1d93285db612d5}{%
            family={Kelsey},
@@ -3125,7 +3123,7 @@
            given_i={W\bibinitperiod}}}%
       }
       \strng{namehash}{0579a7876bbc4d658d77bcb67d542cd9}
-      \strng{fullhash}{a34fbc46981f64ea6364b592ca07cf72}
+      \strng{fullhash}{d86c8466511849f17a2125a2dca9cfcb}
       \field{sortinit}{C}
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
@@ -3588,8 +3586,8 @@
            family_i={G\bibinitperiod},
            given={Eric\bibnamedelima D.},
            given_i={E\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=bc79abe3abaa3411b59d3232a32f818f}{%
-           family={Guigó},
+        {{hash=ea970fd2fdec83136bb91247fe4f1b42}{%
+           family={Guigo},
            family_i={G\bibinitperiod},
            given={Roderic},
            given_i={R\bibinitperiod}}}%
@@ -3818,8 +3816,8 @@
            family_i={Z\bibinitperiod},
            given={Chris},
            given_i={C\bibinitperiod}}}%
-        {{hash=953584c18160a2ff5d0cebcfa77ce1fb}{%
-           family={Röder},
+        {{hash=15b31ce1722d2941919bdbb497375843}{%
+           family={Roder},
            family_i={R\bibinitperiod},
            given={Maik},
            given_i={M\bibinitperiod}}}%
@@ -3948,10 +3946,10 @@
            family_i={G\bibinitperiod},
            given={Harsha\bibnamedelima P.},
            given_i={H\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=d0e0df6240ad28f0e54a5adc937113f9}{%
+        {{hash=7b91e7efdb70fa79ae1cc448e7be75b9}{%
            family={Howald},
            family_i={H\bibinitperiod},
-           given={Cédric},
+           given={Cedric},
            given_i={C\bibinitperiod}}}%
         {{hash=35880566baafc3dd4e9cbfd9e9b44812}{%
            family={Jha},
@@ -5672,7 +5670,7 @@
            given_i={K\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
       }
       \strng{namehash}{cba4fa10cb0d2e21edd0e8bf9d5b24bf}
-      \strng{fullhash}{bd8835a087391f3f6e00a4811fe7bdb9}
+      \strng{fullhash}{2646f2415e9b910190f85f04cd64a352}
       \field{sortinit}{C}
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
@@ -6475,7 +6473,6 @@
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{0027-8424 1091-6490}
       \field{journaltitle}{Proceedings of the National Academy of Sciences}
       \field{number}{50}
       \field{title}{Histone H3K27ac separates active from poised enhancers and predicts developmental state}
@@ -6755,15 +6752,15 @@
            family_i={D\bibinitperiod},
            given={Qiaolin},
            given_i={Q\bibinitperiod}}}%
-        {{hash=df846e58b82bde35b4e5455cf110c22f}{%
-           family={Ramsköld},
+        {{hash=4ebc26c86d7fb8958d03485231bcb534}{%
+           family={Ramskold},
            family_i={R\bibinitperiod},
            given={Daniel},
            given_i={D\bibinitperiod}}}%
-        {{hash=7e9c7e8f709435c97f492061e39946f6}{%
+        {{hash=ef2a9f6ae716c7232d14bb9df99af5c2}{%
            family={Reinius},
            family_i={R\bibinitperiod},
-           given={Björn},
+           given={Bjorn},
            given_i={B\bibinitperiod}}}%
         {{hash=ef621127635320f220b1f2f0514c7297}{%
            family={Sandberg},
@@ -6775,7 +6772,7 @@
         {American Association for the Advancement of Science}%
       }
       \strng{namehash}{c8616bb5387f04b7e30e49450786dacc}
-      \strng{fullhash}{b04acb246746d64c74b1053391398924}
+      \strng{fullhash}{eac7a464d81994e4f3b53656b62579a1}
       \field{sortinit}{D}
       \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
       \field{labelnamesource}{author}
@@ -7285,7 +7282,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nature}
-      \field{month}{07}
       \field{title}{Allelic reprogramming of 3D chromatin architecture during early mammalian development}
       \field{volume}{547}
       \field{year}{2017}
@@ -7629,10 +7625,10 @@
            family_i={H\bibinitperiod},
            given={Timothy\bibnamedelima A.},
            given_i={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=c51871ea7905f548407a62f58213c0b7}{%
+        {{hash=f8c793423d7f23fa74a10edb6d109731}{%
            family={Santos},
            family_i={S\bibinitperiod},
-           given={Fátima},
+           given={Fatima},
            given_i={F\bibinitperiod}}}%
         {{hash=d9ab3ed0f8597e94113d3e87755edce9}{%
            family={Lee},
@@ -7664,10 +7660,10 @@
            family_i={P\bibinitperiod},
            given={Yu-Lee},
            given_i={Y\bibinithyphendelim L\bibinitperiod}}}%
-        {{hash=5d66aac672ef28cb832e6a46aff0ae6b}{%
+        {{hash=7078c05c00a37dcb2a4606218e3d039c}{%
            family={Walter},
            family_i={W\bibinitperiod},
-           given={Jörn},
+           given={Jorn},
            given_i={J\bibinitperiod}}}%
         {{hash=155e6ecfb055f82b5bbea47c299f7ed1}{%
            family={Cook},
@@ -7691,7 +7687,7 @@
            given_i={W\bibinitperiod}}}%
       }
       \strng{namehash}{a7f7353d4471b52b4857041eacd65a7b}
-      \strng{fullhash}{73c8d56240e5340df88a6c5c33937c9d}
+      \strng{fullhash}{3e1ca4d3041352a7924da63ed0d08af3}
       \field{sortinit}{F}
       \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
       \field{labelnamesource}{author}
@@ -8024,8 +8020,8 @@
            family_i={P\bibinitperiod},
            given={Matteo\bibnamedelimb G\bibnamedelima Della},
            given_i={M\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=37e5ec8a0d993711ddf16039eee036aa}{%
-           family={Jädersten},
+        {{hash=d1e5439cc4292a067115d80c387ee968}{%
+           family={Jadersten},
            family_i={J\bibinitperiod},
            given={Martin},
            given_i={M\bibinitperiod}}}%
@@ -8054,8 +8050,8 @@
            family_i={K\bibinitperiod},
            given={Sally},
            given_i={S\bibinitperiod}}}%
-        {{hash=84ae5875b4fbeeef086978169750f5a4}{%
-           family={Hellström-Lindberg},
+        {{hash=1863e85dbf42ef365eb3d19a8dbf2e3d}{%
+           family={Hellstrom-Lindberg},
            family_i={H\bibinithyphendelim L\bibinitperiod},
            given={Eva},
            given_i={E\bibinitperiod}}}%
@@ -8081,7 +8077,7 @@
            given_i={J\bibinitperiod}}}%
       }
       \strng{namehash}{f92e52b18a9c4e9364083fa970ab87d8}
-      \strng{fullhash}{43e5bf3a49fc5c8b366908c122e9f787}
+      \strng{fullhash}{563ed82858e52dad3212c18a8f2d05f3}
       \field{sortinit}{G}
       \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
       \field{labelnamesource}{author}
@@ -8400,7 +8396,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nature Biotechnology}
-      \field{month}{04}
       \field{title}{Batch effects in single-cell RNA-sequencing data are corrected by matching mutual nearest neighbors}
       \field{volume}{36}
       \field{year}{2018}
@@ -8412,8 +8407,8 @@
            family_i={H\bibinitperiod},
            given={Laleh},
            given_i={L\bibinitperiod}}}%
-        {{hash=c701dc69088116a632217318587317b3}{%
-           family={Büttner},
+        {{hash=4a1fdfc33732400c2e1a28dfa58b4747}{%
+           family={Buttner},
            family_i={B\bibinitperiod},
            given={Maren},
            given_i={M\bibinitperiod}}}%
@@ -8434,7 +8429,7 @@
            given_i={F\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
       }
       \strng{namehash}{b6d85b773eb574c4f3d1221811a2980e}
-      \strng{fullhash}{ed6692f4b3e7eb517a744453f94c16e2}
+      \strng{fullhash}{067fed13cc364145d3b03c7f91ef7a0b}
       \field{sortinit}{H}
       \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
       \field{labelnamesource}{author}
@@ -8479,9 +8474,6 @@
       \range{pages}{21}
       \verb{doi}
       \verb 10.1093/humupd/dmy021
-      \endverb
-      \verb{eprint}
-      \verb http://oup.prod.sis.lan/humupd/article-pdf/24/5/556/25463989/dmy021.pdf
       \endverb
       \verb{url}
       \verb https://doi.org/10.1093/humupd/dmy021
@@ -8871,7 +8863,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Cell}
-      \field{month}{2020/03/16}
       \field{number}{1}
       \field{title}{Vertebrate Embryonic Cells Will Become Nerve Cells Unless Told Otherwise}
       \field{volume}{88}
@@ -9700,7 +9691,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Cell}
-      \field{month}{2019/08/18}
       \field{number}{2}
       \field{title}{3D Chromatin Structures of Mature Gametes and Structural Reprogramming during Mammalian Embryogenesis}
       \field{volume}{170}
@@ -10515,8 +10505,8 @@
            family_i={K\bibinitperiod},
            given={Maria\bibnamedelima E.},
            given_i={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=c1a751fad7cc8a25ca40849bc612a510}{%
-           family={Lönnerberg},
+        {{hash=5855183fa82f000d25dff08d76045144}{%
+           family={Lonnerberg},
            family_i={L\bibinitperiod},
            given={Peter},
            given_i={P\bibinitperiod}}}%
@@ -10562,15 +10552,15 @@
            family_i={B\bibinitperiod},
            given={Roger},
            given_i={R\bibinitperiod}}}%
-        {{hash=31ec5e26780b8ebd8933cae1aa4085c1}{%
-           family={Sundström},
+        {{hash=130c2584e9ec32887a95845e6de8f9ff}{%
+           family={Sundstrom},
            family_i={S\bibinitperiod},
            given={Erik},
            given_i={E\bibinitperiod}}}%
-        {{hash=ea0ecebe5670edfa22ff8bbef85b2c66}{%
+        {{hash=a6fd5a163ff0c1f8e58f72f11ebe34e6}{%
            family={Castelo-Branco},
            family_i={C\bibinithyphendelim B\bibinitperiod},
-           given={Gonçalo},
+           given={Goncalo},
            given_i={G\bibinitperiod}}}%
         {{hash=2608ef33ec7368185866e78c7d3ddcf5}{%
            family={Cramer},
@@ -10594,7 +10584,7 @@
            given_i={P\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
       }
       \strng{namehash}{92da7dc1c0cbebba7a6bacc0bdd5780f}
-      \strng{fullhash}{16a8fedde42bcaf90b304a1cf1ce6cb7}
+      \strng{fullhash}{9475c2e94caf5631d6c74c0fb4de97c0}
       \field{sortinit}{L}
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
@@ -11062,7 +11052,6 @@
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{0027-8424 (Print) 0027-8424 (Linking)}
       \field{journaltitle}{Proc Natl Acad Sci U S A}
       \field{number}{19}
       \field{title}{Distinct localization of histone H3 acetylation and H3-K4 methylation to the transcription start sites in the human genome}
@@ -11345,10 +11334,10 @@
            family_i={L\bibinitperiod},
            given={Chuanyu},
            given_i={C\bibinitperiod}}}%
-        {{hash=000bfcc979ba1cea861c04e98607a1b5}{%
+        {{hash=60b4c5adee84d81d802725df45679cca}{%
            family={Quintero},
            family_i={Q\bibinitperiod},
-           given={Andrés},
+           given={Andres},
            given_i={A\bibinitperiod}}}%
         {{hash=a788ff7e34150e1077ba4fa3ae27bfb9}{%
            family={Wu},
@@ -11522,7 +11511,7 @@
            given_i={X\bibinitperiod}}}%
       }
       \strng{namehash}{06357eeada32e40b039a54134dd0a295}
-      \strng{fullhash}{d45bddf69c2e8e5445fa2bb5acd5f4c0}
+      \strng{fullhash}{6aae38f7579b9a3b3b2cfcdcb4745701}
       \field{sortinit}{L}
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
@@ -11610,8 +11599,8 @@
            family_i={K\bibinitperiod},
            given={Lars},
            given_i={L\bibinitperiod}}}%
-        {{hash=1f2a4428ffb7b33451b8f1104c821f2d}{%
-           family={Ekström},
+        {{hash=2d58c8bc59b3a106ec0714bb6c15120b}{%
+           family={Ekstrom},
            family_i={E\bibinitperiod},
            given={Tomas\bibnamedelima J},
            given_i={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
@@ -11622,7 +11611,7 @@
            given_i={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
       }
       \strng{namehash}{3e4237eb4ceb27186ab4b529da4bf425}
-      \strng{fullhash}{c7b4437447fe8bcd25d3030065ab39f3}
+      \strng{fullhash}{fcfd0e4649d51f7c49abf35e354ef5bd}
       \field{sortinit}{L}
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
@@ -11750,10 +11739,10 @@
            family_i={N\bibinitperiod},
            given={Joseph\bibnamedelima R.},
            given_i={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=d3e7862f49b890cdedc7fc109f6d1602}{%
+        {{hash=74430bca7a2a3f5608ee25913a6cc721}{%
            family={Pinto-Duarte},
            family_i={P\bibinithyphendelim D\bibinitperiod},
-           given={António},
+           given={Antonio},
            given_i={A\bibinitperiod}}}%
         {{hash=beb7545d9b330d5fde7737bf923221c9}{%
            family={Bui},
@@ -11802,7 +11791,7 @@
            given_i={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
       }
       \strng{namehash}{d1ef4337f6fc34ce9044ef0bb4ce31a5}
-      \strng{fullhash}{b4379847d2a10f0ca45136e23de09d53}
+      \strng{fullhash}{52849d8e9580be45c529ffa87971d1cf}
       \field{sortinit}{L}
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
@@ -12923,8 +12912,8 @@
     \endentry
     \entry{Munoz2002}{article}{}
       \name{author}{2}{}{%
-        {{hash=f20ce9abfa9c862f285be9d6fc391614}{%
-           family={Muñoz-Sanjuán},
+        {{hash=c37ea2d3cd1579e8dcfd883a49d457bf}{%
+           family={Munoz-Sanjuan},
            family_i={M\bibinithyphendelim S\bibinitperiod},
            given={Ignacio},
            given_i={I\bibinitperiod}}}%
@@ -12934,8 +12923,8 @@
            given={Ali\bibnamedelima H.},
            given_i={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
       }
-      \strng{namehash}{ca93041eeaa55b5cc81755a5e0efc9fe}
-      \strng{fullhash}{ca93041eeaa55b5cc81755a5e0efc9fe}
+      \strng{namehash}{51515ebbdd1ce58a0c45e9a1a6f6b0a1}
+      \strng{fullhash}{51515ebbdd1ce58a0c45e9a1a6f6b0a1}
       \field{sortinit}{M}
       \field{sortinithash}{2684bec41e9697b92699b46491061da2}
       \field{labelnamesource}{author}
@@ -13290,7 +13279,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Cell}
-      \field{month}{2020/03/15}
       \field{number}{6}
       \field{title}{Epigenetics of Reprogramming to Induced Pluripotency}
       \field{volume}{152}
@@ -13672,15 +13660,15 @@
            family_i={F\bibinitperiod},
            given={Omid\bibnamedelima R},
            given_i={O\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=3c4ac2c6f9fa7c0259686ffd7e846f27}{%
-           family={Björklund},
+        {{hash=31a8011b726e87070518be7b805d4928}{%
+           family={Bjorklund},
            family_i={B\bibinitperiod},
-           given={Åsa\bibnamedelima K},
-           given_i={Å\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=05e13d554cf3649c34cb98eae5d562e9}{%
+           given={Asa\bibnamedelima K},
+           given_i={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=cdcf823766d5c48c59710d2c3ee5984b}{%
            family={Winberg},
            family_i={W\bibinitperiod},
-           given={Gösta},
+           given={Gosta},
            given_i={G\bibinitperiod}}}%
         {{hash=7f368acefa7e1f84dbecbed72993cd13}{%
            family={Sagasser},
@@ -13694,7 +13682,7 @@
            given_i={R\bibinitperiod}}}%
       }
       \strng{namehash}{f70d1410f3c86f6b348f49e2b61d6d6f}
-      \strng{fullhash}{5d5f21d85ee671635b2cdcb111886c09}
+      \strng{fullhash}{65e7b5aa345cc078d45d41bd55335276}
       \field{sortinit}{P}
       \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
       \field{labelnamesource}{author}
@@ -13874,14 +13862,14 @@
            family_i={M\bibinitperiod},
            given={John\bibnamedelima C.},
            given_i={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=01f9d532a965e704febc2234c9695bae}{%
-           family={Göttgens},
+        {{hash=45448ac6306f896240c3189a265f5b5f}{%
+           family={Gottgens},
            family_i={G\bibinitperiod},
            given={Berthold},
            given_i={B\bibinitperiod}}}%
       }
       \strng{namehash}{299a352a59deaef58d967e1d0f1f1b43}
-      \strng{fullhash}{69c331808214bc728645cc03a248a61b}
+      \strng{fullhash}{02c9b218f6530cd1fb4e37ef5b51981b}
       \field{sortinit}{P}
       \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
       \field{labelnamesource}{author}
@@ -14580,7 +14568,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Genes \& Development}
-      \field{month}{04}
       \field{number}{7}
       \field{title}{Role of TET enzymes in DNA methylation, development, and cancer}
       \field{volume}{30}
@@ -15361,10 +15348,10 @@
            family_i={A\bibinitperiod},
            given={Christof},
            given_i={C\bibinitperiod}}}%
-        {{hash=36004358e463f331e7b4a56c391740e4}{%
+        {{hash=e5f0a529450c34452900a913369b520c}{%
            family={Smallwood},
            family_i={S\bibinitperiod},
-           given={Sébastien\bibnamedelima A.},
+           given={Sebastien\bibnamedelima A.},
            given_i={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
         {{hash=194a124b83437735438f44ab07b9291d}{%
            family={Krueger},
@@ -15413,13 +15400,12 @@
            given_i={W\bibinitperiod}}}%
       }
       \strng{namehash}{13484cac296ddbc3cdc1061e6006398b}
-      \strng{fullhash}{b4f78ceb4f5f1160ab2ce3805f94c92a}
+      \strng{fullhash}{106f10f44bc66c326e1e50fc2d687ad7}
       \field{sortinit}{R}
       \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Cell Systems}
-      \field{month}{2019/08/19}
       \field{number}{1}
       \field{title}{Genome-Scale Oscillations in DNA Methylation during Exit from Pluripotency}
       \field{volume}{7}
@@ -15520,8 +15506,8 @@
            family_i={T\bibinitperiod},
            given={Tian\bibnamedelima V.},
            given_i={T\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
-        {{hash=cea01e75654f8557f32b5590e9167b02}{%
-           family={Gómez},
+        {{hash=0e0872255b588e571c77b731cc4fe23f}{%
+           family={Gomez},
            family_i={G\bibinitperiod},
            given={Antonio},
            given_i={A\bibinitperiod}}}%
@@ -15592,7 +15578,7 @@
            given_i={T\bibinitperiod}}}%
       }
       \strng{namehash}{dc59bc5442ad269cab3f6dbe18f46f93}
-      \strng{fullhash}{30c3882fbad5eb0ab544c7da517aedc1}
+      \strng{fullhash}{23fb5fbb950952c68ba5900c76b92c49}
       \field{sortinit}{S}
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labelnamesource}{author}
@@ -15834,10 +15820,10 @@
            family_i={E\bibinitperiod},
            given={Hamid},
            given_i={H\bibinitperiod}}}%
-        {{hash=1847f6e07dd549b29cfa39dbd260bae4}{%
+        {{hash=d3bcedeaab981c2f617f7506857c1280}{%
            family={Espinoza},
            family_i={E\bibinitperiod},
-           given={F.\bibnamedelimi Hernán},
+           given={F.\bibnamedelimi Hernan},
            given_i={F\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
         {{hash=7e86ec800ee0efd662545c75ab204415}{%
            family={Fish},
@@ -16201,10 +16187,10 @@
            family_i={C\bibinitperiod},
            given={Michelle\bibnamedelima B.},
            given_i={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-        {{hash=1847f6e07dd549b29cfa39dbd260bae4}{%
+        {{hash=d3bcedeaab981c2f617f7506857c1280}{%
            family={Espinoza},
            family_i={E\bibinitperiod},
-           given={F.\bibnamedelimi Hernán},
+           given={F.\bibnamedelimi Hernan},
            given_i={F\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
         {{hash=d77d546b3ff70dd14e0c9c41b8bbf12b}{%
            family={George},
@@ -16562,7 +16548,7 @@
            given_i={P\bibinitperiod}}}%
       }
       \strng{namehash}{c18d16c4d5a2b74730d670204d65d2a4}
-      \strng{fullhash}{ccca639c72e1be6f90840d6f64e0e131}
+      \strng{fullhash}{cfd58054aed30a46af5343ed53771c6d}
       \field{sortinit}{S}
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labelnamesource}{author}
@@ -16749,7 +16735,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nature Communications}
       \field{number}{1}
-      \field{title}{PRC2 specifies ectoderm lineages and maintains pluripotency in primed but not naı̈ve ESCs}
+      \field{title}{PRC2 specifies ectoderm lineages and maintains pluripotency in primed but not naive ESCs}
       \field{volume}{8}
       \field{year}{2017}
     \endentry
@@ -16802,10 +16788,10 @@
     \endentry
     \entry{Smallwood2014}{article}{}
       \name{author}{10}{}{%
-        {{hash=f300b796ea81498e2ef64659e8bc12a0}{%
+        {{hash=6c110dbfc849aa40a351552da5a83155}{%
            family={Smallwood},
            family_i={S\bibinitperiod},
-           given={Sébastien\bibnamedelima A},
+           given={Sebastien\bibnamedelima A},
            given_i={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
         {{hash=65ac3f4a5c854ddd2f6a2167a6319bd7}{%
            family={Lee},
@@ -16853,8 +16839,8 @@
            given={Gavin},
            given_i={G\bibinitperiod}}}%
       }
-      \strng{namehash}{6bf200c46310202f6eeb01054849f9c5}
-      \strng{fullhash}{4e9dd79a26e778c97dcda982658114bf}
+      \strng{namehash}{8a578e0966ccfe1ea956bc4158f2926b}
+      \strng{fullhash}{fac37c32a8a9fee78f89bd20e652a738}
       \field{sortinit}{S}
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labelnamesource}{author}
@@ -16898,8 +16884,8 @@
     \endentry
     \entry{Soderholm2016}{article}{}
       \name{author}{12}{}{%
-        {{hash=6adc9b1860f23cce81a8893df6cfba1d}{%
-           family={Söderholm},
+        {{hash=d23a9e606d194784744d5002860a5001}{%
+           family={Soderholm},
            family_i={S\bibinitperiod},
            given={Sandra},
            given_i={S\bibinitperiod}}}%
@@ -16962,8 +16948,8 @@
       \list{language}{1}{%
         {en}%
       }
-      \strng{namehash}{9e36b8e29c9fad7ca0bf02e3f1759151}
-      \strng{fullhash}{1d77eb2946c817756471a2ac96b2b3c3}
+      \strng{namehash}{d576863ceb12567d3981177864147549}
+      \strng{fullhash}{fed974052ab475899d9d70ff614ea4b7}
       \field{sortinit}{S}
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labelnamesource}{author}
@@ -17070,7 +17056,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{bioRxiv}
-      \field{month}{01}
       \field{title}{Automated sample preparation for high-throughput single-cell proteomics}
       \field{year}{2018}
       \field{pages}{399774}
@@ -17623,9 +17608,6 @@
       \verb{doi}
       \verb https://doi.org/10.1016/S0925-4773(97)00123-8
       \endverb
-      \verb{url}
-      \verb http://www.sciencedirect.com/science/article/pii/S0925477397001238
-      \endverb
     \endentry
     \entry{Tee2014}{article}{}
       \name{author}{2}{}{%
@@ -18095,8 +18077,8 @@
            family_i={P\bibinitperiod},
            given={Mihael},
            given_i={M\bibinitperiod}}}%
-        {{hash=f87beffc6552d4e37c51217edb04881f}{%
-           family={Schröder},
+        {{hash=a88fac62aef3a73601486a570f7b3b40}{%
+           family={Schroder},
            family_i={S\bibinitperiod},
            given={Chiara\bibnamedelima M.},
            given_i={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
@@ -18120,8 +18102,8 @@
            family_i={P\bibinitperiod},
            given={Simone},
            given_i={S\bibinitperiod}}}%
-        {{hash=0d248470e6dbc775623f943b9b606e76}{%
-           family={Köttgen},
+        {{hash=95cfb324205867f5262db03c0155ca41}{%
+           family={Kottgen},
            family_i={K\bibinitperiod},
            given={Michael},
            given_i={M\bibinitperiod}}}%
@@ -18137,7 +18119,7 @@
            given_i={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
       }
       \strng{namehash}{6d7575b1c41858a3d10b6e3b0b8aa928}
-      \strng{fullhash}{8732960a8c91dfb1e47cf69fbe27ba8a}
+      \strng{fullhash}{b630d68095062601dacb69387e94ad2b}
       \field{sortinit}{T}
       \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
       \field{labelnamesource}{author}
@@ -19016,7 +18998,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nature}
-      \field{month}{06}
       \field{title}{The landscape of accessible chromatin in mammalian preimplantation embryos}
       \field{volume}{534}
       \field{year}{2016}
@@ -19726,10 +19707,10 @@
            family_i={P\bibinitperiod},
            given={Swati},
            given_i={S\bibinitperiod}}}%
-        {{hash=7e9c7e8f709435c97f492061e39946f6}{%
+        {{hash=ef2a9f6ae716c7232d14bb9df99af5c2}{%
            family={Reinius},
            family_i={R\bibinitperiod},
-           given={Björn},
+           given={Bjorn},
            given_i={B\bibinitperiod}}}%
         {{hash=dceefb789766fa820523883d025da60a}{%
            family={Guillaumet-Adkins},
@@ -19763,7 +19744,7 @@
            given_i={W\bibinitperiod}}}%
       }
       \strng{namehash}{8a2e334af2413bc0482320e4a5920de7}
-      \strng{fullhash}{a5ee64020b94087e01c87ee401717f96}
+      \strng{fullhash}{f32bfcdc84965d9a559c3c41be147eb7}
       \field{sortinit}{Z}
       \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
       \field{labelnamesource}{author}
@@ -19882,30 +19863,30 @@
       \field{year}{2005}
     \endentry
   \endsortlist
-  \missing{Argelaguet2020}
-  \missing{Love2014}
+  \missing{Wen2017}
+  \missing{Ibarra-Soria2018}
+  \missing{Svensson2019}
+  \missing{Lun2018}
+  \missing{Auclar2014}
   \missing{Solnica-Krezel2012}
   \missing{Arnold2009}
   \missing{Dai2016}
-  \missing{Svensson2019}
-  \missing{Ashburner2000}
-  \missing{Hore2015}
-  \missing{Feng2014}
-  \missing{Lun2018}
   \missing{Scialdone2016}
-  \missing{Lun2016}
+  \missing{Tosic2019}
+  \missing{XX}
+  \missing{Feng2014}
+  \missing{PijuanSala2019}
   \missing{Bishop2006}
-  \missing{Ibarra-Soria2018}
-  \missing{Auclar2014}
-  \missing{Wen2017}
+  \missing{Love2014}
+  \missing{Ashburner2000}
+  \missing{Argelaguet2020}
+  \missing{Smith2012}
+  \missing{Hore2015}
+  \missing{Lun2016}
+  \missing{Luo2016}
   \missing{DR-seq}
   \missing{Tam2007}
-  \missing{Smith2012}
-  \missing{XX}
-  \missing{Luo2016}
   \missing{Fabregat2015}
-  \missing{PijuanSala2019}
-  \missing{Tosic2019}
 \endrefsection
 \endinput
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  10 APR 2020 13:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  10 APR 2020 13:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1717,9 +1717,7 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
-))
-   defining Unicode char U+00A0 (decimal 160)
-)
+)))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip83
@@ -1959,14 +1957,35 @@ Package biblatex Info: ... file 'thesis.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Argelaguet2020
+(biblatex)                Wen2017
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Love2014
+(biblatex)                Ibarra-Soria2018
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Svensson2019
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Lun2018
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Auclar2014
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1994,21 +2013,21 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Svensson2019
+(biblatex)                Scialdone2016
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Ashburner2000
+(biblatex)                Tosic2019
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Hore2015
+(biblatex)                XX
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -2022,21 +2041,7 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Lun2018
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Scialdone2016
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Lun2016
+(biblatex)                PijuanSala2019
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -2050,21 +2055,49 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Ibarra-Soria2018
+(biblatex)                Love2014
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Auclar2014
+(biblatex)                Ashburner2000
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Wen2017
+(biblatex)                Argelaguet2020
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Smith2012
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Hore2015
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Lun2016
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Luo2016
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -2085,42 +2118,7 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Smith2012
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                XX
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Luo2016
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                Fabregat2015
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                PijuanSala2019
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Tosic2019
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -3400,41 +3398,7 @@ Overfull \hbox (1.30855pt too wide) in paragraph at lines 204--204
 ho-gen-e-sis of chronic lym-pho-cytic leukaemia''.
  []
 
-[151]
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'Hemmati-Brivanlou1997' on input line 203.
-
-[152] [153]
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'Ke2017' on input line 203.
-
-[154] [155] [156] [157]
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'Papp2013' on input line 203.
-
-[158] [159]
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'Rulands2018' on input line 203.
-
-
-! Package inputenc Error: Unicode char ̈ (U+308)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.204 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[160] [161] [162]
+[151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162]
 Overfull \hbox (12.48563pt too wide) in paragraph at lines 204--204
 []\T1/cmr/m/n/10.95 (-20) C. Xu, D. Tao, and C. Xu. ``A Sur-vey on Multi-view L
 earn-ing''. In: \T1/cmr/m/it/10.95 (-20) arXiv e-prints\T1/cmr/m/n/10.95 (-20) 
@@ -3474,11 +3438,11 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40744 strings out of 493014
- 759202 string characters out of 6133351
- 1626131 words of memory out of 5000000
- 42220 multiletter control sequences out of 15000+600000
- 51257 words of font info for 293 fonts, out of 8000000 for 9000
+ 40754 strings out of 493014
+ 759765 string characters out of 6133351
+ 1626141 words of memory out of 5000000
+ 42232 multiletter control sequences out of 15000+600000
+ 51178 words of font info for 292 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,20n,92p,1522b,1502s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -3518,10 +3482,10 @@ blic/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
 ic/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
 /cm-super/sftt1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/s
 tmaryrd/stmary10.pfb>
-Output written on thesis.pdf (165 pages, 83202456 bytes).
+Output written on thesis.pdf (165 pages, 83201508 bytes).
 PDF statistics:
- 37140 PDF objects out of 38293 (max. 8388607)
- 19337 compressed objects within 194 object streams
+ 37138 PDF objects out of 38293 (max. 8388607)
+ 19335 compressed objects within 194 object streams
  788 named destinations out of 1000 (max. 500000)
  45088 words of extra memory for PDF output out of 51595 (max. 10000000)
 
