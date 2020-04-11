@@ -1,0 +1,108 @@
+\thispagestyle {empty}
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Multi-omics at single cell resolution}{1}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Integrative analysis of multi-modal assays}{3}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Thesis overview}{4}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Joint profiling of chromatin accessibility DNA methylation and transcription in single cells}{7}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Introduction to single-cell (multi-) omics sequencing}{7}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Single-cell RNA sequencing}{7}{subsection.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Single-cell sequencing of the epigenome}{8}{subsection.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{DNA methylation}{8}{section*.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Chromatin accessibility}{9}{section*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.3}Multi-modal single-cell sequencing}{11}{subsection.2.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}scNMT-seq enables joint profiling of chromatin accessibility, DNA methylation and RNA expression in single cells}{13}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Description of the experimental protocol}{13}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Description of the data processing pipeline}{15}{subsection.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}Validation}{15}{subsection.2.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Coverage}{15}{section*.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Consistency with previous studies}{17}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Quantification of DNA methylation and chromatin accessibility in known regulatory regions}{18}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.4}Identification of genomic elements with coordinated variability across molecular layers}{20}{subsection.2.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.5}Inference of non-linear chromatin accessibility profiles at single nucleotide resolution}{22}{subsection.2.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.6}Exploration of epigenome connections along a developmental trajectory}{26}{subsection.2.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Conclusions and open perspectives}{27}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Multi-omics profiling of mouse gastrulation at single-cell resolution}{29}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Introduction}{29}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Transcriptomic studies}{30}{subsection.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}Epigenetic studies}{30}{subsection.3.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Pre-implantation: establishment of the pluripotent state}{31}{section*.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Post-implantation: exit of pluripotency}{31}{section*.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Gastrulation: germ layer specification}{32}{section*.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Results}{33}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Data set overview}{33}{subsection.3.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Validation of DNA methylation data and chromatin accessibility data}{34}{section*.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Cell type assignment using the RNA expression data}{34}{subsection.3.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.3}Exit from pluripotency is concomitant with the establishment of a repressive epigenetic landscape}{36}{subsection.3.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.4}Multi-omics factor analysis reveals coordinated variability between the transcriptome and the epigenome during germ layer formation}{38}{subsection.3.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Data preprocessing}{39}{section*.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Model overview}{40}{section*.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.5}Characterisation of individual enhancers}{41}{subsection.3.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.6}Transcription factor motif enrichment analysis}{41}{subsection.3.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.7}Time resolution of the enhancer epigenome}{42}{subsection.3.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Mesoderm and endoderm enhancers undergo concerted demethylation and chromatin opening upon lineage specification}{44}{section*.41}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ectoderm enhancers are primed in the early epiblast}{44}{section*.42}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.8}Silencing of ectoderm enhancers precedes mesoderm and endoderm commitment}{47}{subsection.3.2.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.9}TET enzymes are required for efficient demethylation of lineage-defining enhancers}{49}{subsection.3.2.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Cell type assignment using the RNA expression}{49}{section*.47}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Validation of epigenetic measurements}{52}{section*.50}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Characterisation of the \textit {TET} TKO phenotype}{54}{section*.53}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.10}Conclusions}{55}{subsection.3.2.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.11}Limitations and future perspectives}{56}{subsection.3.2.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {A}Mathematical derivations of MOFA}{59}{Appendix.a.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Deriving the variational inference algorithm}{59}{section.a.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Variational update equations}{60}{section.a.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Evidence Lower Bound}{63}{section.a.A.3}

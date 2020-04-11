@@ -160,3 +160,8 @@ In the case of the MOFA+ model the variables that are classified as \textit{loca
 % 	\end{algorithmic}
 % 	\label{MOFAstochasticascent}
 % \end{algorithm}
+
+\subsection{A note on the implementation}
+
+The core of MOFA+ is implemented in Python, and the downstream analysis and visualisations are implemented in R. GPU acceleration is implemented using CuPy\cite{Okuta2017}, an open-source matrix library accelerated with NVIDIA CUDA.\\
+To facilitate adoption of the method, we deploy MOFA+ as open-source software\footnote{\url{https://github.com/bioFAM/MOFA2}} with multiple tutorials and a web-based analysis workbench\footnote{\url{http://www.ebi.ac.uk/shiny/mofa/}}.%, hopefully enabling a user-friendly exploration of complex single-cell data sets.

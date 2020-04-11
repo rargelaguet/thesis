@@ -1,6 +1,6 @@
-\section{Appendix: mathematical derivations of MOFA}
+\chapter{Mathematical derivations of MOFA} \label{appendix:mofa}
 
-\subsubsection{Deriving the variational inference algorithm}
+\section{Deriving the variational inference algorithm}
 
 The theoretical foundations for the variational inference scheme are described in \Cref{section:variational_inference}. Just to brief, we need to define a variational distribution of a factorised form and subsequently look for the member of this family that most closely resembles the true posterior using the KL divergence as a \textit{distance} metric. Following the mean-field principle, in MOFA+ we factorised the variational distribution as follows:
 
@@ -13,12 +13,12 @@ The theoretical foundations for the variational inference scheme are described i
 
 However, inspired by \cite{Titsias2011}, we did not adopt a fully factorised distribution as $\hat{w}_k^m$ and $s_k^m$ can hardly be assumed to be independent.
 
-To derive the variational updates we can proceed in two ways, as described in \label{section:variational_inference}. One option is to use exploit the  mean-field assumption and use calculus of variations to find the optimal distribution $q(\bfX)$ that maximises the lower bound $\Lagr(\bfX)$\cite{Bishop,Murphy}. The alternative and possibly easier approach is to define a parametric form for the distribution $q(\bfX)$ with some parameters $\bTheta$ to be of the same form as the corresponding prior distribution $p(\bfX)$. Then, one can find the gradients with respect to the parameters to obtain the coordinate ascent optimisation scheme. In our derivations we followed the first approach, but because we used conjugate priors the second one should converge to the same result.\\
+To derive the variational updates we can proceed in two ways, as described in \Cref{section:variational_inference}. One option is to use exploit the  mean-field assumption and use calculus of variations to find the optimal distribution $q(\bfX)$ that maximises the lower bound $\Lagr(\bfX)$\cite{Bishop,Murphy}. The alternative and possibly easier approach is to define a parametric form for the distribution $q(\bfX)$ with some parameters $\bTheta$ to be of the same form as the corresponding prior distribution $p(\bfX)$. Then, one can find the gradients with respect to the parameters to obtain the coordinate ascent optimisation scheme. In our derivations we followed the first approach, but because we used conjugate priors the second one should converge to the same result.\\
 Below we give the explicit update equations for every hidden variable in the MOFA+ model which are applied at each iteration of the variational inference algorithm.
 
-\subsection{Variational update equations}
+\section{Variational update equations}
 
-\subsubsection*{Factors}
+\paragraph*{Factors}
 
 For every group $g$, sample $n$ and factor $k$: \\
 
@@ -52,7 +52,7 @@ with
 \end{aligned} \end{equation}
 
 
-\subsubsection*{ARD prior on the factors}
+\paragraph*{ARD prior on the factors}
 
 For every group $g$ and factor $k$: \\
 
@@ -71,7 +71,7 @@ where:
 	\hat{b}_{gk}^\alpha &= b_0^\alpha +\frac{ \sum_{n=1}^{N_g} \la (\hat{z}_{nk}^g)^2 \ra }{2}
 \end{aligned} \end{equation}
 
-\subsubsection*{Sparsity parameter of the Factors}
+\paragraph*{Sparsity parameter of the Factors}
 
 For every group $g$ and factor $k$: \\
 
@@ -92,7 +92,7 @@ where
      \end{aligned}
 \end{equation}
 
-\subsubsection*{Feature weights}
+\paragraph*{Feature weights}
 For every view $m$, feature $d$ and factor $k$: \\
 
 Prior distribution $p(\hat{w}_{kd}^m,s_{kd}^m)$:
@@ -130,7 +130,7 @@ with
   	% \end{equation*}
 
 
-\subsubsection*{ARD prior on the weights}
+\paragraph*{ARD prior on the weights}
 
 For every view $m$ and factor $k$: \\
 
@@ -149,7 +149,7 @@ where:
 \end{aligned} \end{equation}
 
 
-\subsubsection*{Sparsity parameter of the weights}
+\paragraph*{Sparsity parameter of the weights}
 
 For every view $m$ and factor $k$: \\
 
@@ -171,7 +171,7 @@ where
 \end{equation}
 
 
-\subsubsection*{Noise (Gaussian)}
+\paragraph*{Noise (Gaussian)}
 
 For every view $m$, group $g$ and feature $d$:\\
 
@@ -191,7 +191,7 @@ where:
 \end{aligned} \end{equation}
 
 
-\subsection{Evidence Lower Bound}
+\section{Evidence Lower Bound}
 
 Although computing the ELBO is not necessary in order to estimate the posterior distribution of the parameters, it is used to monitor the convergence of the algorithm. As shown in \Cref{eq_elbo2}, the ELBO can be decomposed into a sum of two terms: (1) the expected log likelihood under the current estimate of the posterior distribution of the parameters and (2) the KL divergence between the prior and the variational distributions of the parameters:\\
 

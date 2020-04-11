@@ -45,7 +45,7 @@ As expected, we observe that the spike-and-slab prior induces more zero-inflated
 \end{figure}
 
 
-\subsubsection{Non-gaussian likelihoods}  \label{section:mofa_nongaussian_results}
+\subsubsection{Non-Gaussian likelihoods}  \label{section:mofa_nongaussian_results}
 A key improvement of MOFA with respect to previous methods is the use of non-Gaussian likelihoods to integrate data modalities with different types of readouts. In particular, as described in \Cref{section:mofa_ngaussian}, we implemented a Bernoulli likelihood to model binary data and a Poisson likelihood to model count data.\\
 To validate both likelihood models, we simulated binary and count data using the generative model and we fit two sets of models for each data type: a group of models with a Gaussian likelihood and a group of models with a Bernoulli or Poisson likelihood, respectively.\\
 Reassuringly, we observe that although the Gaussian likelihood is also able to recover the true number of factors, the models with the non-Gaussian likelihoods result in a better fit to the data:
@@ -53,7 +53,7 @@ Reassuringly, we observe that although the Gaussian likelihood is also able to r
 \begin{figure}[H]
 	\centering 	
 	\includegraphics[width=0.9\textwidth]{MOFA_nongaussian}
-	\caption{\textbf{Validation of the non-gaussian likelihood models using simulated data}.\\
+	\caption{\textbf{Validation of the non-Gaussian likelihood models using simulated data}.\\
 	(a-d) Comparison of Poisson and Gaussian likelihood models applied to count data.\\
 	(e-h) Comparison of Bernoulli and Gaussian likelihood models applied to binary data.\\
 	(a,e) The y-axis displays the ELBO for each model instance (x-axis). (b,f) The y-axis displays the mean reconstruction error for each model instance (x-axis). (c,g) The y-axis displays the number of estimated factrors for each model instance (x-axis). The horizontal dashed line marks the true number of factors $K=10$. (d,h) Distribution of reconstructed data. Plotted are the expected values of the inferred posterior distributions, not samples from the corresponding posteriors. This is why reconstructed measurements are continuous and not discrete.
@@ -135,7 +135,7 @@ Interestingly, 24 patients lacked IGHV status measurements (see grey crosses) du
 	\centering 	
 	\includegraphics[width=1.0\textwidth]{MOFA_CLL_factors12}
 	\caption{\textbf{Visualisation of the genetic signature underlying Factor 1 and 2}\\
-	(a) Absolute loadings of the top features of Factors 1 and 2 in the Mutations data.
+	(a) Absolute weights of the top features of Factors 1 and 2 in the Mutations data.
 	(b) Visualization of samples using Factors 1 and 2. The colours denote the IGHV status of the tumours; symbol shape and colour tone indicate chromosome 12 trisomy status.
 	}
 	\label{fig:MOFA_CLL_factors12}

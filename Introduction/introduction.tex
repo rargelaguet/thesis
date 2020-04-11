@@ -1,6 +1,6 @@
-\section{Introduction}
+\chapter{Introduction}
 
-\subsection{Multi-omics at single cell resolution}
+\section{Multi-omics at single cell resolution}
 
 Next-generation sequencing technologies have revolutionised the study of biological systems by enabling the genome-wide profiling of molecular layers in un unbiased manner, including the genome\cite{Fleischmann1995} the epigenome\cite{Frommer1992} and the transcriptome\cite{Lister2008,Bainbridge2006,Nagalakshmi2008,Mortazavi2008}, among others. However, bulk sequencing approaches rely on the pool of large number of cells to report an average molecular readout, and are hence limited for the study of complex biological processes where heterogeneity is expected at single cell resolution \cite{Griffiths2018,Papalexi2017,Patel2014}. \\
 The progressive development of low-input sequencing techniques resulted in an explosion of single-cell sequencing technologies, mostly for the transcriptome. In contrast to bulk protocols, single-cell techniques provide an unprecedented opportunity to study the molecular variation associated with cellular heterogeneity, lineage diversification and cell fate commitment \cite{Kolodziejczyk2015}.
@@ -21,7 +21,7 @@ Multi-modal measurements at single-cell resolution can be obtained using a varie
 Notably, the early success and rapid development of single-cell multi-modal methods has led to their recognition as Method of the year in 2019 by the journal \textit{Nature Methods}. However, their development is still in pilot stages and there is no commercial platform available, limiting its widespread use by the community. Furthermore, common challenges in (uni-modal) single-cell assays such as low coverage and high levels of technical noise become exacerbated when doing multi-modal profiling. Quoting a befitting sentence from Cole Trapnell, one of the pioneers of single-cell data analysis: \textit{When you do a multi-omic assay, you're combining all the bad things from multiple protocols}. Thus, one of the biggest challenge in integrative multi-modal analysis is to develop statistical frameworks that are capable of uncovering biological signal across multiple data modalities while overcoming all the technical biases and missing information that are inherent to single-cell experiments. 
 
 
-\subsection{Integrative analysis of multi-modal assays}
+\section{Integrative analysis of multi-modal assays}
 
 From the computational perspective, the rapid development of single-cell technologies is introducing unprecedented challenges for the statistical community, and novel computational methods need to be developed (or adapted) for interrogating the data generated \cite{Stegle2015}.\\
 The vast majority of methods for single-cell data analysis are focused on scRNA-seq. These include normalisation\cite{Lun2018}, feature selection\cite{Townes2019}, differential expression \cite{Kharchenko2014}, clustering\cite{Kiselev2017}, cell type recognition \cite{Abdelaal2019}, pseudotime inference \cite{Haghverdi2016}, detection of gene regulatory networks and batch correction \cite{Haghverdi2018}, among others. Analysis tools have been wrapped into popular platforms such as Seurat \cite{Butler2018}, Scater \cite{McCarthy2017} and Scanpy \cite{Wolf2018}.\\
@@ -43,7 +43,7 @@ Once the common coordinate framework is defined, the actual data integration str
 Local analysis refers to the study of hierarchical associations between individual features from different molecular layers. Prominent examples are genome-wide association studies (GWAS) in combination with expression quantitative trait loci (eQTL), methylation QTLs or protein QTLs \cite{VanDerWijst2018,Chen2016,Pierce2018,Bonder2016}. While eminently useful for characterising genetic variants, such association studies are inherently local and have a limited capacity to discover global maps of molecular heterogeneity that typically result from complex interactions between features. In addition, such approaches are challenging in the multi-omics setting due to the massive multiple testing problem \cite{Sul2015}.\\
 Global analysis on the other hand try to extract patterns from the full data set. This can be done by direct concatenation of all data modalities followed by the use of traditional statistical methods. Additional alternatives have been proposed that perform transformations on each data type before merging them into a common similarity network, e.g. using kernel or graph-based approaches \cite{Lanckriet2004, Wang2014}. Nonetheless, both of these approaches entail important setbacks that will be discussed and addressed in this thesis.
 
-\subsection{Thesis overview}
+\section{Thesis overview}
 
 In this PhD thesis I sought to develop computational strategies for data integration using single-cell multi-omics data. In particular my research focued on the \textit{matched} case, when cells are the common coordinate framework.
 

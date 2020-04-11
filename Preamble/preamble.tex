@@ -129,17 +129,21 @@
 
 % ********************** TOC depth and numbering depth *************************
 
-%\setcounter{secnumdepth}{2}
-%\setcounter{tocdepth}{2}
+% Spacing in the TOC
+\usepackage{tocloft}
+\renewcommand\cftchapafterpnum{\vskip1pt}
+\renewcommand\cftsecafterpnum{\vskip1pt}
 
-% The tocdepth value determines to which level the sectioning commands are printed in the ToC
-\setcounter{tocdepth}{3}
-% The secnumdepth value determines up to what level the sectioning titles are numbered
-\setcounter{secnumdepth}{3}
-
+% Depth in the TOC
 % The sectioning levels have the following numbers:
 % -1 part     1 section     3 subsubsection  5 subparagraph
 %  0 chapter  2 subsection  4 paragraph
+
+% The "tocdepth" value determines to which level the sectioning commands are printed in the ToC
+\setcounter{tocdepth}{2}  % Default was 2
+
+% The "secnumdepth" value determines up to what level the sectioning titles are numbered
+\setcounter{secnumdepth}{2}  % Default was 2
 
 
 
@@ -154,8 +158,8 @@
 
 % The default value of both \appendixtocname and \appendixpagename is `Appendices'. These names can all be changed via:
 
-%\renewcommand{\appendixtocname}{List of appendices}
-%\renewcommand{\appendixname}{Appndx}
+\renewcommand{\appendixtocname}{List of appendices}
+\renewcommand{\appendixname}{Appendix}
 
 % *********************** Configure Draft Mode **********************************
 

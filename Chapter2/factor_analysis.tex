@@ -23,7 +23,9 @@ For this thesis we adapted the graphical notations from~\cite{Dietz2010-technica
 With the exponential growth in the use of high-throughput genomics, biological data sets are increasingly high dimensional, both in terms of samples and features. A key principle of biological data sets is that variation between the features results from differences in underlying, often unobserved, processes. Such processes, whether driven by biological or technical effects, are manifested by coordinated changes in multiple features. This key assumption sets off an entire statistical framework of exploiting the redundancy encoded in the data set to learn the (latent) sources of variation in an unsupervised fashion. This is the aim of dimensionality reduction techniques, or latent variable models (LVMs) \cite{Komili2008, Stegle2012, Leek2007, Pournara2007, Dai2017, Genevieve2018, Meng2016}.
 %Missing ref Meng2016
 
+
 \subsubsection{General mathematical formulation}
+
 Given a dataset $\bfY$ of $N$ samples and $D$ features, LVMs attempt to exploit the dependencies between the features by reducing the dimensionality of the data to a potentially small set of $K$ latent variables, also called factors. The mapping between the low-dimensional space and the high-dimensional space is performed via a function $f(\bfX|\bTheta)$ that depends on some parameters $\bTheta$.\\
 The choice of $f(\bfX|\bTheta)$ is essentially the field of dimensionality reduction. A trade-off exists between complexity and interpretation: while non-linear functions such as deep neural networks provide more explanatory power, this leads to a considerable challenges in interpretation \cite{Zhang2018_NN}. Hence, for most applications where interpretability is important, $f(\bfX|\bTheta)$ is assumed to be linear \cite{XX}:
 % \begin{equation} 
@@ -32,12 +34,14 @@ The choice of $f(\bfX|\bTheta)$ is essentially the field of dimensionality reduc
 \begin{equation} \label{eq:linear_model}
 	\mathbf{Y} = \mathbf{Z}\mathbf{W}^{T}
 \end{equation}
-where $\bfZ \in \R^{N \times K}$ is a matrix that contains the low-dimensional representation for each sample (i.e. the factors). The matrix $\bfW \in \R^{D \times K}$ contains the weights or loadings, which provide the linear mapping between the features and the factors.\\
+where $\bfZ \in \R^{N \times K}$ is a matrix that contains the low-dimensional representation for each sample (i.e. the factors). The matrix $\bfW \in \R^{D \times K}$ contains the weights, which provide the linear mapping between the features and the factors.\\
 Note that the aim in dimensionality reduction is to exploit the coordinated heterogeneity between features, and hence features are assumed to be centered without loss of generality.
 
 The inference procedure consists in learning the values of all unobserved variables, including factors and weights. As we shall demonstrate, different inference schemes and assumptions on the prior distributions lead to significantly different model outputs \cite{Rattray2009}.
 
+
 \subsubsection{Principal component Analysis} \label{section:pca}
+
 Principal Component Analysis (PCA) is the most popular technique for dimensionality reduction \cite{Hotelling1933,Ringner2008}. Starting from \Cref{eq:linear_model}, two formulations of PCA exist \cite{Bishop}. In the maximum variance formulation, the aim is to infer an orthogonal projection of the data onto a low-dimensional space such that variance explained by the projected data is maximised:
 
 \begin{figure}[H]
@@ -53,7 +57,7 @@ For a single principal component, the optimisation problem is:
 	\argmax_{\|\bfw\|=1} = \bfw_1^T \bfY^T \bfY \bfw
 \end{equation}
 
-where $\bfY^T \bfY=\bfS \in \R^{D \times D}$ is the data covariance matrix and $\bfw_1^T$ is the vector of loadings. \\
+where $\bfY^T \bfY=\bfS \in \R^{D \times D}$ is the data covariance matrix and $\bfw_1^T$ is the vector of weights. \\
 The $k$-th principal component can be found by subtracting from $\bfY$ the reconstructed data by the previous $k-1$ principal components. If we define $\bfz_k=\bfw_k^T \bfY$ to be the $k$-th principal component:
 \[
 	\hat{\bfY} = \bfY - \sum_{k=1}^{K} (\bfz_k \bfw_k^T)
@@ -82,7 +86,7 @@ Assuming again centered data, the variance of $\bfy_{n}$ is $\|\bfy_{n}\| = \bfy
 	\label{fig:pca2}
 \end{figure}
 
-The main strength of PCA relies on its simplicity and closed form solution. Additionally, the linear mapping has the advantage of yielding interpretable loadings, so that inspection of $\bfw_k$ reveals which features are jointly affected by the $k$-th principal component.\\
+The main strength of PCA relies on its simplicity and closed form solution. Additionally, the linear mapping has the advantage of yielding interpretable feature weights, so that inspection of $\bfw_k$ reveals which features are jointly affected by the $k$-th principal component.\\
 However, PCA suffers from serious drawbacks when applying it to real data sets \cite{Li2017b}. First, biological measurements are inherently noisy, and there is no explicit account of noise in PCA. In practice, high variance components are often asociated with signal whereas low-variance components are assumed to be noise, but an ideal model should explicitly disentangle the uncoordinated variability that is attributed to noise from the coordinated variability that is characterised as signal. Second, in its original formulation, no missing data is allowed \cite{Ilin2010}. Third, there is no rationality on how to evaluate the fit and perform model selection. Finally, it does not offer a principled way of modelling prior information about the data.
 
 \subsubsection{Probabilistic Principal Component Analysis and Factor Analysis} \label{section:probabilistic_pca}
@@ -108,7 +112,7 @@ The corresponding graphical model is:
 \begin{figure}[H]
 	\centering
 	\input{graphical_models/pPCA}
-	\caption{Graphical model for probabilistic PCA. The latent variables are modelled as random variables, whereas the loadings and the noise are modelled as deterministic parameters.}
+	\caption{Graphical model for probabilistic PCA. The latent variables are modelled as random variables, whereas the weights and the noise are modelled as deterministic parameters.}
 	\label{fig:pPCA}
 \end{figure}
 
@@ -150,7 +154,7 @@ The corresponding graphical model is:
 
 A key advantage of the full Bayesian treatment is that it explicitly captures uncertainity on the estimation of all unobserved variables, as opposed to the probabilistic PCA model \cite{Bishop1999a,Bishop1999b}. Yet, more importantly, the use of (hierarchical) prior distributions allow different modelling assumptions to be encoded, providing a flexible and principled approach to extend PCA to a myriad of modelling scenarios, including multi-view generalisations \cite{Klami2008,Virtanen2012,Klami2015,Bunte2016,Khan2014,Zhao2016}.
 
-As an example, a major challenge in PCA is how to determine the dimensionality of the latent space (i.e. the number of principle components). As we will show, the use of hierarchical prior distributions allows the model to introduce sparsity assumptions on the loadings in such a way that the model automatically learns the number of factors.\\
+As an example, a major challenge in PCA is how to determine the dimensionality of the latent space (i.e. the number of principle components). As we will show, the use of hierarchical prior distributions allows the model to introduce sparsity assumptions on the weights in such a way that the model automatically learns the number of factors.\\
 In the context of Factor Analysis, one the first sparsity priors to be proposed was the Automatic Relevance determination (ARD) prior \cite{Neal1995,Mackay1996,Bishop1999a,Bishop1999b}. 
 \begin{equation*} \label{eq:ard}
 	p(\bfW|\balpha) = \prod_{k=1}^{K} \Ndist{\bfw_{:,k}}{0,\frac{1}{\alpha_{k}}\I_{D}} \\
@@ -168,7 +172,7 @@ Second, performing inference on the variable $\balpha = \{ \alpha_1, \cdots, \al
 
 \begin{figure}[H] \begin{center}
 	\includegraphics[width=0.8\textwidth]{Chapter2/Figs/hinton}
-            \caption[(Copied from Damien's thesis) Hinton plot of the loading matrix for a Bayesian Factor Analysis model with an ARD prior]{Hinton plots display the values of the loading matrix, similar to a heatmap, where bigger squares depict larger loadings. Shown are the Hinton plots for (a) the true weights, (b) the infered weights by a Factor Analysis model with no ARD prior (middle), and (c) the infered weights by a Factor Analysis model with ARD prior per factor. This figure was generated using simulated data with $N=100$ samples, $D=10$ features and $K=3$ factors.}
+            \caption[(Copied from Damien's thesis) Hinton plot of the loading matrix for a Bayesian Factor Analysis model with an ARD prior]{Hinton plots display the values of the loading matrix, similar to a heatmap, where bigger squares depict larger weights. Shown are the Hinton plots for (a) the true weights, (b) the infered weights by a Factor Analysis model with no ARD prior (middle), and (c) the infered weights by a Factor Analysis model with ARD prior per factor. This figure was generated using simulated data with $N=100$ samples, $D=10$ features and $K=3$ factors.}
 	\label{fig:hinton}
 \end{center} \end{figure}
 
@@ -176,7 +180,7 @@ Second, performing inference on the variable $\balpha = \{ \alpha_1, \cdots, \al
 
 Sparse extensions of the Bayesian factor analysis model have been proposed as a regularisation mechanism but also to model inherent assumptions regarding the sparse nature of biological data \cite{Stegle2012,Gao2013}.\\
 The variability observed in biological data is driven both by technical factors and biological factors. Thechnical factors (i.e. batch effects) tend to be relatively strong and alter the expression of a large proportion of genes, whereas the biological factors are potentially weak effects driven by changes in small gene regulatory networks \cite{Gao2013}. Hence, a practical factor analysis model should be able to learn factors with different degrees of sparsity.\\
-The ARD prior proposed in \Cref{eq:ard} allows entire factors to be dropped out from the model, but it provides a weak degree of regularisation when it comes to inactivating individual loadings within the active factors.
+The ARD prior proposed in \Cref{eq:ard} allows entire factors to be dropped out from the model, but it provides a weak degree of regularisation when it comes to inactivating individual weights within the active factors.
 
 A sparse generalisation of the Factor Analysis model proposed above can be achieved by combining the ARD prior with a spike-and-slab prior \cite{Mitchell1988,Titsias2011}:
 \begin{align}
@@ -190,10 +194,10 @@ The corresponding graphical model is:
 \begin{figure}[H] \begin{center}
 	\input{graphical_models/bayesian_sparseFA}
 	\label{fig:bayesianFA}
-	\caption{Graphical model for Bayesian sparse Factor Analysis. A double sparsity-inducing prior is used on the loadings: an ARD prior to prune inactive factors and a spike-and-slab prior to inactive individual features within the active factors.}
+	\caption{Graphical model for Bayesian sparse Factor Analysis. A double sparsity-inducing prior is used on the weights: an ARD prior to prune inactive factors and a spike-and-slab prior to inactive individual features within the active factors.}
 \end{center} \end{figure}
 
-The spike-and-slab prior is effectively a mixture model where features are sampled from a zero-inflated gaussian distribution, where $\theta_k \in (0,1)$ dictates the level of sparsity per factor (i.e. how many active features). A value of $\theta_k$ close to $0$ implies that most of the weights of factor $k$ are shrinked to $0$ (i.e. a sparse factor), whereas a value of $\theta_k$ close to $1$ implies that most of the weights are non-zero (i.e. dense factors). By learning $\theta_k$ from the data, the model naturally accounts for combinations of sparse and dense factors.
+The spike-and-slab prior is effectively a mixture model where features are sampled from a zero-inflated Gaussian distribution, where $\theta_k \in (0,1)$ dictates the level of sparsity per factor (i.e. how many active features). A value of $\theta_k$ close to $0$ implies that most of the weights of factor $k$ are shrinked to $0$ (i.e. a sparse factor), whereas a value of $\theta_k$ close to $1$ implies that most of the weights are non-zero (i.e. dense factors). By learning $\theta_k$ from the data, the model naturally accounts for combinations of sparse and dense factors.
 
 
 % \subsubsection{Inference}
@@ -235,7 +239,7 @@ With the following prior probability distributions:
 	p(\epsilon^{1}) &= \Ndist {\epsilon^{1}}{\tau_{1}^{-1}} \\
 	p(\epsilon^{2}) &= \Ndist {\epsilon^{2}}{\tau_{2}^{-1}}
 \end{align*}
-As in \cite{Tipping1999}, the loadings and the variance of the noise are assumed to be non-probabilistic parameters, whereas the factors are probabilistic unobserved variables. This yields the following likelihood functions:
+As in \cite{Tipping1999}, the weights and the variance of the noise are assumed to be non-probabilistic parameters, whereas the factors are probabilistic unobserved variables. This yields the following likelihood functions:
 \begin{align} \label{eq:probabilistic_cca_likelihood}
 	p(\bfY^{1}|\bfW^{1},\bfZ,\tau_{1}) &= \prod_{n=1}^{N} \prod_{d=1}^{D_1} \Ndist{y^{1}_{n,d}}{(\bfw_{:,k}^{1})^T \bfz_{n},\tau_{1}^{-1}} \\
 	p(\bfY^{2}|\bfW^{2},\bfZ,\tau_{2}) &= \prod_{n=1}^{N} \prod_{d=1}^{D_2} \Ndist{y^{2}_{n,d}}{(\bfw_{:,k}^{2})^T \bfz_{n},\tau_{2}^{-1}} \nonumber
@@ -264,7 +268,7 @@ A fully Bayesian treatment of CCA followed based on exactly the same principle p
 	p(\balpha) &= \prod_{k=1}^{K} \Gdist{\alpha_k}{a_0^\alpha, b_0^\alpha}
 \end{align*}
 Resulting in the same likelihood model as in \Cref{eq:probabilistic_cca_likelihood}. Yet, notice that an ARD is introduced per factor, allowing an automatic inference of the dimensionality in the latent subspace.
-Also, there is some flexibility in the definition of noise. An independent noise term can be defined per view or per per feature. One could also model correlated noise by generalising the distribution to a multivariate gaussian with full-rank covariance. \cite{Wang2007,Klami2013}.
+Also, there is some flexibility in the definition of noise. An independent noise term can be defined per view or per per feature. One could also model correlated noise by generalising the distribution to a multivariate Gaussian with full-rank covariance. \cite{Wang2007,Klami2013}.
 
 The corresponding graphical model is:
 
