@@ -8,8 +8,8 @@ We validated the new features of MOFA+ using simulated data drawn from its gener
 
 We simulated data with varying sample sizes, with the other dimensions fixed to $M=3$ views, $G=3$ groups, $D=1000$ features (per view), and $K=25$ factors.
 
-We trained a set of models with (deterministic) variational inference (VI) and a set of models with stochastic variational inference (SVI). Overall, we observe that SVI yields Evidence Lower Bounds that matched those obtained from conventional inference across a range of batch sizes, learning rates and forgetting rates.\\
-In terms of speed, GPU-accelerated SVI inference was up to $\approx$ 20x faster than VI, with speed differences becoming more pronounced with increasing number of cells. For completeness, we also compared the the convergence time estimates for SVI when using CPU versus GPU. We observe that for large sample sizes there is a speed improvement even when using CPUs, although these advantages become more prominent when using GPUs.
+We trained a set of models with (deterministic) variational inference (VI) and a set of models with stochastic variational inference (SVI). Overall, we observe that SVI yields Evidence Lower Bounds that matched those obtained from conventional inference across a range of batch sizes, learning rates and forgetting rates (\Cref{fig:mofa2_stochastic_validation}).\\
+In terms of speed, GPU-accelerated SVI inference was up to $\approx$ 20x faster than VI, with speed differences becoming more pronounced with increasing number of cells (\Cref{fig:mofa2_stochastic_speed}). For completeness, we also compared the the convergence time estimates for SVI when using CPU versus GPU. We observe that for large sample sizes there is a speed improvement even when using CPUs, although these advantages become more prominent when using GPUs.
 
 % COPIED
 \begin{figure}[H]
@@ -97,8 +97,7 @@ The characterisation of other factors is described in\cite{Argelaguet2020} and i
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\linewidth]{mofa2_scrna_mesoderm_factor}
-	\caption[]{ \\
-	\textbf{Characterisation of Factor 4 as mesoderm commitment.} \\
+	\caption[]{\textbf{Characterisation of Factor 4 as mesoderm commitment.} \\
 	(a) Beeswarm plot of Factor values for each group. Cells are grouped and coloured by cell type. \\
 	(b) Plot of gene weights. Highlighted are the top five genes with largest weight (in absolute values) \\
 	(c) Beeswarm plot of Factor values for each group. Cells are coloured by the expression of the two genes with largest weight (in absolute values).
@@ -109,8 +108,7 @@ The characterisation of other factors is described in\cite{Argelaguet2020} and i
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\linewidth]{mofa2_scrna_metabolism_factor}
-	\caption[]{ \\
-	\textbf{Characterisation of Factor 3 as cell-to-cell differences in metabolic activity.} \\
+	\caption[]{\textbf{Characterisation of Factor 3 as cell-to-cell differences in metabolic activity.} \\
 	(a) Beeswarm plot of Factor values for each group. Cells are grouped and coloured by cell type. \\
 	(b) Plot of gene weights. Highlighted are the top seven genes with largest weight (in absolute values) \\
 	(c) Gene set enrichment analysis applied to the gene weights using the Reactome gene sets\cite{Fabregat2015}. Significance is assessed via a parametric. Resulting p-values were adjusted for multiple testing using the Benjamini-Hochberg procedure.
@@ -120,10 +118,12 @@ The characterisation of other factors is described in\cite{Argelaguet2020} and i
 
 Interestingly, Factors display different signatures of activity (variance explained) across developmental stages. For example, the variance explained by Factor 1 remains constant across developmental progression (\Cref{fig:mofa2_scrna_variance_explained}), indicating that commitment to ExE endoderm fate occurs early in the embryo and the proportion of this cell type remains relatively constant. In contrast, the activity of Factor 4 increases with developmental progression, consistent with a higher proportion of cells committing to mesoderm after ingression through the primitive streak. 
 
-In conclusion, this application shows how MOFA+ can identify biologically relevant structure in \textit{structured} scRNA-seq datasets.
+In conclusion, this application shows how MOFA+ can identify biologically relevant structure in multi-group scRNA-seq datasets.
 
 
 \subsection{Identification of context-dependent methylation signatures associated with cellular diversity in the mammalian cortex}
+
+\subsubsection{Data overview and processing}
 
 As a second use case, we considered how MOFA+ can be used to investigate cellular heterogeneity  in epigenetic signatures between populations of neurons. This application illustrates how a multi-group and multi-view structure can be defined from seemingly uni-modal data.
 
@@ -131,19 +131,19 @@ We considered a data set of of 3,069 cells isolated from the frontal cortex of y
 
 Here we used MOFA+ to dissect the cellular heterogeneity associated with mCH and mCG in the mouse frontal cortex. As input data we quantified mCH and mCG levels at gene bodies, promoters and putative enhancer elements. Each combination of genomic and sequence context was defined as a separate view.\\
 As described in Chapters 1 and 3, methylation levels were calculated per cell and genomic feature using a binomial model where the number of successes correspond to the number of reads that support methylation (or accessibility) and the number of trials the total number of reads.\\
-Finally, to explore the influence of the neuron's location we grouped cells according to their cortical layer: Deep, Middle or Superficial (\Cref{Luo2017}). Notably, the resulting data set is extremely sparse, which hampers the use of conventional dimensionality reduction techniques.The probabilistic framework underlying MOFA+ naturally enables the handling of missing values by ignoring the corresponding terms in the likelihood function.
+Finally, to explore the influence of the neuron's location we grouped cells according to their cortical layer: Deep, Middle or Superficial \cite{Luo2017}. Notably, the resulting data set is extremely sparse, which hampers the use of conventional dimensionality reduction techniques.The probabilistic framework underlying MOFA+ naturally enables the handling of missing values by ignoring the corresponding terms in the likelihood function (\Cref{section:mofa_missing_values}).
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\linewidth]{mofa2_scmet_datastructure}
-	\caption[]{}
+	\caption[]{\textbf{Overview of the single-cell DNA methylation data set}\\. 
+	The tile plot shows the structure of the input data in terms of modalities (rows) versus groups (columns), with associated dimensionalities (D for features, N for samples). The color displays the fraction of missing values for each combination of sample and modality.}
 	\label{fig:mofa2_scmet_datastructure}
 \end{figure}
-%Figure S7: Overview of the single-cell DNA methylation data set. The tile plot shows the structure of the input data in terms of modalities (rows) versus groups (columns), with associated dimensionalities (D for features, N for samples). The color displays the fraction of missing values for each combination of sample and modality.
 
+\subsubsection{Model overview}
 
-% Copied from bioRxiv
-MOFA+ identifies 10 factors with a minimum variance explained of 1\% in at least one data modality. 
+In this data set, MOFA+ identifies 10 factors with a minimum variance explained of 1\% in at least one data modality (\Cref{fig:mofa2_scmet_r2}).
 
 % TO REWRITE
 \begin{figure}[H]
@@ -163,48 +163,44 @@ Factor 1, the major source of variation, is linked to the existence of inhibitor
 	\centering
 	\includegraphics[width=0.95\linewidth]{mofa2_scmet_factor1}
 	\caption[]{
-	\textbf{Characterisation of Factor 1 as DNA methylation signatures distinguishing inhibitory versus excitatory cell types\cite{Luo2016}.} \\
-	(a) Beeswarm plots of Factor values per group (cortical layer). In the left plot, cells are coloured by neuron class. In the middle and right plots the cells are coloured by average mCG and mCH levels (\%), respectively, of the top 100 enhancers with the largest weights. \\
+	\textbf{Characterisation of Factor 1 as DNA methylation signatures distinguishing inhibitory versus excitatory cell types\cite{Luo2017}.} \\
+	(a) Beeswarm plots of Factor 1 values per group (cortical layer). In the left plot, cells are coloured by neuron class. In the middle and right plots the cells are coloured by average mCG and mCH levels (\%), respectively, of the top 100 enhancers with the largest weights. \\
 	(b) Correlation of enhancer mCG weights (x-axis) and mCH weights (y-axis)
 	}
 	\label{fig:mofa2_scmet_factor1}
 \end{figure}
 
-
-Factor 2 captures genome-wide differences in global mCH levels (R=0.99, not shown), most likely to be a technical source of variation.
-
 % TO REWRITE
-Factor 3 captures heterogeneity linked to the increased cellular diversity along cortical depth, with the Deep layer displaying significantly more diversity of excitatory cell types than the Superficial layer (\Cref{fig:mofa2_scmet_factor3}).  
+Factor 2 captures genome-wide differences in global mCH levels (R=0.99, figure not shown), most likely to be a technical source of variation.\\
+Factor 3 captures heterogeneity linked to the increased cellular diversity along cortical depth, with the Deep layer displaying significantly more diversity of excitatory cell types than the Superficial layers (\Cref{fig:mofa2_scmet_factor3}).  
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.95\linewidth]{mofa2_scmet_factor1}
+	\includegraphics[width=0.95\linewidth]{mofa2_scmet_factor3}
 	\caption[]{
-	\textbf{Characterisation of Factor 3 as increased cellular diversity along cortical depth.} \\
-	(a) Beeswarm plots of Factor values per group (cortical layer). In the left plot, cells are coloured by neuron class. In the middle and right plots the cells are coloured by average mCG and mCH levels (\%), respectively, of the top 100 enhancers with the largest weights. \\
+	\textbf{Characterisation of Factor 3 as DNA methylation signatures associated with increased cellular diversity along cortical depth.} \\
+	(a) Beeswarm plots of Factor 3 values per group (cortical layer). In the left plot, cells are coloured by neuron class. In the middle and right plots the cells are coloured by average mCG and mCH levels (\%), respectively, of the top 100 enhancers with the largest weights. \\
 	(b) Correlation of enhancer mCG weights (x-axis) and mCH weights (y-axis).
 	}
-	\label{fig:mofa2_scmet_factor1}
+	\label{fig:mofa2_scmet_factor3}
 \end{figure}
 
-The (linear) MOFA factors can be combined by further non-linear dimensionality reduction algorithms such as UMAP or t-SNE. In this case, we show that the t-SNE projections reveals the existence of multiple subpopulations of both excitatory and inhibitory cell types. Notably, the MOFA+ factors are significantly better at identifying these subpopulations than the conventional approach of using Principal Component Analysis with imputed measurements:
+Interestingly, in addition to the dominant mCG signal, MOFA+ connects Factor 1 and Factor 3 to variation in mCH, which could suggest a potential role of mCH in cell type commitment events. This has been highlight debated, and we propose that this hypothesis could be supported if the genomic regions that show mCH signatures are different than the ones marked by the (conventional) mCG signatures. In the MOFA+ setting, this implies no relationship between the mCH and mCG feature weights. However, for each factor and genomic context we observe a strong positive dependency between mCG and mCH weights, indicating that mCH and mCG signatures are highly correlated and target similar loci.\\
+Taken together, our results support the hypothesis that the presence of mCH is more likely to be the result of non-specific \textit{de novo} methylation as a by-product of the establishment of mCG.
+
+\subsubsection{Non-linear dimensionality reduction}
+
+The (linear) MOFA factors can be combined by further non-linear dimensionality reduction algorithms such as UMAP or t-SNE. In this case, we show that the t-SNE projections reveals the existence of multiple subpopulations of both excitatory and inhibitory cell types. Notably, the MOFA+ factors are significantly better at identifying these subpopulations than the conventional approach of using Principal Component Analysis with imputed measurements (\Cref{mofa2_scmet_dimred}).
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.90\linewidth]{mofa2_scmet_dimred}
 	\caption[]{
 	\textbf{Comparison of MOFA+ Factors and Principal Components as input to t-SNE.}\\
-	The scatter plots display t-SNE projections when using as input MOFA+ factors (left) or principal components (right). Each dot represents a cell, coloured by cell type\cite{Luo2016}. To ensure a fair comparison we used the same number of PCs and MOFA+ Factors ($K=15$). Feature-wise imputation of missing values is applied for the PCA.
+	The scatter plots display t-SNE projections when using as input MOFA+ factors (left) or principal components (right). Each dot represents a cell, coloured by cell type\cite{Luo2017}. To ensure a fair comparison we used the same number of PCs and MOFA+ Factors ($K=15$). Feature-wise imputation of missing values is applied for the PCA.
 	}
 	\label{fig:mofa2_scmet_dimred}
 \end{figure}
-
-
-% TO REWRITE
-% Interestingly, in addition to the dominant mCG signal, MOFA+ connects Factor 1 and Factor 3 to variation in mCH, which suggest a role of mCH in cellular diversity. We hypothesise that this could be supported if the genomic regions that show mCH signatures are different than the ones marked the conventional mCG signatures. To investigate this, we correlated the mCH and mCG feature loadings for each factor and genomic context (Figure 3e and Figure S14). In all cases we observe a strong positive dependency, indicating that mCH and mCG signatures are spatially correlated and target similar loci.
-% Taken together, these results supports the hypothesis that mCH and mCG tag the same genomic loci and are associated with the same sources of variation, suggesting that the presence of mCH may be the result of non-specific \textit{de novo} methylation as a by-product of the establishment of mCG.
-
-
 
 \subsection{Identification of molecular signatures of lineage commitment during mammalian embryogenesis}
 

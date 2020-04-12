@@ -110,7 +110,7 @@ For more details on the data generation steps we refer the reader to \cite{Dietr
 
 \subsubsection{Model overview}
 
-In this data set, MOFA recovered $K=10$ factors, each one explaining a minimum of 3\% of variance in at least one assay. Interestingly, MOFA detects Factors which are shared across several data modalities (Factors 1 and 2, sorted by variance explained). Some factors capture sources of covariation between two data modalities (Factor 3 and 5, active in the RNA expression and drug response). In addition, some factors capture variation that is unique to a single data modality (Factor 4, active in the RNA expression data).\\
+In this data set, MOFA recovered $K=10$ factors, each one explaining a minimum of 3\% of variance in at least one assay. Interestingly, MOFA detects factors which are shared across several data modalities (Factors 1 and 2, sorted by variance explained). Some factors capture sources of covariation between two data modalities (Factor 3 and 5, active in the RNA expression and drug response). In addition, some factors capture variation that is unique to a single data modality (Factor 4, active in the RNA expression data).\\
 All together, the 10 MOFA factors explained 41\% of variance in the drug response data, 38\% in the mRNA expression, 24\% in the DNA methylation and 24\% in somatic mutations.
 
 \begin{figure}[H]
@@ -119,12 +119,12 @@ All together, the 10 MOFA factors explained 41\% of variance in the drug respons
 	\caption{\textbf{Application of MOFA to a study of chronic lymphocytic leukaemia. Model overview.}\\
 	(a) Data overview. Assays are shown in different rows ($D$ = number of features) and samples ($N$) in columns, with missing samples shown using grey bars. Notice that some samples are missing entire assays.\\
 	(b) Variance explained (\%) by each Factor in each assay.\\
-	(c) Total variance explained (\%) for each assay by all Factors.
+	(c) Total variance explained (\%) for each assay by all factors.
 	}
 	\label{fig:MOFA_CLL_overview}
 \end{figure}
 
-The first two Factors are the most interesting from a molecular perspective, as they capture a phenotypic effect that is manifested across all molecular layers, from the genome to the transcriptome and ultimately in the drug response assay.\\
+The first two factors are the most interesting from a molecular perspective, as they capture a phenotypic effect that is manifested across all molecular layers, from the genome to the transcriptome and ultimately in the drug response assay.\\
 To annotate Factors 1 and 2 we proceeded to visualise the feature weights, starting by the (binary) somatic mutation data, as it is the simplest data modality to interpret. Inspection of the top weights revealed that Factor 1 was associated with the mutation status of the immunoglobulin heavy-chain variable (IGHV) region, while Factor 2 was aligned with trisomy of chromosome 12 (\Cref{fig:MOFA_CLL_factors12}).\\
 Remarkably, in a completely unsupervised fashion, MOFA recovered the two most important clinical markers in CLL as the two major axes of molecular disease heterogeneity \cite{Fabbri2016,Bulian2017,Crombie2017}.
 
@@ -183,7 +183,7 @@ On the drug response data the weights highlight kinase inhibitors targeting the 
 	\label{fig:MOFA_CLL_Factor1}
 \end{figure}
 
-\subsubsection{Characterisation of other Factors}
+\subsubsection{Characterisation of other factors}
 
 Despite their clinical importance, Factor 1 (IGHV status) and Factor 2 (chr12 trisomy) they explain less than 20\% variability in each data modality, suggesting the existence of more subtle sources of variation. As an example, we will also characterise Factor 5, which explains 2\% of the variance in the mRNA and 6\% of variance in the drug response.\\
 As mentioned in \Cref{mofa:downstream}, instead of exploring the feature weights individually, factors can be annotated using gene set annotations. This procedure is particularly appealing for RNA expression data, as a rich amount of resources exist that have categorised genes into ontologies in terms of biological pathways, molecular function and cellular components  \cite{Fabregat2015,Ashburner2000}.\\
@@ -213,7 +213,7 @@ In agreement with the findings from the mRNA view, the drugs with largest weight
 \subsubsection{Prediction of clinical outcomes}
 
 We conjectured that the integration of multiple molecular layers could allow an improved prediction of the patients' clinical outcome.\\
-To evaluate the utility of the MOFA factors as predictors of clinical outcomes we fit Cox regression models \cite{Cox1972} using the patients' time to next treatment (TTT) as a response variable. Two types of analysis were performed: a univariate analysis where each Factor was independently associated with TTT, and a multivariate analysis where the combination of all Factors were used to predict TTT (\Cref{fig:MOFA_CLL_Cox}).\\
+To evaluate the utility of the MOFA factors as predictors of clinical outcomes we fit Cox regression models \cite{Cox1972} using the patients' time to next treatment (TTT) as a response variable. Two types of analysis were performed: a univariate analysis where each Factor was independently associated with TTT, and a multivariate analysis where the combination of all factors were used to predict TTT (\Cref{fig:MOFA_CLL_Cox}).\\
 In the univariate Cox models, we observe  that Factor 1 (IGHV status), Factor 7 (associated with chemo-immunotherapy treatment prior to sample collection) and Factor 8 (enriched for Wnt signalling) were significant predictors of TTT. Accordingly, when splitting patients into binary groups based on the corresponding Factor values, we observe clear differences in the survival curves.\\
 In the multivariate Cox model, MOFA (Harrell's C-Index C=0.78) outperformed all other input settings, including PCA on single-omic data (C=0.68-0.72), individual genetic markers (C=0.66) as well PCA applied to the concatenated data matrix (C=0.74).
 
@@ -224,7 +224,7 @@ In the multivariate Cox model, MOFA (Harrell's C-Index C=0.78) outperformed all 
 	\centering 	
 	\includegraphics[width=0.9\textwidth]{MOFA_CLL_Cox}
 	\caption{
-	\textbf{Association analysis between MOFA Factors and clinical putcome.}\\
+	\textbf{Association analysis between MOFA factors and clinical putcome.}\\
 	(a) Association of MOFA factors to time to next treatment using a univariate Cox regression with N = 174 samples (96 of which are uncensored cases) and p-values based on the Wald statistic. Error bars denote 95\% confidence intervals. Numbers on the right denote p-values for each predictor.\\
 	(b) Kaplan-Meier plots measuring time to next treatment for the individual MOFA factors. The cut-points on each factor were chosen using maximally selected rank statistics, and p-values were calculated using a log-rank test on the resulting groups.\\
 	(c) Prediction accuracy of time to treatment for N = 174 patients using multivariate Cox regression trained with the 10 MOFA factors, as well using the first 10 principal components applied to single data modalities and the full data set. Shown are average values of Harrell's C-index from fivefold cross-validation. Error bars denote standard error of the mean.

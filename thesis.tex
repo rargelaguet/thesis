@@ -4,8 +4,8 @@
 %\documentclass[a4paper,11pt,times,custombib,print,index,custommargin]{Classes/PhDThesisPSnPDF}
 
 % Online version
-%\documentclass[a4paper,11pt,times,custombib,custommargin]{Classes/PhDThesisPSnPDF}
-\documentclass[a4paper,11pt,times,custombib,custommargin,draftclassic]{Classes/PhDThesisPSnPDF}
+\documentclass[a4paper,11pt,times,custombib,custommargin]{Classes/PhDThesisPSnPDF}
+%\documentclass[a4paper,11pt,times,custombib,custommargin,draftclassic]{Classes/PhDThesisPSnPDF}
 
 
 % ******************************************************************************
@@ -142,7 +142,7 @@
 
 % *********************** Adding TOC and List of Figures ***********************
 
-\tableofcontents
+%\tableofcontents
 
 %\listoffigures
 % \listoftables
@@ -156,11 +156,11 @@
 \mainmatter
 
 % Introduction
-\include{Introduction/introduction}
+%\include{Introduction/introduction}
 
 % Chapter 1
-\include{Chapter1/introduction}
-\include{Chapter1/scnmt-seq}
+%\include{Chapter1/introduction}
+%\include{Chapter1/scnmt-seq}
 
 % Chapter 2
 %\include{Chapter2/introduction}
@@ -183,7 +183,7 @@
 \begin{appendices}
 
 \input{Appendix/appendix1}
-% \include{Appendix2/appendix2}
+\input{Appendix/appendix2}
 % \include{Appendix3/appendix3}
 % \include{Appendix4/appendix4}
 
@@ -200,6 +200,6 @@
 % \bibliographystyle{apalike}
 \cleardoublepage
 
-\printbibliography
+%\printbibliography
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  11 APR 2020 12:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  12 APR 2020 12:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -14,12 +14,6 @@ LaTeX Warning: You have requested document class `Classes/PhDThesisPSnPDF',
 Document Class: PhDThesisPSnPDF 2016/04/23 A PhD thesis class file by Krishna K
 umar (v2.3.1)
 https://github.com/kks32/phd-thesis-template/
-
-Class PhDThesisPSnPDF Warning: Draft is ON. Don't forget to turn it off in your
- final version. This is the classic version of draft. Use `draft' for enhanced 
-mode, which adds watermark with timestamp, line numbering, and version number. 
-on input line 238.
-
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/bk11.clo
@@ -963,6 +957,18 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layoutvoffset=\dimen130
 \Gm@dimlist=\toks27
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box28
+\beforetitleunit=\skip61
+\aftertitleunit=\skip62
+\ttl@plus=\dimen131
+\ttl@minus=\dimen132
+\ttl@toksa=\toks28
+\titlewidth=\dimen133
+\titlewidthlast=\dimen134
+\titlewidthfirst=\dimen135
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
@@ -970,12 +976,12 @@ nment
 (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count151
-\float@exts=\toks28
-\float@box=\box28
-\@float@everytoks=\toks29
-\@floatcapt=\box29
+\float@exts=\toks29
+\float@box=\box29
+\@float@everytoks=\toks30
+\@floatcapt=\box30
 )
-\@float@every@algorithm=\toks30
+\@float@every@algorithm=\toks31
 \c@algorithm=\count152
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
@@ -984,13 +990,13 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen131
-\captionmargin@=\dimen132
-\captionwidth=\dimen133
-\caption@tempdima=\dimen134
-\caption@indent=\dimen135
-\caption@parindent=\dimen136
-\caption@hangindent=\dimen137
+\captionmargin=\dimen136
+\captionmargin@=\dimen137
+\captionwidth=\dimen138
+\caption@tempdima=\dimen139
+\caption@indent=\dimen140
+\caption@parindent=\dimen141
+\caption@hangindent=\dimen142
 )
 \c@ContinuedFloat=\count153
 Package caption Info: float package is loaded.
@@ -1006,51 +1012,50 @@ Package: placeins 2005/04/18  v 2.2
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
-\heavyrulewidth=\dimen138
-\lightrulewidth=\dimen139
-\cmidrulewidth=\dimen140
-\belowrulesep=\dimen141
-\belowbottomsep=\dimen142
-\aboverulesep=\dimen143
-\abovetopsep=\dimen144
-\cmidrulesep=\dimen145
-\cmidrulekern=\dimen146
-\defaultaddspace=\dimen147
+\heavyrulewidth=\dimen143
+\lightrulewidth=\dimen144
+\cmidrulewidth=\dimen145
+\belowrulesep=\dimen146
+\belowbottomsep=\dimen147
+\aboverulesep=\dimen148
+\abovetopsep=\dimen149
+\cmidrulesep=\dimen150
+\cmidrulekern=\dimen151
+\defaultaddspace=\dimen152
 \@cmidla=\count156
 \@cmidlb=\count157
-\@aboverulesep=\dimen148
-\@belowrulesep=\dimen149
+\@aboverulesep=\dimen153
+\@belowrulesep=\dimen154
 \@thisruleclass=\count158
 \@lastruleclass=\count159
-\@thisrulewidth=\dimen150
+\@thisrulewidth=\dimen155
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen151
+\bigstrutjot=\dimen156
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \c@tracingmulticols=\count160
-\mult@box=\box30
-\multicol@leftmargin=\dimen152
+\mult@box=\box31
+\multicol@leftmargin=\dimen157
 \c@unbalance=\count161
 \c@collectmore=\count162
 \doublecol@number=\count163
 \multicoltolerance=\count164
 \multicolpretolerance=\count165
-\full@width=\dimen153
-\page@free=\dimen154
-\premulticols=\dimen155
-\postmulticols=\dimen156
-\multicolsep=\skip61
-\multicolbaselineskip=\skip62
-\partial@page=\box31
-\last@line=\box32
-\maxbalancingoverflow=\dimen157
-\mult@rightbox=\box33
-\mult@grightbox=\box34
-\mult@gfirstbox=\box35
-\mult@firstbox=\box36
-\@tempa=\box37
+\full@width=\dimen158
+\page@free=\dimen159
+\premulticols=\dimen160
+\postmulticols=\dimen161
+\multicolsep=\skip63
+\multicolbaselineskip=\skip64
+\partial@page=\box32
+\last@line=\box33
+\maxbalancingoverflow=\dimen162
+\mult@rightbox=\box34
+\mult@grightbox=\box35
+\mult@gfirstbox=\box36
+\mult@firstbox=\box37
 \@tempa=\box38
 \@tempa=\box39
 \@tempa=\box40
@@ -1067,65 +1072,66 @@ Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \@tempa=\box51
 \@tempa=\box52
 \@tempa=\box53
+\@tempa=\box54
 \c@columnbadness=\count166
 \c@finalcolumnbadness=\count167
-\last@try=\dimen158
-\multicolovershoot=\dimen159
-\multicolundershoot=\dimen160
-\mult@nat@firstbox=\box54
-\colbreak@box=\box55
+\last@try=\dimen163
+\multicolovershoot=\dimen164
+\multicolundershoot=\dimen165
+\mult@nat@firstbox=\box55
+\colbreak@box=\box56
 \mc@col@check@num=\count168
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip63
-\LTright=\skip64
-\LTpre=\skip65
-\LTpost=\skip66
+\LTleft=\skip65
+\LTright=\skip66
+\LTpre=\skip67
+\LTpost=\skip68
 \LTchunksize=\count169
-\LTcapwidth=\dimen161
-\LT@head=\box56
-\LT@firsthead=\box57
-\LT@foot=\box58
-\LT@lastfoot=\box59
+\LTcapwidth=\dimen166
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
 \LT@cols=\count170
 \LT@rows=\count171
 \c@LT@tables=\count172
 \c@LT@chunks=\count173
-\LT@p@ftn=\toks31
+\LT@p@ftn=\toks32
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen162
-\extrarowheight=\dimen163
-\NC@list=\toks32
-\extratabsurround=\skip67
-\backup@length=\skip68
+\col@sep=\dimen167
+\extrarowheight=\dimen168
+\NC@list=\toks33
+\extratabsurround=\skip69
+\backup@length=\skip70
 )
-\TX@col@width=\dimen164
-\TX@old@table=\dimen165
-\TX@old@col=\dimen166
-\TX@target=\dimen167
-\TX@delta=\dimen168
+\TX@col@width=\dimen169
+\TX@old@table=\dimen170
+\TX@old@col=\dimen171
+\TX@target=\dimen172
+\TX@delta=\dimen173
 \TX@cols=\count174
-\TX@ftn=\toks33
+\TX@ftn=\toks34
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
-\pgfutil@everybye=\toks34
-\pgfutil@tempdima=\dimen169
-\pgfutil@tempdimb=\dimen170
+\pgfutil@everybye=\toks35
+\pgfutil@tempdima=\dimen174
+\pgfutil@tempdimb=\dimen175
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box60
+\pgfutil@abb=\box61
 (/usr/local/texlive/2016/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -1138,30 +1144,30 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks35
-\pgfkeys@temptoks=\toks36
+\pgfkeys@pathtoks=\toks36
+\pgfkeys@temptoks=\toks37
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
 ode.tex
-\pgfkeys@tmptoks=\toks37
+\pgfkeys@tmptoks=\toks38
 ))
-\pgf@x=\dimen171
-\pgf@y=\dimen172
-\pgf@xa=\dimen173
-\pgf@ya=\dimen174
-\pgf@xb=\dimen175
-\pgf@yb=\dimen176
-\pgf@xc=\dimen177
-\pgf@yc=\dimen178
+\pgf@x=\dimen176
+\pgf@y=\dimen177
+\pgf@xa=\dimen178
+\pgf@ya=\dimen179
+\pgf@xb=\dimen180
+\pgf@yb=\dimen181
+\pgf@xc=\dimen182
+\pgf@yc=\dimen183
 \w@pgf@writea=\write4
 \r@pgf@reada=\read1
 \c@pgf@counta=\count175
 \c@pgf@countb=\count176
 \c@pgf@countc=\count177
 \c@pgf@countd=\count178
-\t@pgf@toka=\toks38
-\t@pgf@tokb=\toks39
-\t@pgf@tokc=\toks40
+\t@pgf@toka=\toks39
+\t@pgf@tokb=\toks40
+\t@pgf@tokc=\toks41
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -1209,12 +1215,12 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen179
+\pgfmath@dimen=\dimen184
 \pgfmath@count=\count181
-\pgfmath@box=\box61
-\pgfmath@toks=\toks41
-\pgfmath@stack@operand=\toks42
-\pgfmath@stack@operation=\toks43
+\pgfmath@box=\box62
+\pgfmath@toks=\toks42
+\pgfmath@stack@operand=\toks43
+\pgfmath@stack@operation=\toks44
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex
@@ -1240,52 +1246,52 @@ erarithmetics.code.tex)))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen180
-\pgf@picmaxx=\dimen181
-\pgf@picminy=\dimen182
-\pgf@picmaxy=\dimen183
-\pgf@pathminx=\dimen184
-\pgf@pathmaxx=\dimen185
-\pgf@pathminy=\dimen186
-\pgf@pathmaxy=\dimen187
-\pgf@xx=\dimen188
-\pgf@xy=\dimen189
-\pgf@yx=\dimen190
-\pgf@yy=\dimen191
-\pgf@zx=\dimen192
-\pgf@zy=\dimen193
+\pgf@picminx=\dimen185
+\pgf@picmaxx=\dimen186
+\pgf@picminy=\dimen187
+\pgf@picmaxy=\dimen188
+\pgf@pathminx=\dimen189
+\pgf@pathmaxx=\dimen190
+\pgf@pathminy=\dimen191
+\pgf@pathmaxy=\dimen192
+\pgf@xx=\dimen193
+\pgf@xy=\dimen194
+\pgf@yx=\dimen195
+\pgf@yy=\dimen196
+\pgf@zx=\dimen197
+\pgf@zy=\dimen198
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
 ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen194
-\pgf@path@lasty=\dimen195
+\pgf@path@lastx=\dimen199
+\pgf@path@lasty=\dimen256
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
 .code.tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen196
-\pgf@shorten@start@additional=\dimen197
+\pgf@shorten@end@additional=\dimen257
+\pgf@shorten@start@additional=\dimen258
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box62
-\pgf@hbox=\box63
-\pgf@layerbox@main=\box64
+\pgfpic=\box63
+\pgf@hbox=\box64
+\pgf@layerbox@main=\box65
 \pgf@picture@serial@count=\count183
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen198
+\pgflinewidth=\dimen259
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
 ations.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen199
-\pgf@pt@y=\dimen256
-\pgf@pt@temp=\dimen257
+\pgf@pt@x=\dimen260
+\pgf@pt@y=\dimen261
+\pgf@pt@temp=\dimen262
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
 e.tex
@@ -1302,12 +1308,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen258
+\pgfarrowsep=\dimen263
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
 e.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen259
+\pgf@max=\dimen264
 \pgf@sys@shading@range@num=\count184
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
@@ -1317,7 +1323,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
 code.tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box65
+\pgfexternal@startupbox=\box66
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
 de.tex
@@ -1334,7 +1340,7 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
 e.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box66
+\pgfnodeparttextbox=\box67
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
 tex
@@ -1343,8 +1349,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen260
-\pgf@nodesepend=\dimen261
+\pgf@nodesepstart=\dimen265
+\pgf@nodesepend=\dimen266
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
@@ -1359,10 +1365,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen262
-\pgffor@skip=\dimen263
-\pgffor@stack=\toks44
-\pgffor@toks=\toks45
+\pgffor@iter=\dimen267
+\pgffor@skip=\dimen268
+\pgffor@stack=\toks45
+\pgffor@toks=\toks46
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -1372,18 +1378,18 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \pgf@plot@mark@count=\count185
-\pgfplotmarksize=\dimen264
+\pgfplotmarksize=\dimen269
 )
-\tikz@lastx=\dimen265
-\tikz@lasty=\dimen266
-\tikz@lastxsaved=\dimen267
-\tikz@lastysaved=\dimen268
-\tikzleveldistance=\dimen269
-\tikzsiblingdistance=\dimen270
-\tikz@figbox=\box67
-\tikz@figbox@bg=\box68
-\tikz@tempbox=\box69
-\tikz@tempbox@bg=\box70
+\tikz@lastx=\dimen270
+\tikz@lasty=\dimen271
+\tikz@lastxsaved=\dimen272
+\tikz@lastysaved=\dimen273
+\tikzleveldistance=\dimen274
+\tikzsiblingdistance=\dimen275
+\tikz@figbox=\box68
+\tikz@figbox@bg=\box69
+\tikz@tempbox=\box70
+\tikz@tempbox@bg=\box71
 \tikztreelevel=\count186
 \tikznumberofchildren=\count187
 \tikznumberofcurrentchild=\count188
@@ -1459,26 +1465,26 @@ File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
 shapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 
-\pgfnodepartlowerbox=\box71
-\pgfnodeparttwobox=\box72
-\pgfnodepartthreebox=\box73
-\pgfnodepartfourbox=\box74
-\pgfnodeparttwentybox=\box75
-\pgfnodepartnineteenbox=\box76
-\pgfnodeparteighteenbox=\box77
-\pgfnodepartseventeenbox=\box78
-\pgfnodepartsixteenbox=\box79
-\pgfnodepartfifteenbox=\box80
-\pgfnodepartfourteenbox=\box81
-\pgfnodepartthirteenbox=\box82
-\pgfnodeparttwelvebox=\box83
-\pgfnodepartelevenbox=\box84
-\pgfnodeparttenbox=\box85
-\pgfnodepartninebox=\box86
-\pgfnodeparteightbox=\box87
-\pgfnodepartsevenbox=\box88
-\pgfnodepartsixbox=\box89
-\pgfnodepartfivebox=\box90
+\pgfnodepartlowerbox=\box72
+\pgfnodeparttwobox=\box73
+\pgfnodepartthreebox=\box74
+\pgfnodepartfourbox=\box75
+\pgfnodeparttwentybox=\box76
+\pgfnodepartnineteenbox=\box77
+\pgfnodeparteighteenbox=\box78
+\pgfnodepartseventeenbox=\box79
+\pgfnodepartsixteenbox=\box80
+\pgfnodepartfifteenbox=\box81
+\pgfnodepartfourteenbox=\box82
+\pgfnodepartthirteenbox=\box83
+\pgfnodeparttwelvebox=\box84
+\pgfnodepartelevenbox=\box85
+\pgfnodeparttenbox=\box86
+\pgfnodepartninebox=\box87
+\pgfnodeparteightbox=\box88
+\pgfnodepartsevenbox=\box89
+\pgfnodepartsixbox=\box90
+\pgfnodepartfivebox=\box91
 )))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryfit.code.tex
@@ -1495,7 +1501,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen271
+\arrowsize=\dimen276
 ))) (/usr/local/texlive/2016/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2013/12/28 v0.19 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2230.
@@ -1576,14 +1582,14 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 \blx@parenlevel@text=\count298
 \blx@parenlevel@foot=\count299
 \blx@sectionciteorder@0=\count300
-\labelnumberwidth=\skip69
-\labelalphawidth=\skip70
-\biblabelsep=\skip71
-\bibitemsep=\skip72
-\bibnamesep=\skip73
-\bibinitsep=\skip74
-\bibparsep=\skip75
-\bibhang=\skip76
+\labelnumberwidth=\skip71
+\labelalphawidth=\skip72
+\biblabelsep=\skip73
+\bibitemsep=\skip74
+\bibnamesep=\skip75
+\bibinitsep=\skip76
+\bibparsep=\skip77
+\bibhang=\skip78
 \blx@bcfin=\read2
 \blx@bcfout=\write6
 \c@mincomprange=\count301
@@ -1663,12 +1669,12 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedlanguage=\count367
 \c@pageref=\count368
 \c@savedpageref=\count369
-\shorthandwidth=\skip77
-\shortjournalwidth=\skip78
-\shortserieswidth=\skip79
-\shorttitlewidth=\skip80
-\shortauthorwidth=\skip81
-\shorteditorwidth=\skip82
+\shorthandwidth=\skip79
+\shortjournalwidth=\skip80
+\shortserieswidth=\skip81
+\shorttitlewidth=\skip82
+\shortauthorwidth=\skip83
+\shorteditorwidth=\skip84
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1727,71 +1733,71 @@ File: biblatex.cfg
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 44.
-\cftparskip=\skip83
-\cftbeforetoctitleskip=\skip84
-\cftaftertoctitleskip=\skip85
-\cftbeforepartskip=\skip86
-\cftpartnumwidth=\skip87
-\cftpartindent=\skip88
-\cftbeforechapskip=\skip89
-\cftchapindent=\skip90
-\cftchapnumwidth=\skip91
-\cftbeforesecskip=\skip92
-\cftsecindent=\skip93
-\cftsecnumwidth=\skip94
-\cftbeforesubsecskip=\skip95
-\cftsubsecindent=\skip96
-\cftsubsecnumwidth=\skip97
-\cftbeforesubsubsecskip=\skip98
-\cftsubsubsecindent=\skip99
-\cftsubsubsecnumwidth=\skip100
-\cftbeforeparaskip=\skip101
-\cftparaindent=\skip102
-\cftparanumwidth=\skip103
-\cftbeforesubparaskip=\skip104
-\cftsubparaindent=\skip105
-\cftsubparanumwidth=\skip106
-\cftbeforeloftitleskip=\skip107
-\cftafterloftitleskip=\skip108
-\cftbeforefigskip=\skip109
-\cftfigindent=\skip110
-\cftfignumwidth=\skip111
+\cftparskip=\skip85
+\cftbeforetoctitleskip=\skip86
+\cftaftertoctitleskip=\skip87
+\cftbeforepartskip=\skip88
+\cftpartnumwidth=\skip89
+\cftpartindent=\skip90
+\cftbeforechapskip=\skip91
+\cftchapindent=\skip92
+\cftchapnumwidth=\skip93
+\cftbeforesecskip=\skip94
+\cftsecindent=\skip95
+\cftsecnumwidth=\skip96
+\cftbeforesubsecskip=\skip97
+\cftsubsecindent=\skip98
+\cftsubsecnumwidth=\skip99
+\cftbeforesubsubsecskip=\skip100
+\cftsubsubsecindent=\skip101
+\cftsubsubsecnumwidth=\skip102
+\cftbeforeparaskip=\skip103
+\cftparaindent=\skip104
+\cftparanumwidth=\skip105
+\cftbeforesubparaskip=\skip106
+\cftsubparaindent=\skip107
+\cftsubparanumwidth=\skip108
+\cftbeforeloftitleskip=\skip109
+\cftafterloftitleskip=\skip110
+\cftbeforefigskip=\skip111
+\cftfigindent=\skip112
+\cftfignumwidth=\skip113
 \c@lofdepth=\count379
 \c@lotdepth=\count380
-\cftbeforelottitleskip=\skip112
-\cftafterlottitleskip=\skip113
-\cftbeforetabskip=\skip114
-\cfttabindent=\skip115
-\cfttabnumwidth=\skip116
+\cftbeforelottitleskip=\skip114
+\cftafterlottitleskip=\skip115
+\cftbeforetabskip=\skip116
+\cfttabindent=\skip117
+\cfttabnumwidth=\skip118
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip117
-\enit@outerparindent=\dimen272
-\enit@toks=\toks46
-\enit@inbox=\box91
+\labelindent=\skip119
+\enit@outerparindent=\dimen277
+\enit@toks=\toks47
+\enit@inbox=\box92
 \enitdp@description=\count381
 )
 (./thesis-info.tex)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count382
-\lst@gtempboxa=\box92
-\lst@token=\toks47
+\lst@gtempboxa=\box93
+\lst@token=\toks48
 \lst@length=\count383
-\lst@currlwidth=\dimen273
+\lst@currlwidth=\dimen278
 \lst@column=\count384
 \lst@pos=\count385
-\lst@lostspace=\dimen274
-\lst@width=\dimen275
+\lst@lostspace=\dimen279
+\lst@width=\dimen280
 \lst@newlines=\count386
 \lst@lineno=\count387
-\lst@maxwidth=\dimen276
+\lst@maxwidth=\dimen281
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count388
 \lst@skipnumbers=\count389
-\lst@framebox=\box93
+\lst@framebox=\box94
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -1817,13 +1823,13 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \c@ALG@line=\count390
 \c@ALG@rem=\count391
 \c@ALG@nested=\count392
-\ALG@tlm=\skip118
-\ALG@thistlm=\skip119
+\ALG@tlm=\skip120
+\ALG@thistlm=\skip121
 \c@ALG@Lnr=\count393
 \c@ALG@blocknr=\count394
 \c@ALG@storecount=\count395
 \c@ALG@tmpcounter=\count396
-\ALG@tmplength=\skip120
+\ALG@tmplength=\skip122
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (./sty/personal_commands.tex) (./sty/listing_style.tex) (./utils.tex)
@@ -1836,9 +1842,7 @@ File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 \@quotelevel=\count397
 \@quotereset=\count398
 
-(./thesis.aux (./Introduction/introduction.aux) (./Chapter1/introduction.aux)
-(./Chapter1/scnmt-seq.aux) (./Chapter3/introduction.aux)
-(./Chapter3/results.aux))
+(./thesis.aux (./Chapter3/introduction.aux) (./Chapter3/results.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
@@ -1869,16 +1873,16 @@ LaTeX Font Info:    ... okay on input line 132.
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count399
-\scratchdimen=\dimen277
-\scratchbox=\box94
+\scratchdimen=\dimen282
+\scratchbox=\box95
 \nofMPsegments=\count400
 \nofMParguments=\count401
-\everyMPshowfont=\toks48
+\everyMPshowfont=\toks49
 \MPscratchCnt=\count402
-\MPscratchDim=\dimen278
+\MPscratchDim=\dimen283
 \MPnumerator=\count403
 \makeMPintoPDFobject=\count404
-\everyMPtoPDFconversion=\toks49
+\everyMPtoPDFconversion=\toks50
 )
 LaTeX Info: Redefining \microtypecontext on input line 132.
 Package microtype Info: Generating PDF output.
@@ -1894,7 +1898,7 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-\AtBeginShipoutBox=\box95
+\AtBeginShipoutBox=\box96
 Package hyperref Info: Link coloring ON on input line 132.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1968,14 +1972,7 @@ Package biblatex Info: ... file 'thesis.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Svensson2019
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Scialdone2016
+(biblatex)                Auclar2014
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1989,63 +1986,7 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Lun2018
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Tosic2019
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Ibarra-Soria2018
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                PijuanSala2019
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Lun2016
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Solnica-Krezel2012
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Feng2014
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Auclar2014
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Bishop
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -2059,21 +2000,49 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                DR-seq
+(biblatex)                Scialdone2015
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Smith2012
+(biblatex)                Ibarra-Soria2018
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Dai2016
+(biblatex)                Scialdone2016
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Solnica-Krezel2012
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Ashburner2000
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Subramanian2005
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Bishop
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -2084,11 +2053,18 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Smith2012
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
 )
 Package biblatex Info: Reference section=0 on input line 132.
 Package biblatex Info: Reference segment=0 on input line 132.
 \c@lstlisting=\count406
-\PHD@Title=\box96
+\PHD@Title=\box97
 LaTeX Font Info:    Try loading font information for U+msa on input line 136.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -2108,225 +2084,254 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 136.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-\PHD@crest=\box97
+\PHD@crest=\box98
 
-<Figs/University_Crest.pdf, id=155, 59.22125pt x 69.25874pt>
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 136.
+<Figs/University_Crest.pdf, id=95, 59.22125pt x 69.25874pt>
+File: Figs/University_Crest.pdf Graphic file (type pdf)
 
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-\PHD@collegecrest=\box98
-\PHD@author=\box99
-\PHD@supervisor=\box100
-\PHD@advisor=\box101
-\PHD@dept=\box102
-\PHD@submission=\box103
-\PHD@collegedate=\box104
-\PHD@titlepagespacing=\skip121
- (./thesis.toc
-[1
+<use Figs/University_Crest.pdf>
+Package pdftex.def Info: Figs/University_Crest.pdf used on input line 136.
+(pdftex.def)             Requested size: 93.32361pt x 109.14542pt.
+\PHD@collegecrest=\box99
+\PHD@author=\box100
+\PHD@supervisor=\box101
+\PHD@advisor=\box102
+\PHD@dept=\box103
+\PHD@submission=\box104
+\PHD@collegedate=\box105
+\PHD@titlepagespacing=\skip123
+ [1
 
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2])
-\tf@toc=\write8
-\openout8 = `thesis.toc'.
-
- [3] [4
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figs/
+University_Crest.pdf>] [2
 
 ]
-\openout2 = `Introduction/introduction.aux'.
+\openout2 = `Chapter3/introduction.aux'.
 
- (./Introduction/introduction.tex
+
+(./Chapter3/introduction.tex
 Chapter 1.
 [1
 
 
-] [2] [3] [4]) [5]
-\openout2 = `Chapter1/introduction.aux'.
+] [2] [3]
 
- (./Chapter1/introduction.tex [6
+LaTeX Warning: Reference `section:single_cell_multi_modal' on page 1 undefined 
+on input line 45.
 
-
-
-]
-Chapter 2.
-[7]
-
-LaTeX Warning: Reference `fig:scBS' on page 1 undefined on input line 26.
-
-<Chapter1/Figs/methylation_protocols.pdf, id=414, 722.7pt x 534.99875pt>
-[8] [9]
-<Chapter1/Figs/ChromatinAcc_protocols.png, id=490, 981.6675pt x 735.74875pt>
-[10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
-
- []
-
-) [12]
-\openout2 = `Chapter1/scnmt-seq.aux'.
-
- (./Chapter1/scnmt-seq.tex
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
-
- []
-
-<Chapter1/Figs/scNMT_protocol.pdf, id=560, 311.1625pt x 427.5975pt>
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[13
-
-
-] [14] <Chapter1/Figs/scNMT_coverage.pdf, id=583, 435.6275pt x 226.8475pt>
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[15] <Chapter1/Figs/scNMT_coverage2.pdf, id=595, 205.76875pt x 152.06813pt>
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
-
- []
-
-<Chapter1/Figs/scNMT_comparison.pdf, id=610, 700.41673pt x 328.22626pt>
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[17]
-
-LaTeX Warning: Reference `fig:scmt_pseudobulk_profiles' on page 1 undefined on 
-input line 85.
-
-<Chapter1/Figs/scnmt_pseudobulk_profiles.pdf, id=621, 786.94pt x 797.98125pt>
-[18]
-<Chapter1/Figs/scNMT_correlations_acrossgenes.pdf, id=630, 495.35063pt x 190.04
-298pt>
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[19] <Chapter1/Figs/scNMT_EB_RNA.pdf, id=640, 400.49625pt x 446.66875pt>
-[20]
-<Chapter1/Figs/scNMT_EB_correlations.pdf, id=650, 407.51747pt x 263.48438pt>
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[21]
-<Chapter1/Figs/scNMT_profiles_examples.pdf, id=661, 1161.97112pt x 407.10495pt>
-[22]
-<Chapter1/Figs/scNMT_profiles_prediction.pdf, id=670, 505.89pt x 505.89pt>
-<Chapter1/Figs/scNMT_profiles_expr.pdf, id=671, 1758.75073pt x 1186.55295pt>
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 190--193
-
- []
-
-<Chapter1/Figs/scNMT_profiles_clusters.pdf, id=681, 463.7325pt x 194.22563pt>
-[24]
-
-LaTeX Warning: Reference `fig:scnmt_profiles_clusters2' on page 1 undefined on 
-input line 205.
-
-<Chapter1/Figs/scNMT_profiles_histones.pdf, id=690, 296.10625pt x 164.615pt>
-
-Package Fancyhdr Warning: \headheight is too small (14.5pt): 
- Make it at least 25.22153pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[25] <Chapter1/Figs/scNMT_pseudotime.pdf, id=704, 503.8825pt x 138.5175pt>
-<Chapter1/Figs/scNMT_pseudotime_coupling.pdf, id=708, 403.17325pt x 144.20576pt
->
-Underfull \hbox (badness 1748) in paragraph at lines 238--238
-[]\T1/cmr/bx/n/10 Figure 2.17: |De-vel-op-men-tal tra-jec-tory is as-so-ci-ated
- changes in methylation-
- []
-
-[26] [27]) [28]
-\openout2 = `Chapter3/introduction.aux'.
-
- (./Chapter3/introduction.tex
-Chapter 3.
-[29
-
-
-
-] [30] [31]) [32]
+) [4]
 \openout2 = `Chapter3/results.aux'.
 
  (./Chapter3/results.tex
-<Chapter3/Figs/dataset_overview.pdf, id=855, 1593.955pt x 1260.71pt> [33
+<Chapter3/Figs/dataset_overview.pdf, id=211, 1593.955pt x 1260.71pt>
+File: Chapter3/Figs/dataset_overview.pdf Graphic file (type pdf)
+
+<use Chapter3/Figs/dataset_overview.pdf>
+Package pdftex.def Info: Chapter3/Figs/dataset_overview.pdf used on input line 
+11.
+(pdftex.def)             Requested size: 396.63428pt x 313.6955pt.
+ [5
 
 
-]
-<Chapter3/Figs/metacc_dimred.pdf, id=871, 571.63562pt x 315.67938pt> [34]
-<Chapter3/Figs/rna_lineage_assignment.pdf, id=882, 800.55789pt x 739.1595pt>
+ <./Chapter3/Figs/dataset_overview.pdf>]
+<Chapter3/Figs/rna_lineage_assignment.pdf, id=286, 800.55789pt x 739.1595pt>
+File: Chapter3/Figs/rna_lineage_assignment.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `fig:met_acc_heatmaps' on page 1 undefined on input li
-ne 66.
+<use Chapter3/Figs/rna_lineage_assignment.pdf>
+Package pdftex.def Info: Chapter3/Figs/rna_lineage_assignment.pdf used on input
+ line 31.
+(pdftex.def)             Requested size: 419.95984pt x 387.76003pt.
+ [6] [7 <./Chapter3/Figs/rna_lineage_assignment.pdf>]
+<Chapter3/Figs/metacc_dimred.pdf, id=373, 571.63562pt x 315.67938pt>
+File: Chapter3/Figs/metacc_dimred.pdf Graphic file (type pdf)
 
-[35] <Chapter3/Figs/metacc_heatmaps.pdf, id=894, 576.22577pt x 160.6pt>
-<Chapter3/Figs/metacc_boxplots.pdf, id=895, 694.595pt x 652.4375pt> [36]
-[37] <Chapter3/Figs/metacc_vs_rna_cor.pdf, id=911, 510.73409pt x 183.7796pt>
-<Chapter3/Figs/mofa_overview.pdf, id=913, 1378.14874pt x 821.0675pt> [38]
-<Chapter3/Figs/chip_seq.pdf, id=920, 538.01pt x 236.885pt> [39]
-<Chapter3/Figs/mofa_results.pdf, id=933, 1350.39503pt x 323.24463pt> [40]
+<use Chapter3/Figs/metacc_dimred.pdf>
+Package pdftex.def Info: Chapter3/Figs/metacc_dimred.pdf used on input line 56.
 
-LaTeX Warning: Reference `XXXXX' on page 1 undefined on input line 161.
+(pdftex.def)             Requested size: 466.62521pt x 257.68826pt.
 
-[41] <Chapter3/Figs/motif_enrichment.pdf, id=949, 1112.05466pt x 329.71582pt>
-<Chapter3/Figs/enhancers_metacc_profiles.pdf, id=951, 1287.81125pt x 649.24055p
-t> [42]
-<Chapter3/Figs/enhancers_metacc_umap.png, id=959, 1219.6767pt x 649.9482pt>
-[43] [44]
-<Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf, id=976, 611.09303pt x 194.058pt>
-[45]
-<Chapter3/Figs/pluri_vs_midbrain_metacc.pdf, id=987, 736.7525pt x 429.605pt>
-[46]
+<Chapter3/Figs/metacc_heatmaps.pdf, id=379, 576.22577pt x 160.6pt>
+File: Chapter3/Figs/metacc_heatmaps.pdf Graphic file (type pdf)
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 278.
+<use Chapter3/Figs/metacc_heatmaps.pdf>
+Package pdftex.def Info: Chapter3/Figs/metacc_heatmaps.pdf used on input line 7
+0.
+(pdftex.def)             Requested size: 396.63428pt x 110.547pt.
+ [8 <./Chapter3/Figs/metacc_dimred.pdf>] <Chapter3/Figs/metacc_boxplots.pdf, id
+=423, 694.595pt x 652.4375pt>
+File: Chapter3/Figs/metacc_boxplots.pdf Graphic file (type pdf)
 
-<Chapter3/Figs/metacc_diagram.pdf, id=996, 448.65416pt x 392.55861pt> [47]
-[48]
+<use Chapter3/Figs/metacc_boxplots.pdf>
+Package pdftex.def Info: Chapter3/Figs/metacc_boxplots.pdf used on input line 7
+9.
+(pdftex.def)             Requested size: 326.63622pt x 306.82486pt.
+ [9 <./Chapter3/Figs/metacc_heatmaps.pdf> <./Chapter3/Figs/metacc_boxplots.pdf
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 298.
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter3/Figs/metacc_boxpl
+ots.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
+e
+>] <Chapter3/Figs/metacc_vs_rna_cor.pdf, id=10967, 510.73409pt x 183.7796pt>
+File: Chapter3/Figs/metacc_vs_rna_cor.pdf Graphic file (type pdf)
 
-<Chapter3/Figs/mesendoderm_dynamics.pdf, id=1014, 1114.1625pt x 720.6925pt>
-<Chapter3/Figs/EB_rna_celltypes.pdf, id=1021, 1325.69276pt x 769.33621pt>
-[49] [50] <Chapter3/Figs/EB_rna_markers.pdf, id=1035, 538.13246pt x 437.635pt>
-[51] <Chapter3/Figs/EB_metacc_global.pdf, id=1042, 459.94437pt x 322.16261pt>
-[52] <Chapter3/Figs/EB_metacc_profiles.pdf, id=1049, 633.2719pt x 252.945pt>
-[53]
-<Chapter3/Figs/EB_metacc_WTvsKO_boxplots.pdf, id=1057, 706.10303pt x 590.1759pt
-> [54] [55] [56]) [57] (./Appendix/appendix1.tex [58
+<use Chapter3/Figs/metacc_vs_rna_cor.pdf>
+Package pdftex.def Info: Chapter3/Figs/metacc_vs_rna_cor.pdf used on input line
+ 95.
+(pdftex.def)             Requested size: 466.62521pt x 167.90988pt.
+ [10 <./Chapter3/Figs/metacc_vs_rna_cor.pdf>] <Chapter3/Figs/mofa_overview.pdf,
+ id=11155, 1378.14874pt x 821.0675pt>
+File: Chapter3/Figs/mofa_overview.pdf Graphic file (type pdf)
+
+<use Chapter3/Figs/mofa_overview.pdf>
+Package pdftex.def Info: Chapter3/Figs/mofa_overview.pdf used on input line 110
+.
+(pdftex.def)             Requested size: 1102.52051pt x 656.8549pt.
+
+<Chapter3/Figs/chip_seq.pdf, id=11157, 538.01pt x 236.885pt>
+File: Chapter3/Figs/chip_seq.pdf Graphic file (type pdf)
+
+<use Chapter3/Figs/chip_seq.pdf>
+Package pdftex.def Info: Chapter3/Figs/chip_seq.pdf used on input line 124.
+(pdftex.def)             Requested size: 457.31065pt x 201.3532pt.
+ [11 <./Chapter3/Figs/mofa_overview.pdf>]
+<Chapter3/Figs/mofa_gastrulation_overview.pdf, id=11391, 1350.39503pt x 323.244
+63pt>
+File: Chapter3/Figs/mofa_gastrulation_overview.pdf Graphic file (type pdf)
+ <use Chapter3/Figs/mofa_gastrulation_overview.pdf>
+Package pdftex.def Info: Chapter3/Figs/mofa_gastrulation_overview.pdf used on i
+nput line 141.
+(pdftex.def)             Requested size: 466.62521pt x 111.69707pt.
+ [12 <./Chapter3/Figs/chip_seq.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+
+ []
+
+<Chapter3/Figs/diff_metacc_barplots.pdf, id=11434, 605.26125pt x 467.7475pt>
+File: Chapter3/Figs/diff_metacc_barplots.pdf Graphic file (type pdf)
+
+<use Chapter3/Figs/diff_metacc_barplots.pdf>
+Package pdftex.def Info: Chapter3/Figs/diff_metacc_barplots.pdf used on input l
+ine 163.
+(pdftex.def)             Requested size: 443.29253pt x 342.5805pt.
+ [13 <./Chapter3/Figs/mofa_gastrulation_overview.pdf>]
+<Chapter3/Figs/diff_metacc_scatterplot.png, id=11481, 1069.3551pt x 712.3413pt>
+File: Chapter3/Figs/diff_metacc_scatterplot.png Graphic file (type png)
+<use Chapter3/Figs/diff_metacc_scatterplot.png>
+Package pdftex.def Info: Chapter3/Figs/diff_metacc_scatterplot.png used on inpu
+t line 172.
+(pdftex.def)             Requested size: 419.95984pt x 279.74675pt.
+ [14 <./Chapter3/Figs/diff_metacc_barplots.pdf>]
+<Chapter3/Figs/diff_metacc_examples.pdf, id=11536, 598.63046pt x 778.91pt>
+File: Chapter3/Figs/diff_metacc_examples.pdf Graphic file (type pdf)
+
+<use Chapter3/Figs/diff_metacc_examples.pdf>
+Package pdftex.def Info: Chapter3/Figs/diff_metacc_examples.pdf used on input l
+ine 187.
+(pdftex.def)             Requested size: 466.62521pt x 607.14326pt.
+ [15 <./Chapter3/Figs/diff_metacc_scatterplot.png (PNG copy)>]
+Overfull \vbox (7.51491pt too high) has occurred while \output is active []
+
+
+[16 <./Chapter3/Figs/diff_metacc_examples.pdf>]
+<Chapter3/Figs/motif_enrichment.pdf, id=13163, 1112.05466pt x 329.71582pt>
+File: Chapter3/Figs/motif_enrichment.pdf Graphic file (type pdf)
+
+<use Chapter3/Figs/motif_enrichment.pdf>
+Package pdftex.def Info: Chapter3/Figs/motif_enrichment.pdf used on input line 
+202.
+(pdftex.def)             Requested size: 466.62521pt x 138.34889pt.
+
+<Chapter3/Figs/enhancers_metacc_profiles.pdf, id=13165, 1287.81125pt x 649.2405
+5pt>
+File: Chapter3/Figs/enhancers_metacc_profiles.pdf Graphic file (type pdf)
+ <use Chapter3/Figs/enhancers_metacc_profiles.pdf>
+Package pdftex.def Info: Chapter3/Figs/enhancers_metacc_profiles.pdf used on in
+put line 216.
+(pdftex.def)             Requested size: 466.62521pt x 235.24213pt.
+ [17 <./Chapter3/Figs/motif_enrichment.pdf>]
+<Chapter3/Figs/enhancers_metacc_umap.png, id=16122, 1219.6767pt x 649.9482pt>
+File: Chapter3/Figs/enhancers_metacc_umap.png Graphic file (type png)
+
+<use Chapter3/Figs/enhancers_metacc_umap.png>
+Package pdftex.def Info: Chapter3/Figs/enhancers_metacc_umap.png used on input 
+line 228.
+(pdftex.def)             Requested size: 419.95984pt x 223.78609pt.
+ [18 <./Chapter3/Figs/enhancers_metacc_profiles.pdf>] [19 <./Chapter3/Figs/enha
+ncers_metacc_umap.png (PNG copy)>]
+<Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf, id=16422, 611.09303pt x 194.058pt
+>
+File: Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf Graphic file (type pdf)
+ <use Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf>
+Package pdftex.def Info: Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf used on in
+put line 258.
+(pdftex.def)             Requested size: 466.62521pt x 148.18738pt.
+ [20 <./Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf>]
+<Chapter3/Figs/pluri_vs_midbrain_metacc.pdf, id=16512, 736.7525pt x 429.605pt>
+File: Chapter3/Figs/pluri_vs_midbrain_metacc.pdf Graphic file (type pdf)
+
+<use Chapter3/Figs/pluri_vs_midbrain_metacc.pdf>
+Package pdftex.def Info: Chapter3/Figs/pluri_vs_midbrain_metacc.pdf used on inp
+ut line 272.
+(pdftex.def)             Requested size: 466.62521pt x 272.08817pt.
+ [21 <./Chapter3/Figs/pluri_vs_midbrain_metacc.pdf>]
+<Chapter3/Figs/metacc_diagram.pdf, id=16809, 448.65416pt x 392.55861pt>
+File: Chapter3/Figs/metacc_diagram.pdf Graphic file (type pdf)
+
+<use Chapter3/Figs/metacc_diagram.pdf>
+Package pdftex.def Info: Chapter3/Figs/metacc_diagram.pdf used on input line 29
+9.
+(pdftex.def)             Requested size: 256.64528pt x 224.56937pt.
+ [22 <./Chapter3/Figs/metacc_diagram.pdf>] <Chapter3/Figs/mesendoderm_dynamics.
+pdf, id=17355, 1114.1625pt x 720.6925pt>
+File: Chapter3/Figs/mesendoderm_dynamics.pdf Graphic file (type pdf)
+
+<use Chapter3/Figs/mesendoderm_dynamics.pdf>
+Package pdftex.def Info: Chapter3/Figs/mesendoderm_dynamics.pdf used on input l
+ine 319.
+(pdftex.def)             Requested size: 466.62521pt x 301.83104pt.
+ [23] [24 <./Chapter3/Figs/mesendoderm_dynamics.pdf>]
+<Chapter3/Figs/EB_rna_celltypes.pdf, id=17426, 1325.69276pt x 769.33621pt>
+File: Chapter3/Figs/EB_rna_celltypes.pdf Graphic file (type pdf)
+
+<use Chapter3/Figs/EB_rna_celltypes.pdf>
+Package pdftex.def Info: Chapter3/Figs/EB_rna_celltypes.pdf used on input line 
+345.
+(pdftex.def)             Requested size: 419.95984pt x 243.70392pt.
+
+<Chapter3/Figs/EB_rna_markers.pdf, id=17427, 538.13246pt x 437.635pt>
+File: Chapter3/Figs/EB_rna_markers.pdf Graphic file (type pdf)
+
+<use Chapter3/Figs/EB_rna_markers.pdf>
+Package pdftex.def Info: Chapter3/Figs/EB_rna_markers.pdf used on input line 35
+9.
+(pdftex.def)             Requested size: 419.95984pt x 341.53423pt.
+ [25 <./Chapter3/Figs/EB_rna_celltypes.pdf>] <Chapter3/Figs/EB_metacc_global.pd
+f, id=17492, 459.94437pt x 322.16261pt>
+File: Chapter3/Figs/EB_metacc_global.pdf Graphic file (type pdf)
+
+<use Chapter3/Figs/EB_metacc_global.pdf>
+Package pdftex.def Info: Chapter3/Figs/EB_metacc_global.pdf used on input line 
+379.
+(pdftex.def)             Requested size: 419.95984pt x 294.15651pt.
+ [26 <./Chapter3/Figs/EB_rna_markers.pdf>] <Chapter3/Figs/EB_metacc_profiles.pd
+f, id=17542, 633.2719pt x 252.945pt>
+File: Chapter3/Figs/EB_metacc_profiles.pdf Graphic file (type pdf)
+
+<use Chapter3/Figs/EB_metacc_profiles.pdf>
+Package pdftex.def Info: Chapter3/Figs/EB_metacc_profiles.pdf used on input lin
+e 392.
+(pdftex.def)             Requested size: 419.95984pt x 167.74701pt.
+ [27 <./Chapter3/Figs/EB_metacc_global.pdf>]
+<Chapter3/Figs/EB_metacc_WTvsKO_boxplots.pdf, id=17631, 706.10303pt x 590.1759p
+t>
+File: Chapter3/Figs/EB_metacc_WTvsKO_boxplots.pdf Graphic file (type pdf)
+ <use Chapter3/Figs/EB_metacc_WTvsKO_boxplots.pdf>
+Package pdftex.def Info: Chapter3/Figs/EB_metacc_WTvsKO_boxplots.pdf used on in
+put line 413.
+(pdftex.def)             Requested size: 396.63428pt x 331.51385pt.
+ [28 <./Chapter3/Figs/EB_metacc_profiles.pdf>] [29 <./Chapter3/Figs/EB_metacc_W
+TvsKO_boxplots.pdf>]
+[30]) [31] (./Appendix/appendix1.tex [32
 
 
 ]
@@ -2343,12 +2348,12 @@ LaTeX Warning: Reference `section:variational_inference' on page 1 undefined on
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 16.
 
-[59]
+
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
@@ -2358,7 +2363,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[60]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
@@ -2373,7 +2378,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
-[61]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
@@ -2383,11 +2388,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
-[62]
+
 Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
+[36]
 
 LaTeX Warning: Reference `eq_elbo2' on page 1 undefined on input line 196.
 
@@ -2396,30 +2402,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
-[63] [64]
+[37] [38]
 Overfull \hbox (9.56366pt too wide) detected at line 273
-[][] []|
+[][] []
  []
 
-) [65] [66
+) (./Appendix/appendix2.tex [39] [40
 
-] [67
+]
+Appendix B.
 
-] [68] [69] [70] [71] [72] [73] [74] [75] [76]
+<Appendix/appendix_figures/mofa_gastrulation_factor3.pdf, id=18283, 886.76895pt
+ x 816.40408pt>
+File: Appendix/appendix_figures/mofa_gastrulation_factor3.pdf Graphic file (typ
+e pdf)
+ <use Appendix/appendix_figures/mofa_gastrulation_factor3.pdf>
+Package pdftex.def Info: Appendix/appendix_figures/mofa_gastrulation_factor3.pd
+f used on input line 8.
+(pdftex.def)             Requested size: 349.9689pt x 322.19579pt.
 
-Package caption Warning: Unused \captionsetup[sub] on input line 58.
+<Appendix/appendix_figures/mofa_gastrulation_factor4.pdf, id=18284, 878.6125pt 
+x 556.15579pt>
+File: Appendix/appendix_figures/mofa_gastrulation_factor4.pdf Graphic file (typ
+e pdf)
+ <use Appendix/appendix_figures/mofa_gastrulation_factor4.pdf>
+Package pdftex.def Info: Appendix/appendix_figures/mofa_gastrulation_factor4.pd
+f used on input line 22.
+(pdftex.def)             Requested size: 349.9689pt x 221.52487pt.
+
+[41 <./Appendix/appendix_figures/mofa_gastrulation_factor3.pdf>]
+<Appendix/appendix_figures/mofa_gastrulation_factor5.pdf, id=18400, 897.56331pt
+ x 712.94756pt>
+File: Appendix/appendix_figures/mofa_gastrulation_factor5.pdf Graphic file (typ
+e pdf)
+ <use Appendix/appendix_figures/mofa_gastrulation_factor5.pdf>
+Package pdftex.def Info: Appendix/appendix_figures/mofa_gastrulation_factor5.pd
+f used on input line 35.
+(pdftex.def)             Requested size: 349.9689pt x 277.99402pt.
+
+<Appendix/appendix_figures/mofa_gastrulation_factor6.pdf, id=18401, 961.1438pt 
+x 684.5575pt>
+File: Appendix/appendix_figures/mofa_gastrulation_factor6.pdf Graphic file (typ
+e pdf)
+ <use Appendix/appendix_figures/mofa_gastrulation_factor6.pdf>
+Package pdftex.def Info: Appendix/appendix_figures/mofa_gastrulation_factor6.pd
+f used on input line 47.
+(pdftex.def)             Requested size: 349.9689pt x 249.26079pt.
+)
+[42 <./Appendix/appendix_figures/mofa_gastrulation_factor4.pdf> <./Appendix/app
+endix_figures/mofa_gastrulation_factor5.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Appendix/appendix_figures/
+mofa_gastrulation_factor5.pdf): PDF inclusion: multiple pdfs with page group in
+cluded in a single page
+>] [43 <./Appendix/appendix_figures/mofa_gastrulation_factor6.pdf>] [44
+
+]
+
+Package caption Warning: Unused \captionsetup[sub] on input line 74.
 See the caption package documentation for explanation.
 
-[77]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 205.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 205.
- (./thesis.aux (./Introduction/introduction.aux)
-(./Chapter1/introduction.aux) (./Chapter1/scnmt-seq.aux)
-(./Chapter3/introduction.aux) (./Chapter3/results.aux))
+(./thesis.aux (./Chapter3/introduction.aux) (./Chapter3/results.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 205.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 205.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 999F2637014021EB96B2A94D1E4B4945;12265.
+(rerunfilecheck)             Checksum: C9F08A964D4CBC31CDAC7ABE754BD9B1;7509.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2432,47 +2481,210 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39104 strings out of 493014
- 719854 string characters out of 6133351
- 1463826 words of memory out of 5000000
- 41212 multiletter control sequences out of 15000+600000
- 40696 words of font info for 216 fonts, out of 8000000 for 9000
+ 38681 strings out of 493014
+ 706249 string characters out of 6133351
+ 1188511 words of memory out of 5000000
+ 41105 multiletter control sequences out of 15000+600000
+ 36250 words of font info for 179 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,92p,1522b,1273s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/201
-6/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2016/texmf-di
+ 57i,12n,92p,1406b,1324s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{cite.0@Murphy} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Titsias2011} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Angermueller2017} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Li2016} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Sardina2018} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Rasmussen2016} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Papp2013} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tosci2019} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hemmati-Brivanlou1997} has been referenced b
+ut does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Munoz2002} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Yue2014} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tosic2019} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Liang2004} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Creyghton2010} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Xiang2020} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bourgon2010} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kiselev2017} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Haghverdi2018} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Pijuan-Sala2019} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Argelaguet2018} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@McInnes2018} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Liu2019} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Wang2019} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Guo2017} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lee2015} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zhang2018} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Shan2017} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Brinkman2012} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Rada-Iglesias2011} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Vastenhouw2010} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Heintzman2009} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tsumura2006} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Okano1999} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Auclair2014} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Atlasi2017} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Rulands2018} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Dai2016} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zhang2017} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bernstein2006} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zhao2015} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hanna2018} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tee2014} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Du2017} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ke2017} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Wu2016} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lee2014} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kelsey2017} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Mohammed2017} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Aviv2017} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Cao2019} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Schaum2018} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tam1993} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tam1997} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Rosalind2018} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Argelaguet2019} has been referenced but does
+ not exist, replaced by a fixed one
+
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
+usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/texmf-di
 st/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist
 /fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/texmf-dist/f
 onts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fon
 ts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
-ype1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
-e1/public/cm-super/sftt1095.pfb>
-Output written on thesis.pdf (81 pages, 689464 bytes).
+ype1/public/cm-super/sfti1200.pfb>
+Output written on thesis.pdf (46 pages, 49233697 bytes).
 PDF statistics:
- 1511 PDF objects out of 1728 (max. 8388607)
- 1304 compressed objects within 14 object streams
- 399 named destinations out of 1000 (max. 500000)
- 31224 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 18908 PDF objects out of 22161 (max. 8388607)
+ 9351 compressed objects within 94 object streams
+ 186 named destinations out of 1000 (max. 500000)
+ 28494 words of extra memory for PDF output out of 29859 (max. 10000000)
 

@@ -132,7 +132,7 @@ In \Cref{section:stochastic_variational_inference} I have explained how to deriv
 To apply the SVI algorithm to MOFA the first step is to choose the \textit{local} and \textit{global} dimensions. Just as a reminder, the local dimension will be factorised in the ELBO and thus the one where the stochastic gradients apply.\\
 In single-cell studies we expect increasingly large data sets (more cells) but the number of features to remain roughly constant and the natural dimension to define as \textit{local} is the axis of the samples and the global dimension to be axis of features.
 
-In the case of the MOFA+ model the variables that are classified as \textit{local} are the Factors $\mathbf{Z_g} = \{ z_{nk}^g \}$, which due to the reparametrisation of the spike-and-slab prior consists on the element-wise product of two matrices: $\hat{\mathbf{Z_g}}$ and $\mathbf{S_g}$. All other hidden variables are global: $\mathbf{tau^{gm}}$, $\mathbf{W^m}$ and $\bfS^\bfm$ (whose term-wise product gives $\bfW^m$), $\bf\alpha^m, \bf\theta^m$, as well as $\bf\alpha^g$ and $\bf\theta^g$ when adding the spike-and-slab prior over the Factors.
+In the case of the MOFA+ model the variables that are classified as \textit{local} are the Factors $\mathbf{Z_g} = \{ z_{nk}^g \}$, which due to the reparametrisation of the spike-and-slab prior consists on the element-wise product of two matrices: $\hat{\mathbf{Z_g}}$ and $\mathbf{S_g}$. All other hidden variables are global.%: $\mathbf{tau^{gm}}$, $\mathbf{W^m}$ and $\bfS^\bfm$ (whose term-wise product gives $\bfW^m$), $\bf\alpha^m, \bf\theta^m$, as well as $\bf\alpha^g$ and $\bf\theta^g$ when adding the spike-and-slab prior over the Factors.
 
 
 
