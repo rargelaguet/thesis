@@ -10,7 +10,7 @@ Formally, we generalise the model to a disjoint set of $M$ input views (i.e. gro
 \end{equation}
 where $\bfZ_{g} \in \R^{N_{g} \times K}$ are a set of $G$ matrices that contains the factor values for the $g$-th group and $\bfW^{m} \in \R^{D_m \times K}$ are a set of $M$ matrices that define the feature weights for the $m$-th view. $\bepsilon^{m}_{g} \in \R^{D_m}$ captures the residuals, or the noise for each feature in each group. Notice that if $G=1$ then the model simplifies to MOFA v1. 
 
-It is important to get the intuition for the multi-group formulation right. The aim of the multi-group framework is not to capture differential changes in \textbf{mean} levels between the groups (as for example when doing differential RNA expression) but rather to exploit the covariation of features. The aim is to find out which sources of variability (i.e. which latent Factors) are present in the different groups and which ones are exclusive to a single group. This is symmetric to the interpretation of the multi-view framework in MOFA v1: the absolute levels of the features are not to be compared across views, only the covariation patterns are of interest. To achieve this, the features are centred per view and also per group (i.e. all intercept effects are regressed out) before fitting the model. The following figure summarises the MOFA+ pipeline:
+It is important to get the intuition for the multi-group formulation right. The aim of the multi-group framework is not to capture differential changes in \textit{mean} levels between the groups (as for example when doing differential RNA expression) but rather to exploit the covariation of features. The aim is to find out which sources of variability (i.e. which latent Factors) are present in the different groups and which ones are exclusive to a single group. This is symmetric to the interpretation of the multi-view framework in MOFA v1: the absolute levels of the features are not to be compared across views, only the covariation patterns are of interest. To achieve this, the features are centred per view and also per group (i.e. all intercept effects are regressed out) before fitting the model. The following figure summarises the MOFA+ pipeline:
 
 \begin{figure}[H]
 	\centering
@@ -93,19 +93,35 @@ In summary, the updated model formulation introduces symmetric two-level sparsit
 	\label{fig:MOFA2}
 \end{figure}
 
-% COPIED
-% \subsubsection{How to define groups?}
-% Groups are typically based on the experimental design (i.e. conditions, batches, etc.), but the user can also explore data-driven groups. There is no "right" or "wrong" definition of groups, but some definitions will be more useful than others.
-% It is important to note that the size of the group can influence the reconstruction of Factors. In general, the more samples per group, the more complexity there will exist in the dataset, which can manifest itself in retrieval of a higher number of Factors.
+\subsubsection{Guidelines on the selection of views and groups} \label{section:mofa2_guidelines_views_groups}
+
+\paragraph{Views}
+Views or data modalities typically correspond to different molecular layers. Nevertheless, as we show in this thesis, there is flexibility in the definition of views and the user can explore data-driven modalities. For example, one could divide the RNA expression data into three vies corresponding to mRNA, rRNA and miRNA. Similarly, one can divide DNA methylation and chromatin accessibility data by genomic context (enhancers, promoters, etc.). The \textit{right} selection of views boils down to the hypothesis that is to be explored.\\ 
+Importantly, larger views can contribute more to the latent space than small views, simply because they contribute more to the objective function. The signal that can be extracted from small data modalities will depend on the degree of structure within the dataset, the levels of noise and on how strong the feature imbalance is between data modalities. As suggested in Chapter 2, a typical preprocessing step (when possible) is to minimise the feature imbalance by doing a feature selection step and keeping the number of features per view within the same order of magnitude.
+
+\paragraph{Groups}
+Groups are generally motivated by the experimental design.
+As with the definition of views, the user can also explore data-driven groups. There is no \textit{right} or \textit{wrong} definition of groups, but some definitions will be more useful than others depending on the hypothesis that is sought to explore.\\
+As discussed above, it is essential to keep in mind that the aim of the multi-group framework is not to capture differential changes in \textit{mean} levels between the groups (as for example when doing differential RNA expression). The aim is to find out which sources of variability are shared between the different groups and which ones are exclusive to a single group. To achieve this, the features are centred per group (i.e. intercept effects are regressed out) before fitting the model.\\
+Importantly, as with the number of features per view, the number of samples (cells) per group can influence the latent space. In general, the more samples per group, the more complexity there will exist in the dataset, which can manifest itself in retrieval of a higher number of Factors.
+
+
+\subsubsection{Model selection} \label{section:mofa2_model_selection}
+
+As discussed in \Cref{section:mofa_robustness}, the optimisation procedure of MOFA depends on the parameter initialisation. When using random initialisation, the Factors can vary between different model instances and a model selection step is advised.\\
+We realised that this was not a user-friendly solution and it requires a lot of computational resources when applying the model to large data sets. Hence to simplify model training and interpretation we eliminated the random component in the MOFA+ implementation by initialising the Factors using the principal components from the concatenated data set. In practice, we observe faster convergence times and better ELBO estimates when initialising with the PCA solution (\Cref{fig:mofa2_init}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\linewidth]{mofa2_init}
+	\caption[]{
+	\textbf{Comparison of PCA and Random initialisation in MOFA}.\\ The dashed lines mark the iteration at which the model converged. Data was simulated from the generative model with the following dimensions: $M=2$ modalities, $G=2$ groups, $D=1000$ features, $N=1000$ samples and $K=10$ factors.
+	}
+	\label{fig:mofa2_init}
+\end{figure}
 
 % COPIED
-% \subsubsection{Model selection}
-% The optimisation procedure of MOFA+ depends on the parameter initialisation and is hence not guaranteed to find the same exact solution at every trial. Hence, when using random initialisation Factors can vary between different model instances and a model selection step using the ELBO is advised. However, to simplify model training and interpretation in our implementation we eliminated the random component by initialising the Factors using the principal components from the concatenated data set.
-
-
-
-% COPIED
-\subsection{Solving the rotational invariance problem}
+\subsection{Solving the rotational invariance problem} \label{section:mofa2_rotational_invariance}
 
 Conventional Factor Analysis is invariant to rotation in the latent space\cite{Zhao2009}. To demonstrate this property, let us apply an arbitrary rotation to the weights and the factors, specified by the rotation matrix $\bfR \in \R^{K \times K}$:
 \begin{align*}
@@ -126,7 +142,7 @@ In practice, this property renders conventional Factor Analysis unidentifiable, 
 It is important to remark that the factors are nonetheless invariant to permutations. This implies that under different initial conditions, the order of the factors is not necessarily the same in independent model fittings. To address this we manually sort factors \textit{a posteriori} based on total variance explained.
 
 
-\subsection{Stochastic variational inference algorithm}
+\subsection{TO-FINISH TO-FINISH TO-FINISH Stochastic variational inference algorithm}
 
 In \Cref{section:stochastic_variational_inference} I have explained how to derive a stochastic variational inference (SVI) algorithm for a general Bayesian model using an adapted version of the formulation introduced in \cite{Hoffman2012}.\\
 To apply the SVI algorithm to MOFA the first step is to choose the \textit{local} and \textit{global} dimensions. Just as a reminder, the local dimension will be factorised in the ELBO and thus the one where the stochastic gradients apply.\\
@@ -161,7 +177,36 @@ In the case of the MOFA+ model the variables that are classified as \textit{loca
 % 	\label{MOFAstochasticascent}
 % \end{algorithm}
 
+\subsection{Theoretical comparison with published methods}
+
+As discussed in Chapter 2, a variety of factor analysis models exist with the aim of perfoming multi-view and/or multi-group data integration. A comparison of multi-view method is shown in \Cref{GFAtable}. Here we specifically focus on the methods that have been applied to single-cell data:
+
+\begin{table}[h]
+	\begin{tabular}{@{}llllll} 
+		\toprule
+
+		{\textbf{Method}} & {\textbf{\parbox{2.0cm}{Scales to\\$>1e5$ cells?}}} & {\textbf{\parbox{2.0cm}{Multi-view}}} & {\textbf{\parbox{2.0cm}{Multi-group}}} & {\textbf{\parbox{2.0cm}{Missing values}}} & {\textbf{\parbox{2.0cm}{Likelihoods}}} \\ \toprule
+		slalom \cite{Buettner2017} & No & No & No & No & ZI gaussian \\\midrule
+		pCMF \cite{Durif2019} & Yes & No & No & No & ZI poisson \\\midrule
+		ZIFA \cite{Pierson2015} & No & No & No & No & ZI gaussian \\\midrule
+		scVI \cite{Lopez2018} & Yes & No & Yes & No & ZI negative binomial \\\midrule
+		MSFA \cite{DeVito2019} & No & No & Yes & No & Gaussian \\\midrule
+		ZINB-WaVE \cite{Risso2018} & No & No & No & No & ZI negative binomial \\\midrule
+		AJIVE \cite{Feng2018} & No & Yes & No & No & NA \\\midrule
+		DIABLO \cite{Singh2018} & Yes & Yes & No & * & NA \\\midrule
+		scHPF \cite{Levitin2019} & Yes & No & No & Yes & Negative binomial \\\midrule
+		MOFA \cite{Argelaguet2018} & No & Yes & No & Yes & Gaussian/Poisson/Bernoulli \\\midrule
+		MOFA+ & Yes & Yes & Yes & Yes & Gaussian/Poisson/Bernoulli \\\midrule
+	\end{tabular}
+	\caption{Overview of Factor analysis methods for single-cell data.}
+	% \label{XXX}
+\end{table}
+
+
 \subsection{A note on the implementation}
 
 The core of MOFA+ is implemented in Python, and the downstream analysis and visualisations are implemented in R. GPU acceleration is implemented using CuPy\cite{Okuta2017}, an open-source matrix library accelerated with NVIDIA CUDA.\\
 To facilitate adoption of the method, we deploy MOFA+ as open-source software\footnote{\url{https://github.com/bioFAM/MOFA2}} with multiple tutorials and a web-based analysis workbench\footnote{\url{http://www.ebi.ac.uk/shiny/mofa/}}.%, hopefully enabling a user-friendly exploration of complex single-cell data sets.
+
+
+

@@ -147,7 +147,7 @@ where $\bfF(\theta)$ is defined as
 In conclusion, while the standard gradient points to the direction of steepest ascent in Euclidean space, the natural gradient points to the direction of steepest ascent in a space where distances are defined by the KL divergence \cite{Kristiadi2019,Amari1998,Hoffman2012}.
 
 
-\subsection{Derivation of a stochastic variational inference algorithm} \label{section:stochastic_variational_inference}
+\subsection{Stochastic variational inference} \label{section:stochastic_variational_inference}
 
 In this section I will demonstrate how to derive a stochastic variational inference algorithm for general Bayesian models. This work is inspired from \cite{Hoffman2012} which we adapted and implemented for the MOFA model. A comprehensive mathematical derivation of the algorithm is not sought in this chapter. Instead, I will describe a modified and simplified derivation to gist the essential. For a complete mathematical derivation we refer the reader to \cite{Hoffman2012}.\\
 Also, this section builds upon three theoretical foundations that have been introduced before: Variational inference (\Cref{section:variational_inference}), exponential family distributions (\Cref{section:exponential_family}) and (natural) gradient ascent (\Cref{section:gradient_ascent}).

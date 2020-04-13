@@ -79,7 +79,7 @@ MOFA+ identified 7 Factors that explain at least 1\% of variance (across all gro
 
 \subsubsection{Characterisation of individual factors}
 
-Some factors recover the existence of post-implantation developmental cell types, including extra-embryonic (ExE) tissue (Factor 1 and Factor 2), and the emergence of mesoderm cells from the primitive streak (Factor 4). Consistently, the top weights for these factors are enriched for lineage-specific gene expression markers, including \textit{Ttr} and \textit{Apoa1} for ExE endoderm \Cref{fig:mofa2_scrna_ExE_endoderm_factor}; \textit{Rhox5} and \textit{Bex3} for ExE ectoderm (not shown); \textit{Mesp1} and \textit{Phlda2} for nascent mesoderm \Cref{fig:mofa2_scrna_mesoderm_factor}. Other factors captured technical variation due to metabolic stress that affects all batches in a similar fashion (Factor 3, \Cref{fig:mofa2_scrna_metabolism_factor}).\\
+Some factors recover the existence of post-implantation developmental cell types, including extra-embryonic (ExE) tissue (Factor 1 and Factor 2), and the emergence of mesoderm cells from the primitive streak (Factor 4). Consistently, the top weights for these factors are enriched for lineage-specific gene expression markers, including \textit{Ttr} and \textit{Apoa1} for ExE endoderm (\Cref{fig:mofa2_scrna_ExE_endoderm_factor}); \textit{Rhox5} and \textit{Bex3} for ExE ectoderm (not shown); \textit{Mesp1} and \textit{Phlda2} for nascent mesoderm (\Cref{fig:mofa2_scrna_mesoderm_factor}). Other factors captured technical variation due to metabolic stress that affects all batches in a similar fashion (Factor 3, \Cref{fig:mofa2_scrna_metabolism_factor}).\\
 The characterisation of other factors is described in\cite{Argelaguet2020} and is not reproduced here for simplicity.
 
 \begin{figure}[H]
@@ -121,7 +121,7 @@ Interestingly, Factors display different signatures of activity (variance explai
 In conclusion, this application shows how MOFA+ can identify biologically relevant structure in multi-group scRNA-seq datasets.
 
 
-\subsection{Identification of context-dependent methylation signatures associated with cellular diversity in the mammalian cortex}
+\subsection{Identification of context-dependent DNA methylation signatures associated with cellular diversity in the mammalian cortex}
 
 \subsubsection{Data overview and processing}
 
@@ -190,7 +190,7 @@ Taken together, our results support the hypothesis that the presence of mCH is m
 
 \subsubsection{Non-linear dimensionality reduction}
 
-The (linear) MOFA factors can be combined by further non-linear dimensionality reduction algorithms such as UMAP or t-SNE. In this case, we show that the t-SNE projections reveals the existence of multiple subpopulations of both excitatory and inhibitory cell types. Notably, the MOFA+ factors are significantly better at identifying these subpopulations than the conventional approach of using Principal Component Analysis with imputed measurements (\Cref{mofa2_scmet_dimred}).
+The (linear) MOFA factors can be combined by further non-linear dimensionality reduction algorithms such as UMAP or t-SNE. In this case, we show that the t-SNE projections reveals the existence of multiple subpopulations of both excitatory and inhibitory cell types. Notably, the MOFA+ factors are significantly better at identifying these subpopulations than the conventional approach of using Principal Component Analysis with imputed measurements (\Cref{fig:mofa2_scmet_dimred}).
 
 \begin{figure}[H]
 	\centering

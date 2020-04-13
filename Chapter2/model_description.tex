@@ -1,15 +1,10 @@
 \graphicspath{{Chapter2/Figs/}}
 
-\section{Multi-Omics Factor Analysis}
+\section{Model description} \label{mofa:model_description}
 
-The work described in this chapter results from a collaboration with Wolfgang Huber's group at the EMBL (Heidelberg, Germany). It has been peer-reviewed and published in \cite{Argelaguet2018}.\\
-The method was conceived by Florian Buettner, Oliver Stegle and me. I performed most of the mathematical derivations and implementation, but with significant contributions from Damien Arnol and Britta Velten. The CLL data application was led by Britta Velten whereas the single-cell application was lead by me, but with joint contributions in either cases. Florian Buettner, Wolfgang Huber and Oliver Stegle supervised the project.\\
-The article was jointly written by Britta Velten and me, with contributions from all authors.
+\subsection{Mathematical formulation}
 
-
-\subsection{Model description} \label{mofa:model_description}
-
-MOFA is a multi-view generalisation of traditional Factor Analysis to $M$ input matrices (or views) based on the framework of Group Factor Analysis (discussed in \Cref{section_gfa}).\\
+Multi-Omics Factor Analysis (MOFA) is a multi-view generalisation of traditional Factor Analysis to $M$ input matrices (or views) based on the framework of Group Factor Analysis (discussed in \Cref{section_gfa}).\\
 The input data consists on $M$ views $\bfY^m \in \R^{N \times D_m}$ with non-overlapping features that often represent different assays. However, there is flexibility in the definition of views.\\
 Formally, the input data is factorised as:
 \begin{equation} \label{mofa_master_equation}
@@ -70,6 +65,12 @@ All together, the joint probability density function of the model is given by
 \end{align}
 and the corresponding graphical model is shown in \Cref{fig:MOFA_graphical_model}. This completes the definition of the MOFA model.
 
+\begin{figure}[H]
+	\centering
+	\input{graphical_models/mofa}
+	\caption{Graphical model for MOFA. The white circles represent hidden variables that are infered by the model, whereas the grey circles represent the observed variables. There are a total of four plates, each one representing a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in the $m$-th view. The use of transparency in the top left nodes is intentional and becomes clear in Chapter 4.}
+	\label{fig:MOFA_graphical_model}
+\end{figure}
 
 \subsubsection{Interpretation of the factors} \label{section:interpretation_factors}
 
@@ -112,22 +113,16 @@ Once trained, the MOFA model can be queried for a set of downstream analysis (\C
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1.0\textwidth]{MOFA}
-		\caption{MOFA overview. The model takes $M$ data matrices as input ($\bfY^1, \cdots, \bfY^M$), one or more from each data modality, with co-occurrent samples but features that are not necessarily related and can differ in numbers. MOFA decomposes these matrices into a matrix of factors ($\bfZ$) and $M$ weight matrices, one for each data modality ($\bfW^1, \cdots, \bfW^M$). White cells in the weight matrices correspond to zeros, i.e. inactive features, whereas the cross symbol in the data matrices denotes missing values. The fitted MOFA model can be queried for different downstream analyses, including a variance decomposition to assess the proportion of variance explained by each factor in each data modality.}
+		\caption{\textbf{MOFA overview}.\\
+		The model takes $M$ data matrices as input ($\bfY^1, \cdots, \bfY^M$), one or more from each data modality, with co-occurrent samples but features that are not necessarily related and can differ in numbers. MOFA decomposes these matrices into a matrix of factors ($\bfZ$) and $M$ weight matrices, one for each data modality ($\bfW^1, \cdots, \bfW^M$). White cells in the weight matrices correspond to zeros, i.e. inactive features, whereas the cross symbol in the data matrices denotes missing values. The trained MOFA model can be queried for different downstream analyses.}
 		\label{fig:MOFA}
 	\end{center}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\input{graphical_models/mofa}
-	\caption{Graphical model for MOFA. The white circles represent hidden variables that are infered by the model, whereas the grey circles represent the observed variables. There are a total of four plates, each one representing a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in the $m$-th view. The use of transparency in the top left nodes is intentional and becomes clear in Chapter 4 where we implement a spike-and-slab prior on the factors.}
-	\label{fig:MOFA_graphical_model}
 \end{figure}
 
 
 \subsubsection{Inference}
 
-To make the model scalable to large data sets we adopt a Variational inference framework with a structured mean field approximation. A detailed overview is given in \Cref{section:variational_inference}, and details on the variational updates for the MOFA model are given in \Cref{appendix1}. To enable efficient inference for non-Gaussian likelihoods we employ local bounds \cite{Jaakkola2000,Seeger2012}. This is described in detail in \Cref{section:mofa_ngaussian}.
+To make the model scalable to large data sets we adopt a Variational inference framework with a structured mean field approximation. A detailed overview is given in \Cref{section:variational_inference}, and details on the variational updates for the MOFA model are given in \Cref{appendix:mofa}. To enable efficient inference for non-Gaussian likelihoods we employ local bounds \cite{Jaakkola2000,Seeger2012}. This is described in detail in \Cref{section:mofa_ngaussian}.
 
 
 \subsection{Model selection and consistency across random initilizations} \label{section:mofa_robustness}
@@ -151,7 +146,7 @@ Additionally, because of the non-convexity of the optimisation problem, differen
 
 \begin{figure}[H]
 	\centering 	
-	\includegraphics[width=0.5\textwidth]{MOFA_nfactors}
+	\includegraphics[width=0.6\textwidth]{MOFA_nfactors}
 	\caption{\textbf{Training curve for the number of active factors across 25 different model instances}.\\
 	The y-axis displays the number of active factors. The x-axis displays the iteration number. Different lines denote different model instances.}
 	\label{fig:mofa_nfactors}
@@ -160,12 +155,12 @@ Additionally, because of the non-convexity of the optimisation problem, differen
 
 \subsection{Monitoring convergence}
 
-An attractive property ofvVariational inference is that the objective function, the Evidence Lower Bound (ELBO), increases monotonically at every iteration. This provides a simple way of monitoring convergence:
+An attractive property of Variational inference is that the objective function (the ELBO) increases monotonically at every iteration. This provides a simple way of monitoring convergence:
 
  \begin{figure}[H]
 	\centering 	
 	\includegraphics[width=0.5\textwidth]{elbo_convergence}
-	\caption{Training curve for two diffent initialisations of MOFA. The y-axis displays the log of the ELBO, with higher values indicating a better fit. The x-axis displays the iteration number. The horizontal dash lines mark the value of the ELBO upon convergence. }
+	\caption{Training curve for two diffent instances of MOFA with random initialisations. The y-axis displays the log of the ELBO, with higher values indicating a better fit. The x-axis displays the iteration number. The horizontal dash lines mark the value of the ELBO upon convergence. }
 	\label{fig:elbo_convergence}
 \end{figure}
 
@@ -256,7 +251,7 @@ Minimizing in the variational parameter $\zeta$ this leads to the updates given 
 \begin{equation*}
 	\zeta_{nd}^2 = \mathbb{E}[c_{nd}^2]
 \end{equation*}
-as described in \cite{Jaakkola2000}, \cite{Bishop}.\\
+as described in \cite{Jaakkola2000}, \cite{Bishop2006}.\\
 For the variational distribution $q(\bfZ,\bfW)$ we observe that the Jaakkola bound can be re-written as 
 \begin{equation*}
 	b_J(\zeta_{nd}, c_{nd},y_{nd} ) = -\log\left(\varphi\left(\hat{y}_{nd}; c_{nd}, \frac{1}{2\lambda(\zeta_{nd})}\right)\right) + \gamma(\zeta_{nd}),
@@ -287,4 +282,32 @@ The pseudodata updates are given by
 	\hat{y}_{nd} = \zeta_{nd} - \frac{\mathrm{S}(\zeta_{nd})(1-y_{nd}/\lambda(\zeta_{nd}))}{\kappa_d}.
 \end{equation*}
 
+\pagebreak
+	 
+\subsection{Theoretical comparison with published methods}
+
+A variety of latent variable models exist with the aim of perfoming multi-view data integration. A summary is provided in the table below. 
+
+\begin{table}[H]
+	\begin{tabular}{@{}lllllll} 
+		\toprule
+		{\textbf{Publication}} & {\textbf{Inference}} & {\textbf{\parbox{2.1cm}{View-wise\\ sparsity}}} & {\textbf{\parbox{2.4cm}{Feature-wise\\ sparsity}}} & {\textbf{\parbox{1.3cm}{Missing\\ values}}} & {\textbf{Likelihood}} &  \parbox{1.5cm}{{\textbf{Noise\\ model}}} \\ \toprule
+		\parbox{2.2cm}{Shen2009} & \parbox{2.1cm}{EM,\\ grid search} & \parbox{2.1cm}{$L_1$- penalties} & $L_1$-penalty & No & Gaussian & \parbox{1.5cm}{Hetero-\\scedastic} \\\midrule
+		\parbox{2.2cm}{Mo2013} &  \parbox{2.1cm}{EM,\\ grid search} & \parbox{2.1cm}{$L_1$- penalties} & $L_1$-penalty & No &\parbox{2cm}{Gaussian,\\Poisson,\\Bernoulli}  & \parbox{1.5cm}{Hetero-\\scedastic} \\\midrule
+		\parbox{2.2cm}{Virtanen2012} & VB & ARD & None & No & Gaussian & \parbox{1.5cm}{Homo-\\scedastic} \\\midrule
+		\parbox{2cm}{Klami2014} & VB & ARD & None & No & Gaussian & \parbox{1.5cm}{Homo-\\scedastic} \\ \midrule
+		\parbox{2cm}{Bunte2016}  & Gibbs & ARD & Spike-Slab & No & Gaussian & \parbox{1.5cm}{Homo-\\scedastic} \\ \midrule
+		\parbox{2cm}{Hore2016}  & VB  & None & Spike-Slab & Yes  & Gaussian & \parbox{1.5cm}{Hetero-\\scedastic}  \\ \midrule
+		\parbox{2cm}{Remes2016}  & VB & ARD & None & No & Gaussian & \parbox{1.5cm}{Homo-\\scedastic} \\ \midrule
+		\parbox{1.7cm}{Zhao2015} & Gibbs & ARD & \parbox{2.5cm}{Three-parameter\\ beta prior} & No & Gaussian & \parbox{1.5cm}{Hetero-\\scedastic} 
+		\\ \midrule
+		\parbox{2.6cm}{{Leppaaho2017},\\ {2017}}  & {Gibbs} & {ARD} & {Spike-Slab} & {Yes} & {Gaussian} & \parbox{2cm}{{Homo-}\\{scedastic}} \\ \midrule
+		MOFA  & VB & ARD & Spike-Slab & Yes & \parbox{2cm}{Gaussian,\\Poisson,\\Bernoulli} & \parbox{2cm}{Hetero-\\scedastic} \\  \bottomrule
+	\end{tabular}
+	\caption{\textbf{Overview of latent variable methods for multi-view data integration.} Abbreviations used: VB (variational Bayes inference), Gibbs (Gibbs sampling based inference), ARD(Automatic Relevance Determination)}
+	\label{GFAtable}
+								
+\end{table}
+
+%Abbreviations used: VB (variational Bayes inference), Gibbs (Gibbs sampling based inference),\\ ARD (Automatic Relevance Determination), EM (Expectation-Maximization)		
 
