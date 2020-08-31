@@ -4,11 +4,11 @@
 
 \subsection{Mathematical formulation}
 
-Multi-Omics Factor Analysis (MOFA) is a multi-view generalisation of traditional Factor Analysis to $M$ input matrices (or views) based on the framework of Group Factor Analysis (discussed in \Cref{section_gfa}).\\
-The input data consists on $M$ views $\bfY^m \in \R^{N \times D_m}$ with non-overlapping features that often represent different assays. However, there is flexibility in the definition of views.\\
+Multi-Omics Factor Analysis (MOFA) is a multi-view generalisation of traditional Factor Analysis to $M$ input matrices (or views) based on the framework of Group Factor Analysis (discussed in \Cref{section:gfa}).\\
+The input data consists of $M$ views $\bfY^m \in \R^{N \times D_m}$ with non-overlapping features that often represent different assays. However, there is flexibility in the definition of views.\\
 Formally, the input data is factorised as:
 \begin{equation} \label{mofa_master_equation}
-	\mathbf{Y}^m = \mathbf{Z}\mathbf{W}^{mT} + \bepsilon^m
+	\mathbf{Y}^m = \mathbf{Z}(\mathbf{W}^{m}){T} + \bepsilon^m
 \end{equation}
 where $\bfZ \in \R^{N \times K}$ is a matrix that contains the factor values and $\bfW^m \in \R^{D_m \times K}$ are a set of $M$ matrices (one per view) that contain the weights that relate the high-dimensional space to the low-dimensional latent representation. Finally, $\bepsilon^m \in \R^{D_m}$ captures the residuals, or the noise, which is assumed to be normally distributed and heteroskedastic:
 \begin{equation}
@@ -17,11 +17,9 @@ where $\bfZ \in \R^{N \times K}$ is a matrix that contains the factor values and
 Non-Gaussian noise models can also be defined (see \Cref{section:mofa_ngaussian}), but unless otherwise stated, we will always assume Gaussian residuals.\\
 Altogether, this results in the following likelihood:
 \begin{equation}
-	p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{d=1}^{D_m} \prod_{n=1}^{N} \Ndist{y_{nd}^m}{\bfz_{n}^T\bfw_{d}^{m},1/\tau_d^m}
+	p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{d=1}^{D_m} \prod_{n=1}^{N} \Ndist{y_{nd}^m}{\bfz_{n}^T\bfw_{d}^{m},(\tau_d^m)^{-1}}
 	% p(y_{nd}^m) = \Ndist{y_{nd}^m}{\bfz_{n,:}\bfw_{d,:}^{mT},1/\tau_d^m},
 \end{equation}
-
-Notice that the mathematical formulation so far is equivalent to the Group Factor Analysis described in \Cref{section_gfa}.
 
 \subsubsection{Prior distributions for the factors}  \label{section:mofa_factors}
 
@@ -49,7 +47,7 @@ Finally, we define conjugate priors for $\theta$ and $\alpha$:
 	p(\theta_k^m) &= \Bdist{\theta_k^m}{a_0^\theta,b_0^\theta}\\
 	p(\alpha_k^m) &= \Gdist{\alpha_k^m}{a_0^\alpha, b_0^\alpha}
 \end{align}
-with hyper-parameters $a_0^\theta,b_0^\theta =1$ and $a_0^\alpha, b_0^\alpha=1e^{-5}$ to get uninformative priors. Posterior values of $\theta_k^m$ close to $0$ implies that most of the weights of factor $k$ in view $m$ are shrinked to $0$ (sparse factor). In contrast, a value of $\theta_k^m$ close to $1$ implies that most of the weights are non-zero (non-sparse factor). A small value of $\alpha_k^m$ implies that factor $k$ is active in view $m$. In contrast, a large value of $\alpha_k^m$ implies that factor $k$ is inactive in view $m$.
+with hyper-parameters $a_0^\theta,b_0^\theta =1$ and $a_0^\alpha, b_0^\alpha=1e^{-5}$ to get uninformative priors. Posterior values of $\theta_k^m$ close to $0$ implies that most of the weights of factor $k$ in view $m$ are shrunk to $0$ (sparse factor). In contrast, a value of $\theta_k^m$ close to $1$ implies that most of the weights are non-zero (non-sparse factor). A small value of $\alpha_k^m$ implies that factor $k$ is active in view $m$. In contrast, a large value of $\alpha_k^m$ implies that factor $k$ is inactive in view $m$.
 
 All together, the joint probability density function of the model is given by
 \begin{align}
@@ -81,7 +79,7 @@ For example, if the $k$-th factor captures the variability associated with cell 
 
 \subsubsection{Interpretation of the weights} \label{section:interpretation_weights}
 
-The weights provide a score for each gene on each factor. Genes with no association with the factor are expected to have values close to zero, as specified by the prior. In contrast, genes with strong association with the factor are expected to have large absolute values. The sign of the loading indicates the direction of the effect: a positive loading indicates that the feature is more active in the cells with positive factor values, and viceversa. \\
+The weights provide a score for each gene on each factor. Genes with no association with the factor are expected to have values close to zero, as specified by the prior. In contrast, genes with strong association with the factor are expected to have large absolute values. The sign of the loading indicates the direction of the effect: a positive loading indicates that the feature is more active in the cells with positive factor values, and vice versa. \\
 Following the cell cycle example from above, genes that are upregulated in the M phase are expected to have large positive weights, whereas genes that are downregulated in the M phase (or, equivalently, upregulated in the G1 phase) are expected to have large negative weights.
 
 % \subsubsection{Interpretation of the noise}
@@ -100,9 +98,9 @@ Once trained, the MOFA model can be queried for a set of downstream analysis (\C
 
 	\item \textbf{Ordination of the samples in the latent space}: as in any latent variable model, the samples can be visualised in the latent space using scatterplots or beeswarm plots. As we will demonstrate, simply by colouring or shaping the samples in the factor space using external covariates one can easily characterise the etiology of some of the factors.
 
-	\item \textbf{Inspection of weights}: the feature weights can be interpreted as an importance score for each feature on each factor. Inspecting the top weights for a given factor can help to reveals the molecular signatures that underlie each factor.
+	\item \textbf{Inspection of weights}: the feature weights can be interpreted as an importance score for each feature on each factor. Inspecting the top weights for a given factor can reveal the molecular signatures that underlie each factor.
 
-	\item \textbf{Association analysis between factors and external covariates}: multi-omic data sets typically consist on a large set of molecular readouts that are used for model training, and a small set of additionals covariates or response variables such as clinical outcome measurements. The external covariates that are not used for model training can be linked to the factors \textit{a posteriori} using a simple association analysis.
+	\item \textbf{Association analysis between factors and external covariates}: multi-omic data sets typically consist of a large set of molecular readouts that are used for model training, and a small set of additionals covariates or response variables such as clinical outcome measurements. The external covariates that are not used for model training can be linked to the factors \textit{a posteriori} using a simple association analysis.
 
 	\item \textbf{Imputation}: the latent factors capture a condensed low-dimensional representation of the data that can be used to generate (denoised) reconstructions of the input data. This can be valuable for the inspection of very sparse data sets.
 
@@ -128,7 +126,7 @@ To make the model scalable to large data sets we adopt a Variational inference f
 \subsection{Model selection and consistency across random initilizations} \label{section:mofa_robustness}
 
 The optimisation problem in MOFA is not convex and the resulting posterior distributions depend on the initialisation of the model. Thus, when doing random initialisation of the parameters and/or expectations it becomes mandatory to perform model selection and assess the consistency of the factors across different trials.\\
-The strategy we adopted in this work is to train several instances MOFA models under different parameter initialisations, where the expectation of each node is randomly sampled from its underlying distribution. After fitting, we select the model with the highest ELBO for downstream analysis. In addition, we evaluate the robustness of the factors by plotting the Pearson correlations between factors across all trials:
+The strategy we adopted in this work is to train several MOFA models under different parameter initialisations, where the expectation of each node is randomly sampled from its underlying distribution. After fitting, we select the model with the highest ELBO for downstream analysis. In addition, we evaluate the robustness of the factors by plotting the Pearson correlations between factors across all trials:
 
 \begin{figure}[H]
 	\centering 	
@@ -141,7 +139,7 @@ The strategy we adopted in this work is to train several instances MOFA models u
 
 \subsection{Learning the number of factors} \label{section:mofa_nfactors}
 
-As described in \Cref{ard}, the use of an ARD prior allows factors to be actively prunned by the model if their variance explained is negligible. In the implementation we control the prunning of factors by a hyperparameter that defines a threshold on the minimum fraction of variance explained by a factor (across all views).\\
+As described in \Cref{section_ard}, the use of an ARD prior allows factors to be actively pruned by the model if their variance explained is negligible. In the implementation we control the pruning of factors by a hyperparameter that defines a threshold on the minimum fraction of variance explained by a factor (across all views).\\
 Additionally, because of the non-convexity of the optimisation problem, different model instances can potentially yield solutions with different number of active factors (\Cref{fig:mofa_nfactors}). Thus, the optimal number of factors can be selected by the model selection strategy outlined in \Cref{section:mofa_robustness}.
 
 \begin{figure}[H]
@@ -180,13 +178,13 @@ Denoting the parameters in the MOFA model as $\bfX= (\bfZ,\bfW,\balpha,\btau,\bt
 \end{equation*}
 
 
-Expanding the MOFA model to non-Gaussian likelihoods we now assume a general likelihood of the form $p(\bfY|\bfX)=p(\bfY|\bfC)$ with $\bfC = \bfZ\bfW^{T}$, that can write as
+Expanding the MOFA model to non-Gaussian likelihoods we now assume a general likelihood of the form $p(\bfY|\bfX)=p(\bfY|\bfC)$ with $\bfC = \bfZ\bfW^{T}$, that we can write as
 
 \begin{equation*}
 -\log p(\bfY|\bfX) = \sum_{n=1}^{N} \sum_{d=1}^{D} f_{nd} (c_{nd})
 \end{equation*}
-with $f_{nd}(c_{nd}) = -\log p(y_{nd}|c_{nd})$. We dropped the view index $m$ to keep notation uncluttered.\\
-Extending \cite{Seeger2012} to our heteroscedastic noise model, we require $f_{nd}(c_{nd})$ to be twice differentiable and bounded by $\kappa_d$, such that $f_{nd}''(c_{nd}) \leq \kappa_d \,\forall n,d$. This holds true in many important models as for example the Bernoulli and Poisson case. Under this assumption a lower bound on the log likelihood can be constructed using Taylor expansion,
+with $f_{nd}(c_{nd}) = -\log p(y_{nd}|c_{nd})$. I dropped the index $m$ for clarity.\\
+Extending \cite{Seeger2012} to our heteroscedastic noise model, we require $f_{nd}(c_{nd})$ to be twice differentiable and bounded by $\kappa_d$, such that $f_{nd}''(c_{nd}) \leq \kappa_d \,\forall n,d$. This holds true in many important models as for example the Bernoulli and Poisson likelihoods. Under this assumption a lower bound on the log likelihood can be constructed using Taylor expansion,
 \begin{equation*}
 f_{nd}(c_{nd}) \leq \frac{\kappa_d}{2} (c_{nd} - \zeta_{nd})^2 + f'(\zeta_{nd})(c_{nd} - \zeta_{nd}) + f_{nd}(\zeta_{nd}) := q_{nd}(c_{nd},\zeta_{nd}),
 \end{equation*}
@@ -198,19 +196,20 @@ The algorithm propsed in \cite{Seeger2012} then alternates between updates of $\
 \begin{equation*}
 \zeta \leftarrow \E[\bfW]\E[\bfZ]^{T}
 \end{equation*}
-where the expctations are taken with respect to the corresponding $q$ distributions.\\
+where the expectations are taken with respect to the corresponding $q$ distributions.\\
 % In order to find the updates for $q(\bTheta)$ we bring the taylor approximation of $q(f_{nd})$ in q audratic form:
 % \begin{equation*}
 % q(f_{nd},\zeta_{nd}) \propto \frac{\kappa_d}{2}(f_{nd} - (zeta_{nd} - g(\zeta_{nd})/\kappa_d))^2
 % \end{equation*}
 % and note that this is proportional to the log of a Gaussian distribution $-log \Normal (\hat{y}_{nd}|f_{ng},\frac{1}{ng})$ where $\hat{y}_{nd} = zeta_{nd} - g'(\zeta_{nd})/\kappa_d$ is defined as a pseudodata based on the zero-inflated observations.
 % Consequently, for fixed $\zeta_{nd}$, the updates of the variational distributions $Q(X)$ and $Q(W)$ are equivalent to the ones derived in X, but with pseudodata $\hat{Y}$ and precision $\kappa_g$
-On the other hand, the updates for $q(\bfX)$ can be shown to be identical to the variational Bayesian updates with a conjugate Gaussian likelihood when replacing the observed data $\bfY$ by a pseudo-data $\hat{\bfY}$ and the precisions $\tau_{nd}$ (which were treated as random variables) by the constant terms $\kappa_d$ introduced above.\\
-The pseudodata is given by
+On the other hand, the updates for $q(\bfX)$ can be shown to be identical to the variational Bayesian updates with a conjugate Gaussian likelihood when replacing the observed data $\bfY$ by a pseudo-data $\hat{\bfY}$ and the precisions $\tau_{nd}$ (which were treated as random variables) by the constant terms $\kappa_d$ introduced above. 
+
+The pseudodata is given by:
 \begin{equation*}
-\hat{y}_{nd} = \zeta_{nd} - f'(\zeta_{nd})/\kappa_d.
+\hat{y}_{nd} = \zeta_{nd} - f'(\zeta_{nd})/\kappa_d
 \end{equation*}
-Depending on the log likelihoods $f(\cdot)$ different $\kappa_d$ are used resulting in different pseudo-data updates. Two special cases implemented in MOFA are the Poisson and Bernoulli likelihood described in the following.
+depending on the log likelihoods $f(\cdot)$ different $\kappa_d$ are used resulting in different pseudo-data updates. Two special cases implemented in MOFA are the Poisson and Bernoulli likelihood described in the following.
 
 \subsubsection*{Bernoulli likelihood for binary data}
 When the observations are binary, $y \in \{0,1\}$, they can be modelled using a Bernoulli likelihood:

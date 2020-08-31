@@ -1,7 +1,7 @@
 \subsection{Probabilistic modelling} \label{section:probabilistic_modelling}
 
 A scientific model is a simple theoretical representation of a complex natural phenomenon to allow the systematic study of its behaviour. The general idea is that if a model is able to explain some observations, it might be capturing its true underlying laws and can therefore be used to make future predictions.
-In particular, statistical models are a powerful abstraction of nature. They consist on a set of observed variables and a set of (hidden) parameters. The procedure of fitting the parameters using a set of observations is called inference or learning.
+In particular, statistical models are a powerful abstraction of nature. They consist of a set of observed variables and a set of (hidden) parameters. The procedure of fitting the parameters using a set of observations is called inference or learning.
 
 One of the major challenges of inference when dealing with real data sets is the distinction between signal and noise. An ideal model should learn only the information relevant to gain explanatory power while disregarding the noise. However, this is a non-trivial task in most practical situations. Very complex models will tend to overfit the training data, capturing large amounts of noise and consequently leading to a bad generalisation performance to independent data sets. On the other hand, simplistic models will fit the data poorly, leading to poor explanatory power.
 
@@ -13,7 +13,7 @@ A common approach is to define a statistical model of the data $\bfY$ with a set
 \[
 	\hat{\btheta} = \argmax_{\btheta} p(\bfY|\btheta)
 \]
-This process is called maximum likelihood learning\cite{Stigler2008,Bishop2006,Murphy}. However, in this setting there is no penalisation for model complexity, making maximum likelihood solutions prone to overfit in cases where the data is relatively sparse. Generalisations that account for model complexity have been proposed and include regularising terms that shrink parameters to small values. However, these are often particular cases of the more general framework of Bayesian statistics \cite{Hastie,Bishop2006,Murphy}.
+This process is called maximum likelihood learning \cite{Stigler2008,Bishop2006,Murphy}. However, in this setting there is no penalisation for model complexity, making maximum likelihood solutions can overfit when the data is relatively sparse. Generalisations that account for model complexity have been proposed that include regularising terms that shrink parameters to small values. However, these are often particular cases of the more general framework of Bayesian statistics \cite{Hastie,Bishop2006,Murphy}.
 
 \subsection{Bayesian inference}  \label{section:bayesian_inference}
 In the Bayesian framework, the parameters themselves are treated as random unobserved variables and we aim to obtain probability distributions for $\btheta$, rather than a single point estimate. To do so, prior beliefs are introduced into the model by specifying a prior probability distribution $p(\btheta)$. Then, using Bayes' theorem \cite{Bayes1763}, the prior hypothesis is updated based on the observed data $\bfY$ by means of the likelihood $p(\bfY|\btheta)$ function, which yields a posterior distribution over the parameters:
@@ -27,11 +27,11 @@ There are two common considerations when defining the prior distributions. The f
 
 The second strategy is based on convenient mathematical properties to make inference tractable. If the likelihood and the prior distributions do not belong to the same family of probability distributions (they are not conjugate) then inference becomes more problematic \cite{Raiffa1961,Bishop2006,Murphy,Gelman2013}. The existence of conjugate priors is one of the major reasons that justify the widespread use of exponential family distributions in Bayesian models \cite{Gelman2013}.
 
-Again, the milestone of Bayesian inference is that an entire posterior probability distribution is obtained for each unobserved variable. This has the clear advantage of naturally handling uncertainity in the estimation of parameters. For instance, when making predictions, a fully Bayesian approach attempts to integrate over all the possible values of all unobserved varaibles, effectively propagating uncertainity across multiple layers of the model. Nevertheless, this calculation is sometimes intractable and one has to resort to point estimates \cite{Bishop2006,Murphy,Gelman2013}. The simplest approximation to the posterior distribution is to use its mode, which leads to the maximum a posteriori (MAP) estimate:
+Again, the essential point of Bayesian inference is that an entire posterior probability distribution is obtained for each unobserved variable. This has the clear advantage of naturally handling uncertainity in the estimation of parameters. For instance, when making predictions, a fully Bayesian approach attempts to integrate over all possible values of all unobserved varaibles, effectively propagating uncertainity across multiple layers of the model. Nevertheless, this calculation is sometimes intractable and one has to resort to point estimates \cite{Bishop2006,Murphy,Gelman2013}. The simplest approximation to the posterior distribution is to use its mode, which leads to the maximum a posteriori (MAP) estimate:
 \[
 	\hat{\btheta} = \argmax_{\btheta} p(\btheta) p(\bfY|\btheta) 
 \]
-This is similar to the maximum likelihood objective function, but with the addition of a term $p(\btheta)$. When the prior dsitribution is chosen smartly, this term penalises for model complexity. Therefore, in contrast to standard (non-penalised) maximum likelihood inference, Bayesian approaches naturally handle the problem of model complexity and overfitting\cite{Bishop2006,Murphy,Gelman2013}. At the limit of infinite observations, the influence of the prior to the posterior is negligible and the MAP estimate converges towards the Maximum likelihood estimate, hence providing a rational link between the two inference frameworks.
+This is similar to the maximum likelihood objective function, but with the addition of a term $p(\btheta)$. When the prior distribution is well chosen, this term penalises for model complexity. Therefore, in contrast to standard (non-penalised) maximum likelihood inference, Bayesian approaches naturally handle the problem of model complexity and overfitting \cite{Bishop2006,Murphy,Gelman2013}. At the limit of infinite observations, the influence of the prior to the posterior is negligible and the MAP estimate converges towards the Maximum likelihood estimate, hence providing a rational link between the two inference frameworks.
 
 \subsubsection{Deterministic approaches for Bayesian inference} \label{section:deterministic_bayesian_inference}
 The central task in Bayesian inference is the direct evaluation of the posterior distributions and/or the computation of expectations with respect to the posterior distributions. In sufficiently complex models, closed-form solutions are not available and one has to resort to approximation schemes, which broadly fall into two classes: stochastic or deterministic \cite{Gelman2013,Blei2016}. 
@@ -39,32 +39,32 @@ The central task in Bayesian inference is the direct evaluation of the posterior
 Stochastic approaches hinge on the generation of samples from the posterior distribution via a Markov Chain Monte Carlo (MCMC) framework. Such techniques have the appealing property of generating exact results at the asymptotic limit of infinite computational resources. However, in practice, sampling approaches are computationally demanding and suffer from limited scalability to large data sets \cite{Blei2016}. \\
 In contrast, deterministic approaches are based on analytical approximations to the posterior distribution, which often lead to biased results. Yet, given the appropriate settings, these approaches are potentially much faster and scalable to large applications \cite{Bishop2006,Murphy,Blei2016}.
 
-\paragraph{Laplace approximation}% \label{section:laplace_approximation}
-The Laplace approximation is probably the simplest of the deterministic tecniques, where the aim is to construct a Gaussian approximation around the mode of the true posterior distribution using a second-order Taylor expansion \cite{Bishop2006,Murphy}.\\
-Suppose $\bfX$ contains all unobserved variables. The true posterior distribution can be written as:
-\[
-p(\bfX) = \frac{f(\bfX)}{Z}
-\]
-where $f(\bfX)$ is a function that depends on the unobserved variables and $Z$ is an unknown normalisation constant to ensure that $\int p(\bfX) d\bfX = 1$.
+% \paragraph{Laplace approximation}% \label{section:laplace_approximation}
+% The Laplace approximation is probably the simplest of the deterministic tecniques, where the aim is to construct a Gaussian approximation around the mode of the true posterior distribution using a second-order Taylor expansion \cite{Bishop2006,Murphy}.\\
+% Suppose $\bfX$ contains all unobserved variables. The true posterior distribution can be written as:
+% \[
+% p(\bfX) = \frac{f(\bfX)}{Z}
+% \]
+% where $f(\bfX)$ is a function that depends on the unobserved variables and $Z$ is an unknown normalisation constant to ensure that $\int p(\bfX) d\bfX = 1$.
 
-The second-order Taylor expansion of $\log f(\bfX)$ centered around its (known) mode $\hat{\bfX}$ is: 
-\[
-	\log f(\bfX) \approx \log f(\hat{\bfX}) - \frac{1}{2} (\bfX-\hat{\bfX})^T \bfA (\bfX-\hat{\bfX})
-\]
-where $\bfA = \nabla^2 \log f(\hat{\bfX})$ is the Hessian matrix of $\log f(\bfX)$ evaluated at $\hat{\bfX}$.\\
-Notice three things. First, the first-order term of the Taylor expansion is zero because $\hat{\bfX}$ is a stationary point. Second, the $\log$ function is monotonically increasing and therefore a maximum of $\log f(\bfX)$ is also a maximum of $f(\bfX)$. Third, the mode of the posterior $p(\bfX)$ must be known, which requires the use of (complex) optimisation algorithms.\\
-Taking the exponential in both sides:
-\[
-	f(\bfX) \approx f(\hat{\bfX}) \exp\{ -\frac{1}{2} (\bfX-\hat{\bfX})^T \bfA (\bfX-\hat{\bfX}) \}
-\]
-which leads to the following multivariate Gaussian distribution approximation $q(\bfX) = \Ndist{\bfX}{\hat{\bfX},\bfA}$:
-\[
-	q(\bfX) = \frac{\mid A \mid^{1/2}}{(2\pi^{d/2})} \exp\{ -\frac{1}{2} (\bfX-\hat{\bfX})^T \bfA (\bfX-\hat{\bfX}) \}
-\]
-where $d$ is the number of unobserved variables. \\
-Despite its simplicity, the Laplace approximation is a useful strategy that has been successfully applied in practice. Nonetheless, this approximation has notable caveats: first, is limited by its own local definition, ignoring all the density beyond the mode of the posterior. Second, it does not apply to discrete variables. Third, the inversion of the Hessian is very expensive in high-dimensional settings.
-	% More sophisticated generalisations of the Laplace approximation have also been proposed \cite{Rue2009}
-	% To-do: check where does the inverse appear
+% The second-order Taylor expansion of $\log f(\bfX)$ centered around its (known) mode $\hat{\bfX}$ is: 
+% \[
+% 	\log f(\bfX) \approx \log f(\hat{\bfX}) - \frac{1}{2} (\bfX-\hat{\bfX})^T \bfA (\bfX-\hat{\bfX})
+% \]
+% where $\bfA = \nabla^2 \log f(\hat{\bfX})$ is the Hessian matrix of $\log f(\bfX)$ evaluated at $\hat{\bfX}$.\\
+% Notice three things. First, the first-order term of the Taylor expansion is zero because $\hat{\bfX}$ is a stationary point. Second, the $\log$ function is monotonically increasing and therefore a maximum of $\log f(\bfX)$ is also a maximum of $f(\bfX)$. Third, the mode of the posterior $p(\bfX)$ must be known, which requires the use of (complex) optimisation algorithms.\\
+% Taking the exponential in both sides:
+% \[
+% 	f(\bfX) \approx f(\hat{\bfX}) \exp\{ -\frac{1}{2} (\bfX-\hat{\bfX})^T \bfA (\bfX-\hat{\bfX}) \}
+% \]
+% which leads to the following multivariate Gaussian distribution approximation $q(\bfX) = \Ndist{\bfX}{\hat{\bfX},\bfA}$:
+% \[
+% 	q(\bfX) = \frac{\mid A \mid^{1/2}}{(2\pi^{d/2})} \exp\{ -\frac{1}{2} (\bfX-\hat{\bfX})^T \bfA (\bfX-\hat{\bfX}) \}
+% \]
+% where $d$ is the number of unobserved variables. \\
+% Despite its simplicity, the Laplace approximation is a useful strategy that has been successfully applied in practice. Nonetheless, this approximation has notable caveats: first, is limited by its own local definition, ignoring all the density beyond the mode of the posterior. Second, it does not apply to discrete variables. Third, the inversion of the Hessian is very expensive in high-dimensional settings.
+% 	% More sophisticated generalisations of the Laplace approximation have also been proposed \cite{Rue2009}
+% 	% To-do: check where does the inverse appear
 
 \subsection{Variational inference}  \label{section:variational_inference}
 
@@ -73,9 +73,9 @@ Variational inference is a deterministic family of methods that have been receiv
 In variational inference the true (but intractable) posterior distribution $p(\bfX|\bfY)$ is approximated by a simpler (variational) distribution $q(\bfX|\bTheta)$ where $\bTheta$ are the corresponding parameters. The parameters, which we will omit from the notation, need to be tuned to obtain the closest approximation to the true posterior.\\
 The distance between the true distribution and the variational distribution is calculated using the KL divergence:
 \[
-\KL(q(\bfX)||p(\bfX|\bfY)) = - \int_z q(\bfX) \log \frac{p(\bfX|\bfY)}{q(\bfX)}
+\KL(q(\bfX)||p(\bfX|\bfY)) = - \int q(\bfX) \log \frac{p(\bfX|\bfY)}{q(\bfX)}
 \]
-Note that the KL divergence is not a proper distance metric, as it is not symmetric. In fact, using the reverse KL divergence $\KL(q(\bfX)||p(\bfX|\bfY))$ defines a different inference framework called expectation propagation \cite{Minka2001}.
+Note that the KL divergence is not a proper distance metric, as it is not symmetric. In fact, using the reverse KL divergence $\KL(q(\bfX)||p(\bfY|\bfX))$ defines a different inference framework called expectation propagation \cite{Minka2001}.
 
 If we allow any possible choice of $q(\bfX)$, then the minimum of this function occurs when $q(\bfX)$ equals the true posterior distribution $p(\bfX|\bfY)$. Nevertheless, since the true posterior is intractable to compute, this does not lead to any simplification of the problem. Instead, it is necessary to consider a restricted family of distributions $q(\bfX)$ that are tractable to compute and subsequently seek the member of this family for which the KL divergence is minimised.
 
@@ -91,14 +91,13 @@ Hence, minimising the KL divergence is equivalent to maximising $\Lagr(\bfX)$ (\
 	&= \E_q [\log p(\bfX,\bfY)] - \E_q [\log q(\bfX)]
 \end{split} \end{align}
 The first term is the expectation of the log joint probability distribution with respect to the variational distribution. The second term is the entropy of the variational distribution.
-Importantly, given a simple parametric form of $q(\bfX)$, each of the terms in \Cref{eq_elbo1} can be computed in closed form.\\
-In some occasions (see section X), we will use the following form for the ELBO:
+Importantly, given a simple parametric form of $q(\bfX)$, each of the terms in \Cref{eq_elbo1} can be computed in closed form. In some occasions, we will use the following form for the ELBO:
 \begin{equation} \label{eq_elbo2}
 	\Lagr(\bfX) = \E_q [\log p(\bfY|\bfX)] + (\E_q [\log p(\bfX)] - \E_q [\log q(\bfX)])
 \end{equation}
 where the first term is the expectation of the log likelihood and the second term is the difference in the expectations of the $p$ and $q$ distributions of each hidden variable.
 
-In conclusion, variational learning involves minimising the KL divergence between $q(\bfX)$ and $p(\bfX|\bfY)$ by instead maximising $\Lagr(\bfX)$ with respect to the distribution $q(\bfX)$. The following image summarises the general picture of variational learning:
+In conclusion, variational learning involves minimising the KL divergence between $q(\bfX)$ and $p(\bfX|\bfY)$ by instead maximising $\Lagr(\bfX)$ with respect to the distribution $q(\bfX)$.
 
 \begin{figure}[H]
 	\centering
@@ -151,7 +150,7 @@ Numerically optimising this function requires the evaluation of expectations wit
 Typically, one would choose this distribution to factorise over parameters and to be of the same (exponential) family as the prior $p(\bfX)$. In such case there is a closed form coordinate-ascent scheme available, and it turns out that the fixed-form formulation is equivalent to the (non-parametric) mean-field derivation when using conjugate priors.\\
 Unfortunately, for generic models with arbitrary families of distributions, no closed-form variational distributions exist \cite{Zhang2017,Blei2016}. 
 
-However, while the parametric assumption certainly limits the flexibility of variational distributions, the advantage of this formulation is that it unveils the possibility to use fast gradient-based methods for the inference procedure \cite{Hoffman2012,Ranganath2014}.
+However, while the parametric assumption certainly limits the flexibility of variational distributions, the advantage of this formulation is that it opens the possibility to use fast gradient-based methods for the inference procedure \cite{Hoffman2012,Ranganath2014}.
 
 %\paragraph{Black box variational inference}
 
@@ -163,14 +162,14 @@ Interestingly, this simple difference leads to an inference scheme with stringkl
 
 Variational inference:
 \begin{equation} \label{eq:kl_vb}
-	\KL(q(\bfX)||p(\bfX|\bfY)) = - \int_z q(\bfX) \log \frac{p(\bfX|\bfY)}{q(\bfX)}
+	\KL(q(\bfX)||p(\bfX|\bfY)) = - \int q(\bfX) \log \frac{p(\bfX|\bfY)}{q(\bfX)}
 \end{equation}
 Expectation propagation:
 \begin{equation} \label{eq:kl_ep}
-	\KL(p(\bfX|\bfY)||q(\bfX)) = - \int_z p(\bfX|\bfY) \log \frac{q(\bfX)}{p(\bfX|\bfY)}
+	\KL(p(\bfX|\bfY)||q(\bfX)) = - \int p(\bfX|\bfY) \log \frac{q(\bfX)}{p(\bfX|\bfY)}
 \end{equation}
 In regions of $\bfX$ where the true posterior density $p(\bfX|\bfY)$ is small, setting a large density for $q(\bfX)$ has a much stronger penalisation in \Cref{eq:kl_ep} than in \Cref{eq:kl_vb}, because of the true posterior density being on the denominator. Hence, EP tends to avoid areas where the density $p(\bfX|\bfY)$ is very low, even if it does not correspond to areas of very high-density in $p(\bfX|\bfY)$. In contrast, in \Cref{eq:kl_vb} there is a strong penalty for having low-density $q(\bfX)$ values.\\
-As discussed in \cite{Bishop2006}, the practical consequences of this duality can be observed when the posterior is multi-modal, as in any sufficiently complex model. In VI, $q(\bfX)$ converges towards areas of high-density in $p(\bfX|\bfY)$, namely local optima. In contrast, EP tends to capture as much non-zero density regions from $p(\bfX|\bfY)$ as possible, thereby averaging across all optima. In the context of doing predictions, the VI solution is much more desirable than the EP solution, as the average of two good parameter values is not necessarily a good parameter itself.\\
+As discussed in \cite{Bishop2006}, the practical consequences of this duality can be observed when the posterior is multi-modal, as in any complex model. In VI, $q(\bfX)$ converges towards areas of high-density in $p(\bfX|\bfY)$, namely local optima. In contrast, EP tends to capture as much non-zero density regions from $p(\bfX|\bfY)$ as possible, thereby averaging across all optima. In the context of doing predictions, the VI solution is much more desirable than the EP solution, as the average of two good parameter values is not necessarily a good value itself.\\
 A detailed mathematical treatment of EP, including derivations for specific examples, can be found in \cite{Bishop2006,Murphy,Minka2001}
 
 \begin{figure}[H]
@@ -180,7 +179,7 @@ A detailed mathematical treatment of EP, including derivations for specific exam
 	\label{}
 \end{figure}
 
-Following the rationale above, it is easy to predict that variational inference tends to be underestimate the variance of the posterior density. Yet, empirical research have shown that this is acceptable, provided that a good model selection is performed \cite{Blei2006}.
+Following the rationale above, it is easy to predict that variational inference tends to underestimate the variance of the posterior density. Yet, empirical research has shown that this is acceptable, provided that a good model selection is performed \cite{Blei2006}.
 
 
 \subsubsection{Conclusions}
@@ -188,7 +187,7 @@ Following the rationale above, it is easy to predict that variational inference 
 In this section we have introduced Bayesian modelling and variational inference methods, which will be used later in this chapter.\\
 More generally, variational inference is growing in popularity for the analysis of big data sets and it has been applied to a myriad of different problems, including genome-wide association studies \cite{Carbonetto2012}, population genetics, \cite{Raj2014}, network analysis \cite{Sanguinetti2006} and natural language processing \cite{Blei2003}.
 
-Yet, despite its increasing success, there is significant room for improvement. First and foremost, the theoretical guarantees of variational inference are not as developed as in sampling-based MCMC schemes\cite{Blei2016,Zhang2017,Nakajima2007}. As an example, the mean-field setting makes strong independence assumptions about the parameters.  Although it tends to besurprisingly effective, it is not clear in which applications the dependencies between the parameters are important enough than the mean-field approximation could potentially break.\\
+Yet, despite its increasing success, there is significant room for improvement. First and foremost, the theoretical guarantees of variational inference are not as developed as in sampling-based MCMC schemes\cite{Blei2016,Zhang2017,Nakajima2007}. As an example, the mean-field setting makes strong independence assumptions about the parameters.  Although it tends to be surprisingly effective, it is not clear in which applications the dependencies between the parameters are important enough that the mean-field approximation could potentially break.\\
 More generally, an open research problem is understanding what are the statistical properties of the variational posterior with respect to the exact posterior \cite{Blei2016,Zhang2017}.
 
 As we shall demonstrate later, alternative strategies have been considered to allow some dependencies between the variables, resulting in \textit{structured} mean-field approximations\cite{Hoffman2014,Titsias2011}. However, they often lead to very complex (if not intractable) inference frameworks. 
