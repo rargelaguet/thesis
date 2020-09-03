@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  15 MAY 2020 15:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  3 SEP 2020 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1842,57 +1842,36 @@ File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 \@quotelevel=\count397
 \@quotereset=\count398
 
-(./thesis.aux (./Introduction/introduction.aux) (./Chapter1/introduction.aux)
-(./Chapter1/scnmt-seq.aux) (./Chapter2/introduction.aux
-
-LaTeX Warning: Label `fig:bayesianFA' multiply defined.
-
-
-LaTeX Warning: Label `fig:bayesianFA@cref' multiply defined.
-
-) (./Chapter2/model_description.aux) (./Chapter2/results.aux)
-(./Chapter2/perspectives.aux) (./Chapter3/introduction.aux)
-(./Chapter3/results.aux) (./Chapter4/introduction.aux
-
-LaTeX Warning: Label `eq_elbo_factorised' multiply defined.
-
-
-LaTeX Warning: Label `eq_elbo_factorised@cref' multiply defined.
-
-) (./Chapter4/model_description.aux
-
-LaTeX Warning: Label `mofa_master_equation' multiply defined.
-
-
-LaTeX Warning: Label `mofa_master_equation@cref' multiply defined.
-
-) (./Chapter4/results.aux) (./Chapter4/perspectives.aux))
+(./thesis.aux (./Dedication/dedication.aux) (./Declaration/declaration.aux)
+(./Acknowledgement/acknowledgement.aux) (./Abstract/abstract.aux)
+(./Introduction/introduction.aux) (./Chapter1/introduction.aux)
+(./Chapter1/scnmt-seq.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 132.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 133.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1908,7 +1887,7 @@ LaTeX Font Info:    ... okay on input line 132.
 \makeMPintoPDFobject=\count404
 \everyMPtoPDFconversion=\toks50
 )
-LaTeX Info: Redefining \microtypecontext on input line 132.
+LaTeX Info: Redefining \microtypecontext on input line 133.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1923,7 +1902,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 \AtBeginShipoutBox=\box96
-Package hyperref Info: Link coloring ON on input line 132.
+Package hyperref Info: Link coloring ON on input line 133.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1933,9 +1912,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count405
 )
-LaTeX Info: Redefining \ref on input line 132.
-LaTeX Info: Redefining \pageref on input line 132.
-LaTeX Info: Redefining \nameref on input line 132.
+LaTeX Info: Redefining \ref on input line 133.
+LaTeX Info: Redefining \pageref on input line 133.
+LaTeX Info: Redefining \nameref on input line 133.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write7
@@ -2042,18 +2021,18 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 132.
-Package biblatex Info: Reference segment=0 on input line 132.
+Package biblatex Info: Reference section=0 on input line 133.
+Package biblatex Info: Reference segment=0 on input line 133.
 \c@lstlisting=\count406
 \PHD@Title=\box97
-LaTeX Font Info:    Try loading font information for U+msa on input line 136.
+LaTeX Font Info:    Try loading font information for U+msa on input line 139.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 136.
+LaTeX Font Info:    Try loading font information for U+msb on input line 139.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2061,17 +2040,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 136.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 139.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 \PHD@crest=\box98
 
-<Figs/University_Crest.pdf, id=404, 59.22125pt x 69.25874pt>
+<Figs/University_Crest.pdf, id=79, 59.22125pt x 69.25874pt>
 File: Figs/University_Crest.pdf Graphic file (type pdf)
 
 <use Figs/University_Crest.pdf>
-Package pdftex.def Info: Figs/University_Crest.pdf used on input line 136.
+Package pdftex.def Info: Figs/University_Crest.pdf used on input line 139.
 (pdftex.def)             Requested size: 93.32361pt x 109.14542pt.
 \PHD@collegecrest=\box99
 \PHD@author=\box100
@@ -2121,14 +2100,184 @@ University_Crest.pdf>]
 
 ]) [9
 
-] (./thesis.toc [10
-
-] [11])
+] (./thesis.toc)
 \tf@toc=\write8
 \openout8 = `thesis.toc'.
 
- [12]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 203.
+ [10
+
+]
+\openout2 = `Introduction/introduction.aux'.
+
+ (./Introduction/introduction.tex
+Chapter 1.
+[1
+
+
+
+] [2]
+
+LaTeX Warning: Citation 'Lahnemann2020' on page 3 undefined on input line 28.
+
+
+<Introduction/Figs/overview_data_integration.pdf, id=250, 755.76653pt x 967.509
+63pt>
+File: Introduction/Figs/overview_data_integration.pdf Graphic file (type pdf)
+ <use Introduction/Figs/overview_data_integration.pdf>
+Package pdftex.def Info: Introduction/Figs/overview_data_integration.pdf used o
+n input line 44.
+(pdftex.def)             Requested size: 163.32167pt x 209.07346pt.
+ [3] [4 <./Introduction/Figs/overview_data_integration.pdf>] [5]) [6]
+\openout2 = `Chapter1/introduction.aux'.
+
+ (./Chapter1/introduction.tex
+Chapter 2.
+
+Overfull \hbox (5.41846pt too wide) in paragraph at lines 3--3
+\T1/cmr/bx/n/24.88 DNA methy-la-tion and tran-scrip-tion in sin-
+ []
+
+[7
+
+
+
+] [8]
+<Chapter1/Figs/methylation_protocols.pdf, id=42961, 722.7pt x 534.99875pt>
+File: Chapter1/Figs/methylation_protocols.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/methylation_protocols.pdf>
+Package pdftex.def Info: Chapter1/Figs/methylation_protocols.pdf used on input 
+line 36.
+(pdftex.def)             Requested size: 373.30159pt x 276.34785pt.
+ [9 <./Chapter1/Figs/methylation_protocols.pdf>]
+<Chapter1/Figs/ChromatinAcc_protocols.png, id=43012, 981.6675pt x 735.74875pt>
+File: Chapter1/Figs/ChromatinAcc_protocols.png Graphic file (type png)
+
+<use Chapter1/Figs/ChromatinAcc_protocols.png>
+Package pdftex.def Info: Chapter1/Figs/ChromatinAcc_protocols.png used on input
+ line 66.
+(pdftex.def)             Requested size: 349.9689pt x 262.29845pt.
+ [10] [11 <./Chapter1/Figs/ChromatinAcc_protocols.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+
+ []
+
+) [12]
+\openout2 = `Chapter1/scnmt-seq.aux'.
+
+ (./Chapter1/scnmt-seq.tex
+Overfull \hbox (4.82904pt too wide) in paragraph at lines 3--3
+|[]\T1/cmr/bx/n/17.28 Joint pro-fil-ing of chro-matin ac-ces-si-bil-ity, DNA me
+thy-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+<Chapter1/Figs/scNMT_protocol.pdf, id=43089, 311.1625pt x 427.5975pt>
+File: Chapter1/Figs/scNMT_protocol.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_protocol.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_protocol.pdf used on input line 15
+.
+(pdftex.def)             Requested size: 256.64528pt x 352.68094pt.
+ [13
+
+
+] [14 <./Chapter1/Figs/scNMT_protocol.pdf>] <Chapter1/Figs/scNMT_coverage.pdf, 
+id=43150, 435.6275pt x 226.8475pt>
+File: Chapter1/Figs/scNMT_coverage.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_coverage.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_coverage.pdf used on input line 45
+.
+(pdftex.def)             Requested size: 466.62521pt x 242.98749pt.
+ [15]
+<Chapter1/Figs/scNMT_coverage2.pdf, id=43161, 205.76875pt x 152.06813pt>
+File: Chapter1/Figs/scNMT_coverage2.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_coverage2.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_coverage2.pdf used on input line 5
+6.
+(pdftex.def)             Requested size: 373.30159pt x 275.90123pt.
+ [16 <./Chapter1/Figs/scNMT_coverage.pdf>]
+
+LaTeX Warning: Reference `scNMT_comparison' on page 1 undefined on input line 6
+4.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+<Chapter1/Figs/scNMT_comparison.pdf, id=43194, 700.41673pt x 328.22626pt>
+File: Chapter1/Figs/scNMT_comparison.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_comparison.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_comparison.pdf used on input line 
+69.
+(pdftex.def)             Requested size: 466.62521pt x 218.66838pt.
+ [17 <./Chapter1/Figs/scNMT_coverage2.pdf>]
+<Chapter1/Figs/scnmt_pseudobulk_profiles.pdf, id=43217, 786.94pt x 797.98125pt>
+File: Chapter1/Figs/scnmt_pseudobulk_profiles.pdf Graphic file (type pdf)
+<use Chapter1/Figs/scnmt_pseudobulk_profiles.pdf>
+Package pdftex.def Info: Chapter1/Figs/scnmt_pseudobulk_profiles.pdf used on in
+put line 83.
+(pdftex.def)             Requested size: 326.63622pt x 331.21692pt.
+ [18 <./Chapter1/Figs/scNMT_comparison.pdf>]
+<Chapter1/Figs/scNMT_correlations_acrossgenes.pdf, id=43256, 495.35063pt x 190.
+04298pt>
+File: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf Graphic file (type pdf)
+ <use Chapter1/Figs/scNMT_correlations_acrossgenes.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf used 
+on input line 98.
+(pdftex.def)             Requested size: 466.62521pt x 179.0232pt.
+ [19 <./Chapter1/Figs/scnmt_pseudobulk_profiles.pdf>]
+<Chapter1/Figs/scNMT_EB_RNA.pdf, id=43305, 400.49625pt x 446.66875pt>
+File: Chapter1/Figs/scNMT_EB_RNA.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_EB_RNA.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_EB_RNA.pdf used on input line 129.
+
+(pdftex.def)             Requested size: 326.63622pt x 364.31465pt.
+ [20 <./Chapter1/Figs/scNMT_correlations_acrossgenes.pdf>]
+<Chapter1/Figs/scNMT_EB_correlations.pdf, id=43529, 407.51747pt x 263.48438pt>
+File: Chapter1/Figs/scNMT_EB_correlations.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_EB_correlations.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_EB_correlations.pdf used on input 
+line 141.
+(pdftex.def)             Requested size: 466.62521pt x 301.71008pt.
+ [21 <./Chapter1/Figs/scNMT_EB_RNA.pdf>] <Chapter1/Figs/scNMT_pseudotime.pdf, i
+d=44642, 503.8825pt x 138.5175pt>
+File: Chapter1/Figs/scNMT_pseudotime.pdf Graphic file (type pdf)
+
+<use Chapter1/Figs/scNMT_pseudotime.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_pseudotime.pdf used on input line 
+208.
+(pdftex.def)             Requested size: 396.63428pt x 109.03448pt.
+ [22 <./Chapter1/Figs/scNMT_EB_correlations.pdf>]
+<Chapter1/Figs/scNMT_pseudotime_coupling.pdf, id=44715, 403.17325pt x 144.20576
+pt>
+File: Chapter1/Figs/scNMT_pseudotime_coupling.pdf Graphic file (type pdf)
+ <use Chapter1/Figs/scNMT_pseudotime_coupling.pdf>
+Package pdftex.def Info: Chapter1/Figs/scNMT_pseudotime_coupling.pdf used on in
+put line 220.
+(pdftex.def)             Requested size: 419.95984pt x 150.21468pt.
+
+Underfull \hbox (badness 1748) in paragraph at lines 223--223
+[]\T1/cmr/bx/n/10 Figure 2.12: |De-vel-op-men-tal tra-jec-tory is as-so-ci-ated
+ changes in methylation-
+ []
+
+[23 <./Chapter1/Figs/scNMT_pseudotime.pdf> <./Chapter1/Figs/scNMT_pseudotime_co
+upling.pdf>] [24]) [25] [26
+
+
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 206.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
@@ -2138,54 +2287,46 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [1
+ [27
 
-
-
-] [2] [3]
+] [28]
+[29]
 
 Package biblatex Warning: Month out of range
-(biblatex)                at entry 'Dempsey2010' on input line 203.
+(biblatex)                at entry 'Dempsey2010' on input line 206.
 
-[4]
-Overfull \hbox (1.30855pt too wide) in paragraph at lines 204--204
+[30]
+Overfull \hbox (1.30855pt too wide) in paragraph at lines 207--207
 []\T1/cmr/m/n/10.95 (-20) G. Fab-bri and R. Dalla-Favera. ``The molec-u-lar pat
 ho-gen-e-sis of chronic lym-pho-cytic leukaemia''.
  []
 
-[5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
-Overfull \hbox (12.48563pt too wide) in paragraph at lines 204--204
+[31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43]
+Overfull \hbox (12.48563pt too wide) in paragraph at lines 207--207
 []\T1/cmr/m/n/10.95 (-20) C. Xu, D. Tao, and C. Xu. ``A Sur-vey on Multi-view L
 earn-ing''. In: \T1/cmr/m/it/10.95 (-20) arXiv e-prints\T1/cmr/m/n/10.95 (-20) 
 , arXiv:1304.5634
  []
 
-[18]
+[44]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 76.
 See the caption package documentation for explanation.
 
-[19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 205.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 205.
+[45]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 208.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 208.
  (./thesis.aux (./Dedication/dedication.aux) (./Declaration/declaration.aux) (.
-/Acknowledgement/acknowledgement.aux) (./Abstract/abstract.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 205.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 205.
+/Acknowledgement/acknowledgement.aux) (./Abstract/abstract.aux)
+(./Introduction/introduction.aux) (./Chapter1/introduction.aux)
+(./Chapter1/scnmt-seq.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 208.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 208.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 0B9CE80C87EFA31A16B37C9250089C0C;6000.
 
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 9EC4960EB82A1ECDA902B5BECFAF2534;30305
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -2197,324 +2338,37 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39650 strings out of 493014
- 733216 string characters out of 6133351
- 1656250 words of memory out of 5000000
- 41828 multiletter control sequences out of 15000+600000
- 27186 words of font info for 150 fonts, out of 8000000 for 9000
+ 39368 strings out of 493014
+ 726993 string characters out of 6133351
+ 1611389 words of memory out of 5000000
+ 41538 multiletter control sequences out of 15000+600000
+ 33368 words of font info for 175 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,92p,1223b,1241s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Appendix.a.B} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.a.A.3} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.a.A.2} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.a.A.1} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{Appendix.a.A} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.5} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.4.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.4.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.4.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.4} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.3.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.3.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.2.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.2.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.2.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.2.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.1.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.1.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.1.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.4.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.2.9} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.2.8} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.2.7} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.2.6} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.2.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.2.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.2.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.2.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.4.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.1.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.1.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.4.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.4} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.6} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.5.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.5.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.5} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.4.6} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.4.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.4.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.4.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.4.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.4.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.4} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.3.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.3.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.3.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.3.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2.7} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2.6} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.15} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.14} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.13} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.12} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.11} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.10} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.9} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.8} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.7} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.6} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.3} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.2.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2.8} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2.7} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2.6} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.2.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.1.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.1.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.1.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.2.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.2} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.1} has been referenced but does not exist, 
-replaced by a fixed one
-
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis.pdf (31 pages, 350993 bytes).
+ 57i,12n,92p,1760b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on thesis.pdf (55 pages, 13410605 bytes).
 PDF statistics:
- 1231 PDF objects out of 1440 (max. 8388607)
- 1167 compressed objects within 12 object streams
- 441 named destinations out of 1000 (max. 500000)
- 18218 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 46012 PDF objects out of 55141 (max. 8388607)
+ 23414 compressed objects within 235 object streams
+ 397 named destinations out of 1000 (max. 500000)
+ 24291 words of extra memory for PDF output out of 24883 (max. 10000000)
 

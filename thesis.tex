@@ -74,19 +74,20 @@
 % `PageStyleII': Chapter Name on Even Side (Left Even) in Header. Section Number
 % and Section Name in Header on Odd Side (Right Odd). Page numbering in footer
 
-% Uncomment to change page style
-%\pagestyle{PageStyleII}
-
 % ********************************** Preamble **********************************
 
 % Contains packages and user-defined commands and settings
 \input{Preamble/preamble} 
+
 
 % ************************ Thesis Information & Meta-data **********************
 
 \input{thesis-info}
 
 %%%%% PERSONAL STUFF HERE %%%%%%%%%%%%
+
+% Uncomment to change page style
+\pagestyle{plain}
 
 \usepackage{listings}
 
@@ -133,7 +134,7 @@
 
 \frontmatter
 
-\setcounter{chapter}{-1}% the introduction will be chapter 0
+%\setcounter{chapter}{-1} % the introduction will be chapter 0
 
 \maketitle
 
@@ -161,8 +162,8 @@
 \include{Introduction/introduction}
 
 % Chapter 1
-% \include{Chapter1/introduction}
-% \include{Chapter1/scnmt-seq}
+\include{Chapter1/introduction}
+\include{Chapter1/scnmt-seq}
 
 % Chapter 2
 % \include{Chapter2/introduction}

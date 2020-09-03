@@ -1,2 +1,46 @@
 \thispagestyle {empty}
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Overview}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Profiling multi-omics at single-cell resolution}{1}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Integrative analysis}{2}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Thesis overview}{5}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Joint profiling of chromatin accessibility DNA methylation and transcription in single cells}{7}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Introduction to single-cell sequencing}{7}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Single-cell RNA sequencing}{7}{subsection.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Single-cell sequencing of the epigenome}{8}{subsection.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{DNA methylation}{8}{subsection.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Chromatin accessibility}{9}{figure.caption.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.3}Multi-modal single-cell sequencing}{11}{subsection.2.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Joint profiling of chromatin accessibility, DNA methylation and RNA expression in single cells}{13}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Description of the experimental protocol}{13}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Description of the data processing pipeline}{15}{subsection.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}Data validation}{15}{subsection.2.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Coverage}{15}{subsection.2.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Consistency with previous studies}{17}{figure.caption.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.4}Quantification of DNA methylation and chromatin accessibility in known regulatory regions}{18}{subsection.2.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.5}Quantification of the association between molecular layers.}{19}{subsection.2.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.6}Identification of genomic elements with coordinated variability across molecular layers}{20}{subsection.2.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.7}Exploration of epigenome connections along a developmental trajectory}{22}{subsection.2.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Conclusions and open perspectives}{23}{section.2.3}

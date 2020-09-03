@@ -1,0 +1,96 @@
+\section{Discussion}
+
+The last few years have experienced an explosion of single-cell sequencing technologies, with the consequent opening of new directions and opportunities to understand biological complexity. The ultime goal of single-cell sequencing is to move beyond descriptive snapshots to comprehensive roadmaps of biological processes that include multiple molecular measurements across time and space. Unifying these three dimensions in a single experimental design will be at the forefront of scientific research and will pave the way for an unprecedented XXX to understand biological complexity.
+ 
+The first stones on this direction have been lied. First, experimental designs that include scRNA-seq and/or scATAC-seq technologies have now become ubiquitious and their computational pipelines are gradually becoming standarised. Second, multi-modal measurements can be assayed in single cells, although this remains very much in pilot stages and at the time of this writing very few commercial platforms are available, thus limiting its widespread use by the community. Third, spatial-preserving sequencing technologies are increasing in popularity and are currently at the forefront of experimental and computational research.
+
+Multi-modal assays have been the main focus of this thesis
+
+\subsection{Experimental perspectives} 
+
+\subsection{Recording space} 
+
+The dissociation and pooling of cells from their native location, with the consequence loss of information on their spatial location, is one of the biggest limitations of current single-cell technologies. The positioning and the interaction of cells in their native tissue is essential to understand biological function. 
+
+[COPIED] Pioneering work in single-molecule fluorescence in situ hybridization (smFISH) showed that individual mRNA molecules could be accurately detected in cells6,7. 
+
+Imaging the transcriptome \textit{in situ} has been a major challenge, hindered by limitations on the optical resolution and the high density of transcripts within each cell. However, recent breakthroughts have enabled the detection [copied] Development of sequential fluorescence in situ hybridization (seqFISH) to impart a temporal barcode on RNAs through multiple rounds of hybridization allowed many molecules to be multiplexed1,2,3. seqFISH was recently shown to scale to the genome level in vitro8, and could be applied for nascent transcription active sites9.
+
+Epigenetic and transcriptomic readouts have been independently obtained with spatial resolution \cite{XXX}, but profiling all three sources of information simultaneously from the same cell is a major challenge that needs to be addressed in the future. 
+
+\subsection{Recording time} 
+
+\subsubsection{Recording the present} 
+
+In the timespan of a few days, a mammalian embryo expands from a handful of days to milions of cells, experiencing on the process a set of of cell fate commitments that will eventually generate a variety of specied organs, tissues and cell types. Recording the timing of the events in high-resolution is an essential step to understand the complex biological dynamics. Static single-cell experiments can provide molecular snapshots, which can be used to reconstruct differentiation processes using trajectory inference methods, also known as pseudotime inferece methods. These class of methods exploit transcriptional similarity to ordinate cells in a low-dimensional space, which has shown to be essential for the of study continuous developmental processes. However, pseudotime trajectories are likely to deviate substantially from the real trajectory, and interconversion between the two domains is an extremely challenging task that requires knowledge of physical quantities that are often not available as part of the experimental design \cite{MAPIT}.
+
+
+\subsubsection{Recording the past} 
+
+A fundamental principle of biology is that each cell originates from another existing cell. Thus, each adult tissue in present time has an associated cell lineage tree that defineds its past history. Therefore, time information can also be recorded by reconstructing the hierarchy of cell fate decisions. Historically, imaging-based techniques have been used to perform lineage tracing in low-throughput manner, using for example fluorescent proteins. However, these strategies are limited when it comes to temporal and molecular resolution.
+The next generation of lineage tracing techniques employ genetic or epigenetic marks that can be read in terminal cells through single-cell sequencing. For example, one can introduce double-stranded breaks in the genome using CRISPR-Cas9 that result in random genomic insertions and deletions that are inherited in different hierarchical combinations by the progeny cells \cite{XX}. 
+- MITHOCONDRUA
+- This strategy has been used to reveal novel insights on mouse gastrulation
+- Dynamic lineage tracing can serve as a parallel and complementary approach to trajectory inference by providing a ground truth framework for interpreting atlases.
+- For example, single cell lineage tracing can identify cells with the same transcriptional state but with divergent origins.  This is particularly important when studying cells of similar identity in spatially discrete regions of the embryo (e.g. eye development or somitogenesis) or for dissecting the contributions of individual cells within a population of a given cell type (e.g. HSCs or other stem cells). 
+- The challenge is to link these static views of cell states together into a dynamic view of how cell types arise, and how they are regulated, maintained and ultimately dysregulated in disease 
+- n ideal system would recover molecular cell state and historical recordings, all in the native spatial context of an intact organism. Although it is early days, there have already been promising steps towards this goal (Chen et al., 2015; Frieda et al., 2017; Lee et al., 2014; Shah et al., 2017; Wang et al., 2018).
+-  high-dimensional phenotypin
+
+
+
+
+- Past exposure to proteins/RNA -> new method Amit's lab?
+
+
+\subsubsection{Recording the future} 
+
+- scRNA-seq offers transcriptom-wide snapshots of the present status of each cell. A major goal of single-cell biology is to also infer the future state of each cell alongside the present molecular profile. This is an essential step in order to understand cell fate commitment events. 
+
+A milestone of scRNA-seq dynamics was achieved with the inference of RNA velocity in single cells. By exploiting 
+
+Gene expression encompasses all the steps going from gene to gene product (e.g a protein or non-coding RNA). After transcription, a key processing step for many genes is splicing, a step that removes fragments of RNA that are not part of the mature transcript. The fragments removed are referred to as introns and the remaining sections, exons (Figure 2). Nascent transcripts will therefore still have introns, whilst in mature transcripts, the introns would have been removed. After a while, the mature transcripts are eventually degraded (Figure 3).
+
+
+
+
+
+ but obscures the temporal dynamics of RNA biogenesis and decay. 
+- Sequencing of newly synthesised RNA can monitor transcriptional dynamics with great sensitivity and high temporal resolution,
+- The ability to sequence newly synthesised RNA has led to important insights into the kinetics of RNA transcription, processing, and degradation, as well as the detection of rapid transcriptional responses to cellular stimuli or perturbations1,2,3,4,5.
+- chemical modification of 4sU residues incorporated in total cellular RNA leads to T–C conversions during reverse transcription that can later be read out by sequencing8,9,10,11. Thus, newly synthesised RNA is separated from pre-existing RNA in silico during the computational analysis of the sequencing data.
+
+
+- RNA velocity
+
+
+
+
+\subsection{Computational perspectives} 
+
+The focus of this thesis has been on vertical integration methods for \textit{matched} multi-modal assays. In most experimental designs, however, it is impossible to profile \textit{matched} data modalities, and one has to perform horizontal and/or vertical data integration to generate a self-consistent data set.
+
+Several horizontal integration methods have been developed for batch-effect correction and variance decomposition, and I would argue that is close to becoming a solved problem (or as solved as it can be). In contrast, diagonal integration is a task of singular difficulty that remains largely unexplored. This task is faced in \textit{unmatched} experiments where different molecular layers are profiled in different subsets of cells, and thus no common coordinate framework (i.e. cells or features) exists in the high-dimensional space. Diagonal integration methods are aimed at reconstructing a low-dimensional manifold that captures covariation across data modalities. Thus, a critical assumption of this integrative strategy is the existence of latent components (i.e. a manifold) that is shared between the data modalities. For example, this could represent cells sampled from a common differentiation trajectory or cells sampled from a common set of subpopulations.
+
+The simplest strategy that has been employed to solve a diagonal integration task is to transform it into a simpler horizontal integration task. This can be achieved by summarising molecular measurements over genomic elements that can be unambiguously linked (i.e. gene expression and promoter accessibility). Using this strategy, horizontal methods such as LIGER and Seurat v3 have been successful at integrating unmatched epigenetic and transcriptomic experiments from the same tissue, and even across different species. However, using a horizontal integration strategy relies on a fragile biological assumption and is prone to fail in scenarios where molecular layers are not strongly correlated. A good example is early embryonic development where promoter DNA methylation and/or chromatin accessibility are not as predictive of gene expression as in terminally differentiated cell types. 
+
+Detecting the existence latent manifolds of covariation in the most general set up will be an exciting task for future method development. 
+
+Until high-dimensional phenotyping does not become more comprehensive, the most common experimental designs will likely resemble a \textit{mosaic} where some cells will be profiled using multi-modal techniques whereas other sets of cells will be profiled using uni-modal techniques. Thus, the entire data set will be hinged by (...) and its computational integration will require a combination of horizontal and vertical integration tasks. 
+
+MOFA+ has been designed to address this problem (see chapter X), but its linearity assumption is fragile and it will certainly fail when integrating molecular measurements that are derived from different species or technologies.
+
+
+\subsection{Thesis summmary (copied)}
+
+In this PhD thesis I sought to develop computational strategies for data integration in the context of single-cell multi-omics. In particular my research focued on the vertical integration case, when cells are the common coordinate framework.
+
+In Chapter 1 I introduce single-cell nucleosome, methylation and transcription sequencing (scNMT-seq), an experimental protocol for the genome-wide profiling of RNA expression, DNA methylation and chromatin accessibility in single cells. While some approaches have reported unbiased genome-wide measurements of up to two molecular layers, scNMT-seq allows, for the first time, the simultaneous profiling of three molecular layers at single cell resolution. We validate the readouts using a simple prototype experiment, and we show how scNMT-seq can be used to study coordinated epigenetic and transcriptomic heterogeneity along a simple differentiation process.
+
+In Chapter 2 I present Multi-Omics Factor Analysis (MOFA), a statistical framework for the integration of multi-omics data sets. MOFA is a latent variable model that offers a principled approach to explore, in a completely unsupervised manner, the underlying sources of sample heterogeneity in a multi-omics data set. Once the model is trained, the inferred low-dimensional space can be interpreted using a tool-kit of downstream analysis procedures that include visualisations, clustering, imputation or prediction of clinical outcomes. First, we validate the different model features using simulated data. Second, we apply MOFA to a multi-omics study of 200 chronic lymphocytic leukaemia patients. In a quick unsupervised analysis, MOFA revealed the most important dimensions of disease heterogeneity, connected to clinical markers that are commonly used in practice. In a second application we show how MOFA can cope with noisy single-cell multi-modal data, identifying coordinated transcriptional and epigenetic changes along a differentiation process.
+
+In Chapter 3 I discuss how we combined scNMT-seq and MOFA to study the role of epigenetic layers during mouse gastrulation, a critical embryonic stage that spans exit from pluripotency to primary germ layer specification. In this study we built the first triple-omics roadmap of mouse gastrulation, which enabled us to perform an integrative study that revealed novel insights on the dynamics of the epigenome. Notably, we show that cells committed to mesoderm and endoderm undergo widespread epigenetic rearrangements, driven by demethylation in enhancer marks and by concerted changes in chromatin accessibility. In contrast, the epigenetic landscape of ectoderm cells remains in a \textit{default} state, resembling earlier stage epiblast cells. This work provides a comprehensive insight into the molecular logic for a hierarchical emergence of the primary germ layers, revealing underlying molecular constituents of the Waddington's landscape.
+
+In Chapter 4 I propose an improved formulation of the MOFA framework aimed at performing integrative analysis of large-scale (single-cell) data sets across multiple studies/conditions as well as data modalities. We introduce key methodological developments, including a fast stochastic variational inference framework and multi-group generalisation in the structure of the prior distributions. All together, this allows MOFA to  disentangle heterogeneity across sample groups (i.e. studies or experimental conditions) and data modalities (i.e. omics) in very large single-cell studies. First, we benchmark the new features of the model using simulated data. Next, we use a single-cell DNA methylation data set of neurons from mouse frontal cortex to demonstrate how from a seemingly unimodal data set, one can investigate hypothesis using a multi-group and multi-view setting. Finally, we apply MOFA to the scNMT-seq data set generated in Chapter 3, revealing underlying sources of molecular variation associated with early cell fate decisions.
+
+Finally, Chapter 5 summarises this thesis and provides an outlook of future research.
