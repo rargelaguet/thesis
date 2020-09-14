@@ -14,16 +14,17 @@ where $\bfZ \in \R^{N \times K}$ is a matrix that contains the factor values and
 \begin{equation}
 	p(\epsilon^{m}_{d}) = \Ndist{\epsilon^{m}_{d}}{0,1/\tau_{d}^{m}}
 \end{equation}
-Non-Gaussian noise models can also be defined (see \Cref{section:mofa_ngaussian}), but unless otherwise stated, we will always assume Gaussian residuals.\\
-Altogether, this results in the following likelihood:
+where $\tau$ corresponds to the precision (inverse of the variance). Altogether, this results in the following likelihood:
 \begin{equation}
 	p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{d=1}^{D_m} \prod_{n=1}^{N} \Ndist{y_{nd}^m}{\bfz_{n}^T\bfw_{d}^{m},(\tau_d^m)^{-1}}
 	% p(y_{nd}^m) = \Ndist{y_{nd}^m}{\bfz_{n,:}\bfw_{d,:}^{mT},1/\tau_d^m},
 \end{equation}
 
+Non-Gaussian noise models can also be defined (see \Cref{section:mofa_ngaussian}), but unless otherwise stated, I will always assume Gaussian residuals.
+
 \subsubsection{Prior distributions for the factors}  \label{section:mofa_factors}
 
-For the factors, we define an isotropic Gaussian prior, as commonly done in most factor analysis models:
+For the factors, we can define an isotropic Gaussian prior, as commonly done in most factor analysis models:
 \begin{equation}
 	p(z_{nk}) = \Ndist{z_{nk}}{0,1}
 \end{equation}
@@ -120,7 +121,7 @@ Once trained, the MOFA model can be queried for a set of downstream analysis (\C
 
 \subsubsection{Inference}
 
-To make the model scalable to large data sets we adopt a Variational inference framework with a structured mean field approximation. A detailed overview is given in \Cref{section:variational_inference}, and details on the variational updates for the MOFA model are given in \Cref{appendix:mofa}. To enable efficient inference for non-Gaussian likelihoods we employ local bounds \cite{Jaakkola2000,Seeger2012}. This is described in detail in \Cref{section:mofa_ngaussian}.
+To make the model scalable to large data sets we adopt a Variational inference framework with a structured mean field approximation. A detailed overview is given in \Cref{section:variational_inference}, and details on the variational updates for the MOFA model are given in Appendix~\ref{appendix:mofa}. To enable efficient inference for non-Gaussian likelihoods we employ local bounds \cite{Jaakkola2000,Seeger2012}. This is described in detail in \Cref{section:mofa_ngaussian}.
 
 
 \subsection{Model selection and consistency across random initilizations} \label{section:mofa_robustness}
@@ -139,7 +140,7 @@ The strategy we adopted in this work is to train several MOFA models under diffe
 
 \subsection{Learning the number of factors} \label{section:mofa_nfactors}
 
-As described in \Cref{section_ard}, the use of an ARD prior allows factors to be actively pruned by the model if their variance explained is negligible. In the implementation we control the pruning of factors by a hyperparameter that defines a threshold on the minimum fraction of variance explained by a factor (across all views).\\
+As described in \Cref{section:hierarchical_priors}, the use of an ARD prior allows factors to be actively pruned by the model if their variance explained is negligible. In the implementation we control the pruning of factors by a hyperparameter that defines a threshold on the minimum fraction of variance explained by a factor (across all views).\\
 Additionally, because of the non-convexity of the optimisation problem, different model instances can potentially yield solutions with different number of active factors (\Cref{fig:mofa_nfactors}). Thus, the optimal number of factors can be selected by the model selection strategy outlined in \Cref{section:mofa_robustness}.
 
 \begin{figure}[H]
@@ -154,15 +155,14 @@ Additionally, because of the non-convexity of the optimisation problem, differen
 \subsection{Monitoring convergence}
 
 An attractive property of Variational inference is that the objective function (the ELBO) increases monotonically at every iteration. This provides a simple way of monitoring convergence:
-
- \begin{figure}[H]
+\begin{figure}[H]
 	\centering 	
 	\includegraphics[width=0.5\textwidth]{elbo_convergence}
 	\caption{Training curve for two diffent instances of MOFA with random initialisations. The y-axis displays the log of the ELBO, with higher values indicating a better fit. The x-axis displays the iteration number. The horizontal dash lines mark the value of the ELBO upon convergence. }
 	\label{fig:elbo_convergence}
 \end{figure}
 
-Training is stopped when the change in the lower bound becomes smaller than a predefined threshold. In MOFA we implemented
+Training is stopped when the change in the lower bound becomes smaller than a predefined threshold.
 
 % COPIED
 %\subsection{Guidelines for the selection of data modalities} \label{section:guidelines_views}
@@ -177,9 +177,7 @@ Denoting the parameters in the MOFA model as $\bfX= (\bfZ,\bfW,\balpha,\btau,\bt
 \min_{q(\bfX)} -\Lagr(\bfX) =  \min_{q(\bfX)} \E_q \big[ -\log p(\bfY|\bfX) \big] + \KL[q(\bfX)||p(\bfX)].
 \end{equation*}
 
-
 Expanding the MOFA model to non-Gaussian likelihoods we now assume a general likelihood of the form $p(\bfY|\bfX)=p(\bfY|\bfC)$ with $\bfC = \bfZ\bfW^{T}$, that we can write as
-
 \begin{equation*}
 -\log p(\bfY|\bfX) = \sum_{n=1}^{N} \sum_{d=1}^{D} f_{nd} (c_{nd})
 \end{equation*}
@@ -285,7 +283,7 @@ The pseudodata updates are given by
 	 
 \subsection{Theoretical comparison with published methods}
 
-A variety of latent variable models exist with the aim of perfoming multi-view data integration. A summary is provided in the table below. 
+A variety of latent variable models exist with the aim of perfoming multi-view data integration, most of them inspired by the Group Factor Analysis formulation. A summary is provided in the table below. MOFA is the only method that scales to large data sets (employs Variational Bayes inference instead of MCMC-based approaches), has a combination of ARD and spike-slab regularisation on the weights, and is also capable of handling non-gaussian modalities and missing values.
 
 \begin{table}[H]
 	\begin{tabular}{@{}lllllll} 
@@ -307,6 +305,4 @@ A variety of latent variable models exist with the aim of perfoming multi-view d
 	\label{GFAtable}
 								
 \end{table}
-
-%Abbreviations used: VB (variational Bayes inference), Gibbs (Gibbs sampling based inference),\\ ARD (Automatic Relevance Determination), EM (Expectation-Maximization)		
 

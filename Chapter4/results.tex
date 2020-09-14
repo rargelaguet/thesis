@@ -8,16 +8,15 @@ We validated the new features of MOFA+ using simulated data drawn from its gener
 
 We simulated data with varying sample sizes, with the other dimensions fixed to $M=3$ views, $G=3$ groups, $D=1000$ features (per view), and $K=25$ factors.
 
-We trained a set of models with (deterministic) variational inference (VI) and a set of models with stochastic variational inference (SVI). Overall, we observe that SVI yields Evidence Lower Bounds that matched those obtained from conventional inference across a range of batch sizes, learning rates and forgetting rates (\Cref{fig:mofa2_stochastic_validation}).\\
-In terms of speed, GPU-accelerated SVI inference was up to $\approx$ 20x faster than VI, with speed differences becoming more pronounced with increasing number of cells (\Cref{fig:mofa2_stochastic_speed}). For completeness, we also compared the the convergence time estimates for SVI when using CPU versus GPU. We observe that for large sample sizes there is a speed improvement even when using CPUs, although these advantages become more prominent when using GPUs.
+We trained a set of models with (deterministic) variational inference (VI) and a set of models with stochastic variational inference (SVI). Overall, we observe that SVI yields Evidence Lower Bounds that are comparable to those obtained from VI across a range of batch sizes, learning rates and forgetting rates (\Cref{fig:mofa2_stochastic_validation}). In terms of speed, GPU-accelerated SVI inference is up to $\approx$ 20x faster than VI, with speed differences becoming more pronounced with increasing number of cells (\Cref{fig:mofa2_stochastic_speed}). For completeness, we also compared the convergence time estimates for SVI when using CPU versus GPU. We observe that for large sample sizes there is a speed improvement even when using CPUs, although these advantages become more prominent when using GPUs.
 
 % COPIED
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.95\linewidth]{mofa2_stochastic_validation}
+	\includegraphics[width=1.00\linewidth]{mofa2_stochastic_validation}
 	\caption[]{
 	\textbf{Validation of stochastic variational inference using simulated data.} \\
-	(a) Line plots display the iteration number of the inference (x-axis) and the log- Evidence Lower Bound (ELBO) on the y-axis. Panels correspond to different values of batch sizes (10\%, 25\%, 50\% of the data) and initial learning rates (0.05, 0.25, 0.5, 0.75). Colours correspond to different forgetting rates (0.05, 0.25, 0.5, 0.75, 1.0). The dashed horizontal line indicates the ELBO achieved using standard VI. \\
+	(a) Line plots display the iteration number of the inference (x-axis) and the Evidence Lower Bound on the y-axis. Panels correspond to different values of batch sizes (10\%, 25\%, 50\% of the data) and initial learning rates (0.05, 0.25, 0.5, 0.75). Colours correspond to different forgetting rates (0.05, 0.25, 0.5, 0.75, 1.0). The dashed horizontal line indicates the ELBO achieved using VI. \\
 	(b) Bar plots display the forgetting rate (x-axis) and the total variance explained (\%) in the y-axis. Panels correspond to different values of batch sizes (10\%, 25\%, 50\% of the data) and initial learning rates (0.05, 0.25, 0.5, 0.75). The dashed line indicates the variance explained achieved using standard VI. 
 	}
 	\label{fig:mofa2_stochastic_validation}
@@ -29,28 +28,23 @@ In terms of speed, GPU-accelerated SVI inference was up to $\approx$ 20x faster 
 	\includegraphics[width=0.85\linewidth]{mofa2_stochastic_speed}
 	\caption[]{
 	\textbf{Evaluation of convergence speed for stochastic variational inference using simulated data.} \\
-	Bar plots show the time elapsed for training MOFA+ models with  stochastic variational inference (SVI). Colours represent different batch sizes (10\%, 25\% or 50\%). The dashed line indicates the training time for standard VI.\\
-	VI models were trained using a single E5-2680v3 CPU. SVI models were trained either using a single E5-2680v3 CPU (first column) or using an Nvidia GTX 1080Ti GPU (second column). 
+	Bar plots show the time elapsed for training MOFA+ models usign SVI. Colours represent different batch sizes (10\%, 25\% or 50\%). The dashed line indicates the training time for standard VI. CPU models were trained using a single E5-2680v3. GPU models were trained an Nvidia GTX 1080Ti (second column). 
 	}
 	\label{fig:mofa2_stochastic_speed}
 \end{figure}
 
 
 
-\subsection{Multi-group structure}
+\subsection{Multi-group inference}
 
-Finally, we evaluated whether the double view and group-wise sparsity prior enables the detection of factors with simultaneous differential activity between groups and views.\\
-We simulated data with the following parameters: $M=2$ modalities, $G=2$ groups, $D=1000$ features, $N=1000$ samples and $K=10$ factors. Differential factor activities are incorporated in the simulation process by turning some factors off in random sets of modalities and groups (\Cref{fig:mofa2_multigroup_validation}, see ground truth). The task is to recover the true factor activity structure given a random initialisation.\\
-We fit three models: Bayesian Factor Analysis (no sparsity priors), MOFA v1 (only view-wise sparsity prior) and MOFA+ (view-wise and group-wise sparsity prior). 
-Indeed, we observe that when having factors that explain differing amounts of variance across groups and across views, MOFA+ was able to more accurately reconstruct the true factor activity patterns:
+We evaluated whether the new model formultion improves the detection of factors with differential activity across groups and views. We simulated data with the following parameters: $M=2$ views, $G=2$ groups, $D=1000$ features, $N=1000$ samples and $K=10$ factors. Differential factor activities are incorporated in the simulation process by turning some factors off in random sets of views and groups (\Cref{fig:mofa2_multigroup_validation}, see ground truth). The task is to recover the true factor activity structure given a random initialisation. We compared three models: Bayesian Factor Analysis (no sparsity priors), MOFA v1 (only view-wise sparsity prior) and MOFA+ (view-wise and group-wise sparsity prior). Indeed, we observe that when having factors that explain varying amounts of variance across groups and across views, MOFA+ was able to more accurately reconstruct the true factor activity patterns (\Cref{fig:mofa2_multigroup_validation}).
 
-% COPIED
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.80\linewidth]{mofa2_multigroup_validation}
 	\caption[]{
-	\textbf{Validation of group-wise ARD prior in the factors using simulated data.} \\
-	Representative example of the resulting variance explained patterns. The first row of heatmaps correspond to modality 0 and the second row to modality 1. In each heatmap, the first column corresponds to group 0 and the second column to group 1. Rows correspond to the inferred factors. The colour scale displays the percentage of variance explained by a given factor in a given modality and group. The heatmaps displayed in columns one to three show the solutions yielded by different models (Bayesian Factor Analysis; MOFA; MOFA+). The ground truth is shown in the right panel. 
+	\textbf{Recovering complex factor activity patterns using simulated data.} \\
+	Representative example of the resulting variance explained patterns. The first row of heatmaps correspond to view 0 and the second row to view 1. In each heatmap, the first column corresponds to group 0 and the second column to group 1. Rows correspond to the inferred factors. The colour scale displays the percentage of variance explained by a given factor in a given view and group. The heatmaps displayed in columns one to three show the solutions yielded by different models (Bayesian Factor Analysis; MOFA; MOFA+). The ground truth is shown in the right panel. 
 	}
 	\label{fig:mofa2_multigroup_validation}
 \end{figure}
@@ -61,17 +55,17 @@ Indeed, we observe that when having factors that explain differing amounts of va
 
 \subsection{Integration of a heterogeneous time-course single-cell RNA-seq dataset}
 
-To demonstrate the novel multi-group integration framework, we considered a time course scRNA-seq dataset comprising 16,152 cells that were isolated from a total of 8 mouse embryos from developmental stages E6.5, E7.0 and E7.25 (two biological replicates per stage), encompassing post-implantation and early gastrulation\cite{Pijuan-Sala2019}. This data set, which has been introduced in Chapter 3, consists on a single view (RNA expression) but with a clear group structure where cells belongs to different biological replicates at different developmental time points. Different embryos are expected to contain similar subpopulations of cells but also some differences due to developmental progression. As a proof of principle, we used MOFA+ to disentangle stage-specific transcriptional signatures from signatures that are shared across all stages. 
+To demonstrate the novel multi-group integration framework, we considered a time course scRNA-seq dataset comprising 16,152 cells that were isolated from a total of 8 mouse embryos from developmental stages E6.5, E7.0 and E7.25 (two biological replicates per stage), encompassing post-implantation and early gastrulation \cite{Pijuan-Sala2019}. This data set, which has been introduced in Chapter 3, consists of a single view but with a clear group structure where cells belongs to different biological replicates at different developmental time points. Different embryos are expected to contain similar subpopulations of cells but also some differences due to developmental progression. As a proof of principle, we used MOFA+ to disentangle stage-specific transcriptional signatures from signatures that are shared across all stages. Although in principle one could employ the MOFA+ factors for clustering and cell type annotation, here we adopted the cell type definitions described in \cite{Pijuan-Sala2019}.
 
-MOFA+ identified 7 Factors that explain at least 1\% of variance (across all groups). Notably, this latent representation captures between 35\% and 55\% of the total transcriptional heterogeneity per embryo:
+MOFA+ identified 7 Factors that explain at least 1\% of variance in a group and all together capture between 35\% and 55\% of the total transcriptional heterogeneity per embryo (\Cref{fig:mofa2_scrna_variance_explained}).
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.95\linewidth]{mofa2_scrna_variance_explained}
 	\caption[]{
-	\textbf{MOFA+ variance explained estimates in the gastrulation scRNA-seq atlas.} \\
-	(a) Heatmap displays the variance explained (\%) for each factor (rows) in each group (pool of mouse embryos at a specific developmental stage, columns). The bar plots show the variance explained per group with all factors. \\
-	(b) Cumulative variance explained (per group, y-axis) versus factor number (x-axis). Asterisks indicate the factors that are selected for downstream analysis (minimum of 1\% variance explained).
+	\textbf{MOFA+ applied to gastrulation scRNA-seq atlas: variance decomposition analysis} \\
+	(a) Heatmap displays the variance explained (\%) for each factor (rows) in each group (mouse embryos at a specific developmental stage, columns).\\
+	(b) Cumulative variance explained (per group, y-axis) versus factor number (x-axis). Asterisks indicate the factors that are selected for downstream analysis (minimum of 1\% variance explained in at least one group).
 	}
 	\label{fig:mofa2_scrna_variance_explained}
 \end{figure}
@@ -79,8 +73,7 @@ MOFA+ identified 7 Factors that explain at least 1\% of variance (across all gro
 
 \subsubsection{Characterisation of individual factors}
 
-Some factors recover the existence of post-implantation developmental cell types, including extra-embryonic (ExE) tissue (Factor 1 and Factor 2), and the emergence of mesoderm cells from the primitive streak (Factor 4). Consistently, the top weights for these factors are enriched for lineage-specific gene expression markers, including \textit{Ttr} and \textit{Apoa1} for ExE endoderm (\Cref{fig:mofa2_scrna_ExE_endoderm_factor}); \textit{Rhox5} and \textit{Bex3} for ExE ectoderm (not shown); \textit{Mesp1} and \textit{Phlda2} for nascent mesoderm (\Cref{fig:mofa2_scrna_mesoderm_factor}). Other factors captured technical variation due to metabolic stress that affects all batches in a similar fashion (Factor 3, \Cref{fig:mofa2_scrna_metabolism_factor}).\\
-The characterisation of other factors is described in\cite{Argelaguet2020} and is not reproduced here for simplicity.
+Some factors recover the existence of post-implantation developmental cell types, including extra-embryonic (ExE) tissue (Factor 1 and Factor 2), and the emergence of mesoderm cells from the primitive streak (Factor 4). Consistently, the top weights for these factors are enriched for lineage-specific gene expression markers, including \textit{Ttr} and \textit{Apoa1} for ExE endoderm (\Cref{fig:mofa2_scrna_ExE_endoderm_factor}); \textit{Rhox5} and \textit{Bex3} for ExE ectoderm (\Cref{fig:mofa2_scrna_ExE_ectoderm_factor}); \textit{Mesp1} and \textit{Phlda2} for nascent mesoderm (\Cref{fig:mofa2_scrna_mesoderm_factor}). Other factors captured technical variation due to metabolic stress that affects all batches in a similar fashion (Factor 3, \Cref{fig:mofa2_scrna_metabolism_factor}).
 
 \begin{figure}[H]
 	\centering
@@ -96,6 +89,29 @@ The characterisation of other factors is described in\cite{Argelaguet2020} and i
 
 \begin{figure}[H]
 	\centering
+	\includegraphics[width=0.85\linewidth]{mofa2_scrna_ExE_ectoderm_factor}
+	\caption[]{
+	\textbf{Characterisation of Factor 2 as extra-embryonic (ExE) ectoderm formation.} \\
+	(a) Beeswarm plot of Factor values for each group. Cells are grouped and coloured by cell type. \\
+	(b) Plot of gene weights. Highlighted are the top five genes with largest weight (in absolute values) \\
+	(c) Beeswarm plot of Factor values for each group. Cells are coloured by the expression of the two genes with largest weight (in absolute values).
+	}
+	\label{fig:mofa2_scrna_ExE_ectoderm_factor}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\linewidth]{mofa2_scrna_metabolism_factor}
+	\caption[]{\textbf{Characterisation of Factor 3 as cell-to-cell differences in metabolic activity.} \\
+	(a) Beeswarm plot of Factor values for each group. Cells are grouped and coloured by cell type. \\
+	(b) Plot of gene weights. Highlighted are the top seven genes with largest weight (in absolute values) \\
+	(c) Gene set enrichment analysis applied to the gene weights using the Reactome gene sets \cite{Fabregat2015}. Significance is assessed via a parametric. Resulting p-values were adjusted for multiple testing using the Benjamini-Hochberg procedure.
+	}
+	\label{fig:mofa2_scrna_metabolism_factor}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
 	\includegraphics[width=0.85\linewidth]{mofa2_scrna_mesoderm_factor}
 	\caption[]{\textbf{Characterisation of Factor 4 as mesoderm commitment.} \\
 	(a) Beeswarm plot of Factor values for each group. Cells are grouped and coloured by cell type. \\
@@ -105,133 +121,121 @@ The characterisation of other factors is described in\cite{Argelaguet2020} and i
 	\label{fig:mofa2_scrna_mesoderm_factor}
 \end{figure} 
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scrna_metabolism_factor}
-	\caption[]{\textbf{Characterisation of Factor 3 as cell-to-cell differences in metabolic activity.} \\
-	(a) Beeswarm plot of Factor values for each group. Cells are grouped and coloured by cell type. \\
-	(b) Plot of gene weights. Highlighted are the top seven genes with largest weight (in absolute values) \\
-	(c) Gene set enrichment analysis applied to the gene weights using the Reactome gene sets\cite{Fabregat2015}. Significance is assessed via a parametric. Resulting p-values were adjusted for multiple testing using the Benjamini-Hochberg procedure.
-	}
-	\label{fig:mofa2_scrna_metabolism_factor}
-\end{figure}
 
-Interestingly, Factors display different signatures of activity (variance explained) across developmental stages. For example, the variance explained by Factor 1 remains constant across developmental progression (\Cref{fig:mofa2_scrna_variance_explained}), indicating that commitment to ExE endoderm fate occurs early in the embryo and the proportion of this cell type remains relatively constant. In contrast, the activity of Factor 4 increases with developmental progression, consistent with a higher proportion of cells committing to mesoderm after ingression through the primitive streak. 
+Interestingly, Factors display different signatures of activity (variance explained values) across developmental stages. For example, Factors 1 and 2 remain constant across the developmental progression (\Cref{fig:mofa2_scrna_variance_explained}), indicating that commitment to ExE ectoderm and ExE endoderm fate occurs early in the embryo and the proportion of this cell type remains relatively constant. In contrast, the activity of Factor 4 increases with developmental progression, consistent with a higher proportion of cells committing to mesoderm after ingression through the primitive streak. 
 
 In conclusion, this application shows how MOFA+ can identify biologically relevant structure in multi-group scRNA-seq datasets.
 
+% \subsection{Identification of context-dependent DNA methylation signatures associated with cellular diversity in the mammalian cortex}
 
-\subsection{Identification of context-dependent DNA methylation signatures associated with cellular diversity in the mammalian cortex}
+% \subsubsection{Data overview and processing}
 
-\subsubsection{Data overview and processing}
+% As a second use case, we considered how MOFA+ can be used to investigate cellular heterogeneity  in epigenetic signatures between populations of neurons. This application illustrates how a multi-group and multi-view structure can be defined from seemingly uni-modal data.
 
-As a second use case, we considered how MOFA+ can be used to investigate cellular heterogeneity  in epigenetic signatures between populations of neurons. This application illustrates how a multi-group and multi-view structure can be defined from seemingly uni-modal data.
+% We considered a data set of of 3,069 cells isolated from the frontal cortex of young adult mouse, where DNA methylation was profiled using single-cell bisulfite sequencing \cite{Luo2018}. Some background to motivate our experimental design: in mammalian genomes, DNA methylation predominantly occurs at CpG dinucleotides (mCG), with more than 75\% of CpG sites being methylated in differentiated cell types. By contrast non-CpG methylation (mCH) has been historically dismissed as methodological artifact of incomplete bisulfite conversion, until recent works have confirmed their existence in restricted cell types. Yet, evidence for a potential functional role remains controversial \cite{He2015}.
 
-We considered a data set of of 3,069 cells isolated from the frontal cortex of young adult mouse, where DNA methylation was profiled using single-cell bisulfite sequencing\cite{Luo2018}.\\Some background to motivate our experimental design: in mammalian genomes, DNA methylation predominantly occurs at CpG dinucleotides (mCG), with more than 75\% of CpG sites being methylated in differentiated cell types. By contrast non-CpG methylation (mCH) has been historically dismissed as methodological artifact of incomplete bisulfite conversion, until recent works have confirmed their existence in restricted cell types. Yet, evidence for a potential functional role remains controversial\cite{He2015}.
+% Here we used MOFA+ to dissect the cellular heterogeneity associated with mCH and mCG in the mouse frontal cortex. As input data we quantified mCH and mCG levels at gene bodies, promoters and putative enhancer elements. Each combination of genomic and sequence context was defined as a separate view.\\
+% As described in Chapters 1 and 3, methylation levels were calculated per cell and genomic feature using a binomial model where the number of successes correspond to the number of reads that support methylation (or accessibility) and the number of trials the total number of reads.\\
+% Finally, to explore the influence of the neuron's location we grouped cells according to their cortical layer: Deep, Middle or Superficial \cite{Luo2017}. Notably, the resulting data set is extremely sparse, which hampers the use of conventional dimensionality reduction techniques.The probabilistic framework underlying MOFA+ naturally enables the handling of missing values by ignoring the corresponding terms in the likelihood function (\Cref{section:mofa_missing_values}).
 
-Here we used MOFA+ to dissect the cellular heterogeneity associated with mCH and mCG in the mouse frontal cortex. As input data we quantified mCH and mCG levels at gene bodies, promoters and putative enhancer elements. Each combination of genomic and sequence context was defined as a separate view.\\
-As described in Chapters 1 and 3, methylation levels were calculated per cell and genomic feature using a binomial model where the number of successes correspond to the number of reads that support methylation (or accessibility) and the number of trials the total number of reads.\\
-Finally, to explore the influence of the neuron's location we grouped cells according to their cortical layer: Deep, Middle or Superficial \cite{Luo2017}. Notably, the resulting data set is extremely sparse, which hampers the use of conventional dimensionality reduction techniques.The probabilistic framework underlying MOFA+ naturally enables the handling of missing values by ignoring the corresponding terms in the likelihood function (\Cref{section:mofa_missing_values}).
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.85\linewidth]{mofa2_scmet_datastructure}
+% 	\caption[]{\textbf{Overview of the single-cell DNA methylation data set.}\\
+% 	The tile plot shows the structure of the input data in terms of views (rows) versus groups (columns), with associated dimensionalities (D for features, N for samples). The color displays the fraction of missing values for each combination of sample and view.}
+% 	\label{fig:mofa2_scmet_datastructure}
+% \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scmet_datastructure}
-	\caption[]{\textbf{Overview of the single-cell DNA methylation data set}\\. 
-	The tile plot shows the structure of the input data in terms of modalities (rows) versus groups (columns), with associated dimensionalities (D for features, N for samples). The color displays the fraction of missing values for each combination of sample and modality.}
-	\label{fig:mofa2_scmet_datastructure}
-\end{figure}
+% \subsubsection{Model overview}
 
-\subsubsection{Model overview}
+% In this data set, MOFA+ identifies 10 factors with a minimum variance explained of 1\% in at least one data view (\Cref{fig:mofa2_scmet_r2}).
 
-In this data set, MOFA+ identifies 10 factors with a minimum variance explained of 1\% in at least one data modality (\Cref{fig:mofa2_scmet_r2}).
+% % TO REWRITE
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=1.00\linewidth]{mofa2_scmet_r2}
+% 	\caption[]{
+% 	\textbf{MOFA+ application to frontal cortex DNA methylation data: variance decomposition analysis.} \\
+% 	(a) Percentage of variance explained for each factor across the different groups (cortical layer, x-axis) and views (genomic context, y-axis). For simplicity, only the first three factors are shown. \\
+% 	(b) Cumulative variance explained (per group, y-axis) versus factor number (x-axis). Asterisks indicate the factors that are selected for downstream analysis (minimum of 1\% variance explained in at least one view).
+% 	}
+% 	\label{fig:mofa2_scmet_r2}
+% \end{figure}
 
-% TO REWRITE
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\linewidth]{mofa2_scmet_r2}
-	\caption[]{
-	\textbf{MOFA+ variance explained estimates in the frontal cortex DNA methylation data set.} \\
-	(a) Percentage of variance explained for each factor across the different groups (cortical layer, x-axis) and views (genomic context, y-axis). For simplicity, only the first three factors are shown. \\
-	(b) Cumulative variance explained (per group, y-axis) versus factor number (x-axis). Asterisks indicate the factors that are selected for downstream analysis (minimum of 1\% variance explained in at least one data modality).
-	}
-	\label{fig:mofa2_scmet_r2}
-\end{figure}
+% Factor 1, the major source of variation, is linked to the existence of inhibitory and excitatory neurons, the two major classes of neurons (\Cref{fig:mofa2_scmet_factor1}). This factor shows significant mCG activity across all cortical layers, mostly driven by coordinated changes in enhancer elements, but to some extent also gene bodies.
 
-Factor 1, the major source of variation, is linked to the existence of inhibitory and excitatory neurons, the two major classes of neurons (\Cref{fig:mofa2_scmet_factor1}). This factor shows significant mCG activity across all cortical layers, mostly driven by coordinated changes in enhancer elements, but to some extent also gene bodies.
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.95\linewidth]{mofa2_scmet_factor1}
+% 	\caption[]{
+% 	\textbf{Characterisation of Factor 1 as DNA methylation signatures distinguishing inhibitory versus excitatory cell types \cite{Luo2017}.} \\
+% 	(a) Beeswarm plots of Factor 1 values per group (cortical layer). In the left plot, cells are coloured by neuron class. In the middle and right plots the cells are coloured by average mCG and mCH levels (\%), respectively, of the top 100 enhancers with the largest weights. \\
+% 	(b) Correlation of enhancer mCG weights (x-axis) and mCH weights (y-axis)
+% 	}
+% 	\label{fig:mofa2_scmet_factor1}
+% \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\linewidth]{mofa2_scmet_factor1}
-	\caption[]{
-	\textbf{Characterisation of Factor 1 as DNA methylation signatures distinguishing inhibitory versus excitatory cell types\cite{Luo2017}.} \\
-	(a) Beeswarm plots of Factor 1 values per group (cortical layer). In the left plot, cells are coloured by neuron class. In the middle and right plots the cells are coloured by average mCG and mCH levels (\%), respectively, of the top 100 enhancers with the largest weights. \\
-	(b) Correlation of enhancer mCG weights (x-axis) and mCH weights (y-axis)
-	}
-	\label{fig:mofa2_scmet_factor1}
-\end{figure}
+% % TO REWRITE
+% Factor 2 captures genome-wide differences in global mCH levels (R=0.99, figure not shown), most likely to be a technical source of variation.\\
+% Factor 3 captures heterogeneity linked to the increased cellular diversity along cortical depth, with the Deep layer displaying significantly more diversity of excitatory cell types than the Superficial layers (\Cref{fig:mofa2_scmet_factor3}).  
 
-% TO REWRITE
-Factor 2 captures genome-wide differences in global mCH levels (R=0.99, figure not shown), most likely to be a technical source of variation.\\
-Factor 3 captures heterogeneity linked to the increased cellular diversity along cortical depth, with the Deep layer displaying significantly more diversity of excitatory cell types than the Superficial layers (\Cref{fig:mofa2_scmet_factor3}).  
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.95\linewidth]{mofa2_scmet_factor3}
+% 	\caption[]{
+% 	\textbf{Characterisation of Factor 3 as DNA methylation signatures associated with increased cellular diversity along cortical depth.} \\
+% 	(a) Beeswarm plots of Factor 3 values per group (cortical layer). In the left plot, cells are coloured by neuron class. In the middle and right plots the cells are coloured by average mCG and mCH levels (\%), respectively, of the top 100 enhancers with the largest weights. \\
+% 	(b) Correlation of enhancer mCG weights (x-axis) and mCH weights (y-axis).
+% 	}
+% 	\label{fig:mofa2_scmet_factor3}
+% \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\linewidth]{mofa2_scmet_factor3}
-	\caption[]{
-	\textbf{Characterisation of Factor 3 as DNA methylation signatures associated with increased cellular diversity along cortical depth.} \\
-	(a) Beeswarm plots of Factor 3 values per group (cortical layer). In the left plot, cells are coloured by neuron class. In the middle and right plots the cells are coloured by average mCG and mCH levels (\%), respectively, of the top 100 enhancers with the largest weights. \\
-	(b) Correlation of enhancer mCG weights (x-axis) and mCH weights (y-axis).
-	}
-	\label{fig:mofa2_scmet_factor3}
-\end{figure}
+% Interestingly, in addition to the dominant mCG signal, MOFA+ connects Factor 1 and Factor 3 to variation in mCH, which could suggest a potential role of mCH in cell type commitment events. This has been highlight debated, and we propose that this hypothesis could be supported if the genomic regions that show mCH signatures are different than the ones marked by the (conventional) mCG signatures. In the MOFA+ setting, this implies no relationship between the mCH and mCG feature weights. However, for each factor and genomic context we observe a strong positive dependency between mCG and mCH weights, indicating that mCH and mCG signatures are highly correlated and target similar loci.\\
+% Taken together, our results support the hypothesis that the presence of mCH is more likely to be the result of non-specific \textit{de novo} methylation as a by-product of the establishment of mCG.
 
-Interestingly, in addition to the dominant mCG signal, MOFA+ connects Factor 1 and Factor 3 to variation in mCH, which could suggest a potential role of mCH in cell type commitment events. This has been highlight debated, and we propose that this hypothesis could be supported if the genomic regions that show mCH signatures are different than the ones marked by the (conventional) mCG signatures. In the MOFA+ setting, this implies no relationship between the mCH and mCG feature weights. However, for each factor and genomic context we observe a strong positive dependency between mCG and mCH weights, indicating that mCH and mCG signatures are highly correlated and target similar loci.\\
-Taken together, our results support the hypothesis that the presence of mCH is more likely to be the result of non-specific \textit{de novo} methylation as a by-product of the establishment of mCG.
+% \subsubsection{Non-linear dimensionality reduction}
 
-\subsubsection{Non-linear dimensionality reduction}
+% The (linear) MOFA factors can be combined by further non-linear dimensionality reduction algorithms such as UMAP or t-SNE. In this case, we show that the t-SNE projections reveals the existence of multiple subpopulations of both excitatory and inhibitory cell types. Notably, the MOFA+ factors are significantly better at identifying these subpopulations than the conventional approach of using Principal Component Analysis with imputed measurements (\Cref{fig:mofa2_scmet_dimred}).
 
-The (linear) MOFA factors can be combined by further non-linear dimensionality reduction algorithms such as UMAP or t-SNE. In this case, we show that the t-SNE projections reveals the existence of multiple subpopulations of both excitatory and inhibitory cell types. Notably, the MOFA+ factors are significantly better at identifying these subpopulations than the conventional approach of using Principal Component Analysis with imputed measurements (\Cref{fig:mofa2_scmet_dimred}).
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.90\linewidth]{mofa2_scmet_dimred}
-	\caption[]{
-	\textbf{Comparison of MOFA+ Factors and Principal Components as input to t-SNE.}\\
-	The scatter plots display t-SNE projections when using as input MOFA+ factors (left) or principal components (right). Each dot represents a cell, coloured by cell type\cite{Luo2017}. To ensure a fair comparison we used the same number of PCs and MOFA+ Factors ($K=15$). Feature-wise imputation of missing values is applied for the PCA.
-	}
-	\label{fig:mofa2_scmet_dimred}
-\end{figure}
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.90\linewidth]{mofa2_scmet_dimred}
+% 	\caption[]{
+% 	\textbf{Comparison of MOFA+ Factors and Principal Components as input to t-SNE.}\\
+% 	The scatter plots display t-SNE projections when using as input MOFA+ factors (left) or principal components (right). Each dot represents a cell, coloured by cell type\cite{Luo2017}. To ensure a fair comparison we used the same number of PCs and MOFA+ Factors ($K=15$). Feature-wise imputation of missing values is applied for the PCA.
+% 	}
+% 	\label{fig:mofa2_scmet_dimred}
+% \end{figure}
 
 \subsection{Identification of molecular signatures of lineage commitment during mammalian embryogenesis}
 
-As a last application, we considered a substantially more complex dataset with multiple sample groups and data modalities. The dataset consists of a multi-omic atlas of mouse gastrulation where scNMT-seq was used to simultaneously profile RNA expression, DNA methylation and chromatin accessibility in 1,828 cells at three stages of development\cite{Argelaguet2019}. This is the same data set that I introduced in Chapter 3.\\
-The main difference with respect to the MOFA analysis presented in Chapter 3 (\Cref{section:mofa_gastrulation}) is that with MOFA+ we can employ the multi-group functionality to perform a simultaneous analysis across multiple stages, instead of focusing only on stage E7.5.
+As a second application, I considered the multi-omic atlas of mouse gastrulation introduced in Chapter 3 where scNMT-seq was used to profile RNA expression, DNA methylation and chromatin accessibility in 1,828 cells at multiple stages of development \cite{Argelaguet2019}. sThe main difference with respect to the MOFA analysis presented in Chapter 3 (\Cref{section:mofa_gastrulation}) is that with MOFA+ we can employ the multi-group functionality to perform a simultaneous analysis across multiple stages, instead of focusing only on stage E7.5.
 
 \subsubsection{Data processing}
 
 As input to the model we quantified DNA methylation and chromatin accessibility values over two sets of regulatory elements: gene promoters and enhancer elements (distal H3K27ac sites). RNA expression was quantified over protein-coding genes. More details on the feature quantification and data processing steps are described in Chapter 3.\\
-We defined separate views for the RNA expression and for each combination of genomic context and epigenetic readout. Cells were grouped according to their developmental stage (E5.5, E6.5 and E7.5), reflecting the underlying experimental design\cite{Argelaguet2019} (\Cref{fig:mofa2_scnmt_datastructure}). Note again that, as discussed in Chapter 3, the CpG methylation (endogenous DNA methylation) and GpC methylation (proxy for chromatin accessibility) readouts result in very sparse matrices that are challenging to analyse with standard statistical approaches:
+We defined separate views for the RNA expression and for each combination of genomic context and epigenetic readout. Cells were grouped according to their developmental stage (E5.5, E6.5 and E7.5), reflecting the underlying experimental design \cite{Argelaguet2019} (\Cref{fig:mofa2_scnmt_datastructure}). Note that the CpG methylation (endogenous DNA methylation) and GpC methylation (proxy for chromatin accessibility) readouts result in very sparse matrices that are challenging to analyse with standard statistical methods.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\linewidth]{mofa2_scnmt_datastructure}
 	\caption[]{
 	\textbf{Overview of the scNMT-seq mouse gastrulation data set used as input for MOFA+.}\\
-	(a) Structure of the input data in terms of modalities (x-axis) versus samples (y-axis). Each panel corresponds to a different group (embryonic stage). Grey bars represent missing modalities. \\
-	(b) Structure of the missing values in the data. For each cell and modality, the colour displays the fraction of missing values.
+	(a) Structure of the input data in terms of views (y-axis) versus samples (x-axis). Each panel corresponds to a different group (embryonic stage). Grey bars represent missing views. \\
+	(b) Structure of the missing values in the data. For each cell and view, the colour displays the fraction of missing values.
 	}
 	\label{fig:mofa2_scnmt_datastructure}
 \end{figure}
 
 \subsubsection{Model overview}
 
-In this data set MOFA+ identified 8 largely orthogonal factors with a minimum variance explained of 1\% in the RNA expression (\Cref{fig:mofa2_scnmt_modeloverview}). The MOFA+ Factors explain little amounts of variance in chromatin accessibility, both for promoters ($\approx$15\%) and enhancers ($\approx$18\%), mostly driven by Factors 1 and 2. In contrast, the model explains larger amounts of variation in DNA methylation ($\approx$23\% for promoters and $\approx$59\% for enhancers). However, as in chromatin accessibility, this variation is mostly driven by the first two Factors. Finally, for RNA expression there is a steady increase in the variance explained per Factor, suggesting that the (small) sources of variation captured beyond Factor 2 are largely driven by RNA expression alone.
+In this data set MOFA+ identified 8 largely orthogonal factors with a minimum variance explained of 1\% in the RNA expression (in at least one group, \Cref{fig:mofa2_scnmt_modeloverview}). The model explains little amounts of variance in chromatin accessibility, both for promoters ($\approx$15\%) and enhancers ($\approx$18\%), mostly driven by Factors 1 and 2. In contrast, the model explains larger amounts of variation in DNA methylation ($\approx$23\% for promoters and $\approx$59\% for enhancers). However, as in chromatin accessibility, this variation is mostly driven by the first two Factors. Finally, for RNA expression there is a steady increase in the variance explained per Factor, suggesting that the (small) sources of variation captured beyond Factor 2 are largely driven by RNA expression alone.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\linewidth]{mofa2_scnmt_modeloverview}
 	\caption[]{
-	\textbf{Unsupervised characterisation of MOFA+ factors from the scNMT-seq gastrulation data set.} \\
+	\textbf{MOFA+ application to the scNMT-seq gastrulation data set: model overview.} \\
 	(a) Cumulative variance explained (per view, y-axis) versus factor number (x-axis). Asterisks indicate the factors that are selected for downstream analysis (minimum of 1\% variance explained in the RNA expression). Note that the variance estimates shown here are the sum across all groups. \\
 	(b) Pearson correlation coefficients between selected factors. In MOFA+ there are no orthogonality constraints, but the factors are expected to be largely uncorrelated.
 	}
@@ -239,33 +243,31 @@ In this data set MOFA+ identified 8 largely orthogonal factors with a minimum va
 \end{figure}
 
 
-\subsubsection{Characterisation of Factors 1 and 2}
+\subsubsection{Characterisation of the MOFA+ Factors}
 
-The first factor captured the formation of ExE endoderm, a cell type that is present across all stages (\Cref{fig:mofa2_scnmt_factors12}), in agreement with our previous results using the independently generated transcriptomic atlas of mouse gastrulation (\Cref{fig:mofa2_scrna_ExE_endoderm_factor}). This Factor is associated to widespread changes across al molecular layers, most notably DNA methylation (up to 15\% variance explained). For both promoters and enhances, the distribution of weights for DNA methylation are skewed towards negative values. This suggests that most features are uniformly affected by this Factor, such that lower methylation levels are observed in ExE endoderm cells. This is consistent with previous studies that have shown that ExE endoderm cells are characterised by a state of global demethylation\cite{Zhang2017,Argelaguet2019}. The weights for chromatin accessibility are not skewed towards one direction, indicating that accessibility changes are not uniform and the state of global demethylation in ExE endoderm cells is not necessarily associated with a (globally) more open chromatin state.
+Factor 1 captured the formation of ExE endoderm, a cell type that is present across all stages (\Cref{fig:mofa2_scnmt_factors12}a), in agreement with our previous results using the independently generated scRNA-seq atlas of mouse gastrulation (\Cref{fig:mofa2_scrna_ExE_endoderm_factor}). This Factor is associated to widespread changes across al molecular layers, most notably DNA methylation (up to 15\% variance explained). For both promoters and enhances, the distribution of weights for DNA methylation are skewed towards negative values. This suggests that most features are uniformly affected by this Factor, such that lower methylation levels are observed in ExE endoderm cells. This is consistent with previous studies that have shown that ExE endoderm cells are characterised by a state of global demethylation\cite{Zhang2017,Argelaguet2019}. The weights for chromatin accessibility are not skewed towards one direction, indicating that accessibility changes are not uniform and the state of global demethylation in ExE endoderm cells is not necessarily associated with a (globally) more open chromatin state.
 
-The next two factors, Factor 2 and Factor 3, captured the molecular variation associated with the formation of the primary germ layers at E7.5: mesoderm (Factor 2, \Cref{fig:mofa2_scnmt_factors12}), and embryonic endoderm (Factor 3, not shown for simplicity). As with Factor 1, MOFA+ connects transcriptome variation to changes in DNA methylation and chromatin accessibility, but only at stage E7.5, when the germ layers are known to emerge. Nevertheless, there is a striking difference between Factor 1 and Factor 2. The variance decomposition analysis and the distribution of weights indicate that the epigenetic dynamics are mostly driven by enhancer elements. This is consistent with our results from Chapter 3 where we shown (using MOFA v1 and other approaches) that little coordinated variation is observed in promoters, even for genes that show strong differential expression between germ layers.
+The next two factors, Factor 2 and Factor 3, captured the molecular variation associated with the formation of the primary germ layers at E7.5: mesoderm (Factor 2, \Cref{fig:mofa2_scnmt_factors12}b), and embryonic endoderm (Factor 3, not shown). As with Factor 1, MOFA+ connects transcriptome variation to changes in DNA methylation and chromatin accessibility, but only at stage E7.5, when the germ layers are known to emerge. Nevertheless, there is a striking difference between Factor 1 and Factor 2. The variance decomposition analysis and the distribution of weights indicate that the epigenetic dynamics are mostly driven by enhancer elements. This is consistent with our results from Chapter 3 where we showed that little coordinated variation is observed in promoters, even for genes that show strong differential expression between germ layers.
 
 % COPIED
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scnmt_factors12}
+	\includegraphics[width=1.00\linewidth]{mofa2_scnmt_factors12}
 	\caption[]{
 	\textbf{MOFA+ integrates multi-modal scNMT-seq experiments to reveal epigenetic signatures associated with lineage commitment during mammalian embryogenesis.} \\
-	(a-b) Characterisation of Factor 1 as ExE endoderm formation and Factor 2 as Mesoderm commitment. Top left plot shows the percentage of variance explained by the factor across the different views (rows) and groups (embryonic stages, as columns). Bottom left plot shows the distribution of factor values for each stage, coloured by cell type assignment. Histograms display the distribution of DNA methylation and chromatin accessibility weights for promoters and enhancer elements.
+	Characterisation of (a) Factor 1 as ExE endoderm formation and (b) Factor 2 as Mesoderm commitment. Top left plot shows the percentage of variance explained by the factor across the different views (rows) and groups (embryonic stages, as columns). Bottom left plot shows the distribution of factor values for each stage, coloured by cell type assignment. Histograms display the distribution of DNA methylation and chromatin accessibility weights for promoters and enhancer elements.
 	}
 	\label{fig:mofa2_scnmt_factors12}
 \end{figure}
 
-\subsubsection{Characterisation of other Factors}
-
-As shown above, the rest of the MOFA+ Factors explain significantly less variance than Factors 1 and 2, and they are mostly driven by the RNA expression (\Cref{fig:mofa2_scnmt_modeloverview}). Their aetiology can be identified by the inspection of gene weights and by gene set enrichment analysis. For simplicity, I will only display a characterisation of Factor 6, which captures cell-cycle variation that is consistently found across all three embryonic stages.
+As suggested by the variance decomposition analysis (\Cref{fig:mofa2_scnmt_modeloverview}), the remaining MOFA+ Factors explain significantly less variance than Factors 1 and 2, and they are mostly driven by RNA expression alone (\Cref{fig:mofa2_scnmt_modeloverview}). Their aetiology can be identified by the inspection of gene weights and by gene set enrichment analysis. For simplicity, I will only display the characterisation of Factor 6, which captures cell-cycle variation that is consistently found across all three embryonic stages (\Cref{fig:mofa2_scnmt_factor6}).
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scnmt_factor6}
+	\includegraphics[width=0.95\linewidth]{mofa2_scnmt_factor6}
 	\caption[]{
 	\textbf{Characterisation of Factor 6 as cell cycle variation.} \\
-	(a) Variance explained by Factor 6 in each group (embryonic stage, columns) and data modality (rows).\\
+	(a) Variance explained by Factor 6 in each group (embryonic stage, columns) and view (rows).\\
 	(b) Distribution of Factor 6 values per group (embryonic stage, x-axis), with cells coloured by the inferred cell cycle state using \textit{cyclone}.\\
 	(c) Gene set enrichment analysis applied to the Factor 6 weights.\\
 	(d) Cumulative distribution of RNA weights for Factor 6. The top genes with the highest (absolute) weight are labelled.
@@ -273,7 +275,6 @@ As shown above, the rest of the MOFA+ Factors explain significantly less varianc
 	\label{fig:mofa2_scnmt_factor6}
 \end{figure}
 
-\subsubsection{Conclusion}
-
-In conclusion, we have used MOFA+ to do a multi-stage and multi-omic characterisation of the main sources of molecular variation in mouse gastrulation. Our suggests that different cell fate commitment events undergo different modes of epigenetic variation. Some cell types such as ExE endoderm manifest global changes in the epigenetic landscape, driven by a global unmethylated state. In contrast, cells committed to Mesoderm and Endoderm display the emergence of local epigenetic patterns that are driven by specific genomic contexts, mostly enhancers.
+% \subsubsection{Conclusion}
+% In conclusion, we have used MOFA+ to do a multi-stage and multi-omic characterisation of the main sources of molecular variation in mouse gastrulation. Our suggests that different cell fate commitment events undergo different modes of epigenetic variation. Some cell types such as ExE endoderm manifest global changes in the epigenetic landscape, driven by a global unmethylated state. In contrast, cells committed to Mesoderm and Endoderm display the emergence of local epigenetic patterns that are driven by specific genomic contexts, mostly enhancers.
 

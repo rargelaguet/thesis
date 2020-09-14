@@ -57,6 +57,14 @@
 \RequirePackage[font={footnotesize}, margin=20pt]{subcaption}
 
 
+% Classic Draft Mode
+\ifsetDraftClassic
+\DeclareCaptionFormat{empty}{}
+\captionsetup{format=empty}
+%\captionsetup{format=empty,aboveskip=0pt,belowskip=0pt}
+\fi
+
+
 % *************************** Graphics and figures *****************************
 
 %\usepackage{rotating}

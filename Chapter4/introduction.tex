@@ -2,12 +2,9 @@
 
 \chapter{MOFA+: an improved framework for the integration of structured single-cell data}
 
-In Chapter 2 we developed Multi-Omics Factor Analysis (MOFA), a statistical framework for the unsupervised integration of multi-omics data. \\
-MOFA addresses key challenges in data integration, including overfitting, noise reduction, handling of missing values and improved interpretation of the model output. However, when applied to increasingly-large data sets, as in the single-cell domain, the inference scheme implemented in MOFA is still limited in scalability. In addition, the increased experimental throughput has facilitated the simultaneous study of multiple experimental conditions, even in a combinatorial fashion\cite{Replogle2020}. By pooling and contrasting information across experimental conditions, it would be possible to obtain more comprehensive insights into the complexity underlying biological systems.
+In Chapter 2 we developed Multi-Omics Factor Analysis (MOFA), a statistical framework for the unsupervised integration of multi-omics data. MOFA addresses key challenges in data integration, including overfitting, noise reduction, handling of missing values and improved interpretation of the model output. However, when applied to increasingly-large single-cell genomics data sets, the variational inference scheme offers limited scalability. In addition, the increased experimental throughput has facilitated the simultaneous study of multiple conditions within the same experimental design \cite{Replogle2020}. However, MOFA makes strong independence assumptions about the dependencies across samples and it provides no principled strategy to model data sets where the samples are structured into multiple groups (i.e. batches, donors or even independent studies). In this new Chapter we improve the model formulation with the aim of performing integrative analysis of large-scale datasets where the features are structured into multiple data modalities (views) and the samples (or cells) are structured into different groups.
 
-MOFA makes strong assumptions about the dependencies across samples and it offers no principled way of modelling data sets where the samples are structured into multiple groups, where groups can correspond to batches, donors or independent studies. In this new Chapter we improve the model formulation in MOFA with the aim of performing integrative analysis of large-scale datasets where the features are structured into multiple data modalities and/or the samples (or cells) are also structured into different groups.
-
-The work discussed in this chapter has been peer-reviewed and published in \cite{Argelaguet2020}. The project was conceived by Damien Arnol, Britta Velten and me. The mathematical derivations and the implementation of the stochastic variational inference scheme was done by Damien Arnol, Yonatan Deloro and me. The downstream analysis package was implemented by Danila Bredikhin and me. I generated most figures and I wrote the manuscript with feedback from all authors. John C. Marioni and Oliver Stegle supervised the project. 
+The work discussed in this chapter has been peer-reviewed and published in \cite{Argelaguet2020}. The project was conceived by Damien Arnol and me. The mathematical derivations and the implementation of the stochastic variational inference scheme was done together by Damien Arnol, Yonatan Deloro and me. I implemented the downstream analysis package, but with significant contributions from Danila Bredikhin. I generated most figures and I wrote the manuscript with feedback from all authors. John C. Marioni and Oliver Stegle supervised the project. 
 
 \section{Theoretical foundations}
 
@@ -21,7 +18,7 @@ Formally, exponential family distributions can be represented in the following f
 \end{equation}
 where $\bfx$ is a multivariate random variable and $\btheta$ are the distribution's parameters. Each term has a common notation: T(\bfx): sufficient statistics; $\eta(\btheta)$: natural parameters; $h(\bfx)$: base measure; $A(\eta)$: the log-partition function (or the normaliser).
 
-The exponential family form for the probability distributions tht are frequently used in this thesis are shown below:
+The exponential family form for the probability distributions that are frequently used in this thesis are shown below:
 
 Univariate normal distribution:
 \begin{align*}
@@ -55,7 +52,7 @@ Beta distribution:
 	& A(\theta) = \log(\Gamma(\eta_1)) +\log(\Gamma(\eta_2)) - \log(\Gamma(\eta_1+\eta_2))
 \end{align*}
 
-In the context of Bayesian inference, the main property that make exponential family distributions indispensable is that they have conjugate priors (i.e. a combination of likelihood and prior distributions which ensure a closed-form posterior distribution which is of the same form as the prior). As we have discussed in Chapter 2, this property is essential for enabling efficient statistical inference, otherwise posterior distributions must be computed using expensive and approximate numerical methods.
+In the context of Bayesian inference, the main property that make exponential family distributions indispensable is that they have conjugate priors. That is, the combination of likelihood and prior distributions ensure a closed-form posterior distribution which is of the same form as the prior. As we have discussed in Chapter 2, this property is essential for enabling efficient statistical inference, otherwise posterior distributions must be computed using expensive and approximate numerical methods.
 
 
 \subsection{Gradient ascent} \label{section:gradient_ascent}
@@ -69,13 +66,13 @@ In short, the algorithm works by taking steps proportional to the gradient $\nab
 % \[
 % 	\bfx^{0} \leq \bfx^{1} \leq \bfx^{1} \cdots 
 % \]
-Importantly, the step size $\rho^{(t)}$ is typically adjusted at each iteration $t$ such that it satisfies the Robbins-Monro conditions: $\sum_t \rho^{(t)} = \infty \text{ and } \sum_t (\rho^{(t)})^2 < \infty$. $F$ is guaranteed to converge to the global maximum \cite{Robbins-Monro1951} if the objective function is convex. If $F$ is not convex, the algorithm is sensible to the initialisation $\bfx^{t=0}$ and can converge to local optima.
+Importantly, the step size $\rho^{(t)}$ is typically adjusted at each iteration $t$ such that it satisfies the Robbins-Monro conditions: $\sum_t \rho^{(t)} = \infty \text{ and } \sum_t (\rho^{(t)})^2 < \infty$. $F$ is guaranteed to converge to the \textit{global} maximum if the objective function is convex \cite{Robbins-Monro1951}. If $F$ is not convex, the algorithm is sensitive to the initialisation $\bfx^{t=0}$ and can converge to local optima.
 
 
 \subsubsection{Stochastic gradient ascent} \label{section:stochastic_gradient_ascent}
 
 Gradient ascent becomes prohibitively slow with large datasets, mainly because of the computational cost involved in the iterative calculation of gradients \cite{Spall2003}.\\
-A simple strategy to speed up gradient ascent is to replace the actual gradient $\nabla F$ by an estimate $\hat{\nabla} F$ using a random subset of the data (minibatch).
+A simple strategy to speed up gradient ascent is to replace $\nabla F$ by an estimate $\hat{\nabla} F$ using a random subset of the data (minibatch).
 The iterative scheme is then defined in the same way as in standard gradient ascent:
 \begin{equation}
 	\bfx^{(t+1)} = \bfx^{(t)} + \rho^{(t)} \hat{\nabla} F(\bfx^{(t)})
@@ -101,16 +98,17 @@ To find the direction of steepest ascent, one would need to search over all poss
 Importantly, this operation requires a distance metric to quantify what a \textit{small} distance $h$ means. In standard gradient ascent, this is measured using an Euclidean norm, and the direction of steepest ascent is hence dependent on the Euclidean geometry of the $\theta$ space. Why is this problematic when working with probability distributions? Because it does not consider the uncertainty that underlies probability distributions. When $\theta$ is a random variable with an underlying probability distribution, a small step from $\theta^{(t)}$ to $\theta^{(t+1)}$ does not guarantee an equivalently small change from $\Lagr(\theta^{(t)})$ to $\Lagr(\theta^{(t+1)})$. To illustrate this, consider the following example of four random variables:
 \begin{equation}
 	\begin{split}
-		\psi_1 &\sim \Ndist{0}{5} \\
-		\psi_2 &\sim \Ndist{10}{5}
+		\psi_1 &\sim \Ndist{}{0,5} \\
+		\psi_2 &\sim \Ndist{}{10,5}
 	\end{split}
 	\qquad
 	\begin{split}
-		\psi_3 &\sim \Ndist{0}{1} \\
-		\psi_4 &\sim \Ndist{10}{1}
+		\psi_3 &\sim \Ndist{}{0,1} \\
+		\psi_4 &\sim \Ndist{}{10,1}
 	\end{split}
 \end{equation}
-Using the Euclidean metric, the distance between $\psi_1$ and $\psi_2$ is the same as the distance between $\psi_3$ and $\psi_4$. However, the distance in distribution space (measured for example by the KL divergence) is much larger between $\psi_1$ and $\psi_2$ than between $\psi_3$ and $\psi_4$:
+
+Using the Euclidean metric, the distance between $\psi_1$ and $\psi_2$ is the same as the distance between $\psi_3$ and $\psi_4$. However, the distance in distribution space (measured for example by the KL divergence) is much larger between $\psi_3$ and $\psi_4$ than between $\psi_1$ and $\psi_2$ (\Cref{fig:mofa2_euclidean_distributions}).
 
 \begin{figure}[!h]
 	\begin{center}
@@ -132,7 +130,7 @@ The direction of steepest ascent measured by the KL divergence is called the nat
 	& \text{subject to}
 	& \quad KL[p_\theta||p_{\theta+d}] < c
 \end{aligned} \end{equation*}
-where $c$ is an arbitrary constant. Previous works have shown that this can be solved by introducing Lagrange multipliers and Taylor expansions\cite{Amari1998,Kristiadi2019}. The solution corresponds to the standard (Euclidean) gradient pre-multiplied by the inverse of the Fisher Information Matrix of $q(x|\theta)$:
+where $c$ is an arbitrary constant. Previous works have shown that this can be solved by introducing Lagrange multipliers and Taylor expansions \cite{Amari1998,Kristiadi2019}. The solution corresponds to the standard (Euclidean) gradient pre-multiplied by the inverse of the Fisher Information Matrix of $q(x|\theta)$:
 \begin{equation}\label{natural_gradient}
 	\hat{d}_{KL} \propto \bfF^{-1}(\theta) \nabla_{\theta} \Lagr(\theta)
 \end{equation}
@@ -149,8 +147,9 @@ In conclusion, while the standard gradient points to the direction of steepest a
 
 \subsection{Stochastic variational inference} \label{section:stochastic_variational_inference}
 
-In this section I will demonstrate how to derive a stochastic variational inference algorithm for general Bayesian models. This work is inspired from \cite{Hoffman2012} which we adapted and implemented for the MOFA model. A comprehensive mathematical derivation of the algorithm is not sought in this chapter. Instead, I will describe a modified and simplified derivation to gist the essential. For a complete mathematical derivation we refer the reader to \cite{Hoffman2012}.\\
-Also, this section builds upon three theoretical foundations that have been introduced before: Variational inference (\Cref{section:variational_inference}), exponential family distributions (\Cref{section:exponential_family}) and (natural) gradient ascent (\Cref{section:gradient_ascent}).
+In this section I will demonstrate how to derive a stochastic variational inference algorithm for general Bayesian models. This work is inspired and adapted from \cite{Hoffman2012}. A comprehensive mathematical derivation of the algorithm is not sought in this chapter, instead I will describe a modified and simplified derivation that captures the gist of the original. For a complete mathematical derivation we refer the reader to \cite{Hoffman2012}.
+
+This section builds upon three theoretical foundations that have been introduced before: Variational inference (\Cref{section:variational_inference}), exponential family distributions (\Cref{section:exponential_family}) and (natural) gradient ascent (\Cref{section:gradient_ascent}).
 
 % COPIED
 %The stochastic nature of the approach is interesting when one dimension of the matrix of observed variables is much larger than the others. In our case, it corresponds to $N$, the number of samples (or cells). \\
@@ -170,9 +169,9 @@ Consider a probabilistic model with a set of unobserved random variables, observ
 	%\itemsep-1.5em
 	\item observations ($\bfY$): $N$ different vectors $\bfy_{n}$, each one containing the observed variables for the $n$-th sample.
 	\item local (hidden) variables ($\bfZ)$: $N$ different vectors $\bfz_{n}$, each one containing $K$ hidden variables associated with the $n$-th sample.
-	\item global (hidden) variables ($\bbeta$): one vector that contains $B$ hidden variables not indexed by $n$.
-	\item parameters (non-random) for the global variables ($\balpha_{\beta}$).
-	\item parameters (non-random) for the local variables ($\balpha_{z}$).
+	\item \textit{global} (hidden) variables ($\bbeta$): one vector that contains $B$ hidden variables not indexed by $n$.
+	\item parameters (non-random) for the \textit{global} variables ($\balpha_{\beta}$).
+	\item parameters (non-random) for the \textit{local} variables ($\balpha_{z}$).
 \end{itemize}
 
 This leads to the following factorisation of the joint distribution:
@@ -183,21 +182,21 @@ and the corresponding graphical model representation:
 \begin{figure}[H]
 	\centering	
 	\input{graphical_models/stochastic_general}
-	\caption{\textbf{Graphical model for a general probabilistic model where unobserved variables are classified as global and local.}\\
-	The dashed line indicates that the connection between global and local variables is optional and it is not used in the MOFA model.
+	\caption{\textbf{Graphical model for a general probabilistic model where unobserved variables are classified as \textit{global} and \textit{local}.}\\
+	The dashed line indicates that the connection between \textit{global} and \textit{local} variables is optional, not used in the MOFA model.
 	}
 	\label{fig:graphical_model_stochastic}
 \end{figure}
 
-Notice that the difference between local and global variables lies on the conditional dependency assumptions. The local variables for the $n$-th sample $\bfz_n$ are conditionally independent from any other observation $\bfy_{j}$ or local variable $\bfz_{j}$ (where $j \neq n$), given that the global variables $\beta$ are observed:
+Notice that the difference between \textit{local} and \textit{global} variables lies on the conditional dependency assumptions. The \textit{local} variables for the $n$-th sample $\bfz_n$ are conditionally independent from any other observation $\bfy_{j}$ or \textit{local} variable $\bfz_{j}$ (where $j \neq n$), given that the \textit{global} variables $\bbeta$ are observed:
 \[
 	p(\bfy_n,\bfz_n| \bfy_j,\bfz_{nj},\bbeta,\balpha_{z_{n}},\balpha_{z_{j}}) = p(\bfy_n,\bfz_n|\bbeta,\balpha_{z_{n}})
 \]
-To relate this formulation to the MOFA model, the local variables would contain the factors whereas the global variables would contain the feature weights.
+To relate this formulation to the MOFA model, the \textit{local} variables would contain the factors whereas the \textit{global} variables would contain the feature weights.
 
-For simplicity in the derivation, we will assume the existence of a single global variable $\beta$, a single parameter $\alpha_{\beta}$ for the global variables and a single parameter $\alpha_{z_{nk}}$ for each local variable.
+For simplicity in the derivation, we will assume the existence of a single \textit{global} variable $\beta$, a single parameter $\alpha_{\beta}$ for the \textit{global} variables and a single parameter $\alpha_{z_{nk}}$ for each \textit{local} variable.
 
-The first assumption in the model is that the prior distributions of the local and global variables are members of the exponential family (see \Cref{eq:exponential_family})
+The first assumption in the model is that the prior distributions of the \textit{local} and \textit{global} variables are members of the exponential family (see \Cref{eq:exponential_family})
 \begin{align} \label{eq_priors} 
 	\begin{split}
 	p(\beta|\alpha_{\beta}) = h(\beta) \exp\{ \eta_g(\alpha_{\beta}) t(\beta) - a_g(\alpha_{\beta}) \} \\
@@ -215,7 +214,7 @@ The second assumption is that the complete conditionals of the unobserved variab
 
 \subsubsection{Setting up the inference problem}
 
- First, we set up the variational distributions for both the local variables and the global variables. Here we are going to assume that all unobserved variables are independent (mean-field assumption)
+ First, we set up the variational distributions for both the \textit{local} variables and the \textit{global} variables. Here we are going to assume that all unobserved variables are independent (mean-field assumption)
 \[
 	q(\bfz,\beta) = q(\beta|\lambda) \prod_{n=1}^{N} \prod_{k=1}^{K} p(z_{nk}|\phi_{nk})
 \]
@@ -224,24 +223,24 @@ and belong to the same exponential family as the corresponding prior distributio
 	q(\beta|\lambda) &= h(\beta) \exp\{ \eta_g(\lambda) t(\beta) - a_g(\lambda) \} \\
 	q(z_{nk}|\phi_{nk}) &= h(z_{nk}) \exp \{ \eta_l(\phi_{n}) t(z_{nk}) - a_l(z_{nk}) \}
 \end{align}
-where $\lambda$ are the parameters governing the variational distribution for the global variables and $\phi_{nk}$ are the parameters governing the variational distribution for the $k$-th local variable and the $n$-th sample.
+where $\lambda$ are the parameters governing the variational distribution for the \textit{global} variables and $\phi_{nk}$ are the parameters governing the variational distribution for the $k$-th \textit{local} variable and the $n$-th sample.
 
-From the assumptions above, the ELBO (the objective function in variational inference, see \Cref{eq:XXX}) factorises as:
+From the assumptions above, the ELBO (the objective function in variational inference, introduced in Chapter 2) factorises as:
 \begin{align} \label{eq_elbo_factorised} \begin{split}
 	\Lagr &= \E_{q(\bfZ,\beta)}[\log p(\bfY,\bfZ,\beta)] - \E_{q(\bfZ)}[\log q(\bfZ)] - \E_{q(\beta)}[\log q(\beta)] \\
 	 &= \sum_{n=1}^{N} \E_{q(\bfz_n,\beta)}[\log p(\bfy_n,\bfz_n,\beta)] - \sum_{n=1}^{N} \sum_{k=1}^{K} \E_{q(z_{nk})}[\log q(z_{nk})] - \E_{q(\beta)}[\log q(\beta)]
 \end{split} \end{align}
 
-Notice that the objective decomposes into global terms (not involving $N$) and local terms (involving $N$). Importantly, the local terms can be approximated using estimates of the gradient by subsampling the data set. Assumign a mini-batch of size $S$:
+Notice that the objective decomposes into \textit{global} terms (not involving $N$) and \textit{local} terms (involving $N$). Importantly, the \textit{local} terms can be approximated using estimates of the gradient by subsampling the data set. Assumign a mini-batch of size $S$:
 \[
 	\hat{\Lagr} = \frac{N}{S} \sum_{n=1}^{S} \E_{q(\bfz_n,\beta)}[\log p(\bfy_n,\bfz_n,\beta)] - \frac{N}{S}\sum_{s=1}^{S} \sum_{k=1}^{K} \E_{q(z_{nk})}[\log q(z_{nk})] - \E_{q(\beta)}[\log q(\beta)]
 \]
 If the samples are independent then the expectation of this noisy gradient is equal to the true gradient. This is the main principle of stochastic optimisation. The next step is to derive an iterative algorithm to find the values of the variational parameters that maximise the ELBO.
 
 
-\subsubsection{Calculating the gradient for the global parameters}
+\subsubsection{Calculating the gradient for the \textit{global} parameters}
 
-To derive the updates for the global parameters we first write the ELBO in terms of $\lambda$:
+To derive the updates for the \textit{global} parameters we first write the ELBO in terms of $\lambda$:
 \[
 	\Lagr(\lambda) = \E_{q(z,\beta)}[\log p(\beta|\bfY,\bfZ)] - \E_{q(\beta)}[\log q(\beta)] + \const
 \]
@@ -262,9 +261,9 @@ and setting it to zero leads to the solution:
 \end{equation}
 
 
-\subsubsection{Calculating the gradient for the local parameters}
+\subsubsection{Calculating the gradient for the \textit{local} parameters}
 
-Turning to the local parameters, as a function of $\phi_{nk}$ the ELBO becomes:
+Turning to the \textit{local} parameters, as a function of $\phi_{nk}$ the ELBO becomes:
 \[
 	\Lagr(\phi_{nk}) = \E_{q(\beta,\bfz_{nj})}[\log p(\bfz_{nj}|\bfy_{n},\bfz_{nj}, \beta)] - \E_{q(z_{nk})}[\log q(z_{nk})] + \const
 \]
@@ -287,67 +286,67 @@ and setting it to zero leads to the following solution:
 
 \subsubsection{Coordinate ascent variational inference algorithm}
 
-Now that we have the gradients for both the local and the global parameters, we can define a gradient ascent algorithm to optimise the model:
+Now that we have the gradients for both the \textit{local} and the \textit{global} parameters, we can define a gradient ascent algorithm to optimise the model:
 
 \begin{algorithm}
   \caption{Coordinate ascent variational inference algorithm}
   \begin{algorithmic}[1]
-	\State Initialise the global parameters $\blambda^{(t=0)}$
+	\State Initialise the \textit{global} parameters $\blambda^{(t=0)}$
 	\Repeat
-		\For{\text{each local variational parameter $\phi_{nk}$}}
+		\For{\text{each \textit{local} variational parameter $\phi_{nk}$}}
 			\State $ \phi_{nk}^{(t+1)} \gets \E_{q^{(t)}}(q(\bbeta,\bfz_{nj}))[\eta_l(\bfy_{n},\bfz_{nj},\bbeta)] $
       	\EndFor
-		\For{\text{each global variational parameter $\lambda$}}
+		\For{\text{each \textit{global} variational parameter $\lambda$}}
 			\State $ \lambda{(t+1)}= \E_{q^{(t)}}(q(z))[\eta_g(\bfY,\bfZ,\balpha)] $
       	\EndFor
 	\Until{Convergence}
 	\end{algorithmic}
 \end{algorithm}
 
-However, as discussed in \Cref{section:natural_gradient_ascent}, the use of euclidean-based gradients ignores important information about the geometry of the distribution and is thus not optimal for the optimisation of probabilistic models. Next, we will derive a similar coordinate ascent algorithm but using instead the natural gradient.
+However, as discussed in \Cref{section:natural_gradient_ascent}, the use of Euclidean-based gradients ignores important information about the geometry of the distribution and is thus not optimal for the optimisation of probabilistic models. Next, we will derive a similar coordinate ascent algorithm but using instead the natural gradient.
 
 
-\subsubsection{Deriving the natural gradients for the global variational parameters}
+\subsubsection{Deriving the natural gradients for the \textit{global} variational parameters}
 
-From \Cref{gradient_global}, the gradient of the ELBO with respect to the global parameters $\lambda$ is:
+From \Cref{gradient_global}, the gradient of the ELBO with respect to the \textit{global} parameters $\lambda$ is:
 \[
 	\nabla_{\lambda} \Lagr(\lambda) = \nabla_{\lambda}^{2} a_g(\lambda)(\E_{q(z)}[\eta_g(\bfY,\bfZ,\balpha)] - \lambda)
 \]
-Premultiplying by $\bfF(\beta)^{-1}=\nabla_{\lambda}^{2} a_g(\lambda)$ gives the natural gradient for the global parameters:
+Premultiplying by $\bfF(\beta)^{-1}=\nabla_{\lambda}^{2} a_g(\lambda)$ gives the natural gradient for the \textit{global} parameters:
 \[
 	\hat{\nabla}_{\lambda} \Lagr(\lambda) = \E_{q(z)}[\eta_g(\bfY,\bfZ,\balpha)] - \lambda
 \]
 
 
-\subsubsection{Deriving the natural gradients for the local variational parameters}
+\subsubsection{Deriving the natural gradients for the \textit{local} variational parameters}
 
-From \Cref{gradient_local}, the gradient of the ELBO with respect to the local parameters $\bphi$ is:
+From \Cref{gradient_local}, the gradient of the ELBO with respect to the \textit{local} parameters $\bphi$ is:
 \[
 	\nabla_{\phi} \Lagr(\phi_{nk}) = \nabla_{\phi}^2 a_l(\phi_{nk}) (\E_{q(\beta,\bfz_{nj})}[\eta_l(\bfy_n,\bfz_{nj},\beta)] - \phi_{nk})
 \]
-Premultiplying by $\bfF(z_{nk})^{-1}=\nabla_{\phi}^{2} a_l(\phi_{nk})$ gives the natural gradient for the global parameters:
+Premultiplying by $\bfF(z_{nk})^{-1}=\nabla_{\phi}^{2} a_l(\phi_{nk})$ gives the natural gradient for the \textit{global} parameters:
 \[
 	\hat{\nabla}_{\phi} \Lagr(\phi_{nk}) = \E_{q(\beta,\bfz_{nj})}[\eta_l(\bfy_n,\bfz_{nj},\beta)] - \phi_{nk}
 \]
 
-Remarkably, the natural gradient for both the local and global variational parameters is simply the standard gradient subtracting the current value of the parameters. Thus, the Fisher Information matrix does \textit{not} need to be explicitly computed at each iteration, which leads to a considerable simplification of the problem. 
+Remarkably, the natural gradient for both the \textit{local} and \textit{global} variational parameters is simply the standard gradient subtracting the current value of the parameters. Thus, the Fisher Information matrix does \textit{not} need to be explicitly computed at each iteration, which leads to a considerable simplification of the problem. 
 
 
 \subsubsection{Stochastic variational inference algorithm using natural gradients}
 
-After replacing the euclidean gradient with the natural gradients, the model can be optimised using the following algorithm: 
+After replacing the Euclidean gradient with the natural gradients, the model can be trained using the following stochastic algorithm: 
 
 \begin{algorithm}[H]
   \caption{Stochastic variational inference algorithm using natural gradients}
   \begin{algorithmic}[1]
-	\State Initialise the global parameters $\blambda^{(t=0)}$.
+	\State Initialise the \textit{global} parameters $\blambda^{(t=0)}$.
 	\State Initialise step size $\rho^{(t=0)}$
 	\Repeat
 	    \State \text{sample $\mathcal{B}$ a mini-batch of samples of size $S$}
-		\For{\text{each local variational parameter $\phi_{nk}$ such that $n$ is in batch $\mathcal{B}$}}
+		\For{\text{each \textit{local} variational parameter $\phi_{nk}$ such that $n$ is in batch $\mathcal{B}$}}
 			\State $$ \phi_{nk}^{(t+1)} = \E_{q^{(t)}(\bbeta,\bfz_{nj})}[\eta_l(\bfy_{n},\bfz_{nj},\bbeta)] $$
       	\EndFor
-		\For{\text{each global variational parameter $\lambda$}}
+		\For{\text{each \textit{global} variational parameter $\lambda$}}
 		     \State
         		\begin{align} \label{eq_elbo_factorised} \begin{split}
             	\lambda^{(t + 1)} &=  \lambda^{(t)} +  \rho ^{(t)} \hat{\nabla}_{\lambda} \Lagr^S(\lambda) \\
@@ -366,6 +365,6 @@ Notice that the stochastic nature of the algorithm introduces additional hyperpa
 \begin{itemize}
     \item \textbf{Batch size}: controls the number of samples that are used to compute the gradients at each iteration. A trade off exists where high batch sizes lead to a more expensive computation of the gradient but yield a less noisy estimate.
 
-    \item \textbf{Learning rate}: The learning rate $p(t)$ controls the step size in the direction of the natural gradient, with high learning rates leading to higher steps. In the natural gradient setting, the learning rate also controls how much memory from previous iterations is translated to the current updates. The particular case of a constant learning rate of $1$ yields no memory from previous iterations (thus simplifies to standard gradient ascent). To ensure proper convergence, the learning rate has to be decayed during training. Several strategies exist\cite{Ranganath2013}, here we used the simple function $\rho(t) = \frac{\rho_0}{(1 + \kappa t)^{3/4}}$, which introduces two extra hyperparameters: (1) The forgetting rate $\kappa$, which controls the decay of the learning rate, and $\rho_0$ which determines the initial learning rate.
+    \item \textbf{Learning rate}: The learning rate $p(t)$ controls the step size in the direction of the natural gradient, with high learning rates leading to higher steps. In the natural gradient setting, the learning rate also controls how much memory from previous iterations is translated to the current updates. The particular case of a constant learning rate of $1$ yields no memory from previous iterations (thus simplifies to standard gradient ascent). To ensure proper convergence, the learning rate has to be decayed during training. Several strategies exist \cite{Ranganath2013}, here we used the simple function $\rho(t) = \frac{\rho_0}{(1 + \kappa t)^{3/4}}$, which introduces two extra hyperparameters: (1) The forgetting rate $\kappa$, which controls the decay of the learning rate, and $\rho_0$ which determines the initial learning rate.
 
 \end{itemize}

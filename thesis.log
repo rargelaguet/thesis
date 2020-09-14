@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  3 SEP 2020 12:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  14 SEP 2020 14:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -14,6 +14,12 @@ LaTeX Warning: You have requested document class `Classes/PhDThesisPSnPDF',
 Document Class: PhDThesisPSnPDF 2016/04/23 A PhD thesis class file by Krishna K
 umar (v2.3.1)
 https://github.com/kks32/phd-thesis-template/
+
+Class PhDThesisPSnPDF Warning: Draft is ON. Don't forget to turn it off in your
+ final version. This is the classic version of draft. Use `draft' for enhanced 
+mode, which adds watermark with timestamp, line numbering, and version number. 
+on input line 238.
+
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/bk11.clo
@@ -905,16 +911,16 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip50
 )
-Package hyperref Info: Option `final' set `true' on input line 652.
-Package hyperref Info: Option `plainpages' set `false' on input line 652.
-Package hyperref Info: Option `pdftoolbar' set `true' on input line 652.
-Package hyperref Info: Option `pdfmenubar' set `true' on input line 652.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 652.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 652.
+Package hyperref Info: Option `final' set `true' on input line 654.
+Package hyperref Info: Option `plainpages' set `false' on input line 654.
+Package hyperref Info: Option `pdftoolbar' set `true' on input line 654.
+Package hyperref Info: Option `pdfmenubar' set `true' on input line 654.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 654.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 654.
 
-Package hyperref Info: Option `breaklinks' set `true' on input line 652.
-Package hyperref Info: Option `linktocpage' set `true' on input line 652.
-Package hyperref Info: Option `colorlinks' set `true' on input line 652.
+Package hyperref Info: Option `breaklinks' set `true' on input line 654.
+Package hyperref Info: Option `linktocpage' set `true' on input line 654.
+Package hyperref Info: Option `colorlinks' set `true' on input line 654.
 
 PhDThesisPSnPDF: The University identity guidelines recommend using left aligne
 d text. Please use `flushleft' in the documentclass option, if you wish to left
@@ -1845,33 +1851,57 @@ File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 (./thesis.aux (./Dedication/dedication.aux) (./Declaration/declaration.aux)
 (./Acknowledgement/acknowledgement.aux) (./Abstract/abstract.aux)
 (./Introduction/introduction.aux) (./Chapter1/introduction.aux)
-(./Chapter1/scnmt-seq.aux))
+(./Chapter1/scnmt-seq.aux) (./Chapter2/introduction.aux
+
+LaTeX Warning: Label `fig:bayesianFA' multiply defined.
+
+
+LaTeX Warning: Label `fig:bayesianFA@cref' multiply defined.
+
+) (./Chapter2/model_description.aux) (./Chapter2/results.aux)
+(./Chapter2/perspectives.aux) (./Chapter3/introduction.aux)
+(./Chapter3/results.aux) (./Chapter4/introduction.aux
+
+LaTeX Warning: Label `eq_elbo_factorised' multiply defined.
+
+
+LaTeX Warning: Label `eq_elbo_factorised@cref' multiply defined.
+
+) (./Chapter4/model_description.aux
+
+LaTeX Warning: Label `mofa_master_equation' multiply defined.
+
+
+LaTeX Warning: Label `mofa_master_equation@cref' multiply defined.
+
+) (./Chapter4/results.aux) (./Chapter4/perspectives.aux)
+(./Chapter5/discussion.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 133.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 132.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1887,7 +1917,7 @@ LaTeX Font Info:    ... okay on input line 133.
 \makeMPintoPDFobject=\count404
 \everyMPtoPDFconversion=\toks50
 )
-LaTeX Info: Redefining \microtypecontext on input line 133.
+LaTeX Info: Redefining \microtypecontext on input line 132.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1902,7 +1932,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 \AtBeginShipoutBox=\box96
-Package hyperref Info: Link coloring ON on input line 133.
+Package hyperref Info: Link coloring ON on input line 132.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1912,9 +1942,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count405
 )
-LaTeX Info: Redefining \ref on input line 133.
-LaTeX Info: Redefining \pageref on input line 133.
-LaTeX Info: Redefining \nameref on input line 133.
+LaTeX Info: Redefining \ref on input line 132.
+LaTeX Info: Redefining \pageref on input line 132.
+LaTeX Info: Redefining \nameref on input line 132.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write7
@@ -1973,66 +2003,39 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
  (./thesis.bbl
 
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'Dey2015':
-(biblatex)                - Range field 'pages' in entry 'Dey2015' is malformed
-, skipping.
-
-
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Argelaguet2020
+(biblatex)                MAPIT
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Subramanian2005
+(biblatex)                XX
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Scialdone2015
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Hore2015
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Bishop
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                PijuanSala2019
+(biblatex)                XXX
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 133.
-Package biblatex Info: Reference segment=0 on input line 133.
+Package biblatex Info: Reference section=0 on input line 132.
+Package biblatex Info: Reference segment=0 on input line 132.
 \c@lstlisting=\count406
 \PHD@Title=\box97
-LaTeX Font Info:    Try loading font information for U+msa on input line 139.
+LaTeX Font Info:    Try loading font information for U+msa on input line 138.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 139.
+LaTeX Font Info:    Try loading font information for U+msb on input line 138.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2040,18 +2043,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 139.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 138.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 \PHD@crest=\box98
 
-<Figs/University_Crest.pdf, id=79, 59.22125pt x 69.25874pt>
-File: Figs/University_Crest.pdf Graphic file (type pdf)
+<Figs/University_Crest.pdf, id=421, 59.22125pt x 69.25874pt>
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 138.
 
-<use Figs/University_Crest.pdf>
-Package pdftex.def Info: Figs/University_Crest.pdf used on input line 139.
-(pdftex.def)             Requested size: 93.32361pt x 109.14542pt.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 \PHD@collegecrest=\box99
 \PHD@author=\box100
 \PHD@supervisor=\box101
@@ -2063,8 +2071,7 @@ Package pdftex.def Info: Figs/University_Crest.pdf used on input line 139.
  [1
 
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figs/
-University_Crest.pdf>]
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 \openout2 = `Dedication/dedication.aux'.
 
 
@@ -2100,13 +2107,13 @@ University_Crest.pdf>]
 
 ]) [9
 
-] (./thesis.toc)
+] (./thesis.toc [10
+
+] [11])
 \tf@toc=\write8
 \openout8 = `thesis.toc'.
 
- [10
-
-]
+ [12]
 \openout2 = `Introduction/introduction.aux'.
 
  (./Introduction/introduction.tex
@@ -2115,60 +2122,36 @@ Chapter 1.
 
 
 
-] [2]
-
-LaTeX Warning: Citation 'Lahnemann2020' on page 3 undefined on input line 28.
-
-
-<Introduction/Figs/overview_data_integration.pdf, id=250, 755.76653pt x 967.509
-63pt>
-File: Introduction/Figs/overview_data_integration.pdf Graphic file (type pdf)
- <use Introduction/Figs/overview_data_integration.pdf>
-Package pdftex.def Info: Introduction/Figs/overview_data_integration.pdf used o
-n input line 44.
-(pdftex.def)             Requested size: 163.32167pt x 209.07346pt.
- [3] [4 <./Introduction/Figs/overview_data_integration.pdf>] [5]) [6]
+] [2] [3] [4] [5]
+<Introduction/Figs/overview_data_integration.png, id=741, 756.8275pt x 968.6187
+4pt> [6] [7] [8] [9] [10] [11] [12]) [13]
 \openout2 = `Chapter1/introduction.aux'.
 
- (./Chapter1/introduction.tex
+ (./Chapter1/introduction.tex [14
+
+
+
+]
 Chapter 2.
 
 Overfull \hbox (5.41846pt too wide) in paragraph at lines 3--3
-\T1/cmr/bx/n/24.88 DNA methy-la-tion and tran-scrip-tion in sin-
+\T1/cmr/bx/n/24.88 DNA methy-la-tion and tran-scrip-tion in sin-|
  []
 
-[7
-
-
-
-] [8]
-<Chapter1/Figs/methylation_protocols.pdf, id=42961, 722.7pt x 534.99875pt>
-File: Chapter1/Figs/methylation_protocols.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/methylation_protocols.pdf>
-Package pdftex.def Info: Chapter1/Figs/methylation_protocols.pdf used on input 
-line 36.
-(pdftex.def)             Requested size: 373.30159pt x 276.34785pt.
- [9 <./Chapter1/Figs/methylation_protocols.pdf>]
-<Chapter1/Figs/ChromatinAcc_protocols.png, id=43012, 981.6675pt x 735.74875pt>
-File: Chapter1/Figs/ChromatinAcc_protocols.png Graphic file (type png)
-
-<use Chapter1/Figs/ChromatinAcc_protocols.png>
-Package pdftex.def Info: Chapter1/Figs/ChromatinAcc_protocols.png used on input
- line 66.
-(pdftex.def)             Requested size: 349.9689pt x 262.29845pt.
- [10] [11 <./Chapter1/Figs/ChromatinAcc_protocols.png>]
+[15] [16] [17]
+<Chapter1/Figs/ChromatinAcc_protocols.png, id=988, 981.6675pt x 735.74875pt>
+[18] [19]
 Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
-) [12]
+) [20]
 \openout2 = `Chapter1/scnmt-seq.aux'.
 
  (./Chapter1/scnmt-seq.tex
 Overfull \hbox (4.82904pt too wide) in paragraph at lines 3--3
 |[]\T1/cmr/bx/n/17.28 Joint pro-fil-ing of chro-matin ac-ces-si-bil-ity, DNA me
-thy-
+thy-|
  []
 
 
@@ -2176,199 +2159,1528 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-<Chapter1/Figs/scNMT_protocol.pdf, id=43089, 311.1625pt x 427.5975pt>
-File: Chapter1/Figs/scNMT_protocol.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_protocol.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_protocol.pdf used on input line 15
-.
-(pdftex.def)             Requested size: 256.64528pt x 352.68094pt.
- [13
+<Chapter1/Figs/scNMT_protocol.pdf, id=1049, 311.1625pt x 427.5975pt> [21
 
 
-] [14 <./Chapter1/Figs/scNMT_protocol.pdf>] <Chapter1/Figs/scNMT_coverage.pdf, 
-id=43150, 435.6275pt x 226.8475pt>
-File: Chapter1/Figs/scNMT_coverage.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_coverage.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_coverage.pdf used on input line 45
-.
-(pdftex.def)             Requested size: 466.62521pt x 242.98749pt.
- [15]
-<Chapter1/Figs/scNMT_coverage2.pdf, id=43161, 205.76875pt x 152.06813pt>
-File: Chapter1/Figs/scNMT_coverage2.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_coverage2.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_coverage2.pdf used on input line 5
-6.
-(pdftex.def)             Requested size: 373.30159pt x 275.90123pt.
- [16 <./Chapter1/Figs/scNMT_coverage.pdf>]
-
-LaTeX Warning: Reference `scNMT_comparison' on page 1 undefined on input line 6
-4.
-
-
+]
+[22] <Chapter1/Figs/scNMT_coverage.pdf, id=1071, 435.6275pt x 226.8475pt>
+[23] <Chapter1/Figs/scNMT_coverage2.pdf, id=1081, 205.76875pt x 152.06813pt>
 Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
-<Chapter1/Figs/scNMT_comparison.pdf, id=43194, 700.41673pt x 328.22626pt>
-File: Chapter1/Figs/scNMT_comparison.pdf Graphic file (type pdf)
+[24] <Chapter1/Figs/scNMT_comparison.pdf, id=1096, 700.41673pt x 328.22626pt>
+<Chapter1/Figs/scnmt_pseudobulk_profiles.pdf, id=1099, 786.94pt x 797.98125pt>
+[25]
+<Chapter1/Figs/scNMT_correlations_acrossgenes.pdf, id=1111, 495.35063pt x 190.0
+4298pt> [26]
+<Chapter1/Figs/scNMT_EB_RNA.pdf, id=1117, 400.49625pt x 446.66875pt> [27]
+<Chapter1/Figs/scNMT_EB_correlations.pdf, id=1126, 407.51747pt x 263.48438pt>
+[28] <Chapter1/Figs/scNMT_pseudotime.pdf, id=1139, 503.8825pt x 138.5175pt>
+[29]
+<Chapter1/Figs/scNMT_pseudotime_coupling.pdf, id=1151, 403.17325pt x 144.20576p
+t> [30]) [31]
+\openout2 = `Chapter2/introduction.aux'.
 
-<use Chapter1/Figs/scNMT_comparison.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_comparison.pdf used on input line 
-69.
-(pdftex.def)             Requested size: 466.62521pt x 218.66838pt.
- [17 <./Chapter1/Figs/scNMT_coverage2.pdf>]
-<Chapter1/Figs/scnmt_pseudobulk_profiles.pdf, id=43217, 786.94pt x 797.98125pt>
-File: Chapter1/Figs/scnmt_pseudobulk_profiles.pdf Graphic file (type pdf)
-<use Chapter1/Figs/scnmt_pseudobulk_profiles.pdf>
-Package pdftex.def Info: Chapter1/Figs/scnmt_pseudobulk_profiles.pdf used on in
-put line 83.
-(pdftex.def)             Requested size: 326.63622pt x 331.21692pt.
- [18 <./Chapter1/Figs/scNMT_comparison.pdf>]
-<Chapter1/Figs/scNMT_correlations_acrossgenes.pdf, id=43256, 495.35063pt x 190.
-04298pt>
-File: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf Graphic file (type pdf)
- <use Chapter1/Figs/scNMT_correlations_acrossgenes.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf used 
-on input line 98.
-(pdftex.def)             Requested size: 466.62521pt x 179.0232pt.
- [19 <./Chapter1/Figs/scnmt_pseudobulk_profiles.pdf>]
-<Chapter1/Figs/scNMT_EB_RNA.pdf, id=43305, 400.49625pt x 446.66875pt>
-File: Chapter1/Figs/scNMT_EB_RNA.pdf Graphic file (type pdf)
+ (./Chapter2/introduction.tex [32
 
-<use Chapter1/Figs/scNMT_EB_RNA.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_EB_RNA.pdf used on input line 129.
-
-(pdftex.def)             Requested size: 326.63622pt x 364.31465pt.
- [20 <./Chapter1/Figs/scNMT_correlations_acrossgenes.pdf>]
-<Chapter1/Figs/scNMT_EB_correlations.pdf, id=43529, 407.51747pt x 263.48438pt>
-File: Chapter1/Figs/scNMT_EB_correlations.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_EB_correlations.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_EB_correlations.pdf used on input 
-line 141.
-(pdftex.def)             Requested size: 466.62521pt x 301.71008pt.
- [21 <./Chapter1/Figs/scNMT_EB_RNA.pdf>] <Chapter1/Figs/scNMT_pseudotime.pdf, i
-d=44642, 503.8825pt x 138.5175pt>
-File: Chapter1/Figs/scNMT_pseudotime.pdf Graphic file (type pdf)
-
-<use Chapter1/Figs/scNMT_pseudotime.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_pseudotime.pdf used on input line 
-208.
-(pdftex.def)             Requested size: 396.63428pt x 109.03448pt.
- [22 <./Chapter1/Figs/scNMT_EB_correlations.pdf>]
-<Chapter1/Figs/scNMT_pseudotime_coupling.pdf, id=44715, 403.17325pt x 144.20576
-pt>
-File: Chapter1/Figs/scNMT_pseudotime_coupling.pdf Graphic file (type pdf)
- <use Chapter1/Figs/scNMT_pseudotime_coupling.pdf>
-Package pdftex.def Info: Chapter1/Figs/scNMT_pseudotime_coupling.pdf used on in
-put line 220.
-(pdftex.def)             Requested size: 419.95984pt x 150.21468pt.
-
-Underfull \hbox (badness 1748) in paragraph at lines 223--223
-[]\T1/cmr/bx/n/10 Figure 2.12: |De-vel-op-men-tal tra-jec-tory is as-so-ci-ated
- changes in methylation-
- []
-
-[23 <./Chapter1/Figs/scNMT_pseudotime.pdf> <./Chapter1/Figs/scNMT_pseudotime_co
-upling.pdf>] [24]) [25] [26
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 206.
-
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+Chapter 3.
+[33]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 24.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
+Missing character: There is no ; in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+[]|\T1/cmr/m/n/10.95 (+20) Conditional de-pen-dency be-tween nodes:
+ []
+
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (6.17361pt too wide) in paragraph at lines 43--44
+[]|[]| |
+ []
+
+(./Chapter2/bayes.tex [34]
+
+LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
+(Font)              using `U/stmry/m/n' instead on input line 12.
+
+[35] [36] <Chapter2/Figs/lower_bound.pdf, id=1284, 490.72935pt x 368.86005pt>
+[37] <Chapter2/Figs/mean_field.pdf, id=1302, 578.16pt x 337.26pt> [38] [39]
+<Chapter2/Figs/VB_vs_EP.pdf, id=1339, 1133.10326pt x 373.37592pt> [40])
+(./Chapter2/factor_analysis.tex [41] [42]
+<Chapter2/Figs/pca2.pdf, id=1408, 803.0pt x 564.1075pt> [43]
+Overfull \hbox (5.35652pt too wide) in paragraph at lines 82--82
+|[]\T1/cmr/bx/n/14.4 Probabilistic Prin-ci-pal Com-po-nent Anal-y-sis and Fac-t
+or Anal-|
+ []
+
+[44] (./graphical_models/pPCA.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+) [45] (./graphical_models/bayesianFA.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+)
+[46] <Chapter2/Figs/ard.pdf, id=1464, 630.355pt x 399.4925pt> [47]
+(./graphical_models/bayesian_sparseFA.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+) [48] [49]
+(./graphical_models/CCA.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+) [50] (./graphical_models/bayesianCCA.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+) [51]
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
+
+ []
+
+(./graphical_models/GFA.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+))) [53]
+\openout2 = `Chapter2/model_description.aux'.
+
+ (./Chapter2/model_description.tex [54
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
+
+ []
+
+(./graphical_models/mofa.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+) [55] [56]
+<Chapter2/Figs/MOFA.pdf, id=1602, 1471.4975pt x 748.7975pt> [57]
+
+LaTeX Warning: Reference `appendix:mofa' on page 58 undefined on input line 124
+.
+
+<Chapter2/Figs/MOFA_robustness.pdf, id=1612, 846.16125pt x 323.2075pt> [58]
+<Chapter2/Figs/MOFA_nfactors.pdf, id=1621, 375.4025pt x 311.1625pt>
+<Chapter2/Figs/elbo_convergence.pdf, id=1622, 243.83195pt x 224.32709pt>
+[59] [60] [61]
 Package microtype Info: Loading generic settings for font family
-(microtype)             `cmtt' (encoding: T1).
+(microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [27
-
-] [28]
-[29]
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'Dempsey2010' on input line 206.
-
-[30]
-Overfull \hbox (1.30855pt too wide) in paragraph at lines 207--207
-[]\T1/cmr/m/n/10.95 (-20) G. Fab-bri and R. Dalla-Favera. ``The molec-u-lar pat
-ho-gen-e-sis of chronic lym-pho-cytic leukaemia''.
+ [62] [63]
+Underfull \hbox (badness 10000) in paragraph at lines 291--291
+[]\T1/cmr/bx/n/10.95 Feature-
  []
 
-[31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43]
-Overfull \hbox (12.48563pt too wide) in paragraph at lines 207--207
-[]\T1/cmr/m/n/10.95 (-20) C. Xu, D. Tao, and C. Xu. ``A Sur-vey on Multi-view L
-earn-ing''. In: \T1/cmr/m/it/10.95 (-20) arXiv e-prints\T1/cmr/m/n/10.95 (-20) 
-, arXiv:1304.5634
+
+Overfull \hbox (4.89777pt too wide) in paragraph at lines 291--291
+[]\T1/cmr/bx/n/10.95 Missing |
  []
 
-[44]
 
-Package caption Warning: Unused \captionsetup[sub] on input line 76.
+Underfull \hbox (badness 10000) in paragraph at lines 299--299
+[]\T1/cmr/m/n/10.95 (+20) Three-
+ []
+
+
+Overfull \hbox (26.8992pt too wide) in paragraph at lines 289--304
+[][] |
+ []
+
+) [64]
+\openout2 = `Chapter2/results.aux'.
+
+ (./Chapter2/results.tex
+<Chapter2/Figs/MOFA_learnK.pdf, id=1666, 1213.53375pt x 746.79pt>
+
+LaTeX Warning: Reference `section_ard' on page 1 undefined on input line 23.
+
+[65
+
+
+]
+<Chapter2/Figs/MOFA_group_sparsity.pdf, id=1674, 520.94624pt x 242.9075pt>
+<Chapter2/Figs/MOFA_sparsity.pdf, id=1677, 505.89pt x 361.35pt> [66]
+<Chapter2/Figs/MOFA_nongaussian.pdf, id=1686, 1582.91376pt x 2116.90875pt>
+[67] <Chapter2/Figs/MOFA_scalability.pdf, id=1695, 411.5375pt x 334.24875pt>
+[68] [69]
+Overfull \hbox (49.74638pt too wide) in paragraph at lines 91--91
+|[]\T1/cmr/bx/n/17.28 Application to a co-hort of Chronic Lym-pho-cytic Leukaem
+ia|
+ []
+
+[70] <Chapter2/Figs/MOFA_CLL_overview.pdf, id=1726, 528.30676pt x 192.05049pt>
+[71] <Chapter2/Figs/MOFA_CLL_factors12.pdf, id=1741, 479.7925pt x 257.96375pt>
+[72] <Chapter2/Figs/MOFA_CLL_Factor1.pdf, id=1759, 1061.41539pt x 812.92809pt>
+[73] <Chapter2/Figs/MOFA_CLL_Factor5.pdf, id=1775, 1019.18768pt x 660.35808pt>
+[74] <Chapter2/Figs/MOFA_CLL_Cox.pdf, id=1787, 1040.03558pt x 883.52386pt>
+[75]
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+
+ []
+
+<Chapter2/Figs/MOFA_imputation.pdf, id=1798, 674.52pt x 353.32pt> [76]
+<Chapter2/Figs/MOFA_scMT.pdf, id=1819, 674.52pt x 525.965pt> [77]) [78]
+\openout2 = `Chapter2/perspectives.aux'.
+
+
+(./Chapter2/perspectives.tex) [79
+
+
+]
+\openout2 = `Chapter3/introduction.aux'.
+
+ (./Chapter3/introduction.tex [80
+
+
+
+]
+Chapter 4.
+[81] [82] [83]) [84]
+\openout2 = `Chapter3/results.aux'.
+
+ (./Chapter3/results.tex
+<Chapter3/Figs/dataset_overview.pdf, id=1969, 1593.955pt x 1260.71pt>
+
+LaTeX Warning: Reference `fig:rna_lineage_assignment' on page 1 undefined on in
+put line 26.
+
+<Chapter3/Figs/rna_lineage_assignment.pdf, id=1973, 773.89125pt x 259.367pt>
+[85
+
+
+] <Chapter3/Figs/gene_markers.pdf, id=1981, 508.90125pt x 464.73625pt>
+[86] <Chapter3/Figs/metacc_dimred.pdf, id=1990, 571.63562pt x 315.67938pt>
+<Chapter3/Figs/metacc_heatmaps.pdf, id=1996, 576.22577pt x 160.6pt> [87]
+<Chapter3/Figs/metacc_boxplots.pdf, id=2004, 694.595pt x 652.4375pt> [88]
+<Chapter3/Figs/metacc_vs_rna_cor.pdf, id=2014, 510.73409pt x 183.7796pt>
+<Chapter3/Figs/mofa_overview.pdf, id=2016, 1378.14874pt x 821.0675pt> [89]
+<Chapter3/Figs/chip_seq.pdf, id=2023, 538.01pt x 236.885pt> [90]
+<Chapter3/Figs/mofa_gastrulation_overview.pdf, id=2031, 1350.39503pt x 323.2446
+3pt>
+
+LaTeX Warning: Reference `appendix:mofa_gastrulation' on page 91 undefined on i
+nput line 152.
+
+
+Overfull \hbox (9.5958pt too wide) in paragraph at lines 154--154
+|[]\T1/cmr/bx/n/14.4 Differential DNA methy-la-tion and chro-matin ac-ces-si-bi
+l-ity anal-|
+ []
+
+[91]
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+<Chapter3/Figs/diff_metacc_barplots.pdf, id=2043, 605.26125pt x 467.7475pt>
+<Chapter3/Figs/diff_metacc_scatterplot.png, id=2044, 1069.3551pt x 712.3413pt>
+[92] <Chapter3/Figs/diff_metacc_examples.pdf, id=2053, 598.63046pt x 778.91pt>
+[93] [94]
+<Chapter3/Figs/motif_enrichment.pdf, id=2066, 1112.05466pt x 329.71582pt>
+<Chapter3/Figs/enhancers_metacc_profiles.pdf, id=2068, 1287.81125pt x 649.24055
+pt> [95]
+<Chapter3/Figs/enhancers_metacc_umap.png, id=2079, 1219.6767pt x 649.9482pt>
+[96]
+<Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf, id=2091, 611.09303pt x 194.058pt>
+[97]
+<Chapter3/Figs/pluri_vs_midbrain_metacc.pdf, id=2101, 736.7525pt x 429.605pt>
+[98] <Chapter3/Figs/metacc_diagram.pdf, id=2110, 217.4795pt x 192.05049pt>
+[99]
+<Chapter3/Figs/mesendoderm_dynamics.pdf, id=2123, 1114.1625pt x 720.6925pt>
+Overfull \hbox (14.34335pt too wide) in paragraph at lines 332--332
+|[]\T1/cmr/bx/n/14.4 TET en-zymes are re-quired for ef-fi-cient demethy-la-tion
+ of lineage-|
+ []
+
+[100]
+<Chapter3/Figs/EB_rna_celltypes.pdf, id=2139, 1325.69276pt x 769.33621pt>
+<Chapter3/Figs/EB_rna_markers.pdf, id=2140, 538.13246pt x 437.635pt> [101]
+<Chapter3/Figs/EB_metacc_global.pdf, id=2148, 459.94437pt x 322.16261pt>
+[102] <Chapter3/Figs/EB_metacc_profiles.pdf, id=2156, 633.2719pt x 252.945pt>
+[103]
+<Chapter3/Figs/EB_metacc_WTvsKO_boxplots.pdf, id=2166, 706.10303pt x 590.1759pt
+> [104] [105]) [106]
+\openout2 = `Chapter4/introduction.aux'.
+
+ (./Chapter4/introduction.tex
+Chapter 5.
+[107
+
+
+
+] [108] [109]
+<Chapter4/Figs/simulations/mofa2_euclidean_distributions.pdf, id=2213, 722.7pt 
+x 361.35pt> [110] (./graphical_models/stochastic_general.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+) [111] [112]
+[113]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 292.
+ [114] [115]) [116]
+\openout2 = `Chapter4/model_description.aux'.
+
+ (./Chapter4/model_description.tex
+<Chapter4/Figs/simulations/mofa2_overview.pdf, id=2288, 1471.37706pt x 1130.664
+1pt> [117
+
+
+] [118] (./graphical_models/mofa2.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+) [119]
+<Chapter4/Figs/simulations/mofa2_init.pdf, id=2315, 433.62pt x 211.79124pt>
+[120]) [121]
+\openout2 = `Chapter4/results.aux'.
+
+ (./Chapter4/results.tex
+<Chapter4/Figs/simulations/mofa2_stochastic_validation.pdf, id=2339, 1089.44014
+pt x 650.43pt>
+<Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf, id=2340, 576.1525pt x 50
+5.89pt> [122
+
+
+]
+<Chapter4/Figs/simulations/mofa2_multigroup_validation.pdf, id=2349, 421.575pt 
+x 312.83574pt> [123]
+<Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf, id=2358, 882.29625pt x
+ 272.01625pt> [124]
+<Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pdf, id=2368, 622.42535pt 
+x 396.42606pt>
+<Chapter4/Figs/scrna/mofa2_scrna_ExE_ectoderm_factor.pdf, id=2369, 596.48045pt 
+x 378.49504pt> [125]
+<Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf, id=2378, 582.175pt x 44
+5.1872pt>
+<Chapter4/Figs/scrna/mofa2_scrna_mesoderm_factor.pdf, id=2379, 615.29875pt x 39
+0.45876pt> [126] [127]
+<Chapter4/Figs/scnmt/mofa2_scnmt_datastructure.pdf, id=2394, 939.56721pt x 714.
+67pt>
+<Chapter4/Figs/scnmt/mofa2_scnmt_modeloverview.pdf, id=2396, 771.88374pt x 311.
+1625pt> [128]
+<Chapter4/Figs/scnmt/mofa2_scnmt_factors12.pdf, id=2408, 790.2855pt x 440.9805p
+t> [129]
+<Chapter4/Figs/scnmt/mofa2_scnmt_factor6.pdf, id=2417, 832.66785pt x 562.1pt>
+[130]) [131]
+\openout2 = `Chapter4/perspectives.aux'.
+
+ (./Chapter4/perspectives.tex) [132
+
+
+]
+\openout2 = `Chapter5/discussion.aux'.
+
+ (./Chapter5/discussion.tex
+[133
+
+
+] [134] [135] [136]) [137] [138
+
+
+]
+
+Package caption Warning: Unused \captionsetup[sub] on input line 84.
 See the caption package documentation for explanation.
 
-[45]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 208.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 208.
- (./thesis.aux (./Dedication/dedication.aux) (./Declaration/declaration.aux) (.
-/Acknowledgement/acknowledgement.aux) (./Abstract/abstract.aux)
+(./thesis.aux (./Dedication/dedication.aux) (./Declaration/declaration.aux)
+(./Acknowledgement/acknowledgement.aux) (./Abstract/abstract.aux)
 (./Introduction/introduction.aux) (./Chapter1/introduction.aux)
-(./Chapter1/scnmt-seq.aux))
+(./Chapter1/scnmt-seq.aux) (./Chapter2/introduction.aux)
+(./Chapter2/model_description.aux) (./Chapter2/results.aux)
+(./Chapter2/perspectives.aux) (./Chapter3/introduction.aux)
+(./Chapter3/results.aux) (./Chapter4/introduction.aux)
+(./Chapter4/model_description.aux) (./Chapter4/results.aux)
+(./Chapter4/perspectives.aux) (./Chapter5/discussion.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 208.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 208.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 0B9CE80C87EFA31A16B37C9250089C0C;6000.
+(rerunfilecheck)             Checksum: 48F92E6BB224A1B3792AFAD92FD79BA6;29354.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
 
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                thesis
-(biblatex)                and rerun LaTeX afterwards.
+LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39368 strings out of 493014
- 726993 string characters out of 6133351
- 1611389 words of memory out of 5000000
- 41538 multiletter control sequences out of 15000+600000
- 33368 words of font info for 175 fonts, out of 8000000 for 9000
+ 41054 strings out of 493014
+ 763584 string characters out of 6133351
+ 1653711 words of memory out of 5000000
+ 42700 multiletter control sequences out of 15000+600000
+ 46198 words of font info for 223 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,92p,1760b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/201
-6/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-di
-st/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis.pdf (55 pages, 13410605 bytes).
+ 57i,20n,92p,1760b,1005s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{cite.0@Casale2018} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ning1999} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zeiler2012} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ainsworth2018} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Okuta2017} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ranganath2013} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kristiadi2019} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Martens2014} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Amari1998} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Spall2003} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Robbins-Monro1951} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Argelaguet2020} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Replogle2020} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Sardina2018} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Rasmussen2016} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Papp2013} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tosci2019} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hemmati-Brivanlou1997} has been referenced b
+ut does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Munoz2002} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Yue2014} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tosic2019} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@McCarthy2012} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Xiang2020} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bourgon2010} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Liu2019} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Wang2019} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lee2015} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zhang2018} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Shan2017} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Brinkman2012} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Rada-Iglesias2011} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Vastenhouw2010} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Heintzman2009} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tsumura2006} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Okano1999} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Atlasi2017} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Rulands2018} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Dai2016} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bernstein2006} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zhao2015} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hanna2018} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tee2014} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Du2017} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ke2017} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Wu2016} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Smith2012} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Wen2017} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ibarra-Soria2018} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Scialdone2016} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Pijuan-Sala2019} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Schaum2018} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tam1993} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Arnold2009} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tam2007} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Solnica-Krezel2012} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tam1997} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Rosalind2018} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Buettner2017} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hoffman2013} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lin2016} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Eraslan2019} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ding2018} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lin2017} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kuhn} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Fuchs1988} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Auclair2014} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Mohammed2017} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tosolini2016} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Troyanskaya2001} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Mazumder2010} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Cox1972} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Dempsey2010} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Frost2015} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ashburner2000} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Fabregat2015} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Morabito2015} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Vasconcelos2005} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Queiros2015} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Crombie2017} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bulian2017} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Fabbri2016} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Du2010} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Dietrich2018} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Alyass2015} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Costello2014} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Chen2013} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Mo2013} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Jaakkola2000} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Remes2015} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Leppaaho2017} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Klami2013} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Wang2007} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bach2005} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Guo2016} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@McCabe2018} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hardle2007} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hotteling1936} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Pilling2018} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zeng2018} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Li2016} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Xu2013} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Mitchell1988} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Gao2013} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Mackay1996} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Neal1995} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zhao2016} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Khan2014} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bunte2016} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Klami2015} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Virtanen2012} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Klami2008} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bishop1999b} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bishop1999a} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Rubin1982} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tipping1999} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ilin2010} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Li2017b} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ringner2008} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hotelling1933} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Rattray2009} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zhang2018_NN} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Meng2016} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Genevieve2018} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Dai2017} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Pournara2007} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Leek2007} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Stegle2012} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Komili2008} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Khan2017} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Seeger2012} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Titsias2011} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hoffman2014} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Nakajima2007} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Blei2003} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Sanguinetti2006} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Raj2014} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Carbonetto2012} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hoffman2012} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ranganath2014} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Braun2007} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Faes2011} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Blei2006} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Saul1996} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Minka2001} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zhang2017} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Blei2016} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Raiffa1961} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Jaynes1968} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Gelman2013} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bayes1763} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hastie} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Murphy} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Stigler2008} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Dietz2010-technical-report-graphs} has been 
+referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bishop2006} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lee2018} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kaya-Okur2019} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Moudgil2019} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Enge2017} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@McCarthy2018} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Fan2018} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Poirion2018} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kapourani2018b} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Angermueller2017} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Spektor2018} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Mulqueen2018} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Dey2015} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Guo2017} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lun2016b} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Saelens2018} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Trapnell2014} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Papp2012} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zvetkova2005} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ficz2013} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Krueger2011} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Cao2018a} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Peterson2017} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hu2016} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hou2016} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Macaulay2015} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Paul2015} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Chappell2018} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Cusanovich2018b} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Jin2015} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Buenrostro2015a} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Pott2016} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kilgore2007} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Buenrostro2015b} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@He2013} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Thurman2012} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@ENCODE2012} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Nordstrom2019} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kelly2012} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Buenrostro2013} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Song2010} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Struhl2013} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Jiang2009} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tsompana2014} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Klemm2019} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Meissner2005} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Guo2015} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Clark2017} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Clark2016} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Farlik2015} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Gravina2016} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Guo2013} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lister2009} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ramsahoye2000} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@He2015} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Amir1999} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Liu2013} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Baylin2011} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Jones2012} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Smith2013} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lee2014} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Harrison2011} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Jin2018} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Rosenberg2018} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Cao2017} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Svensson2017} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Wang2019a} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ziegenhain2017} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zheng2017} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Macosko2015} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zilionis2016} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Klein2015} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Zhang2019} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@LaManno2018} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Deng2014} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Huang2017} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Picelli2014} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ramskold2012} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hashimshony2012} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lafzi2018} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Clark2018} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Cao2020} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Stark2020} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Liu2019a} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Welch2017} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Stuart2019b} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Meng2014} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lock2013} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Cuomo2020} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@VanDerWijst2018} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Stegle2010} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Luecken2020} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Barkas2019} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lopez2018} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Polanski2019} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Korsunsky2019} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Johnson2006} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ritchie2015b} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tran2020} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Welch2019} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Singh2018} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Argelaguet2019} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Argelaguet2018} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Wang2014} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lanckriet2004} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Moore2019} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Nica2013} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ma2020} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Stoeckius2017} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Angermueller2016} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lahnemann2020} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Saelens2019} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kiselev2019} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@McInnes2018} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@vanDerMaaten2008} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hafemeister2019} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Love2014} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Robinson2010} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@VandenBerge2018} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@McGinnis2019} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Luecken2019} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Tambe2019} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Wolf2018} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Amezquita2020} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Butler2018} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Haghverdi2018} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Aibar2017} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Haghverdi2016} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Abdelaal2019} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kiselev2017} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kharchenko2014} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Townes2019} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lun2016a} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Stegle2015} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Eisenstein2020} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@NatMethods2020} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Colome-Tatche2018} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Stuart2019} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Soderholm2016} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kim2016} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Chen2016} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Gerstung2015} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Akavia2010} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Hasin2017} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Thiele2019} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Specht2018} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ku2019} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Smallwood2014} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Chen2018} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Cao2018} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Cusanovich2015} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bheda2014} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kelsey2017} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Ritchie2015} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Aviv2017} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Cao2019} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Svensson2018} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Kolodziejczyk2015} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Patel2014} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Papalexi2017} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Griffiths2018} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Mortazavi2008} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Nagalakshmi2008} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Bainbridge2006} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Lister2008} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Frommer1992} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@Fleischmann1995} has been referenced but doe
+s not exist, replaced by a fixed one
+
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
+usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2016/texmf-dist/fo
+nts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
+1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
+public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
+blic/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
+ic/cm-super/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
+/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/c
+m-super/sftt1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/stm
+aryrd/stmary10.pfb>
+Output written on thesis.pdf (150 pages, 927615 bytes).
 PDF statistics:
- 46012 PDF objects out of 55141 (max. 8388607)
- 23414 compressed objects within 235 object streams
- 397 named destinations out of 1000 (max. 500000)
- 24291 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 2771 PDF objects out of 2984 (max. 8388607)
+ 2448 compressed objects within 25 object streams
+ 718 named destinations out of 1000 (max. 500000)
+ 41655 words of extra memory for PDF output out of 42996 (max. 10000000)
 

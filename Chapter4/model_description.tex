@@ -6,18 +6,20 @@ In MOFA+ we introduce two key novelties, both in the model aspect and in the inf
 
 Formally, we generalise the model to a disjoint set of $M$ input views (i.e. groups of features) and $G$ input groups (i.e. groups of samples). The data is factorised according to the following model:
 \begin{equation} \label{mofa_master_equation}
-	\mathbf{Y}^{m}_{g} = \mathbf{Z}_{g} \mathbf{W}^{mT} + \bepsilon^{m}_{g}
+	\mathbf{Y}^{m}_{g} = \mathbf{Z}_{g} (\mathbf{W}^{m})^T + \bepsilon^{m}_{g}
 \end{equation}
-where $\bfZ_{g} \in \R^{N_{g} \times K}$ are a set of $G$ matrices that contains the factor values for the $g$-th group and $\bfW^{m} \in \R^{D_m \times K}$ are a set of $M$ matrices that define the feature weights for the $m$-th view. $\bepsilon^{m}_{g} \in \R^{D_m}$ captures the residuals, or the noise for each feature in each group. Notice that if $G=1$ then the model simplifies to MOFA v1. 
+where $\bfZ_{g} \in \R^{N_{g} \times K}$ are a set of $G$ matrices that contain the factor values for the $g$-th group and $\bfW^{m} \in \R^{D_m \times K}$ are a set of $M$ matrices that define the feature weights for the $m$-th view. $\bepsilon^{m}_{g} \in \R^{D_m}$ captures the residuals, or the noise for each feature in each group. Notice that if $G=1$ then the model simplifies to the MOFA framework presented in Chapter 2. 
 
-It is important to get the intuition for the multi-group formulation right. The aim of the multi-group framework is not to capture differential changes in \textit{mean} levels between the groups (as for example when doing differential RNA expression) but rather to exploit the covariation of features. The aim is to find out which sources of variability (i.e. which latent Factors) are present in the different groups and which ones are exclusive to a single group. This is symmetric to the interpretation of the multi-view framework in MOFA v1: the absolute levels of the features are not to be compared across views, only the covariation patterns are of interest. To achieve this, the features are centred per view and also per group (i.e. all intercept effects are regressed out) before fitting the model. The following figure summarises the MOFA+ pipeline:
+It is important to get the intuition for the multi-group formulation right. In the factor analysis setting, the aim is not to capture differential changes in \textit{mean} levels between the groups but rather to exploit the covariation patterns of the features to identify which sources of variability (i.e. latent Factors) are consistently found across multiple groups and which ones are exclusively found within a single group. This is symmetric to the interpretation of the multi-view framework in MOFA v1: the absolute levels of the features are not compared across views, only the covariation patterns are of interest. To achieve this, the features are centered per view and also per group before fitting the model. \Cref{fig:mofa2_overview} summarises the MOFA+ pipeline.
+
+As in MOFA v1, the linearity assumptions leads to an interpretable latent space that be visualised and employed for a range of downstream analyses, including clustering, inference of non-linear differentiation trajectories, denoising and feature selection, among others. The most important extension is the generalisation of the variance decomposition analysis, where a value of variance explained per view and group is obtained for every factor. For example, imagine that Factor 1 in \Cref{fig:mofa2_overview}b corresponds to cell cycle variation, the variance decomposition analysis indicates that cell cycle is a driver of cell-to-cell heterogeneity largely in views 2 and 3, but with only minor influence in view 1. Also, this effect is manifested in groups 1 and 2, but not in group 3. This simple visualisation provides a very intuitive approach to understand variability in complex experimental designs where observations are structured into multiple views and multiple groups of cells.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_overview}
+	\includegraphics[width=1.00\linewidth]{mofa2_overview}
 	\caption[]{\textbf{Multi-Omics Factor Analysis v2 (MOFA+) provides an unsupervised framework for the integration of multi-group and multi-view single-cell data.}\\
-	(a) Model overview: the input consists of multiple data sets structured into M views and G groups. Views consist of non-overlapping sets of features that can represent different assays. Analogously, groups consist of non-overlapping sets of samples that can represent different conditions or experiments. Missing values are allowed in the input data. MOFA+ exploits the dependencies between the features to learn a low-dimensional representation of the data (Z) defined by K latent factors that capture the global sources of molecular variability. For each factor, the weights (W) link the high-dimensional space with the low-dimensional manifold and provide a measure of feature importance. The sparsity-inducing priors on both the factors and the weights enable the model to disentangle variation that is unique to or shared across the different groups and views. Model inference is performed using GPU-accelerated stochastic variational inference. \\
-	(b) The trained MOFA+ model can be queried for a range of downstream analyses: 3D variance decomposition, quantifying the amount of variance explained by each factor in each group and view, inspection of feature weights, visualisation of factors and other applications such as clustering, inference of non-linear differentiation trajectories, denoising and feature selection.
+	(a) Model overview: the input data consists of multiple data sets structured into M views and G groups. Views consist of non-overlapping sets of features that can represent different assays. Analogously, groups consist of non-overlapping sets of samples that can represent different conditions or experiments. Missing values are allowed in the input data. MOFA+ exploits the dependencies between the features to learn a low-dimensional representation of the data (Z) defined by K latent factors that capture the global sources of molecular variability. For each factor, the weights (W) link the high-dimensional space with the low-dimensional manifold and provide a measure of feature importance. The sparsity-inducing priors on both the factors and the weights enable the model to disentangle variation that is unique to or shared across the different groups and views. Model inference is performed using GPU-accelerated stochastic variational inference. \\
+	(b) The trained MOFA+ model can be queried for a range of downstream analyses: variance decomposition, quantifying the amount of variance explained by each factor in each group and view, inspection of feature weights, visualisation of factors and other applications such as clustering, inference of non-linear differentiation trajectories, denoising and feature selection.
 	}
 	\label{fig:mofa2_overview}
 \end{figure}
@@ -27,7 +29,7 @@ It is important to get the intuition for the multi-group formulation right. The 
 
 \subsubsection{Prior on the weights}
 
-This remains the same as in MOFA v1. We adopt a two-level sparsity prior with an Automatic Relevance Determination per factor and view, and a feature-wise spike-and-slab prior (reparametrised\cite{Titsias2011}):
+This remains the same as in MOFA v1. We adopt a two-level sparsity prior with an Automatic Relevance Determination per factor and view, and a (reparametrised \cite{Titsias2011}) feature-wise spike-and-slab prior:
 \begin{equation}
 	p(\hat{w}_{dk}^m,s_{dk}^m) = \Ndist{\hat{w}_{dk}^{m}}{0, 1/\alpha_{k}^{m}}  \text{Ber}(s_{dk}^{m} \,|\,\theta_{k}^{m})
 \end{equation}
@@ -37,49 +39,45 @@ with the corresponding conjugate priors for $\theta$ and $\alpha$:
 	p(\alpha_k^m) &= \Gdist{\alpha_k^m}{a_0^\alpha, b_0^\alpha}
 \end{align}
 
-The aim of the ARD prior is to disentangle the activity of factors to the different views, such that the weight vector $\bfw_{:,k}^m$ is shrunk to zero if the factor $k$ does not explain any variation in view $m$. The aim of the spike-and-slab prior is to push individual weights to zero to yield a more interpretable solution.\\
-For more details, we refer the reader to Chapter 2.
-
+As discussed in Chapter 2, the aim of the ARD prior is to encourage sparse associations between factors and views, such that the weight vector $\bfw_{:,k}^m$ is shrunk to zero if the factor $k$ does not explain any variation in view $m$. The aim of the spike-and-slab prior is to push individual weights to zero to yield a more interpretable solution.
 
 \subsubsection{Prior on the factors}
 
-In MOFA v1 we adopted an isotropic Gaussian prior:
+In MOFA v1 we adopted an isotropic Gaussian prior which assumes an unstructured latent space \textit{a priori}:
 \begin{equation}
 	p(z_{nk}) = \Ndist{z_{nk}}{0,1}
 \end{equation}
-which assumes \textit{a priori} an unstructured latent space. This is the assumption that we want to break. Following the same logic as in the factor and view-wise ARD prior, the integration of multiple groups of samples requires introducing a \textit{structured} prior that captures the existence of different groups, such that some factors are allowed to be active in different subsets of groups.
-
-To formalise the intuition above we simply need to copy the double sparsity prior from the weights to the factors:
+This is the assumption that we want to break. Following the same logic as for the weights, the integration of multiple groups of samples requires a flexible prior distribution that defines the existence of non-overlapping groups, such that the model encourages sparse solutions between factors and groups. To formalise this intuition we simply need to extrapolate the sparsity prior from the weights to the factors:
 \begin{align}
 	p(\hat{z}_{nk}^g,s_{nk}^g) &= \mathcal{N} (\hat{z}_{nk}^g \,|\, 0, 1/\alpha_k^g)\, \text{Ber}(s_{nk}^g \,|\,\theta_k^g) \\
 	p(\theta_k^g) &= \Bdist{\theta_k^g}{a_0^\theta,b_0^\theta} \\
 	p(\alpha_k^g) &= \Gdist{\alpha_k^g}{a_0^\alpha, b_0^\alpha},
 \end{align}
-where $g$ is the index of the sample groups.\\
-Notice that the spike-and-slab prior is introduced for completeness but is not necessarily required, and can be disabled by fixing $\E[\theta_k^g]=1$.
+where $g$ is the index of the sample groups.
+% Notice that the spike-and-slab prior is introduced for completeness but is not necessarily required, and can be disabled by fixing $\E[\theta_k^g]=1$.
 
 \subsubsection{Prior on the noise}
 
-The variable $\bepsilon$ captures the residuals, or the noise, which is assumed to be normally distributed and heteroskedastic. In MOFA v2 we generalise the noise to have an estimate per individual feature and per group:
+The variable $\bepsilon$ captures the residuals, or the noise, which is assumed to be normally distributed and heteroskedastic. In MOFA v2 we generalise the noise to have an estimate per feature and per group. This is important to model the case where some features may be highly variable in one group but non-variable in other groups.
+
 \begin{align}
-	p(\epsilon^{m}_{g}) &= \Ndist{\epsilon^{m}_{g}}{0,/\tau^{m}_{g}\I_{Dm}} \\
+	p(\epsilon^{m}_{g}) &= \Ndist{\epsilon^{m}_{g}}{0,(\tau^{m}_{g})^{-1}\I} \\
 	p(\tau^{m}_{g}) &= \prod_{d=1}^{D_m} \Gdist{\tau^{m}_{g}}{a_0^\tau, b_0^\tau}
 \end{align}
 % \begin{align}
 % 	p(\epsilon^{m,g}_d) &= \Ndist{\epsilon^{m,g}_d}{0,1/\tau_d^{m,g}} \\
 % 	p(\tau_{d}^{m,g}) &= \Gdist{\tau_{d}^{m,g}}{a_0^{\tau}, b_0^{\tau}}
 % \end{align}
-This formulation is important to capture the (realistic) events where a specific feature may be highly variable in one group but non-variable in another group.\\
+
 In addition, as in MOFA v1, non-Gaussian noise models can also be defined, but unless otherwise stated, we will always assume Gaussian residuals.
 
-\subsubsection{Likelihood}
-
-Altogether, this results in the following likelihood:
-\begin{equation}
-	p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{g=1}^{G} \Ndist{\mathbf{Y}^{m}_{g}}{\mathbf{Z}_{g} \mathbf{W}^{mT},1/\btau^{m}_{g}}
-	% p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{g=1}^{G} \prod_{d=1}^{D_m} \prod_{n=1}^{N} \Ndist{y_{nd}^{mg}}{\bfz_{ng}^T\bfw_{d}^{mg},1/\tau_{d}^{mg}}
-	% p(y_{nd}^m) = \Ndist{y_{nd}^m}{\bfz_{n,:}\bfw_{d,:}^{mT},1/\tau_d^m},
-\end{equation}
+% \subsubsection{Likelihood}
+% Altogether, this results in the following likelihood:
+% \begin{equation}
+% 	p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{g=1}^{G} \Ndist{\mathbf{Y}^{m}_{g}}{\mathbf{Z}_{g} (\mathbf{W}^{m})^T,(\btau^{m}_{g})^{-1} \I}
+% 	% p(\bfY|\bfW,\bfZ,\bTau) = \prod_{m=1}^{M} \prod_{g=1}^{G} \prod_{d=1}^{D_m} \prod_{n=1}^{N} \Ndist{y_{nd}^{mg}}{\bfz_{ng}^T\bfw_{d}^{mg},1/\tau_{d}^{mg}}
+% 	% p(y_{nd}^m) = \Ndist{y_{nd}^m}{\bfz_{n,:}\bfw_{d,:}^{mT},1/\tau_d^m},
+% \end{equation}
 
 \subsubsection{Graphical model}
 
@@ -93,69 +91,59 @@ In summary, the updated model formulation introduces symmetric two-level sparsit
 	\label{fig:MOFA2}
 \end{figure}
 
-\subsubsection{Guidelines on the selection of views and groups} \label{section:mofa2_guidelines_views_groups}
+\subsubsection{Guidelines on the definition of views and groups} \label{section:mofa2_guidelines_views_groups}
 
-\paragraph{Views}
-Views or data modalities typically correspond to different molecular layers. Nevertheless, as we show in this thesis, there is flexibility in the definition of views and the user can explore data-driven modalities. For example, one could divide the RNA expression data into three vies corresponding to mRNA, rRNA and miRNA. Similarly, one can divide DNA methylation and chromatin accessibility data by genomic context (enhancers, promoters, etc.). The \textit{right} selection of views boils down to the hypothesis that is to be explored.\\ 
-Importantly, larger views can contribute more to the latent space than small views, simply because they contribute more to the objective function. The signal that can be extracted from small data modalities will depend on the degree of structure within the dataset, the levels of noise and on how strong the feature imbalance is between data modalities. As suggested in Chapter 2, a typical preprocessing step (when possible) is to minimise the feature imbalance by doing a feature selection step and keeping the number of features per view within the same order of magnitude.
+\textbf{Views}: views typically correspond to different molecular layers, but there is flexibility in their definition and the user can explore different definitions of views. For example, one could divide the RNA expression data into three views corresponding to mRNA, rRNA and miRNA. Similarly, one can quantify DNA methylation and chromatin accessibility data over different genomic context (enhancers, promoters, etc.).
 
-\paragraph{Groups}
-Groups are generally motivated by the experimental design.
-As with the definition of views, the user can also explore data-driven groups. There is no \textit{right} or \textit{wrong} definition of groups, but some definitions will be more useful than others depending on the hypothesis that is sought to explore.\\
-As discussed above, it is essential to keep in mind that the aim of the multi-group framework is not to capture differential changes in \textit{mean} levels between the groups (as for example when doing differential RNA expression). The aim is to find out which sources of variability are shared between the different groups and which ones are exclusive to a single group. To achieve this, the features are centred per group (i.e. intercept effects are regressed out) before fitting the model.\\
-Importantly, as with the number of features per view, the number of samples (cells) per group can influence the latent space. In general, the more samples per group, the more complexity there will exist in the dataset, which can manifest itself in retrieval of a higher number of Factors.
+\textbf{Groups}: groups are generally motivated by the experimental design, but the user can also explore data-driven formulations. There is no \textit{right} or \textit{wrong} definition of , but some definitions will be more useful than others, depending on the hypothesis that is sought to explore.
+% As discussed above, it is essential to keep in mind that the aim of the multi-group framework is not to capture differential changes in \textit{mean} levels between the groups (as for example when doing differential RNA expression). The aim is to find out which sources of variability are shared between the different groups and which ones are exclusive to a single group. To achieve this, the features are centred per group (i.e. intercept effects are regressed out) before fitting the model.\\
 
 
 \subsubsection{Model selection} \label{section:mofa2_model_selection}
 
-As discussed in \Cref{section:mofa_robustness}, the optimisation procedure of MOFA depends on the parameter initialisation. When using random initialisation, the Factors can vary between different model instances and a model selection step is advised.\\
-We realised that this was not a user-friendly solution and it requires a lot of computational resources when applying the model to large data sets. Hence to simplify model training and interpretation we eliminated the random component in the MOFA+ implementation by initialising the Factors using the principal components from the concatenated data set. In practice, we observe faster convergence times and better ELBO estimates when initialising with the PCA solution (\Cref{fig:mofa2_init}).
+As discussed in \Cref{section:mofa_robustness}, the inference procedure depends on the parameter initialisation. When using random initialisation, the Factors can vary between different model instances and a model selection step is advised. I realised that this was not a user-friendly solution and it requires a lot of computational resources when applying the model to large data sets. To simplify model training in MOFA+ we initialise the Factors using the principal components from the concatenated data set. In practice, we observe faster convergence times and better ELBO estimates when initialising with the PCA solution (\Cref{fig:mofa2_init}).
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.95\linewidth]{mofa2_init}
+	\includegraphics[width=0.85\linewidth]{mofa2_init}
 	\caption[]{
-	\textbf{Comparison of PCA and Random initialisation in MOFA}.\\ The dashed lines mark the iteration at which the model converged. Data was simulated from the generative model with the following dimensions: $M=2$ modalities, $G=2$ groups, $D=1000$ features, $N=1000$ samples and $K=10$ factors.
+	\textbf{Comparison of PCA and Random initialisation in MOFA}.\\ Data was simulated from the generative model with the following dimensions: $M=2$ modalities, $G=2$ groups, $D=1000$ features, $N=1000$ samples and $K=10$ factors. The dashed lines mark the iteration at which the model converged.
 	}
 	\label{fig:mofa2_init}
 \end{figure}
 
 % COPIED
-\subsection{Solving the rotational invariance problem} \label{section:mofa2_rotational_invariance}
+% \subsection{Solving the rotational invariance problem} \label{section:mofa2_rotational_invariance}
 
-Conventional Factor Analysis is invariant to rotation in the latent space\cite{Zhao2009}. To demonstrate this property, let us apply an arbitrary rotation to the weights and the factors, specified by the rotation matrix $\bfR \in \R^{K \times K}$:
-\begin{align*}
-	\tilde{\bfZ} &= \bfZ \bfR^{-1} \\
-	\tilde{\bfW} &= \bfR \bfW
-\end{align*}
-First, note that the model likelihood is unchanged by this rotation, irrespective of the prior distribution used.
-\begin{equation*}
-		p(\bfY | \tilde{\bfZ} \tilde{\bfW}, \tau) = p(\bfY | \bfZ \bfR^{-1} \bfR \bfW, \tau) = p(\bfY | \bfZ \bfW, \tau)
-\end{equation*}
-However, the prior distributions of the factors and the weights are only invariant to rotations when using isotropic Normal priors:
-\begin{equation*}
-	\ln p(\bfW) \propto \sum_{k=1}^{K} \sum_{d=1}^{D} w_{d,k}^2 = \mathrm{Tr}(\bfW^T \bfW) = \mathrm{Tr}(\bfW^T \bfR^{-1} \bfR \bfW) = \mathrm{Tr}(\tilde{\bfW^T} \tilde{\bfW})
-\end{equation*}
-where we have used the property $\bfR^{T} = \bfR^{-1}$ that applies to rotation matrices. The same derivation follows for the factors $\bfZ$.\\
-In practice, this property renders conventional Factor Analysis unidentifiable, hence limiting its interpretation and applicability. Sparsity assumptions, however, partially address the rotational invariance problem \cite{Hore2015}.
+% Conventional Factor Analysis is invariant to rotations in the latent space \cite{Zhao2009}. To demonstrate this property, let us apply an arbitrary rotation to the weights and the factors, specified by the rotation matrix $\bfR \in \R^{K \times K}$:
+% \begin{align*}
+% 	\tilde{\bfZ} &= \bfZ \bfR^{-1} \\
+% 	\tilde{\bfW} &= \bfR \bfW
+% \end{align*}
+% First, note that the model likelihood is unchanged by this rotation, irrespective of the prior distribution used.
+% \begin{equation*}
+% 		p(\bfY | \tilde{\bfZ} \tilde{\bfW}, \tau) = p(\bfY | \bfZ \bfR^{-1} \bfR \bfW, \tau) = p(\bfY | \bfZ \bfW, \tau)
+% \end{equation*}
+% However, the prior distributions of the factors and the weights are only invariant to rotations when using isotropic Normal priors:
+% \begin{equation*}
+% 	\ln p(\bfW) \propto \sum_{k=1}^{K} \sum_{d=1}^{D} w_{d,k}^2 = \mathrm{Tr}(\bfW^T \bfW) = \mathrm{Tr}(\bfW^T \bfR^{-1} \bfR \bfW) = \mathrm{Tr}(\tilde{\bfW^T} \tilde{\bfW})
+% \end{equation*}
+% where we have used the property $\bfR^{T} = \bfR^{-1}$ that applies to rotation matrices. The same derivation follows for the factors $\bfZ$.\\
+% In practice, this property renders conventional Factor Analysis unidentifiable, hence limiting its interpretation and applicability. Sparsity assumptions, however, partially address the rotational invariance problem \cite{Hore2015}.
 
-It is important to remark that the factors are nonetheless invariant to permutations. This implies that under different initial conditions, the order of the factors is not necessarily the same in independent model fittings. To address this we manually sort factors \textit{a posteriori} based on total variance explained.
-
-
-\subsection{TO-FINISH TO-FINISH TO-FINISH Stochastic variational inference algorithm}
-
-In \Cref{section:stochastic_variational_inference} I have explained how to derive a stochastic variational inference (SVI) algorithm for a general Bayesian model using an adapted version of the formulation introduced in \cite{Hoffman2012}.\\
-To apply the SVI algorithm to MOFA the first step is to choose the \textit{local} and \textit{global} dimensions. Just as a reminder, the local dimension will be factorised in the ELBO and thus the one where the stochastic gradients apply.\\
-In single-cell studies we expect increasingly large data sets (more cells) but the number of features to remain roughly constant and the natural dimension to define as \textit{local} is the axis of the samples and the global dimension to be axis of features.
-
-In the case of the MOFA+ model the variables that are classified as \textit{local} are the Factors $\mathbf{Z_g} = \{ z_{nk}^g \}$, which due to the reparametrisation of the spike-and-slab prior consists on the element-wise product of two matrices: $\hat{\mathbf{Z_g}}$ and $\mathbf{S_g}$. All other hidden variables are global.%: $\mathbf{tau^{gm}}$, $\mathbf{W^m}$ and $\bfS^\bfm$ (whose term-wise product gives $\bfW^m$), $\bf\alpha^m, \bf\theta^m$, as well as $\bf\alpha^g$ and $\bf\theta^g$ when adding the spike-and-slab prior over the Factors.
+% It is important to remark that the factors are nonetheless invariant to permutations. This implies that under different initial conditions, the order of the factors is not necessarily the same in independent model fittings. To address this we manually sort factors \textit{a posteriori} based on total variance explained.
 
 
+% \subsection{Stochastic variational inference algorithm}
 
-% Hence, we chose to apply the following SVI algorithm to speed-up the inference of the MOFA model on datasets with a large number of samples $N$:
+% In \Cref{section:stochastic_variational_inference} I have explained how to derive a stochastic variational inference (SVI) algorithm for a general Bayesian model using an adapted version of the algorithm introduced in \cite{Hoffman2012}.\\
+% To apply the SVI algorithm to MOFA the first step is to choose the \textit{local} and \textit{global} dimensions such that the \textit{local} dimension will be factorised in the ELBO and where the stochastic gradients apply. 
 
+% In single-cell studies we expect increasingly large data sets in the number of cells, but the number of features are expected to remain roughly constant. Thus, the natural dimension to define as \textit{local} is the axis of samples. In the case of MOFA+, the variables that are classified as \textit{local} are the Factors $\mathbf{Z_g} = \{ z_{nk}^g \}$, which due to the reparametrisation of the spike-and-slab prior consists on the element-wise product of two matrices: $\hat{\mathbf{Z_g}}$ and $\mathbf{S_g}$. All other hidden variables are global. 
+
+% This leads to the following SVI algorithm:
 % \begin{algorithm}[h!]
-%   \caption{Stochastic mean-field variational inference for MOFA 2.0 with sparse factors}
+%   \caption{Stochastic mean-field variational inference for MOFA+}
 %   \begin{algorithmic}[1]
 % 	\State Initialise randomly the parameters of the global variables \{$\bf\tau^{gm}$, $\bf\hat{W}^m$, $\bfS^\bfm$, $\bf\alpha^m, \bf\theta^m$, $\bf\alpha^g$, $\bf\theta^g$\}.
 % 	\State Initialise the step size $\rho^{(t=0)}$
@@ -177,36 +165,32 @@ In the case of the MOFA+ model the variables that are classified as \textit{loca
 % 	\label{MOFAstochasticascent}
 % \end{algorithm}
 
-\subsection{Theoretical comparison with published methods}
-
-As discussed in Chapter 2, a variety of factor analysis models exist with the aim of perfoming multi-view and/or multi-group data integration. A comparison of multi-view method is shown in \Cref{GFAtable}. Here we specifically focus on the methods that have been applied to single-cell data:
-
-\begin{table}[h]
-	\begin{tabular}{@{}llllll} 
-		\toprule
-
-		{\textbf{Method}} & {\textbf{\parbox{2.0cm}{Scales to\\$>1e5$ cells?}}} & {\textbf{\parbox{2.0cm}{Multi-view}}} & {\textbf{\parbox{2.0cm}{Multi-group}}} & {\textbf{\parbox{2.0cm}{Missing values}}} & {\textbf{\parbox{2.0cm}{Likelihoods}}} \\ \toprule
-		slalom \cite{Buettner2017} & No & No & No & No & ZI gaussian \\\midrule
-		pCMF \cite{Durif2019} & Yes & No & No & No & ZI poisson \\\midrule
-		ZIFA \cite{Pierson2015} & No & No & No & No & ZI gaussian \\\midrule
-		scVI \cite{Lopez2018} & Yes & No & Yes & No & ZI negative binomial \\\midrule
-		MSFA \cite{DeVito2019} & No & No & Yes & No & Gaussian \\\midrule
-		ZINB-WaVE \cite{Risso2018} & No & No & No & No & ZI negative binomial \\\midrule
-		AJIVE \cite{Feng2018} & No & Yes & No & No & NA \\\midrule
-		DIABLO \cite{Singh2018} & Yes & Yes & No & * & NA \\\midrule
-		scHPF \cite{Levitin2019} & Yes & No & No & Yes & Negative binomial \\\midrule
-		MOFA \cite{Argelaguet2018} & No & Yes & No & Yes & Gaussian/Poisson/Bernoulli \\\midrule
-		MOFA+ & Yes & Yes & Yes & Yes & Gaussian/Poisson/Bernoulli \\\midrule
-	\end{tabular}
-	\caption{Overview of Factor analysis methods for single-cell data.}
-	% \label{XXX}
-\end{table}
+% \subsection{Theoretical comparison with published methods}
+% As discussed in Chapter 2, a variety of factor analysis models exist with the aim of perfoming multi-view and/or multi-group data integration. A comparison of multi-view method is shown in \Cref{GFAtable}. Here we specifically focus on the methods that have been applied to single-cell data:
+% \begin{table}[h]
+% 	\begin{tabular}{@{}llllll} 
+% 		\toprule
+% 		{\textbf{Method}} & {\textbf{\parbox{2.0cm}{Scales to\\$>1e5$ cells?}}} & {\textbf{\parbox{2.0cm}{Multi-view}}} & {\textbf{\parbox{2.0cm}{Multi-group}}} & {\textbf{\parbox{2.0cm}{Missing values}}} & {\textbf{\parbox{2.0cm}{Likelihoods}}} \\ \toprule
+% 		slalom \cite{Buettner2017} & No & No & No & No & ZI gaussian \\\midrule
+% 		pCMF \cite{Durif2019} & Yes & No & No & No & ZI poisson \\\midrule
+% 		ZIFA \cite{Pierson2015} & No & No & No & No & ZI gaussian \\\midrule
+% 		scVI \cite{Lopez2018} & Yes & No & Yes & No & ZI negative binomial \\\midrule
+% 		MSFA \cite{DeVito2019} & No & No & Yes & No & Gaussian \\\midrule
+% 		ZINB-WaVE \cite{Risso2018} & No & No & No & No & ZI negative binomial \\\midrule
+% 		AJIVE \cite{Feng2018} & No & Yes & No & No & NA \\\midrule
+% 		DIABLO \cite{Singh2018} & Yes & Yes & No & * & NA \\\midrule
+% 		scHPF \cite{Levitin2019} & Yes & No & No & Yes & Negative binomial \\\midrule
+% 		MOFA \cite{Argelaguet2018} & No & Yes & No & Yes & Gaussian/Poisson/Bernoulli \\\midrule
+% 		MOFA+ & Yes & Yes & Yes & Yes & Gaussian/Poisson/Bernoulli \\\midrule
+% 	\end{tabular}
+% 	\caption{Overview of Factor analysis methods for single-cell data.}
+% 	% \label{XXX}
+% \end{table}
 
 
 \subsection{A note on the implementation}
 
-The core of MOFA+ is implemented in Python, and the downstream analysis and visualisations are implemented in R. GPU acceleration is implemented using CuPy\cite{Okuta2017}, an open-source matrix library accelerated with NVIDIA CUDA.\\
-To facilitate adoption of the method, we deploy MOFA+ as open-source software\footnote{\url{https://github.com/bioFAM/MOFA2}} with multiple tutorials and a web-based analysis workbench\footnote{\url{http://www.ebi.ac.uk/shiny/mofa/}}.%, hopefully enabling a user-friendly exploration of complex single-cell data sets.
+The core of MOFA+ is implemented in Python, and the downstream analysis and visualisations are implemented in R. GPU acceleration is implemented using CuPy \cite{Okuta2017}, an open-source matrix library accelerated with NVIDIA CUDA. To facilitate adoption of the method, we deployed MOFA+ as open-source software\footnote{\url{https://github.com/bioFAM/MOFA2}} with multiple tutorials and a web-based analysis workbench\footnote{\url{http://www.ebi.ac.uk/shiny/mofa/}}.%, hopefully enabling a user-friendly exploration of complex single-cell data sets.
 
 
 

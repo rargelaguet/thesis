@@ -7,7 +7,6 @@
 \documentclass[a4paper,11pt,times,custombib,custommargin]{Classes/PhDThesisPSnPDF}
 %\documentclass[a4paper,11pt,times,custombib,custommargin,draftclassic]{Classes/PhDThesisPSnPDF}
 
-
 % ******************************************************************************
 % ******************************* Class Options ********************************
 % ******************************************************************************
@@ -148,7 +147,7 @@
 \tableofcontents
 
 %\listoffigures
-% \listoftables
+%\listoftables
 
 % \printnomenclature[space] space can be set as 2em between symbol and description
 %\printnomenclature[3em]
@@ -166,36 +165,37 @@
 \include{Chapter1/scnmt-seq}
 
 % Chapter 2
-% \include{Chapter2/introduction}
-% \include{Chapter2/model_description}
-% \include{Chapter2/results}
-% \include{Chapter2/perspectives}
+\include{Chapter2/introduction}
+\include{Chapter2/model_description}
+\include{Chapter2/results}
+\include{Chapter2/perspectives}
 
 % Chapter 3
-% \include{Chapter3/introduction}
-% \include{Chapter3/results}
+\include{Chapter3/introduction}
+\include{Chapter3/results}
 
 % Chapter 4
-% \include{Chapter4/introduction}
-% \include{Chapter4/model_description}
-% \include{Chapter4/results}
-% \include{Chapter4/perspectives}
+\include{Chapter4/introduction}
+\include{Chapter4/model_description}
+\include{Chapter4/results}
+\include{Chapter4/perspectives}
+
+% Chapter 4
+\include{Chapter5/discussion}
 
 % ********************************** Appendices ********************************
 
 \begin{appendices}
 
-% \input{Appendix/appendix1}
-% \input{Appendix/appendix2}
-% \include{Appendix3/appendix3}
-% \include{Appendix4/appendix4}
+%\input{Appendix/appendix1}
+%\input{Appendix/appendix2}
 
 \end{appendices}
 
 
 % ********************************** Back Matter *******************************
 % Backmatter should be commented out, if you are using appendices after References
-% \backmatter
+\backmatter
 
 % ********************************** Bibliography ******************************
 % \begin{spacing}{0.9}
@@ -203,6 +203,6 @@
 % \bibliographystyle{apalike}
 \cleardoublepage
 
-\printbibliography
+%\printbibliography
 
 \end{document}

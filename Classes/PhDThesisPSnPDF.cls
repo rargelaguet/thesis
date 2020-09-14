@@ -253,8 +253,10 @@ supported!}
 \RequirePackage{ifxetex}  % XeLaTeX
 
 % *********************** Table of Contents & Appendices ***********************
+
 % add Bibliography, List of figures and tables to contents
 \RequirePackage[nottoc]{tocbibind}
+
 % Add appendices
 \RequirePackage[title,titletoc]{appendix}
 

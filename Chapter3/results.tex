@@ -10,7 +10,7 @@ The aim of this project was to generate a multi-omics atlas of post-implantation
 	\centering
 	\includegraphics[width=0.85\linewidth]{dataset_overview}
 	\caption[]{\textbf{scNMT-seq gastrulation atlas. Data set overview.}\\
-	(a) Dimensionality reduction for chromatin accessibility data (left, in blue), DNA methylation (middle, in red) and RNA expression (right, in green). For the gene expression data we applied UMAP\cite{McInnes2018}. For chromatin accessibility and DNA methylation data we applied Bayesian Factor Analysis\cite{Argelaguet2018}.\\
+	(a) Dimensionality reduction for chromatin accessibility data (left, in blue), DNA methylation (middle, in red) and RNA expression (right, in green). For the gene expression data we used UMAP \cite{McInnes2018}. For chromatin accessibility and DNA methylation data we used Bayesian Factor Analysis \cite{Argelaguet2018}.\\
 	(b) Number of observed cytosines in a GpC context (left, in blue) or (b) in a CpG context (right, in red). Each bar corresponds to one cell, and cells are sorted by total number of GpC or CpG sites, respectively. Cells below the dashed line (50,000 CpG sites and 500,000 GpC sites, respectively) were discarded on the basis of poor coverage. \\
 	(c) RNA library size (top) and number of expressed genes (bottom) per cell. Cells below the dashed line (10,000 reads and 500 expressed genes, respectively) were discarded on the basis of poor coverage. \\
 	(d) Number of cells that pass quality control for each molecular layer, grouped by stage. Note that for 1,419 out of 2,524 total cells only the RNA expression was sequenced.\\
@@ -23,21 +23,25 @@ The aim of this project was to generate a multi-omics atlas of post-implantation
 
 \subsection{Cell type assignment using the RNA expression data}
 
-To define cell type annotations we followed two independent strategies. For the E6.5 and E7.5 stages, we mapped the RNA expression profiles to the scRNA-seq gastrulation atlas \cite{Pijuan-Sala2019} using a matching mutual nearest neighbours algorithm \cite{Haghverdi2018}. In short, the count matrices for both data sets were concatenated and normalised together. Then, Principal Component Analysis was applied to the joint normalised expression matrix. The resulting latent space was then used for the construction of a k-nearest neighbours graph. Finally, for each scNMT-seq cell, we assigned a cell type using majority voting on the cell type distribution of the top 30 nearest neighbours in the atlas.\\
-For the E4.5 and E5.5 stages, we used a consensus clustering method \cite{Kiselev2017}, as no transcriptomic atlas was available for these stages:
+To define cell type annotations we mapped the RNA expression profiles to the scRNA-seq gastrulation atlas \cite{Pijuan-Sala2019} using a matching mutual nearest neighbours algorithm \cite{Haghverdi2018} (\Cref{fig:rna_lineage_assignment}). In short, the count matrices for both data sets were concatenated and normalised together. Then, Principal Component Analysis was applied to the joint normalised expression matrix. The resulting latent space was then used for the construction of a k-nearest neighbours graph. Finally, for each scNMT-seq cell, we assigned a cell type using majority voting on the cell type distribution of the top 30 nearest neighbours in the atlas. We validated the cell type assignments by visualising the expression of known marker genes (\Cref{fig:gene_markers}).
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.90\linewidth]{rna_lineage_assignment}
-	\caption[]{
-	\textbf{Cell type assignments using the RNA expression data.} \\
-	(a) For each stage, the bar plots display the number of cells assigned to each lineage.\\
-	(b) Cell type assignment for E4.5 cells. The heatmap displays the consensus plot, representing the similarity between cells based on the averaging of clustering results from multiple combinations of clustering parameters \cite{Kiselev2017}. A similarity of 0 (blue) indicates that the two cells are always assigned to different clusters, whereas a similarity of 1 (red) means that the two cells are always assigned to the same cluster.\\
-	The scatter plot displays a t-SNE representation of the RNA expression data coloured by the expression of \textit{Fgf4}, a known E4.5 epiblast marker and \textit{Gata6}, a known E4.5 primitive endoderm marker.\\
-	(c) UMAP projections of the atlas data set (stages E6.5 to E8.0). In the top left plot cells are coloured by lineage assignment. In the bottom left plot, the cells coloured in red correspond to the nearest neighbours that were used to transfer labels to the scNMT-seq data set. The right plots display the RNA expression levels of marker genes for different cell types.
-	}
+	\caption[]{\textbf{Cell type assignments using the RNA expression data.} For each stage, the bar plots display the number of cells assigned to each lineage.}
 	\label{fig:lineage_assignment}
 \end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.90\linewidth]{gene_markers}
+	\caption[]{
+	\textbf{Validation of cell types by visualisation of marker genes.} \\
+	UMAP projections of the atlas data set (stages E6.5 to E8.0). In the top left plot, cells are coloured by lineage assignment. In the bottom left plot, the cells coloured in red correspond to the nearest neighbours that were used to transfer labels to the scNMT-seq data set. The right plots display the RNA expression levels of marker genes for different cell types.
+	}
+	\label{fig:gene_markers}
+\end{figure}
+
 
 \subsection{Validation of DNA methylation data and chromatin accessibility data}
 
@@ -55,7 +59,7 @@ Reassuringly, we observe that for both modalities the model with all cells captu
 	\centering
 	\includegraphics[width=1.00\linewidth]{metacc_dimred}
 	\caption[]{
- 	Dimensionality reduction of (a) DNA methylation and (b) chromatin accessibility data. Shown are scatter plots of the first two latent factors (sorted by variance explained) for models trained with cells from the indicated stages. From E4.5 to E6.5 cells are coloured by embryonic and extra-embryonic origin. At E7.5, cells are coloured by the primary germ layer. 
+ 	\textbf{Dimensionality reduction of (a) DNA methylation and (b) chromatin accessibility data}. Shown are scatter plots of the first two latent factors (sorted by variance explained) for models trained with cells from the indicated stages. From E4.5 to E6.5 cells are coloured by embryonic and extra-embryonic origin. At E7.5, cells are coloured by the primary germ layer. 
 	}
 	\label{fig:metacc_dimred}
 \end{figure}
@@ -83,7 +87,7 @@ First, we explored the changes in DNA methylation and chromatin accessibility al
 	\label{fig:metacc_boxplots}
 \end{figure}
 
-Next, we attempted to characterise the relationship between the transcriptome and the epigenome along differentiation. For simplicity we focused on gene promoters (defined as 2kb up and downstream from the transcription start site), as RNA expression and epigenetic readouts can be matched unambiguously. We calculated, for each gene, the correlation coefficient between RNA expression and the corresponding DNA methylation or chromatin accessibility levels. As a filtering criterion, we required a minimum number of 1 CpG
+Next we attempted to characterise the relationship between the transcriptome and the epigenome along differentiation. For simplicity we focused on gene promoters (defined as 2kb up and downstream from the transcription start site), as RNA expression and epigenetic readouts can be matched unambiguously. We calculated, for each gene, the correlation coefficient between RNA expression and the corresponding DNA methylation or chromatin accessibility levels. As a filtering criterion, we required a minimum number of 1 CpG
 (methylation) or 3 GpC (accessibility) measurements in at least 50 cells for each genomic feature. In addition, we restricted the analysis to the top 5,000 most variable genes, according to the rationale of independent filtering \cite{Bourgon2010}.\\
 We identified 125 genes whose expression shows significant correlation with promoter DNA methylation and 52 that show a significant correlation with chromatin accessibility (\Cref{fig:metacc_vs_rna_cor}a). Among the top hits we identified early pluripotency and germ cell markers, including \textit{Dppa4}, \textit{Dppa5a}, \textit{Rex1}, \textit{Tex19.1} and \textit{Pou3f1} (\Cref{fig:metacc_vs_rna_cor}b). Notably, all of them have a negative association between RNA expression and DNA methylation and a positive association between RNA expression and chromatin accessibility. Inspection of the transcriptomic and epigenetic dynamics reveals that the repression of these early pluripotency markers are concomitant with the genome-wide trend of DNA methylation gain and chromatin closure.\\
 In addition, this analysis identifies novel genes, including \textit{Trap1a}, \textit{Zfp981}, \textit{Zfp985}, as well as a number of metabolism genes (e.g. \textit{Apoc1}, \textit{Pla2g1b}, \textit{Pla2g10}) that may have yet unknown roles in pluripotency or germ cell development.
@@ -119,7 +123,7 @@ Next, we sought to investigate the coordinated changes between RNA expression an
 As input to MOFA we used the RNA expression data quantified over genes and the DNA methylation and chromatin accessibility data quantified over putative regulatory elements. For this analysis, we selected distal H3K27ac sites (enhancers) and H3K4me3 (active transcription start sites). Both annotations were defined using an independently generated ChIP-seq data set, where each germ layer at E7.5 was manually dissected out prior to ChIP-seq \cite{Xiang2020}. An overview on the numbers and the overlap of the lineage-specific histone marks is given in the following figure:
 
 \begin{figure}[H]
-	\includegraphics[scale=0.80, width=\textwidth]{chip_seq}
+	\includegraphics[scale=0.75, width=\textwidth]{chip_seq}
 	\caption{
 	Venn diagrams showing overlap of peak calls for each lineage-specific histone mark, for distal H3K27ac (left) and all H3K4me3 (right). The figure shows that distal H3K27ac peaks (putative enhancer \cite{Creyghton2010}) have moderate levels of overlap between the three germ layers. In contrast, H3K4me3 peaks (active transcription start sites \cite{Liang2004}) are similar between the three germ layers.
 	}
@@ -145,7 +149,7 @@ MOFA identified 6 Factors capturing at least 1\% of variance in the RNA expressi
 	\label{fig:mofa_gastrulation_overview}
 \end{figure}
 
-The four remaining factors correspond to mostly transcriptional signatures related to anterior-posterior axial patterning (Factor 3), lineaging events such as notochord formation (Factor 4) and mesoderm patterning (Factor 5); and cell cycle (Factor 6). Their characterisation is shown in \Cref{appendix:mofa_gastrulation}.
+The four remaining factors correspond to mostly transcriptional signatures related to anterior-posterior axial patterning (Factor 3), lineaging events such as notochord formation (Factor 4) and mesoderm patterning (Factor 5); and cell cycle (Factor 6). Their characterisation is shown in Appendix~\ref{appendix:mofa_gastrulation}.
 
 \subsection{Differential DNA methylation and chromatin accessibility analysis}
 
@@ -248,8 +252,7 @@ In striking contrast to the mesoderm and endoderm enhancers, the ectoderm enhanc
 
 Two hypotheses could explain this observation. The first hypothesis is that ectoderm enhancers are a mixture of pluripotency and proper ectoderm signatures, and hence the pluripotency signatures are driving the demethylation and chromatin opening in early stage, whereas the proper ectoderm signatures are driving the demethylation and chromatin opening upon commitment to ectoderm. The second hypothesis is that the ectoderm fate is epigenetically primed in the early epiblast (i.e. ectoderm is the default lineage), and hence the ectoderm enhancers remain demethylated and open all along from the epiblast to the ectoderm.
 
-To investigate this, the first step is to disentangle the pluripotency and ectoderm signatures that may be confounded within the ectoderm enhancers. We selected the set of E7.5 ectoderm enhancers (n=2,039) and, at each element, we quantified the H3K27ac levels in ESCs and E10.5 midbrain, a tissue largely derived from the (neuro-)ectoderm layer. Both annotations were derived from the ENCODE project \cite{Yue2014}\\
-Remarkably, we observe that the E7.5 ectoderm enhancers consist of an almost exclusive mixture of pluripotent and neuroectoderm signatures, as indicated by the negative correlation between H3K27ac levels in ESCs versus E10.5 midbrain (\Cref{fig:pluri_vs_midbrain_h3k27ac}). This result supports the first hypothesis, but does not rule out the second hypothesis.
+To investigate this, the first step is to disentangle the pluripotency and ectoderm signatures that may be confounded within the ectoderm enhancers. We selected the set of E7.5 ectoderm enhancers (n=2,039) and, at each element, we quantified the H3K27ac levels in ESCs and E10.5 midbrain, a tissue largely derived from the (neuro-)ectoderm layer. Both annotations were derived from the ENCODE project \cite{Yue2014}. Remarkably, we observe that the E7.5 ectoderm enhancers consist of an almost exclusive mixture of pluripotent and neuroectoderm signatures, as indicated by the negative correlation between H3K27ac levels in ESCs versus E10.5 midbrain (\Cref{fig:pluri_vs_midbrain_h3k27ac}). This result supports the first hypothesis, but does not rule out the second hypothesis.
 
 \begin{figure}[H]
 	\centering
@@ -262,7 +265,8 @@ Remarkably, we observe that the E7.5 ectoderm enhancers consist of an almost exc
 	\label{fig:pluri_vs_midbrain_h3k27ac}
 \end{figure}
 
-Next, among the E7.5 ectoderm enhancers we defined a set of 250 neuroectoderm enhancers (high H3K27ac levels in E10.5 midbrain) and a separate set of 250 pluripotency enhancers (high H3K27ac levels in ESCs) (blue and grey dots in \Cref{fig:pluri_vs_midbrain_h3k27ac}). Additionally, we also considered endoderm enhancers as a negative control.\\
+Next, among the E7.5 ectoderm enhancers we defined a set of 250 neuroectoderm enhancers (high H3K27ac levels in E10.5 midbrain) and a separate set of 250 pluripotency enhancers (high H3K27ac levels in ESCs) (blue and grey dots in \Cref{fig:pluri_vs_midbrain_h3k27ac}). Additionally, we also considered endoderm enhancers as a negative control.
+
 For each class of enhancers, we quantified and visualised the DNA methylation and chromatin accessibility dynamics along the epiblast-ectoderm trajectory \Cref{fig:pluri_vs_midbrain_metacc}). We plotted absolute levels in (a) and normalised levels to the genome-wide background in (b). We remind the reader that to interpret the plot below, it is critical to compare the absolute levels to the genome-wide background levels.
 
 \begin{figure}[H]
@@ -370,7 +374,7 @@ To validate the mapping results, we inspected the expression of marker genes for
 \subsubsection{Validation of epigenetic measurements}
 
 After validating the reproducibility of the EB system to capture the transcriptomics of post-implantation and early gastrulation, we proceed to validate the epigenetic measurements.\\
-At the global level, DNA methylation increases in WT cells from $\approx$55\% at day 2 to $\approx$75\% at day 7, whereas chromatin accessibility decreases from $\approx$20\% at day 2 to $\approx$16\% at day 7:
+At the global level, DNA methylation increases in WT cells from $\approx$55\% at day 2 to $\approx$75\% at day 7, whereas chromatin accessibility decreases from $\approx$20\% at day 2 to $\approx$16\% at day 7 (\Cref{fig:EB_metacc_global}).
 
 \begin{figure}[H]
 	\centering
@@ -383,7 +387,7 @@ At the global level, DNA methylation increases in WT cells from $\approx$55\% at
 	\label{fig:EB_metacc_global}
 \end{figure}
 
-Critically, ectoderm-defining enhancers are protected from the global repressive dynamics in the epiblast-like cells. Upon mesoderm commitment, mesoderm-defining enhancers demethylate from $\approx$85\% to $\approx$70\% and increase in accessibility from $\approx$19\% to $\approx$30\%.
+Critically, ectoderm-defining enhancers are protected from the global repressive dynamics in the epiblast-like cells. Upon mesoderm commitment, mesoderm-defining enhancers demethylate from $\approx$85\% to $\approx$70\% and increase in accessibility from $\approx$19\% to $\approx$30\% (\Cref{fig:EB_metacc_profiles}).
 
 \begin{figure}[H]
 	\centering
@@ -419,24 +423,25 @@ After the mesendoderm transition (days 4-5), mesoderm-committed \textit{TET} TKO
 Finally, at days 6-7 we observe a systematic loss of hematopoietic cell types in the \textit{TET} TKO (\Cref{fig:EB_rna_celltypes}). This suggests that TET-mediated demethylation events, although not crucial for early mesendoderm commitment, seem to be important for subsequent cell fate decisions. Notably, our observations are concordant with findings from previous studies \textit{in vivo} \cite{Dai2016}, which demonstrated that \textit{TET} TKO embryos are able to initiate
 gastrulation, but by E8.5 they display defective mesoderm migration with no recognisable mature mesoderm structures.
 
-All together, this \textit{in vitro} part of our study confirms that EBs are a suitable model to study the epigenetics of germ layer specification. We hope this provides a valuable resource for other researchers looking to study lineage specification in light of the 3Rs of the ethical use of animals in research.
+% All together, this \textit{in vitro} part of our study confirms that EBs are a suitable model to study the epigenetics of germ layer specification. We hope this provides a valuable resource for other researchers looking to study lineage specification in light of the 3Rs of the ethical use of animals in research.
 
 
 \section{Conclusions, limitations and future perspectives}
 
-In this work we have employed scNMT-seq to generate a multi-omics atlas of mouse gastrulation at single-cell resolution. We find that the initial exit from pluripotency coincides with the establishment of a repressive epigenetic landscape, characterised by increasing levels of DNA methylation and decreasing levels of chromatin accessibility. This gradual lock-down of the genome is followed by the emergence of distal regulatory elements that become unmethylated and accessible upon germ layer commitment. Most notably, when tracing back the epigenetic dynamics for the lineage-defining enhancers to the early epiblast stage, we observe that post-implantation cells display epigenetic priming for an ectoderm fate. This finding supports the existence of a default path in the Waddington landscape of development, with the ectoderm being the default germ layer in the embryo. In contrast, commitment to endoderm and mesoderm fates occurs by an active diversion from the default path driven by signalling cues in the primitive streak transient state.\\
-Experimental evidence exist to support this hypothesis. Several groups have shown that, in the absence of external stimuli, ESCs differentiate to neurons \cite{Munoz2002,Hemmati-Brivanlou1997}, a phenomenon that still remains largely unexplained. We believe that the epigenetic priming of neuroectoderm enhancers that we identified in this study could provide the molecular logic for a hierarchical emergence of the primary germ layers.\\
-More generally, we speculate that asymmetric epigenetic priming, where early progenitors are epigenetically primed for a default cell type, may be a more general and poorly understood feature of lineage commitment. 
+In this work we have employed scNMT-seq to generate a multi-omics atlas of mouse gastrulation at single-cell resolution. We find that the initial exit from pluripotency coincides with the establishment of a repressive epigenetic landscape, characterised by increasing levels of DNA methylation and decreasing levels of chromatin accessibility. This gradual lock-down of the genome is followed by the emergence of distal regulatory elements that become unmethylated and accessible upon germ layer commitment. Most notably, when tracing back the epigenetic dynamics for the lineage-defining enhancers to the early epiblast stage, we observe that post-implantation cells display epigenetic priming for an ectoderm fate. This finding supports the existence of a default path in the Waddington landscape of development, with the ectoderm being the default germ layer in the embryo. In contrast, commitment to endoderm and mesoderm fates occurs by an active diversion from the default path likely driven by signalling cues in the primitive streak transient state.
+
+Experimental evidence exist to support this hypothesis. Several groups have shown that, in the absence of external stimuli, ESCs differentiate to neurons \cite{Munoz2002,Hemmati-Brivanlou1997}, a phenomenon that still remains largely unexplained. We believe that the epigenetic priming of neuroectoderm enhancers that we identified in this study could provide the molecular logic for a hierarchical emergence of the primary germ layers. 
 
 Our study is not free of limitations that we hope to address in the future:
 
 \begin{itemize}
-	\item Scalability: in its current form, scNMT-seq is a laborious and expensive protocol, unsuitable for the profiling of large numbers of cells. In this study, we had to rely on pseudobulk approaches to obtain sufficient statistical power for some of our results. Also, it is likely that we have been underpowered to detect subtle yet important epigenetic variation. As discussed in Chapter 1 we are taking steps to make it more high-throughput in order to eventually apply it to post-gastrulation and early organogenesis.
+	\item Scalability: in its current form, scNMT-seq is a laborious and expensive protocol, unsuitable for the profiling of large numbers of cells. In this study, we had to rely on pseudobulk approaches to obtain sufficient statistical power for some of our results. Also, it is likely that we have been underpowered to detect subtle yet important epigenetic variation. As discussed in Chapter 1, some optimisations can be implemented to make the assay more high-throughput, with the eventual goal of applying it to study organogenesis.
 
-	\item Coverage: single-cell bisulfite sequencing technologies yield very sparse measurements, particularly for small regulatory elements. Hence, it is very likely that we have missed important regulatory elements in our analysis. One could try repeat the analysis after attempting imputation of the DNA methylation and chromatin accessibility measurements \cite{Angermueller2017}.
+	\item Coverage: single-cell bisulfite sequencing technologies yield very sparse measurements, particularly for small regulatory elements. Hence, it is very likely that we have missed important regulatory elements in our analysis.
 
-	\item Further experimental support for the default pathway: the default pathway hypothesis is appealing and supported by independent experiments. Nonetheless, further investigation is required to understand how it works. How are ectoderm enhancers epigenetically primed (i.e. what protects them from DNA methylation in the pluripotent stages)? Also, how could we target the default pathway? Is there a way to artifically methylate all ectoderm enhancers (assuming we are able to accurately identify them) by precise genome targeting?
+	\item Further experimental support for the default pathway: the default pathway hypothesis is appealing and supported by independent experiments. Nonetheless, further investigation is required to understand how it works. How are ectoderm enhancers epigenetically primed (i.e. what protects them from DNA methylation in the pluripotent stages)? How could we perturb the default pathway? Is there a way to artifically methylate ectoderm enhancers by precise genome targeting?
 
-	\item Further experimental validation for the role of \textit{TET} TKO in lineage commitment: our experiments using EBs have yielded promising insights, but as a next step we should verify whether this can be reproduced in an \textit{in vivo} setting. However, dissecting mechanistic roles of important genes using knock out mice is challenging and time-consuming. More importantly, the phenotypic effects of the mutation can be masked by gross devleopmental defects. For this reasons, we are going to explore the usage of chimeric embryos where \textit{TET} TKO tdTomato+ ESCs are injected into wild-type blastocysts. If the procedure is successful, the adult will contain a mixture of WT and \textit{TET} TKO cells that can be separated upon embryo collection using FACS \cite{Pijuan-Sala2019}.
+	\item Further experimental validation for the role of \textit{TET} TKO in lineage commitment: our experiments using EBs have yielded promising insights, but as a next step we should verify whether this can be reproduced in an \textit{in vivo} setting. However, obtaining knock out mice is challenging and time-consuming, and more importantly, the phenotypic effects of the mutation can be masked by gross developmental defects or embryo lethality. For this reason, we are going to explore the usage of chimeric embryos by injecting fluorescence-labelled ESCs cells with a \textit{TET} TKO background into wild-type blastocysts. If the injection is successful, the adult will contain a mixture of WT and \textit{TET} TKO cells that can be separated by FACS and studied independently \cite{Pijuan-Sala2019}. A major benefit of this experimental system is that any function impaired in the \textit{TET} TKO cells should be compensated by the WT cells and, in contrast a full knock out, the embryo can develop (almost) normally.
+	
 
 \end{itemize}
