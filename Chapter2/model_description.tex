@@ -67,7 +67,7 @@ and the corresponding graphical model is shown in \Cref{fig:MOFA_graphical_model
 \begin{figure}[H]
 	\centering
 	\input{graphical_models/mofa}
-	\caption{Graphical model for MOFA. The white circles represent hidden variables that are infered by the model, whereas the grey circles represent the observed variables. There are a total of four plates, each one representing a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in the $m$-th view. The use of transparency in the top left nodes is intentional and becomes clear in Chapter 4.}
+	\caption{Graphical model for MOFA. The white circles represent hidden variables that are infered by the model, whereas the grey circles represent the observed variables. There are a total of four plates, each one representing a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in the $m$-th view. The use of transparency in the top left nodes is intentional and becomes clear in Chapter 5.}
 	\label{fig:MOFA_graphical_model}
 \end{figure}
 
@@ -306,3 +306,5 @@ A variety of latent variable models exist with the aim of perfoming multi-view d
 								
 \end{table}
 
+% \subsection{A note on the implementation}
+% The core of MOFA is implemented in Python, and the downstream analysis and visualisations are implemented in R. To facilitate adoption of the method, we deployed MOFA as open-source software available from Bioconductor\footnote{\url{https://www.bioconductor.org/packages/release/bioc/html/MOFA.html}} with multiple tutorials and a web-based analysis workbench\footnote{\url{http://www.ebi.ac.uk/shiny/mofa/}}.

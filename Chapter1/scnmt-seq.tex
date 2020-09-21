@@ -1,8 +1,12 @@
 \graphicspath{{Chapter1/Figs/}}
 
-\section{Joint profiling of chromatin accessibility, DNA methylation and RNA expression in single cells}
+\chapter{Joint profiling of chromatin accessibility DNA methylation and transcription in single cells}
 
-\subsection{Description of the experimental protocol} \label{section:scnmt_protocol}
+In this Chapter I describe scNMT-seq, an experimental protocol for genome-wide profiling of RNA expression, DNA methylation and chromatin accessibility in single cells. First, I show a validation of the quality of the molecular readouts, including a comparison with existing technologies. Subsequently, I showcase how scNMT-seq can be used to reveal coordinated epigenetic and transcriptomic heterogeneity along a differentiation process.
+
+The work discussed in this Chapter results from a collaboration with the group of Wolf Reik (Babraham Institute, Cambridge, UK). It has been peer-reviewed and published in \cite{Clark2018}. The methodology was conceived by Stephen Clark, who performed most of the experiments. Felix Krueger processed and managed sequencing data. I performed all the computational analysis shown in this chapter. John C. Marioni, Oliver Stegle and Wolf Reik supervised the project. The article was jointly written by Stephen Clark and me, with input from all authors.
+
+\section{Description of the experimental protocol} \label{section:scnmt_protocol}
 
 scNMT-seq builds upon two previous multi-modal protocols: single-cell Methylation and Transcriptome sequencing (scM\&T-seq) \cite{Angermueller2016} and Nucleosome Occupancy and Methylation sequencing (NOMe-seq) \cite{Kelly2012,Pott2016}. An overview of the protocol is shown in \Cref{fig:scnmt_protocol}.
 
@@ -23,7 +27,7 @@ As discussed in \Cref{section:chromatin_accessibility}, NOMe-seq has a range of 
 The downsides of the approach are the limited scalability associated with plate-based methods, and the need to discard read outs from (1) GCG positions (21\% of all CpG sites), as it is intrinsically not possible to distinguish endogenous methylation from \textit{in vitro} methylated bases, and (2) CGC positions (27\%), to mitigate off-target effects of the enzyme \cite{Kelly2012}. This filtering step reduces the number of genome-wide cytosines that can be assayed from 22 million to 11 million. 
 
 
-\subsection{Description of the data processing pipeline}
+\section{Description of the data processing pipeline}
 
 After DNA sequencing, reads undergo quality control and trimming using TrimGalore to remove the flanking 6bp (the random primers), adaptor contamination and poor-quality base calls. Subsequently, trimmed reads are aligned to the corresponding genome assembly. Here we used Bismark \cite{Krueger2011} with the additional --NOMe option, which produces CpG report files containing only ACG and TCG trinucleotides and GpC report files containing only GCA, GCC and GCT positions.
 
@@ -31,9 +35,9 @@ Following \cite{Smallwood2014}, a bernoulli model is assumed for each CpG and Gp
 
 Finally, when quantifying DNA methylation and chromatin accessibility over genomic features (i.e. promoters or enhancers) a binomial model is assumed for each cell and feature, where the number of successes is the number of methylated CpGs (or GpCs) and the number of trials is the total number of CpGs (or GpCs) that are observed within the specific cell and genomic feature.
 
-\subsection{Data validation}
+\section{Data validation}
 
-\subsubsection{Coverage} \label{section:scnmt_coverage}
+\subsection{Coverage} \label{section:scnmt_coverage}
 
 We validated scNMT-seq in 70 EL16 mouse embryonic stem cells (ESCs), together with 3 cells processed without M.CviPI enzyme treatment (i.e. using scM\&T-seq). The use of this relatively simple and well-studied \textit{in vitro} system allows us to compare our DNA methylation and chromatin accessibility statistics to published data \cite{Smallwood2014,Angermueller2016,Ficz2013}.
 
@@ -59,7 +63,7 @@ Despite scNMT-seq yielding less CpG measurements, we find little differences in 
 	\label{fig:scnmt_coverage2}
 \end{figure}
 
-\subsubsection{Consistency with previous studies}
+\subsection{Consistency with previous studies}
 
 To assess the consistency with previous studies we quantified DNA methylation and chromatin accessibility using a running window throughout the genome. The resulting methylomes were compared to data sets from the same cell lines profiled with similar technologies, including scM\&T-seq\cite{Angermueller2016}, scBS-seq\cite{Smallwood2014} and bulk BS-seq\cite{Ficz2013}. We find that most of the variation is not attributed to the technology but to differences in culture condition (\Cref{fig:scnmt_comparison}). This result is expected, as cells grown in 2i media remain in a native pluripotency state that is associated with genome-wide DNA hypomethylation \cite{Ficz2013}. Interestingly, the serum-cultured cells processed in this study overlapped with 2i-cultured cells from previous data sets. suggesting that they remained in a more pluripotent state. The most likely explanation for this variation is the differences in the cell lines (we used female EL16 versus male E14 in \cite{Angermueller2016,Smallwood2014,Ficz2013}). Previous studies have shown that female ESCs tend to show lower levels of mean global methylation, which is consistent with a more pluripotent phenotype \cite{Zvetkova2005}.\\
 
@@ -110,6 +114,7 @@ To get a measure of the association (or coupling) between two molecular layers, 
 % \end{figure}
 
 
+\section{Application to an embryoid body differentiation data set}
 
 \subsection{Identification of genomic elements with coordinated variability across molecular layers}
 
@@ -199,7 +204,7 @@ As an illustrative example, we display the \textit{Esrrb} locus, a gene involved
 % \end{figure}
 
 
-\subsection{Exploration of epigenome connections along a developmental trajectory}
+\subsection{Exploration of epigenome and transcriptome connections}
 
 The use of single-cell technologies has permitted the unbiased study of continuous trajectories by computationally reconstructing the \textit{pseudotemporal} dynamics from the molecular profiles \cite{Trapnell2014,Haghverdi2016,Saelens2018}. A novel opportunity unveiled by the introduction of single-cell multi-modal technologies is the study of epigenetic dynamics along trajectories inferred from the transcriptome. To explore this idea, we applied a diffusion-based pseudotime method \cite{Haghverdi2016} to the EB data set, using the RNA expression of the 500 genes with highest biological overdispersion \cite{Lun2016b}. The first diffusion component was used to reconstruct a pseudotemporal ordering of cells from pluripotent to differentiated states:
 

@@ -1,66 +1,63 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {5}MOFA+: an improved framework for the integration of structured single-cell data}{107}{chapter.5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {5}MOFA+: a statistical framework for the integration of large-scale structured data sets}{113}{chapter.5}}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {5.1}Theoretical foundations}{107}{section.5.1}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Exponential family distributions}{107}{subsection.5.1.1}}
-\newlabel{section:exponential_family}{{5.1.1}{107}{Exponential family distributions}{subsection.5.1.1}{}}
-\newlabel{section:exponential_family@cref}{{[subsection][1][5,1]5.1.1}{107}}
-\newlabel{eq:exponential_family}{{5.1}{107}{Exponential family distributions}{equation.5.1.1}{}}
-\newlabel{eq:exponential_family@cref}{{[equation][1][5]5.1}{107}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Gradient ascent}{109}{subsection.5.1.2}}
-\newlabel{section:gradient_ascent}{{5.1.2}{109}{Gradient ascent}{subsection.5.1.2}{}}
-\newlabel{section:gradient_ascent@cref}{{[subsection][2][5,1]5.1.2}{109}}
-\newlabel{gradient_ascent}{{5.2}{109}{Gradient ascent}{equation.5.1.2}{}}
-\newlabel{gradient_ascent@cref}{{[equation][2][5]5.2}{109}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Stochastic gradient ascent}{109}{equation.5.1.2}}
-\newlabel{section:stochastic_gradient_ascent}{{5.1.2}{109}{Stochastic gradient ascent}{equation.5.1.2}{}}
-\newlabel{section:stochastic_gradient_ascent@cref}{{[subsection][2][5,1]5.1.2}{109}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Natural gradient ascent}{109}{equation.5.1.3}}
-\newlabel{section:natural_gradient_ascent}{{5.1.2}{109}{Natural gradient ascent}{equation.5.1.3}{}}
-\newlabel{section:natural_gradient_ascent@cref}{{[subsection][2][5,1]5.1.2}{109}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf  {Illustration of the problem of using the Euclidean norm as a distance measure between parameters of probability distributions}.  In both plots, the red and blue distributions are separated by the same Euclidean distance of 100. Yet, the distance in probability space between the two distributions is higher in the right. \relax }}{110}{figure.caption.70}}
-\newlabel{fig:mofa2_euclidean_distributions}{{5.1}{110}{\textbf {Illustration of the problem of using the Euclidean norm as a distance measure between parameters of probability distributions}.\\ In both plots, the red and blue distributions are separated by the same Euclidean distance of 100. Yet, the distance in probability space between the two distributions is higher in the right. \relax }{figure.caption.70}{}}
-\newlabel{fig:mofa2_euclidean_distributions@cref}{{[figure][1][5]5.1}{110}}
-\newlabel{natural_gradient}{{5.5}{110}{Natural gradient ascent}{equation.5.1.5}{}}
-\newlabel{natural_gradient@cref}{{[equation][5][5]5.5}{110}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Stochastic variational inference}{111}{subsection.5.1.3}}
-\newlabel{section:stochastic_variational_inference}{{5.1.3}{111}{Stochastic variational inference}{subsection.5.1.3}{}}
-\newlabel{section:stochastic_variational_inference@cref}{{[subsection][3][5,1]5.1.3}{111}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Model definition}{111}{subsection.5.1.3}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces \textbf  {Graphical model for a general probabilistic model where unobserved variables are classified as \textit  {global} and \textit  {local}.}  The dashed line indicates that the connection between \textit  {global} and \textit  {local} variables is optional, not used in the MOFA model. \relax }}{111}{figure.caption.71}}
-\newlabel{fig:graphical_model_stochastic}{{5.2}{111}{\textbf {Graphical model for a general probabilistic model where unobserved variables are classified as \textit {global} and \textit {local}.}\\ The dashed line indicates that the connection between \textit {global} and \textit {local} variables is optional, not used in the MOFA model. \relax }{figure.caption.71}{}}
-\newlabel{fig:graphical_model_stochastic@cref}{{[figure][2][5]5.2}{111}}
-\newlabel{eq_priors}{{5.7}{112}{Model definition}{equation.5.1.7}{}}
-\newlabel{eq_priors@cref}{{[equation][7][5]5.7}{112}}
-\newlabel{eq_complete_conditionals}{{5.8}{112}{Model definition}{equation.5.1.8}{}}
-\newlabel{eq_complete_conditionals@cref}{{[equation][8][5]5.8}{112}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Setting up the inference problem}{112}{equation.5.1.8}}
-\newlabel{eq_variational_distributions}{{5.9}{112}{Setting up the inference problem}{equation.5.1.9}{}}
-\newlabel{eq_variational_distributions@cref}{{[equation][9][5]5.9}{112}}
-\newlabel{eq_elbo_factorised}{{5.11}{113}{Setting up the inference problem}{equation.5.1.11}{}}
-\newlabel{eq_elbo_factorised@cref}{{[equation][11][5]5.11}{113}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Calculating the gradient for the \textit  {global} parameters}{113}{equation.5.1.11}}
-\newlabel{gradient_global}{{5.12}{113}{Calculating the gradient for the \textit {global} parameters}{equation.5.1.12}{}}
-\newlabel{gradient_global@cref}{{[equation][12][5]5.12}{113}}
-\newlabel{solution_global}{{5.13}{113}{Calculating the gradient for the \textit {global} parameters}{equation.5.1.13}{}}
-\newlabel{solution_global@cref}{{[equation][13][5]5.13}{113}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Calculating the gradient for the \textit  {local} parameters}{114}{equation.5.1.13}}
-\newlabel{gradient_local}{{5.14}{114}{Calculating the gradient for the \textit {local} parameters}{equation.5.1.14}{}}
-\newlabel{gradient_local@cref}{{[equation][14][5]5.14}{114}}
-\newlabel{solution_local}{{5.15}{114}{Calculating the gradient for the \textit {local} parameters}{equation.5.1.15}{}}
-\newlabel{solution_local@cref}{{[equation][15][5]5.15}{114}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Coordinate ascent variational inference algorithm}{114}{equation.5.1.15}}
-\@writefile{loa}{\defcounter {refsection}{0}\relax }\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Coordinate ascent variational inference algorithm\relax }}{114}{algorithm.1}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Deriving the natural gradients for the \textit  {global} variational parameters}{115}{algorithm.1}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Deriving the natural gradients for the \textit  {local} variational parameters}{115}{algorithm.1}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Stochastic variational inference algorithm using natural gradients}{115}{algorithm.1}}
-\@writefile{loa}{\defcounter {refsection}{0}\relax }\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Stochastic variational inference algorithm using natural gradients\relax }}{116}{algorithm.2}}
-\newlabel{eq_elbo_factorised}{{5.16}{116}{Stochastic variational inference algorithm using natural gradients\relax }{equation.5.1.16}{}}
-\newlabel{eq_elbo_factorised@cref}{{[equation][16][5]5.16}{116}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {5.1}Theoretical foundations}{113}{section.5.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Exponential family distributions}{113}{subsection.5.1.1}}
+\newlabel{section:exponential_family}{{5.1.1}{113}{Exponential family distributions}{subsection.5.1.1}{}}
+\newlabel{section:exponential_family@cref}{{[subsection][1][5,1]5.1.1}{113}}
+\newlabel{eq:exponential_family}{{5.1}{114}{Exponential family distributions}{equation.5.1.1}{}}
+\newlabel{eq:exponential_family@cref}{{[equation][1][5]5.1}{114}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Gradient ascent}{115}{subsection.5.1.2}}
+\newlabel{section:gradient_ascent}{{5.1.2}{115}{Gradient ascent}{subsection.5.1.2}{}}
+\newlabel{section:gradient_ascent@cref}{{[subsection][2][5,1]5.1.2}{115}}
+\newlabel{gradient_ascent}{{5.2}{115}{Gradient ascent}{equation.5.1.2}{}}
+\newlabel{gradient_ascent@cref}{{[equation][2][5]5.2}{115}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Stochastic gradient ascent}{115}{equation.5.1.2}}
+\newlabel{section:stochastic_gradient_ascent}{{5.1.2}{115}{Stochastic gradient ascent}{equation.5.1.2}{}}
+\newlabel{section:stochastic_gradient_ascent@cref}{{[subsection][2][5,1]5.1.2}{115}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Natural gradient ascent}{115}{equation.5.1.3}}
+\newlabel{section:natural_gradient_ascent}{{5.1.2}{115}{Natural gradient ascent}{equation.5.1.3}{}}
+\newlabel{section:natural_gradient_ascent@cref}{{[subsection][2][5,1]5.1.2}{115}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf  {Illustration of the problem of using the Euclidean norm as a distance measure between parameters of probability distributions}.  In both plots, the red and blue distributions are separated by the same Euclidean distance of 100. Yet, the distance in probability space between the two distributions is higher in the right. \relax }}{116}{figure.caption.70}}
+\newlabel{fig:mofa2_euclidean_distributions}{{5.1}{116}{\textbf {Illustration of the problem of using the Euclidean norm as a distance measure between parameters of probability distributions}.\\ In both plots, the red and blue distributions are separated by the same Euclidean distance of 100. Yet, the distance in probability space between the two distributions is higher in the right. \relax }{figure.caption.70}{}}
+\newlabel{fig:mofa2_euclidean_distributions@cref}{{[figure][1][5]5.1}{116}}
+\newlabel{natural_gradient}{{5.5}{117}{Natural gradient ascent}{equation.5.1.5}{}}
+\newlabel{natural_gradient@cref}{{[equation][5][5]5.5}{117}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Stochastic variational inference}{117}{subsection.5.1.3}}
+\newlabel{section:stochastic_variational_inference}{{5.1.3}{117}{Stochastic variational inference}{subsection.5.1.3}{}}
+\newlabel{section:stochastic_variational_inference@cref}{{[subsection][3][5,1]5.1.3}{117}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Model definition}{117}{subsection.5.1.3}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces \textbf  {Graphical model for a general probabilistic model where unobserved variables are classified as \textit  {global} and \textit  {local}.}  The dashed line indicates that the connection between \textit  {global} and \textit  {local} variables is optional, not used in the MOFA model. \relax }}{118}{figure.caption.71}}
+\newlabel{fig:graphical_model_stochastic}{{5.2}{118}{\textbf {Graphical model for a general probabilistic model where unobserved variables are classified as \textit {global} and \textit {local}.}\\ The dashed line indicates that the connection between \textit {global} and \textit {local} variables is optional, not used in the MOFA model. \relax }{figure.caption.71}{}}
+\newlabel{fig:graphical_model_stochastic@cref}{{[figure][2][5]5.2}{118}}
+\newlabel{eq_priors}{{5.7}{118}{Model definition}{equation.5.1.7}{}}
+\newlabel{eq_priors@cref}{{[equation][7][5]5.7}{118}}
+\newlabel{eq_complete_conditionals}{{5.8}{118}{Model definition}{equation.5.1.8}{}}
+\newlabel{eq_complete_conditionals@cref}{{[equation][8][5]5.8}{118}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Setting up the inference problem}{118}{equation.5.1.8}}
+\newlabel{eq_variational_distributions}{{5.9}{119}{Setting up the inference problem}{equation.5.1.9}{}}
+\newlabel{eq_variational_distributions@cref}{{[equation][9][5]5.9}{119}}
+\newlabel{eq_elbo_factorised}{{5.11}{119}{Setting up the inference problem}{equation.5.1.11}{}}
+\newlabel{eq_elbo_factorised@cref}{{[equation][11][5]5.11}{119}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Calculating the gradient for the \textit  {global} parameters}{119}{equation.5.1.11}}
+\newlabel{gradient_global}{{5.12}{119}{Calculating the gradient for the \textit {global} parameters}{equation.5.1.12}{}}
+\newlabel{gradient_global@cref}{{[equation][12][5]5.12}{119}}
+\newlabel{solution_global}{{5.13}{120}{Calculating the gradient for the \textit {global} parameters}{equation.5.1.13}{}}
+\newlabel{solution_global@cref}{{[equation][13][5]5.13}{120}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Calculating the gradient for the \textit  {local} parameters}{120}{equation.5.1.13}}
+\newlabel{gradient_local}{{5.14}{120}{Calculating the gradient for the \textit {local} parameters}{equation.5.1.14}{}}
+\newlabel{gradient_local@cref}{{[equation][14][5]5.14}{120}}
+\newlabel{solution_local}{{5.15}{120}{Calculating the gradient for the \textit {local} parameters}{equation.5.1.15}{}}
+\newlabel{solution_local@cref}{{[equation][15][5]5.15}{120}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Coordinate ascent variational inference algorithm}{120}{equation.5.1.15}}
+\@writefile{loa}{\defcounter {refsection}{0}\relax }\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Coordinate ascent variational inference algorithm\relax }}{120}{algorithm.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Deriving the natural gradients for the \textit  {global} variational parameters}{121}{algorithm.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Deriving the natural gradients for the \textit  {local} variational parameters}{121}{algorithm.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Stochastic variational inference algorithm using natural gradients}{121}{algorithm.1}}
 \@setckpt{Chapter4/introduction}{
-\setcounter{page}{117}
+\setcounter{page}{123}
 \setcounter{equation}{16}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
@@ -83,7 +80,7 @@
 \setcounter{parentequation}{0}
 \setcounter{Item}{0}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{87}
+\setcounter{bookmark@seq@number}{89}
 \setcounter{float@type}{16}
 \setcounter{algorithm}{2}
 \setcounter{ContinuedFloat}{0}
@@ -100,7 +97,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{574}
+\setcounter{instcount}{579}
 \setcounter{maxnames}{3}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}

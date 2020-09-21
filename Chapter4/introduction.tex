@@ -1,10 +1,10 @@
 \graphicspath{{Chapter4/Figs/simulations/}{Chapter4/Figs/scrna/}{Chapter4/Figs/scmet/}{Chapter4/Figs/scnmt/}}
 
-\chapter{MOFA+: an improved framework for the integration of structured single-cell data}
+\chapter{MOFA+: a statistical framework for the integration of large-scale structured data sets}
 
-In Chapter 2 we developed Multi-Omics Factor Analysis (MOFA), a statistical framework for the unsupervised integration of multi-omics data. MOFA addresses key challenges in data integration, including overfitting, noise reduction, handling of missing values and improved interpretation of the model output. However, when applied to increasingly-large single-cell genomics data sets, the variational inference scheme offers limited scalability. In addition, the increased experimental throughput has facilitated the simultaneous study of multiple conditions within the same experimental design \cite{Replogle2020}. However, MOFA makes strong independence assumptions about the dependencies across samples and it provides no principled strategy to model data sets where the samples are structured into multiple groups (i.e. batches, donors or even independent studies). In this new Chapter we improve the model formulation with the aim of performing integrative analysis of large-scale datasets where the features are structured into multiple data modalities (views) and the samples (or cells) are structured into different groups.
+In Chapter 3 we developed Multi-Omics Factor Analysis (MOFA), a statistical framework for the unsupervised integration of multi-omics data. MOFA addresses key challenges in data integration, including overfitting, noise reduction, handling of missing values and improved interpretation of the model output. However, when applied to increasingly-large single-cell genomics data sets, the variational inference scheme offers limited scalability. In addition, the increased experimental throughput has facilitated the simultaneous study of multiple conditions within the same experimental design \cite{Replogle2020}. However, MOFA makes strong independence assumptions about the dependencies across samples and it provides no principled strategy to model data sets where the samples are structured into multiple groups (i.e. batches, donors or even independent studies). In this Chapter we improve the model formulation with the aim of performing integrative analysis of large-scale datasets where the features are structured into multiple data modalities (views) and the samples (or cells) are structured into different groups.
 
-The work discussed in this chapter has been peer-reviewed and published in \cite{Argelaguet2020}. The project was conceived by Damien Arnol and me. The mathematical derivations and the implementation of the stochastic variational inference scheme was done together by Damien Arnol, Yonatan Deloro and me. I implemented the downstream analysis package, but with significant contributions from Danila Bredikhin. I generated most figures and I wrote the manuscript with feedback from all authors. John C. Marioni and Oliver Stegle supervised the project. 
+The work discussed in this Chapter has been peer-reviewed and published in \cite{Argelaguet2020}. The project was conceived by Damien Arnol and me. The mathematical derivations and the implementation of the stochastic variational inference scheme was done together by Damien Arnol, Yonatan Deloro and me. I implemented the downstream analysis package, but with significant contributions from Danila Bredikhin. I generated most figures and I wrote the manuscript with feedback from all authors. John C. Marioni and Oliver Stegle supervised the project. 
 
 \section{Theoretical foundations}
 
@@ -52,7 +52,7 @@ Beta distribution:
 	& A(\theta) = \log(\Gamma(\eta_1)) +\log(\Gamma(\eta_2)) - \log(\Gamma(\eta_1+\eta_2))
 \end{align*}
 
-In the context of Bayesian inference, the main property that make exponential family distributions indispensable is that they have conjugate priors. That is, the combination of likelihood and prior distributions ensure a closed-form posterior distribution which is of the same form as the prior. As we have discussed in Chapter 2, this property is essential for enabling efficient statistical inference, otherwise posterior distributions must be computed using expensive and approximate numerical methods.
+In the context of Bayesian inference, the main property that make exponential family distributions indispensable is that they have conjugate priors. That is, the combination of likelihood and prior distributions ensure a closed-form posterior distribution which is of the same form as the prior. As we have discussed in Chapter 3, this property is essential for enabling efficient statistical inference, otherwise posterior distributions must be computed using expensive and approximate numerical methods.
 
 
 \subsection{Gradient ascent} \label{section:gradient_ascent}
@@ -147,7 +147,7 @@ In conclusion, while the standard gradient points to the direction of steepest a
 
 \subsection{Stochastic variational inference} \label{section:stochastic_variational_inference}
 
-In this section I will demonstrate how to derive a stochastic variational inference algorithm for general Bayesian models. This work is inspired and adapted from \cite{Hoffman2012}. A comprehensive mathematical derivation of the algorithm is not sought in this chapter, instead I will describe a modified and simplified derivation that captures the gist of the original. For a complete mathematical derivation we refer the reader to \cite{Hoffman2012}.
+In this section I will demonstrate how to derive a stochastic variational inference algorithm for general Bayesian models. This work is inspired and adapted from \cite{Hoffman2012}. A comprehensive mathematical derivation of the algorithm is not sought in this Chapter, instead I will describe a modified and simplified derivation that captures the gist of the original. For a complete mathematical derivation we refer the reader to \cite{Hoffman2012}.
 
 This section builds upon three theoretical foundations that have been introduced before: Variational inference (\Cref{section:variational_inference}), exponential family distributions (\Cref{section:exponential_family}) and (natural) gradient ascent (\Cref{section:gradient_ascent}).
 
@@ -225,7 +225,7 @@ and belong to the same exponential family as the corresponding prior distributio
 \end{align}
 where $\lambda$ are the parameters governing the variational distribution for the \textit{global} variables and $\phi_{nk}$ are the parameters governing the variational distribution for the $k$-th \textit{local} variable and the $n$-th sample.
 
-From the assumptions above, the ELBO (the objective function in variational inference, introduced in Chapter 2) factorises as:
+From the assumptions above, the ELBO (the objective function in variational inference, introduced in Chapter 3) factorises as:
 \begin{align} \label{eq_elbo_factorised} \begin{split}
 	\Lagr &= \E_{q(\bfZ,\beta)}[\log p(\bfY,\bfZ,\beta)] - \E_{q(\bfZ)}[\log q(\bfZ)] - \E_{q(\beta)}[\log q(\beta)] \\
 	 &= \sum_{n=1}^{N} \E_{q(\bfz_n,\beta)}[\log p(\bfy_n,\bfz_n,\beta)] - \sum_{n=1}^{N} \sum_{k=1}^{K} \E_{q(z_{nk})}[\log q(z_{nk})] - \E_{q(\beta)}[\log q(\beta)]
@@ -288,7 +288,7 @@ and setting it to zero leads to the following solution:
 
 Now that we have the gradients for both the \textit{local} and the \textit{global} parameters, we can define a gradient ascent algorithm to optimise the model:
 
-\begin{algorithm}
+\begin{algorithm*}
   \caption{Coordinate ascent variational inference algorithm}
   \begin{algorithmic}[1]
 	\State Initialise the \textit{global} parameters $\blambda^{(t=0)}$
@@ -301,7 +301,7 @@ Now that we have the gradients for both the \textit{local} and the \textit{globa
       	\EndFor
 	\Until{Convergence}
 	\end{algorithmic}
-\end{algorithm}
+\end{algorithm*}
 
 However, as discussed in \Cref{section:natural_gradient_ascent}, the use of Euclidean-based gradients ignores important information about the geometry of the distribution and is thus not optimal for the optimisation of probabilistic models. Next, we will derive a similar coordinate ascent algorithm but using instead the natural gradient.
 
@@ -336,7 +336,7 @@ Remarkably, the natural gradient for both the \textit{local} and \textit{global}
 
 After replacing the Euclidean gradient with the natural gradients, the model can be trained using the following stochastic algorithm: 
 
-\begin{algorithm}[H]
+\begin{algorithm*}[H]
   \caption{Stochastic variational inference algorithm using natural gradients}
   \begin{algorithmic}[1]
 	\State Initialise the \textit{global} parameters $\blambda^{(t=0)}$.
@@ -356,9 +356,7 @@ After replacing the Euclidean gradient with the natural gradients, the model can
       	\EndFor
 	\Until{Convergence}
 	\end{algorithmic}
-\end{algorithm}
-
-%TO-DO: EXPLANATION AND SIMPLIFICATION
+\end{algorithm*}
 
 Notice that the stochastic nature of the algorithm introduces additional hyperparameters:
 

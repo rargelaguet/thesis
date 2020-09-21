@@ -10,7 +10,6 @@ We simulated data with varying sample sizes, with the other dimensions fixed to 
 
 We trained a set of models with (deterministic) variational inference (VI) and a set of models with stochastic variational inference (SVI). Overall, we observe that SVI yields Evidence Lower Bounds that are comparable to those obtained from VI across a range of batch sizes, learning rates and forgetting rates (\Cref{fig:mofa2_stochastic_validation}). In terms of speed, GPU-accelerated SVI inference is up to $\approx$ 20x faster than VI, with speed differences becoming more pronounced with increasing number of cells (\Cref{fig:mofa2_stochastic_speed}). For completeness, we also compared the convergence time estimates for SVI when using CPU versus GPU. We observe that for large sample sizes there is a speed improvement even when using CPUs, although these advantages become more prominent when using GPUs.
 
-% COPIED
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.00\linewidth]{mofa2_stochastic_validation}
@@ -22,10 +21,9 @@ We trained a set of models with (deterministic) variational inference (VI) and a
 	\label{fig:mofa2_stochastic_validation}
 \end{figure}
 
-% COPIED
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_stochastic_speed}
+	\includegraphics[width=0.95\linewidth]{mofa2_stochastic_speed}
 	\caption[]{
 	\textbf{Evaluation of convergence speed for stochastic variational inference using simulated data.} \\
 	Bar plots show the time elapsed for training MOFA+ models usign SVI. Colours represent different batch sizes (10\%, 25\% or 50\%). The dashed line indicates the training time for standard VI. CPU models were trained using a single E5-2680v3. GPU models were trained an Nvidia GTX 1080Ti (second column). 
@@ -55,7 +53,7 @@ We evaluated whether the new model formultion improves the detection of factors 
 
 \subsection{Integration of a heterogeneous time-course single-cell RNA-seq dataset}
 
-To demonstrate the novel multi-group integration framework, we considered a time course scRNA-seq dataset comprising 16,152 cells that were isolated from a total of 8 mouse embryos from developmental stages E6.5, E7.0 and E7.25 (two biological replicates per stage), encompassing post-implantation and early gastrulation \cite{Pijuan-Sala2019}. This data set, which has been introduced in Chapter 3, consists of a single view but with a clear group structure where cells belongs to different biological replicates at different developmental time points. Different embryos are expected to contain similar subpopulations of cells but also some differences due to developmental progression. As a proof of principle, we used MOFA+ to disentangle stage-specific transcriptional signatures from signatures that are shared across all stages. Although in principle one could employ the MOFA+ factors for clustering and cell type annotation, here we adopted the cell type definitions described in \cite{Pijuan-Sala2019}.
+To demonstrate the novel multi-group integration framework, we considered a time course scRNA-seq dataset comprising 16,152 cells that were isolated from a total of 8 mouse embryos from developmental stages E6.5, E7.0 and E7.25 (two biological replicates per stage), encompassing post-implantation and early gastrulation \cite{Pijuan-Sala2019}. This data set, which has been introduced in Chapter 4, consists of a single view but with a clear group structure where cells belongs to different biological replicates at different developmental time points. Different embryos are expected to contain similar subpopulations of cells but also some differences due to developmental progression. As a proof of principle, we used MOFA+ to disentangle stage-specific transcriptional signatures from signatures that are shared across all stages. Although in principle one could employ the MOFA+ factors for clustering and cell type annotation, here we adopted the cell type definitions described in \cite{Pijuan-Sala2019}.
 
 MOFA+ identified 7 Factors that explain at least 1\% of variance in a group and all together capture between 35\% and 55\% of the total transcriptional heterogeneity per embryo (\Cref{fig:mofa2_scrna_variance_explained}).
 
@@ -77,7 +75,7 @@ Some factors recover the existence of post-implantation developmental cell types
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scrna_ExE_endoderm_factor}
+	\includegraphics[width=0.95\linewidth]{mofa2_scrna_ExE_endoderm_factor}
 	\caption[]{
 	\textbf{Characterisation of Factor 1 as extra-embryonic (ExE) endoderm formation.} \\
 	(a) Beeswarm plot of Factor values for each group. Cells are grouped and coloured by cell type. \\
@@ -89,7 +87,7 @@ Some factors recover the existence of post-implantation developmental cell types
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scrna_ExE_ectoderm_factor}
+	\includegraphics[width=0.95\linewidth]{mofa2_scrna_ExE_ectoderm_factor}
 	\caption[]{
 	\textbf{Characterisation of Factor 2 as extra-embryonic (ExE) ectoderm formation.} \\
 	(a) Beeswarm plot of Factor values for each group. Cells are grouped and coloured by cell type. \\
@@ -101,7 +99,7 @@ Some factors recover the existence of post-implantation developmental cell types
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scrna_metabolism_factor}
+	\includegraphics[width=0.95\linewidth]{mofa2_scrna_metabolism_factor}
 	\caption[]{\textbf{Characterisation of Factor 3 as cell-to-cell differences in metabolic activity.} \\
 	(a) Beeswarm plot of Factor values for each group. Cells are grouped and coloured by cell type. \\
 	(b) Plot of gene weights. Highlighted are the top seven genes with largest weight (in absolute values) \\
@@ -112,7 +110,7 @@ Some factors recover the existence of post-implantation developmental cell types
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scrna_mesoderm_factor}
+	\includegraphics[width=0.95\linewidth]{mofa2_scrna_mesoderm_factor}
 	\caption[]{\textbf{Characterisation of Factor 4 as mesoderm commitment.} \\
 	(a) Beeswarm plot of Factor values for each group. Cells are grouped and coloured by cell type. \\
 	(b) Plot of gene weights. Highlighted are the top five genes with largest weight (in absolute values) \\
@@ -140,7 +138,7 @@ In conclusion, this application shows how MOFA+ can identify biologically releva
 
 % \begin{figure}[H]
 % 	\centering
-% 	\includegraphics[width=0.85\linewidth]{mofa2_scmet_datastructure}
+% 	\includegraphics[width=0.95\linewidth]{mofa2_scmet_datastructure}
 % 	\caption[]{\textbf{Overview of the single-cell DNA methylation data set.}\\
 % 	The tile plot shows the structure of the input data in terms of views (rows) versus groups (columns), with associated dimensionalities (D for features, N for samples). The color displays the fraction of missing values for each combination of sample and view.}
 % 	\label{fig:mofa2_scmet_datastructure}
@@ -209,16 +207,15 @@ In conclusion, this application shows how MOFA+ can identify biologically releva
 
 \subsection{Identification of molecular signatures of lineage commitment during mammalian embryogenesis}
 
-As a second application, I considered the multi-omic atlas of mouse gastrulation introduced in Chapter 3 where scNMT-seq was used to profile RNA expression, DNA methylation and chromatin accessibility in 1,828 cells at multiple stages of development \cite{Argelaguet2019}. sThe main difference with respect to the MOFA analysis presented in Chapter 3 (\Cref{section:mofa_gastrulation}) is that with MOFA+ we can employ the multi-group functionality to perform a simultaneous analysis across multiple stages, instead of focusing only on stage E7.5.
+As a second application, I considered the multi-omic atlas of mouse gastrulation introduced in Chapter 4 where scNMT-seq was used to profile RNA expression, DNA methylation and chromatin accessibility in 1,828 cells at multiple stages of development \cite{Argelaguet2019}. The main difference with respect to the MOFA analysis presented in Chapter 4 (\Cref{section:mofa_gastrulation}) is that with MOFA+ we can employ the multi-group functionality to perform a simultaneous analysis across multiple stages, instead of focusing only on stage E7.5.
 
 \subsubsection{Data processing}
 
-As input to the model we quantified DNA methylation and chromatin accessibility values over two sets of regulatory elements: gene promoters and enhancer elements (distal H3K27ac sites). RNA expression was quantified over protein-coding genes. More details on the feature quantification and data processing steps are described in Chapter 3.\\
-We defined separate views for the RNA expression and for each combination of genomic context and epigenetic readout. Cells were grouped according to their developmental stage (E5.5, E6.5 and E7.5), reflecting the underlying experimental design \cite{Argelaguet2019} (\Cref{fig:mofa2_scnmt_datastructure}). Note that the CpG methylation (endogenous DNA methylation) and GpC methylation (proxy for chromatin accessibility) readouts result in very sparse matrices that are challenging to analyse with standard statistical methods.
+As input to the model we quantified DNA methylation and chromatin accessibility values over two sets of regulatory elements: gene promoters and enhancer elements (distal H3K27ac sites). RNA expression was quantified over protein-coding genes. More details on the feature quantification and data processing steps are described in Chapter 4. We defined separate views for the RNA expression and for each combination of genomic context and epigenetic readout. Cells were grouped according to their developmental stage (E5.5, E6.5 and E7.5), reflecting the underlying experimental design \cite{Argelaguet2019} (\Cref{fig:mofa2_scnmt_datastructure}). Note that the CpG methylation (endogenous DNA methylation) and GpC methylation (proxy for chromatin accessibility) readouts result in very sparse matrices that are challenging to analyse with standard statistical methods.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scnmt_datastructure}
+	\includegraphics[width=0.95\linewidth]{mofa2_scnmt_datastructure}
 	\caption[]{
 	\textbf{Overview of the scNMT-seq mouse gastrulation data set used as input for MOFA+.}\\
 	(a) Structure of the input data in terms of views (y-axis) versus samples (x-axis). Each panel corresponds to a different group (embryonic stage). Grey bars represent missing views. \\
@@ -233,7 +230,7 @@ In this data set MOFA+ identified 8 largely orthogonal factors with a minimum va
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\linewidth]{mofa2_scnmt_modeloverview}
+	\includegraphics[width=0.95\linewidth]{mofa2_scnmt_modeloverview}
 	\caption[]{
 	\textbf{MOFA+ application to the scNMT-seq gastrulation data set: model overview.} \\
 	(a) Cumulative variance explained (per view, y-axis) versus factor number (x-axis). Asterisks indicate the factors that are selected for downstream analysis (minimum of 1\% variance explained in the RNA expression). Note that the variance estimates shown here are the sum across all groups. \\
@@ -247,7 +244,7 @@ In this data set MOFA+ identified 8 largely orthogonal factors with a minimum va
 
 Factor 1 captured the formation of ExE endoderm, a cell type that is present across all stages (\Cref{fig:mofa2_scnmt_factors12}a), in agreement with our previous results using the independently generated scRNA-seq atlas of mouse gastrulation (\Cref{fig:mofa2_scrna_ExE_endoderm_factor}). This Factor is associated to widespread changes across al molecular layers, most notably DNA methylation (up to 15\% variance explained). For both promoters and enhances, the distribution of weights for DNA methylation are skewed towards negative values. This suggests that most features are uniformly affected by this Factor, such that lower methylation levels are observed in ExE endoderm cells. This is consistent with previous studies that have shown that ExE endoderm cells are characterised by a state of global demethylation\cite{Zhang2017,Argelaguet2019}. The weights for chromatin accessibility are not skewed towards one direction, indicating that accessibility changes are not uniform and the state of global demethylation in ExE endoderm cells is not necessarily associated with a (globally) more open chromatin state.
 
-The next two factors, Factor 2 and Factor 3, captured the molecular variation associated with the formation of the primary germ layers at E7.5: mesoderm (Factor 2, \Cref{fig:mofa2_scnmt_factors12}b), and embryonic endoderm (Factor 3, not shown). As with Factor 1, MOFA+ connects transcriptome variation to changes in DNA methylation and chromatin accessibility, but only at stage E7.5, when the germ layers are known to emerge. Nevertheless, there is a striking difference between Factor 1 and Factor 2. The variance decomposition analysis and the distribution of weights indicate that the epigenetic dynamics are mostly driven by enhancer elements. This is consistent with our results from Chapter 3 where we showed that little coordinated variation is observed in promoters, even for genes that show strong differential expression between germ layers.
+The next two factors, Factor 2 and Factor 3, captured the molecular variation associated with the formation of the primary germ layers at E7.5: mesoderm (Factor 2, \Cref{fig:mofa2_scnmt_factors12}b), and embryonic endoderm (Factor 3, not shown). As with Factor 1, MOFA+ connects transcriptome variation to changes in DNA methylation and chromatin accessibility, but only at stage E7.5, when the germ layers are known to emerge. Nevertheless, there is a striking difference between Factor 1 and Factor 2. The variance decomposition analysis and the distribution of weights indicate that the epigenetic dynamics are mostly driven by enhancer elements. This is consistent with our results from Chapter 4 where we showed that little coordinated variation is observed in promoters, even for genes that show strong differential expression between germ layers.
 
 % COPIED
 \begin{figure}[H]

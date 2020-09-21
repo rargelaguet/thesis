@@ -1,73 +1,73 @@
 \thispagestyle {empty}
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Overview}{1}{chapter.1}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Profiling multi-omics at single-cell resolution}{1}{section.1.1}
+\contentsline {section}{\numberline {1.1}Introduction to single-cell sequencing}{1}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Single-cell data analysis}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.1.1}Single-cell RNA sequencing}{1}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}Read alignment and gene expression quantification}{3}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.1.2}Single-cell sequencing of the epigenome}{2}{subsection.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.2}Quality control}{3}{subsection.1.2.2}
+\contentsline {subsubsection}{DNA methylation}{2}{subsection.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.3}Normalisation}{3}{subsection.1.2.3}
+\contentsline {subsubsection}{Chromatin accessibility}{3}{subsection.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.4}Dimensionality reduction}{4}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.1.3}Multi-modal single-cell sequencing}{5}{subsection.1.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.5}Clustering}{5}{subsection.1.2.5}
+\contentsline {section}{\numberline {1.2}Single-cell data analysis}{6}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.6}Inference of developmental trajectories}{5}{subsection.1.2.6}
+\contentsline {subsection}{\numberline {1.2.1}Read alignment and gene expression quantification}{7}{subsection.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Integrative analysis}{5}{section.1.3}
+\contentsline {subsection}{\numberline {1.2.2}Quality control}{7}{subsection.1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.1}Defining the common coordinate framework}{6}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.2.3}Normalisation}{7}{subsection.1.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.2}Defining the methodology}{7}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.2.4}Dimensionality reduction}{8}{subsection.1.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Horizontal integration}{8}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.2.5}Clustering}{9}{subsection.1.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Vertical integration}{9}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.2.6}Inference of developmental trajectories}{9}{subsection.1.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Diagonal integration}{11}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.3}Integrative analysis of single-cell omics}{9}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Thesis overview}{12}{section.1.4}
+\contentsline {subsection}{\numberline {1.3.1}Defining the common coordinate framework}{9}{subsection.1.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Joint profiling of chromatin accessibility DNA methylation and transcription in single cells}{15}{chapter.2}
+\contentsline {subsection}{\numberline {1.3.2}Challenges of data integration}{11}{subsection.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Introduction to single-cell sequencing}{15}{section.2.1}
+\contentsline {subsection}{\numberline {1.3.3}Defining the methodology}{13}{subsection.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Single-cell RNA sequencing}{15}{subsection.2.1.1}
+\contentsline {subsubsection}{Horizontal integration}{14}{subsection.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Single-cell sequencing of the epigenome}{16}{subsection.2.1.2}
+\contentsline {subsubsection}{Vertical integration}{15}{subsection.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{DNA methylation}{16}{subsection.2.1.2}
+\contentsline {subsubsection}{Diagonal integration}{16}{subsection.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Chromatin accessibility}{17}{subsection.2.1.2}
+\contentsline {section}{\numberline {1.4}Thesis overview}{17}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.3}Multi-modal single-cell sequencing}{19}{subsection.2.1.3}
+\contentsline {chapter}{\numberline {2}Joint profiling of chromatin accessibility DNA methylation and transcription in single cells}{19}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Joint profiling of chromatin accessibility, DNA methylation and RNA expression in single cells}{21}{section.2.2}
+\contentsline {section}{\numberline {2.1}Description of the experimental protocol}{19}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Description of the experimental protocol}{21}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.2}Description of the data processing pipeline}{21}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Description of the data processing pipeline}{23}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Data validation}{21}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Data validation}{23}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Coverage}{21}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Coverage}{23}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.3.2}Consistency with previous studies}{23}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Consistency with previous studies}{25}{figure.caption.8}
+\contentsline {subsection}{\numberline {2.3.3}Quantification of DNA methylation and chromatin accessibility in known regulatory regions}{24}{subsection.2.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.4}Quantification of DNA methylation and chromatin accessibility in known regulatory regions}{25}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.3.4}Quantification of the association between molecular layers.}{25}{subsection.2.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.5}Quantification of the association between molecular layers.}{26}{subsection.2.2.5}
+\contentsline {section}{\numberline {2.4}Application to an embryoid body differentiation data set}{26}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.6}Identification of genomic elements with coordinated variability across molecular layers}{27}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.4.1}Identification of genomic elements with coordinated variability across molecular layers}{26}{subsection.2.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.7}Exploration of epigenome connections along a developmental trajectory}{29}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.4.2}Exploration of epigenome and transcriptome connections}{28}{subsection.2.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Conclusions and open perspectives}{30}{section.2.3}
+\contentsline {section}{\numberline {2.5}Conclusions and open perspectives}{29}{section.2.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Multi-Omics Factor Analysis (MOFA), a Bayesian model for integration of multi-omics data}{33}{chapter.3}
 \defcounter {refsection}{0}\relax 
@@ -91,21 +91,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Fixed-form variational inference}{39}{equation.3.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.7}Expectation Propagation}{39}{subsection.3.1.7}
+\contentsline {subsection}{\numberline {3.1.7}Expectation Propagation}{40}{subsection.3.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Conclusions}{40}{figure.caption.18}
+\contentsline {subsubsection}{Conclusions}{41}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.8}Latent variable models for genomics}{41}{subsection.3.1.8}
+\contentsline {subsection}{\numberline {3.1.8}Latent variable models for genomics}{42}{subsection.3.1.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Mathematical formulation}{41}{subsection.3.1.8}
+\contentsline {subsubsection}{Mathematical formulation}{42}{subsection.3.1.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.9}Principal Component Analysis}{42}{subsection.3.1.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.10}Probabilistic Principal Component Analysis and Factor Analysis}{44}{subsection.3.1.10}
+\contentsline {subsection}{\numberline {3.1.10}Probabilistic Principal Component Analysis and Factor Analysis}{45}{subsection.3.1.10}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.11}Bayesian Principal Component Analysis and Bayesian Factor Analysis}{46}{subsection.3.1.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.12}Hierarchical priors}{46}{subsection.3.1.12}
+\contentsline {subsection}{\numberline {3.1.12}Hierarchical priors}{47}{subsection.3.1.12}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Automatic relevance determination}{47}{subsection.3.1.12}
 \defcounter {refsection}{0}\relax 
@@ -113,214 +113,230 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.13}Multi-view factor analysis models}{49}{subsection.3.1.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.14}Canonical Correlation Analysis}{49}{subsection.3.1.14}
+\contentsline {subsection}{\numberline {3.1.14}Canonical Correlation Analysis}{50}{subsection.3.1.14}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Probabilistic Canonical Correlation Analysis}{50}{subsection.3.1.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Bayesian Canonical Correlation Analysis}{51}{figure.caption.24}
+\contentsline {subsubsection}{Bayesian Canonical Correlation Analysis}{52}{figure.caption.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.15}Group Factor Analysis}{52}{subsection.3.1.15}
+\contentsline {subsection}{\numberline {3.1.15}Group Factor Analysis}{53}{subsection.3.1.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Model description}{54}{section.3.2}
+\contentsline {section}{\numberline {3.2}Model description}{55}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Mathematical formulation}{54}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.1}Mathematical formulation}{55}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Prior distributions for the factors}{54}{equation.3.2.22}
+\contentsline {subsubsection}{Prior distributions for the factors}{55}{equation.3.2.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Prior distributions for the weights}{54}{equation.3.2.23}
+\contentsline {subsubsection}{Prior distributions for the weights}{55}{equation.3.2.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Interpretation of the factors}{56}{figure.caption.27}
+\contentsline {subsubsection}{Interpretation of the factors}{57}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Interpretation of the weights}{56}{figure.caption.27}
+\contentsline {subsubsection}{Interpretation of the weights}{57}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Missing values}{57}{figure.caption.27}
+\contentsline {subsubsection}{Missing values}{58}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Downstream analysis}{57}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Downstream analysis}{58}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Inference}{58}{figure.caption.28}
+\contentsline {subsubsection}{Inference}{59}{figure.caption.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}Model selection and consistency across random initilizations}{58}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.3}Model selection and consistency across random initilizations}{59}{subsection.3.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.4}Learning the number of factors}{59}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.4}Learning the number of factors}{60}{subsection.3.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.5}Monitoring convergence}{60}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.5}Monitoring convergence}{61}{subsection.3.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.6}Modelling and inference with non-Gaussian data}{60}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.6}Modelling and inference with non-Gaussian data}{62}{subsection.3.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.7}Theoretical comparison with published methods}{64}{subsection.3.2.7}
+\contentsline {subsection}{\numberline {3.2.7}Theoretical comparison with published methods}{65}{subsection.3.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Model validation with simulated data}{65}{section.3.3}
+\contentsline {section}{\numberline {3.3}Model validation with simulated data}{66}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Recovery of simulated factors}{65}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.1}Recovery of simulated factors}{66}{subsection.3.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{View-wise sparsity on the weights}{65}{figure.caption.33}
+\contentsline {subsubsection}{View-wise sparsity on the weights}{67}{figure.caption.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Feature-wise sparsity on the weights}{66}{figure.caption.34}
+\contentsline {subsubsection}{Feature-wise sparsity on the weights}{67}{figure.caption.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Non-Gaussian likelihoods}{67}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Non-Gaussian likelihoods}{68}{subsection.3.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.3}Scalability}{68}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.3}Scalability}{70}{subsection.3.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Application to a cohort of Chronic Lymphocytic Leukaemia patients}{70}{section.3.4}
+\contentsline {section}{\numberline {3.4}Application to a cohort of Chronic Lymphocytic Leukaemia patients}{71}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Data overview and processing}{70}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.1}Data overview and processing}{71}{subsection.3.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}Model overview}{71}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.2}Model overview}{72}{subsection.3.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.3}Molecular characterisation of Factor 1}{72}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.3}Molecular characterisation of Factor 1}{74}{subsection.3.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.4}Molecular characterisation of other factors}{73}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.4}Molecular characterisation of other factors}{75}{subsection.3.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.5}Prediction of clinical outcomes}{74}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.5}Prediction of clinical outcomes}{76}{subsection.3.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.6}Imputation of missing values}{75}{subsection.3.4.6}
+\contentsline {subsection}{\numberline {3.4.6}Imputation of missing values}{77}{subsection.3.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Application to single-cell multi-omics}{77}{section.3.5}
+\contentsline {section}{\numberline {3.5}Application to single-cell multi-omics}{79}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.1}Data processing}{77}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.1}Data processing}{79}{subsection.3.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.2}Model overview}{77}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.2}Model overview}{79}{subsection.3.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Limitations and open perspectives}{79}{section.3.6}
+\contentsline {section}{\numberline {3.6}Limitations and open perspectives}{81}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Multi-omics profiling of mouse gastrulation at single-cell resolution}{81}{chapter.4}
+\contentsline {chapter}{\numberline {4}Multi-omics profiling of mouse gastrulation at single-cell resolution}{83}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Introduction}{81}{section.4.1}
+\contentsline {section}{\numberline {4.1}Introduction}{83}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Transcriptomic studies}{82}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.1}Transcriptomic studies}{84}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Epigenetic studies}{82}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}Epigenetic studies}{84}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Pre-implantation: establishment of the pluripotent state}{82}{subsection.4.1.2}
+\contentsline {subsubsection}{Pre-implantation: establishment of the pluripotent state}{84}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Post-implantation: exit of pluripotency}{83}{subsection.4.1.2}
+\contentsline {subsubsection}{Post-implantation: exit of pluripotency}{85}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Gastrulation: germ layer specification}{84}{subsection.4.1.2}
+\contentsline {subsubsection}{Gastrulation: germ layer specification}{86}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Results}{85}{section.4.2}
+\contentsline {section}{\numberline {4.2}Results}{87}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Data set overview}{85}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.1}Data set overview}{87}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Cell type assignment using the RNA expression data}{85}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}Cell type assignment using the RNA expression data}{88}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}Validation of DNA methylation data and chromatin accessibility data}{86}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.3}Validation of DNA methylation data and chromatin accessibility data}{89}{subsection.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.4}Exit from pluripotency is concomitant with the establishment of a repressive epigenetic landscape}{87}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.4}Exit from pluripotency is concomitant with the establishment of a repressive epigenetic landscape}{90}{subsection.4.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.5}Multi-omics factor analysis reveals coordinated variability between the transcriptome and the epigenome during germ layer formation}{89}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.5}Multi-omics factor analysis reveals coordinated variability between the transcriptome and the epigenome during germ layer formation}{92}{subsection.4.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Data preprocessing}{90}{figure.caption.52}
+\contentsline {subsubsection}{Data preprocessing}{93}{figure.caption.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Summary of the MOFA output}{91}{figure.caption.53}
+\contentsline {subsubsection}{Summary of the MOFA output}{94}{figure.caption.53}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.6}Differential DNA methylation and chromatin accessibility analysis}{91}{subsection.4.2.6}
+\contentsline {subsection}{\numberline {4.2.6}Differential DNA methylation and chromatin accessibility analysis}{95}{subsection.4.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Characterisation of individual enhancers}{93}{figure.caption.56}
+\contentsline {subsubsection}{Characterisation of individual enhancers}{97}{figure.caption.56}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.7}Transcription factor motif enrichment analysis}{95}{subsection.4.2.7}
+\contentsline {subsection}{\numberline {4.2.7}Transcription factor motif enrichment analysis}{99}{subsection.4.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.8}Time resolution of the enhancer epigenome}{95}{subsection.4.2.8}
+\contentsline {subsection}{\numberline {4.2.8}Time resolution of the enhancer epigenome}{99}{subsection.4.2.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Mesoderm and endoderm enhancers undergo concerted demethylation and chromatin opening upon lineage specification}{96}{figure.caption.60}
+\contentsline {subsubsection}{Mesoderm and endoderm enhancers undergo concerted demethylation and chromatin opening upon lineage specification}{101}{figure.caption.60}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Ectoderm enhancers are primed in the early epiblast}{97}{figure.caption.60}
+\contentsline {subsubsection}{Ectoderm enhancers are primed in the early epiblast}{101}{figure.caption.60}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Silencing of ectoderm enhancers precedes mesoderm and endoderm commitment}{99}{figure.caption.63}
+\contentsline {subsubsection}{Silencing of ectoderm enhancers precedes mesoderm and endoderm commitment}{104}{figure.caption.63}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.9}TET enzymes are required for efficient demethylation of lineage-defining enhancers in embryoid bodies}{100}{subsection.4.2.9}
+\contentsline {subsection}{\numberline {4.2.9}TET enzymes are required for efficient demethylation of lineage-defining enhancers in embryoid bodies}{106}{subsection.4.2.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Cell type assignment using the RNA expression}{101}{subsection.4.2.9}
+\contentsline {subsubsection}{Cell type assignment using the RNA expression}{107}{subsection.4.2.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Validation of epigenetic measurements}{102}{figure.caption.66}
+\contentsline {subsubsection}{Validation of epigenetic measurements}{108}{figure.caption.66}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Characterisation of the \textit {TET} TKO phenotype}{103}{figure.caption.68}
+\contentsline {subsubsection}{Characterisation of the \textit {TET} TKO phenotype}{110}{figure.caption.68}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Conclusions, limitations and future perspectives}{105}{section.4.3}
+\contentsline {section}{\numberline {4.3}Conclusions, limitations and future perspectives}{111}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}MOFA+: an improved framework for the integration of structured single-cell data}{107}{chapter.5}
+\contentsline {chapter}{\numberline {5}MOFA+: a statistical framework for the integration of large-scale structured data sets}{113}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Theoretical foundations}{107}{section.5.1}
+\contentsline {section}{\numberline {5.1}Theoretical foundations}{113}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Exponential family distributions}{107}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.1}Exponential family distributions}{113}{subsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Gradient ascent}{109}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.2}Gradient ascent}{115}{subsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Stochastic gradient ascent}{109}{equation.5.1.2}
+\contentsline {subsubsection}{Stochastic gradient ascent}{115}{equation.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Natural gradient ascent}{109}{equation.5.1.3}
+\contentsline {subsubsection}{Natural gradient ascent}{115}{equation.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.3}Stochastic variational inference}{111}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.3}Stochastic variational inference}{117}{subsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Model definition}{111}{subsection.5.1.3}
+\contentsline {subsubsection}{Model definition}{117}{subsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Setting up the inference problem}{112}{equation.5.1.8}
+\contentsline {subsubsection}{Setting up the inference problem}{118}{equation.5.1.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Calculating the gradient for the \textit {global} parameters}{113}{equation.5.1.11}
+\contentsline {subsubsection}{Calculating the gradient for the \textit {global} parameters}{119}{equation.5.1.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Calculating the gradient for the \textit {local} parameters}{114}{equation.5.1.13}
+\contentsline {subsubsection}{Calculating the gradient for the \textit {local} parameters}{120}{equation.5.1.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Coordinate ascent variational inference algorithm}{114}{equation.5.1.15}
+\contentsline {subsubsection}{Coordinate ascent variational inference algorithm}{120}{equation.5.1.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Deriving the natural gradients for the \textit {global} variational parameters}{115}{algorithm.1}
+\contentsline {subsubsection}{Deriving the natural gradients for the \textit {global} variational parameters}{121}{algorithm.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Deriving the natural gradients for the \textit {local} variational parameters}{115}{algorithm.1}
+\contentsline {subsubsection}{Deriving the natural gradients for the \textit {local} variational parameters}{121}{algorithm.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Stochastic variational inference algorithm using natural gradients}{115}{algorithm.1}
+\contentsline {subsubsection}{Stochastic variational inference algorithm using natural gradients}{121}{algorithm.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Model description}{117}{section.5.2}
+\contentsline {section}{\numberline {5.2}Model description}{123}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Model priors and likelihood}{118}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.1}Model priors and likelihood}{124}{subsection.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Prior on the weights}{118}{subsection.5.2.1}
+\contentsline {subsubsection}{Prior on the weights}{124}{subsection.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Prior on the factors}{119}{equation.5.2.20}
+\contentsline {subsubsection}{Prior on the factors}{125}{equation.5.2.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Prior on the noise}{119}{equation.5.2.24}
+\contentsline {subsubsection}{Prior on the noise}{125}{equation.5.2.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Graphical model}{119}{equation.5.2.26}
+\contentsline {subsubsection}{Graphical model}{126}{equation.5.2.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Guidelines on the definition of views and groups}{120}{figure.caption.73}
+\contentsline {subsubsection}{Guidelines on the definition of views and groups}{126}{figure.caption.73}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Model selection}{120}{figure.caption.73}
+\contentsline {subsubsection}{Model selection}{127}{figure.caption.73}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}A note on the implementation}{121}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.2}A note on the implementation}{127}{subsection.5.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Model validation}{122}{section.5.3}
+\contentsline {section}{\numberline {5.3}Model validation}{128}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Stochastic variational inference}{122}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.1}Stochastic variational inference}{128}{subsection.5.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Multi-group inference}{123}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.2}Multi-group inference}{129}{subsection.5.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Applications}{124}{section.5.4}
+\contentsline {section}{\numberline {5.4}Applications}{130}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.1}Integration of a heterogeneous time-course single-cell RNA-seq dataset}{124}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.1}Integration of a heterogeneous time-course single-cell RNA-seq dataset}{130}{subsection.5.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Characterisation of individual factors}{125}{figure.caption.78}
+\contentsline {subsubsection}{Characterisation of individual factors}{131}{figure.caption.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.2}Identification of molecular signatures of lineage commitment during mammalian embryogenesis}{127}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.2}Identification of molecular signatures of lineage commitment during mammalian embryogenesis}{135}{subsection.5.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Data processing}{127}{subsection.5.4.2}
+\contentsline {subsubsection}{Data processing}{136}{subsection.5.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Model overview}{128}{figure.caption.83}
+\contentsline {subsubsection}{Model overview}{136}{figure.caption.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Characterisation of the MOFA+ Factors}{129}{figure.caption.84}
+\contentsline {subsubsection}{Characterisation of the MOFA+ Factors}{137}{figure.caption.84}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Conclusions, limitations and open perspectives}{132}{section.5.5}
+\contentsline {section}{\numberline {5.5}Conclusions, limitations and open perspectives}{140}{section.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.6}Discussion}{133}{section.5.6}
+\contentsline {chapter}{\numberline {6}Concluding remarks}{141}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.6.1}Experimental perspectives}{133}{subsection.5.6.1}
+\contentsline {section}{\numberline {6.1}Experimental perspectives}{141}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.6.2}Recording space}{133}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {6.1.1}Recording space}{141}{subsection.6.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.6.3}Recording time}{134}{subsection.5.6.3}
+\contentsline {subsection}{\numberline {6.1.2}Recording time}{142}{subsection.6.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Recording the present}{134}{subsection.5.6.3}
+\contentsline {subsubsection}{Recording the past}{142}{subsection.6.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Recording the past}{134}{subsection.5.6.3}
+\contentsline {subsubsection}{Recording the future}{143}{subsection.6.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Recording the future}{135}{subsection.5.6.3}
+\contentsline {section}{\numberline {6.2}Computational perspectives}{143}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.6.4}Computational perspectives}{135}{subsection.5.6.4}
+\contentsline {subsection}{\numberline {6.2.1}Mechanistic insights}{143}{subsection.6.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.6.5}Thesis summmary (copied)}{136}{subsection.5.6.5}
+\contentsline {subsection}{\numberline {6.2.2}Benchmarking of methods}{144}{subsection.6.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.3}Mosaic integration}{145}{subsection.6.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.4}Software infrastructure}{145}{subsection.6.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Thesis summmary}{147}{section.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {A}Mathematical derivations of MOFA}{149}{Appendix.a.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Deriving the variational inference algorithm}{149}{section.a.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Variational update equations}{150}{section.a.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Evidence Lower Bound}{153}{section.a.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {B}Characterisation of MOFA factors in the scNMT-seq gastrulation data set}{157}{Appendix.a.B}

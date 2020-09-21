@@ -8,7 +8,7 @@ Formally, we generalise the model to a disjoint set of $M$ input views (i.e. gro
 \begin{equation} \label{mofa_master_equation}
 	\mathbf{Y}^{m}_{g} = \mathbf{Z}_{g} (\mathbf{W}^{m})^T + \bepsilon^{m}_{g}
 \end{equation}
-where $\bfZ_{g} \in \R^{N_{g} \times K}$ are a set of $G$ matrices that contain the factor values for the $g$-th group and $\bfW^{m} \in \R^{D_m \times K}$ are a set of $M$ matrices that define the feature weights for the $m$-th view. $\bepsilon^{m}_{g} \in \R^{D_m}$ captures the residuals, or the noise for each feature in each group. Notice that if $G=1$ then the model simplifies to the MOFA framework presented in Chapter 2. 
+where $\bfZ_{g} \in \R^{N_{g} \times K}$ are a set of $G$ matrices that contain the factor values for the $g$-th group and $\bfW^{m} \in \R^{D_m \times K}$ are a set of $M$ matrices that define the feature weights for the $m$-th view. $\bepsilon^{m}_{g} \in \R^{D_m}$ captures the residuals, or the noise for each feature in each group. Notice that if $G=1$ then the model simplifies to the MOFA framework presented in Chapter 3. 
 
 It is important to get the intuition for the multi-group formulation right. In the factor analysis setting, the aim is not to capture differential changes in \textit{mean} levels between the groups but rather to exploit the covariation patterns of the features to identify which sources of variability (i.e. latent Factors) are consistently found across multiple groups and which ones are exclusively found within a single group. This is symmetric to the interpretation of the multi-view framework in MOFA v1: the absolute levels of the features are not compared across views, only the covariation patterns are of interest. To achieve this, the features are centered per view and also per group before fitting the model. \Cref{fig:mofa2_overview} summarises the MOFA+ pipeline.
 
@@ -17,9 +17,9 @@ As in MOFA v1, the linearity assumptions leads to an interpretable latent space 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.00\linewidth]{mofa2_overview}
-	\caption[]{\textbf{Multi-Omics Factor Analysis v2 (MOFA+) provides an unsupervised framework for the integration of multi-group and multi-view single-cell data.}\\
-	(a) Model overview: the input data consists of multiple data sets structured into M views and G groups. Views consist of non-overlapping sets of features that can represent different assays. Analogously, groups consist of non-overlapping sets of samples that can represent different conditions or experiments. Missing values are allowed in the input data. MOFA+ exploits the dependencies between the features to learn a low-dimensional representation of the data (Z) defined by K latent factors that capture the global sources of molecular variability. For each factor, the weights (W) link the high-dimensional space with the low-dimensional manifold and provide a measure of feature importance. The sparsity-inducing priors on both the factors and the weights enable the model to disentangle variation that is unique to or shared across the different groups and views. Model inference is performed using GPU-accelerated stochastic variational inference. \\
-	(b) The trained MOFA+ model can be queried for a range of downstream analyses: variance decomposition, quantifying the amount of variance explained by each factor in each group and view, inspection of feature weights, visualisation of factors and other applications such as clustering, inference of non-linear differentiation trajectories, denoising and feature selection.
+	\caption[]{\textbf{Multi-Omics Factor Analysis v2 (MOFA+) provides an unsupervised framework for the integration of multi-group and multi-view (single-cell) data.}\\
+	(a) Model overview: the input data consists of multiple data sets structured into M views and G groups. Views consist of non-overlapping sets of features that often represent different assays. Analogously, groups consist of non-overlapping sets of samples that often represent different conditions or experiments. Missing values are allowed in the input data. MOFA+ exploits the covariation between the features to learn a low-dimensional representation of the data ($\bfZ$) defined by $K$ latent factors that capture the global sources of molecular variability. The weights ($\bfW$) provide a measure of feature importance. Model inference is performed using GPU-accelerated stochastic variational inference. \\
+	(b) The trained MOFA+ model can be queried for a range of downstream analyses: variance decomposition, inspection of feature weights, visualisation of factors and other applications such as clustering, inference of non-linear differentiation trajectories, denoising and feature selection.
 	}
 	\label{fig:mofa2_overview}
 \end{figure}
@@ -39,7 +39,7 @@ with the corresponding conjugate priors for $\theta$ and $\alpha$:
 	p(\alpha_k^m) &= \Gdist{\alpha_k^m}{a_0^\alpha, b_0^\alpha}
 \end{align}
 
-As discussed in Chapter 2, the aim of the ARD prior is to encourage sparse associations between factors and views, such that the weight vector $\bfw_{:,k}^m$ is shrunk to zero if the factor $k$ does not explain any variation in view $m$. The aim of the spike-and-slab prior is to push individual weights to zero to yield a more interpretable solution.
+As discussed in Chapter 3, the aim of the ARD prior is to encourage sparse associations between factors and views, such that the weight vector $\bfw_{:,k}^m$ is shrunk to zero if the factor $k$ does not explain any variation in view $m$. The aim of the spike-and-slab prior is to push individual weights to zero to yield a more interpretable solution.
 
 \subsubsection{Prior on the factors}
 
@@ -95,9 +95,7 @@ In summary, the updated model formulation introduces symmetric two-level sparsit
 
 \textbf{Views}: views typically correspond to different molecular layers, but there is flexibility in their definition and the user can explore different definitions of views. For example, one could divide the RNA expression data into three views corresponding to mRNA, rRNA and miRNA. Similarly, one can quantify DNA methylation and chromatin accessibility data over different genomic context (enhancers, promoters, etc.).
 
-\textbf{Groups}: groups are generally motivated by the experimental design, but the user can also explore data-driven formulations. There is no \textit{right} or \textit{wrong} definition of , but some definitions will be more useful than others, depending on the hypothesis that is sought to explore.
-% As discussed above, it is essential to keep in mind that the aim of the multi-group framework is not to capture differential changes in \textit{mean} levels between the groups (as for example when doing differential RNA expression). The aim is to find out which sources of variability are shared between the different groups and which ones are exclusive to a single group. To achieve this, the features are centred per group (i.e. intercept effects are regressed out) before fitting the model.\\
-
+\textbf{Groups}: groups are generally motivated by the experimental design, but the user can also explore data-driven formulations. There is no \textit{right} or \textit{wrong} definition of groups, but some definitions will be more useful than others, depending on the hypothesis that is sought to explore.
 
 \subsubsection{Model selection} \label{section:mofa2_model_selection}
 
@@ -166,7 +164,7 @@ As discussed in \Cref{section:mofa_robustness}, the inference procedure depends 
 % \end{algorithm}
 
 % \subsection{Theoretical comparison with published methods}
-% As discussed in Chapter 2, a variety of factor analysis models exist with the aim of perfoming multi-view and/or multi-group data integration. A comparison of multi-view method is shown in \Cref{GFAtable}. Here we specifically focus on the methods that have been applied to single-cell data:
+% As discussed in Chapter 3, a variety of factor analysis models exist with the aim of perfoming multi-view and/or multi-group data integration. A comparison of multi-view method is shown in \Cref{GFAtable}. Here we specifically focus on the methods that have been applied to single-cell data:
 % \begin{table}[h]
 % 	\begin{tabular}{@{}llllll} 
 % 		\toprule
