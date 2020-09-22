@@ -1,27 +1,27 @@
-[0] Config.pm:343> INFO - This is Biber 2.5
-[0] Config.pm:346> INFO - Logfile is 'thesis.blg'
-[61] biber-darwin:290> INFO - === Mon Sep 21, 2020, 09:35:02
-[96] Biber.pm:351> INFO - Reading 'thesis.bcf'
-[272] Biber.pm:776> INFO - Found 344 citekeys in bib section 0
-[290] Biber.pm:3493> INFO - Processing section 0
-[318] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter1.bib' for section 0
-[331] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[344] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter1.bib'
-[970] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter2.bib' for section 0
-[978] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[989] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter2.bib'
-[1189] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter3.bib' for section 0
-[1195] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[1201] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter3.bib'
-[1399] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter4.bib' for section 0
-[1401] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[1402] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter4.bib'
-[1421] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter5.bib' for section 0
-[1423] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[1426] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter5.bib'
-[1989] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1990] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1990] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[1990] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
-[2654] bbl.pm:526> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[2746] bbl.pm:619> INFO - Output to thesis.bbl
+[1] Config.pm:343> INFO - This is Biber 2.5
+[1] Config.pm:346> INFO - Logfile is 'thesis.blg'
+[79] biber-darwin:290> INFO - === Tue Sep 22, 2020, 10:51:10
+[119] Biber.pm:351> INFO - Reading 'thesis.bcf'
+[274] Biber.pm:776> INFO - Found 345 citekeys in bib section 0
+[289] Biber.pm:3493> INFO - Processing section 0
+[314] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter1.bib' for section 0
+[329] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[342] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter1.bib'
+[798] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter2.bib' for section 0
+[811] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[821] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter2.bib'
+[1080] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter3.bib' for section 0
+[1088] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[1093] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter3.bib'
+[1278] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter4.bib' for section 0
+[1281] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[1282] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter4.bib'
+[1307] Biber.pm:3657> INFO - Looking for bibtex format file 'references/references_chapter5.bib' for section 0
+[1310] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[1313] bibtex.pm:1048> INFO - Found BibTeX data source 'references/references_chapter5.bib'
+[1895] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1895] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1895] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[1895] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
+[2697] bbl.pm:526> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[2803] bbl.pm:619> INFO - Output to thesis.bbl

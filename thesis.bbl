@@ -17266,6 +17266,48 @@
       \field{pages}{303}
       \range{pages}{1}
     \endentry
+    \entry{Risso2018}{article}{}
+      \name{author}{5}{}{%
+        {{hash=278aa48a00a4a742e76eda0b58e2262e}{%
+           family={Risso},
+           family_i={R\bibinitperiod},
+           given={Davide},
+           given_i={D\bibinitperiod}}}%
+        {{hash=b21fa9a2903d33372168395f70187dd8}{%
+           family={Perraudeau},
+           family_i={P\bibinitperiod},
+           given={Fanny},
+           given_i={F\bibinitperiod}}}%
+        {{hash=678cca6bc0eb15e8eea99384f366178a}{%
+           family={Gribkova},
+           family_i={G\bibinitperiod},
+           given={Svetlana},
+           given_i={S\bibinitperiod}}}%
+        {{hash=4f4bdc5ca1ab91ef2d9ae8c6222c8136}{%
+           family={Dudoit},
+           family_i={D\bibinitperiod},
+           given={Sandrine},
+           given_i={S\bibinitperiod}}}%
+        {{hash=0df2e0c86d89bfaf4f3726c0bc382d4f}{%
+           family={Vert},
+           family_i={V\bibinitperiod},
+           given={Jean-Philippe},
+           given_i={J\bibinithyphendelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{d96bcbb61176b3804b68deaa75b640af}
+      \strng{fullhash}{44e033c044aec0fe54d42bf50b9d2bd3}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature communications}
+      \field{number}{1}
+      \field{title}{A general and flexible method for signal extraction from single-cell RNA-seq data}
+      \field{volume}{9}
+      \field{year}{2018}
+      \field{pages}{1\bibrangedash 17}
+      \range{pages}{17}
+    \endentry
     \entry{Ritchie2015}{article}{}
       \name{author}{5}{}{%
         {{hash=abaa813c2b51bee9497c6bff414538dd}{%
@@ -17919,6 +17961,32 @@
       \field{title}{Transcription Factors Drive Tet2-Mediated Enhancer Demethylation to Reprogram Cell Fate}
       \field{volume}{23}
       \field{year}{2018}
+    \endentry
+    \entry{Sarkar2020}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b583f7309441a0f8cf0c769085d6842c}{%
+           family={Sarkar},
+           family_i={S\bibinitperiod},
+           given={Abhishek},
+           given_i={A\bibinitperiod}}}%
+        {{hash=b6392ab77144d0d73f3f35bd39da607c}{%
+           family={Stephens},
+           family_i={S\bibinitperiod},
+           given={Matthew},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{490cc8133f0d661cb13d8524bd8dc8c7}
+      \strng{fullhash}{490cc8133f0d661cb13d8524bd8dc8c7}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{bioRxiv}
+      \field{month}{01}
+      \field{title}{Separating measurement and expression models clarifies confusion in single cell RNA-seq analysis}
+      \field{year}{2020}
+      \field{pages}{2020.04.07.030007}
+      \range{pages}{-1}
     \endentry
     \entry{Saul1996}{article}{}
       \name{author}{3}{}{%
@@ -19495,56 +19563,6 @@
       \field{title}{Introduction to stochastic search and optimization: estimation, simulation, and control}
       \field{year}{2003}
     \endentry
-    \entry{Specht2018}{article}{}
-      \name{author}{7}{}{%
-        {{hash=74307d1619ad49b47a49854b4db67144}{%
-           family={Specht},
-           family_i={S\bibinitperiod},
-           given={Harrison},
-           given_i={H\bibinitperiod}}}%
-        {{hash=b4ff387dc6a78f39f785c34e6926c00e}{%
-           family={Harmange},
-           family_i={H\bibinitperiod},
-           given={Guillaume},
-           given_i={G\bibinitperiod}}}%
-        {{hash=eac97747a8ea208112ce60cb231bee2e}{%
-           family={Perlman},
-           family_i={P\bibinitperiod},
-           given={David\bibnamedelima H.},
-           given_i={D\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=3a2f9fa13ef2209cb9d9df051a37ef43}{%
-           family={Emmott},
-           family_i={E\bibinitperiod},
-           given={Edward},
-           given_i={E\bibinitperiod}}}%
-        {{hash=5548d33f28277b5999ad3491a4db09e2}{%
-           family={Niziolek},
-           family_i={N\bibinitperiod},
-           given={Zachary},
-           given_i={Z\bibinitperiod}}}%
-        {{hash=6eb96c847789e318a02e41f347f08515}{%
-           family={Budnik},
-           family_i={B\bibinitperiod},
-           given={Bogdan},
-           given_i={B\bibinitperiod}}}%
-        {{hash=6e20509d3bc29591ec6c3879ad484088}{%
-           family={Slavov},
-           family_i={S\bibinitperiod},
-           given={Nikolai},
-           given_i={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{e7006ffcb544439a7e920d0762347add}
-      \strng{fullhash}{a0d9eb8b529d83b064504a5fade67291}
-      \field{sortinit}{S}
-      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{bioRxiv}
-      \field{title}{Automated sample preparation for high-throughput single-cell proteomics}
-      \field{year}{2018}
-      \field{pages}{399774}
-      \range{pages}{1}
-    \endentry
     \entry{Spektor2018}{article}{}
       \name{author}{4}{}{%
         {{hash=ce861ba8309482983337990217e9a36c}{%
@@ -20100,6 +20118,28 @@
       \field{volume}{102}
       \field{year}{2005}
     \endentry
+    \entry{Svensson2020}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6728f2b61ee12d970d8c9dee57b038af}{%
+           family={Svensson},
+           family_i={S\bibinitperiod},
+           given={Valentine},
+           given_i={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{6728f2b61ee12d970d8c9dee57b038af}
+      \strng{fullhash}{6728f2b61ee12d970d8c9dee57b038af}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Biotechnology}
+      \field{number}{2}
+      \field{title}{Droplet scRNA-seq is not zero-inflated}
+      \field{volume}{38}
+      \field{year}{2020}
+      \field{pages}{147\bibrangedash 150}
+      \range{pages}{4}
+    \endentry
     \entry{Svensson2018}{article}{}
       \name{author}{3}{}{%
         {{hash=6728f2b61ee12d970d8c9dee57b038af}{%
@@ -20357,38 +20397,6 @@
       \verb{url}
       \verb https://dev.biologists.org/content/141/12/2376
       \endverb
-    \endentry
-    \entry{Thiele2019}{article}{}
-      \name{author}{3}{}{%
-        {{hash=ee92d3f0bc15cc86a7b53a6b625793e9}{%
-           family={Thiele},
-           family_i={T\bibinitperiod},
-           given={Christoph},
-           given_i={C\bibinitperiod}}}%
-        {{hash=b5ac951c7fe5a97a1c3dd1db79eefb9b}{%
-           family={Wunderling},
-           family_i={W\bibinitperiod},
-           given={Klaus},
-           given_i={K\bibinitperiod}}}%
-        {{hash=934a354df7b7ddf9778612900e985e54}{%
-           family={Leyendecker},
-           family_i={L\bibinitperiod},
-           given={Philipp},
-           given_i={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{c892f1e908c13c8a938b85c23d160186}
-      \strng{fullhash}{c892f1e908c13c8a938b85c23d160186}
-      \field{sortinit}{T}
-      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Nature Methods}
-      \field{number}{11}
-      \field{title}{Multiplexed and single cell tracing of lipid metabolism}
-      \field{volume}{16}
-      \field{year}{2019}
-      \field{pages}{1123\bibrangedash 1130}
-      \range{pages}{8}
     \endentry
     \entry{Thornton2019}{article}{}
       \name{author}{8}{}{%
