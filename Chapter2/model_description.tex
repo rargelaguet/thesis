@@ -126,8 +126,7 @@ To make the model scalable to large datasets we adopt a Variational inference fr
 
 \subsection{Model selection and consistency across random initilizations} \label{section:mofa_robustness}
 
-The optimisation problem in MOFA is not convex and the resulting posterior distributions depend on the initialisation of the model. Thus, when doing random initialisation of the parameters and/or expectations it becomes mandatory to perform model selection and assess the consistency of the factors across different trials.\\
-The strategy we adopted in this work is to train several MOFA models under different parameter initialisations, where the expectation of each node is randomly sampled from its underlying distribution. After fitting, we select the model with the highest ELBO for downstream analysis. In addition, we evaluate the robustness of the factors by plotting the Pearson correlations between factors across all trials:
+The optimisation problem in MOFA is not convex and the resulting posterior distributions depend on the initialisation of the model. Thus, when doing random initialisation of the parameters and/or expectations it becomes mandatory to perform model selection and assess the consistency of the factors across different trials. The strategy we adopted in this work is to train several MOFA models under different parameter initialisations, where the expectation of each node is randomly sampled from its underlying distribution. After fitting, we select the model with the highest ELBO for downstream analysis. In addition, we evaluate the robustness of the factors by plotting the Pearson correlations between factors across all trials (\Cref{fig:MOFA_robustness}).
 
 \begin{figure}[H]
 	\centering 	
@@ -140,17 +139,7 @@ The strategy we adopted in this work is to train several MOFA models under diffe
 
 \subsection{Learning the number of factors} \label{section:mofa_nfactors}
 
-As described in \Cref{section:hierarchical_priors}, the use of an ARD prior allows factors to be actively pruned by the model if their variance explained is negligible. In the implementation we control the pruning of factors by a hyperparameter that defines a threshold on the minimum fraction of variance explained by a factor (across all views).\\
-Additionally, because of the non-convexity of the optimisation problem, different model instances can potentially yield solutions with different number of active factors (\Cref{fig:mofa_nfactors}). Thus, the optimal number of factors can be selected by the model selection strategy outlined in \Cref{section:mofa_robustness}.
-
-\begin{figure}[H]
-	\centering 	
-	\includegraphics[width=0.6\textwidth]{MOFA_nfactors}
-	\caption{\textbf{Training curve for the number of active factors across 25 different model instances}.\\
-	The y-axis displays the number of active factors. The x-axis displays the iteration number. Different lines denote different model instances.}
-	\label{fig:mofa_nfactors}
-\end{figure}
-
+As described in \Cref{section:hierarchical_priors}, the use of an ARD prior allows factors to be actively pruned by the model if their variance explained is negligible. In the implementation we control the pruning of factors by a hyperparameter that defines a threshold on the minimum fraction of variance explained by a factor (across all views). Additionally, because of the non-convexity of the optimisation problem, different model instances can potentially yield solutions with different number of active factors. Thus, the optimal number of factors can be selected by the model selection strategy outlined in \Cref{section:mofa_robustness}.
 
 \subsection{Monitoring convergence}
 

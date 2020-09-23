@@ -8,7 +8,7 @@ The aim of this project was to generate a multi-omics atlas of post-implantation
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\linewidth]{dataset_overview}
+	\includegraphics[width=0.95\linewidth]{dataset_overview}
 	\caption[]{\textbf{scNMT-seq gastrulation atlas. Data set overview.}\\
 	(a) Dimensionality reduction for chromatin accessibility data (left, in blue), DNA methylation (middle, in red) and RNA expression (right, in green). For the gene expression data we used UMAP \cite{McInnes2018}. For chromatin accessibility and DNA methylation data we used Bayesian Factor Analysis \cite{Argelaguet2018}.\\
 	(b) Number of observed cytosines in a GpC context (left, in blue) or (b) in a CpG context (right, in red). Each bar corresponds to one cell, and cells are sorted by total number of GpC or CpG sites, respectively. Cells below the dashed line (50,000 CpG sites and 500,000 GpC sites, respectively) were discarded on the basis of poor coverage. \\
@@ -104,19 +104,18 @@ We identified 125 genes whose expression shows significant correlation with prom
 
 \subsection{Multi-omics factor analysis reveals coordinated variability between the transcriptome and the epigenome during germ layer formation} \label{section:mofa_gastrulation}
 
-In the previous section we demonstrated that exit from pluripotency is concomitant with the establishment of a repressive epigenetic landscape that is characterised by increasing levels of DNA methylation and decreasing levels of chromatin accessibility. \\
-Next, we sought to investigate the coordinated changes between RNA expression and epigenetic status that define germ layer commitment at the E7.5 stage. We performed an unsupervised integrative analysis using Multi-Omics Factor Anaysis (MOFA, introduced in Chapter 3). As a reminder for the reader, MOFA takes as input multiple data modalities and it exploits the covariation patterns between the features within and between modalities to learn a low-dimensional representation of the data in terms of a small number of latent factors (\Cref{fig:mofa_overview}). Each Factor captures a different source of cell-to-cell heterogeneity, and the corresponding weight vectors (one per data modality) provide a measure of feature importance. Importantly, MOFA relies on multi-modal measurements from the same cell to identify whether factors are unique to a single data modality or shared across multiple data modalities, thereby providing a principled approach to reveal the extent of covariation between different data modalities.
+In the previous section we demonstrated that exit from pluripotency is concomitant with the establishment of a repressive epigenetic landscape that is characterised by increasing levels of DNA methylation and decreasing levels of chromatin accessibility. Next, we sought to investigate the coordinated changes between RNA expression and epigenetic status that define germ layer commitment at the E7.5 stage. We performed an unsupervised integrative analysis using Multi-Omics Factor Anaysis (MOFA, introduced in Chapter 3). As a reminder for the reader, MOFA takes as input multiple data modalities and it exploits the covariation patterns between the features within and between modalities to learn a low-dimensional representation of the data in terms of a small number of latent factors (\Cref{fig:fig:MOFA}). Each Factor captures a different source of cell-to-cell heterogeneity, and the corresponding weight vectors (one per data modality) provide a measure of feature importance. Importantly, MOFA relies on multi-modal measurements from the same cell to identify whether factors are unique to a single data modality or shared across multiple data modalities, thereby providing a principled approach to reveal the extent of covariation between different data modalities.
 
 % Copied from bioRxiv
-\begin{figure}[H]
-	\includegraphics[scale=0.8, width=\textwidth]{mofa_overview}
-	\caption{
-	\textbf{Multi-Omics Factor Analysis (MOFA): model overview and illustration of downstream analysis.} \\
-	(a) Model overview: MOFA takes as input one or more data modalities ($\bfY$), extracted from the same cells. MOFA decomposes these matrices into a matrix of latent factors ($\bfZ$) and a set of feature weight matrices ($\bfW$), one for each data modality.
-	(b) Downstream analysis: the fitted MOFA model can be queried for different downstream analyses, including (i) variance decomposition, assessing the proportion of variance ($R^2$) explained by each factor in each data modality, (ii) factor interpretation based on the inspection of weights and gene set enrichment analysis, (iii) visualization of the cells in the factor space. 
-	}
-	\label{fig:mofa_overview}
-\end{figure}
+% \begin{figure}[H]
+% 	\includegraphics[scale=0.8, width=\textwidth]{mofa_overview}
+% 	\caption{
+% 	\textbf{Multi-Omics Factor Analysis (MOFA): model overview and illustration of downstream analysis.} \\
+% 	(a) Model overview: MOFA takes as input one or more data modalities ($\bfY$), extracted from the same cells. MOFA decomposes these matrices into a matrix of latent factors ($\bfZ$) and a set of feature weight matrices ($\bfW$), one for each data modality.
+% 	(b) Downstream analysis: the fitted MOFA model can be queried for different downstream analyses, including (i) variance decomposition, assessing the proportion of variance ($R^2$) explained by each factor in each data modality, (ii) factor interpretation based on the inspection of weights and gene set enrichment analysis, (iii) visualization of the cells in the factor space. 
+% 	}
+% 	\label{fig:mofa_overview}
+% \end{figure}
 
 \subsubsection{Data preprocessing}
 
