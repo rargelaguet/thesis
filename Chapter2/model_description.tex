@@ -101,9 +101,9 @@ Once trained, the MOFA model can be queried for a set of downstream analysis (\C
 
 	\item \textbf{Inspection of weights}: the feature weights can be interpreted as an importance score for each feature on each factor. Inspecting the top weights for a given factor can reveal the molecular signatures that underlie each factor.
 
-	\item \textbf{Association analysis between factors and external covariates}: multi-omic data sets typically consist of a large set of molecular readouts that are used for model training, and a small set of additionals covariates or response variables such as clinical outcome measurements. The external covariates that are not used for model training can be linked to the factors \textit{a posteriori} using a simple association analysis.
+	\item \textbf{Association analysis between factors and external covariates}: multi-omic datasets typically consist of a large set of molecular readouts that are used for model training, and a small set of additionals covariates or response variables such as clinical outcome measurements. The external covariates that are not used for model training can be linked to the factors \textit{a posteriori} using a simple association analysis.
 
-	\item \textbf{Imputation}: the latent factors capture a condensed low-dimensional representation of the data that can be used to generate (denoised) reconstructions of the input data. This can be valuable for the inspection of very sparse data sets.
+	\item \textbf{Imputation}: the latent factors capture a condensed low-dimensional representation of the data that can be used to generate (denoised) reconstructions of the input data. This can be valuable for the inspection of very sparse datasets.
 
 	\item \textbf{Feature set enrichment analysis}: when a factor is difficult to characterise based only on the inspection of the top weights, one can compute a statistical test for enrichment of biological pathways using predefined gene-set annotations.
 
@@ -121,7 +121,7 @@ Once trained, the MOFA model can be queried for a set of downstream analysis (\C
 
 \subsubsection{Inference}
 
-To make the model scalable to large data sets we adopt a Variational inference framework with a structured mean field approximation. A detailed overview is given in \Cref{section:variational_inference}, and details on the variational updates for the MOFA model are given in Appendix~\ref{appendix:mofa}. To enable efficient inference for non-Gaussian likelihoods we employ local bounds \cite{Jaakkola2000,Seeger2012}. This is described in detail in \Cref{section:mofa_ngaussian}.
+To make the model scalable to large datasets we adopt a Variational inference framework with a structured mean field approximation. A detailed overview is given in \Cref{section:variational_inference}, and details on the variational updates for the MOFA model are given in Appendix~\ref{appendix:mofa}. To enable efficient inference for non-Gaussian likelihoods we employ local bounds \cite{Jaakkola2000,Seeger2012}. This is described in detail in \Cref{section:mofa_ngaussian}.
 
 
 \subsection{Model selection and consistency across random initilizations} \label{section:mofa_robustness}
@@ -283,7 +283,7 @@ The pseudodata updates are given by
 	 
 \subsection{Theoretical comparison with published methods}
 
-A variety of latent variable models exist with the aim of perfoming multi-view data integration, most of them inspired by the Group Factor Analysis formulation. A summary is provided in the table below. MOFA is the only method that scales to large data sets (employs Variational Bayes inference instead of MCMC-based approaches), has a combination of ARD and spike-slab regularisation on the weights, and is also capable of handling non-gaussian modalities and missing values.
+A variety of latent variable models exist with the aim of perfoming multi-view data integration, most of them inspired by the Group Factor Analysis formulation. A summary is provided in the table below. MOFA is the only method that scales to large datasets (employs Variational Bayes inference instead of MCMC-based approaches), has a combination of ARD and spike-slab regularisation on the weights, and is also capable of handling non-gaussian modalities and missing values.
 
 \begin{table}[H]
 	\begin{tabular}{@{}lllllll} 

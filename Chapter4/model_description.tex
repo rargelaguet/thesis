@@ -2,7 +2,7 @@
 
 \section{Model description}
 
-In MOFA+ we introduce two key novelties, both in the model aspect and in the inference scheme. In the model side we introduce a principled approach for modelling multi-omic data set where the samples are structured into non-overlapping groups, where groups typically correspond to batches, donors or experimental conditions. In the inference side we implement a stochastic inference algorithm to improve scalability and enable inference with large single-cell data sets.
+In MOFA+ we introduce two key novelties, both in the model aspect and in the inference scheme. In the model side we introduce a principled approach for modelling multi-omic data set where the samples are structured into non-overlapping groups, where groups typically correspond to batches, donors or experimental conditions. In the inference side we implement a stochastic inference algorithm to improve scalability and enable inference with large single-cell datasets.
 
 Formally, we generalise the model to a disjoint set of $M$ input views (i.e. groups of features) and $G$ input groups (i.e. groups of samples). The data is factorised according to the following model:
 \begin{equation} \label{mofa_master_equation}
@@ -18,7 +18,7 @@ As in MOFA v1, the linearity assumptions leads to an interpretable latent space 
 	\centering
 	\includegraphics[width=1.00\linewidth]{mofa2_overview}
 	\caption[]{\textbf{Multi-Omics Factor Analysis v2 (MOFA+) provides an unsupervised framework for the integration of multi-group and multi-view (single-cell) data.}\\
-	(a) Model overview: the input data consists of multiple data sets structured into M views and G groups. Views consist of non-overlapping sets of features that often represent different assays. Analogously, groups consist of non-overlapping sets of samples that often represent different conditions or experiments. Missing values are allowed in the input data. MOFA+ exploits the covariation between the features to learn a low-dimensional representation of the data ($\bfZ$) defined by $K$ latent factors that capture the global sources of molecular variability. The weights ($\bfW$) provide a measure of feature importance. Model inference is performed using GPU-accelerated stochastic variational inference. \\
+	(a) Model overview: the input data consists of multiple datasets structured into M views and G groups. Views consist of non-overlapping sets of features that often represent different assays. Analogously, groups consist of non-overlapping sets of samples that often represent different conditions or experiments. Missing values are allowed in the input data. MOFA+ exploits the covariation between the features to learn a low-dimensional representation of the data ($\bfZ$) defined by $K$ latent factors that capture the global sources of molecular variability. The weights ($\bfW$) provide a measure of feature importance. Model inference is performed using GPU-accelerated stochastic variational inference. \\
 	(b) The trained MOFA+ model can be queried for a range of downstream analyses: variance decomposition, inspection of feature weights, visualisation of factors and other applications such as clustering, inference of non-linear differentiation trajectories, denoising and feature selection.
 	}
 	\label{fig:mofa2_overview}
@@ -99,7 +99,7 @@ In summary, the updated model formulation introduces symmetric two-level sparsit
 
 \subsubsection{Model selection} \label{section:mofa2_model_selection}
 
-As discussed in \Cref{section:mofa_robustness}, the inference procedure depends on the parameter initialisation. When using random initialisation, the Factors can vary between different model instances and a model selection step is advised. I realised that this was not a user-friendly solution and it requires a lot of computational resources when applying the model to large data sets. To simplify model training in MOFA+ we initialise the Factors using the principal components from the concatenated data set. In practice, we observe faster convergence times and better ELBO estimates when initialising with the PCA solution (\Cref{fig:mofa2_init}).
+As discussed in \Cref{section:mofa_robustness}, the inference procedure depends on the parameter initialisation. When using random initialisation, the Factors can vary between different model instances and a model selection step is advised. I realised that this was not a user-friendly solution and it requires a lot of computational resources when applying the model to large datasets. To simplify model training in MOFA+ we initialise the Factors using the principal components from the concatenated data set. In practice, we observe faster convergence times and better ELBO estimates when initialising with the PCA solution (\Cref{fig:mofa2_init}).
 
 \begin{figure}[H]
 	\centering
@@ -137,7 +137,7 @@ As discussed in \Cref{section:mofa_robustness}, the inference procedure depends 
 % In \Cref{section:stochastic_variational_inference} I have explained how to derive a stochastic variational inference (SVI) algorithm for a general Bayesian model using an adapted version of the algorithm introduced in \cite{Hoffman2012}.\\
 % To apply the SVI algorithm to MOFA the first step is to choose the \textit{local} and \textit{global} dimensions such that the \textit{local} dimension will be factorised in the ELBO and where the stochastic gradients apply. 
 
-% In single-cell studies we expect increasingly large data sets in the number of cells, but the number of features are expected to remain roughly constant. Thus, the natural dimension to define as \textit{local} is the axis of samples. In the case of MOFA+, the variables that are classified as \textit{local} are the Factors $\mathbf{Z_g} = \{ z_{nk}^g \}$, which due to the reparametrisation of the spike-and-slab prior consists on the element-wise product of two matrices: $\hat{\mathbf{Z_g}}$ and $\mathbf{S_g}$. All other hidden variables are global. 
+% In single-cell studies we expect increasingly large datasets in the number of cells, but the number of features are expected to remain roughly constant. Thus, the natural dimension to define as \textit{local} is the axis of samples. In the case of MOFA+, the variables that are classified as \textit{local} are the Factors $\mathbf{Z_g} = \{ z_{nk}^g \}$, which due to the reparametrisation of the spike-and-slab prior consists on the element-wise product of two matrices: $\hat{\mathbf{Z_g}}$ and $\mathbf{S_g}$. All other hidden variables are global. 
 
 % This leads to the following SVI algorithm:
 % \begin{algorithm}[h!]
@@ -188,7 +188,7 @@ As discussed in \Cref{section:mofa_robustness}, the inference procedure depends 
 
 \subsection{A note on the implementation}
 
-The core of MOFA+ is implemented in Python, and the downstream analysis and visualisations are implemented in R. GPU acceleration is implemented using CuPy \cite{Okuta2017}, an open-source matrix library accelerated with NVIDIA CUDA. To facilitate adoption of the method, we deployed MOFA+ as open-source software\footnote{\url{https://github.com/bioFAM/MOFA2}} with multiple tutorials and a web-based analysis workbench\footnote{\url{http://www.ebi.ac.uk/shiny/mofa/}}.%, hopefully enabling a user-friendly exploration of complex single-cell data sets.
+The core of MOFA+ is implemented in Python, and the downstream analysis and visualisations are implemented in R. GPU acceleration is implemented using CuPy \cite{Okuta2017}, an open-source matrix library accelerated with NVIDIA CUDA. To facilitate adoption of the method, we deployed MOFA+ as open-source software\footnote{\url{https://github.com/bioFAM/MOFA2}} with multiple tutorials and a web-based analysis workbench\footnote{\url{http://www.ebi.ac.uk/shiny/mofa/}}.%, hopefully enabling a user-friendly exploration of complex single-cell datasets.
 
 
 
