@@ -7,12 +7,12 @@ The article was jointly written by Britta Velten and me, with contributions from
 
 \section{Theoretical foundations}
 
-\subsection{Mathematical notation} \label{section:mathematical_notation}
+\subsection*{Mathematical notation} \label{section:mathematical_notation}
 
 \begin{itemize}[noitemsep]
 	\item[--] Matrices are denoted with bold capital letters: $\bfW$
 	\item[--] Vectors are denoted with bold non-capital letters: $\bfw$. If the vector comes from a matrix, we will use a single index to indicate the row that it comes from. If two indices are used, the first one corresponds to the row and the second one to the column. The symbol '$:$' denotes the entire row/column. For instance, $\bfw_{i}$ refers to the $i$th row from the $\bfW$ matrix, whereas $\bfw_{:,j}$ refers to the $j$th column.
-	\item[--] Scalars are denoted with non-bold and non-capital letters: $w$. If the scalar comes from a 1-dimensional array (a vector), a single subscript will indicate its position in the vector. If the scalar comes from a 2-dimensional array, two indices will be shown at the bottom: the first one corresponding to the row and the second one to the column. For instance, $w_{i,j}$ refers to the value from the $i$th row and the $j$th column of the matrix $\bfW$, and $w_i$ to the $i$th value of the vector $\bfw$. In some cases, higher dimensional arrays (tensors) are used, and the use of multiple indices follows the same rationale.
+	\item[--] Scalars are denoted with non-bold and non-capital letters: $w$. If the scalar comes from a 1-dimensional array (a vector), a single subscript will indicate its position in the vector. If the scalar comes from a 2-dimensional array, two indices will be shown at the bottom: the first one corresponding to the row and the second one to the column. For instance, $w_{i,j}$ refers to the value from the $i$th row and the $j$th column of the matrix $\bfW$, and $w_i$ to the $i$th value of the vector $\bfw$.
 	\item[--] $\boldzero_k$ is a zero vector of length $k$.
 	\item[--] $\I_k$ is the identity matrix with rank $k$.
 	\item[--] $\E_q[x]$ denotes the expectation of $x$ under the distribution $q$. When the expectations are taken with respect to the same distribution many times, we will avoid cluttered notation and we will instead use $\la x \ra$.
@@ -24,7 +24,7 @@ The article was jointly written by Britta Velten and me, with contributions from
 	\item[--] $Tr(\bfX)$: Trace of the matrix \bfX
 \end{itemize}
 
-\subsection{Graphical notation for probabilistic models}
+\subsection*{Graphical notation for probabilistic models}
 
 Probabilistic models can be represented in a diagrammatic format (i.e. a graph or a network) that offers a compact visual representation of complicated systems of probability distributions \cite{Bishop2006}. In a graphical model the relationship between the nodes becomes more explicit, namely their conditional independence properties which allow the joint distribution over all variables to be factorised into a series of simpler products involving subsets of variables \cite{Bishop2006}. The basic unit of a network is the node, which represents the different types of variables, including observed variables, unobserved probabilistic variables and unobserved parameters. The nodes are connected by unidirectional edges (arrows) which capture the conditional independence relationship between the variables.
 

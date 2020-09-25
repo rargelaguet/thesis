@@ -98,13 +98,13 @@ To find the direction of steepest ascent, one would need to search over all poss
 Importantly, this operation requires a distance metric to quantify what a \textit{small} distance $h$ means. In standard gradient ascent, this is measured using an Euclidean norm, and the direction of steepest ascent is hence dependent on the Euclidean geometry of the $\theta$ space. Why is this problematic when working with probability distributions? Because it does not consider the uncertainty that underlies probability distributions. When $\theta$ is a random variable with an underlying probability distribution, a small step from $\theta^{(t)}$ to $\theta^{(t+1)}$ does not guarantee an equivalently small change from $\Lagr(\theta^{(t)})$ to $\Lagr(\theta^{(t+1)})$. To illustrate this, consider the following example of four random variables:
 \begin{equation}
 	\begin{split}
-		\psi_1 &\sim \Ndist{}{0,5} \\
-		\psi_2 &\sim \Ndist{}{10,5}
+		 \Ndist{\psi_1}{0,5} \\
+		 \Ndist{\psi_2}{10,5}
 	\end{split}
 	\qquad
 	\begin{split}
-		\psi_3 &\sim \Ndist{}{0,1} \\
-		\psi_4 &\sim \Ndist{}{10,1}
+		\Ndist{\psi_3}{0,1} \\
+		\Ndist{\psi_4}{10,1}
 	\end{split}
 \end{equation}
 

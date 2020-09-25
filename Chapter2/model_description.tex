@@ -1,18 +1,18 @@
 \graphicspath{{Chapter2/Figs/}}
 
-\section{Model description} \label{mofa:model_description}
+\section{MOFA Model description} \label{mofa:model_description}
 
 \subsection{Mathematical formulation}
 
-Multi-Omics Factor Analysis (MOFA) is a multi-view generalisation of traditional Factor Analysis to $M$ input matrices (or views) based on the framework of Group Factor Analysis (discussed in \Cref{section:gfa}).\\
-The input data consists of $M$ views $\bfY^m \in \R^{N \times D_m}$ with non-overlapping features that often represent different assays. However, there is flexibility in the definition of views.\\
-Formally, the input data is factorised as:
+Multi-Omics Factor Analysis (MOFA) is a multi-view generalisation of conventional Factor Analysis to an arbitrary number of $M$ data modalities (or views). It is inspired from the Group Factor Analysis framework discussed in \Cref{section:gfa}.
+
+The input data consists of $M$ views $\bfY^m \in \R^{N \times D_m}$ with non-overlapping features. Views, or data modalities, often represent different assays, but there is flexibility in their definition. Formally, the input data is factorised as:
 \begin{equation} \label{mofa_master_equation}
-	\mathbf{Y}^m = \mathbf{Z}(\mathbf{W}^{m}){T} + \bepsilon^m
+	\mathbf{Y}^m = \mathbf{Z}(\mathbf{W}^{m})^{T} + \bepsilon^m
 \end{equation}
-where $\bfZ \in \R^{N \times K}$ is a matrix that contains the factor values and $\bfW^m \in \R^{D_m \times K}$ are a set of $M$ matrices (one per view) that contain the weights that relate the high-dimensional space to the low-dimensional latent representation. Finally, $\bepsilon^m \in \R^{D_m}$ captures the residuals, or the noise, which is assumed to be normally distributed and heteroskedastic:
+where $\bfZ \in \R^{N \times K}$ is a matrix that contains the factor values and $\bfW^m \in \R^{D_m \times K}$ are a set of $M$ matrices (one per view) that contain the feature weights. Finally, $\bepsilon^m \in \R^{D_m}$ captures the residuals, or the noise, which is assumed to be normally distributed and heteroskedastic:
 \begin{equation}
-	p(\epsilon^{m}_{d}) = \Ndist{\epsilon^{m}_{d}}{0,1/\tau_{d}^{m}}
+	p(\epsilon^{m}_{d}) = \Ndist{\epsilon^{m}_{d}}{0,(\tau_{d}^{m})^{-1}}
 \end{equation}
 where $\tau$ corresponds to the precision (inverse of the variance). Altogether, this results in the following likelihood:
 \begin{equation}
@@ -32,16 +32,17 @@ This effectively  assumes (1) a continuous latent space and (2) independence bet
 
 \subsubsection{Prior distributions for the weights}  \label{section:mofa_weights}
 
-The key determinant of the model is the regularization used on the prior distributions for the weights. Here we encode two levels of sparsity, a (1) view- and factor-wise sparsity and (2) an individual feature-wise sparsity. The aim of the factor- and view-wise sparsity is to disentangle the activity of factors to the different views, such that the weight vector $\bfw_{:,k}^m$ is shrunk to zero if the factor $k$ does not explain any variation in view $m$. \\
-In addition, we place a second layer of sparsity which encourages inactive weights on each individual feature. Mathematically, we express this as a combination of an Automatic Relevance Determination (ARD) prior \cite{Mackay1996} for the view- and factor-wise sparsity and a spike-and-slab prior \cite{Mitchell1988} for the feature-wise sparsity:
-% \begin{equation*}
-% 	p(w_{dk}^{m}) = (1-\theta_{k}^{m}) \mathds{1}_0(w_{dk}^{m}) + \theta_{k}^{m} \Ndist{w_{dk}^{m}}{0, 1 / \alpha_{k}^{m}}
-% \end{equation*}
-However, this formulation of the spike-and-slab prior contains a Dirac delta function, which makes the inference procedure troublesome. To solve this we introduce a re-parametrization of the weights $w$ as a product of a Gaussian random variable $\hat{w}$ and a Bernoulli random variable $s$, \cite{Titsias2011} resulting in the following prior:
+The key determinant to ensure that the model is interpretable lies on the regularization structure imposed on the weights. Here we encode two levels of sparsity on their prior distributions, (1) a view- and factor-wise ARD prior \cite{Mackay1996} and (2) a feature-wise spike-slab prior \cite{Mitchell1988}:
+\begin{equation*}
+	p(w_{dk}^{m}) = (1-\theta_{k}^{m}) \mathds{1}_0(w_{dk}^{m}) + \theta_{k}^{m} \Ndist{w_{dk}^{m}}{0, 1 / \alpha_{k}^{m}}
+\end{equation*}
+The aim of the ARD prior is to disentangle the activity of factors to the different views, such that the weight vector $\bfw_{:,k}^m$ is shrunk to zero if the factor $k$ does not explain any variation in view $m$. The spike-and-slab prior encourages zero values within active factors at the level of individual features.
+
+However, the standard formulation of the spike-and-slab prior contains a Dirac delta function, which is incompatible with the variational inference scheme. To solve this we adopt a re-parametrization of the weights $w$ as a product of a Gaussian random variable $\hat{w}$ and a Bernoulli random variable $s$, \cite{Titsias2011} resulting in the following prior distribution:
 \begin{equation}
 	p(\hat{w}_{dk}^{m},s_{dk}^{m}) = \Ndist{\hat{w}_{dk}^{m}}{0, \frac{1}{\alpha_k^m}}  \text{Ber}(s_{dk}^m \,|\,\theta_k^m)
 \end{equation}
-In this formulation $\alpha_k^m$ controls the activity of factor $k$ in view $m$ and $\theta_k^m$ controls the corresponding fraction of active weights (i.e. the sparsity levels).\\
+In this formulation $\alpha_k^m$ controls the activity of factor $k$ in view $m$ and $\theta_k^m$ controls the corresponding fraction of non-zero weights (i.e. the sparsity levels).\\
 
 Finally, we define conjugate priors for $\theta$ and $\alpha$:
 \begin{align}
@@ -62,30 +63,21 @@ All together, the joint probability density function of the model is given by
 	\label{likelihood}
 	\end{split}
 \end{align}
-and the corresponding graphical model is shown in \Cref{fig:MOFA_graphical_model}. This completes the definition of the MOFA model.
+and the corresponding graphical model is shown below:
 
 \begin{figure}[H]
-	\centering
+ 	\begin{center}
 	\input{graphical_models/mofa}
-	\caption{Graphical model for MOFA. The white circles represent hidden variables that are infered by the model, whereas the grey circles represent the observed variables. There are a total of four plates, each one representing a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in the $m$-th view. The use of transparency in the top left nodes is intentional and becomes clear in Chapter 5.}
-	\label{fig:MOFA_graphical_model}
+	% \label{fig:MOFA_graphical_model}
+	\caption{\textbf{Graphical model for MOFA}. Grey circles represent the observed variables whereas white circles represent hidden variables that are infered by the model. Each plate repsents a dimension of the model: $M$ for the number of views, $N$ for the number of samples, $K$ for the number of factors and $D_m$ for the number of features in the $m$-th view. The use of transparency in the top left nodes is intentional and becomes clear in Chapter 5.}
+	\end{center}
 \end{figure}
 
-\subsubsection{Interpretation of the factors} \label{section:interpretation_factors}
+This completes the definition of the MOFA model.
 
-Each factor ordinates cells along a one-dimensional axis centered at zero. Samples with different signs indicate opposite phenotypes, with higher absolute value indicating a stronger effect. Intuitively, their interpretation is similar to that of principal components in PCA.\\
-For example, if the $k$-th factor captures the variability associated with cell cycle, we could expect cells in the Mitosis state to be at one end of the factor (irrespective of the sign, only the relative positioning being of importance). In contrast, cells in G1 phase are expected to be at the other end of the factor. Cells with intermediate phenotype, or with no clear phenotype (for example if no cell cycle genes are profiled), are expected to be located around zero.
+\subsubsection{Inference}
 
-% mention prior 
-
-\subsubsection{Interpretation of the weights} \label{section:interpretation_weights}
-
-The weights provide a score for each gene on each factor. Genes with no association with the factor are expected to have values close to zero, as specified by the prior. In contrast, genes with strong association with the factor are expected to have large absolute values. The sign of the loading indicates the direction of the effect: a positive loading indicates that the feature is more active in the cells with positive factor values, and vice versa. \\
-Following the cell cycle example from above, genes that are upregulated in the M phase are expected to have large positive weights, whereas genes that are downregulated in the M phase (or, equivalently, upregulated in the G1 phase) are expected to have large negative weights.
-
-% \subsubsection{Interpretation of the noise}
-% The use of a probabilistic framework allows the model to explicitly disentangle the signal (the explained variance) from the noise (the unexplained variance). As a rule of thumb, the larger the value of $\tau_d^m$, the higher the explained variance the feature $d$ in view $m$. In contrast, small values of $\tau_d^m$ are indicative of low predictive power by the model.
-
+To make the model scalable to large datasets we adopt a Variational inference framework with a structured mean field approximation. A detailed overview is given in \Cref{section:variational_inference}, and details on the variational updates for the MOFA model are given in Appendix~\ref{appendix:mofa}. To enable efficient inference for non-Gaussian likelihoods we employ local bounds \cite{Jaakkola2000,Seeger2012}. This is described in detail in \Cref{section:mofa_ngaussian}.
 
 \subsubsection{Missing values} \label{section:mofa_missing_values}
 
@@ -97,11 +89,11 @@ Once trained, the MOFA model can be queried for a set of downstream analysis (\C
 \begin{itemize}
 	\item \textbf{Variance decomposition}: calculate the variance explained ($R^2$) by each factor in each view. This is the first and arguably the most important plot to be inspected once the model is trained, as it summarises the variation (i.e. the signal) in a complex multi-view data set using a simple heatmap. With a quick visual inspection, this plot can be used to determine which factors are shared between multiple data modalities and which ones are exclusive to a single data modality.
 
-	\item \textbf{Ordination of the samples in the latent space}: as in any latent variable model, the samples can be visualised in the latent space using scatterplots or beeswarm plots. As we will demonstrate, simply by colouring or shaping the samples in the factor space using external covariates one can easily characterise the etiology of some of the factors.
+	\item \textbf{Visualisation of the samples on the latent space}: the samples can be visualised in the latent space using beeswarm plots for individual factors or scatterplots for combinations of factors.
 
 	\item \textbf{Inspection of weights}: the feature weights can be interpreted as an importance score for each feature on each factor. Inspecting the top weights for a given factor can reveal the molecular signatures that underlie each factor.
 
-	\item \textbf{Association analysis between factors and external covariates}: multi-omic datasets typically consist of a large set of molecular readouts that are used for model training, and a small set of additionals covariates or response variables such as clinical outcome measurements. The external covariates that are not used for model training can be linked to the factors \textit{a posteriori} using a simple association analysis.
+	\item \textbf{Association analysis between factors and external covariates}: multi-omic datasets typically consist of a large set of molecular readouts that are used for model training, and a small set of additionals covariates or response variables such as clinical outcome measurements. The external covariates are not used for model training but they can be linked to the factors \textit{a posteriori} using a simple association analysis.
 
 	\item \textbf{Imputation}: the latent factors capture a condensed low-dimensional representation of the data that can be used to generate (denoised) reconstructions of the input data. This can be valuable for the inspection of very sparse datasets.
 
@@ -113,16 +105,32 @@ Once trained, the MOFA model can be queried for a set of downstream analysis (\C
 	\begin{center}
 		\includegraphics[width=1.0\textwidth]{MOFA}
 		\caption{\textbf{MOFA overview}.\\
-		The model takes $M$ data matrices as input ($\bfY^1, \cdots, \bfY^M$), one or more from each data modality, with co-occurrent samples but features that are not necessarily related and can differ in numbers. MOFA decomposes these matrices into a matrix of factors ($\bfZ$) and $M$ weight matrices, one for each data modality ($\bfW^1, \cdots, \bfW^M$). White cells in the weight matrices correspond to zeros, i.e. inactive features, whereas the cross symbol in the data matrices denotes missing values. The trained MOFA model can be queried for different downstream analyses.}
+		(a) The MOFA model takes as input $M$ data matrices ($\bfY^1, \cdots, \bfY^M$), each one representing a separate view or data modality. Samples must be co-occurrent but the features are not necessarily related across data modalities. MOFA performs a multi-view matrix decomposition that results in a matrix of factors ($\bfZ$) and $M$ matrices of feature weights, one for each data modality ($\bfW^1, \cdots, \bfW^M$).\\
+		(b) The trained MOFA model can be queried for different downstream analyses.}
 		\label{fig:MOFA}
 	\end{center}
 \end{figure}
 
+\subsubsection{Interpretation of the factors} \label{section:interpretation_factors}
 
-\subsubsection{Inference}
+The interpretation of the factor values is intuitively similar to that of principal components in PCA. Each factor sorts cells along a one-dimensional axis with a mean of zero. Samples with different signs indicate opposite \textit{effects} along this source of variation, with higher absolute value indicating a stronger effect.
 
-To make the model scalable to large datasets we adopt a Variational inference framework with a structured mean field approximation. A detailed overview is given in \Cref{section:variational_inference}, and details on the variational updates for the MOFA model are given in Appendix~\ref{appendix:mofa}. To enable efficient inference for non-Gaussian likelihoods we employ local bounds \cite{Jaakkola2000,Seeger2012}. This is described in detail in \Cref{section:mofa_ngaussian}.
+For example, if the $k$-th factor captures the variability associated with commitment to cell type X, we could expect cells that belong to cell type X to be at one end of the factor (irrespective of the sign, only the relative positioning being of importance). In contrast, cells that do not belong to cell type X are expected to be at the other end of the factor.
 
+% mention prior 
+
+\subsubsection{Interpretation of the weights} \label{section:interpretation_weights}
+
+The weights provide a score for each feature on each factor. Features with no association with the factor are expected to have values close to zero (as specified by the prior distributions). In contrast, features with strong association with the factor are expected to have large absolute values. The sign of the weight indicates the direction of the effect such that a positive weight indicates that the feature is positively associated with the factor values. 
+
+Following the example above, genes that are upregulated cell type X are expected to have large positive weights, whereas genes that are downregulated in cell type X (or, equivalently, upregulated in the other cell types) are expected to have large negative weights. Genes that do not change in expression between the cell types are expected to have a value of zero.
+
+\subsubsection{Variance decomposition} \label{section:variance_decomposition}
+
+The first step in the downstream analysis is to calculate the percentage of variance explained for each factor $k$ in each view $m$ ($R^{2}_{m,k}$), which can be visualised using a heatmap (see \Cref{fig:MOFA}b). This is done by adapting the coefficient of determination statistic that is traditionally used for linear regression analysis:
+\begin{equation*}
+	R^{2}_{m,k} = 100 \frac{ (\sum_{n=1}^{N} \sum_{d=1}^{D_m} y_{n,d}^{m} - z_{nk} w_{dk}^{m})^2 }{ (\sum_{n=1}^{N} \sum_{d=1}^{D_m} y_{n,d}^{m})^2 }
+\end{equation*}
 
 \subsection{Model selection and consistency across random initilizations} \label{section:mofa_robustness}
 
@@ -147,7 +155,7 @@ An attractive property of Variational inference is that the objective function (
 \begin{figure}[H]
 	\centering 	
 	\includegraphics[width=0.5\textwidth]{elbo_convergence}
-	\caption{Training curve for two diffent instances of MOFA with random initialisations. The y-axis displays the log of the ELBO, with higher values indicating a better fit. The x-axis displays the iteration number. The horizontal dash lines mark the value of the ELBO upon convergence. }
+	\caption{\textbf{Training curve for two different instances of MOFA with random initialisations}. The y-axis displays the log of the ELBO, with higher values indicating a better fit. The x-axis displays the iteration number. The horizontal dash lines mark the value of the ELBO upon convergence. }
 	\label{fig:elbo_convergence}
 \end{figure}
 
@@ -160,28 +168,31 @@ Training is stopped when the change in the lower bound becomes smaller than a pr
 
 \subsection{Modelling and inference with non-Gaussian data} \label{section:mofa_ngaussian}
 
-To implement efficient variational inference in conjunction with a non-Gaussian likelihood we adapt prior work from \cite{Seeger2012} using local variational bounds. The key idea is to dynamically approximate non-Gaussian data by Gaussian pseudo-data based on a second-order Taylor expansion.  To make the approximation justifiable we need to introduce variational parameters that are adjusted alongside the updates to improve the fit.	\\
-Denoting the parameters in the MOFA model as $\bfX= (\bfZ,\bfW,\balpha,\btau,\btheta)$, recall that the variational framework approximates the posterior $p(\bfX | \bfY )$ with a distribution $q(\bfX)$, which is indirectly optimised by optimising a lower bound of the log model evidence. The resulting optimization problem can be re-written as
-\begin{equation*}
-\min_{q(\bfX)} -\Lagr(\bfX) =  \min_{q(\bfX)} \E_q \big[ -\log p(\bfY|\bfX) \big] + \KL[q(\bfX)||p(\bfX)].
-\end{equation*}
+Gaussian likelihoods are sufficient to model the residuals of most types of continuous data. Thus, when possible, we advise the user to apply data transformations (i.e. $log$ transformation for example) and use the Gaussian likelihood model. However, there are cases where Gaussian likelihoods are not appropriate, even after data transformations, namely binary and (low) count data. However, non-Gaussian likelihoods are problematic because they are not conjugated with prior distributions, and this prevents the use of the efficient variational inference scheme for Gaussian likelihoods (see Appendix~\ref{appendix:mofa}).
 
-Expanding the MOFA model to non-Gaussian likelihoods we now assume a general likelihood of the form $p(\bfY|\bfX)=p(\bfY|\bfC)$ with $\bfC = \bfZ\bfW^{T}$, that we can write as
+To implement efficient variational inference in conjunction with a non-Gaussian likelihood we adapt prior work from \cite{Seeger2012}, where the full derivation can be found. The idea is to approximate non-Gaussian observations by a normally-distributed \textit{pseudo-data} that is constructed using second-order Taylor expansions. This defines a lower bound that can be improved at each iteration by adjusting parameters at each iteration. Denoting the parameters in the MOFA model as $\bfX= (\bfZ,\bfW,\balpha,\btau,\btheta)$, recall that the variational framework approximates the posterior $p(\bfX | \bfY )$ with a distribution $q(\bfX)$, which is indirectly optimised by optimising a lower bound of the log model evidence. The resulting optimization problem can be re-written as
+\begin{equation*}
+\min_{q(\bfX)} (-\Lagr(\bfX)) =  \min_{q(\bfX)} \E_q \big[ -\log p(\bfY|\bfX) \big] + \KL[q(\bfX)||p(\bfX)].
+\end{equation*}
+Let's now assume a general likelihood function $p(\bfY|\bfX)=f(\bfY|\bfC)$ with $\bfC = \bfZ\bfW^{T}$ that we can write as
 \begin{equation*}
 -\log p(\bfY|\bfX) = \sum_{n=1}^{N} \sum_{d=1}^{D} f_{nd} (c_{nd})
 \end{equation*}
-with $f_{nd}(c_{nd}) = -\log p(y_{nd}|c_{nd})$. I dropped the index $m$ for clarity.\\
-Extending \cite{Seeger2012} to our heteroscedastic noise model, we require $f_{nd}(c_{nd})$ to be twice differentiable and bounded by $\kappa_d$, such that $f_{nd}''(c_{nd}) \leq \kappa_d \,\forall n,d$. This holds true in many important models as for example the Bernoulli and Poisson likelihoods. Under this assumption a lower bound on the log likelihood can be constructed using Taylor expansion,
+with $f_{nd}(c_{nd}) = -\log p(y_{nd}|c_{nd})$. For simplicity in the derivation I will assume a single view and thus drop th index $m$ for clarity.
+
+Extending \cite{Seeger2012} to our heteroscedastic noise model, we require $f_{nd}(c_{nd})$ to be twice differentiable and upper bounded by a constant $\kappa_d$. I do not prove this here, but this property holds true in many important models as for example the Bernoulli and Poisson likelihoods, as demonstrated in \cite{Seeger2012}. Under this assumption a lower bound on the log likelihood can be defined using Taylor expansion:
 \begin{equation*}
 f_{nd}(c_{nd}) \leq \frac{\kappa_d}{2} (c_{nd} - \zeta_{nd})^2 + f'(\zeta_{nd})(c_{nd} - \zeta_{nd}) + f_{nd}(\zeta_{nd}) := q_{nd}(c_{nd},\zeta_{nd}),
 \end{equation*}
-where $\bZeta =  \zeta_{nd} $ are additional variational parameters that determine the location of the Taylor expansion and have to be optimised to make the lower bound as tight as possible. Plugging the bounds into above optimization problem, we obtain:
+where $\bZeta =  \zeta_{nd} $ are additional variational parameters that determine the location of the Taylor expansion and have to be optimised to make the lower bound as tight as possible. Plugging the bounds into the optimization problem above, we obtain:
 \begin{equation*}
 \min_{q(\bfX),\bZeta} \quad \sum_{d=1}^{D}\sum_{n=1}^{N} \E_q [ q_{nd}(c_{nd},\zeta_{nd})] + \KL[q(\bfX)||p(\bfX)]
 \end{equation*}
+
+The new objective function has two class of parameters to optimise: the parameters associated with the local bounds $\bZeta$, and the parameters associated with the model $(\bfX)$.
 The algorithm propsed in \cite{Seeger2012} then alternates between updates of $\bZeta$ and $\mathrm{q}(\bTheta)$. The update for $\bZeta$ is given by
 \begin{equation*}
-\zeta \leftarrow \E[\bfW]\E[\bfZ]^{T}
+\zeta \leftarrow \E[\bfZ]\E[\bfW]^{T}
 \end{equation*}
 where the expectations are taken with respect to the corresponding $q$ distributions.\\
 % In order to find the updates for $q(\bTheta)$ we bring the taylor approximation of $q(f_{nd})$ in q audratic form:
@@ -190,75 +201,77 @@ where the expectations are taken with respect to the corresponding $q$ distribut
 % \end{equation*}
 % and note that this is proportional to the log of a Gaussian distribution $-log \Normal (\hat{y}_{nd}|f_{ng},\frac{1}{ng})$ where $\hat{y}_{nd} = zeta_{nd} - g'(\zeta_{nd})/\kappa_d$ is defined as a pseudodata based on the zero-inflated observations.
 % Consequently, for fixed $\zeta_{nd}$, the updates of the variational distributions $Q(X)$ and $Q(W)$ are equivalent to the ones derived in X, but with pseudodata $\hat{Y}$ and precision $\kappa_g$
-On the other hand, the updates for $q(\bfX)$ can be shown to be identical to the variational Bayesian updates with a conjugate Gaussian likelihood when replacing the observed data $\bfY$ by a pseudo-data $\hat{\bfY}$ and the precisions $\tau_{nd}$ (which were treated as random variables) by the constant terms $\kappa_d$ introduced above. 
+On the other hand, the updates for $q(\bfX)$ are identical to the standard variational Bayesian updates with Gaussian likelihoods, but with the observed data $\bfY$ replaced by the \textit{pseudo-data} $\hat{\bfY}$ and where the precisions $\tau_{nd}$ (which were treated as random variables) are replced by the constant terms $\kappa_d$ introduced above. This might seem a minor change, but it is very important. In the Gaussian case the model infers a variance parameter for each feature which means that MOFA explicitly models heteroscedastic noise. When using non-Gaussian likelihoods this is no longer possible.
 
-The pseudodata is given by:
+Finally, the general formula pseudodata is given by (derived in \cite{Seeger2012}):
 \begin{equation*}
 \hat{y}_{nd} = \zeta_{nd} - f'(\zeta_{nd})/\kappa_d
 \end{equation*}
-depending on the log likelihoods $f(\cdot)$ different $\kappa_d$ are used resulting in different pseudo-data updates. Two special cases implemented in MOFA are the Poisson and Bernoulli likelihood described in the following.
+where different log likelihood functions $f(\cdot)$ yield different $\kappa_d$ values. 
+
+In MOFA we implemented a Bernoulli likelihood model for binary data and a Poisson likelihood model for (low) count data.
 
 \subsubsection*{Bernoulli likelihood for binary data}
+
 When the observations are binary, $y \in \{0,1\}$, they can be modelled using a Bernoulli likelihood:
-%\begin{equation*}
-%p(y|c) = \frac{e^{yc}}{1+e^c}
-%\end{equation*}
-%The second derivative of the log likelihood is bounded by:
-%\begin{equation*}
-%f''(c) = \sigma(c)\sigma(-c) \leq 1/4 := \kappa
-%\end{equation*}
-%where $\sigma$ is the sigmoid function $f(c) = 1/(1+e^{-c})$.\\
-%The pseudodata updates are given by
-%\begin{equation*}
-%\hat{y}_{nd} = \zeta_{nd} - 4*(\sigma(\zeta_{nd}) - y_{nd})
-%\end{equation*}
 \begin{equation*}
-\bfY|\bfZ,\bfW \sim \text{Ber}(\sigma(\bfZ\bfW^T)),
-\end{equation*} where $\sigma(a)=(1+e^{-a})^{-1}$ is the logistic link function and $\bfZ$ and $\bfW$ are the latent factors and weights in our model, respectively.\\
-In order to make the variational  inference efficient and explicit as in the Gaussian case, we aim to approximate the Bernoulli data by a Gaussian pseudo-data as proposed in \cite{Seeger2012} and described above which allows to recycle all the updates from the model with Gaussian views. While \cite{Seeger2012} assumes a homoscedastic approximation with a spherical Gaussian, we adopt an approach following \cite{Jaakkola2000}, which allows for heteroscedaticity and provides a tighter bound on the Bernoulli likelihood.\\
-Denoting $c_{nd}=(\bfZ\bfW^T)_{nd}$ the Jaakkola upper bound \cite{Jaakkola2000} on the negative log-likelihood is given by
-\begin{align*}
-\begin{split}
--\log\left(p(y_{nd}|c_{nd})\right) &= -\log\left(\sigma\left((2y_{nd}-1)  c_{nd}\right)\right)\\
-& \leq -\log(\zeta_{nd})-\frac{(2y_{nd}-1)c_{nd}-\zeta_{nd})}{2} +\lambda(\zeta_{nd})\left(c_{nd}^2 -\zeta_{nd}^2 \right)\\
-& =: b_J(\zeta_{nd}, c_{nd},y_{nd} )
-\label{jaakkola}
-\end{split}
-\end{align*}
-with $\lambda$ given by $\lambda(\zeta)=\frac{1}{4\zeta}\tanh\left(\frac{\zeta}{2}\right)$.\\
-This can easily be derived from a first-order Taylor expansion on the function $f(x) = - \log(e^{\frac{x}{2}}+e^{-\frac{x}{2}}) = \frac{x}{2}-\log(\sigma(x))$ in $x^2$ and by the convexity of 
-$f$ in $x^2$ this bound is global as discussed in \cite{Jaakkola2000}.\\
-In order to make use of this tighter bound but still be able to re-use the variational updates from the Gaussian case we re-formulate the bound as a Gaussian likelihood on pseudo-data $\hat{\bfY}$.\\
-As above we can plug this bound on the negative log-likelihood into the variational optimization problem to obtain  \begin{equation*}
-\min_{q(\bfX),\bZeta} \quad \sum_{d=1}^{D}\sum_{n=1}^{N} \mathbb{E}_q b_J(\zeta_{nd}, c_{nd},y_{nd} ) + \KL[q(\bfX)||p(\bfX)].
+	p(y|c) = \frac{e^{yc}}{1+e^c}
 \end{equation*}
-This is minimized iteratively in the variational parameter $\zeta_{nd}$ and the variational distribution of Z,W:\\
-Minimizing in the variational parameter $\zeta$ this leads to the updates given by
+The second derivative of the log likelihood is bounded by:
 \begin{equation*}
-	\zeta_{nd}^2 = \mathbb{E}[c_{nd}^2]
+	f''(c) = \sigma(c)\sigma(-c) \leq 1/4 := \kappa
 \end{equation*}
-as described in \cite{Jaakkola2000}, \cite{Bishop2006}.\\
-For the variational distribution $q(\bfZ,\bfW)$ we observe that the Jaakkola bound can be re-written as 
+where $\sigma$ is the sigmoid function $f(c) = 1/(1+e^{-c})$. 
+
+The pseudodata updates are given by
 \begin{equation*}
-	b_J(\zeta_{nd}, c_{nd},y_{nd} ) = -\log\left(\varphi\left(\hat{y}_{nd}; c_{nd}, \frac{1}{2\lambda(\zeta_{nd})}\right)\right) + \gamma(\zeta_{nd}),
+	\hat{y}_{nd} = \zeta_{nd} - 4*(\sigma(\zeta_{nd}) - y_{nd})
 \end{equation*}
-where $\varphi(\cdot; \mu, \sigma^2)$ denotes the density function of a normal distribution with mean $\mu$ and variance $\sigma^2$ and $\gamma$ is a term only depending on $\bZeta$. This allows us to re-use the updates for $\bfZ$ and $\bfW$ from a setting with Gaussian likelihood by considering the Gaussian pseudo-data 
-\begin{equation*}
-	\hat{y}_{nd}= \frac{2y_{nd}-1}{4 \lambda(\zeta_{nd})}
-\end{equation*}
-updating the data precision as $\tau_{nd} = 2\lambda(\zeta_{nd})$ using  updates generalized for sample- and feature-wise precision parameters on the data.
+
+% \begin{equation*}
+% \bfY|\bfZ,\bfW \sim \text{Ber}(\sigma(\bfZ\bfW^T)),
+% \end{equation*} 
+% where $\sigma(a)=(1+e^{-a})^{-1}$ is the logistic link function and $\bfZ$ and $\bfW$ are the latent factors and weights, respectively. 
+
+% As an approximation, here we adopt the Jaakkola upper bound \cite{Jaakkola2000} on the negative log-likelihood. Denoting $c_{nd}=(\bfZ\bfW^T)_{nd}$ this is given by:
+% \begin{align*} \label{jaakkola}
+% 	\begin{split}
+% 		-\log\left(p(y_{nd}|c_{nd})\right) &= -\log\left(\sigma\left((2y_{nd}-1)  c_{nd}\right)\right)\\
+% 		& \leq -\log(\zeta_{nd})-\frac{(2y_{nd}-1)c_{nd}-\zeta_{nd})}{2} +\lambda(\zeta_{nd})\left(c_{nd}^2 -\zeta_{nd}^2 \right)\\
+% 		& =: b_J(\zeta_{nd}, c_{nd},y_{nd} )
+% 	\end{split}
+% \end{align*}
+% with $\lambda$ given by $\lambda(\zeta)=\frac{1}{4\zeta}\tanh\left(\frac{\zeta}{2}\right)$.\\
+% This can easily be derived from a first-order Taylor expansion on the function $f(x) = - \log(e^{\frac{x}{2}}+e^{-\frac{x}{2}}) = \frac{x}{2}-\log(\sigma(x))$ in $x^2$ and by the convexity of 
+% $f$ in $x^2$ this bound is global as discussed in \cite{Jaakkola2000}.\\
+% In order to make use of this tighter bound but still be able to re-use the variational updates from the Gaussian case we re-formulate the bound as a Gaussian likelihood on pseudo-data $\hat{\bfY}$.\\
+% As above we can plug this bound on the negative log-likelihood into the variational optimization problem to obtain  \begin{equation*}
+% \min_{q(\bfX),\bZeta} \quad \sum_{d=1}^{D}\sum_{n=1}^{N} \mathbb{E}_q b_J(\zeta_{nd}, c_{nd},y_{nd} ) + \KL[q(\bfX)||p(\bfX)].
+% \end{equation*}
+% This is minimized iteratively in the variational parameter $\zeta_{nd}$ and the variational distribution of Z,W:\\
+% Minimizing in the variational parameter $\zeta$ this leads to the updates given by
+% \begin{equation*}
+% 	\zeta_{nd}^2 = \mathbb{E}[c_{nd}^2]
+% \end{equation*}
+% as described in \cite{Jaakkola2000}, \cite{Bishop2006}.\\
+% For the variational distribution $q(\bfZ,\bfW)$ we observe that the Jaakkola bound can be re-written as 
+% \begin{equation*}
+% 	b_J(\zeta_{nd}, c_{nd},y_{nd} ) = -\log\left(\varphi\left(\hat{y}_{nd}; c_{nd}, \frac{1}{2\lambda(\zeta_{nd})}\right)\right) + \gamma(\zeta_{nd}),
+% \end{equation*}
+% where $\varphi(\cdot; \mu, \sigma^2)$ denotes the density function of a normal distribution with mean $\mu$ and variance $\sigma^2$ and $\gamma$ is a term only depending on $\bZeta$. This allows us to re-use the updates for $\bfZ$ and $\bfW$ from a setting with Gaussian likelihood by considering the Gaussian pseudo-data 
+% \begin{equation*}
+% 	\hat{y}_{nd}= \frac{2y_{nd}-1}{4 \lambda(\zeta_{nd})}
+% \end{equation*}
+% updating the data precision as $\tau_{nd} = 2\lambda(\zeta_{nd})$ using  updates generalized for sample- and feature-wise precision parameters on the data.
 
 
 \subsubsection*{Poisson likelihood for count data}
 
-When observations are a natural numbers, such as count data $y \in \N = \{0,1,\cdots\}$, they can be modelled using a Poisson likelihood:
+When observations are natural numbers, such as count data $y \in \N = \{0,1,\cdots\}$, they can be modelled using a Poisson likelihood:
 \begin{equation*}
 	p(y|c) = \lambda(c)^y e^{-\lambda(c)}
 \end{equation*}
-where $\lambda(c)>0$ is the rate function and has to be convex and log-concave in order to ensure that the likelihood is log-concave.\\
-As done in \cite{Seeger2012}, here we choose the following rate function: $\lambda(c)=\log(1+e^c)$.
-
-Then an upper bound of the second derivative of the log-likelihood is given by
+where $\lambda(c)>0$ is a convex rate function. As done in \cite{Seeger2012}, here we adopt the rate function $\lambda(c)=\log(1+e^c)$, which yields the following upper bound of the second derivative of the log-likelihood:
 \begin{equation*}
 	f''_{nd}(c_{nd}) \leq \kappa_d = 1/4 + 0.17*\max(\bfy_{:,d}).
 \end{equation*}
@@ -287,7 +300,7 @@ A variety of latent variable models exist with the aim of perfoming multi-view d
 		\parbox{2cm}{Remes2016}  & VB & ARD & None & No & Gaussian & \parbox{1.5cm}{Homo-\\scedastic} \\ \midrule
 		\parbox{1.7cm}{Zhao2015} & Gibbs & ARD & \parbox{2.5cm}{Three-parameter\\ beta prior} & No & Gaussian & \parbox{1.5cm}{Hetero-\\scedastic} 
 		\\ \midrule
-		\parbox{2.6cm}{{Leppaaho2017},\\ {2017}}  & {Gibbs} & {ARD} & {Spike-Slab} & {Yes} & {Gaussian} & \parbox{2cm}{{Homo-}\\{scedastic}} \\ \midrule
+		\parbox{2.6cm}{Leppaaho2017} & {Gibbs} & {ARD} & {Spike-Slab} & {Yes} & {Gaussian} & \parbox{2cm}{{Homo-}\\{scedastic}} \\ \midrule
 		MOFA  & VB & ARD & Spike-Slab & Yes & \parbox{2cm}{Gaussian,\\Poisson,\\Bernoulli} & \parbox{2cm}{Hetero-\\scedastic} \\  \bottomrule
 	\end{tabular}
 	\caption{\textbf{Overview of latent variable methods for multi-view data integration.} Abbreviations used: VB (variational Bayes inference), Gibbs (Gibbs sampling based inference), ARD(Automatic Relevance Determination)}

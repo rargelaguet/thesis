@@ -82,33 +82,33 @@ However, PCA suffers from serious drawbacks when applying it to real datasets \c
 \subsection{Probabilistic Principal Component Analysis and Factor Analysis} \label{section:probabilistic_pca}
 A probabilistic version of PCA was initially proposed in \cite{Tipping1999}. It can be formulated by converting some (or all) fixed parameters into random variables and adding an explicit noise term to \Cref{eq:linear_model}:
 \begin{equation}
-	\bfY = \bfW \bfZ + \bepsilon
+\mathbf{Y} = \mathbf{Z}\mathbf{W}^{T}  + \bepsilon
 \end{equation}
 where the weights $\bfW$ are assumed to be non-probabilistic parameters, but the noise $\bepsilon$ and the latent variables $\bfZ$ (the principal components) are assumed to follow an isotropic normal distribution:
 \begin{align*}
 	p(\bfZ) &= \prod_{n=1}^{N} \prod_{k=1}^{K} \Ndist{z_{nk}}{0,1} \\
-	p(\epsilon) &= \Ndist {\epsilon}{0,\sigma^2}
+	p(\epsilon) &= \Ndist {\epsilon}{0,\tau^{-1}}
 \end{align*}
+where $\tau$ is the precision (inverse of the variance).
 %The alternative strategy of treating $\bfZ$ as random variables and $\bfW$ as parameters has also been explored \cite{Lawrence2005}.\\
 
-All together, this leads to a normally-distributed likelihood:
+All together, this leads to a Gaussian likelihood:
 \begin{equation} \label{eq:ppca_lik}
 	% p(\bfY|\bfW,\bfZ,\sigma) = \Ndist{\bfY}{\bfW \bfZ,\sigma^2 \I}
-	p(\bfY|\bfW,\bfZ,\sigma) = \prod_{n=1}^{N} \prod_{d=1}^{D} \Ndist{y_{n,d}}{\bfw_{,:k}^T \bfz_{n,:},\sigma^2 \I}
+	p(\bfY|\bfZ,\bfW,\tau) = \prod_{n=1}^{N} \prod_{d=1}^{D} \Ndist{y_{n,d}}{\bfz_{n,:} \bfw_{,:k},\tau^{-1} \I}
 \end{equation}
 
 The corresponding graphical model is:
-
 \begin{figure}[H]
 	\centering
 	\input{graphical_models/pPCA}
-	\caption{Graphical model for probabilistic PCA. The latent variables are modelled as random variables, whereas the weights and the noise are modelled as deterministic parameters.}
+	\caption{\textbf{Graphical model for probabilistic PCA}. The latent variables are modelled as random variables, whereas the weights and the noise are modelled as deterministic parameters.}
 	\label{fig:pPCA}
 \end{figure}
 
-Importantly, the choice of the distribution for $\epsilon$ implies that the noise of each feature is independent but restricted to have the same variance $\sigma^2$. In practice this is a limiting assumption, as different features are expected to show different degrees of noise, albeit this constraint can be relaxed and forms the basis of Factor Analysis \cite{Rubin1982,Bishop2006}.
+Importantly, the choice of the distribution for $\epsilon$ implies that the noise of each feature is independent but restricted to have the same precision $\tau$. In practice this is a limiting assumption, as different features are expected to show different degrees of noise, albeit this constraint can be relaxed and forms the basis of Factor Analysis \cite{Rubin1982,Bishop2006}.
 
-The inference procedures involves learning the parameters $\bfW$, and $\sigma^2$ and a posterior probability distribution for $\bfZ$. As the model depends on latent variables, inference can be performed using the iterative Expectation-Maximisation (EM) algorithm \cite{Rubin1982,Bishop2006}. In the expectation step, the posterior distribution for $\bfZ$ is computed in closed form (due to conjugacy between the likelihood and the prior), given current estimates for the parameters $\bfW$, and $\sigma^2$. In the maximisation step, the parameters are calculated by maximising the expectation of the joint log likelihood under the posterior distribution of $\bfZ$ found in the E step \cite{Tipping1999}.\\
+The inference procedures involves learning the parameters $\bfW$, and $\tau$ and a posterior probability distribution for $\bfZ$. As the model depends on latent variables, inference can be performed using the iterative Expectation-Maximisation (EM) algorithm \cite{Rubin1982,Bishop2006}. In the expectation step, the posterior distribution for $\bfZ$ is computed in closed form (due to conjugacy between the likelihood and the prior), given current estimates for the parameters $\bfW$, and $\tau$. In the maximisation step, the parameters are calculated by maximising the expectation of the joint log likelihood under the posterior distribution of $\bfZ$ found in the E step \cite{Tipping1999}.\\
 Interestingly, the EM solution of probabilistic PCA lies in the same subspace as the traditional PCA solution \cite{Tipping1999}, but the use of a probabilistic framework brings several benefits. First, model selection can be performed by comparing likelihoods across different settings of parameters. Second, missing data can naturally be accounted for by ignoring the missing observations from the likelihood. Finally, the probabilistic formulation sets the core framework for a Bayesian treatment of PCA, enabling a broad range of principled extensions tailored different types of datasets.
 
 
@@ -121,7 +121,7 @@ The full Bayesian treatment of PCA requires the specification of prior probabili
 	p(\epsilon) &= \Ndist {\epsilon}{0,\tau^{-1}} \\
 	p(\tau) &= \Gdist{\tau}{a_0,b_0}
 \end{align*}
-where $\tau$ is the precision (inverse of the variance) of the noise term. A generalisation to Bayesian Factor Analysis follows by allowing a separate noise term per feature:
+A generalisation to Bayesian Factor Analysis follows by allowing a separate noise term per feature:
 \begin{align*}
 	p(\bepsilon) &= \prod_{d=1}^{D} \Ndist {\epsilon_d}{0,\tau_d^{-1}} \\
 	p(\btau) &= \prod_{d=1}^{D} \Gdist{\tau_d}{a_0,b_0}
@@ -136,7 +136,7 @@ The corresponding graphical model is:
 \begin{figure}[H] 
 	\centering
 	\input{graphical_models/bayesianFA}
-	\caption{Graphical model for Bayesian Factor Analysis. All unobserved variables are modelled as random variables.}
+	\caption{\textbf{Graphical model for Bayesian Factor Analysis}. All unobserved variables are modelled as random variables.}
 	\label{fig:bayesianFA}
 \end{figure}
 
@@ -188,7 +188,7 @@ The corresponding graphical model is:
 \begin{figure}[H] \begin{center}
 	\input{graphical_models/bayesian_sparseFA}
 	\label{fig:bayesianFA}
-	\caption{Graphical model for Bayesian sparse Factor Analysis. A double sparsity-inducing prior is used on the weights: an ARD prior to prune inactive factors and a spike-and-slab prior to inactive individual features within the active factors.}
+	\caption{\textbf{Graphical model for Bayesian sparse Factor Analysis}. A double sparsity-inducing prior is used on the weights: an ARD prior to prune inactive factors and a spike-and-slab prior to inactive individual features within the active factors.}
 \end{center} \end{figure}
 
 The spike-and-slab prior is effectively a mixture model where features are sampled from a zero-inflated Gaussian distribution, where $\theta_k \in (0,1)$ dictates the level of sparsity per factor (i.e. how many active features). A value of $\theta_k$ close to $0$ implies that most of the weights of factor $k$ are shrunk to $0$ (i.e. a sparse factor), whereas a value of $\theta_k$ close to $1$ implies that most of the weights are non-zero (i.e. dense factors). By learning $\theta_k$ from the data, the model naturally accounts for combinations of sparse and dense factors.

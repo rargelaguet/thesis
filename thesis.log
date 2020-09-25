@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  22 SEP 2020 10:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.19)  25 SEP 2020 11:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2016,7 +2016,7 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 138.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 \PHD@crest=\box98
 
-<Figs/University_Crest.pdf, id=465, 59.22125pt x 69.25874pt>
+<Figs/University_Crest.pdf, id=461, 59.22125pt x 69.25874pt>
 File: Figs/University_Crest.pdf Graphic file (type pdf)
 
 <use Figs/University_Crest.pdf>
@@ -2088,31 +2088,27 @@ Chapter 1.
 
 
 ] [2] [3]
-<Introduction/Figs/ChromatinAcc_protocols.png, id=816, 969.6225pt x 662.475pt>
+<Introduction/Figs/ChromatinAcc_protocols.png, id=811, 969.6225pt x 662.475pt>
 File: Introduction/Figs/ChromatinAcc_protocols.png Graphic file (type png)
 
 <use Introduction/Figs/ChromatinAcc_protocols.png>
 Package pdftex.def Info: Introduction/Figs/ChromatinAcc_protocols.png used on i
-nput line 62.
+nput line 60.
 (pdftex.def)             Requested size: 349.9689pt x 239.10744pt.
  [4 <./Introduction/Figs/ChromatinAcc_protocols.png>] [5] [6] [7] [8] [9]
-<Introduction/Figs/overview_data_integration.png, id=956, 756.8275pt x 968.6187
+<Introduction/Figs/overview_data_integration.png, id=950, 756.8275pt x 968.6187
 4pt>
 File: Introduction/Figs/overview_data_integration.png Graphic file (type png)
  <use Introduction/Figs/overview_data_integration.png>
 Package pdftex.def Info: Introduction/Figs/overview_data_integration.png used o
-n input line 155.
+n input line 154.
 (pdftex.def)             Requested size: 349.9689pt x 447.90526pt.
- [10 <./Introduction/Figs/overview_data_integration.png (PNG copy)>] [11] [12] 
+ [10] [11 <./Introduction/Figs/overview_data_integration.png (PNG copy)>] [12] 
 [13] [14] [15]
-[16]) [17]
+[16] [17]) [18]
 \openout2 = `Chapter1/scnmt-seq.aux'.
 
- (./Chapter1/scnmt-seq.tex [18
-
-
-
-]
+ (./Chapter1/scnmt-seq.tex
 Chapter 2.
 
 Overfull \hbox (5.41846pt too wide) in paragraph at lines 3--3
@@ -2124,15 +2120,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-<Chapter1/Figs/scNMT_protocol.pdf, id=1092, 311.1625pt x 427.5975pt>
+<Chapter1/Figs/scNMT_protocol.pdf, id=1086, 311.1625pt x 384.43625pt>
 File: Chapter1/Figs/scNMT_protocol.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_protocol.pdf>
 Package pdftex.def Info: Chapter1/Figs/scNMT_protocol.pdf used on input line 19
 .
-(pdftex.def)             Requested size: 256.64528pt x 352.68094pt.
- [19] [20 <./Chapter1/Figs/scNMT_protocol.pdf>] <Chapter1/Figs/scNMT_coverage.p
-df, id=1154, 435.6275pt x 226.8475pt>
+(pdftex.def)             Requested size: 256.64528pt x 317.08168pt.
+ [19
+
+
+
+] [20 <./Chapter1/Figs/scNMT_protocol.pdf>] <Chapter1/Figs/scNMT_coverage.pdf, 
+id=1140, 435.6275pt x 226.8475pt>
 File: Chapter1/Figs/scNMT_coverage.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_coverage.pdf>
@@ -2140,7 +2140,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_coverage.pdf used on input line 49
 .
 (pdftex.def)             Requested size: 466.62521pt x 242.98749pt.
  [21]
-<Chapter1/Figs/scNMT_coverage2.pdf, id=1164, 205.76875pt x 152.06813pt>
+<Chapter1/Figs/scNMT_coverage2.pdf, id=1151, 205.76875pt x 152.06813pt>
 File: Chapter1/Figs/scNMT_coverage2.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_coverage2.pdf>
@@ -2152,7 +2152,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
-<Chapter1/Figs/scNMT_comparison.pdf, id=1198, 700.41673pt x 328.22626pt>
+<Chapter1/Figs/scNMT_comparison.pdf, id=1185, 700.41673pt x 328.22626pt>
 File: Chapter1/Figs/scNMT_comparison.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_comparison.pdf>
@@ -2160,7 +2160,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_comparison.pdf used on input line
 73.
 (pdftex.def)             Requested size: 466.62521pt x 218.66838pt.
  [23 <./Chapter1/Figs/scNMT_coverage2.pdf>]
-<Chapter1/Figs/scnmt_pseudobulk_profiles.pdf, id=1222, 786.94pt x 797.98125pt>
+<Chapter1/Figs/scnmt_pseudobulk_profiles.pdf, id=1209, 786.94pt x 797.98125pt>
 File: Chapter1/Figs/scnmt_pseudobulk_profiles.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scnmt_pseudobulk_profiles.pdf>
@@ -2168,23 +2168,23 @@ Package pdftex.def Info: Chapter1/Figs/scnmt_pseudobulk_profiles.pdf used on in
 put line 87.
 (pdftex.def)             Requested size: 326.63622pt x 331.21692pt.
  [24 <./Chapter1/Figs/scNMT_comparison.pdf>]
-<Chapter1/Figs/scNMT_correlations_acrossgenes.pdf, id=1259, 495.35063pt x 190.0
-4298pt>
+<Chapter1/Figs/scNMT_correlations_acrossgenes.pdf, id=1246, 495.35063pt x 174.1
+5062pt>
 File: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf Graphic file (type pdf)
  <use Chapter1/Figs/scNMT_correlations_acrossgenes.pdf>
 Package pdftex.def Info: Chapter1/Figs/scNMT_correlations_acrossgenes.pdf used 
 on input line 102.
-(pdftex.def)             Requested size: 466.62521pt x 179.0232pt.
+(pdftex.def)             Requested size: 466.62521pt x 164.05237pt.
  [25 <./Chapter1/Figs/scnmt_pseudobulk_profiles.pdf>]
-<Chapter1/Figs/scNMT_EB_RNA.pdf, id=1309, 400.49625pt x 446.66875pt>
+<Chapter1/Figs/scNMT_EB_RNA.pdf, id=1296, 703.2945pt x 222.163pt>
 File: Chapter1/Figs/scNMT_EB_RNA.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_EB_RNA.pdf>
 Package pdftex.def Info: Chapter1/Figs/scNMT_EB_RNA.pdf used on input line 134.
 
-(pdftex.def)             Requested size: 303.30353pt x 338.29266pt.
+(pdftex.def)             Requested size: 466.62521pt x 147.40092pt.
  [26 <./Chapter1/Figs/scNMT_correlations_acrossgenes.pdf>]
-<Chapter1/Figs/scNMT_EB_correlations.pdf, id=1535, 407.51747pt x 263.48438pt>
+<Chapter1/Figs/scNMT_EB_correlations.pdf, id=1504, 407.51747pt x 263.48438pt>
 File: Chapter1/Figs/scNMT_EB_correlations.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_EB_correlations.pdf>
@@ -2192,7 +2192,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_EB_correlations.pdf used on input
 line 146.
 (pdftex.def)             Requested size: 466.62521pt x 301.71008pt.
  [27 <./Chapter1/Figs/scNMT_EB_RNA.pdf>] <Chapter1/Figs/scNMT_pseudotime.pdf, i
-d=2646, 503.8825pt x 138.5175pt>
+d=2615, 503.8825pt x 138.5175pt>
 File: Chapter1/Figs/scNMT_pseudotime.pdf Graphic file (type pdf)
 
 <use Chapter1/Figs/scNMT_pseudotime.pdf>
@@ -2200,7 +2200,7 @@ Package pdftex.def Info: Chapter1/Figs/scNMT_pseudotime.pdf used on input line
 213.
 (pdftex.def)             Requested size: 349.9689pt x 96.20702pt.
  [28 <./Chapter1/Figs/scNMT_EB_correlations.pdf>]
-<Chapter1/Figs/scNMT_pseudotime_coupling.pdf, id=2719, 403.17325pt x 144.20576p
+<Chapter1/Figs/scNMT_pseudotime_coupling.pdf, id=2688, 403.17325pt x 144.20576p
 t>
 File: Chapter1/Figs/scNMT_pseudotime_coupling.pdf Graphic file (type pdf)
  <use Chapter1/Figs/scNMT_pseudotime_coupling.pdf>
@@ -2246,14 +2246,14 @@ Overfull \hbox (6.17361pt too wide) in paragraph at lines 42--43
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 12.
 
-[35] [36] <Chapter2/Figs/lower_bound.pdf, id=3530, 490.72935pt x 368.86005pt>
+[35] [36] <Chapter2/Figs/lower_bound.pdf, id=3499, 490.72935pt x 368.86005pt>
 File: Chapter2/Figs/lower_bound.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/lower_bound.pdf>
 Package pdftex.def Info: Chapter2/Figs/lower_bound.pdf used on input line 104.
 (pdftex.def)             Requested size: 163.32167pt x 122.7598pt.
  [37]
-<Chapter2/Figs/mean_field.pdf, id=3547, 578.16pt x 337.26pt>
+<Chapter2/Figs/mean_field.pdf, id=3516, 578.16pt x 337.26pt>
 File: Chapter2/Figs/mean_field.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/mean_field.pdf>
@@ -2261,7 +2261,7 @@ Package pdftex.def Info: Chapter2/Figs/mean_field.pdf used on input line 123.
 (pdftex.def)             Requested size: 326.63622pt x 190.5368pt.
  [38 <./Chapter2/Figs/lower_bound.pdf>]
 [39 <./Chapter2/Figs/mean_field.pdf>]
-<Chapter2/Figs/VB_vs_EP.pdf, id=3641, 1133.10326pt x 373.37592pt>
+<Chapter2/Figs/VB_vs_EP.pdf, id=3610, 1133.10326pt x 373.37592pt>
 File: Chapter2/Figs/VB_vs_EP.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/VB_vs_EP.pdf>
@@ -2269,19 +2269,14 @@ Package pdftex.def Info: Chapter2/Figs/VB_vs_EP.pdf used on input line 177.
 (pdftex.def)             Requested size: 466.62521pt x 153.75739pt.
  [40]) (./Chapter2/factor_analysis.tex [41 <./Chapter2/Figs/VB_vs_EP.pdf>] [42]
  [43]
-<Chapter2/Figs/pca2.pdf, id=3797, 803.0pt x 564.1075pt>
+<Chapter2/Figs/pca2.pdf, id=3766, 803.0pt x 564.1075pt>
 File: Chapter2/Figs/pca2.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/pca2.pdf>
 Package pdftex.def Info: Chapter2/Figs/pca2.pdf used on input line 74.
 (pdftex.def)             Requested size: 373.30159pt x 262.24701pt.
-
-Overfull \hbox (5.35652pt too wide) in paragraph at lines 82--82
-|[]\T1/cmr/bx/n/14.4 Probabilistic Prin-ci-pal Com-po-nent Anal-y-sis and Fac-t
-or Anal-
- []
-
-[44 <./Chapter2/Figs/pca2.pdf>] (./graphical_models/pPCA.tex
+ [44 <./Chapter2/Figs/pca2.pdf>]
+(./graphical_models/pPCA.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2290,8 +2285,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [45]
-(./graphical_models/bayesianFA.tex
+) [45] (./graphical_models/bayesianFA.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2301,7 +2295,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 ) [46]
-<Chapter2/Figs/ard.pdf, id=3870, 630.355pt x 399.4925pt>
+<Chapter2/Figs/ard.pdf, id=3839, 630.355pt x 399.4925pt>
 File: Chapter2/Figs/ard.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/ard.pdf>
@@ -2394,11 +2388,11 @@ Missing character: There is no ; in font nullfont!
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 43--45
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
 
  []
 
-(./graphical_models/mofa.tex
+[56] (./graphical_models/mofa.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2428,60 +2422,52 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [56] [57]
-<Chapter2/Figs/MOFA.pdf, id=4061, 1471.4975pt x 748.7975pt>
+) [57] [58]
+<Chapter2/Figs/MOFA.pdf, id=4040, 1471.4975pt x 748.7975pt>
 File: Chapter2/Figs/MOFA.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA.pdf used on input line 114.
+Package pdftex.def Info: Chapter2/Figs/MOFA.pdf used on input line 106.
 (pdftex.def)             Requested size: 466.62521pt x 237.4492pt.
- [58]
-<Chapter2/Figs/MOFA_robustness.pdf, id=4072, 846.16125pt x 323.2075pt>
+ [59 <./Chapter2/Figs/MOFA.pdf>]
+<Chapter2/Figs/MOFA_robustness.pdf, id=4271, 846.16125pt x 323.2075pt>
 File: Chapter2/Figs/MOFA_robustness.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_robustness.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_robustness.pdf used on input line 1
-34.
+41.
 (pdftex.def)             Requested size: 466.62521pt x 178.23318pt.
- [59 <./Chapter2/Figs/MOFA.pdf>]
-<Chapter2/Figs/MOFA_nfactors.pdf, id=4331, 375.4025pt x 311.1625pt>
-File: Chapter2/Figs/MOFA_nfactors.pdf Graphic file (type pdf)
-
-<use Chapter2/Figs/MOFA_nfactors.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_nfactors.pdf used on input line 148
-.
-(pdftex.def)             Requested size: 279.97797pt x 232.07986pt.
- [60 <./Chapter2/Figs/MOFA_robustness.pdf>] <Chapter2/Figs/elbo_convergence.pdf
-, id=4379, 243.83195pt x 224.32709pt>
+ [60]
+<Chapter2/Figs/elbo_convergence.pdf, id=4279, 243.83195pt x 224.32709pt>
 File: Chapter2/Figs/elbo_convergence.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/elbo_convergence.pdf>
 Package pdftex.def Info: Chapter2/Figs/elbo_convergence.pdf used on input line 
-160.
+157.
 (pdftex.def)             Requested size: 233.3126pt x 214.64983pt.
- [61 <./Chapter2/Figs/MOFA_nfactors.pdf> <./Chapter2/Figs/elbo_convergence.pdf>
-] [62] [63]
+ [61 <./Chapter2/Figs/MOFA_robustness.pdf>] [62 <./Chapter2/Figs/elbo_convergen
+ce.pdf>] [63]
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [64]
-Underfull \hbox (badness 10000) in paragraph at lines 291--291
+Underfull \hbox (badness 10000) in paragraph at lines 293--293
 []\T1/cmr/bx/n/10.95 Feature-
  []
 
 
-Overfull \hbox (4.89777pt too wide) in paragraph at lines 291--291
+Overfull \hbox (4.89777pt too wide) in paragraph at lines 293--293
 []\T1/cmr/bx/n/10.95 Missing 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
 []\T1/cmr/m/n/10.95 (+20) Three-
  []
 
 
-Overfull \hbox (26.8992pt too wide) in paragraph at lines 289--304
+Overfull \hbox (26.8992pt too wide) in paragraph at lines 291--306
 [][] 
  []
 
@@ -2489,21 +2475,17 @@ Overfull \hbox (26.8992pt too wide) in paragraph at lines 289--304
 \openout2 = `Chapter2/results.aux'.
 
  (./Chapter2/results.tex
-<Chapter2/Figs/MOFA_learnK.pdf, id=4452, 1213.53375pt x 746.79pt>
+<Chapter2/Figs/MOFA_learnK.pdf, id=4366, 1213.53375pt x 746.79pt>
 File: Chapter2/Figs/MOFA_learnK.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_learnK.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_learnK.pdf used on input line 15.
 (pdftex.def)             Requested size: 419.95984pt x 258.44048pt.
-
-
-LaTeX Warning: Reference `section_ard' on page 1 undefined on input line 23.
-
-[66
+ [66
 
 
  <./Chapter2/Figs/MOFA_learnK.pdf>]
-<Chapter2/Figs/MOFA_group_sparsity.pdf, id=4661, 520.94624pt x 242.9075pt>
+<Chapter2/Figs/MOFA_group_sparsity.pdf, id=4564, 520.94624pt x 242.9075pt>
 File: Chapter2/Figs/MOFA_group_sparsity.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_group_sparsity.pdf>
@@ -2511,7 +2493,7 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_group_sparsity.pdf used on input li
 ne 28.
 (pdftex.def)             Requested size: 419.95984pt x 195.81995pt.
 
-<Chapter2/Figs/MOFA_sparsity.pdf, id=4666, 505.89pt x 361.35pt>
+<Chapter2/Figs/MOFA_sparsity.pdf, id=4569, 505.89pt x 361.35pt>
 File: Chapter2/Figs/MOFA_sparsity.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_sparsity.pdf>
@@ -2519,7 +2501,7 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_sparsity.pdf used on input line 42.
 
 (pdftex.def)             Requested size: 326.63622pt x 233.31433pt.
  [67 <./Chapter2/Figs/MOFA_group_sparsity.pdf>]
-<Chapter2/Figs/MOFA_nongaussian.pdf, id=4689, 1582.91376pt x 2116.90875pt>
+<Chapter2/Figs/MOFA_nongaussian.pdf, id=4593, 1582.91376pt x 2116.90875pt>
 File: Chapter2/Figs/MOFA_nongaussian.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_nongaussian.pdf>
@@ -2528,7 +2510,7 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_nongaussian.pdf used on input line
 (pdftex.def)             Requested size: 373.30159pt x 499.21791pt.
  [68 <./Chapter2/Figs/MOFA_sparsity.pdf>] [69 <./Chapter2/Figs/MOFA_nongaussian
 .pdf>]
-<Chapter2/Figs/MOFA_scalability.pdf, id=5106, 411.5375pt x 334.24875pt>
+<Chapter2/Figs/MOFA_scalability.pdf, id=5010, 411.5375pt x 334.24875pt>
 File: Chapter2/Figs/MOFA_scalability.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_scalability.pdf>
@@ -2541,7 +2523,7 @@ Overfull \hbox (49.74638pt too wide) in paragraph at lines 91--91
 ia
  []
 
-[71] <Chapter2/Figs/MOFA_CLL_overview.pdf, id=5152, 528.30676pt x 192.05049pt>
+[71] <Chapter2/Figs/MOFA_CLL_overview.pdf, id=5055, 528.30676pt x 192.05049pt>
 File: Chapter2/Figs/MOFA_CLL_overview.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_CLL_overview.pdf>
@@ -2549,7 +2531,7 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_overview.pdf used on input line
  118.
 (pdftex.def)             Requested size: 466.62521pt x 169.63498pt.
  [72 <./Chapter2/Figs/MOFA_CLL_overview.pdf>]
-<Chapter2/Figs/MOFA_CLL_factors12.pdf, id=5191, 479.7925pt x 257.96375pt>
+<Chapter2/Figs/MOFA_CLL_factors12.pdf, id=5094, 479.7925pt x 257.96375pt>
 File: Chapter2/Figs/MOFA_CLL_factors12.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_CLL_factors12.pdf>
@@ -2557,7 +2539,7 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_factors12.pdf used on input lin
 e 135.
 (pdftex.def)             Requested size: 466.62521pt x 250.8858pt.
  [73 <./Chapter2/Figs/MOFA_CLL_factors12.pdf>]
-<Chapter2/Figs/MOFA_CLL_Factor1.pdf, id=5247, 1061.41539pt x 812.92809pt>
+<Chapter2/Figs/MOFA_CLL_Factor1.pdf, id=5151, 1061.41539pt x 812.92809pt>
 File: Chapter2/Figs/MOFA_CLL_Factor1.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_CLL_Factor1.pdf>
@@ -2565,7 +2547,7 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Factor1.pdf used on input line
 173.
 (pdftex.def)             Requested size: 419.95984pt x 321.64265pt.
  [74 <./Chapter2/Figs/MOFA_CLL_Factor1.pdf>]
-<Chapter2/Figs/MOFA_CLL_Factor5.pdf, id=5348, 1019.18768pt x 660.35808pt>
+<Chapter2/Figs/MOFA_CLL_Factor5.pdf, id=5222, 1019.18768pt x 660.35808pt>
 File: Chapter2/Figs/MOFA_CLL_Factor5.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_CLL_Factor5.pdf>
@@ -2573,65 +2555,65 @@ Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Factor5.pdf used on input line
 196.
 (pdftex.def)             Requested size: 443.29253pt x 287.2232pt.
  [75]
-<Chapter2/Figs/MOFA_CLL_Cox.pdf, id=5360, 1040.03558pt x 883.52386pt>
+<Chapter2/Figs/MOFA_CLL_Cox.pdf, id=5234, 1040.03558pt x 883.52386pt>
 File: Chapter2/Figs/MOFA_CLL_Cox.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_CLL_Cox.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Cox.pdf used on input line 221.
+Package pdftex.def Info: Chapter2/Figs/MOFA_CLL_Cox.pdf used on input line 216.
 
 (pdftex.def)             Requested size: 419.95984pt x 356.76018pt.
  [76 <./Chapter2/Figs/MOFA_CLL_Factor5.pdf>] [77 <./Chapter2/Figs/MOFA_CLL_Cox.
 pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 242--243
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
-<Chapter2/Figs/MOFA_imputation.pdf, id=5503, 674.52pt x 353.32pt>
+<Chapter2/Figs/MOFA_imputation.pdf, id=5357, 674.52pt x 353.32pt>
 File: Chapter2/Figs/MOFA_imputation.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_imputation.pdf>
 Package pdftex.def Info: Chapter2/Figs/MOFA_imputation.pdf used on input line 2
-46.
+41.
 (pdftex.def)             Requested size: 419.95984pt x 219.98343pt.
- [78 <./Chapter2/Figs/MOFA_imputation.pdf>] <Chapter2/Figs/MOFA_scMT.pdf, id=55
-43, 674.52pt x 525.965pt>
+ [78 <./Chapter2/Figs/MOFA_imputation.pdf>] <Chapter2/Figs/MOFA_scMT.pdf, id=53
+96, 674.52pt x 525.965pt>
 File: Chapter2/Figs/MOFA_scMT.pdf Graphic file (type pdf)
 
 <use Chapter2/Figs/MOFA_scMT.pdf>
-Package pdftex.def Info: Chapter2/Figs/MOFA_scMT.pdf used on input line 273.
+Package pdftex.def Info: Chapter2/Figs/MOFA_scMT.pdf used on input line 268.
 (pdftex.def)             Requested size: 419.95984pt x 327.47531pt.
  [79]) [80 <./Chapter2/Figs/MOFA_scMT.pdf>]
 \openout2 = `Chapter2/perspectives.aux'.
 
 
-(./Chapter2/perspectives.tex) [81
+(./Chapter2/perspectives.tex [81
 
 
-]
+]) [82]
 \openout2 = `Chapter3/introduction.aux'.
 
- (./Chapter3/introduction.tex [82
-
-
-
-]
+ (./Chapter3/introduction.tex
 Chapter 4.
-[83] [84] [85]) [86]
+[83
+
+
+
+] [84] [85]) [86]
 \openout2 = `Chapter3/results.aux'.
 
  (./Chapter3/results.tex
-<Chapter3/Figs/dataset_overview.pdf, id=5836, 1593.955pt x 1260.71pt>
+<Chapter3/Figs/dataset_overview.pdf, id=5690, 1593.955pt x 1260.71pt>
 File: Chapter3/Figs/dataset_overview.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/dataset_overview.pdf>
 Package pdftex.def Info: Chapter3/Figs/dataset_overview.pdf used on input line 
 11.
-(pdftex.def)             Requested size: 396.63428pt x 313.6955pt.
+(pdftex.def)             Requested size: 443.29253pt x 350.61102pt.
  [87
 
 
- <./Chapter3/Figs/dataset_overview.pdf>]
-<Chapter3/Figs/rna_lineage_assignment.pdf, id=5907, 773.89125pt x 259.367pt>
+] [88 <./Chapter3/Figs/dataset_overview.pdf>]
+<Chapter3/Figs/rna_lineage_assignment.pdf, id=5766, 773.89125pt x 259.367pt>
 File: Chapter3/Figs/rna_lineage_assignment.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/rna_lineage_assignment.pdf>
@@ -2639,212 +2621,200 @@ Package pdftex.def Info: Chapter3/Figs/rna_lineage_assignment.pdf used on input
  line 30.
 (pdftex.def)             Requested size: 419.95984pt x 140.74867pt.
 
-<Chapter3/Figs/gene_markers.pdf, id=5908, 508.90125pt x 464.73625pt>
+<Chapter3/Figs/gene_markers.pdf, id=5767, 508.90125pt x 464.73625pt>
 File: Chapter3/Figs/gene_markers.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/gene_markers.pdf>
 Package pdftex.def Info: Chapter3/Figs/gene_markers.pdf used on input line 37.
 (pdftex.def)             Requested size: 419.95984pt x 383.52559pt.
- [88 <./Chapter3/Figs/rna_lineage_assignment.pdf>] <Chapter3/Figs/metacc_dimred
-.pdf, id=5933, 571.63562pt x 315.67938pt>
+ [89 <./Chapter3/Figs/rna_lineage_assignment.pdf>] <Chapter3/Figs/metacc_dimred
+.pdf, id=5791, 571.63562pt x 315.67938pt>
 File: Chapter3/Figs/metacc_dimred.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/metacc_dimred.pdf>
 Package pdftex.def Info: Chapter3/Figs/metacc_dimred.pdf used on input line 60.
 
 (pdftex.def)             Requested size: 466.62521pt x 257.68826pt.
- [89 <./Chapter3/Figs/gene_markers.pdf>]
-<Chapter3/Figs/metacc_heatmaps.pdf, id=5998, 576.22577pt x 160.6pt>
+ [90 <./Chapter3/Figs/gene_markers.pdf>]
+<Chapter3/Figs/metacc_heatmaps.pdf, id=5856, 576.22577pt x 160.6pt>
 File: Chapter3/Figs/metacc_heatmaps.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/metacc_heatmaps.pdf>
 Package pdftex.def Info: Chapter3/Figs/metacc_heatmaps.pdf used on input line 7
 3.
 (pdftex.def)             Requested size: 396.63428pt x 110.547pt.
- [90 <./Chapter3/Figs/metacc_dimred.pdf>] <Chapter3/Figs/metacc_boxplots.pdf, i
-d=6040, 694.595pt x 652.4375pt>
+ [91 <./Chapter3/Figs/metacc_dimred.pdf>] <Chapter3/Figs/metacc_boxplots.pdf, i
+d=5898, 694.595pt x 652.4375pt>
 File: Chapter3/Figs/metacc_boxplots.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/metacc_boxplots.pdf>
 Package pdftex.def Info: Chapter3/Figs/metacc_boxplots.pdf used on input line 8
 2.
 (pdftex.def)             Requested size: 326.63622pt x 306.82486pt.
- [91 <./Chapter3/Figs/metacc_heatmaps.pdf> <./Chapter3/Figs/metacc_boxplots.pdf
+ [92 <./Chapter3/Figs/metacc_heatmaps.pdf> <./Chapter3/Figs/metacc_boxplots.pdf
 
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Chapter3/Figs/metacc_boxpl
 ots.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
 e
->] <Chapter3/Figs/metacc_vs_rna_cor.pdf, id=16585, 510.73409pt x 183.7796pt>
+>] <Chapter3/Figs/metacc_vs_rna_cor.pdf, id=16441, 510.73409pt x 183.7796pt>
 File: Chapter3/Figs/metacc_vs_rna_cor.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/metacc_vs_rna_cor.pdf>
 Package pdftex.def Info: Chapter3/Figs/metacc_vs_rna_cor.pdf used on input line
  97.
 (pdftex.def)             Requested size: 466.62521pt x 167.90988pt.
- [92 <./Chapter3/Figs/metacc_vs_rna_cor.pdf>] <Chapter3/Figs/mofa_overview.pdf,
- id=16773, 1378.14874pt x 821.0675pt>
-File: Chapter3/Figs/mofa_overview.pdf Graphic file (type pdf)
-
-<use Chapter3/Figs/mofa_overview.pdf>
-Package pdftex.def Info: Chapter3/Figs/mofa_overview.pdf used on input line 112
-.
-(pdftex.def)             Requested size: 1102.52051pt x 656.8549pt.
-
-<Chapter3/Figs/chip_seq.pdf, id=16775, 538.01pt x 236.885pt>
+ [93 <./Chapter3/Figs/metacc_vs_rna_cor.pdf>] <Chapter3/Figs/chip_seq.pdf, id=1
+6649, 538.01pt x 236.885pt>
 File: Chapter3/Figs/chip_seq.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/chip_seq.pdf>
-Package pdftex.def Info: Chapter3/Figs/chip_seq.pdf used on input line 126.
+Package pdftex.def Info: Chapter3/Figs/chip_seq.pdf used on input line 125.
 (pdftex.def)             Requested size: 403.5065pt x 177.6633pt.
- [93 <./Chapter3/Figs/mofa_overview.pdf>]
-<Chapter3/Figs/mofa_gastrulation_overview.pdf, id=17005, 1350.39503pt x 323.244
+ [94 <./Chapter3/Figs/chip_seq.pdf>]
+<Chapter3/Figs/mofa_gastrulation_overview.pdf, id=16692, 1350.39503pt x 323.244
 63pt>
 File: Chapter3/Figs/mofa_gastrulation_overview.pdf Graphic file (type pdf)
  <use Chapter3/Figs/mofa_gastrulation_overview.pdf>
 Package pdftex.def Info: Chapter3/Figs/mofa_gastrulation_overview.pdf used on i
-nput line 143.
+nput line 142.
 (pdftex.def)             Requested size: 466.62521pt x 111.69707pt.
- [94 <./Chapter3/Figs/chip_seq.pdf>]
-Overfull \hbox (9.5958pt too wide) in paragraph at lines 154--154
+
+Overfull \hbox (9.5958pt too wide) in paragraph at lines 153--153
 |[]\T1/cmr/bx/n/14.4 Differential DNA methy-la-tion and chro-matin ac-ces-si-bi
 l-ity anal-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+[95 <./Chapter3/Figs/mofa_gastrulation_overview.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-[95 <./Chapter3/Figs/mofa_gastrulation_overview.pdf>]
-<Chapter3/Figs/diff_metacc_barplots.pdf, id=17094, 605.26125pt x 467.7475pt>
+<Chapter3/Figs/diff_metacc_barplots.pdf, id=16746, 605.26125pt x 467.7475pt>
 File: Chapter3/Figs/diff_metacc_barplots.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/diff_metacc_barplots.pdf>
 Package pdftex.def Info: Chapter3/Figs/diff_metacc_barplots.pdf used on input l
-ine 165.
+ine 164.
 (pdftex.def)             Requested size: 443.29253pt x 342.5805pt.
 
-<Chapter3/Figs/diff_metacc_scatterplot.png, id=17095, 1069.3551pt x 712.3413pt>
+<Chapter3/Figs/diff_metacc_scatterplot.png, id=16747, 1075.1367pt x 787.9839pt>
 File: Chapter3/Figs/diff_metacc_scatterplot.png Graphic file (type png)
 <use Chapter3/Figs/diff_metacc_scatterplot.png>
 Package pdftex.def Info: Chapter3/Figs/diff_metacc_scatterplot.png used on inpu
-t line 174.
-(pdftex.def)             Requested size: 419.95984pt x 279.74675pt.
+t line 173.
+(pdftex.def)             Requested size: 419.95984pt x 307.79343pt.
  [96 <./Chapter3/Figs/diff_metacc_barplots.pdf>]
-<Chapter3/Figs/diff_metacc_examples.pdf, id=17151, 598.63046pt x 778.91pt>
+<Chapter3/Figs/diff_metacc_examples.pdf, id=16786, 598.63046pt x 778.91pt>
 File: Chapter3/Figs/diff_metacc_examples.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/diff_metacc_examples.pdf>
 Package pdftex.def Info: Chapter3/Figs/diff_metacc_examples.pdf used on input l
-ine 188.
+ine 187.
 (pdftex.def)             Requested size: 466.62521pt x 607.14326pt.
- [97 <./Chapter3/Figs/diff_metacc_scatterplot.png (PNG copy)>]
-Overfull \vbox (7.51491pt too high) has occurred while \output is active []
-
-
-[98 <./Chapter3/Figs/diff_metacc_examples.pdf>]
-<Chapter3/Figs/motif_enrichment.pdf, id=18780, 1112.05466pt x 329.71582pt>
+ [97 <./Chapter3/Figs/diff_metacc_scatterplot.png (PNG copy)>] [98 <./Chapter3/
+Figs/diff_metacc_examples.pdf>]
+<Chapter3/Figs/motif_enrichment.pdf, id=18415, 1112.05466pt x 329.71582pt>
 File: Chapter3/Figs/motif_enrichment.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/motif_enrichment.pdf>
 Package pdftex.def Info: Chapter3/Figs/motif_enrichment.pdf used on input line 
-203.
+202.
 (pdftex.def)             Requested size: 466.62521pt x 138.34889pt.
 
-<Chapter3/Figs/enhancers_metacc_profiles.pdf, id=18782, 1287.81125pt x 649.2405
+<Chapter3/Figs/enhancers_metacc_profiles.pdf, id=18417, 1287.81125pt x 649.2405
 5pt>
 File: Chapter3/Figs/enhancers_metacc_profiles.pdf Graphic file (type pdf)
  <use Chapter3/Figs/enhancers_metacc_profiles.pdf>
 Package pdftex.def Info: Chapter3/Figs/enhancers_metacc_profiles.pdf used on in
-put line 217.
+put line 216.
 (pdftex.def)             Requested size: 466.62521pt x 235.24213pt.
  [99 <./Chapter3/Figs/motif_enrichment.pdf>]
-<Chapter3/Figs/enhancers_metacc_umap.png, id=21739, 1219.6767pt x 649.9482pt>
+<Chapter3/Figs/enhancers_metacc_umap.png, id=21375, 1207.1499pt x 644.6484pt>
 File: Chapter3/Figs/enhancers_metacc_umap.png Graphic file (type png)
 
 <use Chapter3/Figs/enhancers_metacc_umap.png>
 Package pdftex.def Info: Chapter3/Figs/enhancers_metacc_umap.png used on input 
-line 229.
-(pdftex.def)             Requested size: 419.95984pt x 223.78609pt.
+line 228.
+(pdftex.def)             Requested size: 419.95984pt x 224.27287pt.
  [100 <./Chapter3/Figs/enhancers_metacc_profiles.pdf>] [101 <./Chapter3/Figs/en
 hancers_metacc_umap.png (PNG copy)>]
-<Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf, id=22041, 611.09303pt x 194.058pt
+<Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf, id=21629, 611.09303pt x 194.058pt
 >
 File: Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf Graphic file (type pdf)
  <use Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf>
 Package pdftex.def Info: Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf used on in
-put line 258.
+put line 257.
 (pdftex.def)             Requested size: 466.62521pt x 148.18738pt.
  [102 <./Chapter3/Figs/pluri_vs_midbrain_h3k27ac.pdf>]
-<Chapter3/Figs/pluri_vs_midbrain_metacc.pdf, id=22130, 736.7525pt x 429.605pt>
+<Chapter3/Figs/pluri_vs_midbrain_metacc.pdf, id=21719, 736.7525pt x 429.605pt>
 File: Chapter3/Figs/pluri_vs_midbrain_metacc.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/pluri_vs_midbrain_metacc.pdf>
 Package pdftex.def Info: Chapter3/Figs/pluri_vs_midbrain_metacc.pdf used on inp
-ut line 273.
+ut line 272.
 (pdftex.def)             Requested size: 466.62521pt x 272.08817pt.
  [103 <./Chapter3/Figs/pluri_vs_midbrain_metacc.pdf>]
-<Chapter3/Figs/metacc_diagram.pdf, id=22427, 217.4795pt x 192.05049pt>
+<Chapter3/Figs/metacc_diagram.pdf, id=22008, 217.4795pt x 192.05049pt>
 File: Chapter3/Figs/metacc_diagram.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/metacc_diagram.pdf>
-Package pdftex.def Info: Chapter3/Figs/metacc_diagram.pdf used on input line 30
-0.
+Package pdftex.def Info: Chapter3/Figs/metacc_diagram.pdf used on input line 29
+9.
 (pdftex.def)             Requested size: 256.64528pt x 226.6469pt.
  [104 <./Chapter3/Figs/metacc_diagram.pdf>]
-<Chapter3/Figs/mesendoderm_dynamics.pdf, id=22958, 1114.1625pt x 720.6925pt>
+<Chapter3/Figs/mesendoderm_dynamics.pdf, id=22539, 1114.1625pt x 720.6925pt>
 File: Chapter3/Figs/mesendoderm_dynamics.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/mesendoderm_dynamics.pdf>
 Package pdftex.def Info: Chapter3/Figs/mesendoderm_dynamics.pdf used on input l
-ine 320.
+ine 317.
 (pdftex.def)             Requested size: 466.62521pt x 301.83104pt.
  [105]
-Overfull \hbox (14.34335pt too wide) in paragraph at lines 331--331
+Overfull \hbox (14.34335pt too wide) in paragraph at lines 327--327
 |[]\T1/cmr/bx/n/14.4 TET en-zymes are re-quired for ef-fi-cient demethy-la-tion
  of lineage-
  []
 
 [106 <./Chapter3/Figs/mesendoderm_dynamics.pdf>]
-<Chapter3/Figs/EB_rna_celltypes.pdf, id=23027, 1325.69276pt x 769.33621pt>
+<Chapter3/Figs/EB_rna_celltypes.pdf, id=22595, 1325.69276pt x 769.33621pt>
 File: Chapter3/Figs/EB_rna_celltypes.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/EB_rna_celltypes.pdf>
 Package pdftex.def Info: Chapter3/Figs/EB_rna_celltypes.pdf used on input line 
-346.
+342.
 (pdftex.def)             Requested size: 419.95984pt x 243.70392pt.
 
-<Chapter3/Figs/EB_rna_markers.pdf, id=23028, 538.13246pt x 437.635pt>
+<Chapter3/Figs/EB_rna_markers.pdf, id=22596, 538.13246pt x 437.635pt>
 File: Chapter3/Figs/EB_rna_markers.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/EB_rna_markers.pdf>
-Package pdftex.def Info: Chapter3/Figs/EB_rna_markers.pdf used on input line 36
-0.
+Package pdftex.def Info: Chapter3/Figs/EB_rna_markers.pdf used on input line 35
+6.
 (pdftex.def)             Requested size: 419.95984pt x 341.53423pt.
  [107 <./Chapter3/Figs/EB_rna_celltypes.pdf>] <Chapter3/Figs/EB_metacc_global.p
-df, id=23095, 459.94437pt x 322.16261pt>
+df, id=22663, 459.94437pt x 322.16261pt>
 File: Chapter3/Figs/EB_metacc_global.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/EB_metacc_global.pdf>
 Package pdftex.def Info: Chapter3/Figs/EB_metacc_global.pdf used on input line 
-380.
+372.
 (pdftex.def)             Requested size: 419.95984pt x 294.15651pt.
  [108 <./Chapter3/Figs/EB_rna_markers.pdf>] <Chapter3/Figs/EB_metacc_profiles.p
-df, id=23147, 633.2719pt x 252.945pt>
+df, id=22715, 633.2719pt x 252.945pt>
 File: Chapter3/Figs/EB_metacc_profiles.pdf Graphic file (type pdf)
 
 <use Chapter3/Figs/EB_metacc_profiles.pdf>
 Package pdftex.def Info: Chapter3/Figs/EB_metacc_profiles.pdf used on input lin
-e 393.
+e 385.
 (pdftex.def)             Requested size: 419.95984pt x 167.74701pt.
  [109 <./Chapter3/Figs/EB_metacc_global.pdf>]
-<Chapter3/Figs/EB_metacc_WTvsKO_boxplots.pdf, id=23235, 706.10303pt x 590.1759p
+<Chapter3/Figs/EB_metacc_WTvsKO_boxplots.pdf, id=22803, 706.10303pt x 590.1759p
 t>
 File: Chapter3/Figs/EB_metacc_WTvsKO_boxplots.pdf Graphic file (type pdf)
  <use Chapter3/Figs/EB_metacc_WTvsKO_boxplots.pdf>
 Package pdftex.def Info: Chapter3/Figs/EB_metacc_WTvsKO_boxplots.pdf used on in
-put line 414.
+put line 405.
 (pdftex.def)             Requested size: 396.63428pt x 331.51385pt.
  [110 <./Chapter3/Figs/EB_metacc_profiles.pdf>] [111 <./Chapter3/Figs/EB_metacc
 _WTvsKO_boxplots.pdf>])
@@ -2853,12 +2823,17 @@ _WTvsKO_boxplots.pdf>])
 
  (./Chapter4/introduction.tex
 Chapter 5.
+
+Overfull \hbox (30.96735pt too wide) in paragraph at lines 3--3
+\T1/cmr/bx/n/24.88 in-te-gra-tion of large-scale struc-tured datasets| 
+ []
+
 [113
 
 
 
 ] [114] [115]
-<Chapter4/Figs/simulations/mofa2_euclidean_distributions.pdf, id=23824, 722.7pt
+<Chapter4/Figs/simulations/mofa2_euclidean_distributions.pdf, id=23360, 722.7pt
  x 361.35pt>
 File: Chapter4/Figs/simulations/mofa2_euclidean_distributions.pdf Graphic file 
 (type pdf)
@@ -2891,7 +2866,7 @@ put line 292.
 \openout2 = `Chapter4/model_description.aux'.
 
  (./Chapter4/model_description.tex
-<Chapter4/Figs/simulations/mofa2_overview.pdf, id=23906, 1471.37706pt x 1130.66
+<Chapter4/Figs/simulations/mofa2_overview.pdf, id=23443, 1471.37706pt x 1130.66
 41pt>
 File: Chapter4/Figs/simulations/mofa2_overview.pdf Graphic file (type pdf)
  <use Chapter4/Figs/simulations/mofa2_overview.pdf>
@@ -2945,7 +2920,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 )
 [126]
-<Chapter4/Figs/simulations/mofa2_init.pdf, id=23969, 433.62pt x 211.79124pt>
+<Chapter4/Figs/simulations/mofa2_init.pdf, id=23505, 433.62pt x 211.79124pt>
 File: Chapter4/Figs/simulations/mofa2_init.pdf Graphic file (type pdf)
 
 <use Chapter4/Figs/simulations/mofa2_init.pdf>
@@ -2956,7 +2931,7 @@ Package pdftex.def Info: Chapter4/Figs/simulations/mofa2_init.pdf used on input
 \openout2 = `Chapter4/results.aux'.
 
  (./Chapter4/results.tex
-<Chapter4/Figs/simulations/mofa2_stochastic_validation.pdf, id=24008, 1089.4401
+<Chapter4/Figs/simulations/mofa2_stochastic_validation.pdf, id=23545, 1089.4401
 4pt x 650.43pt>
 File: Chapter4/Figs/simulations/mofa2_stochastic_validation.pdf Graphic file (t
 ype pdf)
@@ -2966,7 +2941,7 @@ Package pdftex.def Info: Chapter4/Figs/simulations/mofa2_stochastic_validation.
 pdf used on input line 15.
 (pdftex.def)             Requested size: 466.62521pt x 278.59764pt.
 
-<Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf, id=24009, 576.1525pt x 5
+<Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf, id=23546, 576.1525pt x 5
 05.89pt>
 File: Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf Graphic file (type p
 df)
@@ -2978,7 +2953,7 @@ sed on input line 26.
 
 
  <./Chapter4/Figs/simulations/mofa2_stochastic_validation.pdf>]
-<Chapter4/Figs/simulations/mofa2_multigroup_validation.pdf, id=24405, 421.575pt
+<Chapter4/Figs/simulations/mofa2_multigroup_validation.pdf, id=23942, 421.575pt
  x 312.83574pt>
 File: Chapter4/Figs/simulations/mofa2_multigroup_validation.pdf Graphic file (t
 ype pdf)
@@ -2988,7 +2963,7 @@ Package pdftex.def Info: Chapter4/Figs/simulations/mofa2_multigroup_validation.
 pdf used on input line 42.
 (pdftex.def)             Requested size: 373.30159pt x 277.01953pt.
  [129 <./Chapter4/Figs/simulations/mofa2_stochastic_speed.pdf>]
-<Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf, id=24427, 882.29625pt 
+<Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf, id=23964, 882.29625pt 
 x 272.01625pt>
 File: Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf Graphic file (type
  pdf)
@@ -2998,7 +2973,7 @@ Package pdftex.def Info: Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf
 (pdftex.def)             Requested size: 443.29253pt x 136.66772pt.
 
 [130 <./Chapter4/Figs/simulations/mofa2_multigroup_validation.pdf>]
-<Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pdf, id=24457, 622.42535pt
+<Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pdf, id=23994, 622.42535pt
  x 396.42606pt>
 File: Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pdf Graphic file (typ
 e pdf)
@@ -3008,7 +2983,7 @@ f used on input line 78.
 (pdftex.def)             Requested size: 443.29253pt x 282.34157pt.
 
 [131 <./Chapter4/Figs/scrna/mofa2_scrna_variance_explained.pdf>]
-<Chapter4/Figs/scrna/mofa2_scrna_ExE_ectoderm_factor.pdf, id=24493, 596.48045pt
+<Chapter4/Figs/scrna/mofa2_scrna_ExE_ectoderm_factor.pdf, id=24030, 596.48045pt
  x 378.49504pt>
 File: Chapter4/Figs/scrna/mofa2_scrna_ExE_ectoderm_factor.pdf Graphic file (typ
 e pdf)
@@ -3018,7 +2993,7 @@ f used on input line 90.
 (pdftex.def)             Requested size: 443.29253pt x 281.29477pt.
 
 [132 <./Chapter4/Figs/scrna/mofa2_scrna_ExE_endoderm_factor.pdf>]
-<Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf, id=24603, 582.175pt x 4
+<Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf, id=24140, 582.175pt x 4
 45.1872pt>
 File: Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf Graphic file (type 
 pdf)
@@ -3027,7 +3002,7 @@ Package pdftex.def Info: Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf
 used on input line 102.
 (pdftex.def)             Requested size: 443.29253pt x 338.99112pt.
  [133 <./Chapter4/Figs/scrna/mofa2_scrna_ExE_ectoderm_factor.pdf>]
-<Chapter4/Figs/scrna/mofa2_scrna_mesoderm_factor.pdf, id=24955, 615.29875pt x 3
+<Chapter4/Figs/scrna/mofa2_scrna_mesoderm_factor.pdf, id=24492, 615.29875pt x 3
 90.45876pt>
 File: Chapter4/Figs/scrna/mofa2_scrna_mesoderm_factor.pdf Graphic file (type pd
 f)
@@ -3037,7 +3012,7 @@ ed on input line 113.
 (pdftex.def)             Requested size: 443.29253pt x 281.30882pt.
  [134 <./Chapter4/Figs/scrna/mofa2_scrna_metabolism_factor.pdf>] [135 <./Chapte
 r4/Figs/scrna/mofa2_scrna_mesoderm_factor.pdf>]
-<Chapter4/Figs/scnmt/mofa2_scnmt_datastructure.pdf, id=25363, 939.56721pt x 714
+<Chapter4/Figs/scnmt/mofa2_scnmt_datastructure.pdf, id=24900, 939.56721pt x 714
 .67pt>
 File: Chapter4/Figs/scnmt/mofa2_scnmt_datastructure.pdf Graphic file (type pdf)
 
@@ -3046,7 +3021,7 @@ Package pdftex.def Info: Chapter4/Figs/scnmt/mofa2_scnmt_datastructure.pdf used
  on input line 218.
 (pdftex.def)             Requested size: 443.29253pt x 337.18173pt.
  [136 <./Chapter4/Figs/scnmt/mofa2_scnmt_datastructure.pdf>]
-<Chapter4/Figs/scnmt/mofa2_scnmt_modeloverview.pdf, id=25394, 771.88374pt x 311
+<Chapter4/Figs/scnmt/mofa2_scnmt_modeloverview.pdf, id=24931, 771.88374pt x 311
 .1625pt>
 File: Chapter4/Figs/scnmt/mofa2_scnmt_modeloverview.pdf Graphic file (type pdf)
 
@@ -3055,7 +3030,7 @@ Package pdftex.def Info: Chapter4/Figs/scnmt/mofa2_scnmt_modeloverview.pdf used
  on input line 233.
 (pdftex.def)             Requested size: 443.29253pt x 178.69864pt.
  [137 <./Chapter4/Figs/scnmt/mofa2_scnmt_modeloverview.pdf>]
-<Chapter4/Figs/scnmt/mofa2_scnmt_factors12.pdf, id=25433, 790.2855pt x 440.9805
+<Chapter4/Figs/scnmt/mofa2_scnmt_factors12.pdf, id=24970, 790.2855pt x 440.9805
 pt>
 File: Chapter4/Figs/scnmt/mofa2_scnmt_factors12.pdf Graphic file (type pdf)
  <use Chapter4/Figs/scnmt/mofa2_scnmt_factors12.pdf>
@@ -3063,7 +3038,7 @@ Package pdftex.def Info: Chapter4/Figs/scnmt/mofa2_scnmt_factors12.pdf used on
 input line 252.
 (pdftex.def)             Requested size: 466.62521pt x 260.3781pt.
 
-<Chapter4/Figs/scnmt/mofa2_scnmt_factor6.pdf, id=25437, 832.66785pt x 562.1pt>
+<Chapter4/Figs/scnmt/mofa2_scnmt_factor6.pdf, id=24974, 832.66785pt x 562.1pt>
 File: Chapter4/Figs/scnmt/mofa2_scnmt_factor6.pdf Graphic file (type pdf)
 
 <use Chapter4/Figs/scnmt/mofa2_scnmt_factor6.pdf>
@@ -3087,7 +3062,7 @@ Chapter 6.
 
 
 ] [142] [143] [144]
-<Chapter5/Figs/mosaic_integration.pdf, id=25913, 939.91655pt x 320.21332pt>
+<Chapter5/Figs/mosaic_integration.pdf, id=25450, 939.91655pt x 320.21332pt>
 File: Chapter5/Figs/mosaic_integration.pdf Graphic file (type pdf)
 
 <use Chapter5/Figs/mosaic_integration.pdf>
@@ -3160,7 +3135,7 @@ Overfull \hbox (9.56366pt too wide) detected at line 273
 ]
 Appendix B.
 
-<Appendix/appendix_figures/mofa_gastrulation_factor3.pdf, id=59648, 886.76895pt
+<Appendix/appendix_figures/mofa_gastrulation_factor3.pdf, id=59184, 886.76895pt
  x 816.40408pt>
 File: Appendix/appendix_figures/mofa_gastrulation_factor3.pdf Graphic file (typ
 e pdf)
@@ -3174,7 +3149,7 @@ Overfull \vbox (5.75029pt too high) has occurred while \output is active []
 
 
 [158 <./Appendix/appendix_figures/mofa_gastrulation_factor3.pdf>]
-<Appendix/appendix_figures/mofa_gastrulation_factor4.pdf, id=59771, 878.6125pt 
+<Appendix/appendix_figures/mofa_gastrulation_factor4.pdf, id=59308, 878.6125pt 
 x 556.15579pt>
 File: Appendix/appendix_figures/mofa_gastrulation_factor4.pdf Graphic file (typ
 e pdf)
@@ -3183,7 +3158,7 @@ Package pdftex.def Info: Appendix/appendix_figures/mofa_gastrulation_factor4.pd
 f used on input line 22.
 (pdftex.def)             Requested size: 443.29253pt x 280.60611pt.
 
-<Appendix/appendix_figures/mofa_gastrulation_factor5.pdf, id=59772, 897.56331pt
+<Appendix/appendix_figures/mofa_gastrulation_factor5.pdf, id=59309, 897.56331pt
  x 712.94756pt>
 File: Appendix/appendix_figures/mofa_gastrulation_factor5.pdf Graphic file (typ
 e pdf)
@@ -3193,7 +3168,7 @@ f used on input line 35.
 (pdftex.def)             Requested size: 443.29253pt x 352.12141pt.
 
 [159 <./Appendix/appendix_figures/mofa_gastrulation_factor4.pdf>]
-<Appendix/appendix_figures/mofa_gastrulation_factor6.pdf, id=59891, 961.1438pt 
+<Appendix/appendix_figures/mofa_gastrulation_factor6.pdf, id=59428, 961.1438pt 
 x 684.5575pt>
 File: Appendix/appendix_figures/mofa_gastrulation_factor6.pdf Graphic file (typ
 e pdf)
@@ -3259,13 +3234,10 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 207.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 207.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2D8D63C3D28AE32B0A53D80BA1F65143;31754.
+(rerunfilecheck)             Checksum: D5DF43E126C147FEE49D9C29F6205955;31355.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -3275,13 +3247,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41495 strings out of 493014
- 773303 string characters out of 6133351
- 1740666 words of memory out of 5000000
- 42866 multiletter control sequences out of 15000+600000
- 54286 words of font info for 298 fonts, out of 8000000 for 9000
+ 41468 strings out of 493014
+ 772741 string characters out of 6133351
+ 1737359 words of memory out of 5000000
+ 42852 multiletter control sequences out of 15000+600000
+ 54061 words of font info for 294 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,20n,92p,1760b,1394s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,20n,92p,2065b,1394s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
@@ -3324,10 +3296,10 @@ per/sfti1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-supe
 r/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/
 sftt1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/st
 mary10.pfb>
-Output written on thesis.pdf (197 pages, 99027461 bytes).
+Output written on thesis.pdf (197 pages, 95890440 bytes).
 PDF statistics:
- 60725 PDF objects out of 66169 (max. 8388607)
- 31165 compressed objects within 312 object streams
- 839 named destinations out of 1000 (max. 500000)
- 46888 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 60262 PDF objects out of 66169 (max. 8388607)
+ 30952 compressed objects within 310 object streams
+ 836 named destinations out of 1000 (max. 500000)
+ 46870 words of extra memory for PDF output out of 51595 (max. 10000000)
 

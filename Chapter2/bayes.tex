@@ -3,7 +3,7 @@
 A scientific model is a simple theoretical representation of a complex natural phenomenon to allow the systematic study of its behaviour. The general idea is that if a model is able to explain some observations, it might be capturing its true underlying laws and can therefore be used to make future predictions.
 In particular, statistical models are a powerful abstraction of nature. They consist of a set of observed variables and a set of (hidden) parameters. The procedure of fitting the parameters using a set of observations is called inference or learning.
 
-One of the major challenges of inference when dealing with real datasets is the distinction between signal and noise. An ideal model should learn only the information relevant to gain explanatory power while disregarding the noise. However, this is a non-trivial task in most practical situations. Very complex models will tend to overfit the training data, capturing large amounts of noise and consequently leading to a bad generalisation performance to independent datasets. On the other hand, simplistic models will fit the data poorly, leading to poor explanatory power.
+One of the major challenges of inference when dealing with real datasets is the distinction between signal and noise. An ideal model should learn only the information relevant to gain explanatory power while disregarding the noise. However, this is a non-trivial task in most practical situations. Very complex models will tend to overfit the training data, capturing large amounts of noise and consequently leading to a bad generalisation performance to independent datasets. On the other hand, simplistic models will fit the data poorly, resulting in low explanatory power.
 
 The ideas above can be formalised using the framework of probability and statistics.
 
@@ -23,7 +23,7 @@ In the Bayesian framework, the parameters themselves are treated as random unobs
 where $p(\bfY)$ is a constant term called the marginal likelihood, or model evidence \cite{Bishop2006,Murphy}.\\
 The choice of the prior distribution is a key part of Bayesian inference and captures beliefs about the distribution of a variable before the data is taken into account. With asymptotically large sample sizes, the choice of prior has negligible effects on the posterior estimates, but it becomes critical with sparse data \cite{Bishop2006,Murphy,Gelman2013}.
 
-There are two common considerations when defining the prior distributions. The first relates to the incorporation of subjective information, or predefined assumptions, into the model. For example, one could adapt the prior distribution to match the results from previous experiments (i.e. an informative prior). Alternatively, if no information is available one could set set uninformative priors by following maximum entropy principles \cite{Jaynes1968}.
+There are two common considerations when defining the prior distributions. The first relates to the incorporation of subjective information, or predefined assumptions, into the model. For example, one could adapt the prior distribution to match the results from previous experiments (i.e. an informative prior). Alternatively, if no prior information is available one could set set uninformative priors by following maximum entropy principles \cite{Jaynes1968}.
 
 The second strategy is based on convenient mathematical properties to make inference tractable. If the likelihood and the prior distributions do not belong to the same family of probability distributions (they are not conjugate) then inference becomes more problematic \cite{Raiffa1961,Bishop2006,Murphy,Gelman2013}. The existence of conjugate priors is one of the major reasons that justify the widespread use of exponential family distributions in Bayesian models \cite{Gelman2013}.
 
@@ -179,7 +179,7 @@ A detailed mathematical treatment of EP, including derivations for specific exam
 	\label{}
 \end{figure}
 
-\subsubsection{Conclusions}
+\subsection{Conclusions}
 
 In this section we have introduced Bayesian modelling and variational inference methods, which will be used later in this chapter.\\
 More generally, variational inference is growing in popularity for the analysis of big datasets and it has been applied to a myriad of different problems, including genome-wide association studies \cite{Carbonetto2012}, population genetics, \cite{Raj2014}, network analysis \cite{Sanguinetti2006} and natural language processing \cite{Blei2003}.
