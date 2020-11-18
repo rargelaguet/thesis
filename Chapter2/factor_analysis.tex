@@ -7,7 +7,7 @@ With the exponential growth in the use of high-throughput genomics, biological d
 \subsubsection{Mathematical formulation}
 
 Given a dataset $\bfY$ of $N$ samples and $D$ features, latent variable models attempt to exploit the dependencies between the features by reducing the dimensionality of the data to a potentially small set of $K$ latent variables, also called factors. The mapping between the low-dimensional space and the high-dimensional space is performed via a function $f(\bfX|\bTheta)$ that depends on some parameters $\bTheta$.\\
-The choice of $f(\bfX|\bTheta)$ is essentially the field of dimensionality reduction. A trade-off exists between complexity and interpretation: while non-linear functions such as deep neural networks provide more explanatory power, this leads to a considerable challenges in interpretation \cite{Zhang2018_NN}. Hence, for most applications where interpretability is essential, $f(\bfX|\bTheta)$ is assumed to be linear:
+The choice of $f(\bfX|\bTheta)$ is essentially the field of dimensionality reduction. A trade-off exists between complexity and interpretation: while non-linear functions such as deep neural networks provide more explanatory power, this leads to considerable challenges in interpretation \cite{Zhang2018_NN}. Hence, for most applications where interpretability is essential, $f(\bfX|\bTheta)$ is assumed to be linear:
 % \begin{equation} 
 % 	y_{nd} = \sum_{k=1}^{K} w_{dk}z_{n,k}
 % \end{equation}
@@ -15,16 +15,14 @@ The choice of $f(\bfX|\bTheta)$ is essentially the field of dimensionality reduc
 	\mathbf{Y} = \mathbf{Z}\mathbf{W}^{T}
 \end{equation}
 where $\bfZ \in \R^{N \times K}$ is a matrix that contains the low-dimensional representation for each sample (i.e. the factors). The matrix $\bfW \in \R^{D \times K}$ contains the weights, which provide the linear mapping between the features and the factors.\\
-Note that the aim in dimensionality reduction is to exploit the coordinated heterogeneity between features, and hence features are assumed to be centered without loss of generality.
+Note that the aim of dimensionality reduction is to exploit the coordinated heterogeneity between features, and hence features can be assumed to be centered without loss of generality.
 
 The inference procedure consists in learning the values of all unobserved variables, including factors and weights. As we shall demonstrate, different inference schemes and assumptions on the prior distributions lead to significantly different model outputs \cite{Rattray2009}.
 
 
 \subsection{Principal Component Analysis} \label{section:pca}
 
-Principal Component Analysis (PCA) is the most popular technique for dimensionality reduction \cite{Hotelling1933,Ringner2008}. Starting from \Cref{eq:linear_model}, two formulations of PCA exist \cite{Bishop2006}. In the maximum variance formulation, the aim is to infer an orthogonal projection of the data onto a low-dimensional space such that variance explained by the projected data is maximised. Formally, 
-
-Formally, the aim in PCA is to infer the matrix $\bfW$ such that the variance of $\bfZ$ (the projected data) is maximised. If we consider a single latent factor, the variance of the projected data is:
+Principal Component Analysis (PCA) is the most popular technique for dimensionality reduction \cite{Hotelling1933,Ringner2008}.Two formulations of PCA exist \cite{Bishop2006}: in the maximum variance formulation, the aim is to infer an orthogonal projection of the data onto a low-dimensional space such that variance explained by the projected data is maximised. Formally, the aim in PCA is to infer the matrix $\bfW$ such that the variance of $\bfZ$ (the projected data) is maximised. If we consider a single latent factor, the variance of the projected data is:
 \begin{equation*}
 	\sigma^2 = \frac{1}{N}\sum_{n=1}^{N} (\bfz_n - \hat{\bfz})^{2} = \frac{1}{N}\sum_{n=1}^{N} (\bfy_n^T \bfw - \hat{\bfy}^T\bfw)^{2}
 \end{equation*}
@@ -54,7 +52,7 @@ The $k$-th principal component can be found by subtracting from $\bfY$ the recon
 \]
 Re-applying \Cref{eq:pca} defines the new optimisation problem.
 
-In its minimum error formulation, the aim is to find an equivalent projection that minimises the mean squared error between the observations and the data reconstructed using all principal components:
+In its minimum error formulation, the aim is to find an equivalent projection that minimises the mean squared error between the observations and the data reconstructed using the principal components:
 \[
 	\argmax_{\|\bfw\|=1} \Vert \bfY - \sum_{k=1}^{K} (\bfz_k \bfw_k^T) \Vert^{2}
 \]
@@ -149,7 +147,7 @@ A key advantage of the full Bayesian treatment is that it explicitly captures un
 
 
 As an example, a major challenge in PCA is how to determine the dimensionality of the latent space (i.e. the number of principal components). As we will show, the use of hierarchical prior distributions allows the model to introduce sparsity assumptions on the weights in such a way that the model automatically learns the number of factors.\\
-In the context of Factor Analysis, one the first sparsity priors to be proposed was the Automatic Relevance determination (ARD) prior \cite{Neal1995,Mackay1996,Bishop1999a,Bishop1999b}. 
+In the context of Factor Analysis, one of the first sparsity priors to be proposed was the Automatic Relevance determination (ARD) prior \cite{Neal1995,Mackay1996,Bishop1999a,Bishop1999b}. 
 \begin{equation*} \label{eq:ard}
 	p(\bfW|\balpha) = \prod_{k=1}^{K} \Ndist{\bfw_{:,k}}{0,\frac{1}{\alpha_{k}}\I_{D}} \\
 	\qquad\qquad
@@ -176,7 +174,7 @@ Sparse extensions of the Bayesian factor analysis model have been proposed as a 
 The variability observed in biological data is driven both by technical factors and biological factors. Technical factors (i.e. batch effects) tend to be relatively strong and alter the expression of a large proportion of genes, whereas the biological factors are potentially weak effects driven by changes in small gene regulatory networks \cite{Gao2013}. Hence, a practical factor analysis model should be able to learn factors with different degrees of sparsity.\\
 The ARD prior proposed in \Cref{eq:ard} allows entire factors to be dropped out from the model, but it provides a weak degree of regularisation when it comes to inactivating individual weights within the active factors.
 
-A sparse generalisation of the Factor Analysis model proposed above can be achieved by combining the ARD prior with a spike-and-slab prior \cite{Mitchell1988,Titsias2011}:
+A sparse generalisation of the Factor Analysis model proposed above can be achieved by combining the ARD prior with a spike-and-slab prior \cite{Mitchell1988,Titsias2011}. For every weight $w_{d,k}$:
 \begin{align}
 	p(w_{d,k} \mid \alpha_k,\theta_k) &= (1-\theta_k) \mathds{1}_0(w_{d,k}) + \theta_k \Ndist{w_{d,k}}{0, \alpha_k^{-1}} \\
 	p(\theta_k) &= \Bdist{\theta_k}{a_0^\theta,b_0^\theta} \\

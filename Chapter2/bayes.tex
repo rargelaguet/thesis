@@ -81,7 +81,7 @@ If we allow any possible choice of $q(\bfX)$, then the minimum of this function 
 
 Doing some calculus it can be shown (see \cite{Bishop2006,Murphy}) that the KL divergence $\KL(q(\bfX)||p(\bfX|\bfY))$ is the difference between the log of the marginal probability of the observations $\log(\bfY)$ and a term $\Lagr(\bfX)$ that is typically called the Evidence Lower Bound (ELBO):
 \[
-	\KL(q(\bfX)||p(\bfX|\bfY)) = \log(\bfX) - \Lagr(\bfX)
+	\KL(q(\bfX)||p(\bfX|\bfY)) = \log p(\bfY) - \Lagr(\bfX)
 \]
 Hence, minimising the KL divergence is equivalent to maximising $\Lagr(\bfX)$ (\Cref{fig:ELBO}):
 \begin{align} \label{eq_elbo1} \begin{split}
@@ -140,7 +140,7 @@ While the form of $\hat{q}(\bfx_i)$ is not restricted to a specific parametric f
 
 \subsubsection{Fixed-form variational inference}  \label{section:fixed_form}
 
-An alternative and straightforward choice is to directly define a parametric form for the distribution $q(\bfX)$ with some parameters $\bTheta$. Once the choice of $q(\bfX)$ is made, the parameters $\bTheta$ are optimised to minimise $\KL(q(\bfX)||p(\bfX|\bfY))$ (the variational problem):
+An alternative straightforward strategy is to directly define a parametric form for the distribution $q(\bfX)$ with some parameters $\bTheta$. Once the choice of $q(\bfX)$ is made, the parameters $\bTheta$ are optimised to minimise $\KL(q(\bfX)||p(\bfX|\bfY))$ (the variational problem):
 \begin{align}
 	\hat{\bTheta} &= \argmin_{\bTheta} \KL(q(\bfX)||p(\bfX|\bfY)) \\
 	&= \E[\log(q(\bfX)) - \log(p(\bfX,\bfY))]
@@ -158,7 +158,7 @@ However, while the parametric assumption certainly limits the flexibility of var
 
 Expectation Propagation (EP) is another deterministic strategy with a similar philosophy as the Variational approach. It is also based on minimising the KL divergence between a variational distribution $q(\bfX)$ and the true posterior $p(\bfX|\bfY)$, but while variational inference minimises $KL(p||q)$, EP maximises the reverse KL-divergence $KL(q||p)$.
 
-Interestingly, this simple difference leads to an inference scheme with stringkly different properties. This can be understood by inspecting the differences between the two KL divergence formulas:
+Interestingly, this simple difference leads to an inference scheme with strikingly different properties. This can be understood by inspecting the differences between the two KL divergence formulas:
 
 Variational inference:
 \begin{equation} \label{eq:kl_vb}
@@ -168,8 +168,8 @@ Expectation propagation:
 \begin{equation} \label{eq:kl_ep}
 	\KL(p(\bfX|\bfY)||q(\bfX)) = - \int p(\bfX|\bfY) \log \frac{q(\bfX)}{p(\bfX|\bfY)}
 \end{equation}
-In regions of $\bfX$ where the true posterior density $p(\bfX|\bfY)$ is small, setting a large density for $q(\bfX)$ has a much stronger penalisation in \Cref{eq:kl_ep} than in \Cref{eq:kl_vb}, because of the true posterior density being on the denominator. Hence, EP tends to avoid areas where the density $p(\bfX|\bfY)$ is very low, even if it does not correspond to areas of very high-density in $p(\bfX|\bfY)$. In contrast, in \Cref{eq:kl_vb} there is a strong penalty for having low-density $q(\bfX)$ values.\\
-As discussed in \cite{Bishop2006}, the practical consequences of this duality can be observed when the posterior is multi-modal, as in any complex model. In VI, $q(\bfX)$ converges towards areas of high-density in $p(\bfX|\bfY)$, namely local optima. In contrast, EP tends to capture as much non-zero density regions from $p(\bfX|\bfY)$ as possible, thereby averaging across all optima. In the context of doing predictions, the VI solution is much more desirable than the EP solution, as the average of two good parameter values is not necessarily a good value itself.\\
+In regions of $\bfX$ where the true posterior density $p(\bfX|\bfY)$ is small, setting a large density for $q(\bfX)$ has a much stronger penalisation in \Cref{eq:kl_ep} than in \Cref{eq:kl_vb}. Hence, EP tends to avoid areas where the density $p(\bfX|\bfY)$ is very low, even if it does not correspond to areas of very high-density in $p(\bfX|\bfY)$. In contrast, in \Cref{eq:kl_vb} there is a strong penalty for having low-density $q(\bfX)$ values.\\
+As discussed in \cite{Bishop2006}, the practical consequences of this duality can be observed when the posterior is multi-modal. In VI, $q(\bfX)$ converges towards areas of high-density in $p(\bfX|\bfY)$, namely local optima. In contrast, EP tends to capture as much non-zero density regions from $p(\bfX|\bfY)$ as possible, thereby averaging across all optima. In the context of doing predictions, the VI solution is much more desirable than the EP solution, as the average of two good parameter values is not necessarily a good value itself.\\
 A detailed mathematical treatment of EP, including derivations for specific examples, can be found in \cite{Bishop2006,Murphy,Minka2001}
 
 \begin{figure}[H]
