@@ -35,7 +35,7 @@ We trained a set of models with (deterministic) variational inference (VI) and a
 
 \subsection{Multi-group inference}
 
-We evaluated whether the new model formultion improves the detection of factors with differential activity across groups and views. We simulated data with the following parameters: $M=2$ views, $G=2$ groups, $D=1000$ features, $N=1000$ samples and $K=10$ factors. Differential factor activities are incorporated in the simulation process by turning some factors off in random sets of views and groups (\Cref{fig:mofa2_multigroup_validation}, see ground truth). The task is to recover the true factor activity structure given a random initialisation. We compared three models: Bayesian Factor Analysis (no sparsity priors), MOFA v1 (only view-wise sparsity prior) and MOFA+ (view-wise and group-wise sparsity prior). Indeed, we observe that when having factors that explain varying amounts of variance across groups and across views, MOFA+ was able to more accurately reconstruct the true factor activity patterns (\Cref{fig:mofa2_multigroup_validation}).
+We evaluated whether the new model formulation improves the detection of factors with differential activity across groups and views. We simulated data with the following parameters: $M=2$ views, $G=2$ groups, $D=1000$ features, $N=1000$ samples and $K=10$ factors. Differential factor activities are incorporated in the simulation process by turning some factors off in random sets of views and groups (\Cref{fig:mofa2_multigroup_validation}, see ground truth). The task is to recover the true factor activity structure given a random initialisation. We compared three models: Bayesian Factor Analysis (no sparsity priors), MOFA v1 (only view-wise sparsity prior) and MOFA+ (view-wise and group-wise sparsity prior). Indeed, we observe that when having factors that explain varying amounts of variance across groups and across views, MOFA+ was able to more accurately reconstruct the true factor activity patterns (\Cref{fig:mofa2_multigroup_validation}).
 
 \begin{figure}[H]
 	\centering
@@ -55,7 +55,7 @@ We evaluated whether the new model formultion improves the detection of factors 
 
 To demonstrate the novel multi-group integration framework, we considered a time course scRNA-seq dataset comprising 16,152 cells that were isolated from a total of 8 mouse embryos from developmental stages E6.5, E7.0 and E7.25 (two biological replicates per stage), encompassing post-implantation and early gastrulation \cite{Pijuan-Sala2019}. This data set, which has been introduced in Chapter 4, consists of a single view but with a clear group structure where cells belongs to different biological replicates at different developmental time points. Different embryos are expected to contain similar subpopulations of cells but also some differences due to developmental progression. As a proof of principle, we used MOFA+ to disentangle stage-specific transcriptional signatures from signatures that are shared across all stages. Although in principle one could employ the MOFA+ factors for clustering and cell type annotation, here we adopted the cell type definitions described in \cite{Pijuan-Sala2019}.
 
-MOFA+ identified 7 Factors that explain at least 1\% of variance in a group and all together capture between 35\% and 55\% of the total transcriptional heterogeneity per embryo (\Cref{fig:mofa2_scrna_variance_explained}).
+MOFA+ identified 7 Factors that explained at least 1\% of variance in a group and all together captured between 35\% and 55\% of the total transcriptional heterogeneity per embryo (\Cref{fig:mofa2_scrna_variance_explained}).
 
 \begin{figure}[H]
 	\centering
@@ -120,7 +120,7 @@ Some factors recover the existence of post-implantation developmental cell types
 \end{figure} 
 
 
-Interestingly, Factors display different signatures of activity (variance explained values) across developmental stages. For example, Factors 1 and 2 remain constant across the developmental progression (\Cref{fig:mofa2_scrna_variance_explained}), indicating that commitment to ExE ectoderm and ExE endoderm fate occurs early in the embryo and the proportion of this cell type remains relatively constant. In contrast, the activity of Factor 4 increases with developmental progression, consistent with a higher proportion of cells committing to mesoderm after ingression through the primitive streak. 
+Interestingly, Factors displayed different signatures of activity (variance explained values) across developmental stages. For example, Factors 1 and 2 remain constant across the developmental progression (\Cref{fig:mofa2_scrna_variance_explained}), indicating that commitment to ExE ectoderm and ExE endoderm fate occurs early in the embryo and the proportion of this cell type remains relatively constant. In contrast, the activity of Factor 4 increases with developmental progression, consistent with a higher proportion of cells committing to mesoderm after ingression through the primitive streak. 
 
 In conclusion, this application shows how MOFA+ can identify biologically relevant structure in multi-group scRNA-seq datasets.
 
@@ -207,7 +207,7 @@ In conclusion, this application shows how MOFA+ can identify biologically releva
 
 \subsection{Identification of molecular signatures of lineage commitment during mammalian embryogenesis}
 
-As a second application, I considered the multi-omic atlas of mouse gastrulation introduced in Chapter 4 where scNMT-seq was used to profile RNA expression, DNA methylation and chromatin accessibility in 1,828 cells at multiple stages of development \cite{Argelaguet2019}. The main difference with respect to the MOFA analysis presented in Chapter 4 (\Cref{section:mofa_gastrulation}) is that with MOFA+ we can employ the multi-group functionality to perform a simultaneous analysis across multiple stages, instead of focusing only on stage E7.5.
+As a second application, I considered the multi-omic atlas of mouse gastrulation introduced in Chapter 4, where scNMT-seq was used to profile RNA expression, DNA methylation and chromatin accessibility in 1,828 cells at multiple stages of development \cite{Argelaguet2019}. The main difference with respect to the MOFA analysis presented in Chapter 4 (\Cref{section:mofa_gastrulation}) is that MOFA+ can employ the multi-group functionality to perform a simultaneous analysis across multiple stages, instead of focusing only on stage E7.5.
 
 \subsubsection{Data processing}
 

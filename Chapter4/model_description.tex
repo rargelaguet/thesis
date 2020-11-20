@@ -18,7 +18,7 @@ As in MOFA v1, the linearity assumptions leads to an interpretable latent space 
 	\centering
 	\includegraphics[width=1.00\linewidth]{mofa2_overview}
 	\caption[]{\textbf{Multi-Omics Factor Analysis v2 (MOFA+) provides an unsupervised framework for the integration of multi-group and multi-view (single-cell) data.}\\
-	(a) Model overview: the input data consists of multiple datasets structured into M views and G groups. Views consist of non-overlapping sets of features that often represent different assays. Analogously, groups consist of non-overlapping sets of samples that often represent different conditions or experiments. Missing values are allowed in the input data. MOFA+ exploits the covariation between the features to learn a low-dimensional representation of the data ($\bfZ$) defined by $K$ latent factors that capture the global sources of molecular variability. The weights ($\bfW$) provide a measure of feature importance. Model inference is performed using GPU-accelerated stochastic variational inference. \\
+	(a) Model overview: the input data consists of multiple datasets structured into M views and G groups. Views consist of non-overlapping sets of features that often represent different assays. Analogously, groups consist of non-overlapping sets of samples that often represent different conditions or experiments. Missing values are allowed in the input data. MOFA+ exploits the covariation between the features to learn a low-dimensional representation of the data ($\bfZ$) defined by $K$ latent factors that capture the global sources of variability. The weights ($\bfW$) provide a measure of feature importance. Model inference is performed using (GPU-accelerated) stochastic variational inference. \\
 	(b) The trained MOFA+ model can be queried for a range of downstream analyses: variance decomposition, inspection of feature weights, visualisation of factors and other applications such as clustering, inference of non-linear differentiation trajectories, denoising and feature selection.
 	}
 	\label{fig:mofa2_overview}
@@ -47,7 +47,7 @@ In MOFA v1 we adopted an isotropic Gaussian prior which assumes an unstructured 
 \begin{equation}
 	p(z_{nk}) = \Ndist{z_{nk}}{0,1}
 \end{equation}
-This is the assumption that we want to break. Following the same logic as for the weights, the integration of multiple groups of samples requires a flexible prior distribution that defines the existence of non-overlapping groups, such that the model encourages sparse solutions between factors and groups. To formalise this intuition we simply need to extrapolate the sparsity prior from the weights to the factors:
+This is the assumption that we want to break. Following the same logic as for the weights, the integration of multiple groups of samples requires a flexible prior distribution that defines the existence of non-overlapping groups, such that the model encourages sparse linkages between factors and groups. To formalise this intuition we simply need to extrapolate the sparsity prior from the weights to the factors:
 \begin{align}
 	p(\hat{z}_{nk}^g,s_{nk}^g) &= \mathcal{N} (\hat{z}_{nk}^g \,|\, 0, 1/\alpha_k^g)\, \text{Ber}(s_{nk}^g \,|\,\theta_k^g) \\
 	p(\theta_k^g) &= \Bdist{\theta_k^g}{a_0^\theta,b_0^\theta} \\
@@ -58,10 +58,10 @@ where $g$ is the index of the sample groups.
 
 \subsubsection{Prior on the noise}
 
-The variable $\bepsilon$ captures the residuals, or the noise, which is assumed to be normally distributed and heteroskedastic. In MOFA v2 we generalise the noise to have an estimate per feature and per group. This is important to model the case where some features may be highly variable in one group but non-variable in other groups.
+The variable $\bepsilon$ captures the residuals, or the noise, which is assumed to be normally distributed and heteroskedastic. In MOFA v2 we generalise the noise to have an estimate per feature and per group. This is important to capture the case where some features may be highly variable in one group but not variable in other groups.
 
 \begin{align}
-	p(\epsilon^{m}_{g}) &= \Ndist{\epsilon^{m}_{g}}{0,(\tau^{m}_{g})^{-1}\I} \\
+	p(\bepsilon^{m}_{g}) &= \Ndist{\bepsilon^{m}_{g}}{0,(\btau^{m}_{g})^{-1}\I} \\
 	p(\tau^{m}_{g}) &= \prod_{d=1}^{D_m} \Gdist{\tau^{m}_{g}}{a_0^\tau, b_0^\tau}
 \end{align}
 % \begin{align}
@@ -93,9 +93,11 @@ In summary, the updated model formulation introduces symmetric two-level sparsit
 
 \subsubsection{Guidelines on the definition of views and groups} \label{section:mofa2_guidelines_views_groups}
 
-\textbf{Views}: views typically correspond to different molecular layers, but there is flexibility in their definition and the user can explore different definitions of views. For example, one could divide the RNA expression data into three views corresponding to mRNA, rRNA and miRNA. Similarly, one can quantify DNA methylation and chromatin accessibility data over different genomic context (enhancers, promoters, etc.).
+\begin{itemize}
+	\item \textbf{Views}: views typically correspond to different assays, but there is flexibility in their definition and the user can explore different definitions of views. For example, one could divide the RNA expression data into three views corresponding to mRNA, rRNA and miRNA. Similarly, one can quantify DNA methylation and chromatin accessibility data over different genomic context (enhancers, promoters, etc.).
 
-\textbf{Groups}: groups are generally motivated by the experimental design, but the user can also explore data-driven formulations. There is no \textit{right} or \textit{wrong} definition of groups, but some definitions will be more useful than others, depending on the hypothesis that is sought to explore.
+	\item \textbf{Groups}: groups are generally motivated by the experimental design, but the user can also explore data-driven formulations. There is no \textit{right} or \textit{wrong} definition of groups, depending on the hypothesis that is sought to explore some definitions will be more useful than others.
+\end{itemize}
 
 \subsubsection{Model selection} \label{section:mofa2_model_selection}
 

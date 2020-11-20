@@ -170,7 +170,7 @@ Training is stopped when the change in the lower bound becomes smaller than a pr
 
 Gaussian likelihoods are sufficient to model the residuals of most types of continuous data. Thus, when possible, we advise the user to apply data transformations (i.e. $log$ transformation for example) and use the Gaussian likelihood model. However, there are cases where Gaussian likelihoods are not appropriate, even after data transformations, namely binary and (low) count data. However, non-Gaussian likelihoods are problematic because they are not conjugated with prior distributions, and this prevents the use of the efficient variational inference scheme for Gaussian likelihoods (see Appendix~\ref{appendix:mofa}).
 
-To implement efficient variational inference in conjunction with a non-Gaussian likelihood we adapt prior work from \cite{Seeger2012}, where the full derivation can be found. The idea is to approximate non-Gaussian observations by a normally-distributed \textit{pseudo-data} that is constructed using second-order Taylor expansions. This defines a lower bound that can be improved at each iteration by adjusting parameters at each iteration. Denoting the parameters in the MOFA model as $\bfX= (\bfZ,\bfW,\balpha,\btau,\btheta)$, recall that the variational framework approximates the posterior $p(\bfX | \bfY )$ with a distribution $q(\bfX)$, which is indirectly optimised by optimising a lower bound of the log model evidence. The resulting optimization problem can be re-written as
+To implement efficient variational inference in conjunction with a non-Gaussian likelihood we adapt prior work from \cite{Seeger2012}, where the full derivation can be found. The idea is to approximate non-Gaussian observations by a normally-distributed \textit{pseudo-data} that is constructed using second-order Taylor expansions. This defines a lower bound that can be improved by adjusting parameters at each iteration. Denoting the parameters in the MOFA model as $\bfX= (\bfZ,\bfW,\balpha,\btau,\btheta)$, recall that the variational framework approximates the posterior $p(\bfX | \bfY )$ with a distribution $q(\bfX)$, which is indirectly optimised by optimising a lower bound of the log model evidence. The resulting optimization problem can be re-written as
 \begin{equation*}
 \min_{q(\bfX)} (-\Lagr(\bfX)) =  \min_{q(\bfX)} \E_q \big[ -\log p(\bfY|\bfX) \big] + \KL[q(\bfX)||p(\bfX)].
 \end{equation*}
@@ -178,19 +178,19 @@ Let's now assume a general likelihood function $p(\bfY|\bfX)=f(\bfY|\bfC)$ with 
 \begin{equation*}
 -\log p(\bfY|\bfX) = \sum_{n=1}^{N} \sum_{d=1}^{D} f_{nd} (c_{nd})
 \end{equation*}
-with $f_{nd}(c_{nd}) = -\log p(y_{nd}|c_{nd})$. For simplicity in the derivation I will assume a single view and thus drop th index $m$ for clarity.
+with $f_{nd}(c_{nd}) = -\log p(y_{nd}|c_{nd})$. For simplicity in the derivation I will assume a single view and thus drop the index $m$ for clarity.
 
 Extending \cite{Seeger2012} to our heteroscedastic noise model, we require $f_{nd}(c_{nd})$ to be twice differentiable and upper bounded by a constant $\kappa_d$. I do not prove this here, but this property holds true in many important models as for example the Bernoulli and Poisson likelihoods, as demonstrated in \cite{Seeger2012}. Under this assumption a lower bound on the log likelihood can be defined using Taylor expansion:
 \begin{equation*}
 f_{nd}(c_{nd}) \leq \frac{\kappa_d}{2} (c_{nd} - \zeta_{nd})^2 + f'(\zeta_{nd})(c_{nd} - \zeta_{nd}) + f_{nd}(\zeta_{nd}) := q_{nd}(c_{nd},\zeta_{nd}),
 \end{equation*}
-where $\bZeta =  \zeta_{nd} $ are additional variational parameters that determine the location of the Taylor expansion and have to be optimised to make the lower bound as tight as possible. Plugging the bounds into the optimization problem above, we obtain:
+where $\zeta_{nd}$ are additional variational parameters that determine the location of the Taylor expansion and have to be optimised to make the lower bound as tight as possible. Plugging the bounds into the optimization problem above, we obtain:
 \begin{equation*}
 \min_{q(\bfX),\bZeta} \quad \sum_{d=1}^{D}\sum_{n=1}^{N} \E_q [ q_{nd}(c_{nd},\zeta_{nd})] + \KL[q(\bfX)||p(\bfX)]
 \end{equation*}
 
 The new objective function has two class of parameters to optimise: the parameters associated with the local bounds $\bZeta$, and the parameters associated with the model $(\bfX)$.
-The algorithm propsed in \cite{Seeger2012} then alternates between updates of $\bZeta$ and $\mathrm{q}(\bTheta)$. The update for $\bZeta$ is given by
+The algorithm proposed in \cite{Seeger2012} alternates between updates of $\bZeta$ and $\mathrm{q}(\bTheta)$. The update for $\bZeta$ is given by
 \begin{equation*}
 \zeta \leftarrow \E[\bfZ]\E[\bfW]^{T}
 \end{equation*}
@@ -201,7 +201,7 @@ where the expectations are taken with respect to the corresponding $q$ distribut
 % \end{equation*}
 % and note that this is proportional to the log of a Gaussian distribution $-log \Normal (\hat{y}_{nd}|f_{ng},\frac{1}{ng})$ where $\hat{y}_{nd} = zeta_{nd} - g'(\zeta_{nd})/\kappa_d$ is defined as a pseudodata based on the zero-inflated observations.
 % Consequently, for fixed $\zeta_{nd}$, the updates of the variational distributions $Q(X)$ and $Q(W)$ are equivalent to the ones derived in X, but with pseudodata $\hat{Y}$ and precision $\kappa_g$
-On the other hand, the updates for $q(\bfX)$ are identical to the standard variational Bayesian updates with Gaussian likelihoods, but with the observed data $\bfY$ replaced by the \textit{pseudo-data} $\hat{\bfY}$ and where the precisions $\tau_{nd}$ (which were treated as random variables) are replced by the constant terms $\kappa_d$ introduced above. This might seem a minor change, but it is very important. In the Gaussian case the model infers a variance parameter for each feature which means that MOFA explicitly models heteroscedastic noise. When using non-Gaussian likelihoods this is no longer possible.
+On the other hand, the updates for $q(\bfX)$ are identical to the standard variational Bayesian updates with Gaussian likelihoods, but with the observed data $\bfY$ replaced by the \textit{pseudo-data} $\hat{\bfY}$ and where the precisions $\tau_{nd}$ (which were treated as random variables) are replaced by the constant terms $\kappa_d$ introduced above. This might seem a minor change, but it is very important. In the Gaussian case the model infers a variance parameter for each feature which means that MOFA explicitly models heteroscedastic noise, but when using non-Gaussian likelihoods this is no longer possible.
 
 Finally, the general formula pseudodata is given by (derived in \cite{Seeger2012}):
 \begin{equation*}

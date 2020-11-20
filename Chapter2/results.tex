@@ -14,14 +14,14 @@ We observe that in most settings the model accurately recovers the correct numbe
 	\centering 	
 	\includegraphics[width=0.9\textwidth]{MOFA_learnK}
 	\caption{\textbf{Assessing the ability to recover simulated factors}.\\
-	In all plots the y-axis displays the number of infered factors. (a) x-axis displays the number of true factors, and boxplots summarise the distribution across 10 model instances. For (b-d) the true number of factors was set to $K=10$ and each bar corresponds to a different model instance. (b) x-axis displays the number of features, (c) x-axis displays the number of views, (d) x-axis displays fraction of missing values. }
+	In all plots the y-axis displays the number of infered factors. (a) x-axis displays the number of true factors, and boxplots summarise the distribution of inferred factors across 10 model instances. For (b-d) the true number of factors was set to $K=10$ and each bar corresponds to a different model instance. (b) x-axis displays the number of features, (c) x-axis displays the number of views, (d) x-axis displays fraction of missing values. }
 	\label{fig:MOFA_learnK}
 \end{figure}
 
 \subsubsection{View-wise sparsity on the weights}
 
-One of the essential components that underlies MOFA is the use of an ARD prior aimed at disentangling the activity of factors across views (see \Cref{section:ard} and \Cref{mofa:model_description}).\\
-We simulated data from the generative model were the factors were set to be active or inactive in specific views by sampling $\alpha_{k}^{m}$ from a discrete distribution with values $\{ 1, 1e3\}$. We compared the performance with a popular integrative clustering method (iCluster) that is also formulated as a latent variable model \cite{Mo2013}. In iCluster each factor shares the same sparsity constraint across all views, and hence the model is less accurate at detecting factors that show differential activity across different views:
+One of the essential features of MOFA is the use of an ARD prior aimed at disentangling the activity of factors across views (see \Cref{section:ard} and \Cref{mofa:model_description}).\\
+We simulated data from the generative model such that the factors were set to be active or inactive in specific views by sampling $\alpha_{k}^{m}$ from a discrete distribution with values $\{ 1, 1e3\}$. We compared the performance with a popular integrative clustering method (iCluster) that is also formulated as a latent variable model \cite{Mo2013}. In iCluster each factor shares the same sparsity constraint across all views, and hence the model is less accurate at detecting factors that show differential activity across different views:
 
 \begin{figure}[H]
 	\centering 	
@@ -35,7 +35,7 @@ We simulated data from the generative model were the factors were set to be acti
 \subsubsection{Feature-wise sparsity on the weights} \label{section:spike_slab}
 
 In MOFA we implemented a spike-and-slab prior prior to enforce feature-wise sparsity on the weights with the aim of delivering a more interpretable solution (see \Cref{section:mofa_weights}).\\
-To assess the effect of the spike-and-slab prior we trained a group of models with and without the spike-and-slab prior. Importantly, the model without spike-and-slab priors contains the ARD prior, which should provide some degree of regularisation. To compare both options to a non-sparse method, we also fit a Principal Component Analysis on the concatenated data set. As expected, we observe that the spike-and-slab prior induces more zero-inflated weights, although the ARD prior provided a moderate degree of regularisation. The PCA solution was notably more dense than both Bayesian models (\Cref{fig:MOFA_sparsity}).
+To assess the effect of the spike-and-slab prior we trained a group of models with and without the spike-and-slab prior. Importantly, both models contain the ARD prior, which should provide some degree of regularisation. To compare both options to a non-sparse method, we also fit a Principal Component Analysis on the concatenated data set. As expected, we observe that the spike-and-slab prior induces more zero-inflated weights, although the ARD prior provided a moderate degree of regularisation. The PCA solution was notably more dense than both Bayesian models (\Cref{fig:MOFA_sparsity}).
 
 \begin{figure}[H]
 	\centering 	
@@ -92,7 +92,7 @@ As a real application showcase, the training on the CLL cohort that is described
 
 Personalised medicine is an attractive field for the use of multi-omics, as dissecting heterogeneity across patients is a major challenge in complex diseases, and requires data integration from multiple biological layers \cite{Chen2013,Costello2014,Alyass2015}.
 
-To demonstrate the potential of the method, we applied MOFA to a publicly available study of 200 patient samples of Chronic Lymphocytic Leukaemia (CLL) profiled for somatic mutations, RNA expression, DNA methylation and \textit{ex vivo} drug responses \cite{Dietrich2018}, all of them being bulk samples. We selected this data set for three main reasons: (1) The complex missing data structure, with nearly 40\% samples having incomplete assays (\Cref{fig:MOFA_CLL_overview}). As described in \Cref{section:mofa_missing_values}, the inference framework implemented in MOFA should cope with large amounts of missing values, including missing assays. (2) After data processing, three assays had continuous observations whereas for the somatic mutations the observations were binary. As described in \Cref{section:mofa_ngaussian}, MOFA can combine different likelihood models. (3) The existence of clinical covariates provide an excellent test to evaluate whether the MOFA factors can capture the molecular variation that underlies clinically-relevant phenotypes.
+To demonstrate the potential of MOFA, we applied it to a publicly available study of 200 patient samples of Chronic Lymphocytic Leukaemia (CLL) profiled for somatic mutations, RNA expression, DNA methylation and \textit{ex vivo} drug responses \cite{Dietrich2018}, all of them at the bulk level. We selected this data set for three main reasons: (1) The complex missing data structure, with nearly 40\% samples having incomplete assays (\Cref{fig:MOFA_CLL_overview}). As described in \Cref{section:mofa_missing_values}, the inference framework implemented in MOFA should cope with large amounts of missing values, including missing assays. (2) After data processing, three assays had continuous observations whereas for the somatic mutations the observations were binary. As described in \Cref{section:mofa_ngaussian}, MOFA can combine different likelihood models. (3) The existence of clinical covariates provide an excellent test to evaluate whether the MOFA factors can capture the molecular variation that underlies clinically-relevant phenotypes.
 
 \subsection{Data overview and processing}
 
@@ -110,7 +110,7 @@ Here we proceed to briefly describe the different data modalities and outline th
 
 \subsection{Model overview}
 
-In this data set, MOFA recovered $K=10$ factors, each one explaining a minimum of 3\% of variance in at least one assay. Interestingly, MOFA detects factors which are shared across several data modalities (Factors 1 and 2, sorted by variance explained). Some factors capture sources of covariation between two data modalities (Factor 3 and 5, active in the RNA expression and drug response). In addition, some factors capture variation that is unique to a single data modality (Factor 4, active in the RNA expression data).\\
+In this data set, MOFA recovered $K=10$ factors, each one explaining a minimum of 3\% of variance in at least one assay. Interestingly, MOFA detected factors which are shared across several data modalities (Factors 1 and 2, sorted by variance explained). Some factors captured sources of covariation between two data modalities (Factor 3 and 5, active in the RNA expression and drug response). In addition, some factors captured variation that is unique to a single data modality (Factor 4, active in the RNA expression data).\\
 All together, the 10 MOFA factors explained 41\% of variance in the drug response data, 38\% in the mRNA expression, 24\% in the DNA methylation and 24\% in somatic mutations.
 
 \begin{figure}[H]
@@ -124,11 +124,10 @@ All together, the 10 MOFA factors explained 41\% of variance in the drug respons
 	\label{fig:MOFA_CLL_overview}
 \end{figure}
 
-The first two factors are the most interesting from a molecular perspective, as they capture a phenotypic effect that is manifested across all molecular layers, from the genome to the transcriptome and ultimately in the drug response assay.\\
-To annotate Factors 1 and 2 we proceeded to visualise the feature weights, starting by the (binary) somatic mutation data, as it is the simplest data modality to interpret. Inspection of the top weights revealed that Factor 1 was associated with the mutation status of the immunoglobulin heavy-chain variable (IGHV) region, while Factor 2 was aligned with trisomy of chromosome 12 (\Cref{fig:MOFA_CLL_factors12}).\\
+The first two factors are the most interesting from a molecular perspective, as they capture a phenotypic effect that is manifested across multiple molecular layers. To annotate Factors 1 and 2 we proceeded to visualise the feature weights, starting by the (binary) somatic mutation data, as it is the simplest data modality to interpret. Inspection of the top weights revealed that Factor 1 was associated with the mutation status of the immunoglobulin heavy-chain variable (IGHV) region, while Factor 2 was aligned with trisomy of chromosome 12 (\Cref{fig:MOFA_CLL_factors12}).\\
 Remarkably, in a completely unsupervised fashion, MOFA recovered the two most important clinical markers in CLL as the two major axes of molecular disease heterogeneity \cite{Fabbri2016,Bulian2017,Crombie2017}.
 
-Next, we visualised the samples in the latent space spanned by Factors 1 and 2. A scatterplot based on these factors shows a clear separation of patients by their IGHV status on the first Factor and presence or absence of trisomy 12 on the second Factor (\Cref{fig:MOFA_CLL_factors12}). Interestingly, 24 patients lacked IGHV status measurements (see grey crosses) due to quality control filtering in the DNA sequencing assay. Nonetheless, MOFA is able to pool information from the other molecular layers to map those samples to the latent space, and could be classified to the corresponding molecular subgroup.
+Next, we visualised the samples in the latent space spanned by Factors 1 and 2. A scatterplot based on these factors shows a clear separation of patients by their IGHV status on the first Factor and presence or absence of trisomy 12 on the second Factor (\Cref{fig:MOFA_CLL_factors12}). Interestingly, 24 patients lacked IGHV status measurements (grey crosses) due to quality control filtering in the DNA sequencing assay. Nonetheless, MOFA was able to pool information from the other molecular layers to map those samples to the latent space, and could be classified to the corresponding molecular subgroup.
 
 \begin{figure}[H]
 	\centering 	
@@ -140,8 +139,8 @@ Next, we visualised the samples in the latent space spanned by Factors 1 and 2. 
 	\label{fig:MOFA_CLL_factors12}
 \end{figure}
 
-IGHV status is currently the most important prognostic marker in CLL and has routinely been used to distinguish between two distinct subtypes of the disease\cite{Fabbri2016}. Molecularly, it is a surrogate of the level of activation of the B-cell receptor, which is in turn related to the differentiation state of the tumoral cells. Multiple studies have associated mutated IGHV with a better resposne to chemoimmunotherapy, whereas unmutated IGHV patients have a worse prognosis \cite{Fabbri2016,Bulian2017,Crombie2017}.\\
-In clinical practice, the IGHV status has been considered binary. Our results suggest that this is a fairly good approximation, but a more complex structure with at least three groups or a potential underlying continuum (\Cref{fig:MOFA_CLL_factors12,fig:MOFA_CLL_Factor1}), as also suggested in \cite{Queiros2015}.
+IGHV status is currently the most important prognostic marker in CLL and has routinely been used to distinguish between two distinct subtypes of the disease\cite{Fabbri2016}. Molecularly, it is a surrogate of the level of activation of the B-cell receptor, which is in turn related to the differentiation state of the tumoral cells. Multiple studies have associated mutated IGHV with a better response to chemotherapy, whereas unmutated IGHV patients have a worse prognosis \cite{Fabbri2016,Bulian2017,Crombie2017}.\\
+In clinical practice, the IGHV status has been considered binary. Our results suggest that this is a fairly good approximation, but a more complex structure with at least three groups or a potential underlying continuum is supported (\Cref{fig:MOFA_CLL_factors12,fig:MOFA_CLL_Factor1}), as also suggested in \cite{Queiros2015}.
 
 % \subsection{Detection of outlier samples}
 

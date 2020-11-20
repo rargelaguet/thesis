@@ -73,7 +73,7 @@ Variational inference is a deterministic family of methods that have been receiv
 In variational inference the true (but intractable) posterior distribution $p(\bfX|\bfY)$ is approximated by a simpler (variational) distribution $q(\bfX|\bTheta)$ where $\bTheta$ are the corresponding parameters. The parameters, which we will omit from the notation, need to be tuned to obtain the closest approximation to the true posterior.\\
 The distance between the true distribution and the variational distribution is calculated using the KL divergence:
 \[
-\KL(q(\bfX)||p(\bfX|\bfY)) = - \int q(\bfX) \log \frac{p(\bfX|\bfY)}{q(\bfX)}
+\KL(q(\bfX)||p(\bfX|\bfY)) = - \int q(\bfX) \log \frac{p(\bfX|\bfY)}{q(\bfX)} d\bfX
 \]
 Note that the KL divergence is not a proper distance metric, as it is not symmetric. In fact, using the reverse KL divergence $\KL(q(\bfX)||p(\bfY|\bfX))$ defines a different inference framework called expectation propagation \cite{Minka2001}.
 

@@ -224,8 +224,8 @@ In this model, the two matrix of observations $\bfY^{1}$ and $\bfY^{2}$ are deco
 With the following prior probability distributions:
 \begin{align*}
 	p(z_{nk}) &= \Ndist{z_{nk}}{0,1} \\
-	p(\epsilon^{1}) &= \Ndist {\epsilon^{1}}{\tau_{1}^{-1}} \\
-	p(\epsilon^{2}) &= \Ndist {\epsilon^{2}}{\tau_{2}^{-1}}
+	p(\epsilon^{1}) &= \Ndist {\epsilon^{1}}{0,\tau_{1}^{-1}} \\
+	p(\epsilon^{2}) &= \Ndist {\epsilon^{2}}{0,\tau_{2}^{-1}}
 \end{align*}
 As in \cite{Tipping1999}, the weights and the variance of the noise are assumed to be non-probabilistic parameters, whereas the factors are probabilistic unobserved variables. This yields the following likelihood functions:
 \begin{align} \label{eq:probabilistic_cca_likelihood}

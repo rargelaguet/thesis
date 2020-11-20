@@ -4,7 +4,7 @@
 
 In Chapter 3 we developed Multi-Omics Factor Analysis (MOFA), a statistical framework for the unsupervised integration of multi-omics data. MOFA addresses key challenges in data integration, including overfitting, noise reduction, handling of missing values and improved interpretation of the model output. However, when applied to increasingly-large single-cell genomics datasets, the variational inference scheme offers limited scalability. In addition, the increased experimental throughput has facilitated the simultaneous study of multiple conditions within the same experimental design \cite{Replogle2020}. However, MOFA makes strong independence assumptions about the dependencies across samples and it provides no principled strategy to model datasets where the samples are structured into multiple groups (i.e. batches, donors or even independent studies). In this Chapter we improve the model formulation with the aim of performing integrative analysis of large-scale datasets where the features are structured into multiple data modalities (views) and the samples (or cells) are structured into different groups.
 
-The work discussed in this Chapter has been peer-reviewed and published in \cite{Argelaguet2020}. The project was conceived by Damien Arnol and me. The mathematical derivations and the implementation of the stochastic variational inference scheme was done together by Damien Arnol, Yonatan Deloro and me. I implemented the downstream analysis package, but with significant contributions from Danila Bredikhin. I generated most figures and I wrote the manuscript with feedback from all authors. John C. Marioni and Oliver Stegle supervised the project. 
+The work discussed in this Chapter has been peer-reviewed and published in \cite{Argelaguet2020}. The project was conceived by Damien Arnol and me. The mathematical derivations and the implementation of the stochastic variational inference scheme were done together by Damien Arnol, Yonatan Deloro and me. I implemented the downstream analysis package, but with significant contributions from Danila Bredikhin. I generated most figures and I wrote the manuscript with feedback from all authors. John C. Marioni and Oliver Stegle supervised the project. 
 
 \section{Theoretical foundations}
 
@@ -95,7 +95,7 @@ To find the direction of steepest ascent, one would need to search over all poss
 \[
 \nabla \Lagr(\theta) = \lim_{h\to0} \frac{1}{h}\argmax_{d \, s.t. \|d\|=h} \Lagr(\theta+d) - \Lagr(\theta)
 \]
-Importantly, this operation requires a distance metric to quantify what a \textit{small} distance $h$ means. In standard gradient ascent, this is measured using an Euclidean norm, and the direction of steepest ascent is hence dependent on the Euclidean geometry of the $\theta$ space. Why is this problematic when working with probability distributions? Because it does not consider the uncertainty that underlies probability distributions. When $\theta$ is a random variable with an underlying probability distribution, a small step from $\theta^{(t)}$ to $\theta^{(t+1)}$ does not guarantee an equivalently small change from $\Lagr(\theta^{(t)})$ to $\Lagr(\theta^{(t+1)})$. To illustrate this, consider the following example of four random variables:
+Importantly, this operation requires a distance metric to quantify what a \textit{small} distance $h$ means. In standard gradient ascent, this is measured using the Euclidean norm, and the direction of steepest ascent is hence dependent on the Euclidean geometry of the $\theta$ space. This problematic when doing probabilistic modelling because it does not consider the uncertainty that underlies probability distributions. When $\theta$ is a random variable with an underlying probability distribution, a small step from $\theta^{(t)}$ to $\theta^{(t+1)}$ does not guarantee an equivalently small change from $\Lagr(\theta^{(t)})$ to $\Lagr(\theta^{(t+1)})$. To illustrate this, consider the following example of four random variables:
 \begin{equation}
 	\begin{split}
 		 \Ndist{\psi_1}{0,5} \\
@@ -147,7 +147,7 @@ In conclusion, while the standard gradient points to the direction of steepest a
 
 \subsection{Stochastic variational inference} \label{section:stochastic_variational_inference}
 
-In this section I will demonstrate how to derive a stochastic variational inference algorithm for general Bayesian models. This work is inspired and adapted from \cite{Hoffman2012}. A comprehensive mathematical derivation of the algorithm is not sought in this Chapter, instead I will describe a modified and simplified derivation that captures the gist of the original. For a complete mathematical derivation we refer the reader to \cite{Hoffman2012}.
+In this section I will demonstrate how to derive a stochastic variational inference algorithm for general Bayesian models. This work is inspired and adapted from \cite{Hoffman2012}. A comprehensive mathematical derivation of the algorithm is not sought in this Chapter, instead I will describe a modified and simplified derivation that captures the gist of the original. For a complete mathematical derivation I refer the reader to \cite{Hoffman2012}.
 
 This section builds upon three theoretical foundations that have been introduced before: Variational inference (\Cref{section:variational_inference}), exponential family distributions (\Cref{section:exponential_family}) and (natural) gradient ascent (\Cref{section:gradient_ascent}).
 
@@ -174,7 +174,7 @@ Consider a probabilistic model with a set of unobserved random variables, observ
 	\item parameters (non-random) for the \textit{local} variables ($\balpha_{z}$).
 \end{itemize}
 
-This leads to the following factorisation of the joint distribution:
+First, let us assume the following factorisation of the joint distribution:
 \begin{equation}
 	p(\bfY, \bfZ, \balpha_{\beta}, \balpha_{z}) = p(\bfZ|\balpha_{z}) p(\bbeta|\balpha_{\beta}) \prod_{n=1}^{N} p(\bfy_{n}|\bfz_{n},\bbeta)
 \end{equation}
@@ -231,7 +231,7 @@ From the assumptions above, the ELBO (the objective function in variational infe
 	 &= \sum_{n=1}^{N} \E_{q(\bfz_n,\beta)}[\log p(\bfy_n,\bfz_n,\beta)] - \sum_{n=1}^{N} \sum_{k=1}^{K} \E_{q(z_{nk})}[\log q(z_{nk})] - \E_{q(\beta)}[\log q(\beta)]
 \end{split} \end{align}
 
-Notice that the objective decomposes into \textit{global} terms (not involving $N$) and \textit{local} terms (involving $N$). Importantly, the \textit{local} terms can be approximated using estimates of the gradient by subsampling the data set. Assumign a mini-batch of size $S$:
+Notice that the objective decomposes into \textit{global} terms (not involving $N$) and \textit{local} terms (involving $N$). Importantly, the \textit{local} terms can be approximated using estimates of the gradient by subsampling the data set. Assuming a mini-batch of size $S$:
 \[
 	\hat{\Lagr} = \frac{N}{S} \sum_{n=1}^{S} \E_{q(\bfz_n,\beta)}[\log p(\bfy_n,\bfz_n,\beta)] - \frac{N}{S}\sum_{s=1}^{S} \sum_{k=1}^{K} \E_{q(z_{nk})}[\log q(z_{nk})] - \E_{q(\beta)}[\log q(\beta)]
 \]
@@ -244,7 +244,7 @@ To derive the updates for the \textit{global} parameters we first write the ELBO
 \[
 	\Lagr(\lambda) = \E_{q(z,\beta)}[\log p(\beta|\bfY,\bfZ)] - \E_{q(\beta)}[\log q(\beta)] + \const
 \]
-where the constant term captures all quantities that do not depend on $\beta$. Then, from the assumption that the complete conditionals and the variational distributions belong to the exponential family (\Crefrange{eq_complete_conditionals}{eq_variational_distributions}):
+where the constant term captures all quantities that do not depend on $\lambda$. Then, from the assumption that the complete conditionals and the variational distributions belong to the exponential family (\Crefrange{eq_complete_conditionals}{eq_variational_distributions}):
 \baln
 	\Lagr(\lambda) &= \E_{q(z,\beta)}[\eta_g(\bfY,\bfZ,\balpha)^T t(\beta)] - \E_{q(\beta)}[\lambda^T t(\beta) - a_g(\lambda) ] + \const \\
 	&= \E_{q(z)}[\eta_g(\bfY,\bfZ,\balpha)^T] \nabla a(\lambda) - \lambda^T \nabla a_g(\lambda) - a_g(\lambda) + \const
@@ -294,10 +294,10 @@ Now that we have the gradients for both the \textit{local} and the \textit{globa
 	\State Initialise the \textit{global} parameters $\blambda^{(t=0)}$
 	\Repeat
 		\For{\text{each \textit{local} variational parameter $\phi_{nk}$}}
-			\State $ \phi_{nk}^{(t+1)} \gets \E_{q^{(t)}}(q(\bbeta,\bfz_{nj}))[\eta_l(\bfy_{n},\bfz_{nj},\bbeta)] $
+			\State $ \phi_{nk}^{(t+1)} \gets \E_{q(\bbeta,\bfz_{nj})^t}[\eta_l(\bfy_{n},\bfz_{nj},\bbeta)] $
       	\EndFor
 		\For{\text{each \textit{global} variational parameter $\lambda$}}
-			\State $ \lambda{(t+1)}= \E_{q^{(t)}}(q(z))[\eta_g(\bfY,\bfZ,\balpha)] $
+			\State $ \lambda^{(t+1)}= \E_{q(z)^t}[\eta_g(\bfY,\bfZ,\balpha)] $
       	\EndFor
 	\Until{Convergence}
 	\end{algorithmic}
@@ -334,10 +334,17 @@ Remarkably, the natural gradient for both the \textit{local} and \textit{global}
 
 \subsubsection{Stochastic variational inference algorithm using natural gradients}
 
-After replacing the Euclidean gradient with the natural gradients, the model can be trained using the following stochastic algorithm: 
+After replacing the Euclidean gradient with the natural gradients, the model can be trained using the following stochastic algorithm based on gradient descent (\Cref{algorithm:svi}). Notice that the stochastic variational inference algorithm introduces additional hyperparameters:
 
-\begin{algorithm*}[H]
-  \caption{Stochastic variational inference algorithm using natural gradients}
+\begin{itemize}
+    \item \textbf{Batch size}: controls the number of samples that are used to compute the gradients at each iteration. A trade off exists where large batch sizes lead to a more expensive computation of the gradient but yield a less noisy estimate.
+
+    \item \textbf{Learning rate}: The learning rate $p(t)$ controls the step size in the direction of the natural gradient, with high learning rates leading to higher steps. In the natural gradient setting, the learning rate also controls how much memory from previous iterations is translated to the current updates. The particular case of a constant learning rate of $1$ yields no memory from previous iterations (thus simplifies to standard gradient ascent). To ensure proper convergence, the learning rate has to be decayed during training. Several strategies exist \cite{Ranganath2013}, here we used the simple function $\rho(t) = \frac{\rho_0}{(1 + \kappa t)^{3/4}}$, which introduces two extra hyperparameters: (1) The forgetting rate $\kappa$, which controls the decay of the learning rate, and $\rho_0$ which determines the initial learning rate.
+
+\end{itemize}
+
+\begin{algorithm}
+  \caption{Stochastic variational inference algorithm using natural gradients}\label{algorithm:svi}
   \begin{algorithmic}[1]
 	\State Initialise the \textit{global} parameters $\blambda^{(t=0)}$.
 	\State Initialise step size $\rho^{(t=0)}$
@@ -348,21 +355,13 @@ After replacing the Euclidean gradient with the natural gradients, the model can
       	\EndFor
 		\For{\text{each \textit{global} variational parameter $\lambda$}}
 		     \State
-        		\begin{align} \label{eq_elbo_factorised} \begin{split}
-            	\lambda^{(t + 1)} &=  \lambda^{(t)} +  \rho ^{(t)} \hat{\nabla}_{\lambda} \Lagr^S(\lambda) \\
+        		\begin{align*} \begin{split}
+            	\lambda^{(t + 1)} &=  (1-\rho ^{(t)})\lambda^{(t)} +  \rho ^{(t)} \hat{\nabla}_{\lambda} \Lagr^S(\lambda) \\
             	 &=  (1-\rho ^{(t)})\lambda^{(t)} +  \rho ^{(t)} \E_{q^{(t+1)}(z)}\left[\frac{N}{S}\eta_g(\bfY_{[n \in \mathcal{B}],:},\bfZ_{[n \in \mathcal{B}],:},\balpha)\right]
-            \end{split} \end{align}
+            \end{split} \end{align*}
             \State where $[n \in \mathcal{B}]$ denotes the subset of indices corresponding to the samples in $\mathcal{B}$
       	\EndFor
 	\Until{Convergence}
 	\end{algorithmic}
-\end{algorithm*}
+\end{algorithm}
 
-Notice that the stochastic nature of the algorithm introduces additional hyperparameters:
-
-\begin{itemize}
-    \item \textbf{Batch size}: controls the number of samples that are used to compute the gradients at each iteration. A trade off exists where high batch sizes lead to a more expensive computation of the gradient but yield a less noisy estimate.
-
-    \item \textbf{Learning rate}: The learning rate $p(t)$ controls the step size in the direction of the natural gradient, with high learning rates leading to higher steps. In the natural gradient setting, the learning rate also controls how much memory from previous iterations is translated to the current updates. The particular case of a constant learning rate of $1$ yields no memory from previous iterations (thus simplifies to standard gradient ascent). To ensure proper convergence, the learning rate has to be decayed during training. Several strategies exist \cite{Ranganath2013}, here we used the simple function $\rho(t) = \frac{\rho_0}{(1 + \kappa t)^{3/4}}$, which introduces two extra hyperparameters: (1) The forgetting rate $\kappa$, which controls the decay of the learning rate, and $\rho_0$ which determines the initial learning rate.
-
-\end{itemize}

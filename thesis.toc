@@ -35,15 +35,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.3.2}Challenges of data integration}{11}{subsection.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.3}Defining the methodology}{13}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.3}Defining the methodology}{12}{subsection.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Horizontal integration}{14}{subsection.1.3.3}
+\contentsline {subsubsection}{Horizontal integration}{13}{subsection.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Vertical integration}{15}{subsection.1.3.3}
+\contentsline {subsubsection}{Vertical integration}{14}{subsection.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Diagonal integration}{16}{subsection.1.3.3}
+\contentsline {subsubsection}{Diagonal integration}{15}{subsection.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Thesis overview}{17}{section.1.4}
+\contentsline {section}{\numberline {1.4}Thesis overview}{16}{section.1.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Joint profiling of chromatin accessibility DNA methylation and transcription in single cells}{19}{chapter.2}
 \defcounter {refsection}{0}\relax 
@@ -97,7 +97,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.8}Principal Component Analysis}{42}{subsection.3.1.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.9}Probabilistic Principal Component Analysis and Factor Analysis}{45}{subsection.3.1.9}
+\contentsline {subsection}{\numberline {3.1.9}Probabilistic Principal Component Analysis and Factor Analysis}{44}{subsection.3.1.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.10}Bayesian Principal Component Analysis and Bayesian Factor Analysis}{46}{subsection.3.1.10}
 \defcounter {refsection}{0}\relax 
@@ -271,11 +271,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Prior on the weights}{124}{subsection.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Prior on the factors}{125}{equation.5.2.20}
+\contentsline {subsubsection}{Prior on the factors}{125}{equation.5.2.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Prior on the noise}{125}{equation.5.2.24}
+\contentsline {subsubsection}{Prior on the noise}{125}{equation.5.2.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Graphical model}{126}{equation.5.2.26}
+\contentsline {subsubsection}{Graphical model}{126}{equation.5.2.25}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Guidelines on the definition of views and groups}{126}{figure.caption.71}
 \defcounter {refsection}{0}\relax 
@@ -329,7 +329,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.3}Thesis summmary}{147}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Mathematical derivations of MOFA}{149}{Appendix.a.A}
+\contentsline {chapter}{Appendix \numberline {A}Mathematical derivations of MOFA+}{149}{Appendix.a.A}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A.1}Deriving the variational inference algorithm}{149}{section.a.A.1}
 \defcounter {refsection}{0}\relax 
