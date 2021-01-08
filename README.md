@@ -1,11 +1,11 @@
 # PhD thesis: statistical methods for the integrative analysis of single-cell multi-omics data
 
-## Author 
+- Author: Ricard Argelaguet  
+- Supervisors: John Marioni and Oliver Stegle  
 
-- Ricard Argelaguet  
-- European Bioinformatics Institute (EMBL-EBI)  
-- University of Cambridge, Robinson College  
-- Supervised by John Marioni and Oliver Stegle  
+<center>
+<img src="Figs/both_logos.png" width="400"/>
+</center>
 
 ## Download
 

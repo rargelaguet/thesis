@@ -8,3 +8,5 @@
 *.blg
 *.out
 *.gz
+
+!Figs/*
